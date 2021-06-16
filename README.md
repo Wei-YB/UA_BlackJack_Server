@@ -2,7 +2,6 @@
 An internship practicing project to design and build a back-end server for online Black Jack game.
 
 ## Server Framework
-![image](./images/ServerFramework.png)
 
 ![image](./images/image-20210616101620706.png)
 
