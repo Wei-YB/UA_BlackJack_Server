@@ -16,7 +16,7 @@ void *createRoom(void *args)
     RoomRoutine *roomID = (RoomRoutine *)args;
 
     std::list<int> playerId;
-    playerId.push_back(roomID->id); //room i 中有 id为1的player
+    playerId.emplace_back(roomID->id); //room i 中有 id为1的player
     std::shared_ptr<Room> room = std::make_shared<Room>(roomID->id, playerId);
 
     roomHashMap[room->getRoomId()] = room;
@@ -87,7 +87,7 @@ int main(int agrc, char *argv[])
         roomRoutine.id = i;
         co_create(&roomRoutine.routine, NULL, createRoom, &roomRoutine);
         co_resume(roomRoutine.routine);
-        tasks.push_back(roomRoutine);
+        tasks.emplace_back(roomRoutine);
     }
 
     //创建一个打印信息的任务

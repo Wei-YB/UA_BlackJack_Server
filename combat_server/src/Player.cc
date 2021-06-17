@@ -53,7 +53,7 @@ void Player::hitPoker(void) //用户从牌堆中拿取一张牌
 {
     if (std::shared_ptr<Room> roomPtr = room.lock())
     {
-        this->pokerList.push_back(roomPtr->getPokerFromShuffledPokers());
+        this->pokerList.emplace_back(roomPtr->getPokerFromShuffledPokers());
     }
 }
 void Player::standPoker(void) //用户停牌

@@ -28,13 +28,13 @@ The CXX compiler identification is GNU, found in "/home/tong/UA_BlackJack_Server
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_ed373/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ed373.dir/build.make CMakeFiles/cmTC_ed373.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_87c4c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_87c4c.dir/build.make CMakeFiles/cmTC_87c4c.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ed373.dir/testCCompiler.c.o
-/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_ed373.dir/testCCompiler.c.o   -c /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_ed373
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_ed373.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc      CMakeFiles/cmTC_ed373.dir/testCCompiler.c.o  -o cmTC_ed373 
+Building C object CMakeFiles/cmTC_87c4c.dir/testCCompiler.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_87c4c.dir/testCCompiler.c.o   -c /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_87c4c
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_87c4c.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      CMakeFiles/cmTC_87c4c.dir/testCCompiler.c.o  -o cmTC_87c4c 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
 
 
@@ -42,10 +42,10 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/combat_server/build/
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_f6479/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f6479.dir/build.make CMakeFiles/cmTC_f6479.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_eebe8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_eebe8.dir/build.make CMakeFiles/cmTC_eebe8.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f6479.dir/CMakeCCompilerABI.c.o
-/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_f6479.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake3/Modules/CMakeCCompilerABI.c
+Building C object CMakeFiles/cmTC_eebe8.dir/CMakeCCompilerABI.c.o
+/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_eebe8.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake3/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 OFFLOAD_TARGET_NAMES=nvptx-none
@@ -79,9 +79,9 @@ GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
 COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_276f7.dir/CMakeCCompilerABI.c.o' '-mtune=generic' '-march=x86-64'
-Linking C executable cmTC_f6479
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_f6479.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_f6479.dir/CMakeCCompilerABI.c.o  -o cmTC_f6479 
+Linking C executable cmTC_eebe8
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_eebe8.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_eebe8.dir/CMakeCCompilerABI.c.o  -o cmTC_eebe8 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper
@@ -93,9 +93,9 @@ Thread model: posix
 gcc version 7.3.1 20180303 (Red Hat 7.3.1-6) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f6479' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvIrNKD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f6479 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_f6479.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f6479' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eebe8' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc92c8RS.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_eebe8 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_eebe8.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eebe8' '-mtune=generic' '-march=x86-64'
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
 
 
@@ -117,10 +117,10 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_f6479/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f6479.dir/build.make CMakeFiles/cmTC_f6479.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_eebe8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_eebe8.dir/build.make CMakeFiles/cmTC_eebe8.dir/build]
   ignore line: [gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_f6479.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_f6479.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake3/Modules/CMakeCCompilerABI.c]
+  ignore line: [Building C object CMakeFiles/cmTC_eebe8.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_eebe8.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake3/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -154,9 +154,9 @@ Parsed C implicit link information from above output:
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
   ignore line: [COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_276f7.dir/CMakeCCompilerABI.c.o' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking C executable cmTC_f6479]
-  ignore line: [/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_f6479.dir/link.txt --verbose=1]
-  ignore line: [/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_f6479.dir/CMakeCCompilerABI.c.o  -o cmTC_f6479 ]
+  ignore line: [Linking C executable cmTC_eebe8]
+  ignore line: [/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_eebe8.dir/link.txt --verbose=1]
+  ignore line: [/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_eebe8.dir/CMakeCCompilerABI.c.o  -o cmTC_eebe8 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper]
@@ -168,13 +168,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-6) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f6479' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvIrNKD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f6479 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_f6479.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eebe8' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc92c8RS.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_eebe8 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_eebe8.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o]
     arg [/usr/libexec/gcc/x86_64-redhat-linux/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccvIrNKD.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc92c8RS.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -189,7 +189,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f6479] ==> ignore
+    arg [cmTC_eebe8] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o] ==> ignore
@@ -198,7 +198,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/7/../../..]
-    arg [CMakeFiles/cmTC_f6479.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_eebe8.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -223,13 +223,13 @@ Parsed C implicit link information from above output:
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_5b56c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5b56c.dir/build.make CMakeFiles/cmTC_5b56c.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_4f6c0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4f6c0.dir/build.make CMakeFiles/cmTC_4f6c0.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5b56c.dir/testCXXCompiler.cxx.o
-/usr/lib64/ccache/c++     -o CMakeFiles/cmTC_5b56c.dir/testCXXCompiler.cxx.o -c /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_5b56c
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_5b56c.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++       CMakeFiles/cmTC_5b56c.dir/testCXXCompiler.cxx.o  -o cmTC_5b56c 
+Building CXX object CMakeFiles/cmTC_4f6c0.dir/testCXXCompiler.cxx.o
+/usr/lib64/ccache/c++     -o CMakeFiles/cmTC_4f6c0.dir/testCXXCompiler.cxx.o -c /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_4f6c0
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_4f6c0.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       CMakeFiles/cmTC_4f6c0.dir/testCXXCompiler.cxx.o  -o cmTC_4f6c0 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
 
 
@@ -237,10 +237,10 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/combat_server/build/
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_44a99/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_44a99.dir/build.make CMakeFiles/cmTC_44a99.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_fbac0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fbac0.dir/build.make CMakeFiles/cmTC_fbac0.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_44a99.dir/CMakeCXXCompilerABI.cpp.o
-/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_44a99.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake3/Modules/CMakeCXXCompilerABI.cpp
+Building CXX object CMakeFiles/cmTC_fbac0.dir/CMakeCXXCompilerABI.cpp.o
+/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_fbac0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake3/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 OFFLOAD_TARGET_NAMES=nvptx-none
@@ -277,9 +277,9 @@ GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
 COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_0437b.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-Linking CXX executable cmTC_44a99
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_44a99.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_44a99.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_44a99 
+Linking CXX executable cmTC_fbac0
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_fbac0.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_fbac0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fbac0 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper
@@ -291,9 +291,9 @@ Thread model: posix
 gcc version 7.3.1 20180303 (Red Hat 7.3.1-6) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_44a99' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cck4QvLK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_44a99 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_44a99.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_44a99' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fbac0' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBouppZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fbac0 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_fbac0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fbac0' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
 
 
@@ -321,10 +321,10 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_44a99/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_44a99.dir/build.make CMakeFiles/cmTC_44a99.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_fbac0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fbac0.dir/build.make CMakeFiles/cmTC_fbac0.dir/build]
   ignore line: [gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_44a99.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_44a99.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake3/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Building CXX object CMakeFiles/cmTC_fbac0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_fbac0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake3/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -361,9 +361,9 @@ Parsed CXX implicit link information from above output:
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
   ignore line: [COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_0437b.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking CXX executable cmTC_44a99]
-  ignore line: [/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_44a99.dir/link.txt --verbose=1]
-  ignore line: [/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_44a99.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_44a99 ]
+  ignore line: [Linking CXX executable cmTC_fbac0]
+  ignore line: [/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_fbac0.dir/link.txt --verbose=1]
+  ignore line: [/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_fbac0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fbac0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper]
@@ -375,13 +375,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-6) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_44a99' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cck4QvLK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_44a99 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_44a99.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fbac0' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBouppZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fbac0 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_fbac0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o]
     arg [/usr/libexec/gcc/x86_64-redhat-linux/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cck4QvLK.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccBouppZ.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -396,7 +396,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_44a99] ==> ignore
+    arg [cmTC_fbac0] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o] ==> ignore
@@ -405,7 +405,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/7/../../..]
-    arg [CMakeFiles/cmTC_44a99.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_fbac0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]

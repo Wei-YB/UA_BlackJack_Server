@@ -22,7 +22,7 @@ public:
         shuffledPokers = std::make_shared<ShuffledPokers>();
         for (auto i : uids)
         {
-            playerList.push_back(std::make_shared<Player>(i));
+            playerList.emplace_back(std::make_shared<Player>(i));
             playerList.back()->setRoom(weak_from_this());
             playerHashMap[i] = playerList.back(); //这个不能放在player的构造函数中，因为构造函数执行完时暂时没有shared_ptr指向他
         }

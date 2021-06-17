@@ -27,7 +27,7 @@ public:
     void hitPoker(void);                      //用户从牌堆中拿取一张牌
     void standPoker(void);                    //用户停牌
     void doubleBettingMoney(void);            //用户加倍
-    void getPoker(const PokerPointer &poker); //强行拿牌
+    void getPoker(const PokerPointer &poker); //强行拿牌,测试用
 
     void showMessage(void) const;
     Player(BlackJackUID _uid, std::weak_ptr<Room> _room) : uid(_uid), room(_room){};

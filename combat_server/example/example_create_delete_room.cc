@@ -4,7 +4,7 @@
 #include "Player.h"
 #include "Room.h"
 #include "co_routine.h"
-const int roomSize = 3;
+const int roomSize = 500;
 struct RoomRoutine
 {
     BlackJackRoomID id;
@@ -16,7 +16,7 @@ void *createRoom(void *args)
     RoomRoutine *roomID = (RoomRoutine *)args;
 
     std::list<int> playerId;
-    playerId.push_back(roomID->id); //room i 中有 id为1的player
+    playerId.emplace_back(roomID->id); //room i 中有 id为1的player
     std::shared_ptr<Room> room = std::make_shared<Room>(roomID->id, playerId);
 
     roomHashMap[room->getRoomId()] = room;
@@ -35,7 +35,7 @@ void *destroyRoom(void *args)
     co_enable_hook_sys();
     for (auto &task : tasks)
     {
-        poll(NULL, 0, 2000); //每两秒删除一个房间
+        poll(NULL, 0, 20); //每两秒删除一个房间
         std::cout << "delete one room" << std::endl;
         if (std::shared_ptr<Room> roomPtr = roomHashMap[task.id].lock())
         {
@@ -87,7 +87,7 @@ int main(int agrc, char *argv[])
         roomRoutine.id = i;
         co_create(&roomRoutine.routine, NULL, createRoom, &roomRoutine);
         co_resume(roomRoutine.routine);
-        tasks.push_back(roomRoutine);
+        tasks.emplace_back(roomRoutine);
     }
 
     //创建一个打印信息的任务
