@@ -2,12 +2,9 @@
 
 #include <unordered_map>
 #include <string>
-#include <cassert>
 
 
-
-
-namespace UABlackJackServer { namespace Lobby {
+namespace ua_black_jack_server { namespace lobby {
 
 class Players {
 public:
@@ -24,31 +21,32 @@ public:
     };
 
 public:
-    Status getStatus(UID uid) const;
+    Status GetStatus(UID uid) const;
 
     /**
      * \brief get room id by player id
      * \param uid player id
      * \return roomId, except -1 means offline, 0 means in lobby
      */
+    // ReSharper disable once CppInconsistentNaming
     RoomID getRoom(UID uid) const;
 
-    void newPlayer(UID uid);
+    void NewPlayer(UID uid);
 
-    void joinRoom(UID uid, RoomID rid);
+    void JoinRoom(UID uid, RoomID rid);
 
-    void leaveRoom(UID uid);
+    void LeaveRoom(UID uid);
 
-    void logOut(UID uid);
+    void LogOut(UID uid);
 
-    void matchStart(UID uid);
+    void MatchStart(UID uid);
 
-    void matchEnd(UID uid);
+    void MatchEnd(UID uid);
 
-    void ready(UID uid);
+    void Ready(UID uid);
 
     // for debug
-    static std::string stateToString(Status status);
+    static std::string StateToString(Status status);
 
 private:
     std::unordered_map<UID, int32_t> players_;

@@ -1,15 +1,16 @@
 #include "Players.h"
+#include <cassert>
 
-constexpr int PlayingFlag = 100000007;
+constexpr int kPlayingFlag = 100000007;
 
-UABlackJackServer::Lobby::Players::Status UABlackJackServer::Lobby::Players::getStatus(UID uid) const {
+ua_black_jack_server::lobby::Players::Status ua_black_jack_server::lobby::Players::GetStatus(const UID uid) const {
     if (!players_.count(uid))
         return Status::OFFLINE;
     const auto status = players_.at(uid);
     if (status < 0) {
         return Status::IN_ROOM_NOT_READY;
     }
-    if (status > PlayingFlag) {
+    if (status > kPlayingFlag) {
         return Status::PLAYING;
     }
     if (status == 0) {
@@ -18,8 +19,8 @@ UABlackJackServer::Lobby::Players::Status UABlackJackServer::Lobby::Players::get
     return Status::IN_ROOM_READY;
 }
 
-UABlackJackServer::Lobby::Players::RoomID UABlackJackServer::Lobby::Players::getRoom(UID uid) const {
-    const auto status = getStatus(uid);
+ua_black_jack_server::lobby::Players::RoomID ua_black_jack_server::lobby::Players::getRoom(const UID uid) const {
+    const auto status = GetStatus(uid);
     if (status == Status::OFFLINE)
         return -1;
     const auto rid = players_.at(uid);
@@ -28,51 +29,51 @@ UABlackJackServer::Lobby::Players::RoomID UABlackJackServer::Lobby::Players::get
     }
     if (rid == 0)
         return 0;
-    if (rid > PlayingFlag) {
-        return rid - PlayingFlag;
+    if (rid > kPlayingFlag) {
+        return rid - kPlayingFlag;
     }
     return rid;
 }
 
-void UABlackJackServer::Lobby::Players::newPlayer(UID uid) {
+void ua_black_jack_server::lobby::Players::NewPlayer(const UID uid) {
     // return false
     assert(players_.find(uid) == players_.end());
     players_[uid] = 0;
     // return true;
 }
 
-void UABlackJackServer::Lobby::Players::joinRoom(UID uid, RoomID rid) {
+void ua_black_jack_server::lobby::Players::JoinRoom(const UID uid, const RoomID rid) {
     assert(players_[uid] == 0);
     players_[uid] = -rid;
 }
 
-void UABlackJackServer::Lobby::Players::leaveRoom(UID uid) {
+void ua_black_jack_server::lobby::Players::LeaveRoom(const UID uid) {
     assert(players_.count(uid));
     players_[uid] = 0;
 }
 
-void UABlackJackServer::Lobby::Players::logOut(UID uid) {
+void ua_black_jack_server::lobby::Players::LogOut(const UID uid) {
     assert(players_.count(uid));
     players_.erase(uid);
 }
 
-void UABlackJackServer::Lobby::Players::matchStart(UID uid) {
-    assert(players_[uid] > 0 && players_[uid] < PlayingFlag);
-    players_[uid] += PlayingFlag;
+void ua_black_jack_server::lobby::Players::MatchStart(const UID uid) {
+    assert(players_[uid] > 0 && players_[uid] < kPlayingFlag);
+    players_[uid] += kPlayingFlag;
 }
 
-void UABlackJackServer::Lobby::Players::matchEnd(UID uid) {
-    assert(players_[uid] > PlayingFlag);
-    const auto roomId = players_[uid] - PlayingFlag;
-    players_[uid]     = -roomId;
+void ua_black_jack_server::lobby::Players::MatchEnd(const UID uid) {
+    assert(players_[uid] > kPlayingFlag);
+    const auto room_id = players_[uid] - kPlayingFlag;
+    players_[uid]      = -room_id;
 }
 
-void UABlackJackServer::Lobby::Players::ready(UID uid) {
+void ua_black_jack_server::lobby::Players::Ready(const UID uid) {
     assert(players_[uid] < 0);
     players_[uid] = -players_[uid];
 }
 
-std::string UABlackJackServer::Lobby::Players::stateToString(Status status) {
+std::string ua_black_jack_server::lobby::Players::StateToString(const Status status) {
     switch (status) {
     case Status::IN_LOBBY:
         return "IN_LOBBY";
@@ -84,7 +85,7 @@ std::string UABlackJackServer::Lobby::Players::stateToString(Status status) {
         return "PLAYING";
     case Status::OFFLINE:
         return "OFFLINE";
-    default:
+    default: // NOLINT(clang-diagnostic-covered-switch-default)
         return "UNKNOWN";
     }
 }
