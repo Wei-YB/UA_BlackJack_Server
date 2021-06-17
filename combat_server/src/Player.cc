@@ -9,7 +9,7 @@ int Player::getAccumulateOfPoker(void) const                                    
     for (auto &poke : this->pokerList)
     {
         int value = poke->getValue();
-        value %= 14;    //不在意花色
+        value %= 13;    //不在意花色
         if (value == 0) //A
         {
             ++aceNum;
@@ -51,9 +51,19 @@ void Player::getPoker(const Poker::ptr &poker) //强行拿一张牌
 }
 void Player::hitPoker(void) //用户从牌堆中拿取一张牌
 {
-    if (std::shared_ptr<Room> roomPtr = room.lock())
+    if (std::shared_ptr<Room> roomPtr = roomHashMap[room].lock())
     {
         this->pokerList.emplace_back(roomPtr->getPokerFromShuffledPokers());
+    }
+    int val = this->getAccumulateOfPoker();
+    if (val > 21) //爆了
+    {
+        this->isStand = true;     //用户需要停牌
+        this->finalResult = LOSE; //用户输了
+    }
+    else if (val == 21) //black jack
+    {
+        this->isStand = true; //用户需要停牌,等着最后判赢吧
     }
 }
 void Player::standPoker(void) //用户停牌
@@ -64,20 +74,21 @@ void Player::doubleBettingMoney(void) //用户加倍
 {
     this->bettingMoney *= 2;
 }
+void Player::surrender(void) //用户投降
+{
+    this->isStand = true;     //用户需要停牌
+    this->bettingMoney /= 2;  //筹码为原来的一半
+    this->finalResult = LOSE; //用户输了
+}
 void Player::showMessage(void) const
 {
 
     std::cout << "Player-"
-              << "-uid-" << this->uid << "-bankMoney-" << bankMoney << "-roomid-";
-    if (std::shared_ptr<Room> roomPtr = room.lock())
-    {
-        std::cout << roomPtr->getRoomId() << std::endl;
-    }
+              << "-uid-" << this->uid << "-bankMoney-" << bankMoney << "-bettingMoney-" << bettingMoney << "-roomid-" << room << std ::endl;
 
     for (auto &poker : pokerList)
     {
         poker->showMessage();
     }
-    std::cout << "-accumulate-" << this->getAccumulateOfPoker() << std::endl
-              << std::endl;
+    std::cout << "-accumulate-" << this->getAccumulateOfPoker() << std::endl;
 }

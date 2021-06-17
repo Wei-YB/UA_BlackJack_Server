@@ -7,11 +7,15 @@
 
 int main(int agrc, char *argv[])
 {
-
+    if (agrc != 2)
+    {
+        std::cout << "Give number of player . First one is dealer" << std::endl;
+        return -1;
+    }
+    const int playerSize = atoi(argv[1]);
     while (1)
     {
         std::list<int> uid;
-        const int playerSize = 3;
 
         for (int i = 0; i < playerSize; i++) //id号递增
         {

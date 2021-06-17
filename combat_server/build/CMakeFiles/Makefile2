@@ -73,6 +73,7 @@ CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/combat_server/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/example_game_single_play.dir/all
 all: CMakeFiles/example_create_delete_room.dir/all
 all: CMakeFiles/Main.dir/all
 
@@ -84,10 +85,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/example_game_single_play.dir/clean
 clean: CMakeFiles/example_create_delete_room.dir/clean
 clean: CMakeFiles/Main.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/example_game_single_play.dir
+
+# All Build rule for target.
+CMakeFiles/example_game_single_play.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=13,14,15,16,17,18 "Built target example_game_single_play"
+.PHONY : CMakeFiles/example_game_single_play.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/example_game_single_play.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/example_game_single_play.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles 0
+.PHONY : CMakeFiles/example_game_single_play.dir/rule
+
+# Convenience name for target.
+example_game_single_play: CMakeFiles/example_game_single_play.dir/rule
+
+.PHONY : example_game_single_play
+
+# clean rule for target.
+CMakeFiles/example_game_single_play.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/clean
+.PHONY : CMakeFiles/example_game_single_play.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/example_create_delete_room.dir

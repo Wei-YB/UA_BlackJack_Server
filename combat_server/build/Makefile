@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named example_game_single_play
+
+# Build rule for target.
+example_game_single_play: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_game_single_play
+.PHONY : example_game_single_play
+
+# fast build rule for target.
+example_game_single_play/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/build
+.PHONY : example_game_single_play/fast
+
+#=============================================================================
 # Target rules for targets named example_create_delete_room
 
 # Build rule for target.
@@ -183,6 +196,33 @@ example/example_create_delete_room.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/example/example_create_delete_room.cc.s
 .PHONY : example/example_create_delete_room.cc.s
 
+example/example_game_single_play.o: example/example_game_single_play.cc.o
+
+.PHONY : example/example_game_single_play.o
+
+# target to build an object file
+example/example_game_single_play.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/example/example_game_single_play.cc.o
+.PHONY : example/example_game_single_play.cc.o
+
+example/example_game_single_play.i: example/example_game_single_play.cc.i
+
+.PHONY : example/example_game_single_play.i
+
+# target to preprocess a source file
+example/example_game_single_play.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/example/example_game_single_play.cc.i
+.PHONY : example/example_game_single_play.cc.i
+
+example/example_game_single_play.s: example/example_game_single_play.cc.s
+
+.PHONY : example/example_game_single_play.s
+
+# target to generate assembly for a file
+example/example_game_single_play.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/example/example_game_single_play.cc.s
+.PHONY : example/example_game_single_play.cc.s
+
 main.o: main.cc.o
 
 .PHONY : main.o
@@ -216,6 +256,7 @@ src/Player.o: src/Player.cc.o
 
 # target to build an object file
 src/Player.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/Player.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/Player.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/Player.cc.o
 .PHONY : src/Player.cc.o
@@ -226,6 +267,7 @@ src/Player.i: src/Player.cc.i
 
 # target to preprocess a source file
 src/Player.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/Player.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/Player.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/Player.cc.i
 .PHONY : src/Player.cc.i
@@ -236,6 +278,7 @@ src/Player.s: src/Player.cc.s
 
 # target to generate assembly for a file
 src/Player.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/Player.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/Player.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/Player.cc.s
 .PHONY : src/Player.cc.s
@@ -246,6 +289,7 @@ src/Poker.o: src/Poker.cc.o
 
 # target to build an object file
 src/Poker.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/Poker.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/Poker.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/Poker.cc.o
 .PHONY : src/Poker.cc.o
@@ -256,6 +300,7 @@ src/Poker.i: src/Poker.cc.i
 
 # target to preprocess a source file
 src/Poker.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/Poker.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/Poker.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/Poker.cc.i
 .PHONY : src/Poker.cc.i
@@ -266,6 +311,7 @@ src/Poker.s: src/Poker.cc.s
 
 # target to generate assembly for a file
 src/Poker.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/Poker.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/Poker.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/Poker.cc.s
 .PHONY : src/Poker.cc.s
@@ -276,6 +322,7 @@ src/Room.o: src/Room.cc.o
 
 # target to build an object file
 src/Room.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/Room.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/Room.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/Room.cc.o
 .PHONY : src/Room.cc.o
@@ -286,6 +333,7 @@ src/Room.i: src/Room.cc.i
 
 # target to preprocess a source file
 src/Room.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/Room.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/Room.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/Room.cc.i
 .PHONY : src/Room.cc.i
@@ -296,6 +344,7 @@ src/Room.s: src/Room.cc.s
 
 # target to generate assembly for a file
 src/Room.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/Room.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/Room.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/Room.cc.s
 .PHONY : src/Room.cc.s
@@ -306,6 +355,7 @@ src/ShuffledPokers.o: src/ShuffledPokers.cc.o
 
 # target to build an object file
 src/ShuffledPokers.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ShuffledPokers.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ShuffledPokers.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ShuffledPokers.cc.o
 .PHONY : src/ShuffledPokers.cc.o
@@ -316,6 +366,7 @@ src/ShuffledPokers.i: src/ShuffledPokers.cc.i
 
 # target to preprocess a source file
 src/ShuffledPokers.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ShuffledPokers.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ShuffledPokers.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ShuffledPokers.cc.i
 .PHONY : src/ShuffledPokers.cc.i
@@ -326,6 +377,7 @@ src/ShuffledPokers.s: src/ShuffledPokers.cc.s
 
 # target to generate assembly for a file
 src/ShuffledPokers.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ShuffledPokers.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ShuffledPokers.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ShuffledPokers.cc.s
 .PHONY : src/ShuffledPokers.cc.s
@@ -340,9 +392,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Main"
 	@echo "... example_create_delete_room"
+	@echo "... example_game_single_play"
 	@echo "... example/example_create_delete_room.o"
 	@echo "... example/example_create_delete_room.i"
 	@echo "... example/example_create_delete_room.s"
+	@echo "... example/example_game_single_play.o"
+	@echo "... example/example_game_single_play.i"
+	@echo "... example/example_game_single_play.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

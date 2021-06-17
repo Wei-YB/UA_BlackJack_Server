@@ -28,3 +28,4 @@ macro(add_example_target EXAMPLE_TARGET)
 endmacro(add_example_target)
 # 指定生成目标 
 add_example_target(create_delete_room)
+add_example_target(game_single_play)
