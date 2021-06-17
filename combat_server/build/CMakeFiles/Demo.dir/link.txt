@@ -1,1 +1,0 @@
-/usr/lib64/ccache/c++    -std=c++17  -Wall -Wno-unused-variable   -rdynamic CMakeFiles/Demo.dir/main.cc.o CMakeFiles/Demo.dir/src/Player.cc.o CMakeFiles/Demo.dir/src/Poker.cc.o CMakeFiles/Demo.dir/src/Room.cc.o CMakeFiles/Demo.dir/src/ShuffledPokers.cc.o  -o Demo 

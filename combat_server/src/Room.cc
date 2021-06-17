@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <queue>
 #include "co_routine.h"
-std::unordered_map<black_jack_room_id_t, std::weak_ptr<Room>> roomHashMap;
+
+std::unordered_map<BlackJackRoomID, std::weak_ptr<Room>> roomHashMap;
+
 const Poker::ptr Room::getPokerFromShuffledPokers(void)
 {
     int index = this->shuffledPokers->nowIndex;

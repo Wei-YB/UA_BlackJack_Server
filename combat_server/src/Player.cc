@@ -1,6 +1,6 @@
 #include "Player.h"
 #include "Room.h"
-std::unordered_map<black_jack_uid_t, std::weak_ptr<Player>> playerHashMap;
+std::unordered_map<BlackJackUID, std::weak_ptr<Player>> playerHashMap;
 const int maxAcePokerValue[] = {-1, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21}; //n张ACE最大组成的值（前提是不超过21）
 int Player::getAccumulateOfPoker(void) const                                                                             //获取用户当前手头的牌的大小
 {

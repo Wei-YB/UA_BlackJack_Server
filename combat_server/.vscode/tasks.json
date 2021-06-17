@@ -12,8 +12,16 @@
                 "${workspaceFolder}/inc",
                 "-I",
                 "${workspaceFolder}/3rd/libco",
+                "-L",
+                "${workspaceFolder}/3rd/libco",
+                "-l",
+                "colib",
                 "-o",
                 "${workspaceFolder}/${fileBasenameNoExtension}",
+                "-pthread",
+                "-lstdc++",
+                "-Wl,--no-as-needed",
+                "-ldl"
             ],
             "options": {
                 "cwd": "${fileDirname}"

@@ -7,7 +7,7 @@
 #include "ShuffledPokers.h"
 #include "Player.h"
 class Room;
-extern std::unordered_map<black_jack_room_id_t, std::weak_ptr<Room>> roomHashMap;
+extern std::unordered_map<BlackJackRoomID, std::weak_ptr<Room>> roomHashMap;
 class Room : std::enable_shared_from_this<Room>
 {
 public:
@@ -16,8 +16,8 @@ public:
     using PlayerList = std::list<PalyerPointer>;
 
     bool isGameBegin = false; //对局是否开始
-    inline black_jack_room_id_t getRoomId(void) { return rid; }
-    Room(black_jack_room_id_t _rid, std::list<int> &uids) : rid(_rid)
+    inline BlackJackRoomID getRoomId(void) { return rid; }
+    Room(BlackJackRoomID _rid, std::list<int> &uids) : rid(_rid)
     {
         shuffledPokers = std::make_shared<ShuffledPokers>();
         for (auto i : uids)
@@ -27,7 +27,7 @@ public:
             playerHashMap[i] = playerList.back(); //这个不能放在player的构造函数中，因为构造函数执行完时暂时没有shared_ptr指向他
         }
     };
-    Room(black_jack_room_id_t _rid, PlayerList &_players) : rid(_rid), playerList(_players)
+    Room(BlackJackRoomID _rid, PlayerList &_players) : rid(_rid), playerList(_players)
     {
         shuffledPokers = std::make_shared<ShuffledPokers>();
         for (auto &player : playerList)
@@ -39,9 +39,12 @@ public:
     void showMessage(void) const;
     const Poker::ptr getPokerFromShuffledPokers(void);
     void gameWhile(void);
+    inline void setExpire(void) { expired = true; };
+    inline bool isExpired(void) { return expired; };
 
 private:
-    black_jack_room_id_t rid;
+    BlackJackRoomID rid;
     ShuffledPokers::ptr shuffledPokers;
     PlayerList playerList;
+    bool expired = false; //房间是否已经解散
 };
