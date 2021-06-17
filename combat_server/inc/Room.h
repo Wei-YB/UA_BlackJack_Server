@@ -3,24 +3,37 @@
 #include <iostream>
 #include <list>
 #include <memory>
+#include <unordered_map>
 #include "ShuffledPokers.h"
 #include "Player.h"
-class Room
+class Room;
+extern std::unordered_map<black_jack_room_id_t, std::weak_ptr<Room>> roomHashMap;
+class Room : std::enable_shared_from_this<Room>
 {
 public:
     typedef std::shared_ptr<Room> ptr;
+    using PalyerPointer = Player::ptr;
+    using PlayerList = std::list<PalyerPointer>;
+
     bool isGameBegin = false; //对局是否开始
     inline black_jack_room_id_t getRoomId(void) { return rid; }
-    Room(black_jack_room_id_t _rid) : rid(_rid)
+    Room(black_jack_room_id_t _rid, std::list<int> &uids) : rid(_rid)
     {
         shuffledPokers = std::make_shared<ShuffledPokers>();
-    };
-    Room(black_jack_room_id_t _rid, std::list<Player::ptr> &_players) : rid(_rid), players(_players)
-    {
-        shuffledPokers = std::make_shared<ShuffledPokers>();
-        for (auto &player : players)
+        for (auto i : uids)
         {
-            player->setRoom(this);
+            playerList.push_back(std::make_shared<Player>(i));
+            playerList.back()->setRoom(weak_from_this());
+            playerHashMap[i] = playerList.back(); //这个不能放在player的构造函数中，因为构造函数执行完时暂时没有shared_ptr指向他
+        }
+    };
+    Room(black_jack_room_id_t _rid, PlayerList &_players) : rid(_rid), playerList(_players)
+    {
+        shuffledPokers = std::make_shared<ShuffledPokers>();
+        for (auto &player : playerList)
+        {
+            player->setRoom(weak_from_this());
+            playerHashMap[player->uid] = player; //这个不能放在player的构造函数中，因为构造函数执行完时暂时没有shared_ptr指向他
         }
     };
     void showMessage(void) const;
@@ -30,5 +43,5 @@ public:
 private:
     black_jack_room_id_t rid;
     ShuffledPokers::ptr shuffledPokers;
-    std::list<Player::ptr> players;
+    PlayerList playerList;
 };

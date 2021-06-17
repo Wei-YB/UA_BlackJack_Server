@@ -10,6 +10,8 @@
                 "${workspaceFolder}/src/*.cc", //src
                 "-I",
                 "${workspaceFolder}/inc",
+                "-I",
+                "${workspaceFolder}/3rd/libco",
                 "-o",
                 "${workspaceFolder}/${fileBasenameNoExtension}",
             ],

@@ -10,6 +10,7 @@ aux_source_directory(./src DIR_SRCS)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++17  -Wall -Wno-unused-variable ")
 include_directories(
     "${PROJECT_SOURCE_DIR}/inc"
+    "${PROJECT_SOURCE_DIR}/3rd/libco",
 )
 # 指定生成目标 
 add_executable(Demo main.cc ${DIR_SRCS})

@@ -1,11 +1,12 @@
 #include "Player.h"
 #include "Room.h"
+std::unordered_map<black_jack_uid_t, std::weak_ptr<Player>> playerHashMap;
 const int maxAcePokerValue[] = {-1, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21}; //n张ACE最大组成的值（前提是不超过21）
 int Player::getAccumulateOfPoker(void) const                                                                             //获取用户当前手头的牌的大小
 {
     int res = 0;
     int aceNum = 0; //A的个数
-    for (auto &poke : this->pokers)
+    for (auto &poke : this->pokerList)
     {
         int value = poke->getValue();
         value %= 14;    //不在意花色
@@ -46,11 +47,14 @@ int Player::getAccumulateOfPoker(void) const                                    
 }
 void Player::getPoker(const Poker::ptr &poker) //强行拿一张牌
 {
-    this->pokers.emplace_back(poker);
+    this->pokerList.emplace_back(poker);
 }
 void Player::hitPoker(void) //用户从牌堆中拿取一张牌
 {
-    this->pokers.push_back(room->getPokerFromShuffledPokers());
+    if (std::shared_ptr<Room> roomPtr = room.lock())
+    {
+        this->pokerList.push_back(roomPtr->getPokerFromShuffledPokers());
+    }
 }
 void Player::standPoker(void) //用户停牌
 {
@@ -64,9 +68,13 @@ void Player::showMessage(void) const
 {
 
     std::cout << "Player-"
-              << "-uid-" << this->uid << "-bankMoney-" << bankMoney << "-roomid-" << room->getRoomId() << std::endl;
+              << "-uid-" << this->uid << "-bankMoney-" << bankMoney << "-roomid-";
+    if (std::shared_ptr<Room> roomPtr = room.lock())
+    {
+        std::cout << roomPtr->getRoomId() << std::endl;
+    }
 
-    for (auto &poker : pokers)
+    for (auto &poker : pokerList)
     {
         poker->showMessage();
     }

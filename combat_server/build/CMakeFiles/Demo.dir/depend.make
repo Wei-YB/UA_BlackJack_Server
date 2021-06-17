@@ -18,6 +18,7 @@ CMakeFiles/Demo.dir/src/Player.cc.o: ../src/Player.cc
 CMakeFiles/Demo.dir/src/Poker.cc.o: ../inc/Poker.h
 CMakeFiles/Demo.dir/src/Poker.cc.o: ../src/Poker.cc
 
+CMakeFiles/Demo.dir/src/Room.cc.o: ../3rd/libco/co_routine.h
 CMakeFiles/Demo.dir/src/Room.cc.o: ../inc/Player.h
 CMakeFiles/Demo.dir/src/Room.cc.o: ../inc/Poker.h
 CMakeFiles/Demo.dir/src/Room.cc.o: ../inc/Room.h
