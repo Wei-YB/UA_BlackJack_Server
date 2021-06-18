@@ -41,7 +41,6 @@ public:
 private:
     //bool check(UID uid);
     
-    
     //RPC call 调用room的接口！
     //todo 
     void MatchStart(RoomID rid, std::vector<UID> playersID);

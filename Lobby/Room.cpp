@@ -1,5 +1,5 @@
-#include<Room.h>
-#include<cassert>
+#include "Room.h"
+#include <cassert>
 
 void ua_black_jack_server::lobby::Room::Match_end(){
     std::swap(players_ready, players_unready);
@@ -52,7 +52,14 @@ bool ua_black_jack_server::lobby::Room::isDone(){
 
 }
 
-std::unordered_set<ua_black_jack_server::lobby::Room::UID> ua_black_jack_server::lobby::Room::getAllPlayersID(){
-    return players_ready;
+std::vector<ua_black_jack_server::lobby::Room::UID> ua_black_jack_server::lobby::Room::getAllPlayersID(){
+    std::vector<UID> res;
+    for(auto pUID:players_ready){
+        res.push_back(pUID);
+    }
+    for(auto pUID:players_unready){
+        res.push_back(pUID);
+    }
+    return res;
 
 }

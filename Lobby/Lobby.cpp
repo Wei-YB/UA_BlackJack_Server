@@ -1,7 +1,7 @@
 #include "Lobby.h"
 
 /*
-innitialize Allrooms, the index of allrooms is roomid, index 0 is not used!
+innitialize Allrooms_, the index of allrooms is roomid, index 0 is not used!
 */
 ua_black_jack_server::lobby::Lobby::Lobby():
 AllRooms_(std::vector<Room> (maxRooms+1))
@@ -28,14 +28,20 @@ ua_black_jack_server::lobby::Lobby::UID ua_black_jack_server::lobby::Lobby::Logi
 
 void ua_black_jack_server::lobby::Lobby::Logout(UID uid){
     // to do . rpc call redis service
+    if(AllPlayers_.GetStatus(uid) == ua_black_jack_server::lobby::Players::Status::IN_ROOM_NOT_READY ||
+       AllPlayers_.GetStatus(uid) == ua_black_jack_server::lobby::Players::Status::IN_ROOM_READY ||
+       AllPlayers_.GetStatus(uid) == ua_black_jack_server::lobby::Players::Status::PLAYING){
+        LeaveRoom(uid);
 
+    }
     AllPlayers_.LogOut(uid);
+    
 
 }
 
 ua_black_jack_server::lobby::Lobby::RoomID ua_black_jack_server::lobby::Lobby::CreateRoom(UID uid){
     RoomID rid = *(emptyRooms_.begin());
-    //don't update the room status
+    //don't need to update the room status
     return rid;
 
 }
@@ -120,7 +126,7 @@ bool ua_black_jack_server::lobby::Lobby::PlayerReady(UID uid){
         }
         
         //match start, every player in this room needs to be changed status.
-        std::vector<UID> playersID(AllRooms_[rid].getAllPlayersID().cbegin(), AllRooms_[rid].getAllPlayersID().cend());
+        std::vector<UID> playersID = AllRooms_[rid].getAllPlayersID();
         for(UID id: playersID)
             AllPlayers_.MatchStart(id);
 
@@ -134,9 +140,29 @@ bool ua_black_jack_server::lobby::Lobby::PlayerReady(UID uid){
     /*this logic is complex
     first search in the availabeRooms, if not exists, return a empty room
     */
-   
-
-
+    int minUnreadySize = 10;
+    RoomID rid = 0;//in lobby
+    for(auto roomid:availableRooms_){
+        int unreadySize = AllRooms_[roomid].TotalSize() - AllRooms_[roomid].ReadySize();
+        if(unreadySize == 1){
+            rid = roomid;
+            break;
+        }
+        if(unreadySize < minUnreadySize){
+            minUnreadySize = unreadySize;
+            rid = roomid;
+        }
+            
+    }
+    if(rid == 0){
+        rid = CreateRoom(uid);//get roomid of an empty room
+    }
+    
+    bool res = JoinRoom(uid, rid);
+    assert(res == true);
+    res = PlayerReady(uid);//quickmatch means playerReady automatically
+    assert(res == true);
+    return rid;
 }
 
 void ua_black_jack_server::lobby::Lobby::MatchEnd(RoomID rid){

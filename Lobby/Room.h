@@ -1,7 +1,8 @@
 #pragma once
 
-#include<unordered_set>
-#include<Players.h>
+#include <vector>
+#include <unordered_set>
+#include "Players.h"
 
 namespace ua_black_jack_server { namespace lobby{
 
@@ -11,8 +12,6 @@ room doesn't need to save the status of itself, thus the lobby directly change t
 class Room{
 public:
     using UID = int64_t;
-
-
     
 public:
     void Match_end();
@@ -28,8 +27,13 @@ public:
     bool isFull();
 
     bool isEmpty();
+
+    int TotalSize();
     
-    std::unordered_set<UID> getAllPlayersID();
+    int ReadySize();
+
+    //return all players of ready and unready in this room
+    std::vector<UID> getAllPlayersID();
     //void Start();//no need in room???
 
 private:
