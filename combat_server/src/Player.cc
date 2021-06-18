@@ -80,6 +80,10 @@ void Player::surrender(void) //用户投降
     this->bettingMoney /= 2;  //筹码为原来的一半
     this->finalResult = LOSE; //用户输了
 }
+void Player::quit(void) //用户强行退游，需要托管
+{
+    this->isQuit = true;
+}
 void Player::showMessage(void) const
 {
 

@@ -4,7 +4,7 @@
 #include "co_routine.h"
 
 std::unordered_map<BlackJackRoomID, std::weak_ptr<Room>> roomHashMap;
-Room::ptr malloOneRoom(BlackJackRoomID rid, std::list<int> &uids)
+Room::ptr malloOneRoom(BlackJackRoomID rid, UidList &uids)
 {
     Room::ptr room = std::make_shared<Room>(rid, uids);
     roomHashMap[room->getRoomId()] = room;
@@ -40,11 +40,11 @@ void Room::showMessage(void) const
 void Room::judgeWinOrLose(void) //判断最后的输赢
 {
     //庄家在游戏结束前投降了或提前退出游戏了或爆了
-    if (playerList.front()->finalResult == LOSE)
+    if (playerList.front()->finalResult != WIN)
     {
         for (auto &player : playerList)
         {
-            if (player->finalResult == LOSE) //玩家在游戏结束前投降了或提前退出游戏了，不能拿钱
+            if (player->finalResult != WIN) //玩家在游戏结束前投降了或提前退出游戏了，不能拿钱
             {
                 continue;
             }
@@ -101,7 +101,7 @@ void Room::judgeWinOrLose(void) //判断最后的输赢
     //庄家没有抽爆
     for (auto &player : playerList)
     {
-        if (player->finalResult == LOSE || player->isDealer == true) //玩家在游戏结束前投降了或提前退出游戏或爆了
+        if (player->finalResult != WIN || player->isDealer == true) //玩家在游戏结束前投降了或提前退出游戏或爆了
         {
             continue;
         }
@@ -171,6 +171,7 @@ Room::~Room() //房间解散
         this->playerList.front()->finalResult = DRAW;
     }
 
+#ifdef PRINT_LOG
     std::cout << "game over" << std::endl;
     for (auto &player : playerList)
     {
@@ -181,6 +182,7 @@ Room::~Room() //房间解散
         else if (player->finalResult == LOSE)
             std::cout << player->uid << " LOSE " << player->bettingMoney << std::endl;
     }
+#endif
     /*************存储数据到数据库**************/
 
     /*************存储数据到数据库**************/

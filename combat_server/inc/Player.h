@@ -19,9 +19,9 @@ public:
     BlackJackMoney bettingMoney; //用户台面上的筹码
     BlackJackUID uid;
 
-    bool isReady = false;                //该局游戏用户是否准备
     bool isDealer = false;               //用户是否为庄家
     bool isStand = false;                //是否停牌
+    bool isQuit = false;                 //是否退游
     FinalResultOfGame finalResult = WIN; //默认用户会赢
 
     int getAccumulateOfPoker(void) const;     //获取用户当前手头的牌的大小
@@ -30,6 +30,7 @@ public:
     void doubleBettingMoney(void);            //用户加倍
     void surrender(void);                     //用户投降
     void getPoker(const PokerPointer &poker); //强行拿牌,测试用
+    void quit(void);                          //用户强行退游
 
     void showMessage(void) const;
     Player(BlackJackUID _uid, BlackJackRoomID _room) : uid(_uid), room(_room){};

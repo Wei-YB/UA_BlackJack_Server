@@ -15,7 +15,7 @@ void *createRoom(void *args)
 {
     RoomRoutine *roomID = (RoomRoutine *)args;
 
-    std::list<int> playerId;
+    UidList playerId;
     playerId.emplace_back(roomID->id); //room i 中有 id为1的player
     std::shared_ptr<Room> room = std::make_shared<Room>(roomID->id, playerId);
 

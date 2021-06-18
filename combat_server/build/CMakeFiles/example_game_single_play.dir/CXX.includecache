@@ -71,6 +71,8 @@ Poker.h
 ../inc/combat_typedef.h
 iostream
 -
+list
+-
 
 /home/tong/UA_BlackJack_Server/combat_server/src/Room.cc
 Room.h

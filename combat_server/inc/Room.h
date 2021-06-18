@@ -20,7 +20,7 @@ public:
 
     bool isGameBegin = false; //对局是否开始
     inline BlackJackRoomID getRoomId(void) { return rid; }
-    Room(BlackJackRoomID _rid, std::list<int> &uids) : rid(_rid)
+    Room(BlackJackRoomID _rid, UidList &uids) : rid(_rid)
     {
         shuffledPokers = std::make_shared<ShuffledPokers>();
         for (auto i : uids)
@@ -57,4 +57,4 @@ private:
     BlackJackMoney dealerFinalWinMoney = 0;
     bool expired = false; //房间是否已经解散
 };
-Room::ptr malloOneRoom(BlackJackRoomID rid, std::list<int> &uids);
+Room::ptr malloOneRoom(BlackJackRoomID rid, UidList &uids);

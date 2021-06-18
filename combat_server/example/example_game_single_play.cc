@@ -15,7 +15,7 @@ int main(int agrc, char *argv[])
     const int playerSize = atoi(argv[1]);
     while (1)
     {
-        std::list<int> uid;
+        UidList uid;
 
         for (int i = 0; i < playerSize; i++) //id号递增
         {
