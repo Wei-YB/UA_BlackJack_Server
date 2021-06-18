@@ -1,7 +1,7 @@
 # gRPC使用指南
 ## 环境配置
 
-[gRPC and Protocol Buffers安装](https://grpc.io/docs/languages/cpp/quickstart/)
+按照 [gRPC and Protocol Buffers安装](https://grpc.io/docs/languages/cpp/quickstart/) 中的内容完成 gRPC及其依赖的安装。
 
 其中的两条export命令，只对当前终端有效
 ```bash
@@ -76,9 +76,33 @@ Status status = stub_->GetName(&context, request, &reply);
 
 ### 异步RPC
 
-异步RPC的通知机制为：客户端发起异步调用请求，之后由gRPC负责将请求结果保存到客户端定义的
+异步RPC的通知机制为：
+
+- 客户端发起异步调用请求，之后由gRPC负责将请求结果保存到客户端定义的 ``CompletionQueue`` 队列中，客户端自行决定读取队列中的响应的时机。
+- 服务端同样需要发起异步的监听调用，gRPC负责将监听到的请求保存到服务端定义的 ``CompletionQueue`` 队列中，服务端自行决定处理队列中的请求的时机。
 
 **client-asyn.cpp**
 
-实现异步RPC通信的客户端源文件。92~99行为
+实现异步RPC通信的客户端源文件。92~99行为客户端定义的 **调用请求类**，类里封装了一些异步调用的需要用到的成员数据，如``context`` 和 ``response_reader``。用户可以自行添加一些其它数据以及相应的回调函数。一般来说，``reply`` 是必须的，因为需要获取响应的数据。
+
+上面提到的gRPC负责将请求的结果保存到队列中，这里**"请求的结果"**指的就是调用请求类实例的地址。体现在58行，以及66行。
+
+**server-asyn.cpp**
+
+实现异步RPC通信的服务端源文件。72~113行的 ``CallData`` 类和客户端中的调用请求类在功能上类似。``Proceed()`` 方法负责提供关于客户端请求的解析以及响应数据的填充。
+
+**CMakeLists.txt**
+
+CMakeLists.txt中需要修改的地方为注释标注的位置
+
+-  ``# demo dependent`` ，例如 ``demo.proto`` 中的``demo``需要替换成自定义的 ``.proto`` 文件中的 ``package`` 名字。
+
+- ``# cpp file dependent`` ，``server-asyn client-asyn server-syn client-syn`` 替换成自定义的cc源文件的前缀
+
+之后就可以运行以下命令重新编译修改后的项目
+
+```bash
+$ cmake -DCMAKE_PREFIX_PATH=$MY_INSTALL_DIR ../..
+$ make
+```
 
