@@ -163,7 +163,6 @@ void *waitingSignalFromOtherModule(void *arg)
     while (true)
     {
         std::cout << cnt++ << "Waiting.." << std::endl;
-        co_yield_ct();
         poll(NULL, 0, 1); //必须要有挂起函数
     }
 }
