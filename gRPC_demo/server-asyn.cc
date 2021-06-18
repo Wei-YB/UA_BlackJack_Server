@@ -40,20 +40,23 @@ using grpc::Status;
 // Service dependent
 /*************************/
 using demo::GetNameService;
-using demo::NameReply;
-using demo::NameRequest;
+using demo::IDReply;
+using demo::IDRequest;
 /*************************/
 
-class ServerImpl final {
- public:
-  ~ServerImpl() {
+class ServerImpl final
+{
+public:
+  ~ServerImpl()
+  {
     server_->Shutdown();
     // Always shutdown the completion queue after the server.
     cq_->Shutdown();
   }
 
   // There is no shutdown handling in this code.
-  void Run() {
+  void Run()
+  {
     std::string server_address("0.0.0.0:50051");
 
     ServerBuilder builder;
@@ -67,20 +70,26 @@ class ServerImpl final {
     HandleRpcs();
   }
 
- private:
+private:
   // Class encompasing the state and logic needed to serve a request.
-  class CallData {
-   public:
-    CallData(GetNameService::AsyncService* service, ServerCompletionQueue* cq)
-        : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE) {
+  class CallData
+  {
+  public:
+    CallData(GetNameService::AsyncService *service, ServerCompletionQueue *cq)
+        : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE)
+    {
       Proceed();
     }
 
-    void Proceed() {
-      if (status_ == CREATE) {
+    void Proceed()
+    {
+      if (status_ == CREATE)
+      {
         status_ = PROCESS;
-        service_->RequestGetName(&ctx_, &request_, &responder_, cq_, cq_, this);
-      } else if (status_ == PROCESS) {
+        service_->RequestGetID(&ctx_, &request_, &responder_, cq_, cq_, this); //异步监听请求
+      }
+      else if (status_ == PROCESS)
+      {
         new CallData(service_, cq_);
 
         std::string name = "Aaron ";
@@ -90,38 +99,47 @@ class ServerImpl final {
         // And we are done! Let the gRPC runtime know we've finished
         status_ = FINISH;
         responder_.Finish(reply_, Status::OK, this);
-      } else {
+      }
+      else
+      {
         GPR_ASSERT(status_ == FINISH);
 
         delete this;
       }
     }
 
-   private:
-    GetNameService::AsyncService* service_;
-    ServerCompletionQueue* cq_;
+  private:
+    GetNameService::AsyncService *service_;
+    ServerCompletionQueue *cq_;
     ServerContext ctx_;
 
-    NameRequest request_;
-    NameReply reply_;
+    IDRequest request_;
+    IDReply reply_;
 
     // The means to get back to the client.
-    ServerAsyncResponseWriter<NameReply> responder_;
+    ServerAsyncResponseWriter<IDReply> responder_;
 
-    enum CallStatus { CREATE, PROCESS, FINISH };
-    CallStatus status_;  // The current serving state.
+    enum CallStatus
+    {
+      CREATE,
+      PROCESS,
+      FINISH
+    };
+    CallStatus status_; // The current serving state.
   };
 
   // This can be run in multiple threads if needed.
-  void HandleRpcs() {
+  void HandleRpcs()
+  {
     // Spawn a new CallData instance to serve new clients.
     new CallData(&service_, cq_.get());
-    void* tag;  // uniquely identifies a request.
+    void *tag; // uniquely identifies a request.
     bool ok;
-    while (true) {
+    while (true)
+    {
       GPR_ASSERT(cq_->Next(&tag, &ok));
       GPR_ASSERT(ok);
-      static_cast<CallData*>(tag)->Proceed();
+      static_cast<CallData *>(tag)->Proceed();
     }
   }
 
@@ -130,7 +148,8 @@ class ServerImpl final {
   std::unique_ptr<Server> server_;
 };
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv)
+{
   ServerImpl server;
   server.Run();
 

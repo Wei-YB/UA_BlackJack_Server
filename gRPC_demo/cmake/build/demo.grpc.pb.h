@@ -51,21 +51,21 @@ class GetNameService final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status GetName(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::demo::NameReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::demo::NameReply>> AsyncGetName(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::demo::NameReply>>(AsyncGetNameRaw(context, request, cq));
+    virtual ::grpc::Status GetID(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::demo::IDReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::demo::IDReply>> AsyncGetID(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::demo::IDReply>>(AsyncGetIDRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::demo::NameReply>> PrepareAsyncGetName(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::demo::NameReply>>(PrepareAsyncGetNameRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::demo::IDReply>> PrepareAsyncGetID(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::demo::IDReply>>(PrepareAsyncGetIDRaw(context, request, cq));
     }
     class experimental_async_interface {
      public:
       virtual ~experimental_async_interface() {}
-      virtual void GetName(::grpc::ClientContext* context, const ::demo::NameRequest* request, ::demo::NameReply* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetID(::grpc::ClientContext* context, const ::demo::IDRequest* request, ::demo::IDReply* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetName(::grpc::ClientContext* context, const ::demo::NameRequest* request, ::demo::NameReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetID(::grpc::ClientContext* context, const ::demo::IDRequest* request, ::demo::IDReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void GetName(::grpc::ClientContext* context, const ::demo::NameRequest* request, ::demo::NameReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void GetID(::grpc::ClientContext* context, const ::demo::IDRequest* request, ::demo::IDReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
     };
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -76,27 +76,27 @@ class GetNameService final {
     #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::demo::NameReply>* AsyncGetNameRaw(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::demo::NameReply>* PrepareAsyncGetNameRaw(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::demo::IDReply>* AsyncGetIDRaw(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::demo::IDReply>* PrepareAsyncGetIDRaw(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    ::grpc::Status GetName(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::demo::NameReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::demo::NameReply>> AsyncGetName(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::demo::NameReply>>(AsyncGetNameRaw(context, request, cq));
+    ::grpc::Status GetID(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::demo::IDReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::demo::IDReply>> AsyncGetID(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::demo::IDReply>>(AsyncGetIDRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::demo::NameReply>> PrepareAsyncGetName(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::demo::NameReply>>(PrepareAsyncGetNameRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::demo::IDReply>> PrepareAsyncGetID(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::demo::IDReply>>(PrepareAsyncGetIDRaw(context, request, cq));
     }
     class experimental_async final :
       public StubInterface::experimental_async_interface {
      public:
-      void GetName(::grpc::ClientContext* context, const ::demo::NameRequest* request, ::demo::NameReply* response, std::function<void(::grpc::Status)>) override;
+      void GetID(::grpc::ClientContext* context, const ::demo::IDRequest* request, ::demo::IDReply* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetName(::grpc::ClientContext* context, const ::demo::NameRequest* request, ::demo::NameReply* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetID(::grpc::ClientContext* context, const ::demo::IDRequest* request, ::demo::IDReply* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void GetName(::grpc::ClientContext* context, const ::demo::NameRequest* request, ::demo::NameReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void GetID(::grpc::ClientContext* context, const ::demo::IDRequest* request, ::demo::IDReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
      private:
       friend class Stub;
@@ -109,9 +109,9 @@ class GetNameService final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class experimental_async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::demo::NameReply>* AsyncGetNameRaw(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::demo::NameReply>* PrepareAsyncGetNameRaw(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::grpc::CompletionQueue* cq) override;
-    const ::grpc::internal::RpcMethod rpcmethod_GetName_;
+    ::grpc::ClientAsyncResponseReader< ::demo::IDReply>* AsyncGetIDRaw(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::demo::IDReply>* PrepareAsyncGetIDRaw(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::grpc::CompletionQueue* cq) override;
+    const ::grpc::internal::RpcMethod rpcmethod_GetID_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -119,124 +119,124 @@ class GetNameService final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status GetName(::grpc::ServerContext* context, const ::demo::NameRequest* request, ::demo::NameReply* response);
+    virtual ::grpc::Status GetID(::grpc::ServerContext* context, const ::demo::IDRequest* request, ::demo::IDReply* response);
   };
   template <class BaseClass>
-  class WithAsyncMethod_GetName : public BaseClass {
+  class WithAsyncMethod_GetID : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_GetName() {
+    WithAsyncMethod_GetID() {
       ::grpc::Service::MarkMethodAsync(0);
     }
-    ~WithAsyncMethod_GetName() override {
+    ~WithAsyncMethod_GetID() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetName(::grpc::ServerContext* /*context*/, const ::demo::NameRequest* /*request*/, ::demo::NameReply* /*response*/) override {
+    ::grpc::Status GetID(::grpc::ServerContext* /*context*/, const ::demo::IDRequest* /*request*/, ::demo::IDReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetName(::grpc::ServerContext* context, ::demo::NameRequest* request, ::grpc::ServerAsyncResponseWriter< ::demo::NameReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetID(::grpc::ServerContext* context, ::demo::IDRequest* request, ::grpc::ServerAsyncResponseWriter< ::demo::IDReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_GetName<Service > AsyncService;
+  typedef WithAsyncMethod_GetID<Service > AsyncService;
   template <class BaseClass>
-  class ExperimentalWithCallbackMethod_GetName : public BaseClass {
+  class ExperimentalWithCallbackMethod_GetID : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithCallbackMethod_GetName() {
+    ExperimentalWithCallbackMethod_GetID() {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::Service::
     #else
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::demo::NameRequest, ::demo::NameReply>(
+          new ::grpc::internal::CallbackUnaryHandler< ::demo::IDRequest, ::demo::IDReply>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::demo::NameRequest* request, ::demo::NameReply* response) { return this->GetName(context, request, response); }));}
-    void SetMessageAllocatorFor_GetName(
-        ::grpc::experimental::MessageAllocator< ::demo::NameRequest, ::demo::NameReply>* allocator) {
+                     context, const ::demo::IDRequest* request, ::demo::IDReply* response) { return this->GetID(context, request, response); }));}
+    void SetMessageAllocatorFor_GetID(
+        ::grpc::experimental::MessageAllocator< ::demo::IDRequest, ::demo::IDReply>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
     #endif
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::demo::NameRequest, ::demo::NameReply>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::demo::IDRequest, ::demo::IDReply>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~ExperimentalWithCallbackMethod_GetName() override {
+    ~ExperimentalWithCallbackMethod_GetID() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetName(::grpc::ServerContext* /*context*/, const ::demo::NameRequest* /*request*/, ::demo::NameReply* /*response*/) override {
+    ::grpc::Status GetID(::grpc::ServerContext* /*context*/, const ::demo::IDRequest* /*request*/, ::demo::IDReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    virtual ::grpc::ServerUnaryReactor* GetName(
-      ::grpc::CallbackServerContext* /*context*/, const ::demo::NameRequest* /*request*/, ::demo::NameReply* /*response*/)
+    virtual ::grpc::ServerUnaryReactor* GetID(
+      ::grpc::CallbackServerContext* /*context*/, const ::demo::IDRequest* /*request*/, ::demo::IDReply* /*response*/)
     #else
-    virtual ::grpc::experimental::ServerUnaryReactor* GetName(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::demo::NameRequest* /*request*/, ::demo::NameReply* /*response*/)
+    virtual ::grpc::experimental::ServerUnaryReactor* GetID(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::demo::IDRequest* /*request*/, ::demo::IDReply* /*response*/)
     #endif
       { return nullptr; }
   };
   #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-  typedef ExperimentalWithCallbackMethod_GetName<Service > CallbackService;
+  typedef ExperimentalWithCallbackMethod_GetID<Service > CallbackService;
   #endif
 
-  typedef ExperimentalWithCallbackMethod_GetName<Service > ExperimentalCallbackService;
+  typedef ExperimentalWithCallbackMethod_GetID<Service > ExperimentalCallbackService;
   template <class BaseClass>
-  class WithGenericMethod_GetName : public BaseClass {
+  class WithGenericMethod_GetID : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithGenericMethod_GetName() {
+    WithGenericMethod_GetID() {
       ::grpc::Service::MarkMethodGeneric(0);
     }
-    ~WithGenericMethod_GetName() override {
+    ~WithGenericMethod_GetID() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetName(::grpc::ServerContext* /*context*/, const ::demo::NameRequest* /*request*/, ::demo::NameReply* /*response*/) override {
+    ::grpc::Status GetID(::grpc::ServerContext* /*context*/, const ::demo::IDRequest* /*request*/, ::demo::IDReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
   template <class BaseClass>
-  class WithRawMethod_GetName : public BaseClass {
+  class WithRawMethod_GetID : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawMethod_GetName() {
+    WithRawMethod_GetID() {
       ::grpc::Service::MarkMethodRaw(0);
     }
-    ~WithRawMethod_GetName() override {
+    ~WithRawMethod_GetID() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetName(::grpc::ServerContext* /*context*/, const ::demo::NameRequest* /*request*/, ::demo::NameReply* /*response*/) override {
+    ::grpc::Status GetID(::grpc::ServerContext* /*context*/, const ::demo::IDRequest* /*request*/, ::demo::IDReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetName(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
-  class ExperimentalWithRawCallbackMethod_GetName : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_GetID : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithRawCallbackMethod_GetName() {
+    ExperimentalWithRawCallbackMethod_GetID() {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::Service::
     #else
@@ -250,55 +250,55 @@ class GetNameService final {
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetName(context, request, response); }));
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetID(context, request, response); }));
     }
-    ~ExperimentalWithRawCallbackMethod_GetName() override {
+    ~ExperimentalWithRawCallbackMethod_GetID() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetName(::grpc::ServerContext* /*context*/, const ::demo::NameRequest* /*request*/, ::demo::NameReply* /*response*/) override {
+    ::grpc::Status GetID(::grpc::ServerContext* /*context*/, const ::demo::IDRequest* /*request*/, ::demo::IDReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    virtual ::grpc::ServerUnaryReactor* GetName(
+    virtual ::grpc::ServerUnaryReactor* GetID(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
     #else
-    virtual ::grpc::experimental::ServerUnaryReactor* GetName(
+    virtual ::grpc::experimental::ServerUnaryReactor* GetID(
       ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
     #endif
       { return nullptr; }
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_GetName : public BaseClass {
+  class WithStreamedUnaryMethod_GetID : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_GetName() {
+    WithStreamedUnaryMethod_GetID() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::demo::NameRequest, ::demo::NameReply>(
+          ::demo::IDRequest, ::demo::IDReply>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::demo::NameRequest, ::demo::NameReply>* streamer) {
-                       return this->StreamedGetName(context,
+                     ::demo::IDRequest, ::demo::IDReply>* streamer) {
+                       return this->StreamedGetID(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_GetName() override {
+    ~WithStreamedUnaryMethod_GetID() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetName(::grpc::ServerContext* /*context*/, const ::demo::NameRequest* /*request*/, ::demo::NameReply* /*response*/) override {
+    ::grpc::Status GetID(::grpc::ServerContext* /*context*/, const ::demo::IDRequest* /*request*/, ::demo::IDReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetName(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::demo::NameRequest,::demo::NameReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetID(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::demo::IDRequest,::demo::IDReply>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_GetName<Service > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_GetID<Service > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_GetName<Service > StreamedService;
+  typedef WithStreamedUnaryMethod_GetID<Service > StreamedService;
 };
 
 }  // namespace demo

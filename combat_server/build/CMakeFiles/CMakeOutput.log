@@ -425,3 +425,31 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_73913/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_73913.dir/build.make CMakeFiles/cmTC_73913.dir/build
+gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_73913.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_73913.dir/CheckIncludeFile.c.o   -c /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_73913
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_73913.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      CMakeFiles/cmTC_73913.dir/CheckIncludeFile.c.o  -o cmTC_73913 
+gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_33901/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_33901.dir/build.make CMakeFiles/cmTC_33901.dir/build
+gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_33901.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_33901.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_33901
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_33901.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_33901.dir/CheckFunctionExists.c.o  -o cmTC_33901  -lpthread 
+gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/CMakeTmp'
+
+
+

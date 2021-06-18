@@ -55,39 +55,39 @@ struct TableStruct_demo_2eproto {
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_demo_2eproto;
 ::PROTOBUF_NAMESPACE_ID::Metadata descriptor_table_demo_2eproto_metadata_getter(int index);
 namespace demo {
-class NameReply;
-struct NameReplyDefaultTypeInternal;
-extern NameReplyDefaultTypeInternal _NameReply_default_instance_;
-class NameRequest;
-struct NameRequestDefaultTypeInternal;
-extern NameRequestDefaultTypeInternal _NameRequest_default_instance_;
+class IDReply;
+struct IDReplyDefaultTypeInternal;
+extern IDReplyDefaultTypeInternal _IDReply_default_instance_;
+class IDRequest;
+struct IDRequestDefaultTypeInternal;
+extern IDRequestDefaultTypeInternal _IDRequest_default_instance_;
 }  // namespace demo
 PROTOBUF_NAMESPACE_OPEN
-template<> ::demo::NameReply* Arena::CreateMaybeMessage<::demo::NameReply>(Arena*);
-template<> ::demo::NameRequest* Arena::CreateMaybeMessage<::demo::NameRequest>(Arena*);
+template<> ::demo::IDReply* Arena::CreateMaybeMessage<::demo::IDReply>(Arena*);
+template<> ::demo::IDRequest* Arena::CreateMaybeMessage<::demo::IDRequest>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace demo {
 
 // ===================================================================
 
-class NameRequest PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:demo.NameRequest) */ {
+class IDRequest PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:demo.IDRequest) */ {
  public:
-  inline NameRequest() : NameRequest(nullptr) {}
-  virtual ~NameRequest();
-  explicit constexpr NameRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline IDRequest() : IDRequest(nullptr) {}
+  virtual ~IDRequest();
+  explicit constexpr IDRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  NameRequest(const NameRequest& from);
-  NameRequest(NameRequest&& from) noexcept
-    : NameRequest() {
+  IDRequest(const IDRequest& from);
+  IDRequest(IDRequest&& from) noexcept
+    : IDRequest() {
     *this = ::std::move(from);
   }
 
-  inline NameRequest& operator=(const NameRequest& from) {
+  inline IDRequest& operator=(const IDRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline NameRequest& operator=(NameRequest&& from) noexcept {
+  inline IDRequest& operator=(IDRequest&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -105,20 +105,20 @@ class NameRequest PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const NameRequest& default_instance() {
+  static const IDRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const NameRequest* internal_default_instance() {
-    return reinterpret_cast<const NameRequest*>(
-               &_NameRequest_default_instance_);
+  static inline const IDRequest* internal_default_instance() {
+    return reinterpret_cast<const IDRequest*>(
+               &_IDRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(NameRequest& a, NameRequest& b) {
+  friend void swap(IDRequest& a, IDRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(NameRequest* other) {
+  inline void Swap(IDRequest* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -126,7 +126,7 @@ class NameRequest PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(NameRequest* other) {
+  void UnsafeArenaSwap(IDRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -134,17 +134,17 @@ class NameRequest PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline NameRequest* New() const final {
-    return CreateMaybeMessage<NameRequest>(nullptr);
+  inline IDRequest* New() const final {
+    return CreateMaybeMessage<IDRequest>(nullptr);
   }
 
-  NameRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<NameRequest>(arena);
+  IDRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<IDRequest>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const NameRequest& from);
-  void MergeFrom(const NameRequest& from);
+  void CopyFrom(const IDRequest& from);
+  void MergeFrom(const IDRequest& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -158,13 +158,13 @@ class NameRequest PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(NameRequest* other);
+  void InternalSwap(IDRequest* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "demo.NameRequest";
+    return "demo.IDRequest";
   }
   protected:
-  explicit NameRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit IDRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -194,7 +194,7 @@ class NameRequest PROTOBUF_FINAL :
   void _internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:demo.NameRequest)
+  // @@protoc_insertion_point(class_scope:demo.IDRequest)
  private:
   class _Internal;
 
@@ -207,24 +207,24 @@ class NameRequest PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
-class NameReply PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:demo.NameReply) */ {
+class IDReply PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:demo.IDReply) */ {
  public:
-  inline NameReply() : NameReply(nullptr) {}
-  virtual ~NameReply();
-  explicit constexpr NameReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline IDReply() : IDReply(nullptr) {}
+  virtual ~IDReply();
+  explicit constexpr IDReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  NameReply(const NameReply& from);
-  NameReply(NameReply&& from) noexcept
-    : NameReply() {
+  IDReply(const IDReply& from);
+  IDReply(IDReply&& from) noexcept
+    : IDReply() {
     *this = ::std::move(from);
   }
 
-  inline NameReply& operator=(const NameReply& from) {
+  inline IDReply& operator=(const IDReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline NameReply& operator=(NameReply&& from) noexcept {
+  inline IDReply& operator=(IDReply&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -242,20 +242,20 @@ class NameReply PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const NameReply& default_instance() {
+  static const IDReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const NameReply* internal_default_instance() {
-    return reinterpret_cast<const NameReply*>(
-               &_NameReply_default_instance_);
+  static inline const IDReply* internal_default_instance() {
+    return reinterpret_cast<const IDReply*>(
+               &_IDReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(NameReply& a, NameReply& b) {
+  friend void swap(IDReply& a, IDReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(NameReply* other) {
+  inline void Swap(IDReply* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -263,7 +263,7 @@ class NameReply PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(NameReply* other) {
+  void UnsafeArenaSwap(IDReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -271,17 +271,17 @@ class NameReply PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline NameReply* New() const final {
-    return CreateMaybeMessage<NameReply>(nullptr);
+  inline IDReply* New() const final {
+    return CreateMaybeMessage<IDReply>(nullptr);
   }
 
-  NameReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<NameReply>(arena);
+  IDReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<IDReply>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const NameReply& from);
-  void MergeFrom(const NameReply& from);
+  void CopyFrom(const IDReply& from);
+  void MergeFrom(const IDReply& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -295,13 +295,13 @@ class NameReply PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(NameReply* other);
+  void InternalSwap(IDReply* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "demo.NameReply";
+    return "demo.IDReply";
   }
   protected:
-  explicit NameReply(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit IDReply(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -338,7 +338,7 @@ class NameReply PROTOBUF_FINAL :
   std::string* _internal_mutable_name();
   public:
 
-  // @@protoc_insertion_point(class_scope:demo.NameReply)
+  // @@protoc_insertion_point(class_scope:demo.IDReply)
  private:
   class _Internal;
 
@@ -358,83 +358,83 @@ class NameReply PROTOBUF_FINAL :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// NameRequest
+// IDRequest
 
 // int32 id = 1;
-inline void NameRequest::clear_id() {
+inline void IDRequest::clear_id() {
   id_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 NameRequest::_internal_id() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 IDRequest::_internal_id() const {
   return id_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 NameRequest::id() const {
-  // @@protoc_insertion_point(field_get:demo.NameRequest.id)
+inline ::PROTOBUF_NAMESPACE_ID::int32 IDRequest::id() const {
+  // @@protoc_insertion_point(field_get:demo.IDRequest.id)
   return _internal_id();
 }
-inline void NameRequest::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void IDRequest::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   id_ = value;
 }
-inline void NameRequest::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void IDRequest::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:demo.NameRequest.id)
+  // @@protoc_insertion_point(field_set:demo.IDRequest.id)
 }
 
 // -------------------------------------------------------------------
 
-// NameReply
+// IDReply
 
 // string name = 1;
-inline void NameReply::clear_name() {
+inline void IDReply::clear_name() {
   name_.ClearToEmpty();
 }
-inline const std::string& NameReply::name() const {
-  // @@protoc_insertion_point(field_get:demo.NameReply.name)
+inline const std::string& IDReply::name() const {
+  // @@protoc_insertion_point(field_get:demo.IDReply.name)
   return _internal_name();
 }
-inline void NameReply::set_name(const std::string& value) {
+inline void IDReply::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:demo.NameReply.name)
+  // @@protoc_insertion_point(field_set:demo.IDReply.name)
 }
-inline std::string* NameReply::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:demo.NameReply.name)
+inline std::string* IDReply::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:demo.IDReply.name)
   return _internal_mutable_name();
 }
-inline const std::string& NameReply::_internal_name() const {
+inline const std::string& IDReply::_internal_name() const {
   return name_.Get();
 }
-inline void NameReply::_internal_set_name(const std::string& value) {
+inline void IDReply::_internal_set_name(const std::string& value) {
   
   name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline void NameReply::set_name(std::string&& value) {
+inline void IDReply::set_name(std::string&& value) {
   
   name_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:demo.NameReply.name)
+  // @@protoc_insertion_point(field_set_rvalue:demo.IDReply.name)
 }
-inline void NameReply::set_name(const char* value) {
+inline void IDReply::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:demo.NameReply.name)
+  // @@protoc_insertion_point(field_set_char:demo.IDReply.name)
 }
-inline void NameReply::set_name(const char* value,
+inline void IDReply::set_name(const char* value,
     size_t size) {
   
   name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:demo.NameReply.name)
+  // @@protoc_insertion_point(field_set_pointer:demo.IDReply.name)
 }
-inline std::string* NameReply::_internal_mutable_name() {
+inline std::string* IDReply::_internal_mutable_name() {
   
   return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* NameReply::release_name() {
-  // @@protoc_insertion_point(field_release:demo.NameReply.name)
+inline std::string* IDReply::release_name() {
+  // @@protoc_insertion_point(field_release:demo.IDReply.name)
   return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void NameReply::set_allocated_name(std::string* name) {
+inline void IDReply::set_allocated_name(std::string* name) {
   if (name != nullptr) {
     
   } else {
@@ -442,7 +442,7 @@ inline void NameReply::set_allocated_name(std::string* name) {
   }
   name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:demo.NameReply.name)
+  // @@protoc_insertion_point(field_set_allocated:demo.IDReply.name)
 }
 
 #ifdef __GNUC__

@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
+  "/home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/main.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/main.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/Player.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/src/Player.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/Poker.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/src/Poker.cc.o"
@@ -12,10 +14,17 @@ set(CMAKE_DEPENDS_CHECK_CXX
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "CARES_STATICLIB"
+  )
+
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../inc"
+  "../3rd/grpc/grpc_h"
   "../3rd/libco"
+  "/root/.local/include"
   )
 
 # Targets to which this target links.

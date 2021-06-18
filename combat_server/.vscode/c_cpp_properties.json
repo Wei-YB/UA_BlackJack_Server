@@ -4,7 +4,9 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/inc",
-                "${workspaceFolder}/3rd/libco"
+                "${workspaceFolder}/3rd/libco",
+                "${workspaceFolder}/3rd/grpc/grpc_h",
+                "/root/.local/include/"
             ],
             "defines": [],
             "compilerPath": "/usr/lib64/ccache/gcc",

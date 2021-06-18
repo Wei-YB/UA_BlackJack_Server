@@ -17,30 +17,30 @@
 
 PROTOBUF_PRAGMA_INIT_SEG
 namespace demo {
-constexpr NameRequest::NameRequest(
+constexpr IDRequest::IDRequest(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : id_(0){}
-struct NameRequestDefaultTypeInternal {
-  constexpr NameRequestDefaultTypeInternal()
+struct IDRequestDefaultTypeInternal {
+  constexpr IDRequestDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~NameRequestDefaultTypeInternal() {}
+  ~IDRequestDefaultTypeInternal() {}
   union {
-    NameRequest _instance;
+    IDRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NameRequestDefaultTypeInternal _NameRequest_default_instance_;
-constexpr NameReply::NameReply(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT IDRequestDefaultTypeInternal _IDRequest_default_instance_;
+constexpr IDReply::IDReply(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
-struct NameReplyDefaultTypeInternal {
-  constexpr NameReplyDefaultTypeInternal()
+struct IDReplyDefaultTypeInternal {
+  constexpr IDReplyDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~NameReplyDefaultTypeInternal() {}
+  ~IDReplyDefaultTypeInternal() {}
   union {
-    NameReply _instance;
+    IDReply _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NameReplyDefaultTypeInternal _NameReply_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT IDReplyDefaultTypeInternal _IDReply_default_instance_;
 }  // namespace demo
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_demo_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_demo_2eproto = nullptr;
@@ -48,37 +48,37 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_demo_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::demo::NameRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::demo::IDRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::demo::NameRequest, id_),
+  PROTOBUF_FIELD_OFFSET(::demo::IDRequest, id_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::demo::NameReply, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::demo::IDReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::demo::NameReply, name_),
+  PROTOBUF_FIELD_OFFSET(::demo::IDReply, name_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::demo::NameRequest)},
-  { 6, -1, sizeof(::demo::NameReply)},
+  { 0, -1, sizeof(::demo::IDRequest)},
+  { 6, -1, sizeof(::demo::IDReply)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::demo::_NameRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::demo::_NameReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::demo::_IDRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::demo::_IDReply_default_instance_),
 };
 
 const char descriptor_table_protodef_demo_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\ndemo.proto\022\004demo\"\031\n\013NameRequest\022\n\n\002id\030"
-  "\001 \001(\005\"\031\n\tNameReply\022\014\n\004name\030\001 \001(\t2A\n\016GetN"
-  "ameService\022/\n\007GetName\022\021.demo.NameRequest"
-  "\032\017.demo.NameReply\"\000b\006proto3"
+  "\n\ndemo.proto\022\004demo\"\027\n\tIDRequest\022\n\n\002id\030\001 "
+  "\001(\005\"\027\n\007IDReply\022\014\n\004name\030\001 \001(\t2;\n\016GetNameS"
+  "ervice\022)\n\005GetID\022\017.demo.IDRequest\032\r.demo."
+  "IDReply\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_demo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_demo_2eproto = {
-  false, false, 147, descriptor_table_protodef_demo_2eproto, "demo.proto", 
+  false, false, 137, descriptor_table_protodef_demo_2eproto, "demo.proto", 
   &descriptor_table_demo_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_demo_2eproto::offsets,
   file_level_metadata_demo_2eproto, file_level_enum_descriptors_demo_2eproto, file_level_service_descriptors_demo_2eproto,
@@ -95,49 +95,49 @@ namespace demo {
 
 // ===================================================================
 
-class NameRequest::_Internal {
+class IDRequest::_Internal {
  public:
 };
 
-NameRequest::NameRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+IDRequest::IDRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:demo.NameRequest)
+  // @@protoc_insertion_point(arena_constructor:demo.IDRequest)
 }
-NameRequest::NameRequest(const NameRequest& from)
+IDRequest::IDRequest(const IDRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   id_ = from.id_;
-  // @@protoc_insertion_point(copy_constructor:demo.NameRequest)
+  // @@protoc_insertion_point(copy_constructor:demo.IDRequest)
 }
 
-void NameRequest::SharedCtor() {
+void IDRequest::SharedCtor() {
 id_ = 0;
 }
 
-NameRequest::~NameRequest() {
-  // @@protoc_insertion_point(destructor:demo.NameRequest)
+IDRequest::~IDRequest() {
+  // @@protoc_insertion_point(destructor:demo.IDRequest)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void NameRequest::SharedDtor() {
+void IDRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
-void NameRequest::ArenaDtor(void* object) {
-  NameRequest* _this = reinterpret_cast< NameRequest* >(object);
+void IDRequest::ArenaDtor(void* object) {
+  IDRequest* _this = reinterpret_cast< IDRequest* >(object);
   (void)_this;
 }
-void NameRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void IDRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void NameRequest::SetCachedSize(int size) const {
+void IDRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void NameRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:demo.NameRequest)
+void IDRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:demo.IDRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -146,7 +146,7 @@ void NameRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* NameRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* IDRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
@@ -182,9 +182,9 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* NameRequest::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* IDRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:demo.NameRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:demo.IDRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -198,12 +198,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:demo.NameRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:demo.IDRequest)
   return target;
 }
 
-size_t NameRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:demo.NameRequest)
+size_t IDRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:demo.IDRequest)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -226,23 +226,23 @@ size_t NameRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void NameRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:demo.NameRequest)
+void IDRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:demo.IDRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  const NameRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<NameRequest>(
+  const IDRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<IDRequest>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:demo.NameRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:demo.IDRequest)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:demo.NameRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:demo.IDRequest)
     MergeFrom(*source);
   }
 }
 
-void NameRequest::MergeFrom(const NameRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:demo.NameRequest)
+void IDRequest::MergeFrom(const IDRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:demo.IDRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -253,48 +253,48 @@ void NameRequest::MergeFrom(const NameRequest& from) {
   }
 }
 
-void NameRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:demo.NameRequest)
+void IDRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:demo.IDRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void NameRequest::CopyFrom(const NameRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:demo.NameRequest)
+void IDRequest::CopyFrom(const IDRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:demo.IDRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool NameRequest::IsInitialized() const {
+bool IDRequest::IsInitialized() const {
   return true;
 }
 
-void NameRequest::InternalSwap(NameRequest* other) {
+void IDRequest::InternalSwap(IDRequest* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   swap(id_, other->id_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata NameRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata IDRequest::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-class NameReply::_Internal {
+class IDReply::_Internal {
  public:
 };
 
-NameReply::NameReply(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+IDReply::IDReply(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:demo.NameReply)
+  // @@protoc_insertion_point(arena_constructor:demo.IDReply)
 }
-NameReply::NameReply(const NameReply& from)
+IDReply::IDReply(const IDReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -302,36 +302,36 @@ NameReply::NameReply(const NameReply& from)
     name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:demo.NameReply)
+  // @@protoc_insertion_point(copy_constructor:demo.IDReply)
 }
 
-void NameReply::SharedCtor() {
+void IDReply::SharedCtor() {
 name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-NameReply::~NameReply() {
-  // @@protoc_insertion_point(destructor:demo.NameReply)
+IDReply::~IDReply() {
+  // @@protoc_insertion_point(destructor:demo.IDReply)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void NameReply::SharedDtor() {
+void IDReply::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void NameReply::ArenaDtor(void* object) {
-  NameReply* _this = reinterpret_cast< NameReply* >(object);
+void IDReply::ArenaDtor(void* object) {
+  IDReply* _this = reinterpret_cast< IDReply* >(object);
   (void)_this;
 }
-void NameReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void IDReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void NameReply::SetCachedSize(int size) const {
+void IDReply::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void NameReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:demo.NameReply)
+void IDReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:demo.IDReply)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -340,7 +340,7 @@ void NameReply::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* NameReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* IDReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
@@ -352,7 +352,7 @@ const char* NameReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "demo.NameReply.name"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "demo.IDReply.name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -378,9 +378,9 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* NameReply::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* IDReply::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:demo.NameReply)
+  // @@protoc_insertion_point(serialize_to_array_start:demo.IDReply)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -389,7 +389,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "demo.NameReply.name");
+      "demo.IDReply.name");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_name(), target);
   }
@@ -398,12 +398,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:demo.NameReply)
+  // @@protoc_insertion_point(serialize_to_array_end:demo.IDReply)
   return target;
 }
 
-size_t NameReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:demo.NameReply)
+size_t IDReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:demo.IDReply)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -426,23 +426,23 @@ size_t NameReply::ByteSizeLong() const {
   return total_size;
 }
 
-void NameReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:demo.NameReply)
+void IDReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:demo.IDReply)
   GOOGLE_DCHECK_NE(&from, this);
-  const NameReply* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<NameReply>(
+  const IDReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<IDReply>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:demo.NameReply)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:demo.IDReply)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:demo.NameReply)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:demo.IDReply)
     MergeFrom(*source);
   }
 }
 
-void NameReply::MergeFrom(const NameReply& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:demo.NameReply)
+void IDReply::MergeFrom(const IDReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:demo.IDReply)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -453,31 +453,31 @@ void NameReply::MergeFrom(const NameReply& from) {
   }
 }
 
-void NameReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:demo.NameReply)
+void IDReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:demo.IDReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void NameReply::CopyFrom(const NameReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:demo.NameReply)
+void IDReply::CopyFrom(const IDReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:demo.IDReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool NameReply::IsInitialized() const {
+bool IDReply::IsInitialized() const {
   return true;
 }
 
-void NameReply::InternalSwap(NameReply* other) {
+void IDReply::InternalSwap(IDReply* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata NameReply::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata IDReply::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -485,11 +485,11 @@ void NameReply::InternalSwap(NameReply* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace demo
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::demo::NameRequest* Arena::CreateMaybeMessage< ::demo::NameRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::demo::NameRequest >(arena);
+template<> PROTOBUF_NOINLINE ::demo::IDRequest* Arena::CreateMaybeMessage< ::demo::IDRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::demo::IDRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::demo::NameReply* Arena::CreateMaybeMessage< ::demo::NameReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::demo::NameReply >(arena);
+template<> PROTOBUF_NOINLINE ::demo::IDReply* Arena::CreateMaybeMessage< ::demo::IDReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::demo::IDReply >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

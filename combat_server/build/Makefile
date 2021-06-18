@@ -169,6 +169,72 @@ Main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
 .PHONY : Main/fast
 
+3rd/grpc/grpc_cpp/demo.grpc.pb.o: 3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o
+
+.PHONY : 3rd/grpc/grpc_cpp/demo.grpc.pb.o
+
+# target to build an object file
+3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o
+.PHONY : 3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o
+
+3rd/grpc/grpc_cpp/demo.grpc.pb.i: 3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i
+
+.PHONY : 3rd/grpc/grpc_cpp/demo.grpc.pb.i
+
+# target to preprocess a source file
+3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i
+.PHONY : 3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i
+
+3rd/grpc/grpc_cpp/demo.grpc.pb.s: 3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s
+
+.PHONY : 3rd/grpc/grpc_cpp/demo.grpc.pb.s
+
+# target to generate assembly for a file
+3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s
+.PHONY : 3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s
+
+3rd/grpc/grpc_cpp/demo.pb.o: 3rd/grpc/grpc_cpp/demo.pb.cc.o
+
+.PHONY : 3rd/grpc/grpc_cpp/demo.pb.o
+
+# target to build an object file
+3rd/grpc/grpc_cpp/demo.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o
+.PHONY : 3rd/grpc/grpc_cpp/demo.pb.cc.o
+
+3rd/grpc/grpc_cpp/demo.pb.i: 3rd/grpc/grpc_cpp/demo.pb.cc.i
+
+.PHONY : 3rd/grpc/grpc_cpp/demo.pb.i
+
+# target to preprocess a source file
+3rd/grpc/grpc_cpp/demo.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i
+.PHONY : 3rd/grpc/grpc_cpp/demo.pb.cc.i
+
+3rd/grpc/grpc_cpp/demo.pb.s: 3rd/grpc/grpc_cpp/demo.pb.cc.s
+
+.PHONY : 3rd/grpc/grpc_cpp/demo.pb.s
+
+# target to generate assembly for a file
+3rd/grpc/grpc_cpp/demo.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s
+.PHONY : 3rd/grpc/grpc_cpp/demo.pb.cc.s
+
 example/example_create_delete_room.o: example/example_create_delete_room.cc.o
 
 .PHONY : example/example_create_delete_room.o
@@ -393,6 +459,12 @@ help:
 	@echo "... Main"
 	@echo "... example_create_delete_room"
 	@echo "... example_game_single_play"
+	@echo "... 3rd/grpc/grpc_cpp/demo.grpc.pb.o"
+	@echo "... 3rd/grpc/grpc_cpp/demo.grpc.pb.i"
+	@echo "... 3rd/grpc/grpc_cpp/demo.grpc.pb.s"
+	@echo "... 3rd/grpc/grpc_cpp/demo.pb.o"
+	@echo "... 3rd/grpc/grpc_cpp/demo.pb.i"
+	@echo "... 3rd/grpc/grpc_cpp/demo.pb.s"
 	@echo "... example/example_create_delete_room.o"
 	@echo "... example/example_create_delete_room.i"
 	@echo "... example/example_create_delete_room.s"

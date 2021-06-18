@@ -17,13 +17,13 @@ syntax = "proto3";
 package demo;
 
 service GetNameService {
-  rpc GetName (NameRequest) returns (NameReply) {}
+  rpc GetID (IDRequest) returns (IDReply) {}
 }
 
-message NameRequest {
+message IDRequest {
   int32 id = 1;
 }
 
-message NameReply {
+message IDReply {
   string name = 1;
 }

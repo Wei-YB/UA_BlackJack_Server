@@ -22,7 +22,7 @@
 namespace demo {
 
 static const char* GetNameService_method_names[] = {
-  "/demo.GetNameService/GetName",
+  "/demo.GetNameService/GetID",
 };
 
 std::unique_ptr< GetNameService::Stub> GetNameService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -32,28 +32,28 @@ std::unique_ptr< GetNameService::Stub> GetNameService::NewStub(const std::shared
 }
 
 GetNameService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_GetName_(GetNameService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  : channel_(channel), rpcmethod_GetID_(GetNameService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status GetNameService::Stub::GetName(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::demo::NameReply* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::demo::NameRequest, ::demo::NameReply, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetName_, context, request, response);
+::grpc::Status GetNameService::Stub::GetID(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::demo::IDReply* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::demo::IDRequest, ::demo::IDReply, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetID_, context, request, response);
 }
 
-void GetNameService::Stub::experimental_async::GetName(::grpc::ClientContext* context, const ::demo::NameRequest* request, ::demo::NameReply* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::demo::NameRequest, ::demo::NameReply, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetName_, context, request, response, std::move(f));
+void GetNameService::Stub::experimental_async::GetID(::grpc::ClientContext* context, const ::demo::IDRequest* request, ::demo::IDReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::demo::IDRequest, ::demo::IDReply, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetID_, context, request, response, std::move(f));
 }
 
-void GetNameService::Stub::experimental_async::GetName(::grpc::ClientContext* context, const ::demo::NameRequest* request, ::demo::NameReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetName_, context, request, response, reactor);
+void GetNameService::Stub::experimental_async::GetID(::grpc::ClientContext* context, const ::demo::IDRequest* request, ::demo::IDReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetID_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::demo::NameReply>* GetNameService::Stub::PrepareAsyncGetNameRaw(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::demo::NameReply, ::demo::NameRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetName_, context, request);
+::grpc::ClientAsyncResponseReader< ::demo::IDReply>* GetNameService::Stub::PrepareAsyncGetIDRaw(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::demo::IDReply, ::demo::IDRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetID_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::demo::NameReply>* GetNameService::Stub::AsyncGetNameRaw(::grpc::ClientContext* context, const ::demo::NameRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::demo::IDReply>* GetNameService::Stub::AsyncGetIDRaw(::grpc::ClientContext* context, const ::demo::IDRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncGetNameRaw(context, request, cq);
+    this->PrepareAsyncGetIDRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -62,19 +62,19 @@ GetNameService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       GetNameService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< GetNameService::Service, ::demo::NameRequest, ::demo::NameReply, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< GetNameService::Service, ::demo::IDRequest, ::demo::IDReply, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](GetNameService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::demo::NameRequest* req,
-             ::demo::NameReply* resp) {
-               return service->GetName(ctx, req, resp);
+             const ::demo::IDRequest* req,
+             ::demo::IDReply* resp) {
+               return service->GetID(ctx, req, resp);
              }, this)));
 }
 
 GetNameService::Service::~Service() {
 }
 
-::grpc::Status GetNameService::Service::GetName(::grpc::ServerContext* context, const ::demo::NameRequest* request, ::demo::NameReply* response) {
+::grpc::Status GetNameService::Service::GetID(::grpc::ServerContext* context, const ::demo::IDRequest* request, ::demo::IDReply* response) {
   (void) context;
   (void) request;
   (void) response;

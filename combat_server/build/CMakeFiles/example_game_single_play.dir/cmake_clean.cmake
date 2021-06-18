@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
+  "CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
   "CMakeFiles/example_game_single_play.dir/example/example_game_single_play.cc.o"
   "CMakeFiles/example_game_single_play.dir/src/Player.cc.o"
   "CMakeFiles/example_game_single_play.dir/src/Poker.cc.o"

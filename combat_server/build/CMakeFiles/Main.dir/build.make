@@ -142,13 +142,41 @@ CMakeFiles/Main.dir/src/ShuffledPokers.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/src/ShuffledPokers.cc.s"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/src/ShuffledPokers.cc -o CMakeFiles/Main.dir/src/ShuffledPokers.cc.s
 
+CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o: ../3rd/grpc/grpc_cpp/demo.grpc.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc
+
+CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc > CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i
+
+CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc -o CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s
+
+CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o: ../3rd/grpc/grpc_cpp/demo.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc
+
+CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc > CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i
+
+CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc -o CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s
+
 # Object files for target Main
 Main_OBJECTS = \
 "CMakeFiles/Main.dir/main.cc.o" \
 "CMakeFiles/Main.dir/src/Player.cc.o" \
 "CMakeFiles/Main.dir/src/Poker.cc.o" \
 "CMakeFiles/Main.dir/src/Room.cc.o" \
-"CMakeFiles/Main.dir/src/ShuffledPokers.cc.o"
+"CMakeFiles/Main.dir/src/ShuffledPokers.cc.o" \
+"CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o" \
+"CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
 
 # External object files for target Main
 Main_EXTERNAL_OBJECTS =
@@ -158,9 +186,53 @@ Main: CMakeFiles/Main.dir/src/Player.cc.o
 Main: CMakeFiles/Main.dir/src/Poker.cc.o
 Main: CMakeFiles/Main.dir/src/Room.cc.o
 Main: CMakeFiles/Main.dir/src/ShuffledPokers.cc.o
+Main: CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o
+Main: CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o
 Main: CMakeFiles/Main.dir/build.make
+Main: /root/.local/lib/libgrpc++_reflection.a
+Main: /root/.local/lib/libgrpc++.a
+Main: /root/.local/lib64/libprotobuf.a
+Main: /root/.local/lib/libgrpc.a
+Main: /root/.local/lib/libz.a
+Main: /root/.local/lib/libcares.a
+Main: /root/.local/lib/libaddress_sorting.a
+Main: /root/.local/lib/libre2.a
+Main: /root/.local/lib/libabsl_hash.a
+Main: /root/.local/lib/libabsl_city.a
+Main: /root/.local/lib/libabsl_wyhash.a
+Main: /root/.local/lib/libabsl_raw_hash_set.a
+Main: /root/.local/lib/libabsl_hashtablez_sampler.a
+Main: /root/.local/lib/libabsl_exponential_biased.a
+Main: /root/.local/lib/libabsl_statusor.a
+Main: /root/.local/lib/libabsl_bad_variant_access.a
+Main: /root/.local/lib/libgpr.a
+Main: /root/.local/lib/libupb.a
+Main: /root/.local/lib/libabsl_status.a
+Main: /root/.local/lib/libabsl_cord.a
+Main: /root/.local/lib/libabsl_str_format_internal.a
+Main: /root/.local/lib/libabsl_synchronization.a
+Main: /root/.local/lib/libabsl_stacktrace.a
+Main: /root/.local/lib/libabsl_symbolize.a
+Main: /root/.local/lib/libabsl_debugging_internal.a
+Main: /root/.local/lib/libabsl_demangle_internal.a
+Main: /root/.local/lib/libabsl_graphcycles_internal.a
+Main: /root/.local/lib/libabsl_malloc_internal.a
+Main: /root/.local/lib/libabsl_time.a
+Main: /root/.local/lib/libabsl_strings.a
+Main: /root/.local/lib/libabsl_throw_delegate.a
+Main: /root/.local/lib/libabsl_strings_internal.a
+Main: /root/.local/lib/libabsl_base.a
+Main: /root/.local/lib/libabsl_spinlock_wait.a
+Main: /root/.local/lib/libabsl_int128.a
+Main: /root/.local/lib/libabsl_civil_time.a
+Main: /root/.local/lib/libabsl_time_zone.a
+Main: /root/.local/lib/libabsl_bad_optional_access.a
+Main: /root/.local/lib/libabsl_raw_logging_internal.a
+Main: /root/.local/lib/libabsl_log_severity.a
+Main: /root/.local/lib/libssl.a
+Main: /root/.local/lib/libcrypto.a
 Main: CMakeFiles/Main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

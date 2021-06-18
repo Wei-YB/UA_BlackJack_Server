@@ -46,6 +46,8 @@
         "random": "cpp",
         "chrono": "cpp",
         "ctime": "cpp",
-        "ratio": "cpp"
-    }
+        "ratio": "cpp",
+        "*.inc": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -142,13 +142,41 @@ CMakeFiles/example_game_single_play.dir/src/ShuffledPokers.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example_game_single_play.dir/src/ShuffledPokers.cc.s"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/src/ShuffledPokers.cc -o CMakeFiles/example_game_single_play.dir/src/ShuffledPokers.cc.s
 
+CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o: CMakeFiles/example_game_single_play.dir/flags.make
+CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o: ../3rd/grpc/grpc_cpp/demo.grpc.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc
+
+CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc > CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i
+
+CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc -o CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s
+
+CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o: CMakeFiles/example_game_single_play.dir/flags.make
+CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o: ../3rd/grpc/grpc_cpp/demo.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc
+
+CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc > CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i
+
+CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc -o CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s
+
 # Object files for target example_game_single_play
 example_game_single_play_OBJECTS = \
 "CMakeFiles/example_game_single_play.dir/example/example_game_single_play.cc.o" \
 "CMakeFiles/example_game_single_play.dir/src/Player.cc.o" \
 "CMakeFiles/example_game_single_play.dir/src/Poker.cc.o" \
 "CMakeFiles/example_game_single_play.dir/src/Room.cc.o" \
-"CMakeFiles/example_game_single_play.dir/src/ShuffledPokers.cc.o"
+"CMakeFiles/example_game_single_play.dir/src/ShuffledPokers.cc.o" \
+"CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o" \
+"CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
 
 # External object files for target example_game_single_play
 example_game_single_play_EXTERNAL_OBJECTS =
@@ -158,9 +186,53 @@ example_game_single_play: CMakeFiles/example_game_single_play.dir/src/Player.cc.
 example_game_single_play: CMakeFiles/example_game_single_play.dir/src/Poker.cc.o
 example_game_single_play: CMakeFiles/example_game_single_play.dir/src/Room.cc.o
 example_game_single_play: CMakeFiles/example_game_single_play.dir/src/ShuffledPokers.cc.o
+example_game_single_play: CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o
+example_game_single_play: CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o
 example_game_single_play: CMakeFiles/example_game_single_play.dir/build.make
+example_game_single_play: /root/.local/lib/libgrpc++_reflection.a
+example_game_single_play: /root/.local/lib/libgrpc++.a
+example_game_single_play: /root/.local/lib64/libprotobuf.a
+example_game_single_play: /root/.local/lib/libgrpc.a
+example_game_single_play: /root/.local/lib/libz.a
+example_game_single_play: /root/.local/lib/libcares.a
+example_game_single_play: /root/.local/lib/libaddress_sorting.a
+example_game_single_play: /root/.local/lib/libre2.a
+example_game_single_play: /root/.local/lib/libabsl_hash.a
+example_game_single_play: /root/.local/lib/libabsl_city.a
+example_game_single_play: /root/.local/lib/libabsl_wyhash.a
+example_game_single_play: /root/.local/lib/libabsl_raw_hash_set.a
+example_game_single_play: /root/.local/lib/libabsl_hashtablez_sampler.a
+example_game_single_play: /root/.local/lib/libabsl_exponential_biased.a
+example_game_single_play: /root/.local/lib/libabsl_statusor.a
+example_game_single_play: /root/.local/lib/libabsl_bad_variant_access.a
+example_game_single_play: /root/.local/lib/libgpr.a
+example_game_single_play: /root/.local/lib/libupb.a
+example_game_single_play: /root/.local/lib/libabsl_status.a
+example_game_single_play: /root/.local/lib/libabsl_cord.a
+example_game_single_play: /root/.local/lib/libabsl_str_format_internal.a
+example_game_single_play: /root/.local/lib/libabsl_synchronization.a
+example_game_single_play: /root/.local/lib/libabsl_stacktrace.a
+example_game_single_play: /root/.local/lib/libabsl_symbolize.a
+example_game_single_play: /root/.local/lib/libabsl_debugging_internal.a
+example_game_single_play: /root/.local/lib/libabsl_demangle_internal.a
+example_game_single_play: /root/.local/lib/libabsl_graphcycles_internal.a
+example_game_single_play: /root/.local/lib/libabsl_malloc_internal.a
+example_game_single_play: /root/.local/lib/libabsl_time.a
+example_game_single_play: /root/.local/lib/libabsl_strings.a
+example_game_single_play: /root/.local/lib/libabsl_throw_delegate.a
+example_game_single_play: /root/.local/lib/libabsl_strings_internal.a
+example_game_single_play: /root/.local/lib/libabsl_base.a
+example_game_single_play: /root/.local/lib/libabsl_spinlock_wait.a
+example_game_single_play: /root/.local/lib/libabsl_int128.a
+example_game_single_play: /root/.local/lib/libabsl_civil_time.a
+example_game_single_play: /root/.local/lib/libabsl_time_zone.a
+example_game_single_play: /root/.local/lib/libabsl_bad_optional_access.a
+example_game_single_play: /root/.local/lib/libabsl_raw_logging_internal.a
+example_game_single_play: /root/.local/lib/libabsl_log_severity.a
+example_game_single_play: /root/.local/lib/libssl.a
+example_game_single_play: /root/.local/lib/libcrypto.a
 example_game_single_play: CMakeFiles/example_game_single_play.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable example_game_single_play"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable example_game_single_play"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/example_game_single_play.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

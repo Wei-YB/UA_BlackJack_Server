@@ -142,13 +142,41 @@ CMakeFiles/example_create_delete_room.dir/src/ShuffledPokers.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example_create_delete_room.dir/src/ShuffledPokers.cc.s"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/src/ShuffledPokers.cc -o CMakeFiles/example_create_delete_room.dir/src/ShuffledPokers.cc.s
 
+CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o: CMakeFiles/example_create_delete_room.dir/flags.make
+CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o: ../3rd/grpc/grpc_cpp/demo.grpc.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc
+
+CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc > CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i
+
+CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc -o CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s
+
+CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o: CMakeFiles/example_create_delete_room.dir/flags.make
+CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o: ../3rd/grpc/grpc_cpp/demo.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc
+
+CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc > CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i
+
+CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc -o CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s
+
 # Object files for target example_create_delete_room
 example_create_delete_room_OBJECTS = \
 "CMakeFiles/example_create_delete_room.dir/example/example_create_delete_room.cc.o" \
 "CMakeFiles/example_create_delete_room.dir/src/Player.cc.o" \
 "CMakeFiles/example_create_delete_room.dir/src/Poker.cc.o" \
 "CMakeFiles/example_create_delete_room.dir/src/Room.cc.o" \
-"CMakeFiles/example_create_delete_room.dir/src/ShuffledPokers.cc.o"
+"CMakeFiles/example_create_delete_room.dir/src/ShuffledPokers.cc.o" \
+"CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o" \
+"CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
 
 # External object files for target example_create_delete_room
 example_create_delete_room_EXTERNAL_OBJECTS =
@@ -158,9 +186,53 @@ example_create_delete_room: CMakeFiles/example_create_delete_room.dir/src/Player
 example_create_delete_room: CMakeFiles/example_create_delete_room.dir/src/Poker.cc.o
 example_create_delete_room: CMakeFiles/example_create_delete_room.dir/src/Room.cc.o
 example_create_delete_room: CMakeFiles/example_create_delete_room.dir/src/ShuffledPokers.cc.o
+example_create_delete_room: CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o
+example_create_delete_room: CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o
 example_create_delete_room: CMakeFiles/example_create_delete_room.dir/build.make
+example_create_delete_room: /root/.local/lib/libgrpc++_reflection.a
+example_create_delete_room: /root/.local/lib/libgrpc++.a
+example_create_delete_room: /root/.local/lib64/libprotobuf.a
+example_create_delete_room: /root/.local/lib/libgrpc.a
+example_create_delete_room: /root/.local/lib/libz.a
+example_create_delete_room: /root/.local/lib/libcares.a
+example_create_delete_room: /root/.local/lib/libaddress_sorting.a
+example_create_delete_room: /root/.local/lib/libre2.a
+example_create_delete_room: /root/.local/lib/libabsl_hash.a
+example_create_delete_room: /root/.local/lib/libabsl_city.a
+example_create_delete_room: /root/.local/lib/libabsl_wyhash.a
+example_create_delete_room: /root/.local/lib/libabsl_raw_hash_set.a
+example_create_delete_room: /root/.local/lib/libabsl_hashtablez_sampler.a
+example_create_delete_room: /root/.local/lib/libabsl_exponential_biased.a
+example_create_delete_room: /root/.local/lib/libabsl_statusor.a
+example_create_delete_room: /root/.local/lib/libabsl_bad_variant_access.a
+example_create_delete_room: /root/.local/lib/libgpr.a
+example_create_delete_room: /root/.local/lib/libupb.a
+example_create_delete_room: /root/.local/lib/libabsl_status.a
+example_create_delete_room: /root/.local/lib/libabsl_cord.a
+example_create_delete_room: /root/.local/lib/libabsl_str_format_internal.a
+example_create_delete_room: /root/.local/lib/libabsl_synchronization.a
+example_create_delete_room: /root/.local/lib/libabsl_stacktrace.a
+example_create_delete_room: /root/.local/lib/libabsl_symbolize.a
+example_create_delete_room: /root/.local/lib/libabsl_debugging_internal.a
+example_create_delete_room: /root/.local/lib/libabsl_demangle_internal.a
+example_create_delete_room: /root/.local/lib/libabsl_graphcycles_internal.a
+example_create_delete_room: /root/.local/lib/libabsl_malloc_internal.a
+example_create_delete_room: /root/.local/lib/libabsl_time.a
+example_create_delete_room: /root/.local/lib/libabsl_strings.a
+example_create_delete_room: /root/.local/lib/libabsl_throw_delegate.a
+example_create_delete_room: /root/.local/lib/libabsl_strings_internal.a
+example_create_delete_room: /root/.local/lib/libabsl_base.a
+example_create_delete_room: /root/.local/lib/libabsl_spinlock_wait.a
+example_create_delete_room: /root/.local/lib/libabsl_int128.a
+example_create_delete_room: /root/.local/lib/libabsl_civil_time.a
+example_create_delete_room: /root/.local/lib/libabsl_time_zone.a
+example_create_delete_room: /root/.local/lib/libabsl_bad_optional_access.a
+example_create_delete_room: /root/.local/lib/libabsl_raw_logging_internal.a
+example_create_delete_room: /root/.local/lib/libabsl_log_severity.a
+example_create_delete_room: /root/.local/lib/libssl.a
+example_create_delete_room: /root/.local/lib/libcrypto.a
 example_create_delete_room: CMakeFiles/example_create_delete_room.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable example_create_delete_room"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable example_create_delete_room"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/example_create_delete_room.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
