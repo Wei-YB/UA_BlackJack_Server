@@ -49,6 +49,7 @@ public:
     static std::string StateToString(Status status);
 
 private:
+    // players_ for saving status(also roomid) for each player
     std::unordered_map<UID, int32_t> players_;
 };
 

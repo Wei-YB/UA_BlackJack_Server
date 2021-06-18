@@ -38,7 +38,7 @@ ua_black_jack_server::lobby::Players::RoomID ua_black_jack_server::lobby::Player
 void ua_black_jack_server::lobby::Players::NewPlayer(const UID uid) {
     // return false
     assert(players_.find(uid) == players_.end());
-    players_[uid] = 0;
+    players_[uid] = 0;// indicates in Lobby now
     // return true;
 }
 
