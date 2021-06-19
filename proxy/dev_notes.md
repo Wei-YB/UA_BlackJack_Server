@@ -1,0 +1,29 @@
++ FriendList数据类型里面是否内嵌一个friend的类型更合适？
++ 社交服务那块我看见所有的rpc返回类型都是null，这些服务本身是由用户直接调用的，用户需要一个返回值来表明执行状态。
++ 我的建议是，由proxy直接调用的rpc的返回参数尽量包含多的执行状态信息，这样的话proxy接到返回参数后能直接forward给客户端，而不用自己添加信息。
+
+## proxy相关
++ 我不希望commandHandler包含command转rpc的过程：把command参数转rpc入参，把rpc返回参数转为response。一来是这样的话CommandHandler所要知道的业务信息就太多了，二来这种参数转换逻辑和rpc调用逻辑是的CommandHandler的逻辑变得复杂。
+
++ 根据上面考虑，我是希望Command的类型可以和大多数rpc入参对应上，或者说Command可以非常简单得转成相应的rpc入参，而无需过多的判断逻辑。同样的，rpc的返回参数也是，Proxy无需做过多的逻辑判断就能完成返回参数转Response的功能。
+
++ 更具体一些的话，对于rpc的返回参数，由于它是指针，我们可以用这个返回参数的基类`google::protobuf::Message`指针来引用这个具体类型对象。如果rpc的返回参数和response类型一致，那么CommandHandler调用rpc之后接到返回参数，就能调用`SerializeAsString`完成序列化了。对于rpc入参的话，CommandHandler可以根据request包的cmdType找到对应的rpc，然后入参的话可以直接提取request里面的args按顺序放进去。
+
++ gRPC的异步调用机制是这样的：异步rpc在完成的时候会往一个完成队列放返回参数，但我们用户是要自己去轮询这个队列看是否有。我估计到时候需要自己将这个完成队列封装到eventloop里面，每次loop的时候用非阻塞的方法读取这个队列。
+
+## proxy与客户端交互协议事宜
+虽然我们已经约定客户端和proxy之间使用protobuf来对消息进行序列化，但是存在以下情况是protobuf本身无法解决的：
++ 在一个TCP传输通道里可能会存在多个message，而由protobuf序列化后的message并不是self-delimiting的，也就是说
+存在拆包和粘包的问题。
+
++ 一个TCP传输通道会传输多种类型的message，在我们的项目中是两种：Request和Response。这两种类型序列化后的长度
+并不一样，也就是说存在传输消息类型模糊的问题。
+
+解决上面两个问题的办法是proxy和客户端商定一个协议，协议报文头部包含要传输的消息体的类型和长度，例如说：
+```
+| type (int32_t) | length (int32_t) | body (serialized message) |
+```
+如果我们使用如上的协议来传输序列化后的proto消息体，那么我们要注意type和length字段都需要转成网络字节序后才能放入buffer中。
+
+另外还有一个问题，因为proxy不仅仅要forward客户端的request，还要forward客户端的response，但是原先协定的Response是
+不包含command type的，因此proxy是不知道要forward到哪儿的。因此Response可能还需要引入一个Type的类型。

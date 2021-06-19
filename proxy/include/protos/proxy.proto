@@ -1,0 +1,9 @@
+syntax = "proto3";
+import "common.proto";
+
+package proxy;
+
+
+service Proxy {
+    rpc NotifyUser (common.Request) returns (common.Response) {}
+}
