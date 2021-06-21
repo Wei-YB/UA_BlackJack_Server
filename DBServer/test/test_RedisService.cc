@@ -114,3 +114,20 @@ TEST(RedisService, UIDToRank) {
     decltype(ret) rank = { "2345", "2347" };
     EXPECT_EQ(rank, ret);
 }
+
+TEST(RedisService, MatchList) {
+    EXPECT_TRUE(service->InsertMatchList(uid, 1000));
+    EXPECT_TRUE(service->InsertMatchList(uid, 1200));
+    EXPECT_TRUE(service->InsertMatchList(uid, 1300));
+    EXPECT_TRUE(service->InsertMatchList(uid, 1400));
+    const std::vector<acl::string> vec = {"1400", "1300", "1200", "1000"};
+    EXPECT_EQ(service->GetMatchList(uid), vec);
+}
+
+TEST(RedisService, MatchInfo) {
+    EXPECT_TRUE(service->InsertMatchInfo(1000, "time", "12000"));
+    EXPECT_TRUE(service->InsertMatchInfo(1000, "2345", "+12"));
+    EXPECT_TRUE(service->InsertMatchInfo(1000, "2346", "-24"));
+    EXPECT_TRUE(service->InsertMatchInfo(1000, "2347", "+12"));
+    EXPECT_EQ(service->GetMatchInfo(1000).size(), 4);
+}
