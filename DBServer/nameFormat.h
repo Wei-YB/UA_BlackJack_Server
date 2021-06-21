@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 
-namespace ua_black_jack_server {namespace DataBaseServer {namespace nameFormat {
+namespace ua_black_jack_server {namespace data_base_server {namespace nameFormat {
 
 enum class FormatType {
     UID_TO_NICKNAME,

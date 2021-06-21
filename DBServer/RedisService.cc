@@ -2,24 +2,22 @@
 
 #include <cstdlib>
 
-using namespace ua_black_jack_server::DataBaseServer;
+using namespace ua_black_jack_server::data_base_server;
 
 
 char buffer[64];
 
 static const char* ToString(int64_t uid) {
-    snprintf(buffer, sizeof buffer, "%lld", uid);
+    if constexpr (sizeof(int64_t) == sizeof(long)) {
+        snprintf(buffer, sizeof buffer, "%ld", uid);
+    }
+    else {
+        snprintf(buffer, sizeof buffer, "%lld", uid); // NOLINT(clang-diagnostic-format)
+    }
     return buffer;
 }
 
-static const char* ToString(int32_t mid) {
-    snprintf(buffer, sizeof buffer, "%d", mid);
-    return buffer;
-}
-
-
-
-bool             RedisService::Exists(const char* key) {
+bool RedisService::Exists(const char* key) {
     return conn_.exists(key);
 }
 
@@ -72,7 +70,7 @@ int RedisService::GetScore(UID uid) {
     if (ret->get_type() != acl::REDIS_RESULT_STRING)
         return -1;
     ret->argv_to_string(buffer_);
-    return atoi(buffer_.c_str());
+    return atoi(buffer_.c_str()); // NOLINT(cert-err34-c)
 }
 
 bool RedisService::SetScore(UID uid, int score) {
@@ -96,7 +94,24 @@ bool RedisService::InsertFriendList(UID uid, UID friendId) {
 }
 
 bool RedisService::RemoveFriendList(UID uid, UID friendId) {
-    return conn_.srem(GetKey(FormatType::UID_TO_FRIEND_LIST, uid), ToString(friendId),nullptr);
+    return conn_.srem(GetKey(FormatType::UID_TO_FRIEND_LIST, uid), ToString(friendId), nullptr);
+}
+
+RedisService::RepeatedString RedisService::GetWaitingFriendList(UID uid) {
+    listBuffer_.clear();
+    if (const auto ret = conn_.smembers(GetKey(FormatType::UID_TO_WAIT_FRIEND_LIST, uid), &listBuffer_); ret <= 0) {
+        return {};
+    }
+    return listBuffer_;
+}
+
+bool RedisService::InsertWaitingFriendList(UID uid, UID friendId) {
+    return conn_.sadd(GetKey(FormatType::UID_TO_WAIT_FRIEND_LIST, uid), ToString(friendId), nullptr);
+
+}
+
+bool RedisService::RemoveWaitingFriendList(UID uid, UID friendId) {
+    return conn_.srem(GetKey(FormatType::UID_TO_WAIT_FRIEND_LIST, uid), ToString(friendId), nullptr);
 }
 
 RedisService::RepeatedString RedisService::GetMatchList(UID uid) {
@@ -106,7 +121,7 @@ RedisService::RepeatedString RedisService::GetMatchList(UID uid) {
     return listBuffer_;
 }
 
-bool RedisService::InsertMatchList(UID uid, int32_t mid) {
+bool RedisService::InsertMatchList(UID uid, UID mid) {
     return conn_.lpush(GetKey(FormatType::UID_TO_MATCH_LIST, uid), ToString(mid), nullptr);
 }
 
@@ -123,22 +138,36 @@ bool RedisService::AddRankScore(UID uid, int diff) {
     return conn_.zincrby(GetKey(FormatType::RANK), diff, ToString(uid));
 }
 
-RedisService::RepeatedString RedisService::GetTopPlayer(UID index) {
+RedisService::RepeatedString RedisService::GetTopPlayer(int index) {
     listBuffer_.clear();
-    conn_.zrevrange(GetKey(FormatType::RANK),0, index - 1, &listBuffer_);
+    conn_.zrevrange(GetKey(FormatType::RANK), 0, index - 1, &listBuffer_);
     return listBuffer_;
+}
+
+RedisService::HashString RedisService::GetMatchInfo(UID matchId) {
+    HashString result;
+    conn_.hgetall(GetKey(FormatType::MATCH_ID_TO_MATCH_HISTORY, matchId), result);
+    return result;
+}
+
+bool RedisService::InsertMatchInfo(UID matchId, const HashString& matchInfo) {
+    return conn_.hmset(GetKey(FormatType::MATCH_ID_TO_MATCH_HISTORY, matchId), matchInfo);
+}
+
+bool RedisService::InsertMatchInfo(UID matchId, const char* key, const char* value) {
+    return conn_.hset(GetKey(FormatType::MATCH_ID_TO_MATCH_HISTORY, matchId), key, value);
 }
 
 RedisService::UID RedisService::NextUid() {
     conn_.incr("UID");
     buffer_.clear();
     conn_.get("UID")->argv_to_string(buffer_);
-    return atoll(buffer_.c_str());
+    return strtoll(buffer_.c_str(), nullptr, 10);
 }
 
-int32_t RedisService::NextMatchId() {
+int64_t RedisService::NextMatchId() {
     conn_.incr("MID");
     buffer_.clear();
     conn_.get("MID")->argv_to_string(buffer_);
-    return atoll(buffer_.c_str());
+    return strtoll(buffer_.c_str(), nullptr, 10);
 }

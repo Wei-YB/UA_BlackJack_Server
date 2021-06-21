@@ -5,7 +5,7 @@
 
 #include "nameFormat.h"
 
-namespace ua_black_jack_server {namespace DataBaseServer {
+namespace ua_black_jack_server {namespace data_base_server {
 
 using nameFormat::GetKey;
 using nameFormat::FormatType;
@@ -15,7 +15,7 @@ public:
     using UID = int64_t;
     using String = acl::string;
     using RepeatedString = std::vector<acl::string>;
-    using HashString = std::unordered_map<String, String>;
+    using HashString = std::map<String, String>;
 
 public:
     RedisService(acl::redis_client& client) : conn_(&client) {
@@ -44,15 +44,14 @@ public:
     bool           InsertFriendList(UID uid, UID friendId);
     bool           RemoveFriendList(UID uid, UID friendId);
 
-    // TODO
     // UID -> waitingFriendList
-    // RepeatedString GetWaitingFriendList(UID uid);
-    // bool InsertWaitingFriendList(UID uid, UID friendId);
-    // bool RemoveWaitingFriendList(UID uid, UID friendId);
+    RepeatedString GetWaitingFriendList(UID uid);
+    bool InsertWaitingFriendList(UID uid, UID friendId);
+    bool RemoveWaitingFriendList(UID uid, UID friendId);
 
     // UID -> matchList
     RepeatedString GetMatchList(UID uid);
-    bool           InsertMatchList(UID uid, int32_t mid);
+    bool           InsertMatchList(UID uid, UID mid);
 
     // UID -> rank
     int  GetRank(UID uid);
@@ -60,14 +59,16 @@ public:
     bool AddRankScore(UID uid, int diff);
 
     // rankSet
-    RepeatedString GetTopPlayer(UID index);
+    RepeatedString GetTopPlayer(int index);
 
-    // TODO
-    // HashString getMatchInfo(UID matchId);
-    // bool insertMatchInfo(UID matchId, const HashString& matchInfo);
+    
+    HashString GetMatchInfo(UID matchId);
+    bool InsertMatchInfo(UID matchId, const HashString& matchInfo);
+    bool InsertMatchInfo(UID matchId, const char* key, const char* value);
+
 
     UID     NextUid();
-    int32_t NextMatchId();
+    UID NextMatchId();
 
     bool Exists(const char* key);
 
@@ -75,8 +76,6 @@ public:
 private:
     std::vector<acl::string> listBuffer_;
     acl::string              buffer_;
-    // acl::redis_string conn_string_;
     acl::redis conn_;
-    // acl::redis_client client_;
 };
 }}

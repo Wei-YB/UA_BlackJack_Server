@@ -2,8 +2,8 @@
 
 #include <gtest/gtest.h>
 
-using ua_black_jack_server::DataBaseServer::nameFormat::GetKey;
-using ua_black_jack_server::DataBaseServer::nameFormat::FormatType;
+using ua_black_jack_server::data_base_server::nameFormat::GetKey;
+using ua_black_jack_server::data_base_server::nameFormat::FormatType;
 
 
 

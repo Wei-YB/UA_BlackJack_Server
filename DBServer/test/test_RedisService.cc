@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 #include <unordered_set>
-using ua_black_jack_server::DataBaseServer::RedisService;
+using ua_black_jack_server::data_base_server::RedisService;
 
 RedisService* service;
 
@@ -75,7 +75,7 @@ TEST(RedisService, UIDToScore) {
     EXPECT_EQ(service->GetScore(uid), 1000);
 }
 
-TEST(RedisService, UIDToMatchList) {
+TEST(RedisService, UIDToFriendList) {
     EXPECT_TRUE(service->InsertFriendList(uid, 1234));
     EXPECT_TRUE(service->InsertFriendList(uid, 1235));
     EXPECT_TRUE(service->InsertFriendList(uid, 1236));
@@ -95,5 +95,22 @@ TEST(RedisService, UIDToMatchList) {
 
     EXPECT_TRUE(service->RemoveFriendList(uid, 1234));
     EXPECT_EQ(service->GetFriendList(uid).size(), 3);
+}
 
+
+TEST(RedisService, UIDToRank) {
+    EXPECT_TRUE(service->UpdateRank(uid, 1000));
+    EXPECT_TRUE(service->UpdateRank(uid + 1, 2000));
+    EXPECT_TRUE(service->UpdateRank(uid + 2, 3000));
+    EXPECT_EQ(service->GetRank(uid), 3);
+    EXPECT_EQ(service->GetRank(uid + 1), 2);
+    EXPECT_EQ(service->GetRank(uid + 2), 1);
+
+    EXPECT_TRUE(service->AddRankScore(uid, 3000));
+    EXPECT_EQ(service->GetRank(uid), 1);
+
+    auto ret = service->GetTopPlayer(2);
+    EXPECT_EQ(ret.size(), 2);
+    decltype(ret) rank = { "2345", "2347" };
+    EXPECT_EQ(rank, ret);
 }
