@@ -16,6 +16,9 @@
  *
  */
 
+#ifndef SOCIAL_CLIENT_DB_SYN
+#define SOCIAL_CLIENT_DB_SYN
+
 #include <grpcpp/grpcpp.h>
 
 #include <iostream>
@@ -25,7 +28,7 @@
 #ifdef BAZEL_BUILD
 #include "examples/protos/helloworld.grpc.pb.h"
 #else
-#include "demo.grpc.pb.h"
+#include "social.grpc.pb.h"
 #endif
 
 using grpc::Channel;
@@ -34,48 +37,21 @@ using grpc::Status;
 
 // Service dependent
 /*************************/
-using demo::GetNameService;
-using demo::NameReply;
-using demo::NameRequest;
+using social::DatabaseService;
+using social::Request;
+using social::Response;
 /*************************/
 
 class Client {
 public:
-    Client(std::shared_ptr<Channel> channel) : stub_(GetNameService::NewStub(channel)) {}
+    Client(std::shared_ptr<Channel> channel) : stub_(DatabaseService::NewStub(channel)) {}
 
     // Assembles the client's payload, sends it and presents the response back
     // from the server.
-    std::string GetName(const int id) {
-        NameRequest request;
-        request.set_id(id);
-
-        NameReply reply;
-
-        ClientContext context;
-
-        // The actual RPC.
-        Status status = stub_->GetName(&context, request, &reply);
-
-        // Act upon its status.
-        if (status.ok()) {
-            return reply.name();
-        } else {
-            std::cout << status.error_code() << ": " << status.error_message() << std::endl;
-            return "RPC failed";
-        }
-    }
+    Response RequestDB(Request& request);
 
 private:
-    std::unique_ptr<GetNameService::Stub> stub_;
+    std::unique_ptr<DatabaseService::Stub> stub_;
 };
 
-int main(int argc, char** argv) {
-    std::string target_str = "9.134.69.87:50051";
-    Client client(grpc::CreateChannel(target_str, grpc::InsecureChannelCredentials()));
-
-    int id = 1234;
-    std::string reply = client.GetName(id);
-    std::cout << "Client received: " << reply << std::endl;
-
-    return 0;
-}
+#endif

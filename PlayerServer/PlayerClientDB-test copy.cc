@@ -25,7 +25,7 @@
 #ifdef BAZEL_BUILD
 #include "examples/protos/helloworld.grpc.pb.h"
 #else
-#include "demo.grpc.pb.h"
+#include "player.grpc.pb.h"
 #endif
 
 using grpc::Channel;
@@ -34,48 +34,58 @@ using grpc::Status;
 
 // Service dependent
 /*************************/
-using demo::GetNameService;
-using demo::NameReply;
-using demo::NameRequest;
+using player::DatabaseService;
+using player::Request;
+using player::Response;
 /*************************/
 
 class Client {
 public:
-    Client(std::shared_ptr<Channel> channel) : stub_(GetNameService::NewStub(channel)) {}
+    Client(std::shared_ptr<Channel> channel) : stub_(DatabaseService::NewStub(channel)) {}
 
     // Assembles the client's payload, sends it and presents the response back
     // from the server.
-    std::string GetName(const int id) {
-        NameRequest request;
-        request.set_id(id);
+    Response RequestDB(const std::string name, const std::string passwd) {
+        Request request;
+        request.set_requesttype(Request::SIGNUP);
+        request.set_uid(-1);
+        request.set_stamp(12345);
+        request.add_args(name);
+        request.add_args(passwd);
 
-        NameReply reply;
+        Response reply;
 
         ClientContext context;
 
         // The actual RPC.
-        Status status = stub_->GetName(&context, request, &reply);
+        Status status = stub_->RequestDB(&context, request, &reply);
 
         // Act upon its status.
         if (status.ok()) {
-            return reply.name();
+            std::cout << "Got Reply" << std::endl;
         } else {
             std::cout << status.error_code() << ": " << status.error_message() << std::endl;
-            return "RPC failed";
         }
+
+        return reply;
     }
 
 private:
-    std::unique_ptr<GetNameService::Stub> stub_;
+    std::unique_ptr<DatabaseService::Stub> stub_;
 };
 
 int main(int argc, char** argv) {
-    std::string target_str = "9.134.69.87:50051";
-    Client client(grpc::CreateChannel(target_str, grpc::InsecureChannelCredentials()));
+    std::string addr = "9.134.69.87:50051";
+    Client client(grpc::CreateChannel(addr, grpc::InsecureChannelCredentials()));
 
-    int id = 1234;
-    std::string reply = client.GetName(id);
-    std::cout << "Client received: " << reply << std::endl;
+    auto reply = client.RequestDB("Aaron", "Aaron_pass");
+    std::cout << reply.uid() << " " << reply.status() << std::endl;
+
+    reply = client.RequestDB("Owen", "Owen_pass");
+    std::cout << reply.uid() << " " << reply.status() << std::endl;
+
+    reply = client.RequestDB("Aaron", "Aaron_pass");
+    std::cout << reply.uid() << " " << reply.status() << std::endl;
 
     return 0;
 }
