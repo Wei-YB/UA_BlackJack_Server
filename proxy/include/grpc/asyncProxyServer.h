@@ -24,6 +24,7 @@ using proxy::Proxy;
 using common::Response;
 using common::Request;
 
+
 // this pipe should operate on package and non-blocking modes 
 class AsyncCall
 {
@@ -87,6 +88,16 @@ public:
             // GPR_ASSERT(status_ == FINISH);
             delete this;
         }
+    }
+
+    inline Request &getRequest()
+    {
+        return request_;
+    }
+
+    void setReply(const Response &response)
+    {
+        reply_ = response;
     }
 
 private:

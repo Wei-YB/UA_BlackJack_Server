@@ -26,4 +26,56 @@
 如果我们使用如上的协议来传输序列化后的proto消息体，那么我们要注意type和length字段都需要转成网络字节序后才能放入buffer中。
 
 另外还有一个问题，因为proxy不仅仅要forward客户端的request，还要forward客户端的response，但是原先协定的Response是
-不包含command type的，因此proxy是不知道要forward到哪儿的。因此Response可能还需要引入一个Type的类型。
+不包含command type的，因此proxy是不知道要forward到哪儿的。因此Response可能还需要引入一个ResponseType的类型。
+(上面这个问题不用担心了，可以通过response中的stamp字段解决转发模糊性的问题)
+
+## 理清proxy的逻辑
+后端模块往proxy发数据：
+1. 发request，proxyServer收到后端异步请求后，会将有序对(requestHandler, stamp)以pipeid * stamp为key放进相应clientHandler的requestsMap中，并将request中的stamp字段改为pipefd * stamp，然后将request push进requestWaittingQueue中。最后是注册clientfd的可写事件(这个留到epollfd因为pipefd有事件而通知client时再做)。requestsMap的作用是在proxy收到client对某个request的response之时，能根据response里面的stamp快速索引到相应的requestHandler，以将该response forward到相应的后端模块。注意在forward之前proxy需要将response中的stamp字段恢复成原stamp值（保存requestHandler一块保存在requestsMap中）。requestWaittingQueue的作用是缓冲。
+2. 发response，proxy代理client调用了后端模块的异步rpc之后，会收到异步的response。这个response会被proxy的异步响应监听线程push进相应clientHandler的responseWaittingQueue中，然后注册clientfd的可写事件（同样，留给epollfd通知pipefd中的事件时做）。
+这里存在一个问题：就是以pipefd * stamp为key仍然可能发送冲突。因为即便后端模块将请求时刻作为stamp的值，这也只能保证该模块发送的request不会被混淆，但是不同模块的时钟并不是严格同步的，因此我才想到乘上一个pipefd来避免这种冲突。一般情况下我觉得这是work的，因为除非等待队列中包含两个时间间隔相差太久的request或者reponse，否则乘上一个随机的pipefd很难发生冲突。
+
+proxy往client发数据：
+1. 发Request，这时候clientfd可写，将requestWaittingQueue中的request逐个写进clientfd中（当然，需要封个协议包），直到没有request或者不能写入一个整包为止。若requestWaittingQueue已经空了，那就把clientfd的可写事件给取消注册了。
+2. 发Response，这时候clientfd可写，将responseWaittingQueue中的response逐个写进clientfd中（当然，需要封个协议包），直到没有response或者不能写入一个整包为止。若responseWaittingQueue已经空了，那就把clientfd的可写事件给取消注册了。
+这里存在一个问题：当clientfd可写时，按什么顺序来发送两个等待队列中的元素？一种解决方案是平等看待每个request和response，交替地将它们往clientfd中写。但实际情况可能会更复杂，因为按公平地观点来看的话，我们也应该将最早塞进队列的元素写进clientfd。
+
+client往proxy发数据：
+1. 发Request，这时候clientfd可读，读到Request后相应的clientHandler根据requestType选择调用相应的异步rpc。
+2. 发Response，这时候clientfd可读，读到Response之后，需要根据其中的stamp字段找到这个Response相应的requestHandler，并将这个Response作为这个RPC request的reply。
+
+最后一个问题：由于response和request监听线程和主线程共享着clientHandler中的resquestMap和waittingQueue，因此不可避免需要用到同步原语来保护数据结构，我担心这会导致整个系统的响应速度变慢。
+不过我认为对于棋牌类这种弱联网游戏，client和后端的交互并不频繁，因此同步带来的锁争用情况并不会严重。
+加了同步还会导致另外一个问题：刚才说的交替发送两个waittingQueue的元素会带来很大开销，因为你要不断获取两个队列的锁。因此我的想法是某一次的可写事件只写其中一个waittingQueue的元素，下一次的可写事件只写另一个waittingQueue的元素。当然如果某一次可写事件将其中一个waittingQueue排空了也没有填满tcp缓冲，那么继续写另一个waittingQueue的元素，直到tcp缓冲满或者另一个队列也空了。
+
+当clientfd可写时，我们会将requestWaittingQueue中的requets逐一序列化封包后发给客户端，但有一个问题是这个过程失败了怎么处理。一个想法是准备一个标志着失败的response传递给requestHandler，但这样的话我们首先需要知道原request中的stamp，因为当前待发送的request中的stamp是修改过的。然而这要求我们去读requestsMap中的原stamp。
+另一个想法是我们向requestHandler传递一个失败的标志，requestHandler收到失败标志后自行制备失败response。
+
+### 为每个clientHandler分配一个发送和接收缓冲的问题：
+由于我们不能保证一次write/read就能发送/接收一个完整的request或者response，因此肯定需要缓冲。另外，缓冲的另外一个目的是batching，也就是当收到或发送大量小报文时可以节省系统调用的次数。然而设置缓冲又会涉及到缓冲的读写策略：
+1. 关于写缓冲策略：我们分几种情况来讨论。当需要发送一个大报文时，以致于一个缓冲区都无法装下的时候怎么办？对于这种情况，第一种可行的策略是使用动态内存分配，第二种可行的策略是仍然使用固定大小的缓冲，但是利用状态机的方式完成报文的分段转发，但三种可行的情况是设定报文长度上限。由于第三种方法最容易，且考虑到开发周期短，暂时使用第三种，但后期会考虑拓展到更优的策略。当要发送多个小报文时，我们将waittingQueue中的msg逐一序列化封包并写入缓冲，直到缓冲剩余的空间不够放下一整个msg或者是两个waittingQueue都已经空了。因此，我们当前的策略是不往缓冲中写不完整的包，这可以减小clientHandler的工作量。但是对于client来说仍然存在拆包的问题，处理拆包的问题就要交给client端来解决。但是后面我们会看到，proxy读缓冲时候也要处理拆包的问题，因此两者的处理策略可以相互借鉴。
+2. 关于读缓冲策略：读缓冲主要是拆包的问题，也就是说缓冲里面存在不完整的包怎么办？如果协议包的报头是完整的话，我们可以根据length字段判断剩余还有多少数据，然后等待收到一个完整的包后才继续解析。然而这会出现一种情况，假如不完整的包起始位置靠近缓冲的末端怎么办？这时候完整的包可能不能连续的放在缓冲里面。因此这里我们需要引入环形缓冲的机制。
+
+### 关于环形缓冲的设计
+其实我之前已经实现过一个简单CircularBuffer类了，这个类本身很简单，只有empty、capacity、size、free四个成员函数，底层数据结构就是一段连续的内存，以及已用缓冲起始和结束位置的标记。
+
+但是为了CircularBuffer能和read/write等系统调用兼容，我重载了read/write方法：允许从fd读数据并写入CircularBuffer里面，以及将CircularBuffer中的内容写入到fd中。另外提供了put和get两个负责将连续内存和CircularBuffer相互转换的方法。
+
+但是现在处理协议包拆包的操作又需要引入更多的操作。例如我想将CircularBuffer头部的4个字节作为一个int32读出来，因为我想判断这个包的长度。那么我们现在需要提供一个新的方法，或者说一个新的模板函数：
+```c++
+template<typename T>
+int readAs(const CircularBuffer &buffer, size_t off, T &out, bool netByteOrder = false);
+```
+其中off表示从buffer当前起始位置的偏移off个字节开始读，out用来存储读出来的数据，同时实现自动类型推导，netByteOrder表示在buffer内的数据是否以网络字节序存储的，若是的话则读出之前还需要经过一个htonl（因此当前只支持读出整形。。。）。
+提供readAs方法是不希望对于小对象也调用memcpy，以及还需要额外提供一个连续buffer。
+另外我们也希望能够在CircularBuffer任意一个位置写入某个类型的数据：
+```c++
+template<typename T>
+int writeAs(const CircularBuffer &buffer, size_t off, const T &in, bool netByteOrder = false);
+```
+
+另外我们还需要一个将CircularBuffer转为std::string的方法：
+```c++
+int circularBufferToString(const CircularBuffer &buffer, std::string &str);
+```
+
