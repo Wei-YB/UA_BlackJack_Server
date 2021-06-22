@@ -53,6 +53,10 @@
         "typeinfo": "cpp",
         "*.inc": "cpp",
         "cinttypes": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "bit": "cpp",
+        "complex": "cpp",
+        "numeric": "cpp",
+        "random": "cpp"
     }
 }

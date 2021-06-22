@@ -121,4 +121,7 @@ int circularBufferToString(const CircularBuffer &buffer, std::string &str);
 ### 超时事件
 一个维持着长连接的应用层协议应该需要心跳机制来确定客户端/服务是否还在正常工作。当然客户端这边若是shutdown的话一般是会有一个EPOLLHUP之类的事件来提醒服务端的，在我们这个项目里面就是提醒proxy。但如果我们考虑特殊情况的话就是客户端意外关断/网络丢包，使得这个EPOLLHUP事件没法到达proxy。这样的话proxy就会白白的浪费一个Handler资源。那究竟用什么样的方式来判断一个客户端是否还存活呢？一个办法就是客户端定期发心跳信号给proxy，若proxy在3个心跳周期内都没有收到客户端的心跳信号，那么就释放掉这个Handler。那么每个Handler应该向epoll注册一个timerfd，并且自己也保存这个timerfd。每当proxy收到客户端的一个消息（任何消息，不管是心跳还是请求），都得重置这个timerfd。因此当收到timerfd的事件时，我们就知道应该释放该Handler了。
 
+### ClientHandler类太复杂的问题
+
+
 

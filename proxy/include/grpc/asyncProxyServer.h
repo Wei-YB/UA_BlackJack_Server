@@ -11,7 +11,8 @@
 
 #include "common.pb.h"
 #include "proxy.grpc.pb.h"
-#include "../net/EventLoop.h"
+#include "EventLoop.h"
+#include "proxy.h"
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
@@ -127,8 +128,8 @@ private:
 
 class ProxyServerImpl final {
 public:
-    ProxyServerImpl(const std::string &serverAddress, int asyncNotifyPipe, 
-                    Net::HandlerManager<int64_t> *clientManager)
+    ProxyServerImpl(const std::string &serverAddress, 
+                    std::unordered_map<int64_t, Net::EventsHandler>)
         : serverAddress_(serverAddress), asyncNotifyPipe_(asyncNotifyPipe),
             clientManager_(clientManager) {}
 

@@ -59,10 +59,8 @@ public:
     EventsHandler &operator=(const EventsHandler &) = delete;
 
 public:
-    virtual int addToEventLoop(int sockfd, int events, EventLoop *loop) = 0;
-    virtual int removeFromEventLoop(int sockfd, EventLoop *loop) = 0;
+    virtual int addToEventLoop(EventLoop *loop) = 0;
     virtual int handleEvents(int sockfd, int events) = 0;
-    virtual int notifyInAdvance(int sockfd, int events, void *data) = 0;
 };
 
 // this template class provide functionalities of recycling expired handlers 

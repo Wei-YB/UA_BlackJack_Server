@@ -94,9 +94,7 @@ private:
     Net::HandlerManager<int64_t> *clientManager_;
 };
 
-const std::string lobbyAddress = "localhost:50051";
-const std::string roomAddress = "localhost:50051";
-const std::string socialAddress = "localhost:50051";
+
 
 // int main()
 // {
