@@ -6,6 +6,10 @@ service PlayerService {
     rpc SignUp (Request) returns (Response) {}
 }
 
+service DatabaseService{
+    rpc RequestDB(Request) returns (Response) {}
+}
+
 message Request {
     enum RequestType {
         INVAL = 0;   
