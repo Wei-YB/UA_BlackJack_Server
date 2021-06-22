@@ -1,15 +1,26 @@
-+ FriendList数据类型里面是否内嵌一个friend的类型更合适？
-+ 社交服务那块我看见所有的rpc返回类型都是null，这些服务本身是由用户直接调用的，用户需要一个返回值来表明执行状态。
-+ 我的建议是，由proxy直接调用的rpc的返回参数尽量包含多的执行状态信息，这样的话proxy接到返回参数后能直接forward给客户端，而不用自己添加信息。
++ 防止重复登陆这个功能是否应该由Social模块来做
++ 
+## proxy模块介绍
+proxy在整个服务器中只是承担了转发和过滤客户端的请求和响应，以及后端服务向客户发送的消息的功能，基本不涉及到业务细节。因此在流过proxy的任何消息都要遵循proxy能够识别的约定。
 
-## proxy相关
-+ 我不希望commandHandler包含command转rpc的过程：把command参数转rpc入参，把rpc返回参数转为response。一来是这样的话CommandHandler所要知道的业务信息就太多了，二来这种参数转换逻辑和rpc调用逻辑是的CommandHandler的逻辑变得复杂。
+### 消息体的结构
+我们约定流过proxy的任何消息只有两种类型：REQUEST还有RESPONSE。例如客户端向服务器请求房间列表、请求加入房间、请求加好友等，后端模块也能（通过代理）向客户端发送请求。这些请求所包含的字段的意义和类型可能不相同，但我们规定他们具有一致的protobuf定义：
+```
+message Request 
+{
+	enum RequestType {
+		// request type define …
+	}
+	optional RequestType requestType = 1;
+	optional int64 uid = 2;
+	optional int64 stamp = 3;
+	optional repeat string rags = 4;
+}
+```
+proxy可以根据requestType字段判断确定讲客户端的请求转发到哪，也可以根据当前用户的状态而决定是否把这个请求过滤掉。uid这个字段可以用来标记发送这个请求的客户端，也可以用于proxy判断后端请求转发到哪个客户端。stamp这个字段记录了请求发送时间，主要用于和请求匹配。args是真正存储请求参数的地方，至于如何对它进行解释则由最终接收方负责。
+后端模块对客户端请求的响应则统一用RESPONSE来表示，它的消息体定义是这样的：
 
-+ 根据上面考虑，我是希望Command的类型可以和大多数rpc入参对应上，或者说Command可以非常简单得转成相应的rpc入参，而无需过多的判断逻辑。同样的，rpc的返回参数也是，Proxy无需做过多的逻辑判断就能完成返回参数转Response的功能。
 
-+ 更具体一些的话，对于rpc的返回参数，由于它是指针，我们可以用这个返回参数的基类`google::protobuf::Message`指针来引用这个具体类型对象。如果rpc的返回参数和response类型一致，那么CommandHandler调用rpc之后接到返回参数，就能调用`SerializeAsString`完成序列化了。对于rpc入参的话，CommandHandler可以根据request包的cmdType找到对应的rpc，然后入参的话可以直接提取request里面的args按顺序放进去。
-
-+ gRPC的异步调用机制是这样的：异步rpc在完成的时候会往一个完成队列放返回参数，但我们用户是要自己去轮询这个队列看是否有。我估计到时候需要自己将这个完成队列封装到eventloop里面，每次loop的时候用非阻塞的方法读取这个队列。
 
 ## proxy与客户端交互协议事宜
 虽然我们已经约定客户端和proxy之间使用protobuf来对消息进行序列化，但是存在以下情况是protobuf本身无法解决的：
@@ -54,7 +65,31 @@ client往proxy发数据：
 ### 为每个clientHandler分配一个发送和接收缓冲的问题：
 由于我们不能保证一次write/read就能发送/接收一个完整的request或者response，因此肯定需要缓冲。另外，缓冲的另外一个目的是batching，也就是当收到或发送大量小报文时可以节省系统调用的次数。然而设置缓冲又会涉及到缓冲的读写策略：
 1. 关于写缓冲策略：我们分几种情况来讨论。当需要发送一个大报文时，以致于一个缓冲区都无法装下的时候怎么办？对于这种情况，第一种可行的策略是使用动态内存分配，第二种可行的策略是仍然使用固定大小的缓冲，但是利用状态机的方式完成报文的分段转发，但三种可行的情况是设定报文长度上限。由于第三种方法最容易，且考虑到开发周期短，暂时使用第三种，但后期会考虑拓展到更优的策略。当要发送多个小报文时，我们将waittingQueue中的msg逐一序列化封包并写入缓冲，直到缓冲剩余的空间不够放下一整个msg或者是两个waittingQueue都已经空了。因此，我们当前的策略是不往缓冲中写不完整的包，这可以减小clientHandler的工作量。但是对于client来说仍然存在拆包的问题，处理拆包的问题就要交给client端来解决。但是后面我们会看到，proxy读缓冲时候也要处理拆包的问题，因此两者的处理策略可以相互借鉴。
-2. 关于读缓冲策略：读缓冲主要是拆包的问题，也就是说缓冲里面存在不完整的包怎么办？如果协议包的报头是完整的话，我们可以根据length字段判断剩余还有多少数据，然后等待收到一个完整的包后才继续解析。然而这会出现一种情况，假如不完整的包起始位置靠近缓冲的末端怎么办？这时候完整的包可能不能连续的放在缓冲里面。因此这里我们需要引入环形缓冲的机制。
+2. 关于读缓冲策略：我们先从缓冲是空的情况开始考虑。现在clientfd上有可读事件，我们尽可能多地读取数据到缓冲中，如果读到的数据量小于缓冲大小，那显然这次读取操作已经清空了clientfd的tcp接收缓冲。但是我们仍然无法保证读到缓冲中的数据都是完整的一个包。我们这时候逐一解码每个包并调用异步rpc，直到缓冲空了或者最后一个包不完整。这个包剩余的部分会在下一次可读事件中补上。
+然后我们收到了下一次的可读事件，如果这次仍然读完了clientfd的tcp接收缓冲，那么显然可以递归地用上一次情况来分析。现在我们考虑的是没有读完clientfd的tcp接收缓冲的情况。我们仍然逐个包地处理接收缓冲，知道没有或剩下一个不完整的包。那这时候我们还要不要用空出来的缓冲空间来继续读没有读完的clientfd数据？直观上来看是要的，因为我们用的是边沿出发模式，如果这是用户最后的请求或者是相当长一段时间内都不发送下一个请求，那么这个包就会得不到及时处理。也许我们可以将这个clientfd切换到水平触发，那么下一次epoll_wait的时候仍然会接着读这个未读完的数据，只不过可写事件也会同时被带动起，我不知道这会有什么副作用。
+所以读策略是这样的：
+```c++
+int onRecv()
+{
+	int byteRead, pkgProcessed = 0;
+	bool needToRead = true;
+	while (needToRead)
+	{
+		byteRead = read(clientfd, readBuffer);
+		if (byteRead < 0)
+		{	// fatal error, close the client connection
+			return -1;
+		}
+		if (readBuffer.size() != readBuffer.capacity())
+		{
+			needToRead = false;
+		}
+		// handle packages in buffer one by one
+		for (;;) {//…}
+	}
+	return pkgProcessed;
+}
+```
 
 ### 关于环形缓冲的设计
 其实我之前已经实现过一个简单CircularBuffer类了，这个类本身很简单，只有empty、capacity、size、free四个成员函数，底层数据结构就是一段连续的内存，以及已用缓冲起始和结束位置的标记。
@@ -78,4 +113,12 @@ int writeAs(const CircularBuffer &buffer, size_t off, const T &in, bool netByteO
 ```c++
 int circularBufferToString(const CircularBuffer &buffer, std::string &str);
 ```
+
+### ClientHandler生命周期的管理
+我之前的想法是用一个HandlerManager来管理每个EventHandler的生命期，当EventHandler的HandleEvents发生fatal error时，向HandlerManager调用expire来使这个Hander不再参与任何事件的处理。并且EventManager向epoll注册定时器事件，来周期性地释放过期的Handler。此外，HandlerManager还负责提Handler索引的功能。
+但我现在觉得太复杂了，索引功能为何不通过几个全局的哈希表来实现？反正只有epoll线线程会访问这个哈希表。另外当时没把Handler释放工作交给EventLoop实在是想太多了，操着做框架的心，却是个做业务的命。
+
+### 超时事件
+一个维持着长连接的应用层协议应该需要心跳机制来确定客户端/服务是否还在正常工作。当然客户端这边若是shutdown的话一般是会有一个EPOLLHUP之类的事件来提醒服务端的，在我们这个项目里面就是提醒proxy。但如果我们考虑特殊情况的话就是客户端意外关断/网络丢包，使得这个EPOLLHUP事件没法到达proxy。这样的话proxy就会白白的浪费一个Handler资源。那究竟用什么样的方式来判断一个客户端是否还存活呢？一个办法就是客户端定期发心跳信号给proxy，若proxy在3个心跳周期内都没有收到客户端的心跳信号，那么就释放掉这个Handler。那么每个Handler应该向epoll注册一个timerfd，并且自己也保存这个timerfd。每当proxy收到客户端的一个消息（任何消息，不管是心跳还是请求），都得重置这个timerfd。因此当收到timerfd的事件时，我们就知道应该释放该Handler了。
+
 

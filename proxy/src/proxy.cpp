@@ -182,10 +182,10 @@ private:
     int handleClient(Net::Event events)
     {
         int ret = 0;
-        // if (events & Net::EV_IN)
-        // {
-        //     ret = onRecv() == 0 ? ret : -1;
-        // }
+        if (events & Net::EV_IN)
+        {
+            ret = onRecv() == 0 ? ret : -1;
+        }
         if (events & Net::EV_OUT)
         {
             ret = onSend() == 0 ? ret : -1;
@@ -448,35 +448,3 @@ private:
     bool m_writeRequest = false;
 };
 
-const char *ip = "127.0.0.1";
-unsigned short port = 12345;
-bool flag = false;
-
-void stop_server(int)
-{
-    flag = true;
-}
-
-int main()
-{
-    ::SocketPoller poller;
-    tcp::TcpListener<CommandHandler> *listener = new tcp::TcpListener<CommandHandler>(ip, port);
-
-    signal(SIGINT, stop_server);
-
-    if (listener->addToPoller(&poller) < 0)
-    {
-        flag = true;
-    }
-
-    while (!flag)
-    {
-        if (poller.poll(1) < 0)
-        {
-            flag = true;
-        }
-    }
-
-    delete listener;
-    return 0;
-}
