@@ -48,6 +48,8 @@ message Request {
         GET_SCORE = 28;
         GET_MATCH_INFO = 29;
         MATCH_END = 30;
+        ADD_WAIT_FRIEND = 31;
+        DELETE_WAIT_FRIEND = 32;
     }
     optional RequestType requestType = 1;
     optional int64  uid = 2;
