@@ -1,34 +1,23 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <signal.h>
-#include <limits.h>
-#include <memory>
-#include <thread>
-#include <mutex>
 #include <unistd.h>
-#include <fcntl.h>
-#include <errno.h>
-#include <queue>
 #include <utility>
 #include <unordered_map>
 #include <unordered_set>
 
-#include <grpc/support/log.h>
-#include <grpcpp/grpcpp.h>
+#include "grpc/asyncProxyServer.h"
+#include "grpc/asyncServiceClient.h"
 
-#include "../include/grpc/asyncProxyServer.h"
-#include "../include/grpc/asyncServiceClient.h"
-
-#include "../include/net/EventLoop.h"
-#include "../include/net/TcpListener.h"
-#include "../include/net/circ_buf.h"
-#include "../include/protocols/ClientProxyProtocol.h"   
-#include "../include/common.h"
+#include "net/EventLoop.h"
+#include "net/circ_buf.h"
+#include "protocols/ClientProxyProtocol.h"   
+#include "common.h"
 
 #define MAX_FORWORD_FAILURE 5
 
-#define BUFFER_SIZE 1024 * 8     // 8 KB
+#define BUFFER_SIZE 1024 * 4     // 4 KB
+#define QUEUE_SIZE  128
 
 const std::string cmdTypeMap[] = {
         "INVAL",  
@@ -114,14 +103,21 @@ const std::unordered_map<common::Request_RequestType, BackEndModule> cmdTypeToMo
 
 class ClientHandler : public Net::EventsHandler {
 public:
-    ClientHandler(int sockfd, const struct sockaddr_in addr, int bufferSize = BUFFER_SIZE) 
+    ClientHandler(int sockfd, const struct sockaddr_in addr, 
+                int bufferSize = BUFFER_SIZE, int queueSize = QUEUE_SIZE) 
         : Net::EventsHandler(), m_clientfd(sockfd), m_addr(addr), 
-        m_readBuffer(bufferSize), m_writeBuffer(bufferSize) {}
+        m_readBuffer(bufferSize), m_writeBuffer(bufferSize),
+        m_requestWaittingQueue(queueSize), m_responseWaittingQueue(queueSize) 
+    {}
 
-    ~ClientHandler() {close(m_clientfd);}
+    ~ClientHandler() 
+    {
+        close(m_clientfd);
+    }
 
 public:
-    int notifyInAdvance(int sockfd, int events, void *data)
+    // this method should be called by the request/response producer thread
+    int notifyInAdvance(int sockfd, Net::Event events, void *data)
     {
         // request from back-end module
         if (m_requestSources.find(sockfd) != m_requestSources.end())
@@ -139,14 +135,27 @@ public:
     }
 
     // this method is called by 
-    int addToEventLoop(int sockfd, int events, Net::EventLoop *eventLoop)
+    int addToEventLoop(int sockfd, Net::Event events, Net::EventLoop *eventLoop)
     {
-        if (sockfd != m_clientfd || m_eventLoop)
+        if (m_eventLoop || sockfd != m_clientfd)
         {
             return -1;
         }
         m_eventLoop = eventLoop;
-        return eventLoop->add(m_clientfd, events, this);
+        return eventLoop->add(m_clientfd, Net::toEpollEvent(events), this);
+    }
+
+    // 
+    int addRequestSource(int pipefd)
+    {
+        m_requestSources.insert(pipefd);
+        return 0;
+    }
+
+    int addResponseSource(int pipefd)
+    {
+        m_responseSources.insert(pipefd);
+        return 0;
     }
 
     int removeFromEventLoop(int sockfd, Net::EventLoop *loop)
@@ -166,11 +175,11 @@ public:
         }
         else if (m_requestSources.find(sockfd) != m_requestSources.end())
         {
-            return handleRequest();
+            return handleRequest(sockfd);
         }
         else if (m_responseSources.find(sockfd) != m_responseSources.end())
         {
-            return handleResponse();
+            return handleResponse(sockfd);
         }
         else 
         {
@@ -198,7 +207,7 @@ private:
     }
 
     // simply register EV_OUT event for clientfd
-    int handleRequest()
+    int handleRequest(int pipefd)
     {
         // resgister EV_OUT for clientfd
         if (!m_eventLoop)
@@ -213,9 +222,9 @@ private:
     }
     
     // simply register EV_OUT event for clientfd
-    int handleResponse()
+    int handleResponse(int pipefd)
     {
-        return handleRequest();    
+        return handleRequest(pipefd);    
     }
 
     int onRecv()

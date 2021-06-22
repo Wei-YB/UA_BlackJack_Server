@@ -30,6 +30,7 @@ proxy : proxy.o ./protobuf/client_proxy.pb.o
 
 %.pb.cc: %.proto
 	$(PROTOC) -I $(PROTOS_PATH) --cpp_out=$(CPPS_PATH) $<
+	
 proxy.o : proxy.cpp
 	g++ -c proxy.cpp -I $(INCPATH) -L $(LDPATH) -lprotobuf
 

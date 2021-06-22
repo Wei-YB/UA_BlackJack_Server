@@ -4,8 +4,8 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
-#define MAX(a, b)   a > b ? a : b
-#define MIN(a, b)   a > b ? b : a
+#define MAX(a, b)   ((a) > (b) ? (a) : (b))
+#define MIN(a, b)   ((a) > (b) ? (b) : (a))
 #define QUEUE_CAPACITY  64
 
 namespace Net
@@ -74,7 +74,7 @@ int put(CircularBuffer &buffer, const char *src, size_t n)
 {
     int head = buffer.m_head, tail = buffer.m_tail;
     int freeRoom = buffer.capacity() - buffer.size();
-    int tailRoom = tail >= head ? buffer.capacity() - head - 1 : freeRoom;
+    int tailRoom = tail >= head ? buffer.capacity() - tail - 1 : freeRoom;
     char *rawBuffer = buffer.m_buffer;
     n = MIN(n, freeRoom);
     
@@ -139,7 +139,7 @@ int read(int fd, CircularBuffer &buffer)
             }
             return -1;
         } 
-        tail += ret;
+        tail = (tail + ret) % capacity;
         buffer.m_tail = tail;
     } while (tail == capacity - 1);
 
@@ -162,18 +162,17 @@ int write(int fd, CircularBuffer &buffer, bool freeAfterWrite = true)
     int writeIdx = head;
     int writeSize, cnt = 0;
     do {
-        writeSize = tail >= writeIdx ? tail - writeIdx + 1 : capacity - writeIdx + 1;
+        writeSize = tail >= writeIdx ? tail - writeIdx + 1 : capacity - writeIdx;
         ret = ::write(fd, rawBuffer + writeIdx, writeSize);
         if (ret <= 0)
         {
-            if (cnt)
-            {
-                buffer.free(cnt);
-            }
             if (ret == 0 || errno == EWOULDBLOCK || errno == EAGAIN || errno == EINTR)
             {
+                if (freeAfterWrite)
+                    buffer.free(cnt);
                 return cnt;
             }
+            buffer.free(cnt);
             return -1;
         } 
         cnt += ret;
@@ -236,8 +235,6 @@ template<typename T>
 int writeAs(CircularBuffer &buffer, T &in, bool netByteOrder = false)
 {
     T dataToWrite;
-    int tailRoom;
-    char *ptr;
     // check it is possible to read a T type object from buffer
     if (buffer.capacity() - buffer.size() < sizeof(T))
         return -1;
@@ -258,17 +255,13 @@ int writeAs(CircularBuffer &buffer, T &in, bool netByteOrder = false)
             return -1;
         }
     }
-
-    if (buffer.m_tail + 1 < buffer.m_bufferSize)
-    {
-        tailRoom = buffer.m_tail >= buffer.m_head ?\ 
-                    buffer.m_bufferSize - buffer.m_tail - 1 \
-                    : buffer.m_head - buffer.m_tail - 1;
-    }
     else
     {
-        tailRoom = buffer.m_head - ((buffer.m_tail + 1) % buffer.m_bufferSize);   
+        dataToWrite = in;
     }
+
+    int freeRoom = buffer.capacity() - buffer.size();
+    int tailRoom = buffer.m_tail >= buffer.m_head ? buffer.capacity() - buffer.m_tail - 1 : freeRoom;
     // case 1: the tail room is long enough to hold the read type 
     if (tailRoom >= sizeof(T))
     {
@@ -277,25 +270,26 @@ int writeAs(CircularBuffer &buffer, T &in, bool netByteOrder = false)
     // case 2: discontinuous memory, need to read it byte by byte
     else
     {
-        ptr = (char*)&dataToWrite;
+        char *ptr = (char*)&dataToWrite;
         for (int i = 0; i < sizeof(T); ++i)
         {
-            *(ptr + i) = *(buffer.m_buffer + ((buffer.m_tail + 1 + i) % buffer.m_bufferSize));
+            *(buffer.m_buffer + ((buffer.m_tail + 1 + i) % buffer.m_bufferSize)) = *(ptr + i);
         }
     }
+    buffer.m_tail = (buffer.m_tail + sizeof(T)) % buffer.m_bufferSize;
     
     return 0;
 }
 
-int circularBufferToString(const CircularBuffer &buffer, size_t length, std::string &str)
+void circularBufferToString(const CircularBuffer &buffer, size_t length, std::string &str)
 {
     int tailRoom;
     if (buffer.empty())
-        return 0;
+        return;
     if (length > buffer.size())
         length = buffer.size();
-    tailRoom = buffer.m_tail >= buffer.m_head ?\ 
-                                buffer.m_tail - buffer.m_head \
+    tailRoom = buffer.m_tail >= buffer.m_head ?\
+                                buffer.m_tail - buffer.m_head + 1 \
                                 : buffer.m_bufferSize - buffer.m_head;
     if (tailRoom >= length)
     {
@@ -306,8 +300,6 @@ int circularBufferToString(const CircularBuffer &buffer, size_t length, std::str
         str.append(buffer.m_buffer + buffer.m_head, tailRoom);
         str.append(buffer.m_buffer, length - tailRoom);
     }
-    
-    return 0;
 }
 
 
