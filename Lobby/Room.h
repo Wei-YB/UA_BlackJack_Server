@@ -7,7 +7,7 @@
 namespace ua_black_jack_server { namespace lobby{
 
 /*
-room doesn't need to save the status of itself, thus the lobby directly change the status of players, not through the room!
+    room doesn't need to save the status of itself, thus the lobby directly change the status of players, not through the room!
 */
 class Room{
 public:
@@ -27,20 +27,16 @@ public:
     bool isFull();
 
     bool isEmpty();
-
-    int TotalSize();
     
-    int ReadySize();
+    int unReadySize();
 
     //return all players of ready and unready in this room
     std::vector<UID> getAllPlayersID();
-    //void Start();//no need in room???
+    //void Start();//no need in class room
 
 private:
     std::unordered_set<UID> players_ready;
     std::unordered_set<UID> players_unready;
-
-    
 };
 }
 }

@@ -63,3 +63,7 @@ std::vector<ua_black_jack_server::lobby::Room::UID> ua_black_jack_server::lobby:
     return res;
 
 }
+
+int ua_black_jack_server::lobby::Room::unReadySize(){
+    return players_unready.size();
+}

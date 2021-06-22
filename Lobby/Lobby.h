@@ -5,6 +5,8 @@
 #include <list>
 #include <vector>
 #include <cassert>
+#include "spdlog/spdlog.h"
+
 #include "Players.h"
 #include "Room.h"
 
@@ -17,12 +19,11 @@ class Lobby{
 public:
     using UID = int64_t;
     using RoomID = int32_t;
-    using NICKNAME = std::string;
-    using PASSWORD = std::string;
+
 public:
 
-    Lobby(){};
-    UID Login(NICKNAME nickname, PASSWORD password);
+    Lobby();
+    UID Login(std::string nickname, std::string password);
 
     void Logout(UID uid);
 
@@ -36,26 +37,37 @@ public:
 
     RoomID QuickMatch(UID uid);
 
-    void MatchEnd(RoomID roomid);//由room调用
+    //RPC called, receive data from match service
+    void MatchEnd(RoomID rid);
+
+    //for debug
+    int GetPlayersSizeInRoom(RoomID rid);
+    enum class RoomStatus{
+        EMPTY,
+        AVAILABLE,
+        OCCUPIED,
+        FULL,
+        NOT_EXIST
+    };
+    RoomStatus GetRoomStatus(RoomID rid);
 
 private:
-    //bool check(UID uid);
+    bool CheckRoomDone(RoomID rid);
     
-    //RPC call 调用room的接口！
-    //todo 
-    void MatchStart(RoomID rid, std::vector<UID> playersID);
+    //RPC call, send data to match service
+    bool MatchStart(RoomID rid, std::vector<UID> playersID);
 
 private:
-    //每个player的状态由Players管理
+    //the status of player is managed by Players.
     Players AllPlayers_;
-    //保存几种不同状态的room
+    //the status of room is managed by these four set in order to exceed the search.
     std::unordered_set<RoomID> emptyRooms_;
-    std::unordered_set<RoomID> availableRooms_;//还可以加入的room
-    std::unordered_set<RoomID> occupiedRooms_;//对局已经开始的room，它可以从full转换而来，也可以从availabe转换而来
+    std::unordered_set<RoomID> availableRooms_;//still can be added in.
+    std::unordered_set<RoomID> occupiedRooms_;//rooms for match already started. it can be transferred from either avaiableRooms_ or fullRooms_.
     std::unordered_set<RoomID> fullRooms_;
 
     std::vector<Room> AllRooms_;
-
+    RoomID curMaxRoomID;
 };
 
 
