@@ -42,13 +42,6 @@ message Request {
 }
 
 message Response {
-    enum ResponseType {
-        INVAL = 0;
-        LOBBY = 1;
-        ROOM = 2;
-        SOCIAL = 3;
-    }
-    optional ResponseType responseType = 1;
     optional int64 status = 2;
     optional int64  uid = 3;
     optional int64 stamp = 4;
