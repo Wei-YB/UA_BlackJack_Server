@@ -42,9 +42,9 @@ message Request {
 }
 
 message Response {
-    optional int64 status = 2;
-    optional int64  uid = 3;
-    optional int64 stamp = 4;
-    repeated string args = 5;
+    optional int64 status = 1;
+    optional int64  uid = 2;
+    optional int64 stamp = 3;
+    repeated string args = 4;
 }
 
