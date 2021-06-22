@@ -6,6 +6,8 @@
 #include <vector>
 #include <cassert>
 #include "spdlog/spdlog.h"
+#include "spdlog/sinks/basic_file_sink.h"
+#include "spdlog/sinks/rotating_file_sink.h"
 
 #include "Players.h"
 #include "Room.h"
@@ -68,6 +70,7 @@ private:
 
     std::vector<Room> AllRooms_;
     RoomID curMaxRoomID;
+    std::shared_ptr<spdlog::logger> logger;
 };
 
 

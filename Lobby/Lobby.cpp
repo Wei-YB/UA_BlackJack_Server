@@ -1,14 +1,11 @@
 #include "Lobby.h"
 #include <iostream>
 
-using std::cout;
-using std::endl;
-
 /*
 innitialize Allrooms_, the index of allrooms is roomid, index 0 is not used!
 */
 ua_black_jack_server::lobby::Lobby::Lobby():
-AllRooms_(std::vector<Room> (maxRooms+1)), curMaxRoomID(0) {}
+AllRooms_(std::vector<Room> (maxRooms+1)), curMaxRoomID(0), logger(spdlog::basic_logger_mt("Lobby_log", "Logs/Lobby_log.txt")) {}
 
 ua_black_jack_server::lobby::Lobby::UID ua_black_jack_server::lobby::Lobby::Login(std::string nickname, std::string password){
     /* return -1 means login failure!
@@ -51,6 +48,7 @@ ua_black_jack_server::lobby::Lobby::UID ua_black_jack_server::lobby::Lobby::Logi
     if(passwordInDatabase == password){
         AllPlayers_.NewPlayer(uid);
     }
+    logger->info("Player:{0:d} has logged in the lobby", uid);
     return uid;
 }
 
@@ -63,33 +61,40 @@ void ua_black_jack_server::lobby::Lobby::Logout(UID uid){
     }
     //case STATUS::OFFLINE
     AllPlayers_.LogOut(uid);
+    logger->info("Player:{0:d} has logged out of the lobby", uid);
 }
 
 //return -1 means createroom failure
 ua_black_jack_server::lobby::Lobby::RoomID ua_black_jack_server::lobby::Lobby::CreateRoom(UID uid){
     if(AllPlayers_.GetStatus(uid) != ua_black_jack_server::lobby::Players::Status::IN_LOBBY){
-        printf("uid %d is not in lobby, can not create the new room\n", uid);
+        logger->warn("Player:{0:d} is not in lobby, can not create the new room", uid);
         return -1;
     }
 
     if(curMaxRoomID > maxRooms){
-        printf("the size of room is already 20000, can not create the new room\n", uid);
+        logger->warn("the size of room is already 20000, can not create the new room.");
         return -1;
     }
     ++curMaxRoomID;
     emptyRooms_.insert(curMaxRoomID);
 
+    logger->info("Player:{0:d} has created the new room:{1:d}", uid, curMaxRoomID);
     return curMaxRoomID;
 }
 
 bool ua_black_jack_server::lobby::Lobby::JoinRoom(UID uid, RoomID rid){
 
     //the players status is not in lobby
-    if(AllPlayers_.GetStatus(uid) != ua_black_jack_server::lobby::Players::Status::IN_LOBBY)
+    if(AllPlayers_.GetStatus(uid) != ua_black_jack_server::lobby::Players::Status::IN_LOBBY){
+        logger->warn("Player:{0:d} is not in lobby, can not join any room.", uid);
         return false;
+    }
+        
     // the roomid is not available    
-    if(fullRooms_.count(rid) || occupiedRooms_.count(rid))
+    if(fullRooms_.count(rid) || occupiedRooms_.count(rid)){
+        logger->warn("Room:{0:d} is not available", rid);
         return false;
+    }
     
     //update the players status
     AllPlayers_.JoinRoom(uid, rid);
@@ -107,6 +112,7 @@ bool ua_black_jack_server::lobby::Lobby::JoinRoom(UID uid, RoomID rid){
         availableRooms_.erase(rid);
     }
 
+    logger->info("Player:{0:d} has joined in the room:{1:d}", uid, rid);
     return true;
 }
 
@@ -114,17 +120,20 @@ bool ua_black_jack_server::lobby::Lobby::LeaveRoom(UID uid){
     //the players status is not in room   
     if(AllPlayers_.GetStatus(uid) != ua_black_jack_server::lobby::Players::Status::IN_ROOM_NOT_READY && 
         AllPlayers_.GetStatus(uid) != ua_black_jack_server::lobby::Players::Status::IN_ROOM_READY){
+            logger->warn("Player:{0:d} is not in room, can not leave any room.", uid);
             return false;
         }
         
     // the roomid is not available: the match is started, cannot leave    
     RoomID rid = AllPlayers_.getRoom(uid);
     if(occupiedRooms_.count(rid) || emptyRooms_.count(rid)){
+        logger->warn("Room:{0:d} is occupied, can not leave.", rid);
         return false;
     }
         
     AllPlayers_.LeaveRoom(uid);
     AllRooms_[rid].Leave_room(uid);
+    logger->info("Player:{0:d} has left out of the room:{1:d}", uid, rid);
 
     //to be tested. uid leave the room maybe result in the begin of match. 
     bool ret = CheckRoomDone(rid);
@@ -140,12 +149,13 @@ bool ua_black_jack_server::lobby::Lobby::LeaveRoom(UID uid){
             emptyRooms_.insert(rid);
         }
     }
-
+    
     return true;
 }
 
 bool ua_black_jack_server::lobby::Lobby::PlayerReady(UID uid){
     if(AllPlayers_.GetStatus(uid) != ua_black_jack_server::lobby::Players::Status::IN_ROOM_NOT_READY){
+        logger->warn("Player:{0:d} is not in room with the status of not ready, can not choose the PlayerReady.", uid);
         return false;
     }
 
@@ -155,21 +165,21 @@ bool ua_black_jack_server::lobby::Lobby::PlayerReady(UID uid){
     assert(rid>0);
     AllRooms_[rid].Ready(uid);
 
+    logger->info("Player:{0:d} has been ready in the room:{1:d}", uid, rid);
     //every time playerReady needs 
     CheckRoomDone(rid);
-
+        
     return true;
 }
 
 //return -1 means quickmatch failure
  ua_black_jack_server::lobby::Lobby::RoomID ua_black_jack_server::lobby::Lobby::QuickMatch(UID uid){
-    /*
-        quickmatch is availabal only when uid is in looby. 
-        first search in the availabeRooms, if not exists, return a empty room
-    */
-    if(AllPlayers_.GetStatus(uid) != ua_black_jack_server::lobby::Players::Status::IN_LOBBY)
+    if(AllPlayers_.GetStatus(uid) != ua_black_jack_server::lobby::Players::Status::IN_LOBBY){
+        logger->warn("Player:{0:d} is not in the lobby, can not choose the quickmatch.", uid);
         return -1;
+    }
 
+    logger->info("Quickmatch for player:{0:d} is starting.", uid);
     int minUnreadySize = 10;
     RoomID rid = 0;//in lobby
     for(auto roomid:availableRooms_){
@@ -198,6 +208,8 @@ bool ua_black_jack_server::lobby::Lobby::PlayerReady(UID uid){
     assert(res == true);
     res = PlayerReady(uid);//quickmatch means playerReady automatically
     assert(res == true);
+
+    logger->info("Quickmatch for player:{0:d} is finished.", uid);
     return rid;
 }
 
@@ -217,6 +229,7 @@ void ua_black_jack_server::lobby::Lobby::MatchEnd(RoomID rid){
     else{
         availableRooms_.insert(rid);
     }
+    logger->info("The match in the room:{0:d} has been finished", rid);
 }
 
 bool ua_black_jack_server::lobby::Lobby::MatchStart(RoomID rid, std::vector<UID> playersID){
@@ -260,6 +273,7 @@ bool ua_black_jack_server::lobby::Lobby::CheckRoomDone(RoomID rid){
             AllPlayers_.MatchStart(pid);
 
         MatchStart(rid, playersID);
+        logger->info("All the Players in the room:{0:d} has been ready, the match begins at once.", rid);
         return true;
     }
     return false;
