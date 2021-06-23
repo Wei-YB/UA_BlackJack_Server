@@ -4,10 +4,7 @@
 			"name": "Linux",
 			"includePath": [
 				"${workspaceFolder}/**",
-				"proxy/include",
-				"proxy/include/grpc",
-				"proxy/include/net",
-				"proxy/include/protocols"
+				"/include"
 			],
 			"defines":[],
 			"compilerPath": "/usr/bin/gcc",

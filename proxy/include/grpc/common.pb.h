@@ -117,33 +117,6 @@ inline bool Request_RequestType_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<Request_RequestType>(
     Request_RequestType_descriptor(), name, value);
 }
-enum Response_ResponseType : int {
-  Response_ResponseType_INVAL = 0,
-  Response_ResponseType_LOBBY = 1,
-  Response_ResponseType_ROOM = 2,
-  Response_ResponseType_SOCIAL = 3,
-  Response_ResponseType_Response_ResponseType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  Response_ResponseType_Response_ResponseType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
-};
-bool Response_ResponseType_IsValid(int value);
-constexpr Response_ResponseType Response_ResponseType_ResponseType_MIN = Response_ResponseType_INVAL;
-constexpr Response_ResponseType Response_ResponseType_ResponseType_MAX = Response_ResponseType_SOCIAL;
-constexpr int Response_ResponseType_ResponseType_ARRAYSIZE = Response_ResponseType_ResponseType_MAX + 1;
-
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Response_ResponseType_descriptor();
-template<typename T>
-inline const std::string& Response_ResponseType_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, Response_ResponseType>::value ||
-    ::std::is_integral<T>::value,
-    "Incorrect type passed to function Response_ResponseType_Name.");
-  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    Response_ResponseType_descriptor(), enum_t_value);
-}
-inline bool Response_ResponseType_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Response_ResponseType* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<Response_ResponseType>(
-    Response_ResponseType_descriptor(), name, value);
-}
 // ===================================================================
 
 class Request PROTOBUF_FINAL :
@@ -530,50 +503,15 @@ class Response PROTOBUF_FINAL :
 
   // nested types ----------------------------------------------------
 
-  typedef Response_ResponseType ResponseType;
-  static constexpr ResponseType INVAL =
-    Response_ResponseType_INVAL;
-  static constexpr ResponseType LOBBY =
-    Response_ResponseType_LOBBY;
-  static constexpr ResponseType ROOM =
-    Response_ResponseType_ROOM;
-  static constexpr ResponseType SOCIAL =
-    Response_ResponseType_SOCIAL;
-  static inline bool ResponseType_IsValid(int value) {
-    return Response_ResponseType_IsValid(value);
-  }
-  static constexpr ResponseType ResponseType_MIN =
-    Response_ResponseType_ResponseType_MIN;
-  static constexpr ResponseType ResponseType_MAX =
-    Response_ResponseType_ResponseType_MAX;
-  static constexpr int ResponseType_ARRAYSIZE =
-    Response_ResponseType_ResponseType_ARRAYSIZE;
-  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
-  ResponseType_descriptor() {
-    return Response_ResponseType_descriptor();
-  }
-  template<typename T>
-  static inline const std::string& ResponseType_Name(T enum_t_value) {
-    static_assert(::std::is_same<T, ResponseType>::value ||
-      ::std::is_integral<T>::value,
-      "Incorrect type passed to function ResponseType_Name.");
-    return Response_ResponseType_Name(enum_t_value);
-  }
-  static inline bool ResponseType_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
-      ResponseType* value) {
-    return Response_ResponseType_Parse(name, value);
-  }
-
   // accessors -------------------------------------------------------
 
   enum : int {
-    kArgsFieldNumber = 5,
-    kStatusFieldNumber = 2,
-    kUidFieldNumber = 3,
-    kStampFieldNumber = 4,
-    kResponseTypeFieldNumber = 1,
+    kArgsFieldNumber = 4,
+    kStatusFieldNumber = 1,
+    kUidFieldNumber = 2,
+    kStampFieldNumber = 3,
   };
-  // repeated string args = 5;
+  // repeated string args = 4;
   int args_size() const;
   private:
   int _internal_args_size() const;
@@ -597,7 +535,7 @@ class Response PROTOBUF_FINAL :
   std::string* _internal_add_args();
   public:
 
-  // int64 status = 2;
+  // int64 status = 1;
   bool has_status() const;
   private:
   bool _internal_has_status() const;
@@ -610,7 +548,7 @@ class Response PROTOBUF_FINAL :
   void _internal_set_status(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // int64 uid = 3;
+  // int64 uid = 2;
   bool has_uid() const;
   private:
   bool _internal_has_uid() const;
@@ -623,7 +561,7 @@ class Response PROTOBUF_FINAL :
   void _internal_set_uid(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // int64 stamp = 4;
+  // int64 stamp = 3;
   bool has_stamp() const;
   private:
   bool _internal_has_stamp() const;
@@ -634,19 +572,6 @@ class Response PROTOBUF_FINAL :
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_stamp() const;
   void _internal_set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value);
-  public:
-
-  // .common.Response.ResponseType responseType = 1;
-  bool has_responsetype() const;
-  private:
-  bool _internal_has_responsetype() const;
-  public:
-  void clear_responsetype();
-  ::common::Response_ResponseType responsetype() const;
-  void set_responsetype(::common::Response_ResponseType value);
-  private:
-  ::common::Response_ResponseType _internal_responsetype() const;
-  void _internal_set_responsetype(::common::Response_ResponseType value);
   public:
 
   // @@protoc_insertion_point(class_scope:common.Response)
@@ -662,7 +587,6 @@ class Response PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::int64 status_;
   ::PROTOBUF_NAMESPACE_ID::int64 uid_;
   ::PROTOBUF_NAMESPACE_ID::int64 stamp_;
-  int responsetype_;
   friend struct ::TableStruct_common_2eproto;
 };
 // ===================================================================
@@ -838,35 +762,7 @@ Request::mutable_args() {
 
 // Response
 
-// .common.Response.ResponseType responseType = 1;
-inline bool Response::_internal_has_responsetype() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Response::has_responsetype() const {
-  return _internal_has_responsetype();
-}
-inline void Response::clear_responsetype() {
-  responsetype_ = 0;
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline ::common::Response_ResponseType Response::_internal_responsetype() const {
-  return static_cast< ::common::Response_ResponseType >(responsetype_);
-}
-inline ::common::Response_ResponseType Response::responsetype() const {
-  // @@protoc_insertion_point(field_get:common.Response.responseType)
-  return _internal_responsetype();
-}
-inline void Response::_internal_set_responsetype(::common::Response_ResponseType value) {
-  _has_bits_[0] |= 0x00000008u;
-  responsetype_ = value;
-}
-inline void Response::set_responsetype(::common::Response_ResponseType value) {
-  _internal_set_responsetype(value);
-  // @@protoc_insertion_point(field_set:common.Response.responseType)
-}
-
-// int64 status = 2;
+// int64 status = 1;
 inline bool Response::_internal_has_status() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -894,7 +790,7 @@ inline void Response::set_status(::PROTOBUF_NAMESPACE_ID::int64 value) {
   // @@protoc_insertion_point(field_set:common.Response.status)
 }
 
-// int64 uid = 3;
+// int64 uid = 2;
 inline bool Response::_internal_has_uid() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -922,7 +818,7 @@ inline void Response::set_uid(::PROTOBUF_NAMESPACE_ID::int64 value) {
   // @@protoc_insertion_point(field_set:common.Response.uid)
 }
 
-// int64 stamp = 4;
+// int64 stamp = 3;
 inline bool Response::_internal_has_stamp() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -950,7 +846,7 @@ inline void Response::set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
   // @@protoc_insertion_point(field_set:common.Response.stamp)
 }
 
-// repeated string args = 5;
+// repeated string args = 4;
 inline int Response::_internal_args_size() const {
   return args_.size();
 }
@@ -1040,11 +936,6 @@ template <> struct is_proto_enum< ::common::Request_RequestType> : ::std::true_t
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::common::Request_RequestType>() {
   return ::common::Request_RequestType_descriptor();
-}
-template <> struct is_proto_enum< ::common::Response_ResponseType> : ::std::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::common::Response_ResponseType>() {
-  return ::common::Response_ResponseType_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

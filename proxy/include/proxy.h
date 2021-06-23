@@ -90,23 +90,6 @@ const std::unordered_map<common::Request_RequestType, BackEndModule> cmdTypeToMo
     {common::Request_RequestType_NOTIFY_USER, BackEndModule::Proxy},
 };
 
-// void print(std::ostream &os, client::Command &command)
-// {
-//     int cmdType = (int)command.cmdtype();
-//     os << "command type: " << cmdTypeMap[cmdType] << std::endl;
-//     os << "arguments: ";
-//     if (command.arg_size())
-//     {
-//         for (int i = 0; i < command.arg_size(); ++i)
-//         {
-//             const std::string &arg = command.arg(i);
-//             os << arg << " ";
-//         }
-//         return;
-//     }
-//     os << "null" << std::endl;
-// }
-
 class ClientHandler : public Net::EventsHandler {
 public:
     ClientHandler(int sockfd, const struct sockaddr_in addr, 
@@ -137,7 +120,7 @@ public:
         return m_asyncCallQueue.push(call);
     }
 
-    int pushRpcResponse(int key, Response *response)
+    int pushRpcResponse(Response *response)
     {
         std::lock_guard<std::mutex> guard(m_responseQueueLock);
         if (m_events & Net::EV_OUT == 0)
@@ -376,6 +359,7 @@ private:
             std::string msg = response->SerializeAsString();
             NS::pack(NS::RESPONSE, msg, m_writeBuffer);
             m_responseWaittingQueue.pop();
+            delete response;
             ret++;
         }
         return ret;

@@ -121,5 +121,63 @@ private:
     EventLoop *m_eventLoop = NULL;
 };
 
+class TcpClient : public EventsHandler
+{
+public:
+    TcpClient(size_t bufferSize) : EventsHandler(), m_readbuffer(bufferSize), m_writebuffer(bufferSize)
+    {
+        if ((m_sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+        {
+            throw "Socket: fail to create socket.\n";
+        }
+    }
+
+    ~TcpClient() {close(m_sockfd);}
+
+public:
+    int connect(const char *ipAddr, unsigned short port)
+    {
+        m_addr.sin_family = AF_INET;
+        m_addr.sin_port = htons(port);
+        if (inet_pton(AF_INET, ipAddr, &m_addr.sin_addr) == 0)
+        {
+            return -1;
+        }
+        if (::connect(m_sockfd, (struct sockaddr *)&m_addr, sizeof(m_addr)) == 0)
+        {
+            fcntl(m_sockfd, F_SETFL, fcntl(m_sockfd, F_GETFL) | O_NONBLOCK);
+            return 0;
+        }
+        return -1;
+    }
+
+    int addToEventLoop(EventLoop *loop)
+    {
+        m_eventLoop = loop;
+        // return m_eventLoop->add(m_sockfd, EV_OUT | EV_ET | EV_ERR, this);
+    }
+
+    int handleEvents(int sockfd, Event events)
+    {
+        return 0;
+    }
+
+    int writeMsg(const char *msg, size_t length) 
+    {
+        int ret = put(buffer, msg, length);
+        m_eventLoop->mod(m_sockfd, EV_OUT | EV_ET | EV_ERR, this);
+        return ret;
+    }
+
+    int
+
+private:
+    int m_sockfd = -1;
+    struct sockaddr_in m_addr;
+    EventLoop *m_eventLoop = NULL;
+    CircularBuffer m_readbuffer;
+    CircularBuffer m_writebuffer;
+};
+
 };  // end of tcp namespace
 #endif 

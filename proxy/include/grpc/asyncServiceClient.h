@@ -3,22 +3,26 @@
 #include <string>
 #include <unistd.h>
 #include <fcntl.h>
+#include <mutex>
 
 #include <grpc/support/log.h>
 #include <grpcpp/grpcpp.h>
 #include <thread>
 
-#include "../net/EventLoop.h"
+#include "EventLoop.h"
 #include "common.pb.h"
 #include "lobby.grpc.pb.h"
 #include "room.grpc.pb.h"
 #include "social.grpc.pb.h"
+#include "proxy.h"
 
 using grpc::Channel;
 using grpc::ClientAsyncResponseReader;
 using grpc::ClientContext;
 using grpc::CompletionQueue;
 using grpc::Status;
+using grpc::CreateChannel;
+using grpc::InsecureChannelCredentials;
 
 using common::Request;
 using common::Response;
@@ -39,12 +43,11 @@ template<typename ServiceType>
 class Client
 {
 public:
-    explicit Client(std::shared_ptr<Channel> channel, 
-                    Net::HandlerManager<int64_t> *clientManager, 
-                    int asyncNotifyPipe)
-            : stub_(ServiceType::NewStub(channel)), 
-            clientManager_(clientManager), 
-            asyncNotifyPipe_(asyncNotifyPipe) {}
+    explicit Client(const std::string &serviceAddr, 
+                    std::unordered_map<int64_t, ClientHandler*> uidToClient,
+                    std::mutex *lock)
+            : stub_(ServiceType::NewStub(CreateChannel(serviceAddr, InsecureChannelCredentials())), 
+            uidToClient_(uidToClient), lock_(lock) {}
 
     void Notify(const Request &request)
     {
@@ -67,17 +70,19 @@ public:
             // get a response, forward to the corresponding client
             AsyncClientCall *call = static_cast<AsyncClientCall*>(got_tag);
             int64_t uid = call->reply.uid();
-            Net::EventsHandler *client = clientManager_->find(uid);
-            // deal with this reponse only when client exists
-            if (client)
+            ClientHandler *client = NULL;
             {
+            std::lock_guard<std::mutex> guard(lock_);
+            if (uidToClient.find(uid) != uidToClient.end())
+            {
+                client = uidToClient[uid];
+            }
+            }
+            if (client)
+            {  
                 Response *res = new Response;
                 *res = call->reply;
-                if (0 == client->notifyInAdvance(asyncNotifyPipe_, Net::EV_IN, (void*)res))
-                {
-                    write(asyncNotifyPipe_, (void*)&uid, sizeof(uid));
-                }
-                else
+                if (0 > client->pushRpcResponse(res))
                 {
                     delete res;
                 }
@@ -91,7 +96,8 @@ private:
     std::unique_ptr<ServiceType::Stub> stub_;
     CompletionQueue cq_;
     int asyncNotifyPipe_; 
-    Net::HandlerManager<int64_t> *clientManager_;
+    std::unordered_map<int64_t, ClientHandler *> uidToClient_;
+    std::mutex lock_;
 };
 
 

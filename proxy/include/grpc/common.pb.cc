@@ -38,9 +38,7 @@ constexpr Response::Response(
   : args_()
   , status_(PROTOBUF_LONGLONG(0))
   , uid_(PROTOBUF_LONGLONG(0))
-  , stamp_(PROTOBUF_LONGLONG(0))
-  , responsetype_(0)
-{}
+  , stamp_(PROTOBUF_LONGLONG(0)){}
 struct ResponseDefaultTypeInternal {
   constexpr ResponseDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -52,7 +50,7 @@ struct ResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ResponseDefaultTypeInternal _Response_default_instance_;
 }  // namespace common
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_common_2eproto[2];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_common_2eproto[2];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_common_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_common_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_common_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -74,12 +72,10 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_common_2eproto::offsets[] PROT
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::common::Response, responsetype_),
   PROTOBUF_FIELD_OFFSET(::common::Response, status_),
   PROTOBUF_FIELD_OFFSET(::common::Response, uid_),
   PROTOBUF_FIELD_OFFSET(::common::Response, stamp_),
   PROTOBUF_FIELD_OFFSET(::common::Response, args_),
-  3,
   0,
   1,
   2,
@@ -87,7 +83,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_common_2eproto::offsets[] PROT
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 9, sizeof(::common::Request)},
-  { 13, 23, sizeof(::common::Response)},
+  { 13, 22, sizeof(::common::Response)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -109,18 +105,14 @@ const char descriptor_table_protodef_common_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "D\020\022\022\021\n\rACCEPT_FRIEND\020\023\022\021\n\rDELETE_FRIEND\020"
   "\024\022\017\n\013LIST_FRIEND\020\025\022\016\n\nLIST_MATCH\020\026\022\021\n\rLI"
   "ST_WAITTING\020\027\022\017\n\013NOTIFY_USER\020\030B\016\n\014_reque"
-  "stTypeB\006\n\004_uidB\010\n\006_stamp\"\367\001\n\010Response\0228\n"
-  "\014responseType\030\001 \001(\0162\035.common.Response.Re"
-  "sponseTypeH\000\210\001\001\022\023\n\006status\030\002 \001(\003H\001\210\001\001\022\020\n\003"
-  "uid\030\003 \001(\003H\002\210\001\001\022\022\n\005stamp\030\004 \001(\003H\003\210\001\001\022\014\n\004ar"
-  "gs\030\005 \003(\t\":\n\014ResponseType\022\t\n\005INVAL\020\000\022\t\n\005L"
-  "OBBY\020\001\022\010\n\004ROOM\020\002\022\n\n\006SOCIAL\020\003B\017\n\r_respons"
-  "eTypeB\t\n\007_statusB\006\n\004_uidB\010\n\006_stampb\006prot"
-  "o3"
+  "stTypeB\006\n\004_uidB\010\n\006_stamp\"p\n\010Response\022\023\n\006"
+  "status\030\001 \001(\003H\000\210\001\001\022\020\n\003uid\030\002 \001(\003H\001\210\001\001\022\022\n\005s"
+  "tamp\030\003 \001(\003H\002\210\001\001\022\014\n\004args\030\004 \003(\tB\t\n\007_status"
+  "B\006\n\004_uidB\010\n\006_stampb\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_common_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_common_2eproto = {
-  false, false, 802, descriptor_table_protodef_common_2eproto, "common.proto", 
+  false, false, 666, descriptor_table_protodef_common_2eproto, "common.proto", 
   &descriptor_table_common_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_common_2eproto::offsets,
   file_level_metadata_common_2eproto, file_level_enum_descriptors_common_2eproto, file_level_service_descriptors_common_2eproto,
@@ -200,31 +192,6 @@ constexpr Request_RequestType Request::NOTIFY_USER;
 constexpr Request_RequestType Request::RequestType_MIN;
 constexpr Request_RequestType Request::RequestType_MAX;
 constexpr int Request::RequestType_ARRAYSIZE;
-#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Response_ResponseType_descriptor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_common_2eproto);
-  return file_level_enum_descriptors_common_2eproto[1];
-}
-bool Response_ResponseType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-      return true;
-    default:
-      return false;
-  }
-}
-
-#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr Response_ResponseType Response::INVAL;
-constexpr Response_ResponseType Response::LOBBY;
-constexpr Response_ResponseType Response::ROOM;
-constexpr Response_ResponseType Response::SOCIAL;
-constexpr Response_ResponseType Response::ResponseType_MIN;
-constexpr Response_ResponseType Response::ResponseType_MAX;
-constexpr int Response::ResponseType_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 
 // ===================================================================
@@ -544,9 +511,6 @@ void Request::InternalSwap(Request* other) {
 class Response::_Internal {
  public:
   using HasBits = decltype(std::declval<Response>()._has_bits_);
-  static void set_has_responsetype(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
   static void set_has_status(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -571,16 +535,16 @@ Response::Response(const Response& from)
       args_(from.args_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&status_, &from.status_,
-    static_cast<size_t>(reinterpret_cast<char*>(&responsetype_) -
-    reinterpret_cast<char*>(&status_)) + sizeof(responsetype_));
+    static_cast<size_t>(reinterpret_cast<char*>(&stamp_) -
+    reinterpret_cast<char*>(&status_)) + sizeof(stamp_));
   // @@protoc_insertion_point(copy_constructor:common.Response)
 }
 
 void Response::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&status_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&responsetype_) -
-    reinterpret_cast<char*>(&status_)) + sizeof(responsetype_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&stamp_) -
+    reinterpret_cast<char*>(&status_)) + sizeof(stamp_));
 }
 
 Response::~Response() {
@@ -611,10 +575,10 @@ void Response::Clear() {
 
   args_.Clear();
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x00000007u) {
     ::memset(&status_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&responsetype_) -
-        reinterpret_cast<char*>(&status_)) + sizeof(responsetype_));
+        reinterpret_cast<char*>(&stamp_) -
+        reinterpret_cast<char*>(&status_)) + sizeof(stamp_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -628,41 +592,33 @@ const char* Response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .common.Response.ResponseType responseType = 1;
+      // int64 status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-          _internal_set_responsetype(static_cast<::common::Response_ResponseType>(val));
-        } else goto handle_unusual;
-        continue;
-      // int64 status = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           _Internal::set_has_status(&has_bits);
           status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int64 uid = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+      // int64 uid = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           _Internal::set_has_uid(&has_bits);
           uid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int64 stamp = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+      // int64 stamp = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
           _Internal::set_has_stamp(&has_bits);
           stamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated string args = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+      // repeated string args = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -671,7 +627,7 @@ const char* Response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
             CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "common.Response.args"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -703,39 +659,32 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .common.Response.ResponseType responseType = 1;
-  if (_internal_has_responsetype()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->_internal_responsetype(), target);
-  }
-
-  // int64 status = 2;
+  // int64 status = 1;
   if (_internal_has_status()) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_status(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_status(), target);
   }
 
-  // int64 uid = 3;
+  // int64 uid = 2;
   if (_internal_has_uid()) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_uid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_uid(), target);
   }
 
-  // int64 stamp = 4;
+  // int64 stamp = 3;
   if (_internal_has_stamp()) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(4, this->_internal_stamp(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_stamp(), target);
   }
 
-  // repeated string args = 5;
+  // repeated string args = 4;
   for (int i = 0, n = this->_internal_args_size(); i < n; i++) {
     const auto& s = this->_internal_args(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "common.Response.args");
-    target = stream->WriteString(5, s, target);
+    target = stream->WriteString(4, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -754,7 +703,7 @@ size_t Response::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string args = 5;
+  // repeated string args = 4;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(args_.size());
   for (int i = 0, n = args_.size(); i < n; i++) {
@@ -763,32 +712,26 @@ size_t Response::ByteSizeLong() const {
   }
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
-    // int64 status = 2;
+  if (cached_has_bits & 0x00000007u) {
+    // int64 status = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
           this->_internal_status());
     }
 
-    // int64 uid = 3;
+    // int64 uid = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
           this->_internal_uid());
     }
 
-    // int64 stamp = 4;
+    // int64 stamp = 3;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
           this->_internal_stamp());
-    }
-
-    // .common.Response.ResponseType responseType = 1;
-    if (cached_has_bits & 0x00000008u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_responsetype());
     }
 
   }
@@ -825,7 +768,7 @@ void Response::MergeFrom(const Response& from) {
 
   args_.MergeFrom(from.args_);
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
       status_ = from.status_;
     }
@@ -834,9 +777,6 @@ void Response::MergeFrom(const Response& from) {
     }
     if (cached_has_bits & 0x00000004u) {
       stamp_ = from.stamp_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      responsetype_ = from.responsetype_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -866,8 +806,8 @@ void Response::InternalSwap(Response* other) {
   swap(_has_bits_[0], other->_has_bits_[0]);
   args_.InternalSwap(&other->args_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Response, responsetype_)
-      + sizeof(Response::responsetype_)
+      PROTOBUF_FIELD_OFFSET(Response, stamp_)
+      + sizeof(Response::stamp_)
       - PROTOBUF_FIELD_OFFSET(Response, status_)>(
           reinterpret_cast<char*>(&status_),
           reinterpret_cast<char*>(&other->status_));
