@@ -12,7 +12,6 @@
 #include "common.pb.h"
 #include "proxy.grpc.pb.h"
 #include "EventLoop.h"
-#include "proxy.h"
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
@@ -33,11 +32,12 @@ public:
     // There is a flaw in the constructor; we explicitly label the uid type 
     // as int64_t for the template parameter of Net::HandlerManager, which 
     // is fragile since the uid type would probably changed in the future.
-    AsyncCall(Proxy::AsyncService *service, ServerCompletionQueue *cq,
-                Net::HandlerManager<int64_t> *clientManager, int asyncNotifyPipe)
-            : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE), 
-            asyncNotifyPipe_(asyncNotifyPipe), clientManager_(clientManager)
-    {Proceed();}
+    AsyncCall(Proxy::AsyncService *service, 
+            ServerCompletionQueue *cq,
+            std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient,
+            std::mutex *lock)
+            : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE),
+            uidToClient_(uidToClient), lock_(lock) {Proceed();}
     
     void Proceed()
     {
@@ -48,30 +48,30 @@ public:
         }
         else if (status_ == PROCESS)
         {
-            new AsyncCall(service_, cq_, clientManager_, asyncNotifyPipe_);
+            new AsyncCall(service_, cq_, uidToClient_, lock_);
             // check the validity of the request
-            if (request_.requesttype() != common::Request_RequestType_NOTIFY_USER)
+            if (request_.requesttype() != common::Request::NOTIFY_USER)
             {
                 // drop the request, and return fail to caller
                 returnFailureResponse("Request type not allowed.");
                 return;
             }
             int64_t uid = request_.uid();
+            Net::EventsHandler *client = NULL;
             // send the request message to corresponding client
-            Net::EventsHandler *client = clientManager_->find(uid);
+            {
+                std::lock_guard<std::mutex> guard(*lock_);
+                if (uidToClient_->find(uid) != uidToClient_->end())
+                {
+                    client = (*uidToClient_)[uid];
+                }
+            }
             if (!client)
             {
                 returnFailureResponse("User do not exist or offline.");
                 return;
             }
-            if (0 > client->notifyInAdvance(asyncNotifyPipe_, EPOLLIN, (void*)this))
-            {
-                returnFailureResponse("Fail to forward to client.");
-                return;
-            }
-            // forward this request to epoll of the main thread
-            int ret = write(asyncNotifyPipe_, (void*)&uid, sizeof(uid));
-            if (ret < sizeof(uid))
+            if (0 > client->pushRpcRequest((void*)this))
             {
                 returnFailureResponse("Fail to forward to client.");
                 return;
@@ -121,23 +121,22 @@ private:
     ServerAsyncResponseWriter<Response> responder_;
     enum CallStatus {CREATE, PROCESS, FORWARD, FINISH};
     CallStatus status_;
-    int asyncNotifyPipe_;
-    Net::HandlerManager<int64_t> *clientManager_;
+    std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient_;
+    std::mutex *lock_;
 };
 
 
 class ProxyServerImpl final {
 public:
     ProxyServerImpl(const std::string &serverAddress, 
-                    std::unordered_map<int64_t, Net::EventsHandler>)
-        : serverAddress_(serverAddress), asyncNotifyPipe_(asyncNotifyPipe),
-            clientManager_(clientManager) {}
+                    std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient,
+                    std::mutex *lock)
+        : serverAddress_(serverAddress), uidToClient_(uidToClient), lock_(lock) {}
 
     ~ProxyServerImpl()
     {
         server_->Shutdown();
         cq_->Shutdown();
-        close(asyncNotifyPipe_);
     }
 
     void Run() 
@@ -156,7 +155,7 @@ public:
 private:
     void HandleRpcs()
     {
-        new AsyncCall(&service_, cq_.get(), clientManager_, asyncNotifyPipe_);
+        new AsyncCall(&service_, cq_.get(), uidToClient_, lock_);
         void *tag;
         bool ok;
         while (true)
@@ -172,6 +171,6 @@ private:
     std::unique_ptr<Server> server_;
     Proxy::AsyncService service_;
     std::unique_ptr<ServerCompletionQueue> cq_;
-    int asyncNotifyPipe_;
-    Net::HandlerManager<int64_t> *clientManager_;
+    std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient_;
+    std::mutex *lock_; 
 };

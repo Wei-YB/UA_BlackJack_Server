@@ -60,7 +60,9 @@ public:
 
 public:
     virtual int addToEventLoop(EventLoop *loop) = 0;
-    virtual int handleEvents(int sockfd, int events) = 0;
+    virtual int handleEvents(int sockfd, Event events) = 0;
+    virtual int pushRpcRequest(void *call) {return 0;}
+    virtual int pushRpcResponse(void *response) {return 0;}
 };
 
 // this template class provide functionalities of recycling expired handlers 
@@ -142,11 +144,15 @@ public:
     ~EventLoop() 
     {
         delete [] m_events;
+        for (auto iter = m_fd_to_handler.begin(); iter != m_fd_to_handler.end(); ++iter)
+        {
+            delete iter->second;
+        }
         close(m_epollfd);
     }
 
 public:
-    int add(int sockfd, int events, EventsHandler *evshandler)
+    int add(int sockfd, Event events, EventsHandler *evshandler)
     {
         if (m_fd_to_handler.find(sockfd) != m_fd_to_handler.end() 
             || m_events_cnt >= m_max_events)
@@ -156,7 +162,7 @@ public:
 
         struct epoll_event ev;
         ev.data.fd = sockfd;
-        ev.events = events;
+        ev.events = toEpollEvent(events);
         if (epoll_ctl(m_epollfd, EPOLL_CTL_ADD, sockfd, &ev) < 0)
         {
             return -1;
@@ -167,7 +173,7 @@ public:
         return 0;
     }
 
-    int mod(int sockfd, int events, EventsHandler *evshandler)
+    int mod(int sockfd, Event events, EventsHandler *evshandler)
     {
         if (m_fd_to_handler.find(sockfd) == m_fd_to_handler.end() 
             || m_fd_to_handler[sockfd] != evshandler)
@@ -177,7 +183,7 @@ public:
 
         struct epoll_event ev;
         ev.data.fd = sockfd;
-        ev.events = events;
+        ev.events = toEpollEvent(events);
 
         if (epoll_ctl(m_epollfd, EPOLL_CTL_MOD, sockfd, &ev) < 0)
         {
@@ -192,6 +198,7 @@ public:
         if (m_fd_to_handler.find(sockfd) != m_fd_to_handler.end())
         {
             epoll_ctl(m_epollfd, EPOLL_CTL_DEL, sockfd, NULL);
+            delete m_fd_to_handler[sockfd];
             m_fd_to_handler.erase(sockfd);
             m_events_cnt--;
             return 0;
@@ -227,7 +234,7 @@ public:
             }
 
             // if the return val is -1, it means we should remove this sockfd from poller
-            if (0 > m_fd_to_handler[sockfd]->handleEvents(sockfd, events))
+            if (0 > m_fd_to_handler[sockfd]->handleEvents(sockfd, toNetEvent(events)))
             {
                 del(sockfd);
             }

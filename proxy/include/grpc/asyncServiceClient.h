@@ -1,3 +1,6 @@
+#ifndef _ASYNCSERVICECALIENT_H_
+#define _ASYNCSERVICECALIENT_H_
+
 #include <iostream>
 #include <memory>
 #include <string>
@@ -11,10 +14,7 @@
 
 #include "EventLoop.h"
 #include "common.pb.h"
-#include "lobby.grpc.pb.h"
-#include "room.grpc.pb.h"
-#include "social.grpc.pb.h"
-#include "proxy.h"
+
 
 using grpc::Channel;
 using grpc::ClientAsyncResponseReader;
@@ -26,9 +26,7 @@ using grpc::InsecureChannelCredentials;
 
 using common::Request;
 using common::Response;
-using lobby::Lobby;
-using room::Room;
-using social::Social;
+
 
 struct AsyncClientCall 
 {
@@ -40,13 +38,13 @@ struct AsyncClientCall
 };
 
 template<typename ServiceType>
-class Client
+class RpcClient
 {
 public:
-    explicit Client(const std::string &serviceAddr, 
-                    std::unordered_map<int64_t, ClientHandler*> uidToClient,
+    explicit RpcClient(const std::string &serviceAddr, 
+                    std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient,
                     std::mutex *lock)
-            : stub_(ServiceType::NewStub(CreateChannel(serviceAddr, InsecureChannelCredentials())), 
+            : stub_(ServiceType::NewStub(CreateChannel(serviceAddr, InsecureChannelCredentials()))), 
             uidToClient_(uidToClient), lock_(lock) {}
 
     void Notify(const Request &request)
@@ -70,19 +68,19 @@ public:
             // get a response, forward to the corresponding client
             AsyncClientCall *call = static_cast<AsyncClientCall*>(got_tag);
             int64_t uid = call->reply.uid();
-            ClientHandler *client = NULL;
+            Net::EventsHandler *client = NULL;
             {
-            std::lock_guard<std::mutex> guard(lock_);
-            if (uidToClient.find(uid) != uidToClient.end())
+            std::lock_guard<std::mutex> guard(*lock_);
+            if (uidToClient_->find(uid) != uidToClient_->end())
             {
-                client = uidToClient[uid];
+                client = (*uidToClient_)[uid];
             }
             }
             if (client)
             {  
                 Response *res = new Response;
                 *res = call->reply;
-                if (0 > client->pushRpcResponse(res))
+                if (0 > client->pushRpcResponse((void*)res))
                 {
                     delete res;
                 }
@@ -93,14 +91,15 @@ public:
     }
 
 private:
-    std::unique_ptr<ServiceType::Stub> stub_;
+    std::unique_ptr<typename ServiceType::Stub> stub_;
     CompletionQueue cq_;
     int asyncNotifyPipe_; 
-    std::unordered_map<int64_t, ClientHandler *> uidToClient_;
-    std::mutex lock_;
+    std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient_;
+    std::mutex *lock_;
 };
 
 
+#endif
 
 // int main()
 // {

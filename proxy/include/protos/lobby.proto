@@ -5,5 +5,4 @@ package lobby;
 
 service Lobby {
     rpc Notify (common.Request) returns (common.Response) {}
-    // rpc func 
 }

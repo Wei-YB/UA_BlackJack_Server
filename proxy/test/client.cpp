@@ -158,7 +158,8 @@ public:
     int addToEventLoop(EventLoop *loop)
     {
         m_eventLoop = loop;
-        return m_eventLoop->add(m_sockfd, Net::EV_IN | Net::EV_ET | Net::EV_ERR, this);
+        m_events = Net::EV_IN | Net::EV_ET | Net::EV_ERR;
+        return m_eventLoop->add(m_sockfd, m_events, this);
     }
 
     int handleEvents(int sockfd, Event events)
@@ -218,6 +219,7 @@ private:
         while (needToRead)
         {
             byteRead = read(m_sockfd, m_readBuffer); 
+            std::cout << "read " << ret << " bytes." << std::endl;
             if (byteRead < 0)
             {   // fatal error
                 return -1;
@@ -229,8 +231,10 @@ private:
             // handle packages in buffer one by one
             while (m_readBuffer.size() >= 8)
             {
-                int32_t msgType = Net::readAs(m_readBuffer, 0, msgType, true);
-                int32_t msgLength = Net::readAs(m_readBuffer, sizeof(msgType), msgLength, true);
+                int32_t msgType, msgLength;
+                Net::readAs(m_readBuffer, 0, msgType, true);
+                Net::readAs(m_readBuffer, sizeof(msgType), msgLength, true);
+        
                 if (msgLength == -1 || m_readBuffer.size() - 8 < msgLength)
                 {   // not a complete package, wait for the next read event
                     return pkgProcessed;
@@ -310,7 +314,6 @@ int main(int argc, char **argv)
         while (iss.good())
         {
             iss >> item;
-            std::cout << "arg: " << item << std::endl;
             request.add_args(item);
         }
 
@@ -324,6 +327,8 @@ int main(int argc, char **argv)
     if (0 > client->connect(argv[1], atoi(argv[2])))
     {
         std::cout << "fail to connect to proxy." << std::endl;
+        delete client;
+        exit(0);
     }
     std::cout << "successfully connect to host" << std::endl;
 
@@ -346,6 +351,6 @@ int main(int argc, char **argv)
         }
     }
     
-    delete client;
+    //delete client;
     return 0;
 }

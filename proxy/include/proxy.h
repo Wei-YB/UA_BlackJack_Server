@@ -1,3 +1,6 @@
+#ifndef _PROXY_H_
+#define _PROXY_H_
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -15,6 +18,9 @@
 #include "circ_buf.h"
 #include "ClientProxyProtocol.h"   
 #include "common.h"
+#include "lobby.grpc.pb.h"
+#include "room.grpc.pb.h"
+#include "social.grpc.pb.h"
 
 using common::Request;
 using common::Response;
@@ -90,14 +96,126 @@ const std::unordered_map<common::Request_RequestType, BackEndModule> cmdTypeToMo
     {common::Request_RequestType_NOTIFY_USER, BackEndModule::Proxy},
 };
 
+const std::string typeToStr[] = {
+        "INVAL",  
+        // client to proxy, proxy to lobby 
+        "LOGIN",
+        "LOGOUT", 
+        "ROOM_LIST",
+        "JOIN_ROOM",
+        "CREATE_ROOM",
+        "QUICK_MATCH",
+        "READY",
+        // client to proxy, proxy to room
+        "LEAVE_ROOM",
+        "BET",
+        "HIT",
+        "STAND",
+        "DOUBLE",
+        "SURRENDER",
+        // client to proxy, proxy to social
+        "SIGNUP",
+        "INFO",  
+        "RANK_ME",
+        "RANK_TOP",  
+        "ADD_FRIEND",
+        "ACCEPT_FRIEND",
+        "DELETE_FRIEND",
+        "LIST_FRIEND",
+        "LIST_MATCH",
+        "LIST_WAITTING",
+        // room, lobby, and social to proxy, proxy to client
+        "NOTIFY_USER"
+        // 
+};
+
+std::unordered_map<std::string, Request::RequestType> 
+strToType = {
+    {"NULL", Request::INVAL},
+    {"LOGIN", Request::LOGIN},
+    {"LOGOUT", Request::LOGOUT},
+    {"ROOM_LIST", Request::ROOM_LIST},
+    {"JOIN_ROOM", Request::JOIN_ROOM},
+    {"CREATE_ROOM", Request::CREATE_ROOM},
+    {"QUICK_MATCH", Request::QUICK_MATCH},
+    // forward to room
+    {"LEAVE_ROOM", Request::LEAVE_ROOM},
+    {"READY", Request::READY},
+    {"BET", Request::BET},
+    {"HIT", Request::HIT},
+    {"STAND", Request::STAND},
+    {"DOUBLE", Request::DOUBLE},
+    {"SURRENDER", Request::SURRENDER},
+    // forward to social
+    {"SIGNIN", Request::SIGNUP},
+    {"INFO", Request::INFO},
+    {"RANK_ME", Request::RANK_ME},
+    {"RANK_TOP", Request::RANK_TOP},
+    {"ADD_FRIEND", Request::ADD_FRIEND},
+    {"ACCEPT_FRIEND", Request::ACCEPT_FRIEND},
+    {"DELETE_FRIEND", Request::DELETE_FRIEND},
+    {"LIST_FRIEND", Request::LIST_FRIEND}
+};
+
+void print(std::ostream &os, const Response &response)
+{
+    os << "get response." << std::endl; 
+    os << "status: " << response.status() << std::endl;
+    os << "stamp: " << response.stamp() << std::endl;
+    os << "uid: " << response.uid() << std::endl; 
+    if (response.args_size())
+    {
+        os << "args: ";
+        for (int i = 0; i < response.args_size(); ++i)
+        {
+            const std::string &arg = response.args(i);
+            os << arg << " ";
+        }
+        os << std::endl;
+        return;
+    }
+    os << "null" << std::endl;
+}
+
+void print(std::ostream &os, const Request &request)
+{
+    os << "get request." << std::endl; 
+    os << "type: " << typeToStr[request.requesttype()] << std::endl;
+    os << "stamp: " << request.stamp() << std::endl;
+    os << "uid: " << request.uid() << std::endl; 
+    if (request.args_size())
+    {
+        os << "args: ";
+        for (int i = 0; i < request.args_size(); ++i)
+        {
+            const std::string &arg = request.args(i);
+            os << arg << " ";
+        }
+        os << std::endl;
+        return;
+    }
+    os << "null" << std::endl;
+}
+
+void print(std::ostream &os, Net::Event events)
+{
+    os << "events: ";
+    if (events & Net::EV_IN) os << "EV_IN ";
+    if (events & Net::EV_OUT) os << "EV_OUT ";
+    if (events & Net::EV_ET) os << "EV_ET ";
+    if (events & Net::EV_ERR) os << "EV_ERR ";
+    os << std::endl;
+}
+
 class ClientHandler : public Net::EventsHandler {
 public:
     ClientHandler(int sockfd, const struct sockaddr_in addr, 
+                std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient,
+                std::mutex *lock,
                 int bufferSize = BUFFER_SIZE, int queueSize = QUEUE_SIZE) 
         : Net::EventsHandler(), m_clientfd(sockfd), m_addr(addr), 
-        m_readBuffer(bufferSize), m_writeBuffer(bufferSize),
-        m_requestWaittingQueue(queueSize), m_responseWaittingQueue(queueSize) 
-    {}
+        m_uidToClient(uidToClient), m_lock(lock), 
+        m_readBuffer(bufferSize), m_writeBuffer(bufferSize) {}
 
     ~ClientHandler() 
     {
@@ -105,10 +223,12 @@ public:
     }
 
 public:
-    int pushRpcRequest(AsyncCall *call)
+    int pushRpcRequest(void *data)
     {
+        AsyncCall *call = static_cast<AsyncCall*>(data);
         std::lock_guard<std::mutex> guard(m_asyncCallQueueLock);
-        if (m_events & Net::EV_OUT == 0)
+        
+        if (!(m_events & Net::EV_OUT))
         {
             m_events |= Net::EV_OUT | Net::EV_ET;
             if (m_eventLoop->mod(m_clientfd, m_events, this) < 0)
@@ -117,22 +237,25 @@ public:
                 return -1;
             }
         }
-        return m_asyncCallQueue.push(call);
+        m_asyncCallQueue.push(call);
+        return 0;
     }
 
-    int pushRpcResponse(Response *response)
+    int pushRpcResponse(void *data)
     {
-        std::lock_guard<std::mutex> guard(m_responseQueueLock);
-        if (m_events & Net::EV_OUT == 0)
+        Response *response = static_cast<Response*>(data);
+        if (!(m_events & Net::EV_OUT))
         {
             m_events |= Net::EV_OUT | Net::EV_ET;
             if (m_eventLoop->mod(m_clientfd, m_events, this) < 0)
             {
-                m_events &= ~(Net::EV_OUT | Net::EV_ET);
+                m_events &= ~Net::EV_OUT;
                 return -1;
             }
         }
-        return m_responseQueue.push(response);
+        std::lock_guard<std::mutex> guard(m_responseQueueLock);
+        m_responseQueue.push(response);
+        return 0;
     }
 
     int addToEventLoop(Net::EventLoop *eventLoop)
@@ -142,23 +265,24 @@ public:
             return -1;
         }
         m_eventLoop = eventLoop;
-        return eventLoop->add(m_clientfd, Net::EV_IN | Net::EV_ET | Net::EV_ERR, this);
+        m_events = Net::EV_IN | Net::EV_ET | Net::EV_ERR;
+        return eventLoop->add(m_clientfd, m_events, this);
     }
 
-    int handleEvents(Net::Event events)
+    int handleEvents(int sockfd, Net::Event events)
     {
         int ret = 0;
         if (events & Net::EV_IN)
         {
-            ret = onRecv() == 0 ? ret : -1;
+            ret = onRecv() != -1 ? ret : -1;
         }
         if (events & Net::EV_OUT)
         {
-            ret = onSend() == 0 ? ret : -1;
+            ret = onSend() != -1 ? ret : -1;
         }
         if (events & Net::EV_ERR)
         {
-            ret = onError() == 0 ? ret : -1;
+            ret = onError() != -1 ? ret : -1;
         }
         return ret;
     }
@@ -170,7 +294,7 @@ private:
         bool needToRead = true;
         while (needToRead)
         {
-            byteRead = read(m_clientfd, m_readBuffer); 
+            byteRead = read(m_clientfd, m_readBuffer);
             if (byteRead < 0)
             {   // fatal error
                 return -1;
@@ -182,8 +306,9 @@ private:
             // handle packages in buffer one by one
             while (m_readBuffer.size() >= 8)
             {
-                int32_t msgType = Net::readAs(m_readBuffer, 0, msgType, true);
-                int32_t msgLength = Net::readAs(m_readBuffer, sizeof(msgType), msgLength, true);
+                int32_t msgType, msgLength; 
+                Net::readAs(m_readBuffer, 0, msgType, true);
+                Net::readAs(m_readBuffer, sizeof(msgType), msgLength, true);
                 if (msgLength == -1 || m_readBuffer.size() - 8 < msgLength)
                 {   // not a complete package, wait for the next read event
                     return pkgProcessed;
@@ -256,6 +381,20 @@ private:
 
     int forwardRequest(const Request &request)
     {
+        print(std::cout, request);
+        if (request.requesttype() == Request::LOGIN)
+        {
+            Response *response = new Response;
+            response->set_status(0);
+            response->set_stamp(request.stamp());
+            response->set_uid((int64_t)&request);
+            response->add_args("LOGIN Succeed.");
+            if (0 > pushRpcResponse((void*)response))
+            {
+                std::cout << "fail to push response to queue." << std::endl; 
+            }
+        }
+        /*
         if (cmdTypeToModule.find(request.requesttype()) == cmdTypeToModule.end())
         {
             return -1;
@@ -277,22 +416,42 @@ private:
         {
             return -1;
         }
+        */
         return 0;
     }
 
     int forwardResponse(Response &response)
     {
+        print(std::cout, response);
+        /*
+        int64_t key = response.stamp();
         // find the corresponding asyncCall
-        if (m_requestsMap.find(response.stamp()) == m_requestsMap.end())
+        if (m_requestsMap.find(key) == m_requestsMap.end())
         {   // no matched request, drop it without raising an error 
             return 0;
         }
         auto iter = m_requestsMap.find(key);
+        // if uid == -1, check whether this response is corresponding to LOGIN request
+        if (m_userId == -1)
+        {
+            AsyncCall *call = iter->second.first;
+            Request &request = call->getRequest();
+            if (cmdTypeMap[request.requesttype()] == "LOGIN" && response.status() == 0)
+            {
+                m_userId = response.uid();
+                {
+                std::lock_guard<std::mutex> guard(*m_lock);
+                m_uidToClient->emplace(m_userId, this);
+                }
+            }
+        }
         // restore to original stamp
         response.set_stamp(iter->second.second);
         iter->second.first->setReply(response);
         iter->second.first->Proceed();
         m_requestsMap.erase(key);
+        */
+        return 0;
     }
 
     int streamRequestToBuffer()
@@ -315,8 +474,8 @@ private:
                 res.set_status(-1);
                 res.set_stamp(request.stamp());
                 res.add_args("Message too large, should not be larger than 8 KB.");
-                item.second->setReply(res);
-                item.second->Proceed();
+                call->setReply(res);
+                call->Proceed();
                 continue;
             }
             // check whether the current write buffer can hold this msg
@@ -325,7 +484,7 @@ private:
                 break;
             }
             // insert this requestHandler to requestsMap
-            m_requestsMap.emplace((int64_t)(&request), make_pair(call, request.stamp()));
+            m_requestsMap.emplace((int64_t)(&request), std::make_pair(call, request.stamp()));
             request.set_stamp((int64_t)(&request));
             std::string msg = request.SerializeAsString();
             NS::pack(NS::REQUEST, msg, m_writeBuffer);
@@ -358,7 +517,7 @@ private:
             }
             std::string msg = response->SerializeAsString();
             NS::pack(NS::RESPONSE, msg, m_writeBuffer);
-            m_responseWaittingQueue.pop();
+            m_responseQueue.pop();
             delete response;
             ret++;
         }
@@ -383,10 +542,14 @@ private:
     std::mutex m_responseQueueLock;
     std::queue<Response*> m_responseQueue;
 
-    Client<lobby::Lobby> *m_asyncLobbyClient = NULL;
-    Client<room::Room> *m_asyncRoomClient = NULL;
-    Client<social::Social> *m_asyncSocialClient = NULL;
+    RpcClient<lobby::Lobby> *m_asyncLobbyClient = NULL;
+    RpcClient<room::Room> *m_asyncRoomClient = NULL;
+    RpcClient<social::Social> *m_asyncSocialClient = NULL;
+
+    std::unordered_map<int64_t, Net::EventsHandler*> *m_uidToClient;
+    std::mutex *m_lock;
 
     bool m_writeRequest = false;
 };
 
+#endif
