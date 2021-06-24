@@ -30,7 +30,7 @@
 #else
 #include "demo.grpc.pb.h"
 #endif
-
+#include "demo.pb.h"
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
 using grpc::ServerBuilder;
@@ -102,12 +102,20 @@ public:
         auto stamp = request_.stamp();
         auto args = request_.args();
 
-        reply_.set_status(STATUS_OK);
-        reply_.set_uid(uid + 100);
-        reply_.set_stamp(stamp);
-        //reply_.set_args(args);
+        if (type == demo::Request_RequestType::Request_RequestType_START_GAME) //创建房间
+        {
+        }
+        else if (type == demo::Request_RequestType::Request_RequestType_LEAVE_ROOM) //投降
+        {
+        }
+        else if (type == demo::Request_RequestType::Request_RequestType_DOUBLE) //双倍
+        {
+        }
+        else if (type == demo::Request_RequestType::Request_RequestType_SURRENDER) //投降
 
-        status_ = FINISH;
+          //reply_.set_args(args);
+
+          status_ = FINISH;
         responder_.Finish(reply_, Status::OK, this); //运行这行，调用方就收到response
       }
       else

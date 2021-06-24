@@ -214,6 +214,10 @@ CMakeFiles/example_create_delete_room.dir/example/example_create_delete_room.cc.
 CMakeFiles/example_create_delete_room.dir/example/example_create_delete_room.cc.o: ../inc/combat_typedef.h
 CMakeFiles/example_create_delete_room.dir/example/example_create_delete_room.cc.o: ../example/example_create_delete_room.cc
 
+CMakeFiles/example_create_delete_room.dir/src/MycondintonCo.cc.o: ../3rd/libco/co_routine.h
+CMakeFiles/example_create_delete_room.dir/src/MycondintonCo.cc.o: ../inc/MycondintonCo.h
+CMakeFiles/example_create_delete_room.dir/src/MycondintonCo.cc.o: ../src/MycondintonCo.cc
+
 CMakeFiles/example_create_delete_room.dir/src/Player.cc.o: ../inc/Player.h
 CMakeFiles/example_create_delete_room.dir/src/Player.cc.o: ../inc/Poker.h
 CMakeFiles/example_create_delete_room.dir/src/Player.cc.o: ../inc/Room.h

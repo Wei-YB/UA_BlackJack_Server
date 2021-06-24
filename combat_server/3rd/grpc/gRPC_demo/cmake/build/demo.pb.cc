@@ -92,10 +92,10 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_demo_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\ndemo.proto\022\004demo\"\205\004\n\007Request\0223\n\013reques"
+  "\n\ndemo.proto\022\004demo\"\241\005\n\007Request\0223\n\013reques"
   "tType\030\001 \001(\0162\031.demo.Request.RequestTypeH\000"
   "\210\001\001\022\020\n\003uid\030\002 \001(\003H\001\210\001\001\022\022\n\005stamp\030\003 \001(\003H\002\210\001"
-  "\001\022\014\n\004args\030\004 \003(\t\"\356\002\n\013RequestType\022\t\n\005INVAL"
+  "\001\022\014\n\004args\030\004 \003(\t\"\212\004\n\013RequestType\022\t\n\005INVAL"
   "\020\000\022\t\n\005LOGIN\020\001\022\n\n\006LOGOUT\020\002\022\r\n\tROOM_LIST\020\003"
   "\022\r\n\tJOIN_ROOM\020\004\022\017\n\013CREATE_ROOM\020\005\022\017\n\013QUIC"
   "K_MATCH\020\006\022\t\n\005READY\020\007\022\016\n\nLEAVE_ROOM\020\010\022\007\n\003"
@@ -104,16 +104,20 @@ const char descriptor_table_protodef_demo_2eproto[] PROTOBUF_SECTION_VARIABLE(pr
   "NK_ME\020\020\022\014\n\010RANK_TOP\020\021\022\016\n\nADD_FRIEND\020\022\022\021\n"
   "\rACCEPT_FRIEND\020\023\022\021\n\rDELETE_FRIEND\020\024\022\017\n\013L"
   "IST_FRIEND\020\025\022\016\n\nLIST_MATCH\020\026\022\021\n\rLIST_WAI"
-  "TTING\020\027\022\017\n\013NOTIFY_USER\020\030B\016\n\014_requestType"
-  "B\006\n\004_uidB\010\n\006_stamp\"p\n\010Response\022\023\n\006status"
-  "\030\001 \001(\003H\000\210\001\001\022\020\n\003uid\030\002 \001(\003H\001\210\001\001\022\022\n\005stamp\030\003"
-  " \001(\003H\002\210\001\001\022\014\n\004args\030\004 \003(\tB\t\n\007_statusB\006\n\004_u"
-  "idB\010\n\006_stamp28\n\013GameService\022)\n\006Notify\022\r."
-  "demo.Request\032\016.demo.Response\"\000b\006proto3"
+  "TTING\020\027\022\017\n\013NOTIFY_USER\020\030\022\014\n\010GET_NAME\020\031\022\013"
+  "\n\007GET_UID\020\032\022\020\n\014GET_PASSWORD\020\033\022\r\n\tGET_SCO"
+  "RE\020\034\022\022\n\016GET_MATCH_INFO\020\035\022\r\n\tMATCH_END\020\036\022"
+  "\023\n\017ADD_WAIT_FRIEND\020\037\022\026\n\022DELETE_WAIT_FRIE"
+  "ND\020 \022\016\n\nSTART_GAME\020!B\016\n\014_requestTypeB\006\n\004"
+  "_uidB\010\n\006_stamp\"p\n\010Response\022\023\n\006status\030\001 \001"
+  "(\003H\000\210\001\001\022\020\n\003uid\030\002 \001(\003H\001\210\001\001\022\022\n\005stamp\030\003 \001(\003"
+  "H\002\210\001\001\022\014\n\004args\030\004 \003(\tB\t\n\007_statusB\006\n\004_uidB\010"
+  "\n\006_stamp28\n\013GameService\022)\n\006Notify\022\r.demo"
+  ".Request\032\016.demo.Response\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_demo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_demo_2eproto = {
-  false, false, 718, descriptor_table_protodef_demo_2eproto, "demo.proto", 
+  false, false, 874, descriptor_table_protodef_demo_2eproto, "demo.proto", 
   &descriptor_table_demo_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_demo_2eproto::offsets,
   file_level_metadata_demo_2eproto, file_level_enum_descriptors_demo_2eproto, file_level_service_descriptors_demo_2eproto,
@@ -158,6 +162,15 @@ bool Request_RequestType_IsValid(int value) {
     case 22:
     case 23:
     case 24:
+    case 25:
+    case 26:
+    case 27:
+    case 28:
+    case 29:
+    case 30:
+    case 31:
+    case 32:
+    case 33:
       return true;
     default:
       return false;
@@ -190,6 +203,15 @@ constexpr Request_RequestType Request::LIST_FRIEND;
 constexpr Request_RequestType Request::LIST_MATCH;
 constexpr Request_RequestType Request::LIST_WAITTING;
 constexpr Request_RequestType Request::NOTIFY_USER;
+constexpr Request_RequestType Request::GET_NAME;
+constexpr Request_RequestType Request::GET_UID;
+constexpr Request_RequestType Request::GET_PASSWORD;
+constexpr Request_RequestType Request::GET_SCORE;
+constexpr Request_RequestType Request::GET_MATCH_INFO;
+constexpr Request_RequestType Request::MATCH_END;
+constexpr Request_RequestType Request::ADD_WAIT_FRIEND;
+constexpr Request_RequestType Request::DELETE_WAIT_FRIEND;
+constexpr Request_RequestType Request::START_GAME;
 constexpr Request_RequestType Request::RequestType_MIN;
 constexpr Request_RequestType Request::RequestType_MAX;
 constexpr int Request::RequestType_ARRAYSIZE;

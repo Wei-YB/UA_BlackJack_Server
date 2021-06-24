@@ -95,12 +95,21 @@ enum Request_RequestType : int {
   Request_RequestType_LIST_MATCH = 22,
   Request_RequestType_LIST_WAITTING = 23,
   Request_RequestType_NOTIFY_USER = 24,
+  Request_RequestType_GET_NAME = 25,
+  Request_RequestType_GET_UID = 26,
+  Request_RequestType_GET_PASSWORD = 27,
+  Request_RequestType_GET_SCORE = 28,
+  Request_RequestType_GET_MATCH_INFO = 29,
+  Request_RequestType_MATCH_END = 30,
+  Request_RequestType_ADD_WAIT_FRIEND = 31,
+  Request_RequestType_DELETE_WAIT_FRIEND = 32,
+  Request_RequestType_START_GAME = 33,
   Request_RequestType_Request_RequestType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   Request_RequestType_Request_RequestType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool Request_RequestType_IsValid(int value);
 constexpr Request_RequestType Request_RequestType_RequestType_MIN = Request_RequestType_INVAL;
-constexpr Request_RequestType Request_RequestType_RequestType_MAX = Request_RequestType_NOTIFY_USER;
+constexpr Request_RequestType Request_RequestType_RequestType_MAX = Request_RequestType_START_GAME;
 constexpr int Request_RequestType_RequestType_ARRAYSIZE = Request_RequestType_RequestType_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Request_RequestType_descriptor();
@@ -280,6 +289,24 @@ class Request PROTOBUF_FINAL :
     Request_RequestType_LIST_WAITTING;
   static constexpr RequestType NOTIFY_USER =
     Request_RequestType_NOTIFY_USER;
+  static constexpr RequestType GET_NAME =
+    Request_RequestType_GET_NAME;
+  static constexpr RequestType GET_UID =
+    Request_RequestType_GET_UID;
+  static constexpr RequestType GET_PASSWORD =
+    Request_RequestType_GET_PASSWORD;
+  static constexpr RequestType GET_SCORE =
+    Request_RequestType_GET_SCORE;
+  static constexpr RequestType GET_MATCH_INFO =
+    Request_RequestType_GET_MATCH_INFO;
+  static constexpr RequestType MATCH_END =
+    Request_RequestType_MATCH_END;
+  static constexpr RequestType ADD_WAIT_FRIEND =
+    Request_RequestType_ADD_WAIT_FRIEND;
+  static constexpr RequestType DELETE_WAIT_FRIEND =
+    Request_RequestType_DELETE_WAIT_FRIEND;
+  static constexpr RequestType START_GAME =
+    Request_RequestType_START_GAME;
   static inline bool RequestType_IsValid(int value) {
     return Request_RequestType_IsValid(value);
   }

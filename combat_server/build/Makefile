@@ -316,6 +316,39 @@ main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cc.s
 .PHONY : main.cc.s
 
+src/MycondintonCo.o: src/MycondintonCo.cc.o
+
+.PHONY : src/MycondintonCo.o
+
+# target to build an object file
+src/MycondintonCo.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/MycondintonCo.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/MycondintonCo.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/MycondintonCo.cc.o
+.PHONY : src/MycondintonCo.cc.o
+
+src/MycondintonCo.i: src/MycondintonCo.cc.i
+
+.PHONY : src/MycondintonCo.i
+
+# target to preprocess a source file
+src/MycondintonCo.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/MycondintonCo.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/MycondintonCo.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/MycondintonCo.cc.i
+.PHONY : src/MycondintonCo.cc.i
+
+src/MycondintonCo.s: src/MycondintonCo.cc.s
+
+.PHONY : src/MycondintonCo.s
+
+# target to generate assembly for a file
+src/MycondintonCo.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/MycondintonCo.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/MycondintonCo.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/MycondintonCo.cc.s
+.PHONY : src/MycondintonCo.cc.s
+
 src/Player.o: src/Player.cc.o
 
 .PHONY : src/Player.o
@@ -474,6 +507,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/MycondintonCo.o"
+	@echo "... src/MycondintonCo.i"
+	@echo "... src/MycondintonCo.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"

@@ -6,14 +6,14 @@
 #include "Room.h"
 #include "co_routine.h"
 #include "server-asyn.h"
-
+#include "MycondintonCo.h"
 struct stEnv_t
 {
     typedef std::shared_ptr<stEnv_t> ptr;
     stCoRoutine_t *coRoutine;    //协程句柄
     BlackJackRoomID roomID;      //创建的房间号
     UidList uids;                //所有玩家的uid
-    stCoCond_t *cond;            //信号量
+    int cond;                    //信号量
     OperateID operateId;         //操作码
     void *arg;                   //操作数
     OperateID expectedOperateId; //期望的操作码
@@ -38,7 +38,7 @@ int createstEnv_t(BlackJackRoomID roomID, UidList &uids) //创建协程
     roomEnvirExistHashMap[roomID] = true; //宣告房间存在
     auto ptr = std::make_shared<stEnv_t>(roomID, uids);
     roomEnvirHashMap[roomID] = ptr; //将房间加入hash表
-    ptr->cond = co_cond_alloc();    //创建信号量
+    ptr->cond = createCondition(0); //创建信号量
     //开启创建房间协程
     co_create(&(ptr->coRoutine), NULL, createOneGame, NULL);
     co_resume(ptr->coRoutine);
@@ -64,8 +64,8 @@ void *createOneGame(void *arg) //开启一局游戏
 
         /*void askPlayerOneToSetBettingMoney*/ //  这个函数中应设置期望的operateID
         conRet = 0;
-        conRet = co_cond_timedwait(env->cond, 30000); //30秒内应收到信号
-        if (conRet != 0)                              //超时未收到信号，认为玩家已退出游戏
+        conRet = myConditionWait(env->cond, 30000); //30秒内应收到信号
+        if (conRet == 0)                            //超时未收到信号，认为玩家已退出游戏
         {
             player->quit();             //托管
             player->isStand = true;     //玩家停牌
@@ -118,8 +118,8 @@ void *createOneGame(void *arg) //开启一局游戏
 
             /*void askPlayerOneToHitOrStand*/ //  这个函数中应设置期望的operateID
             conRet = 0;
-            conRet = co_cond_timedwait(env->cond, 30000); //30秒内应收到信号
-            if (conRet != 0)                              //超时未收到信号，认为玩家已退出游戏
+            conRet = myConditionWait(env->cond, 30000); //30秒内应收到信号
+            if (conRet == 0)                            //超时未收到信号，认为玩家已退出游戏
             {
                 player->quit(); //托管
                 player->hitPoker();
@@ -212,6 +212,7 @@ void *recoveryUnusedCo(void *arg) //回收协程的协程
         }
     }
 }
+
 int main(int agrc, char *argv[])
 {
     ServerImpl server;

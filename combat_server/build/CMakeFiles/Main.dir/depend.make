@@ -210,6 +210,7 @@ CMakeFiles/Main.dir/main.cc.o: ../3rd/grpc/grpc_h/demo.grpc.pb.h
 CMakeFiles/Main.dir/main.cc.o: ../3rd/grpc/grpc_h/demo.pb.h
 CMakeFiles/Main.dir/main.cc.o: ../3rd/grpc/grpc_h/server-asyn.h
 CMakeFiles/Main.dir/main.cc.o: ../3rd/libco/co_routine.h
+CMakeFiles/Main.dir/main.cc.o: ../inc/MycondintonCo.h
 CMakeFiles/Main.dir/main.cc.o: ../inc/Player.h
 CMakeFiles/Main.dir/main.cc.o: ../inc/Poker.h
 CMakeFiles/Main.dir/main.cc.o: ../inc/Room.h
@@ -409,6 +410,10 @@ CMakeFiles/Main.dir/main.cc.o: /root/.local/include/grpcpp/support/channel_argum
 CMakeFiles/Main.dir/main.cc.o: /root/.local/include/grpcpp/support/config.h
 CMakeFiles/Main.dir/main.cc.o: /root/.local/include/grpcpp/support/status.h
 CMakeFiles/Main.dir/main.cc.o: /root/.local/include/grpcpp/support/string_ref.h
+
+CMakeFiles/Main.dir/src/MycondintonCo.cc.o: ../3rd/libco/co_routine.h
+CMakeFiles/Main.dir/src/MycondintonCo.cc.o: ../inc/MycondintonCo.h
+CMakeFiles/Main.dir/src/MycondintonCo.cc.o: ../src/MycondintonCo.cc
 
 CMakeFiles/Main.dir/src/Player.cc.o: ../inc/Player.h
 CMakeFiles/Main.dir/src/Player.cc.o: ../inc/Poker.h

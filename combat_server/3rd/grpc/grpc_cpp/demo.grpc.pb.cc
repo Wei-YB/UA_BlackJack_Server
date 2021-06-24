@@ -19,79 +19,68 @@
 #include <grpcpp/impl/codegen/server_context.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
-namespace demo
-{
+namespace demo {
 
-  static const char *GameService_method_names[] = {
-      "/demo.GameService/Notify",
-  };
+static const char* GameService_method_names[] = {
+  "/demo.GameService/Notify",
+};
 
-  std::unique_ptr<GameService::Stub> GameService::NewStub(const std::shared_ptr<::grpc::ChannelInterface> &channel, const ::grpc::StubOptions &options)
-  {
-    (void)options;
-    std::unique_ptr<GameService::Stub> stub(new GameService::Stub(channel, options));
-    return stub;
-  }
+std::unique_ptr< GameService::Stub> GameService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+  (void)options;
+  std::unique_ptr< GameService::Stub> stub(new GameService::Stub(channel, options));
+  return stub;
+}
 
-  GameService::Stub::Stub(const std::shared_ptr<::grpc::ChannelInterface> &channel, const ::grpc::StubOptions &options)
-      : channel_(channel), rpcmethod_Notify_(GameService_method_names[0], options.suffix_for_stats(), ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  {
-  }
+GameService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
+  : channel_(channel), rpcmethod_Notify_(GameService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  {}
 
-  ::grpc::Status GameService::Stub::Notify(::grpc::ClientContext *context, const ::demo::Request &request, ::demo::Response *response)
-  {
-    return ::grpc::internal::BlockingUnaryCall<::demo::Request, ::demo::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Notify_, context, request, response);
-  }
+::grpc::Status GameService::Stub::Notify(::grpc::ClientContext* context, const ::demo::Request& request, ::demo::Response* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::demo::Request, ::demo::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Notify_, context, request, response);
+}
 
-  void GameService::Stub::experimental_async::Notify(::grpc::ClientContext *context, const ::demo::Request *request, ::demo::Response *response, std::function<void(::grpc::Status)> f)
-  {
-    ::grpc::internal::CallbackUnaryCall<::demo::Request, ::demo::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Notify_, context, request, response, std::move(f));
-  }
+void GameService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::demo::Request* request, ::demo::Response* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::demo::Request, ::demo::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Notify_, context, request, response, std::move(f));
+}
 
-  void GameService::Stub::experimental_async::Notify(::grpc::ClientContext *context, const ::demo::Request *request, ::demo::Response *response, ::grpc::experimental::ClientUnaryReactor *reactor)
-  {
-    ::grpc::internal::ClientCallbackUnaryFactory::Create<::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Notify_, context, request, response, reactor);
-  }
+void GameService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::demo::Request* request, ::demo::Response* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Notify_, context, request, response, reactor);
+}
 
-  ::grpc::ClientAsyncResponseReader<::demo::Response> *GameService::Stub::PrepareAsyncNotifyRaw(::grpc::ClientContext *context, const ::demo::Request &request, ::grpc::CompletionQueue *cq)
-  {
-    return ::grpc::internal::ClientAsyncResponseReaderHelper::Create<::demo::Response, ::demo::Request, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Notify_, context, request);
-  }
+::grpc::ClientAsyncResponseReader< ::demo::Response>* GameService::Stub::PrepareAsyncNotifyRaw(::grpc::ClientContext* context, const ::demo::Request& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::demo::Response, ::demo::Request, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Notify_, context, request);
+}
 
-  ::grpc::ClientAsyncResponseReader<::demo::Response> *GameService::Stub::AsyncNotifyRaw(::grpc::ClientContext *context, const ::demo::Request &request, ::grpc::CompletionQueue *cq)
-  {
-    auto *result =
-        this->PrepareAsyncNotifyRaw(context, request, cq);
-    result->StartCall();
-    return result;
-  }
+::grpc::ClientAsyncResponseReader< ::demo::Response>* GameService::Stub::AsyncNotifyRaw(::grpc::ClientContext* context, const ::demo::Request& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncNotifyRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
 
-  GameService::Service::Service()
-  {
-    AddMethod(new ::grpc::internal::RpcServiceMethod(
-        GameService_method_names[0],
-        ::grpc::internal::RpcMethod::NORMAL_RPC,
-        new ::grpc::internal::RpcMethodHandler<GameService::Service, ::demo::Request, ::demo::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-            [](GameService::Service *service,
-               ::grpc::ServerContext *ctx,
-               const ::demo::Request *req,
-               ::demo::Response *resp)
-            {
-              return service->Notify(ctx, req, resp);
-            },
-            this)));
-  }
+GameService::Service::Service() {
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      GameService_method_names[0],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< GameService::Service, ::demo::Request, ::demo::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](GameService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::demo::Request* req,
+             ::demo::Response* resp) {
+               return service->Notify(ctx, req, resp);
+             }, this)));
+}
 
-  GameService::Service::~Service()
-  {
-  }
+GameService::Service::~Service() {
+}
 
-  ::grpc::Status GameService::Service::Notify(::grpc::ServerContext *context, const ::demo::Request *request, ::demo::Response *response)
-  {
-    (void)context;
-    (void)request;
-    (void)response;
-    return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-  }
+::grpc::Status GameService::Service::Notify(::grpc::ServerContext* context, const ::demo::Request* request, ::demo::Response* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
 
-} // namespace demo
+
+}  // namespace demo
+
