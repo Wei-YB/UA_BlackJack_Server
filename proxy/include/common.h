@@ -5,5 +5,7 @@
 #define NAMESPACE_BEGIN namespace NS {
 
 #define NAMESPACE_END   }
+typedef int FileDesc;
+typedef int64_t UserId;
 
 #endif
