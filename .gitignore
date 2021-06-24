@@ -1,2 +1,5 @@
 .vs
 out
+/Lobby/RoomSet.h
+/Lobby/CMakeLists.txt
+/Lobby/main.cc
