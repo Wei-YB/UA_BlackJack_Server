@@ -4,6 +4,10 @@ project(ProxyProto C CXX)
 
 include(../../common.cmake)
 
+set(CMAKE_BUILD_TYPE "Debug")
+set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
+set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
+
 # proto file
 get_filename_component(common_proto "common.proto" ABSOLUTE)
 get_filename_component(proto_path "${common_proto}" PATH)

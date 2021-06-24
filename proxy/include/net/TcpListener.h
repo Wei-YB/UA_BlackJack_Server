@@ -12,12 +12,12 @@
 #include <arpa/inet.h>
 #include <errno.h>
 #include <mutex>
-
 #include <exception>
 #include <unordered_map>
 
 #include "circ_buf.h"
 #include "EventLoop.h"
+#include "asyncServiceClient.h"
 
 #define DEFAULT_WAIT_QUEUE_LEN  10
 #define DEFAULT_MAX_EVENTS  1024
@@ -40,8 +40,13 @@ public:
     TcpListener(const char *ip, unsigned short port,
                 std::unordered_map<int64_t, EventsHandler*> *uidToClient,
                 std::mutex *lock,
+                RpcClient<lobby::Lobby> *asyncLobbyClient,
+                RpcClient<room::Room> *asyncRoomClient,
+                RpcClient<social::Social> *asyncSocialClient,
                 int wait_queue_len = DEFAULT_WAIT_QUEUE_LEN) 
-                : EventsHandler(), m_uidToClient(uidToClient), m_lock(lock)
+                : EventsHandler(), m_uidToClient(uidToClient), m_lock(lock),
+                m_asyncLobbyClient(asyncLobbyClient), m_asyncRoomClient(asyncRoomClient), 
+                m_asyncSocialClient(asyncSocialClient)
     {
         m_addr.sin_family = AF_INET;
         m_addr.sin_port = htons(port);
@@ -100,7 +105,8 @@ public:
             int connfd = ::accept(m_sockfd, (struct sockaddr *)&addr, &len);
             if (connfd > 0)
             {
-                EventsHandler *clientHandler = new ClientHandler(connfd, addr, m_uidToClient, m_lock);
+                EventsHandler *clientHandler = new ClientHandler(connfd, addr, m_uidToClient, m_lock, 
+                                                        m_asyncLobbyClient, m_asyncRoomClient, m_asyncSocialClient);
                 if (clientHandler->addToEventLoop(m_eventLoop) < 0)
                 {
                     delete clientHandler;
@@ -126,6 +132,9 @@ private:
     EventLoop *m_eventLoop = NULL;
     std::unordered_map<int64_t, EventsHandler*> *m_uidToClient;
     std::mutex *m_lock;
+    RpcClient<lobby::Lobby> *m_asyncLobbyClient = NULL;
+    RpcClient<room::Room> *m_asyncRoomClient = NULL;
+    RpcClient<social::Social> *m_asyncSocialClient = NULL;
 };
 
 

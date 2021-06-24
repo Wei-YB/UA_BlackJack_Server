@@ -212,10 +212,15 @@ public:
     ClientHandler(int sockfd, const struct sockaddr_in addr, 
                 std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient,
                 std::mutex *lock,
+                RpcClient<lobby::Lobby> *asyncLobbyClient,
+                RpcClient<room::Room> *asyncRoomClient,
+                RpcClient<social::Social> *asyncSocialClient,
                 int bufferSize = BUFFER_SIZE, int queueSize = QUEUE_SIZE) 
         : Net::EventsHandler(), m_clientfd(sockfd), m_addr(addr), 
         m_uidToClient(uidToClient), m_lock(lock), 
-        m_readBuffer(bufferSize), m_writeBuffer(bufferSize) {}
+        m_readBuffer(bufferSize), m_writeBuffer(bufferSize),
+        m_asyncLobbyClient(asyncLobbyClient), m_asyncRoomClient(asyncRoomClient), 
+                m_asyncSocialClient(asyncSocialClient) {}
 
     ~ClientHandler() 
     {
@@ -283,6 +288,14 @@ public:
         if (events & Net::EV_ERR)
         {
             ret = onError() != -1 ? ret : -1;
+        }
+        if (ret < 0 && m_userId != -1)
+        {   // remove client from uidToClient
+            std::lock_guard<std::mutex> guard(*m_lock);
+            if (m_uidToClient->find(m_userId) != m_uidToClient->end())
+            {
+                m_uidToClient->erase(m_userId);
+            }
         }
         return ret;
     }
@@ -381,49 +394,43 @@ private:
 
     int forwardRequest(const Request &request)
     {
-        print(std::cout, request);
-        if (request.requesttype() == Request::LOGIN)
-        {
-            Response *response = new Response;
-            response->set_status(0);
-            response->set_stamp(request.stamp());
-            response->set_uid((int64_t)&request);
-            response->add_args("LOGIN Succeed.");
-            if (0 > pushRpcResponse((void*)response))
-            {
-                std::cout << "fail to push response to queue." << std::endl; 
-            }
-        }
-        /*
         if (cmdTypeToModule.find(request.requesttype()) == cmdTypeToModule.end())
         {
             return -1;
         }
+        if (m_userId == -1 && request.uid() != 0)
+        {
+            m_userId = request.uid();
+            {
+            std::lock_guard<std::mutex> guard(*m_lock);
+            m_uidToClient->emplace(m_userId, this);
+            }
+        }
         BackEndModule modu = cmdTypeToModule.find(request.requesttype())->second;
         if (modu == BackEndModule::Lobby)
         {
+            std::cout << "forward to lobby" << std::endl;
             m_asyncLobbyClient->Notify(request);
         }
         else if (modu == BackEndModule::Room)
         {
+            std::cout << "forward to room" << std::endl;
             m_asyncRoomClient->Notify(request);
         }
         else if (modu == BackEndModule::Social)
         {
+            std::cout << "forward to social" << std::endl;
             m_asyncSocialClient->Notify(request);
         }
         else 
         {
             return -1;
         }
-        */
         return 0;
     }
 
     int forwardResponse(Response &response)
     {
-        print(std::cout, response);
-        /*
         int64_t key = response.stamp();
         // find the corresponding asyncCall
         if (m_requestsMap.find(key) == m_requestsMap.end())
@@ -450,7 +457,6 @@ private:
         iter->second.first->setReply(response);
         iter->second.first->Proceed();
         m_requestsMap.erase(key);
-        */
         return 0;
     }
 
@@ -517,6 +523,7 @@ private:
             }
             std::string msg = response->SerializeAsString();
             NS::pack(NS::RESPONSE, msg, m_writeBuffer);
+            //delete response;
             m_responseQueue.pop();
             delete response;
             ret++;

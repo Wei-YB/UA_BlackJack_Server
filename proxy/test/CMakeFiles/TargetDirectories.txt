@@ -1,5 +1,0 @@
-/root/ricki/UA_BlackJack_Server/proxy/test/CMakeFiles/rebuild_cache.dir
-/root/ricki/UA_BlackJack_Server/proxy/test/CMakeFiles/edit_cache.dir
-/root/ricki/UA_BlackJack_Server/proxy/test/CMakeFiles/proxyServer.dir
-/root/ricki/UA_BlackJack_Server/proxy/test/CMakeFiles/client.dir
-/root/ricki/UA_BlackJack_Server/proxy/test/CMakeFiles/common_proto_lib.dir

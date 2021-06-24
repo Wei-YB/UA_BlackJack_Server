@@ -287,6 +287,8 @@ private:
     CircularBuffer m_writeBuffer;
 };
 
+const char *samples_path = "/root/ricki/UA_BlackJack_Server/proxy/test/";
+
 int main(int argc, char **argv)
 {
     if (argc < 3)
@@ -296,7 +298,7 @@ int main(int argc, char **argv)
     }
     // prepare all the request
     std::queue<Request> requests;
-    std::ifstream fin("samples.txt", std::ifstream::in);
+    std::ifstream fin((std::string(samples_path) + std::string("samples.txt").c_str()), std::ifstream::in);
     while (fin.good())
     {
         Request request;
@@ -309,6 +311,7 @@ int main(int argc, char **argv)
         {
             continue;
         }
+        request.set_uid(12);
         request.set_requesttype(strToType[item]);
         request.set_stamp((int64_t)&request);
         while (iss.good())
@@ -338,12 +341,16 @@ int main(int argc, char **argv)
     {
         Request request = requests.front();
         requests.pop();
-        if (client->uid() != -1 || (request.requesttype() == Request::LOGIN))
+        // if (client->uid() != -1 || (request.requesttype() == Request::LOGIN))
+        // {
+        //     if (client->sendRequest(request) != -1)
+        //     {
+        //         print(std::cout, request);
+        //     }
+        // }
+        if (client->sendRequest(request) != -1)
         {
-            if (client->sendRequest(request) != -1)
-            {
-                print(std::cout, request);
-            }
+            print(std::cout, request);
         }
         if (0 > loop.loopOnce(1000))
         {
