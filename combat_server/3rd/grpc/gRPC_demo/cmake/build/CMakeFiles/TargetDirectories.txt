@@ -1,4 +1,6 @@
 /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/gRPC_demo/cmake/build/CMakeFiles/rebuild_cache.dir
+/home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/gRPC_demo/cmake/build/CMakeFiles/client-syn.dir
+/home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/gRPC_demo/cmake/build/CMakeFiles/client-asyn.dir
 /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/gRPC_demo/cmake/build/CMakeFiles/edit_cache.dir
 /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/gRPC_demo/cmake/build/CMakeFiles/server-asyn.dir
 /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/gRPC_demo/cmake/build/CMakeFiles/hw_grpc_proto.dir

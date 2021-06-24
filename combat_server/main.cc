@@ -5,6 +5,7 @@
 #include "Player.h"
 #include "Room.h"
 #include "co_routine.h"
+#include "server-asyn.h"
 
 struct stEnv_t
 {
@@ -159,11 +160,33 @@ uint64_t cnt = 0;
 void *waitingSignalFromOtherModule(void *arg)
 {
     co_enable_hook_sys();
+    ServerImpl *server = (ServerImpl *)arg;
 
+    // Spawn a new CallData instance to serve new clients.
+    new ServerImpl::CallData(&server->service_, server->cq_.get());
+    void *tag; // uniquely identifies a request.
+    bool ok;
+    gpr_timespec deadline;
+    deadline.clock_type = GPR_TIMESPAN;
+    deadline.tv_sec = 0;
+    deadline.tv_nsec = 100;
     while (true)
     {
-        std::cout << cnt++ << "Waiting.." << std::endl;
-        poll(NULL, 0, 1); //必须要有挂起函数
+        // while (server->cq_->AsyncNext<gpr_timespec>(&tag, &ok, deadline) != grpc::CompletionQueue::NextStatus::GOT_EVENT)
+        // {
+        //     // #ifdef PRINT_LOG
+        //     //             std::cout << cnt++ << "Waiting.." << std::endl;
+        //     // #endif
+        //     // /poll(NULL, 0, 1); //必须要有挂起函数
+        // }
+        GPR_ASSERT(server->cq_->Next(&tag, &ok));
+#ifdef PRINT_LOG
+        std::cout << cnt++ << "rpc queue received.." << std::endl;
+#endif
+
+        GPR_ASSERT(ok);
+        std::cout << "From CO ";
+        static_cast<ServerImpl::CallData *>(tag)->Proceed();
     }
 }
 void *recoveryUnusedCo(void *arg) //回收协程的协程
@@ -174,7 +197,9 @@ void *recoveryUnusedCo(void *arg) //回收协程的协程
     {
         if (unUsedstEnvRoomID.empty()) //没有需要释放的资源
         {
-            std::cout << cnt++ << "Free.." << std::endl;
+            // #ifdef PRINT_LOG
+            //             std::cout << cnt++ << "Free.." << std::endl;
+            // #endif
             poll(NULL, 0, 1); //必须要有挂起函数
         }
         else
@@ -189,9 +214,14 @@ void *recoveryUnusedCo(void *arg) //回收协程的协程
 }
 int main(int agrc, char *argv[])
 {
+    ServerImpl server;
+    server.Run();
+#ifdef PRINT_LOG
+    std::cout << "grpc async begin..." << std::endl;
+#endif
     //创建等待RPC的协程
     stCoRoutine_t *receiveSignalFromRPC;
-    co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, NULL);
+    co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, &server);
     co_resume(receiveSignalFromRPC);
 
     //回收协程的协程

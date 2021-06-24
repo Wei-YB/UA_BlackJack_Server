@@ -47,7 +47,15 @@
         "chrono": "cpp",
         "ctime": "cpp",
         "ratio": "cpp",
-        "*.inc": "cpp"
+        "*.inc": "cpp",
+        "thread": "cpp",
+        "cinttypes": "cpp",
+        "condition_variable": "cpp",
+        "cstring": "cpp",
+        "unordered_set": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "mutex": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

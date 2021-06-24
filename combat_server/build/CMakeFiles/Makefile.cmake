@@ -18,6 +18,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/root/.local/lib/cmake/grpc/gRPCTargets.cmake"
   "/root/.local/lib64/cmake/protobuf/protobuf-config-version.cmake"
   "/root/.local/lib64/cmake/protobuf/protobuf-config.cmake"
+  "/root/.local/lib64/cmake/protobuf/protobuf-module.cmake"
   "/root/.local/lib64/cmake/protobuf/protobuf-options.cmake"
   "/root/.local/lib64/cmake/protobuf/protobuf-targets-noconfig.cmake"
   "/root/.local/lib64/cmake/protobuf/protobuf-targets.cmake"
@@ -31,8 +32,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake3/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake3/Modules/CMakeSystemSpecificInitialize.cmake"
   "/usr/share/cmake3/Modules/CheckCSourceCompiles.cmake"
-  "/usr/share/cmake3/Modules/CheckFunctionExists.c"
-  "/usr/share/cmake3/Modules/CheckIncludeFile.c.in"
   "/usr/share/cmake3/Modules/CheckIncludeFile.cmake"
   "/usr/share/cmake3/Modules/CheckLibraryExists.cmake"
   "/usr/share/cmake3/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
@@ -48,6 +47,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake3/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake3/Modules/Platform/Linux.cmake"
   "/usr/share/cmake3/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake3/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:

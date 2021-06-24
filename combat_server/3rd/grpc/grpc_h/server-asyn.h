@@ -16,6 +16,7 @@
  *
  */
 #pragma once
+#include "combat_typedef.h"
 #include <iostream>
 #include <memory>
 #include <string>
@@ -43,7 +44,11 @@ using demo::GameService;
 using demo::Request;
 using demo::Response;
 /*************************/
-
+enum
+{
+  STATUS_OK = 0,
+  STATUS_ERROR = 1
+};
 class ServerImpl final
 {
 public:
@@ -66,11 +71,9 @@ public:
     cq_ = builder.AddCompletionQueue();
     server_ = builder.BuildAndStart();
     std::cout << "Server listening on " << server_address << std::endl;
-
-    HandleRpcs();
   }
 
-private:
+public:
   // Class encompasing the state and logic needed to serve a request.
   class CallData
   {
@@ -83,24 +86,33 @@ private:
 
     void Proceed()
     {
+
       if (status_ == CREATE)
       {
+        std::cout << "CREATE" << std::endl;
         status_ = PROCESS;
         service_->RequestNotify(&ctx_, &request_, &responder_, cq_, cq_, this);
       }
       else if (status_ == PROCESS)
       {
+        std::cout << "PROCESS" << std::endl;
         new CallData(service_, cq_);
         auto type = request_.requesttype();
         auto uid = request_.uid();
         auto stamp = request_.stamp();
         auto args = request_.args();
 
+        reply_.set_status(STATUS_OK);
+        reply_.set_uid(uid + 100);
+        reply_.set_stamp(stamp);
+        //reply_.set_args(args);
+
         status_ = FINISH;
         responder_.Finish(reply_, Status::OK, this); //运行这行，调用方就收到response
       }
       else
       {
+        std::cout << "FINISH" << std::endl;
         GPR_ASSERT(status_ == FINISH);
 
         delete this;
@@ -136,6 +148,7 @@ private:
     bool ok;
     while (true)
     {
+
       GPR_ASSERT(cq_->Next(&tag, &ok));
       GPR_ASSERT(ok);
 
@@ -143,7 +156,9 @@ private:
     }
   }
 
+public:
   std::unique_ptr<ServerCompletionQueue> cq_;
+
   GameService::AsyncService service_;
   std::unique_ptr<Server> server_;
 };

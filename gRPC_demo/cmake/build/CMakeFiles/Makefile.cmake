@@ -63,6 +63,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/client-syn.dir/DependInfo.cmake"
+  "CMakeFiles/server-syn.dir/DependInfo.cmake"
+  "CMakeFiles/client-asyn.dir/DependInfo.cmake"
   "CMakeFiles/server-asyn.dir/DependInfo.cmake"
   "CMakeFiles/hw_grpc_proto.dir/DependInfo.cmake"
   )

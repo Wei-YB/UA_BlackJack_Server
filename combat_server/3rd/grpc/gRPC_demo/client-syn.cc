@@ -34,52 +34,61 @@ using grpc::Status;
 
 // Service dependent
 /*************************/
-using demo::GetNameService;
-using demo::NameReply;
-using demo::NameRequest;
+using demo::GameService;
+using demo::Request;
+using demo::Response;
 /*************************/
 
-class Client {
- public:
+class Client
+{
+public:
   Client(std::shared_ptr<Channel> channel)
-      : stub_(GetNameService::NewStub(channel)) {}
+      : stub_(GameService::NewStub(channel)) {}
 
   // Assembles the client's payload, sends it and presents the response back
   // from the server.
-  std::string GetName(const int id) {
-    NameRequest request;
-    request.set_id(id);
+  int GetName(const int id)
+  {
+    Request request;
+    request.set_uid(id);
 
-    NameReply reply;
+    Response reply;
 
     ClientContext context;
 
     // The actual RPC.
-    Status status = stub_->GetName(&context, request, &reply);
+    Status status = stub_->Notify(&context, request, &reply);
 
     // Act upon its status.
-    if (status.ok()) {
-      return reply.name();
-    } else {
+    if (status.ok())
+    {
+      return reply.uid();
+    }
+    else
+    {
       std::cout << status.error_code() << ": " << status.error_message()
                 << std::endl;
-      return "RPC failed";
+      return -1;
     }
   }
 
- private:
-  std::unique_ptr<GetNameService::Stub> stub_;
+private:
+  std::unique_ptr<GameService::Stub> stub_;
 };
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv)
+{
   std::string target_str = "localhost:50051";
   Client client(
-      grpc::CreateChannel(target_str, grpc::InsecureChannelCredentials())
-  );
+      grpc::CreateChannel(target_str, grpc::InsecureChannelCredentials()));
 
   int id = 1234;
-  std::string reply = client.GetName(id);
-  std::cout << "Client received: " << reply << std::endl;
+  while (true)
+  {
+    auto reply = client.GetName(id);
+    sleep(1);
+    std::cout << "Client received: " << reply << std::endl;
+  }
 
   return 0;
 }
