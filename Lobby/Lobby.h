@@ -5,9 +5,12 @@
 #include <list>
 #include <vector>
 #include <cassert>
+#include <algorithm>
+
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/basic_file_sink.h"
 #include "spdlog/sinks/rotating_file_sink.h"
+#include "spdlog/sinks/stdout_color_sinks.h"
 
 #include "Players.h"
 #include "Room.h"
@@ -25,6 +28,7 @@ public:
 public:
 
     Lobby();
+
     UID Login(std::string nickname, std::string password);
 
     void Logout(UID uid);
@@ -39,7 +43,8 @@ public:
 
     RoomID QuickMatch(UID uid);
 
-    //RPC called, receive data from match service
+    std::vector<RoomID> GetAvailableRoomList();
+
     void MatchEnd(RoomID rid);
 
     //for debug
@@ -64,8 +69,8 @@ private:
     Players AllPlayers_;
     //the status of room is managed by these four set in order to exceed the search.
     std::unordered_set<RoomID> emptyRooms_;
-    std::unordered_set<RoomID> availableRooms_;//still can be added in.
-    std::unordered_set<RoomID> occupiedRooms_;//rooms for match already started. it can be transferred from either avaiableRooms_ or fullRooms_.
+    std::unordered_set<RoomID> availableRooms_;
+    std::unordered_set<RoomID> occupiedRooms_;
     std::unordered_set<RoomID> fullRooms_;
 
     std::vector<Room> AllRooms_;
