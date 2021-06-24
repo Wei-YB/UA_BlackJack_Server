@@ -53,6 +53,16 @@ message Request {
       // room, lobby, and social to proxy, proxy to client
       NOTIFY_USER = 24;
       // 
+      GET_NAME = 25;
+      GET_UID = 26;
+      GET_PASSWORD = 27;
+      GET_SCORE = 28;
+      GET_MATCH_INFO = 29;
+      MATCH_END = 30;
+      ADD_WAIT_FRIEND = 31;
+      DELETE_WAIT_FRIEND = 32;
+
+      START_GAME = 33;
   }
   optional RequestType requestType = 1;
   optional int64  uid = 2;
