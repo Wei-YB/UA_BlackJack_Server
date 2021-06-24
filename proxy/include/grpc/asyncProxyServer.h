@@ -1,13 +1,16 @@
+#ifndef _ASYNCPROXYSERVER_H_
+#define _ASYNCPROXYSERVER_H_
+
 #include <iostream>
 #include <memory>
 #include <string>
 #include <thread>
-#include <unistd.h>
-#include <fcntl.h>
-#include <errno.h>
 
 #include <grpc/support/log.h>
 #include <grpcpp/grpcpp.h>
+#include <grpcpp/server.h>
+#include <grpcpp/server_builder.h>
+#include <grpcpp/server_context.h>
 
 #include "common.pb.h"
 #include "proxy.grpc.pb.h"
@@ -174,3 +177,5 @@ private:
     std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient_;
     std::mutex *lock_; 
 };
+
+#endif

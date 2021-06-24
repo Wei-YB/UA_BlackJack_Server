@@ -12,10 +12,12 @@
 #include <grpcpp/grpcpp.h>
 #include <thread>
 
+#include <chrono>
+
 #include "EventLoop.h"
 #include "common.pb.h"
 
-
+typedef std::chrono::time_point<std::chrono::system_clock> time_point;
 using grpc::Channel;
 using grpc::ClientAsyncResponseReader;
 using grpc::ClientContext;
@@ -58,13 +60,28 @@ public:
         call->response_reader->Finish(&call->reply, &call->status, (void*)call);
     }
 
-    void AsyncCompleteRpc()
+    void AsyncCompleteRpc(bool &stop_wait)
     {
         void *got_tag;
         bool ok = false;
 
-        while (cq_.Next(&got_tag, &ok))
+        
+        time_point deadline = std::chrono::system_clock::now() +
+                std::chrono::milliseconds(500);
+        //while (cq_.Next(&got_tag, &ok))
+        while (cq_.AsyncNext(&got_tag, &ok, deadline))
         {
+            deadline = std::chrono::system_clock::now() +
+                std::chrono::milliseconds(500);
+            if (stop_wait)
+            {
+                break;
+            }
+            if (!ok)
+            {
+                continue;
+            }
+            std::cout << "get response" << std::endl;
             // get a response, forward to the corresponding client
             AsyncClientCall *call = static_cast<AsyncClientCall*>(got_tag);
             int64_t uid = call->reply.uid();
@@ -73,20 +90,20 @@ public:
             std::lock_guard<std::mutex> guard(*lock_);
             if (uidToClient_->find(uid) != uidToClient_->end())
             {
+                std::cout << "find client, now send response" << std::endl;
                 client = (*uidToClient_)[uid];
-            }
-            }
-            if (client)
-            {  
                 Response *res = new Response;
                 *res = call->reply;
+                std::cout << "now try to push response to client" << std::endl;
                 if (0 > client->pushRpcResponse((void*)res))
                 {
                     delete res;
                 }
+                std::cout << "push finish" << std::endl;
+            }
             }
 
-            delete call;
+            //delete call;
         }
     }
 

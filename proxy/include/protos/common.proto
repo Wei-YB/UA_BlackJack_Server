@@ -21,16 +21,16 @@ message Request {
         DOUBLE = 12;
         SURRENDER = 13;
         // client to proxy, proxy to social
-        SIGNUP = 14;
+        SIGNUP = 14;    
         INFO = 15;  
         RANK_ME = 16;
         RANK_TOP = 17;  
-        ADD_FRIEND = 18;
-        ACCEPT_FRIEND = 19;
-        DELETE_FRIEND = 20;
-        LIST_FRIEND = 21;
+        ADD_FRIEND = 18;    // social
+        ACCEPT_FRIEND = 19; // social
+        DELETE_FRIEND = 20; // social
+        LIST_FRIEND = 21;   // social
         LIST_MATCH = 22;
-        LIST_WAITTING = 23;
+        LIST_WAITTING = 23; // social
         // room, lobby, and social to proxy, proxy to client
         NOTIFY_USER = 24;
         // 
