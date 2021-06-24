@@ -1,14 +1,15 @@
 #pragma once
-
-#include <lib_acl.hpp>
-#include <unordered_map>
-
 #include "nameFormat.h"
 
-namespace ua_black_jack_server {namespace data_base_server {
+#include <lib_acl.hpp>
 
-using nameFormat::GetKey;
-using nameFormat::FormatType;
+
+
+
+namespace ua_black_jack_server::data_base_server {
+
+using name_format::GetKey;
+using name_format::FormatType;
 
 class RedisService {
 public:
@@ -46,8 +47,8 @@ public:
 
     // UID -> waitingFriendList
     RepeatedString GetWaitingFriendList(UID uid);
-    bool InsertWaitingFriendList(UID uid, UID friendId);
-    bool RemoveWaitingFriendList(UID uid, UID friendId);
+    bool           InsertWaitingFriendList(UID uid, UID friendId);
+    bool           RemoveWaitingFriendList(UID uid, UID friendId);
 
     // UID -> matchList
     RepeatedString GetMatchList(UID uid);
@@ -63,11 +64,11 @@ public:
 
     
     HashString GetMatchInfo(UID matchId);
-    bool InsertMatchInfo(UID matchId, const HashString& matchInfo);
-    bool InsertMatchInfo(UID matchId, const char* key, const char* value);
+    bool       InsertMatchInfo(UID matchId, const HashString& matchInfo);
+    bool       InsertMatchInfo(UID matchId, const char* key, const char* value);
 
 
-    UID     NextUid();
+    UID NextUid();
     UID NextMatchId();
 
     bool Exists(const char* key);
@@ -76,6 +77,6 @@ public:
 private:
     std::vector<acl::string> listBuffer_;
     acl::string              buffer_;
-    acl::redis conn_;
+    acl::redis               conn_;
 };
-}}
+}

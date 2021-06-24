@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 
-namespace ua_black_jack_server {namespace data_base_server {namespace nameFormat {
+namespace ua_black_jack_server::data_base_server::name_format {
 
 enum class FormatType {
     UID_TO_NICKNAME,
@@ -26,4 +26,4 @@ char* GetKey(FormatType type, const char* input);
 
 char* GetKey(FormatType type);
 
-}}}
+}

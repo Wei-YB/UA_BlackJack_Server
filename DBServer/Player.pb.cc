@@ -92,26 +92,27 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_Player_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\014Player.proto\022\006player\"\211\003\n\007Request\0225\n\013re"
+  "\n\014Player.proto\022\006player\"\316\003\n\007Request\0225\n\013re"
   "questType\030\001 \001(\0162\033.player.Request.Request"
   "TypeH\000\210\001\001\022\020\n\003uid\030\002 \001(\003H\001\210\001\001\022\022\n\005stamp\030\003 \001"
-  "(\003H\002\210\001\001\022\014\n\004args\030\004 \003(\t\"\360\001\n\013RequestType\022\t\n"
-  "\005INVAL\020\000\022\t\n\005LOGIN\020\001\022\n\n\006SIGNUP\020\016\022\013\n\007RANK_"
-  "ME\020\020\022\014\n\010RANK_TOP\020\021\022\016\n\nADD_FRIEND\020\022\022\021\n\rAC"
-  "CEPT_FRIEND\020\023\022\021\n\rDELETE_FRIEND\020\024\022\017\n\013LIST"
-  "_FRIEND\020\025\022\016\n\nLIST_MATCH\020\026\022\021\n\rLIST_WAITTI"
-  "NG\020\027\022\014\n\010GET_NAME\020\031\022\013\n\007GET_UID\020\032\022\020\n\014GET_P"
-  "ASSWORD\020\033\022\r\n\tGET_SCORE\020\034B\016\n\014_requestType"
-  "B\006\n\004_uidB\010\n\006_stamp\"p\n\010Response\022\023\n\006status"
-  "\030\001 \001(\003H\000\210\001\001\022\020\n\003uid\030\002 \001(\003H\001\210\001\001\022\022\n\005stamp\030\003"
-  " \001(\003H\002\210\001\001\022\014\n\004args\030\004 \003(\tB\t\n\007_statusB\006\n\004_u"
-  "idB\010\n\006_stamp2C\n\017DatabaseService\0220\n\tReque"
-  "stDB\022\017.player.Request\032\020.player.Response\""
-  "\000b\006proto3"
+  "(\003H\002\210\001\001\022\014\n\004args\030\004 \003(\t\"\265\002\n\013RequestType\022\t\n"
+  "\005INVAL\020\000\022\n\n\006SIGNUP\020\016\022\013\n\007RANK_ME\020\020\022\014\n\010RAN"
+  "K_TOP\020\021\022\016\n\nADD_FRIEND\020\022\022\021\n\rACCEPT_FRIEND"
+  "\020\023\022\021\n\rDELETE_FRIEND\020\024\022\017\n\013LIST_FRIEND\020\025\022\016"
+  "\n\nLIST_MATCH\020\026\022\021\n\rLIST_WAITTING\020\027\022\014\n\010GET"
+  "_NAME\020\031\022\013\n\007GET_UID\020\032\022\020\n\014GET_PASSWORD\020\033\022\r"
+  "\n\tGET_SCORE\020\034\022\022\n\016GET_MATCH_INFO\020\035\022\r\n\tMAT"
+  "CH_END\020\036\022\023\n\017ADD_WAIT_FRIEND\020\037\022\026\n\022DELETE_"
+  "WAIT_FRIEND\020 B\016\n\014_requestTypeB\006\n\004_uidB\010\n"
+  "\006_stamp\"p\n\010Response\022\023\n\006status\030\001 \001(\003H\000\210\001\001"
+  "\022\020\n\003uid\030\002 \001(\003H\001\210\001\001\022\022\n\005stamp\030\003 \001(\003H\002\210\001\001\022\014"
+  "\n\004args\030\004 \003(\tB\t\n\007_statusB\006\n\004_uidB\010\n\006_stam"
+  "p2C\n\017DatabaseService\0220\n\tRequestDB\022\017.play"
+  "er.Request\032\020.player.Response\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Player_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Player_2eproto = {
-  false, false, 609, descriptor_table_protodef_Player_2eproto, "Player.proto", 
+  false, false, 678, descriptor_table_protodef_Player_2eproto, "Player.proto", 
   &descriptor_table_Player_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_Player_2eproto::offsets,
   file_level_metadata_Player_2eproto, file_level_enum_descriptors_Player_2eproto, file_level_service_descriptors_Player_2eproto,
@@ -132,7 +133,6 @@ const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Request_RequestType_descriptor() 
 bool Request_RequestType_IsValid(int value) {
   switch (value) {
     case 0:
-    case 1:
     case 14:
     case 16:
     case 17:
@@ -146,6 +146,10 @@ bool Request_RequestType_IsValid(int value) {
     case 26:
     case 27:
     case 28:
+    case 29:
+    case 30:
+    case 31:
+    case 32:
       return true;
     default:
       return false;
@@ -154,7 +158,6 @@ bool Request_RequestType_IsValid(int value) {
 
 #if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 constexpr Request_RequestType Request::INVAL;
-constexpr Request_RequestType Request::LOGIN;
 constexpr Request_RequestType Request::SIGNUP;
 constexpr Request_RequestType Request::RANK_ME;
 constexpr Request_RequestType Request::RANK_TOP;
@@ -168,6 +171,10 @@ constexpr Request_RequestType Request::GET_NAME;
 constexpr Request_RequestType Request::GET_UID;
 constexpr Request_RequestType Request::GET_PASSWORD;
 constexpr Request_RequestType Request::GET_SCORE;
+constexpr Request_RequestType Request::GET_MATCH_INFO;
+constexpr Request_RequestType Request::MATCH_END;
+constexpr Request_RequestType Request::ADD_WAIT_FRIEND;
+constexpr Request_RequestType Request::DELETE_WAIT_FRIEND;
 constexpr Request_RequestType Request::RequestType_MIN;
 constexpr Request_RequestType Request::RequestType_MAX;
 constexpr int Request::RequestType_ARRAYSIZE;
