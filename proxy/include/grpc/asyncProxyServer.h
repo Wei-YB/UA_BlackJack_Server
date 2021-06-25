@@ -4,7 +4,8 @@
 #include <iostream>
 #include <memory>
 #include <string>
-#include <thread>
+#include <mutex>
+#include <functional>
 
 #include <grpc/support/log.h>
 #include <grpcpp/grpcpp.h>
@@ -15,6 +16,7 @@
 #include "common.pb.h"
 #include "proxy.grpc.pb.h"
 #include "EventLoop.h"
+#include "ProxyServer.h"
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
@@ -23,120 +25,42 @@ using grpc::ServerCompletionQueue;
 using grpc::ServerContext;
 using grpc::Status;
 
-using proxy::Proxy;
 using common::Response;
 using common::Request;
 
+namespace {
+    enum CallStatus {CREATE, PROCESS, FORWARD, FINISH};
+}
 
-// this pipe should operate on package and non-blocking modes 
-class AsyncCall
+struct AsyncCall
 {
-public:
-    // There is a flaw in the constructor; we explicitly label the uid type 
-    // as int64_t for the template parameter of Net::HandlerManager, which 
-    // is fragile since the uid type would probably changed in the future.
-    AsyncCall(Proxy::AsyncService *service, 
-            ServerCompletionQueue *cq,
-            std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient,
-            std::mutex *lock)
-            : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE),
-            uidToClient_(uidToClient), lock_(lock) {Proceed();}
+    AsyncCall() : responder_(&ctx_), status_(CREATE) {}
     
-    void Proceed()
-    {
-        if (status_ == CREATE)
-        {
-            status_ = PROCESS;
-            service_->RequestNotifyUser(&ctx_, &request_, &responder_, cq_, cq_, this);
-        }
-        else if (status_ == PROCESS)
-        {
-            new AsyncCall(service_, cq_, uidToClient_, lock_);
-            // check the validity of the request
-            if (request_.requesttype() != common::Request::NOTIFY_USER)
-            {
-                // drop the request, and return fail to caller
-                returnFailureResponse("Request type not allowed.");
-                return;
-            }
-            int64_t uid = request_.uid();
-            Net::EventsHandler *client = NULL;
-            // send the request message to corresponding client
-            {
-                std::lock_guard<std::mutex> guard(*lock_);
-                if (uidToClient_->find(uid) != uidToClient_->end())
-                {
-                    client = (*uidToClient_)[uid];
-                }
-            }
-            if (!client)
-            {
-                returnFailureResponse("User do not exist or offline.");
-                return;
-            }
-            if (0 > client->pushRpcRequest((void*)this))
-            {
-                returnFailureResponse("Fail to forward to client.");
-                return;
-            }
-            status_ = FORWARD;
-        }
-        // this case is dealed in main thread eventloop
-        else if (status_ == FORWARD)
-        {
-            responder_.Finish(reply_, Status::OK, this);
-            status_ = FINISH;
-        }
-        else
-        {
-            // GPR_ASSERT(status_ == FINISH);
-            delete this;
-        }
-    }
-
-    inline Request &getRequest()
-    {
-        return request_;
-    }
-
-    void setReply(const Response &response)
-    {
-        reply_ = response;
-    }
-
-private:
-    void returnFailureResponse(const std::string &msg)
-    {
-        reply_.set_uid(request_.uid());
-        reply_.set_status(-1);
-        reply_.set_stamp(request_.stamp());
-        reply_.add_args(msg);
-        responder_.Finish(reply_, Status::OK, this);
-        status_ = FINISH;
-    }
-
-private:
-    Proxy::AsyncService *service_;
-    ServerCompletionQueue *cq_;
     ServerContext ctx_;
     Request request_;
     Response reply_;
     ServerAsyncResponseWriter<Response> responder_;
-    enum CallStatus {CREATE, PROCESS, FORWARD, FINISH};
     CallStatus status_;
-    std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient_;
-    std::mutex *lock_;
+    int64_t stamp_;
 };
 
+void returnFailureResponse(AsyncCall *call, const std::string &msg)
+{
+    call->reply_.set_uid(call->request_.uid());
+    call->reply_.set_status(-1);
+    call->reply_.set_stamp(call->request_.stamp());
+    call->reply_.add_args(msg);
+    call->responder_.Finish(call->reply_, Status::OK, call);
+    call->status_ = FINISH;
+}
 
-class ProxyServerImpl final {
+class ProxyRpcServer final {
 public:
-    ProxyServerImpl(const std::string &serverAddress, 
-                    std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient,
-                    std::mutex *lock)
-        : serverAddress_(serverAddress), uidToClient_(uidToClient), lock_(lock) {}
+    ProxyRpcServer(const std::string &serverAddress,
+                    std::shared_ptr<ProxyServer> proxyPtr)
+        : serverAddress_(serverAddress), proxy_(proxyPtr) {}
 
-    ~ProxyServerImpl()
+    ~ProxyRpcServer()
     {
         server_->Shutdown();
         cq_->Shutdown();
@@ -147,6 +71,16 @@ public:
         ServerBuilder builder;
         builder.AddListeningPort(serverAddress_, grpc::InsecureServerCredentials());
         builder.RegisterService(&service_);
+
+        if (std::shared_ptr<ProxyServer> sharedProxy = proxy_.lock())
+        {
+            sharedProxy->SetClientResponseCallBack(std::bind(&ProxyRpcServer::OnClientResponse, this, std::placeholders::_1));
+        }
+        else
+        {
+            std::cout << "Server fail to contact with proxy." << std::endl;
+            return;
+        }
 
         cq_ = builder.AddCompletionQueue();
         server_ = builder.BuildAndStart();
@@ -165,17 +99,84 @@ private:
         {
             GPR_ASSERT(cq_->Next(&tag, &ok));
             GPR_ASSERT(ok);
-            static_cast<AsyncCall*>(tag)->Proceed();
+            AsyncCall *call = static_cast<AsyncCall*>(tag);
+            ProcessCall(call);
+        }
+    }
+
+    void ProcessCall(AsyncCall *call)
+    {
+        if (call->status_ == CREATE)
+        {
+            call->status_ = PROCESS;
+            service_->RequestNotifyUser(&call->ctx_, &call->request_, &call->responder_, &cq_, &cq_, call);
+        }
+        else if (call->status_ == PROCESS)
+        {
+            AsyncCall *newCall = new AsyncCall;
+            // check the validity of the request
+            if (call->request_.requesttype() != common::Request::NOTIFY_USER)
+            {
+                // drop the request, and return fail to caller
+                returnFailureResponse(call, "Request type not allowed.");
+                return;
+            }
+            if (std::shared_ptr<ProxyServer> sharedProxy = proxy_.lock())
+            {
+                // modify request stamp
+                int64_t originStamp = call->request_.stamp();
+                int64_t newStamp = (int64_t)call;
+                call->request_.set_stamp(newStamp);
+                call->stamp_ = originStamp;
+                if (0 > sharedProxy->SendRequest(request_))
+                {
+                    returnFailureResponse(call, "User busy or do not exist.");
+                    return;
+                }
+                {
+                    std::lock_guard<std::mutex> guard(stampToAsyncCallLock_);
+                    stampToAsyncCall_.emplace(newStamp, call);
+                }
+                return;
+            }
+            returnFailureResponse(call, "Proxy service unavailable.");
+        }
+        else
+        {
+            delete call;
+        }
+    }
+
+    void OnClientResponse(Response &response)
+    {
+        int64_t stamp = response.stamp();
+        AsyncCall *call = NULL;
+        {
+            std::lock_guard<std::mutex> guard(stampToAsyncCallLock_);
+            if (stampToAsyncCall_.find(stamp) != stampToAsyncCall_.end())
+            {
+                call = stampToAsyncCall_[stamp];
+                stampToAsyncCall_.erase(stamp);
+            }
+        }
+        if (call)
+        {
+            stamp = call->stamp_;
+            response.set_stamp(stamp);
+            call->reply_ = response;
+            call->responder_.Finish(reply_, Status::OK, call);
+            call->status_ = FINISH;
         }
     }
 
 private:
     std::string serverAddress_;
     std::unique_ptr<Server> server_;
-    Proxy::AsyncService service_;
+    proxy::Proxy::AsyncService service_;
     std::unique_ptr<ServerCompletionQueue> cq_;
-    std::unordered_map<int64_t, Net::EventsHandler*> *uidToClient_;
-    std::mutex *lock_; 
+    std::weak_ptr<ProxyServer> proxy_;
+    std::unordered_map<int64_t, AsyncCall*> stampToAsyncCall_;
+    std::mutex stampToAsyncCallLock_;
 };
 
 #endif

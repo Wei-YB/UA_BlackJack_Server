@@ -11,10 +11,13 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <errno.h>
+#include <memory>
 
 #include <exception>
 #include <unordered_map>
 #include <list>
+
+#include "common.h"
 
 #define DEFAULT_MAX_EVENTS  1024
 
@@ -49,6 +52,58 @@ inline Event toNetEvent(int epEv)
 }
 
 class EventLoop;
+
+class EventsSource
+{
+public:
+    EventsSource(FileDesc fd, EventLoop *loop,
+                const std::function<int()> &inEventCallBack,
+                const std::function<int()> &outEventCallBack,
+                const std::function<int()> &errEventCallBack)
+                : fd_(fd), loop_(loop),
+                inEventCallBack_(inEventCallBack),
+                outEventCallBack_(outEventCallBack),
+                errEventCallBack_(errEventCallBack) {}
+public:
+    int HandleEvents(Net::Event events)
+    {
+        int ret = 0;
+        if (events & Net::EV_IN)
+        {
+            ret = inEventCallBack_() == -1 ? -1 : ret; 
+        }
+        if (events & Net::EV_OUT)
+        {
+            ret = outEventCallBack_() == -1 ? -1 : ret; 
+        }
+        if (events & Net::EV_ERR)
+        {
+            ret = errEventCallBack_() == -1 ? -1 : ret; 
+        }
+        return ret;
+    }
+    
+    int Update(Net::Event events)
+    {
+        if (events_ == events)
+        {
+            return 0;
+        }
+        events_ = events;
+        return loop_->mod(*this);
+    }
+
+    FileDesc fd() const {return fd_;}
+    friend class EventLoop;
+private:
+    FileDesc fd_;
+    Net::Event events_;
+    Net::Event out_events_;
+    EventLoop *loop_;
+    std::function<int()> inEventCallBack_;
+    std::function<int()> outEventCallBack_;
+    std::function<int()> errEventCallBack_;
+};
 
 class EventsHandler
 {
@@ -127,65 +182,60 @@ private:
 class EventLoop
 {
 public:
-    EventLoop(int max_events = DEFAULT_MAX_EVENTS) : m_max_events(max_events)
+    EventLoop(int max_events = DEFAULT_MAX_EVENTS) : maxEvents_(max_events)
     {
-        if ((m_epollfd = epoll_create(5)) < 0)
+        if ((epollfd_ = epoll_create(5)) < 0)
         {
             throw "EventLoop: fail to create epoll.\n";
         }
 
-        if ((m_events = new struct epoll_event[m_max_events]) == NULL)
+        if ((events_ = new struct epoll_event[maxEvents_]) == NULL)
         {
-            close(m_epollfd);
+            close(epollfd_);
             throw "EventLoop: fail to assign epoll event array.\n";        
         }
     }
 
     ~EventLoop() 
     {
-        delete [] m_events;
-        for (auto iter = m_fd_to_handler.begin(); iter != m_fd_to_handler.end(); ++iter)
-        {
-            delete iter->second;
-        }
-        close(m_epollfd);
+        delete [] events_;
+        close(epollfd_);
     }
 
 public:
-    int add(int sockfd, Event events, EventsHandler *evshandler)
+    int add(const EventsSource &evsSource)
     {
-        if (m_fd_to_handler.find(sockfd) != m_fd_to_handler.end() 
-            || m_events_cnt >= m_max_events)
+        if (fdToEventsSource_.find(evsSource.fd_) != fdToEventsSource_.end() 
+            || eventsCnt_ >= maxEvents_)
         {
             return -1;
         }
 
         struct epoll_event ev;
-        ev.data.fd = sockfd;
-        ev.events = toEpollEvent(events);
-        if (epoll_ctl(m_epollfd, EPOLL_CTL_ADD, sockfd, &ev) < 0)
+        ev.data.fd = evsSource.fd_;
+        ev.events = toEpollEvent(evsSource.events_);
+        if (epoll_ctl(epollfd_, EPOLL_CTL_ADD, ev.data.fd, &ev) < 0)
         {
             return -1;
         }
 
-        m_fd_to_handler.emplace(sockfd, evshandler);
-        m_events_cnt++;
+        fdToEventsSource_.emplace(ev.data.fd, evsSource);
+        eventsCnt_++;
         return 0;
     }
 
-    int mod(int sockfd, Event events, EventsHandler *evshandler)
+    int mod(const EventsSource &evsSource)
     {
-        if (m_fd_to_handler.find(sockfd) == m_fd_to_handler.end() 
-            || m_fd_to_handler[sockfd] != evshandler)
+        if (fdToEventsSource_.find(evsSource.fd_) != fdToEventsSource_.end())
         {
             return -1;
         }
 
         struct epoll_event ev;
-        ev.data.fd = sockfd;
-        ev.events = toEpollEvent(events);
+        ev.data.fd = evsSource.fd_;
+        ev.events = toEpollEvent(evsSource.events_);
 
-        if (epoll_ctl(m_epollfd, EPOLL_CTL_MOD, sockfd, &ev) < 0)
+        if (epoll_ctl(epollfd_, EPOLL_CTL_MOD, ev.data.fd, &ev) < 0)
         {
             return -1;
         }
@@ -193,14 +243,13 @@ public:
         return 0;
     }
 
-    int del(int sockfd)
+    int del(const EventsSource &evsSource)
     {
-        if (m_fd_to_handler.find(sockfd) != m_fd_to_handler.end())
+        if (fdToEventsSource_.find(evsSource.fd_) != fdToEventsSource_.end())
         {
-            epoll_ctl(m_epollfd, EPOLL_CTL_DEL, sockfd, NULL);
-            delete m_fd_to_handler[sockfd];
-            m_fd_to_handler.erase(sockfd);
-            m_events_cnt--;
+            epoll_ctl(epollfd_, EPOLL_CTL_DEL, evsSource.fd_, NULL);
+            fdToEventsSource_.erase(evsSource.fd_);
+            eventsCnt_--;
             return 0;
         }
         
@@ -209,12 +258,12 @@ public:
 
     int loopOnce(int timeout = 0)
     {
-        if (!m_events_cnt)
+        if (!eventsCnt_)
         {
             return -1;
         }
         // memset(m_events, 0, sizeof(struct epoll_event) * m_max_events);
-        int nfds = epoll_wait(m_epollfd, m_events, m_max_events, timeout);
+        int nfds = epoll_wait(epollfd_, events_, maxEvents_, timeout);
         if (nfds < 0)
         {
             if (errno == EAGAIN || errno == EWOULDBLOCK || errno == EINTR)
@@ -226,17 +275,17 @@ public:
 
         for (int i = 0; i < nfds; ++i)
         {
-            int sockfd = m_events[i].data.fd;
-            int events = m_events[i].events;   
-            if (m_fd_to_handler.find(sockfd) == m_fd_to_handler.end())
+            int sockfd = events_[i].data.fd;
+            int events = events_[i].events;   
+            if (fdToEventsSource_.find(sockfd) == fdToEventsSource_.end())
             {
                 continue;
             }
 
             // if the return val is -1, it means we should remove this sockfd from poller
-            if (0 > m_fd_to_handler[sockfd]->handleEvents(sockfd, toNetEvent(events)))
+            if (0 > fdToEventsSource_[sockfd].HandleEvents(toNetEvent(events)))
             {
-                del(sockfd);
+                del(fdToEventsSource_[sockfd]);
             }
         }
 
@@ -244,11 +293,11 @@ public:
     }
 
 private:
-    int m_epollfd = -1;
-    int m_events_cnt = 0;
-    const int m_max_events;
-    struct epoll_event *m_events = NULL;
-    std::unordered_map<int, EventsHandler*> m_fd_to_handler;
+    int epollfd_ = -1;
+    int eventsCnt_ = 0;
+    const int maxEvents_;
+    struct epoll_event *events_ = NULL;
+    std::unordered_map<FileDesc, EventsSource> fdToEventsSource_;
 };
 
 };  // end of namespace tcp

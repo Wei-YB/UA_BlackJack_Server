@@ -1,9 +1,12 @@
+#ifndef _CLIENTPROXYPROTOCOL_H_
+#define _CLIENTPROXYPROTOCOL_H_
+
 #include <sys/types.h>
 #include <string>
 #include <arpa/inet.h>
 #include <string.h>
-#include "../common.h"
-#include "../net/circ_buf.h"
+#include "common.h"
+#include "CircularBuffer.h"
 
 NAMESPACE_BEGIN
 
@@ -72,3 +75,5 @@ int unpack(::Net::CircularBuffer &buffer, int32_t *type, std::string &msg)
 }
 
 NAMESPACE_END
+
+#endif

@@ -3,7 +3,8 @@
 		{
 			"name": "Linux",
 			"includePath": [
-				"${workspaceFolder}/**",
+				"${workspaceFolder}/proxy/include",
+				"${workspaceFolder}/proxy/include/grpc",
 				"/include"
 			],
 			"defines":[],

@@ -13,6 +13,7 @@
 #include "proxy.grpc.pb.h"
 #include "EventLoop.h"
 #include "common.h"
+#include "classesDesign.h"
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
@@ -29,8 +30,8 @@ using common::Request;
 class AsyncCall
 {
 public:
-    AsyncCall(Proxy::AsyncService *service, ServerCompletionQueue *cq, 
-            const std::function<void(const Request&)> &cb)
+    AsyncCall(Proxy::AsyncService *service, 
+              ServerCompletionQueue *cq)
             : service_(service), cq_(cq), cb_(cb), 
             responder_(&ctx_), status_(CREATE) 
     {Proceed();}
@@ -97,6 +98,15 @@ private:
 class ProxyRpcServer
 {
 public:
+    void Response();
+    void SetRequestCallBack(const std::function<void(const Request &)>&);
+private:
+    std::function<void(const Request &)> requestCallBack_;
+};
+
+class ProxyRpcServer
+{
+public:
     ProxyRpcServer(const std::string &serverAddress) : serverAddress_(serverAddress) {};
     ~ProxyRpcServer() {server_->Shutdown(); cq_->Shutdown();}
 public:
@@ -109,12 +119,16 @@ public:
 
         cq_ = builder.AddCompletionQueue();
         server_ = builder.BuildAndStart();
+        if (std::shared_ptr<Proxy> sharedProxy = proxy_.lock())
+        {
+            sharedProxy->
+        }
         std::cout << "Server listening on " << serverAddress_ << std::endl;
     
         HandleRpcs();
     }
 
-    void Response(const Response &response)
+    void OnResponse(const Response &response)
     {
         int64_t key = response.stamp();
         
@@ -136,7 +150,7 @@ private:
     void HandleRpcs()
     {
         // TODO, check the validity of requestCallBack_
-        new AsyncCall(&service_, cq_.get(), requestCallBack_);
+        new AsyncCall(&service_, cq_.get());
         void *tag;
         bool ok;
         while (true)
@@ -152,7 +166,7 @@ private:
     std::unique_ptr<Server> server_;
     Proxy::AsyncService service_;
     std::unique_ptr<ServerCompletionQueue> cq_;
-    std::function<void(const Request &)> requestCallBack_;
+    std::weak_ptr<Proxy> proxy_;
     std::unordered_map<int64_t, AsyncCall*> asyncCalls_;
     std::mutex asyncCallsLock_;
 };
