@@ -55,6 +55,12 @@ void Player::hitPoker(void) //用户从牌堆中拿取一张牌
     {
         this->pokerList.emplace_back(roomPtr->getPokerFromShuffledPokers());
     }
+    else
+    {
+        std::cout << "抽牌失败" << std::endl;
+        exit(1);
+    }
+
     int val = this->getAccumulateOfPoker();
     if (val > 21) //爆了
     {

@@ -98,12 +98,12 @@ clean: CMakeFiles/Main.dir/clean
 CMakeFiles/example_game_single_play.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=19,20,21,22,23,24,25,26,27 "Built target example_game_single_play"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33 "Built target example_game_single_play"
 .PHONY : CMakeFiles/example_game_single_play.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/example_game_single_play.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/example_game_single_play.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles 0
 .PHONY : CMakeFiles/example_game_single_play.dir/rule
@@ -125,12 +125,12 @@ CMakeFiles/example_game_single_play.dir/clean:
 CMakeFiles/example_create_delete_room.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=10,11,12,13,14,15,16,17,18 "Built target example_create_delete_room"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21,22 "Built target example_create_delete_room"
 .PHONY : CMakeFiles/example_create_delete_room.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/example_create_delete_room.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/example_create_delete_room.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles 0
 .PHONY : CMakeFiles/example_create_delete_room.dir/rule
@@ -152,12 +152,12 @@ CMakeFiles/example_create_delete_room.dir/clean:
 CMakeFiles/Main.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target Main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target Main"
 .PHONY : CMakeFiles/Main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles 0
 .PHONY : CMakeFiles/Main.dir/rule

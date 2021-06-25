@@ -13,6 +13,12 @@ memory
 -
 string
 -
+grpcpp/ext/proto_server_reflection_plugin.h
+-
+grpcpp/grpcpp.h
+-
+grpcpp/health_check_service_interface.h
+-
 grpcpp/grpcpp.h
 -
 examples/protos/helloworld.grpc.pb.h
@@ -1666,6 +1672,12 @@ grpc/support/port_platform.h
 grpcpp/channel.h
 -
 grpcpp/support/channel_arguments.h
+-
+
+/root/.local/include/grpcpp/ext/proto_server_reflection_plugin.h
+grpcpp/impl/server_builder_plugin.h
+-
+grpcpp/support/config.h
 -
 
 /root/.local/include/grpcpp/grpcpp.h

@@ -316,6 +316,72 @@ main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cc.s
 .PHONY : main.cc.s
 
+src/AskForUserRequest.o: src/AskForUserRequest.cc.o
+
+.PHONY : src/AskForUserRequest.o
+
+# target to build an object file
+src/AskForUserRequest.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForUserRequest.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForUserRequest.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForUserRequest.cc.o
+.PHONY : src/AskForUserRequest.cc.o
+
+src/AskForUserRequest.i: src/AskForUserRequest.cc.i
+
+.PHONY : src/AskForUserRequest.i
+
+# target to preprocess a source file
+src/AskForUserRequest.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForUserRequest.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForUserRequest.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForUserRequest.cc.i
+.PHONY : src/AskForUserRequest.cc.i
+
+src/AskForUserRequest.s: src/AskForUserRequest.cc.s
+
+.PHONY : src/AskForUserRequest.s
+
+# target to generate assembly for a file
+src/AskForUserRequest.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForUserRequest.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForUserRequest.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForUserRequest.cc.s
+.PHONY : src/AskForUserRequest.cc.s
+
+src/GameProcess.o: src/GameProcess.cc.o
+
+.PHONY : src/GameProcess.o
+
+# target to build an object file
+src/GameProcess.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/GameProcess.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/GameProcess.cc.o
+.PHONY : src/GameProcess.cc.o
+
+src/GameProcess.i: src/GameProcess.cc.i
+
+.PHONY : src/GameProcess.i
+
+# target to preprocess a source file
+src/GameProcess.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/GameProcess.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/GameProcess.cc.i
+.PHONY : src/GameProcess.cc.i
+
+src/GameProcess.s: src/GameProcess.cc.s
+
+.PHONY : src/GameProcess.s
+
+# target to generate assembly for a file
+src/GameProcess.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/GameProcess.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/GameProcess.cc.s
+.PHONY : src/GameProcess.cc.s
+
 src/MycondintonCo.o: src/MycondintonCo.cc.o
 
 .PHONY : src/MycondintonCo.o
@@ -507,6 +573,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/AskForUserRequest.o"
+	@echo "... src/AskForUserRequest.i"
+	@echo "... src/AskForUserRequest.s"
+	@echo "... src/GameProcess.o"
+	@echo "... src/GameProcess.i"
+	@echo "... src/GameProcess.s"
 	@echo "... src/MycondintonCo.o"
 	@echo "... src/MycondintonCo.i"
 	@echo "... src/MycondintonCo.s"

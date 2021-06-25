@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <list>
+#include <memory>
+#include "co_routine_inner.h"
 typedef int64_t BlackJackUID;
 typedef int64_t BlackJackMoney;
 typedef int64_t BlackJackRoomID;
@@ -20,10 +22,6 @@ typedef enum
     OPERATE_QUIT,
 } OperateID;
 struct HitArgument
-{
-    BlackJackUID uid;
-};
-struct StandArgument
 {
     BlackJackUID uid;
 };

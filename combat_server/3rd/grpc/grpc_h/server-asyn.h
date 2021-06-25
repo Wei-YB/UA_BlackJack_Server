@@ -31,6 +31,10 @@
 #include "demo.grpc.pb.h"
 #endif
 #include "demo.pb.h"
+int createstEnv_t(BlackJackRoomID roomID, UidList &uids);
+void *createOneGame(void *arg);
+void *waitingSignalFromOtherModule(void *arg);
+void *recoveryUnusedCo(void *arg); //回收协程的协程
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
 using grpc::ServerBuilder;
@@ -89,21 +93,39 @@ public:
 
       if (status_ == CREATE)
       {
-        std::cout << "CREATE" << std::endl;
         status_ = PROCESS;
         service_->RequestNotify(&ctx_, &request_, &responder_, cq_, cq_, this);
       }
       else if (status_ == PROCESS)
       {
-        std::cout << "PROCESS" << std::endl;
         new CallData(service_, cq_);
         auto type = request_.requesttype();
         auto uid = request_.uid();
         auto stamp = request_.stamp();
         auto args = request_.args();
+        reply_.set_status(0);
+        reply_.set_uid(uid);
+        reply_.set_stamp(stamp);
 
         if (type == demo::Request_RequestType::Request_RequestType_START_GAME) //创建房间
         {
+          static uint64_t roomMemberSize = 0;
+          static UidList uids;
+          static BlackJackRoomID roomid;
+#ifdef PRINT_LOG
+          std::cout << "ONE PEROSON COME IN" << std::endl;
+#endif
+          roomMemberSize++;
+          roomMemberSize %= 2;
+          uids.push_back(uid);
+          if (roomMemberSize == 0) //凑够2个人 demo，后面不需要这些，而是由lobby分配人过来
+          {
+#ifdef PRINT_LOG
+            std::cout << "CREATE ROOM" << std::endl;
+#endif
+            createstEnv_t(roomid++, uids);
+            uids.clear();
+          }
         }
         else if (type == demo::Request_RequestType::Request_RequestType_LEAVE_ROOM) //投降
         {
@@ -112,15 +134,15 @@ public:
         {
         }
         else if (type == demo::Request_RequestType::Request_RequestType_SURRENDER) //投降
+        {
+        }
 
-          //reply_.set_args(args);
-
-          status_ = FINISH;
+        status_ = FINISH;
         responder_.Finish(reply_, Status::OK, this); //运行这行，调用方就收到response
       }
       else
       {
-        std::cout << "FINISH" << std::endl;
+
         GPR_ASSERT(status_ == FINISH);
 
         delete this;

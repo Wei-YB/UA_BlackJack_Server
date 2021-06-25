@@ -131,6 +131,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named server-asyn
+
+# Build rule for target.
+server-asyn: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server-asyn
+.PHONY : server-asyn
+
+# fast build rule for target.
+server-asyn/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/build
+.PHONY : server-asyn/fast
+
+#=============================================================================
+# Target rules for targets named client-asyn
+
+# Build rule for target.
+client-asyn: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client-asyn
+.PHONY : client-asyn
+
+# fast build rule for target.
+client-asyn/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-asyn.dir/build.make CMakeFiles/client-asyn.dir/build
+.PHONY : client-asyn/fast
+
+#=============================================================================
 # Target rules for targets named client-syn
 
 # Build rule for target.
@@ -155,6 +181,33 @@ hw_grpc_proto: cmake_check_build_system
 hw_grpc_proto/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw_grpc_proto.dir/build.make CMakeFiles/hw_grpc_proto.dir/build
 .PHONY : hw_grpc_proto/fast
+
+client-asyn.o: client-asyn.cc.o
+
+.PHONY : client-asyn.o
+
+# target to build an object file
+client-asyn.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-asyn.dir/build.make CMakeFiles/client-asyn.dir/client-asyn.cc.o
+.PHONY : client-asyn.cc.o
+
+client-asyn.i: client-asyn.cc.i
+
+.PHONY : client-asyn.i
+
+# target to preprocess a source file
+client-asyn.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-asyn.dir/build.make CMakeFiles/client-asyn.dir/client-asyn.cc.i
+.PHONY : client-asyn.cc.i
+
+client-asyn.s: client-asyn.cc.s
+
+.PHONY : client-asyn.s
+
+# target to generate assembly for a file
+client-asyn.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-asyn.dir/build.make CMakeFiles/client-asyn.dir/client-asyn.cc.s
+.PHONY : client-asyn.cc.s
 
 client-syn.o: client-syn.cc.o
 
@@ -237,6 +290,33 @@ demo.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw_grpc_proto.dir/build.make CMakeFiles/hw_grpc_proto.dir/demo.pb.cc.s
 .PHONY : demo.pb.cc.s
 
+server-asyn.o: server-asyn.cc.o
+
+.PHONY : server-asyn.o
+
+# target to build an object file
+server-asyn.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/server-asyn.cc.o
+.PHONY : server-asyn.cc.o
+
+server-asyn.i: server-asyn.cc.i
+
+.PHONY : server-asyn.i
+
+# target to preprocess a source file
+server-asyn.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/server-asyn.cc.i
+.PHONY : server-asyn.cc.i
+
+server-asyn.s: server-asyn.cc.s
+
+.PHONY : server-asyn.s
+
+# target to generate assembly for a file
+server-asyn.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/server-asyn.cc.s
+.PHONY : server-asyn.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -245,8 +325,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... client-asyn"
 	@echo "... client-syn"
 	@echo "... hw_grpc_proto"
+	@echo "... server-asyn"
+	@echo "... client-asyn.o"
+	@echo "... client-asyn.i"
+	@echo "... client-asyn.s"
 	@echo "... client-syn.o"
 	@echo "... client-syn.i"
 	@echo "... client-syn.s"
@@ -256,6 +341,9 @@ help:
 	@echo "... demo.pb.o"
 	@echo "... demo.pb.i"
 	@echo "... demo.pb.s"
+	@echo "... server-asyn.o"
+	@echo "... server-asyn.i"
+	@echo "... server-asyn.s"
 .PHONY : help
 
 

@@ -7,6 +7,7 @@ class Room;
 #include <memory>
 #include <vector>
 #include "Poker.h"
+#include "AskForUserRequest.h"
 class Player;
 extern std::unordered_map<BlackJackUID, std::weak_ptr<Player>> playerHashMap;
 class Player : std::enable_shared_from_this<Player>
@@ -37,6 +38,7 @@ public:
     Player(BlackJackUID _uid) : uid(_uid){};
     inline void setRoom(BlackJackRoomID _room) { this->room = _room; }
     inline BlackJackRoomID getRoom(void) { return room; };
+    Client::ptr client;
 
 private:
     BlackJackMoney bankMoney; //用户账户中的钱

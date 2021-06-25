@@ -6,6 +6,7 @@
 std::unordered_map<BlackJackRoomID, std::weak_ptr<Room>> roomHashMap;
 Room::ptr malloOneRoom(BlackJackRoomID rid, UidList &uids)
 {
+
     Room::ptr room = std::make_shared<Room>(rid, uids);
     roomHashMap[room->getRoomId()] = room;
     return room;
@@ -16,15 +17,6 @@ Poker::ptr Room::getPokerFromShuffledPokers(void)
     this->shuffledPokers->nowIndex++;
     return this->shuffledPokers->pokers[index];
 }
-struct stTask_t
-{
-    int id;
-};
-struct stEnv_t
-{
-    stCoCond_t *cond;
-    std::queue<stTask_t *> task_queue;
-};
 
 void Room::showMessage(void) const
 {
@@ -59,6 +51,7 @@ void Room::judgeWinOrLose(void) //判断最后的输赢
     while (dealerFinalGameValue < 17)
     {
         dealer->hitPoker(); //抽牌
+        dealer->showMessage();
         int val = dealer->pokerList.back()->getValue() % 13 + 1;
         if (val == 1) //ace
         {
@@ -139,8 +132,7 @@ int Room::setBettingMoney(BlackJackUID uid, BlackJackMoney money)
     }
     return -1;
 }
-
-Room::~Room() //房间解散
+void Room::deleteRoom(void)
 {
     this->judgeWinOrLose();
     for (auto player : this->playerList)
@@ -175,6 +167,10 @@ Room::~Room() //房间解散
     std::cout << "game over" << std::endl;
     for (auto &player : playerList)
     {
+        player->showMessage();
+    }
+    for (auto &player : playerList)
+    {
         if (player->finalResult == WIN)
             std::cout << player->uid << " WIN " << player->bettingMoney << std::endl;
         else if (player->finalResult == DRAW)
@@ -186,4 +182,7 @@ Room::~Room() //房间解散
     /*************存储数据到数据库**************/
 
     /*************存储数据到数据库**************/
+}
+Room::~Room() //房间解散
+{
 }

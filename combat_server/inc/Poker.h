@@ -12,6 +12,7 @@ public:
     inline int getValue(void) const { return _value; }
     inline bool isHide(void) const { return _isHide; }
     inline void setHide(void) { _isHide = true; }
+    inline void cancelHide(void) { _isHide = false; }
 
 private:
     bool _isHide = false;

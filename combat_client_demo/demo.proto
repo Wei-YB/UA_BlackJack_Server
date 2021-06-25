@@ -19,6 +19,9 @@ package demo;
 service GameService {
   rpc Notify(Request) returns (Response) {}
 }
+service UserService {
+  rpc Notify(Request) returns (Response) {}
+}
 
 // 统一的请求和响应包格式
 message Request {

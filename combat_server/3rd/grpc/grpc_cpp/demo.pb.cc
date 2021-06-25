@@ -113,11 +113,13 @@ const char descriptor_table_protodef_demo_2eproto[] PROTOBUF_SECTION_VARIABLE(pr
   "(\003H\000\210\001\001\022\020\n\003uid\030\002 \001(\003H\001\210\001\001\022\022\n\005stamp\030\003 \001(\003"
   "H\002\210\001\001\022\014\n\004args\030\004 \003(\tB\t\n\007_statusB\006\n\004_uidB\010"
   "\n\006_stamp28\n\013GameService\022)\n\006Notify\022\r.demo"
-  ".Request\032\016.demo.Response\"\000b\006proto3"
+  ".Request\032\016.demo.Response\"\00028\n\013UserServic"
+  "e\022)\n\006Notify\022\r.demo.Request\032\016.demo.Respon"
+  "se\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_demo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_demo_2eproto = {
-  false, false, 874, descriptor_table_protodef_demo_2eproto, "demo.proto", 
+  false, false, 932, descriptor_table_protodef_demo_2eproto, "demo.proto", 
   &descriptor_table_demo_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_demo_2eproto::offsets,
   file_level_metadata_demo_2eproto, file_level_enum_descriptors_demo_2eproto, file_level_service_descriptors_demo_2eproto,
