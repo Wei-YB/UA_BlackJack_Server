@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
   "CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
   "CMakeFiles/Main.dir/main.cc.o"
+  "CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o"
   "CMakeFiles/Main.dir/src/AskForUserRequest.cc.o"
   "CMakeFiles/Main.dir/src/GameProcess.cc.o"
   "CMakeFiles/Main.dir/src/MycondintonCo.cc.o"

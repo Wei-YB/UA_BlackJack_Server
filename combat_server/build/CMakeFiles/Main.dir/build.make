@@ -90,9 +90,22 @@ CMakeFiles/Main.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/main.cc.s"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/main.cc -o CMakeFiles/Main.dir/main.cc.s
 
+CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o: ../src/AskForDatabaseRequest.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o"
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/AskForDatabaseRequest.cc
+
+CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/src/AskForDatabaseRequest.cc > CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.i
+
+CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/src/AskForDatabaseRequest.cc -o CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.s
+
 CMakeFiles/Main.dir/src/AskForUserRequest.cc.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/src/AskForUserRequest.cc.o: ../src/AskForUserRequest.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Main.dir/src/AskForUserRequest.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Main.dir/src/AskForUserRequest.cc.o"
 	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/AskForUserRequest.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/AskForUserRequest.cc
 
 CMakeFiles/Main.dir/src/AskForUserRequest.cc.i: cmake_force
@@ -105,7 +118,7 @@ CMakeFiles/Main.dir/src/AskForUserRequest.cc.s: cmake_force
 
 CMakeFiles/Main.dir/src/GameProcess.cc.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/src/GameProcess.cc.o: ../src/GameProcess.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Main.dir/src/GameProcess.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Main.dir/src/GameProcess.cc.o"
 	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/GameProcess.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/GameProcess.cc
 
 CMakeFiles/Main.dir/src/GameProcess.cc.i: cmake_force
@@ -118,7 +131,7 @@ CMakeFiles/Main.dir/src/GameProcess.cc.s: cmake_force
 
 CMakeFiles/Main.dir/src/MycondintonCo.cc.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/src/MycondintonCo.cc.o: ../src/MycondintonCo.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Main.dir/src/MycondintonCo.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Main.dir/src/MycondintonCo.cc.o"
 	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/MycondintonCo.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/MycondintonCo.cc
 
 CMakeFiles/Main.dir/src/MycondintonCo.cc.i: cmake_force
@@ -131,7 +144,7 @@ CMakeFiles/Main.dir/src/MycondintonCo.cc.s: cmake_force
 
 CMakeFiles/Main.dir/src/Player.cc.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/src/Player.cc.o: ../src/Player.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Main.dir/src/Player.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Main.dir/src/Player.cc.o"
 	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/Player.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/Player.cc
 
 CMakeFiles/Main.dir/src/Player.cc.i: cmake_force
@@ -144,7 +157,7 @@ CMakeFiles/Main.dir/src/Player.cc.s: cmake_force
 
 CMakeFiles/Main.dir/src/Poker.cc.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/src/Poker.cc.o: ../src/Poker.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Main.dir/src/Poker.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Main.dir/src/Poker.cc.o"
 	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/Poker.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/Poker.cc
 
 CMakeFiles/Main.dir/src/Poker.cc.i: cmake_force
@@ -157,7 +170,7 @@ CMakeFiles/Main.dir/src/Poker.cc.s: cmake_force
 
 CMakeFiles/Main.dir/src/Room.cc.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/src/Room.cc.o: ../src/Room.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Main.dir/src/Room.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Main.dir/src/Room.cc.o"
 	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/Room.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/Room.cc
 
 CMakeFiles/Main.dir/src/Room.cc.i: cmake_force
@@ -170,7 +183,7 @@ CMakeFiles/Main.dir/src/Room.cc.s: cmake_force
 
 CMakeFiles/Main.dir/src/ShuffledPokers.cc.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/src/ShuffledPokers.cc.o: ../src/ShuffledPokers.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Main.dir/src/ShuffledPokers.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Main.dir/src/ShuffledPokers.cc.o"
 	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/ShuffledPokers.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/ShuffledPokers.cc
 
 CMakeFiles/Main.dir/src/ShuffledPokers.cc.i: cmake_force
@@ -183,7 +196,7 @@ CMakeFiles/Main.dir/src/ShuffledPokers.cc.s: cmake_force
 
 CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o: ../3rd/grpc/grpc_cpp/demo.grpc.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
 	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc
 
 CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.i: cmake_force
@@ -196,7 +209,7 @@ CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.s: cmake_force
 
 CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o: ../3rd/grpc/grpc_cpp/demo.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
 	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc
 
 CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.i: cmake_force
@@ -210,6 +223,7 @@ CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s: cmake_force
 # Object files for target Main
 Main_OBJECTS = \
 "CMakeFiles/Main.dir/main.cc.o" \
+"CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o" \
 "CMakeFiles/Main.dir/src/AskForUserRequest.cc.o" \
 "CMakeFiles/Main.dir/src/GameProcess.cc.o" \
 "CMakeFiles/Main.dir/src/MycondintonCo.cc.o" \
@@ -224,6 +238,7 @@ Main_OBJECTS = \
 Main_EXTERNAL_OBJECTS =
 
 Main: CMakeFiles/Main.dir/main.cc.o
+Main: CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o
 Main: CMakeFiles/Main.dir/src/AskForUserRequest.cc.o
 Main: CMakeFiles/Main.dir/src/GameProcess.cc.o
 Main: CMakeFiles/Main.dir/src/MycondintonCo.cc.o
@@ -277,7 +292,7 @@ Main: /root/.local/lib/libabsl_log_severity.a
 Main: /root/.local/lib/libssl.a
 Main: /root/.local/lib/libcrypto.a
 Main: CMakeFiles/Main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

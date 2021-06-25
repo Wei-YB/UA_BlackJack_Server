@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/example/example_create_delete_room.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_create_delete_room.dir/example/example_create_delete_room.cc.o"
+  "/home/tong/UA_BlackJack_Server/combat_server/src/AskForDatabaseRequest.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_create_delete_room.dir/src/AskForDatabaseRequest.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/AskForUserRequest.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_create_delete_room.dir/src/AskForUserRequest.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/GameProcess.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_create_delete_room.dir/src/GameProcess.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/MycondintonCo.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_create_delete_room.dir/src/MycondintonCo.cc.o"

@@ -316,6 +316,39 @@ main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cc.s
 .PHONY : main.cc.s
 
+src/AskForDatabaseRequest.o: src/AskForDatabaseRequest.cc.o
+
+.PHONY : src/AskForDatabaseRequest.o
+
+# target to build an object file
+src/AskForDatabaseRequest.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForDatabaseRequest.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForDatabaseRequest.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o
+.PHONY : src/AskForDatabaseRequest.cc.o
+
+src/AskForDatabaseRequest.i: src/AskForDatabaseRequest.cc.i
+
+.PHONY : src/AskForDatabaseRequest.i
+
+# target to preprocess a source file
+src/AskForDatabaseRequest.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForDatabaseRequest.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForDatabaseRequest.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.i
+.PHONY : src/AskForDatabaseRequest.cc.i
+
+src/AskForDatabaseRequest.s: src/AskForDatabaseRequest.cc.s
+
+.PHONY : src/AskForDatabaseRequest.s
+
+# target to generate assembly for a file
+src/AskForDatabaseRequest.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForDatabaseRequest.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForDatabaseRequest.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.s
+.PHONY : src/AskForDatabaseRequest.cc.s
+
 src/AskForUserRequest.o: src/AskForUserRequest.cc.o
 
 .PHONY : src/AskForUserRequest.o
@@ -573,6 +606,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/AskForDatabaseRequest.o"
+	@echo "... src/AskForDatabaseRequest.i"
+	@echo "... src/AskForDatabaseRequest.s"
 	@echo "... src/AskForUserRequest.o"
 	@echo "... src/AskForUserRequest.i"
 	@echo "... src/AskForUserRequest.s"

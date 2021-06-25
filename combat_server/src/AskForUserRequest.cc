@@ -5,7 +5,7 @@
 #define STAMP_ASK_HIT 0X2
 #define STAMP_ASK_UPDATE 0X3
 #define STAMP_ASK_END 0X4
-void Client::askBettingMoney(const BlackJackUID uid)
+void ClientForTestUser::askBettingMoney(const BlackJackUID uid)
 {
 #ifdef PRINT_LOG
     std::cout << "Start betting rpc request" << std::endl;
@@ -27,7 +27,7 @@ void Client::askBettingMoney(const BlackJackUID uid)
     call->response_reader->Finish(&call->reply, &call->status, (void *)call);
 }
 
-void Client::askHitOrStand(const BlackJackUID uid)
+void ClientForTestUser::askHitOrStand(const BlackJackUID uid)
 {
 #ifdef PRINT_LOG
     std::cout << "Start ask hit" << std::endl;
@@ -49,7 +49,7 @@ void Client::askHitOrStand(const BlackJackUID uid)
 
     call->response_reader->Finish(&call->reply, &call->status, (void *)call);
 }
-void Client::askUpdate(const BlackJackUID uid)
+void ClientForTestUser::askUpdate(const BlackJackUID uid)
 {
 #ifdef PRINT_LOG
     std::cout << "Start update" << std::endl;
@@ -108,7 +108,7 @@ void Client::askUpdate(const BlackJackUID uid)
 
     call->response_reader->Finish(&call->reply, &call->status, (void *)call);
 }
-void Client::askEnd(const BlackJackUID uid, FinalResultOfGame isWin)
+void ClientForTestUser::askEnd(const BlackJackUID uid, FinalResultOfGame isWin)
 {
 #ifdef PRINT_LOG
     std::cout << "Start End request" << std::endl;
@@ -144,7 +144,7 @@ void Client::askEnd(const BlackJackUID uid, FinalResultOfGame isWin)
     call->response_reader->Finish(&call->reply, &call->status, (void *)call);
 }
 
-void Client::AsyncCompleteRpc() //开一个线程告知协程发送的消息得到了相应
+void ClientForTestUser::AsyncCompleteRpc() //开一个线程告知协程发送的消息得到了相应
 {
     void *got_tag;
     bool ok = false;
@@ -227,7 +227,7 @@ void Client::AsyncCompleteRpc() //开一个线程告知协程发送的消息得�
         }
         else
         {
-            std::cout << this->uid << call->status.error_message() << std::endl;
+            //std::cout << this->uid << call->status.error_message() << std::endl;
             this->askBettingMoney(uid); //再call一次
         }
         delete call;

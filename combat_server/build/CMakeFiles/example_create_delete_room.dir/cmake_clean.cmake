@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
   "CMakeFiles/example_create_delete_room.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
   "CMakeFiles/example_create_delete_room.dir/example/example_create_delete_room.cc.o"
+  "CMakeFiles/example_create_delete_room.dir/src/AskForDatabaseRequest.cc.o"
   "CMakeFiles/example_create_delete_room.dir/src/AskForUserRequest.cc.o"
   "CMakeFiles/example_create_delete_room.dir/src/GameProcess.cc.o"
   "CMakeFiles/example_create_delete_room.dir/src/MycondintonCo.cc.o"

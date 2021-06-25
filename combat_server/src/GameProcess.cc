@@ -205,7 +205,9 @@ void *recoveryUnusedCo(void *arg) //回收协程的协程
             co_release(roomEnvirHashMap[roomid]->coRoutine); //释放协程资源
             roomEnvirHashMap[roomid].reset();                //释放指针
             roomEnvirExistHashMap[roomid] = false;
+#ifdef PRINT_LOG
             std::cout << "delete one room" << std::endl;
+#endif
         }
     }
 }

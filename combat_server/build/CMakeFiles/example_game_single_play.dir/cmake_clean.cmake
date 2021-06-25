@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
   "CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
   "CMakeFiles/example_game_single_play.dir/example/example_game_single_play.cc.o"
+  "CMakeFiles/example_game_single_play.dir/src/AskForDatabaseRequest.cc.o"
   "CMakeFiles/example_game_single_play.dir/src/AskForUserRequest.cc.o"
   "CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o"
   "CMakeFiles/example_game_single_play.dir/src/MycondintonCo.cc.o"

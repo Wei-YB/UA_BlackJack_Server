@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.grpc.pb.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.grpc.pb.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/main.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/main.cc.o"
+  "/home/tong/UA_BlackJack_Server/combat_server/src/AskForDatabaseRequest.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/AskForUserRequest.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/src/AskForUserRequest.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/GameProcess.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/src/GameProcess.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/MycondintonCo.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/Main.dir/src/MycondintonCo.cc.o"

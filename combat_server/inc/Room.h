@@ -34,10 +34,10 @@ public:
             std::string str = ss.str();
             str = "localhost:" + str;
             std::cout << "client addr " << str << std::endl;
-            playerList.back()->client = std::make_shared<Client>(grpc::CreateChannel(
-                                                                     str, grpc::InsecureChannelCredentials()),
-                                                                 i);
-            std::thread thread_ = std::thread(&Client::AsyncCompleteRpc, playerList.back()->client.get()); //每个用户都用一个线程去监控发送给他的rpc命令有没有相应
+            playerList.back()->client = std::make_shared<ClientForTestUser>(grpc::CreateChannel(
+                                                                                str, grpc::InsecureChannelCredentials()),
+                                                                            i);
+            std::thread thread_ = std::thread(&ClientForTestUser::AsyncCompleteRpc, playerList.back()->client.get()); //每个用户都用一个线程去监控发送给他的rpc命令有没有相应
             thread_.detach();
 
             playerHashMap[i] = playerList.back(); //这个不能放在player的构造函数中，因为构造函数执行完时暂时没有shared_ptr指向他

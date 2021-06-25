@@ -27,11 +27,11 @@ using ua_blackjack::UserService;
 /*************************/
 
 #include <memory>
-class Client
+class ClientForTestUser
 {
 public:
-    typedef std::shared_ptr<Client> ptr;
-    Client(std::shared_ptr<Channel> channel, BlackJackUID _uid)
+    typedef std::shared_ptr<ClientForTestUser> ptr;
+    ClientForTestUser(std::shared_ptr<Channel> channel, BlackJackUID _uid)
         : stub_(UserService::NewStub(channel)), uid(_uid) {}
     void printResponce(Response &responce)
     {
