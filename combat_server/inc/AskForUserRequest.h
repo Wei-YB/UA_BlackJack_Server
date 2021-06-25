@@ -21,9 +21,9 @@ using grpc::CompletionQueue;
 using grpc::Status;
 // Service dependent
 /*************************/
-using demo::Request;
-using demo::Response;
-using demo::UserService;
+using ua_blackjack::Request;
+using ua_blackjack::Response;
+using ua_blackjack::UserService;
 /*************************/
 
 #include <memory>

@@ -37,21 +37,24 @@ using grpc::Status;
 
 // Service dependent
 /*************************/
-using demo::GetNameService;
-using demo::NameReply;
-using demo::NameRequest;
+using ua_blackjack::GetNameService;
+using ua_blackjack::NameReply;
+using ua_blackjack::NameRequest;
 /*************************/
 
 // Logic and data behind the server's behavior.
-class GetNameServiceImpl final : public GetNameService::Service {
-  Status GetName(ServerContext* context, const NameRequest* request,
-                  NameReply* reply) override {
+class GetNameServiceImpl final : public GetNameService::Service
+{
+  Status GetName(ServerContext *context, const NameRequest *request,
+                 NameReply *reply) override
+  {
     reply->set_name("Aaron");
     return Status::OK;
   }
 };
 
-void RunServer() {
+void RunServer()
+{
   std::string server_address("0.0.0.0:50051");
   GetNameServiceImpl service;
 
@@ -61,7 +64,7 @@ void RunServer() {
 
   builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
   builder.RegisterService(&service);
-  
+
   std::unique_ptr<Server> server(builder.BuildAndStart());
   std::cout << "Server listening on " << server_address << std::endl;
 
@@ -70,7 +73,8 @@ void RunServer() {
   server->Wait();
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv)
+{
   RunServer();
 
   return 0;

@@ -38,9 +38,9 @@ using grpc::Status;
 
 // Service dependent
 /*************************/
-using demo::GameService;
-using demo::Request;
-using demo::Response;
+using ua_blackjack::GameService;
+using ua_blackjack::Request;
+using ua_blackjack::Response;
 /*************************/
 
 class Client

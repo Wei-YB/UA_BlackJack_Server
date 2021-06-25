@@ -38,10 +38,10 @@ using grpc::Status;
 
 // Service dependent
 /*************************/
-using demo::GameService;
-using demo::Request;
-using demo::Response;
-using demo::UserService;
+using ua_blackjack::GameService;
+using ua_blackjack::Request;
+using ua_blackjack::Response;
+using ua_blackjack::UserService;
 /*************************/
 using namespace std;
 class Client
@@ -88,7 +88,7 @@ public:
   void StartGame(const int uid)
   {
     Request request;
-    request.set_requesttype(demo::Request_RequestType::Request_RequestType_START_GAME);
+    request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_GAME_START);
     request.set_uid(uid);
     request.set_stamp(stamp++);
     Response reply;
@@ -121,7 +121,7 @@ class GetNameServiceImpl final : public UserService::Service
     auto uid = request->uid();
     auto stamp = request->stamp();
     auto args = request->args();
-    if (requestType == demo::Request_RequestType::Request_RequestType_NOTIFY_USER)
+    if (requestType == ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER)
     {
       if (args[0] == "start")
       {

@@ -11,7 +11,7 @@ void Client::askBettingMoney(const BlackJackUID uid)
     std::cout << "Start betting rpc request" << std::endl;
 #endif
     Request request;
-    request.set_requesttype(demo::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
+    request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);
     request.set_stamp(STAMP_ASK_BETTING);
     request.add_args("start"); //start”：游戏开始，请求 Bet
@@ -33,7 +33,7 @@ void Client::askHitOrStand(const BlackJackUID uid)
     std::cout << "Start ask hit" << std::endl;
 #endif
     Request request;
-    request.set_requesttype(demo::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
+    request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);
     request.set_stamp(STAMP_ASK_HIT);
     request.add_args("hit"); //"hit"：游戏中，请求拿牌或者停牌
@@ -55,7 +55,7 @@ void Client::askUpdate(const BlackJackUID uid)
     std::cout << "Start update" << std::endl;
 #endif
     Request request;
-    request.set_requesttype(demo::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
+    request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(this->uid);
     request.set_stamp(STAMP_ASK_UPDATE);
     request.add_args("update"); //"upate"：用户牌更新，任意一个用户的牌更新都需要通知Client
@@ -114,7 +114,7 @@ void Client::askEnd(const BlackJackUID uid, FinalResultOfGame isWin)
     std::cout << "Start End request" << std::endl;
 #endif
     Request request;
-    request.set_requesttype(demo::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
+    request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);
     request.set_stamp(STAMP_ASK_END);
     request.add_args("end"); //start”：游戏开始，请求 Bet

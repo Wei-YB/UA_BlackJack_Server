@@ -55,19 +55,19 @@ struct TableStruct_demo_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_demo_2eproto;
 ::PROTOBUF_NAMESPACE_ID::Metadata descriptor_table_demo_2eproto_metadata_getter(int index);
-namespace demo {
+namespace ua_blackjack {
 class Request;
 struct RequestDefaultTypeInternal;
 extern RequestDefaultTypeInternal _Request_default_instance_;
 class Response;
 struct ResponseDefaultTypeInternal;
 extern ResponseDefaultTypeInternal _Response_default_instance_;
-}  // namespace demo
+}  // namespace ua_blackjack
 PROTOBUF_NAMESPACE_OPEN
-template<> ::demo::Request* Arena::CreateMaybeMessage<::demo::Request>(Arena*);
-template<> ::demo::Response* Arena::CreateMaybeMessage<::demo::Response>(Arena*);
+template<> ::ua_blackjack::Request* Arena::CreateMaybeMessage<::ua_blackjack::Request>(Arena*);
+template<> ::ua_blackjack::Response* Arena::CreateMaybeMessage<::ua_blackjack::Response>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace demo {
+namespace ua_blackjack {
 
 enum Request_RequestType : int {
   Request_RequestType_INVAL = 0,
@@ -103,13 +103,13 @@ enum Request_RequestType : int {
   Request_RequestType_MATCH_END = 30,
   Request_RequestType_ADD_WAIT_FRIEND = 31,
   Request_RequestType_DELETE_WAIT_FRIEND = 32,
-  Request_RequestType_START_GAME = 33,
+  Request_RequestType_GAME_START = 33,
   Request_RequestType_Request_RequestType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   Request_RequestType_Request_RequestType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool Request_RequestType_IsValid(int value);
 constexpr Request_RequestType Request_RequestType_RequestType_MIN = Request_RequestType_INVAL;
-constexpr Request_RequestType Request_RequestType_RequestType_MAX = Request_RequestType_START_GAME;
+constexpr Request_RequestType Request_RequestType_RequestType_MAX = Request_RequestType_GAME_START;
 constexpr int Request_RequestType_RequestType_ARRAYSIZE = Request_RequestType_RequestType_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Request_RequestType_descriptor();
@@ -129,7 +129,7 @@ inline bool Request_RequestType_Parse(
 // ===================================================================
 
 class Request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:demo.Request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ua_blackjack.Request) */ {
  public:
   inline Request() : Request(nullptr) {}
   virtual ~Request();
@@ -219,7 +219,7 @@ class Request PROTOBUF_FINAL :
   void InternalSwap(Request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "demo.Request";
+    return "ua_blackjack.Request";
   }
   protected:
   explicit Request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -305,8 +305,8 @@ class Request PROTOBUF_FINAL :
     Request_RequestType_ADD_WAIT_FRIEND;
   static constexpr RequestType DELETE_WAIT_FRIEND =
     Request_RequestType_DELETE_WAIT_FRIEND;
-  static constexpr RequestType START_GAME =
-    Request_RequestType_START_GAME;
+  static constexpr RequestType GAME_START =
+    Request_RequestType_GAME_START;
   static inline bool RequestType_IsValid(int value) {
     return Request_RequestType_IsValid(value);
   }
@@ -390,20 +390,20 @@ class Request PROTOBUF_FINAL :
   void _internal_set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // .demo.Request.RequestType requestType = 1;
+  // .ua_blackjack.Request.RequestType requestType = 1;
   bool has_requesttype() const;
   private:
   bool _internal_has_requesttype() const;
   public:
   void clear_requesttype();
-  ::demo::Request_RequestType requesttype() const;
-  void set_requesttype(::demo::Request_RequestType value);
+  ::ua_blackjack::Request_RequestType requesttype() const;
+  void set_requesttype(::ua_blackjack::Request_RequestType value);
   private:
-  ::demo::Request_RequestType _internal_requesttype() const;
-  void _internal_set_requesttype(::demo::Request_RequestType value);
+  ::ua_blackjack::Request_RequestType _internal_requesttype() const;
+  void _internal_set_requesttype(::ua_blackjack::Request_RequestType value);
   public:
 
-  // @@protoc_insertion_point(class_scope:demo.Request)
+  // @@protoc_insertion_point(class_scope:ua_blackjack.Request)
  private:
   class _Internal;
 
@@ -421,7 +421,7 @@ class Request PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Response PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:demo.Response) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ua_blackjack.Response) */ {
  public:
   inline Response() : Response(nullptr) {}
   virtual ~Response();
@@ -511,7 +511,7 @@ class Response PROTOBUF_FINAL :
   void InternalSwap(Response* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "demo.Response";
+    return "ua_blackjack.Response";
   }
   protected:
   explicit Response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -601,7 +601,7 @@ class Response PROTOBUF_FINAL :
   void _internal_set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:demo.Response)
+  // @@protoc_insertion_point(class_scope:ua_blackjack.Response)
  private:
   class _Internal;
 
@@ -627,7 +627,7 @@ class Response PROTOBUF_FINAL :
 #endif  // __GNUC__
 // Request
 
-// .demo.Request.RequestType requestType = 1;
+// .ua_blackjack.Request.RequestType requestType = 1;
 inline bool Request::_internal_has_requesttype() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -639,20 +639,20 @@ inline void Request::clear_requesttype() {
   requesttype_ = 0;
   _has_bits_[0] &= ~0x00000004u;
 }
-inline ::demo::Request_RequestType Request::_internal_requesttype() const {
-  return static_cast< ::demo::Request_RequestType >(requesttype_);
+inline ::ua_blackjack::Request_RequestType Request::_internal_requesttype() const {
+  return static_cast< ::ua_blackjack::Request_RequestType >(requesttype_);
 }
-inline ::demo::Request_RequestType Request::requesttype() const {
-  // @@protoc_insertion_point(field_get:demo.Request.requestType)
+inline ::ua_blackjack::Request_RequestType Request::requesttype() const {
+  // @@protoc_insertion_point(field_get:ua_blackjack.Request.requestType)
   return _internal_requesttype();
 }
-inline void Request::_internal_set_requesttype(::demo::Request_RequestType value) {
+inline void Request::_internal_set_requesttype(::ua_blackjack::Request_RequestType value) {
   _has_bits_[0] |= 0x00000004u;
   requesttype_ = value;
 }
-inline void Request::set_requesttype(::demo::Request_RequestType value) {
+inline void Request::set_requesttype(::ua_blackjack::Request_RequestType value) {
   _internal_set_requesttype(value);
-  // @@protoc_insertion_point(field_set:demo.Request.requestType)
+  // @@protoc_insertion_point(field_set:ua_blackjack.Request.requestType)
 }
 
 // int64 uid = 2;
@@ -671,7 +671,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 Request::_internal_uid() const {
   return uid_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 Request::uid() const {
-  // @@protoc_insertion_point(field_get:demo.Request.uid)
+  // @@protoc_insertion_point(field_get:ua_blackjack.Request.uid)
   return _internal_uid();
 }
 inline void Request::_internal_set_uid(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -680,7 +680,7 @@ inline void Request::_internal_set_uid(::PROTOBUF_NAMESPACE_ID::int64 value) {
 }
 inline void Request::set_uid(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_uid(value);
-  // @@protoc_insertion_point(field_set:demo.Request.uid)
+  // @@protoc_insertion_point(field_set:ua_blackjack.Request.uid)
 }
 
 // int64 stamp = 3;
@@ -699,7 +699,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 Request::_internal_stamp() const {
   return stamp_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 Request::stamp() const {
-  // @@protoc_insertion_point(field_get:demo.Request.stamp)
+  // @@protoc_insertion_point(field_get:ua_blackjack.Request.stamp)
   return _internal_stamp();
 }
 inline void Request::_internal_set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -708,7 +708,7 @@ inline void Request::_internal_set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
 }
 inline void Request::set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_stamp(value);
-  // @@protoc_insertion_point(field_set:demo.Request.stamp)
+  // @@protoc_insertion_point(field_set:ua_blackjack.Request.stamp)
 }
 
 // repeated string args = 4;
@@ -722,66 +722,66 @@ inline void Request::clear_args() {
   args_.Clear();
 }
 inline std::string* Request::add_args() {
-  // @@protoc_insertion_point(field_add_mutable:demo.Request.args)
+  // @@protoc_insertion_point(field_add_mutable:ua_blackjack.Request.args)
   return _internal_add_args();
 }
 inline const std::string& Request::_internal_args(int index) const {
   return args_.Get(index);
 }
 inline const std::string& Request::args(int index) const {
-  // @@protoc_insertion_point(field_get:demo.Request.args)
+  // @@protoc_insertion_point(field_get:ua_blackjack.Request.args)
   return _internal_args(index);
 }
 inline std::string* Request::mutable_args(int index) {
-  // @@protoc_insertion_point(field_mutable:demo.Request.args)
+  // @@protoc_insertion_point(field_mutable:ua_blackjack.Request.args)
   return args_.Mutable(index);
 }
 inline void Request::set_args(int index, const std::string& value) {
-  // @@protoc_insertion_point(field_set:demo.Request.args)
+  // @@protoc_insertion_point(field_set:ua_blackjack.Request.args)
   args_.Mutable(index)->assign(value);
 }
 inline void Request::set_args(int index, std::string&& value) {
-  // @@protoc_insertion_point(field_set:demo.Request.args)
+  // @@protoc_insertion_point(field_set:ua_blackjack.Request.args)
   args_.Mutable(index)->assign(std::move(value));
 }
 inline void Request::set_args(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   args_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:demo.Request.args)
+  // @@protoc_insertion_point(field_set_char:ua_blackjack.Request.args)
 }
 inline void Request::set_args(int index, const char* value, size_t size) {
   args_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:demo.Request.args)
+  // @@protoc_insertion_point(field_set_pointer:ua_blackjack.Request.args)
 }
 inline std::string* Request::_internal_add_args() {
   return args_.Add();
 }
 inline void Request::add_args(const std::string& value) {
   args_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:demo.Request.args)
+  // @@protoc_insertion_point(field_add:ua_blackjack.Request.args)
 }
 inline void Request::add_args(std::string&& value) {
   args_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:demo.Request.args)
+  // @@protoc_insertion_point(field_add:ua_blackjack.Request.args)
 }
 inline void Request::add_args(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   args_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:demo.Request.args)
+  // @@protoc_insertion_point(field_add_char:ua_blackjack.Request.args)
 }
 inline void Request::add_args(const char* value, size_t size) {
   args_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:demo.Request.args)
+  // @@protoc_insertion_point(field_add_pointer:ua_blackjack.Request.args)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
 Request::args() const {
-  // @@protoc_insertion_point(field_list:demo.Request.args)
+  // @@protoc_insertion_point(field_list:ua_blackjack.Request.args)
   return args_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
 Request::mutable_args() {
-  // @@protoc_insertion_point(field_mutable_list:demo.Request.args)
+  // @@protoc_insertion_point(field_mutable_list:ua_blackjack.Request.args)
   return &args_;
 }
 
@@ -805,7 +805,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 Response::_internal_status() const {
   return status_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 Response::status() const {
-  // @@protoc_insertion_point(field_get:demo.Response.status)
+  // @@protoc_insertion_point(field_get:ua_blackjack.Response.status)
   return _internal_status();
 }
 inline void Response::_internal_set_status(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -814,7 +814,7 @@ inline void Response::_internal_set_status(::PROTOBUF_NAMESPACE_ID::int64 value)
 }
 inline void Response::set_status(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:demo.Response.status)
+  // @@protoc_insertion_point(field_set:ua_blackjack.Response.status)
 }
 
 // int64 uid = 2;
@@ -833,7 +833,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 Response::_internal_uid() const {
   return uid_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 Response::uid() const {
-  // @@protoc_insertion_point(field_get:demo.Response.uid)
+  // @@protoc_insertion_point(field_get:ua_blackjack.Response.uid)
   return _internal_uid();
 }
 inline void Response::_internal_set_uid(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -842,7 +842,7 @@ inline void Response::_internal_set_uid(::PROTOBUF_NAMESPACE_ID::int64 value) {
 }
 inline void Response::set_uid(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_uid(value);
-  // @@protoc_insertion_point(field_set:demo.Response.uid)
+  // @@protoc_insertion_point(field_set:ua_blackjack.Response.uid)
 }
 
 // int64 stamp = 3;
@@ -861,7 +861,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 Response::_internal_stamp() const {
   return stamp_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 Response::stamp() const {
-  // @@protoc_insertion_point(field_get:demo.Response.stamp)
+  // @@protoc_insertion_point(field_get:ua_blackjack.Response.stamp)
   return _internal_stamp();
 }
 inline void Response::_internal_set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -870,7 +870,7 @@ inline void Response::_internal_set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) 
 }
 inline void Response::set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_stamp(value);
-  // @@protoc_insertion_point(field_set:demo.Response.stamp)
+  // @@protoc_insertion_point(field_set:ua_blackjack.Response.stamp)
 }
 
 // repeated string args = 4;
@@ -884,66 +884,66 @@ inline void Response::clear_args() {
   args_.Clear();
 }
 inline std::string* Response::add_args() {
-  // @@protoc_insertion_point(field_add_mutable:demo.Response.args)
+  // @@protoc_insertion_point(field_add_mutable:ua_blackjack.Response.args)
   return _internal_add_args();
 }
 inline const std::string& Response::_internal_args(int index) const {
   return args_.Get(index);
 }
 inline const std::string& Response::args(int index) const {
-  // @@protoc_insertion_point(field_get:demo.Response.args)
+  // @@protoc_insertion_point(field_get:ua_blackjack.Response.args)
   return _internal_args(index);
 }
 inline std::string* Response::mutable_args(int index) {
-  // @@protoc_insertion_point(field_mutable:demo.Response.args)
+  // @@protoc_insertion_point(field_mutable:ua_blackjack.Response.args)
   return args_.Mutable(index);
 }
 inline void Response::set_args(int index, const std::string& value) {
-  // @@protoc_insertion_point(field_set:demo.Response.args)
+  // @@protoc_insertion_point(field_set:ua_blackjack.Response.args)
   args_.Mutable(index)->assign(value);
 }
 inline void Response::set_args(int index, std::string&& value) {
-  // @@protoc_insertion_point(field_set:demo.Response.args)
+  // @@protoc_insertion_point(field_set:ua_blackjack.Response.args)
   args_.Mutable(index)->assign(std::move(value));
 }
 inline void Response::set_args(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   args_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:demo.Response.args)
+  // @@protoc_insertion_point(field_set_char:ua_blackjack.Response.args)
 }
 inline void Response::set_args(int index, const char* value, size_t size) {
   args_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:demo.Response.args)
+  // @@protoc_insertion_point(field_set_pointer:ua_blackjack.Response.args)
 }
 inline std::string* Response::_internal_add_args() {
   return args_.Add();
 }
 inline void Response::add_args(const std::string& value) {
   args_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:demo.Response.args)
+  // @@protoc_insertion_point(field_add:ua_blackjack.Response.args)
 }
 inline void Response::add_args(std::string&& value) {
   args_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:demo.Response.args)
+  // @@protoc_insertion_point(field_add:ua_blackjack.Response.args)
 }
 inline void Response::add_args(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   args_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:demo.Response.args)
+  // @@protoc_insertion_point(field_add_char:ua_blackjack.Response.args)
 }
 inline void Response::add_args(const char* value, size_t size) {
   args_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:demo.Response.args)
+  // @@protoc_insertion_point(field_add_pointer:ua_blackjack.Response.args)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
 Response::args() const {
-  // @@protoc_insertion_point(field_list:demo.Response.args)
+  // @@protoc_insertion_point(field_list:ua_blackjack.Response.args)
   return args_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
 Response::mutable_args() {
-  // @@protoc_insertion_point(field_mutable_list:demo.Response.args)
+  // @@protoc_insertion_point(field_mutable_list:ua_blackjack.Response.args)
   return &args_;
 }
 
@@ -955,14 +955,14 @@ Response::mutable_args() {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace demo
+}  // namespace ua_blackjack
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::demo::Request_RequestType> : ::std::true_type {};
+template <> struct is_proto_enum< ::ua_blackjack::Request_RequestType> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::demo::Request_RequestType>() {
-  return ::demo::Request_RequestType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::ua_blackjack::Request_RequestType>() {
+  return ::ua_blackjack::Request_RequestType_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

@@ -44,9 +44,9 @@ using grpc::Status;
 
 // Service dependent
 /*************************/
-using demo::GameService;
-using demo::Request;
-using demo::Response;
+using ua_blackjack::GameService;
+using ua_blackjack::Request;
+using ua_blackjack::Response;
 /*************************/
 enum
 {
@@ -107,7 +107,7 @@ public:
         reply_.set_uid(uid);
         reply_.set_stamp(stamp);
 
-        if (type == demo::Request_RequestType::Request_RequestType_START_GAME) //创建房间
+        if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //创建房间
         {
           static uint64_t roomMemberSize = 0;
           static UidList uids;
@@ -116,7 +116,7 @@ public:
           std::cout << "ONE PEROSON COME IN" << std::endl;
 #endif
           roomMemberSize++;
-          roomMemberSize %= 2;
+          roomMemberSize %= 4;
           uids.push_back(uid);
           if (roomMemberSize == 0) //凑够2个人 demo，后面不需要这些，而是由lobby分配人过来
           {
@@ -127,13 +127,13 @@ public:
             uids.clear();
           }
         }
-        else if (type == demo::Request_RequestType::Request_RequestType_LEAVE_ROOM) //投降
+        else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //投降
         {
         }
-        else if (type == demo::Request_RequestType::Request_RequestType_DOUBLE) //双倍
+        else if (type == ua_blackjack::Request_RequestType::Request_RequestType_DOUBLE) //双倍
         {
         }
-        else if (type == demo::Request_RequestType::Request_RequestType_SURRENDER) //投降
+        else if (type == ua_blackjack::Request_RequestType::Request_RequestType_SURRENDER) //投降
         {
         }
 
