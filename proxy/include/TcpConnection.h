@@ -13,14 +13,15 @@ using common::Response;
 
 class TcpConnection
 {
-    const int bufferSize_ = 4096;
+    static const int bufferSize_ = 4096;
 public:
     TcpConnection(FileDesc connfd, const struct sockaddr_in &addr, Net::EventLoop *loop)
                 : writeBuffer_(bufferSize_), readBuffer_(bufferSize_), 
                 eventsSource_(connfd, loop,
                                 std::bind(&TcpConnection::OnInput, this), 
                                 std::bind(&TcpConnection::OnOutput, this), 
-                                std::bind(&TcpConnection::OnError, this)) {}
+                                std::bind(&TcpConnection::OnError, this)) 
+    {eventsSource_.Update(Net::EV_IN | Net::EV_ET | Net::EV_ERR);}
     ~TcpConnection() {close(eventsSource_.fd());}
     // callbacks
     int OnInput()
@@ -72,17 +73,23 @@ public:
             }
         }
         // TODO: call Client to handle this
-        inputCallBack_(requests, responses);
+        if (inputCallBack_)
+        {
+            inputCallBack_(requests, responses);
+        }
         return pkgProcessed;;
     }
     
     int OnOutput()
     {
         // check whether we can get some data from upper layer
-        outputCallBack_();
+        if (outputCallBack_)
+        {
+            outputCallBack_();
+        }
         if (writeBuffer_.empty())
         {   
-            eventsSource_.Update(Net::EV_IN | Net::EV_ERR | Net::EV_ERR);
+            eventsSource_.Update(Net::EV_IN | Net::EV_ET | Net::EV_ERR);
             return 0;
         }
         return write(eventsSource_.fd(), writeBuffer_);
@@ -90,7 +97,8 @@ public:
     
     int OnError()
     {
-        errorCallBack_();
+        if (errorCallBack_)
+            errorCallBack_();
         return -1;
     }
     //

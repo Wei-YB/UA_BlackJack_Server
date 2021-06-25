@@ -7,6 +7,7 @@
 #include <mutex>
 #include <functional>
 
+#include <chrono>
 #include <grpc/support/log.h>
 #include <grpcpp/grpcpp.h>
 #include <grpcpp/server.h>
@@ -92,13 +93,20 @@ public:
 private:
     void HandleRpcs()
     {
-        new AsyncCall(&service_, cq_.get(), uidToClient_, lock_);
+        AsyncCall *newCall = new AsyncCall;
+        ProcessCall(newCall);
         void *tag;
         bool ok;
-        while (true)
+        time_point deadline = std::chrono::system_clock::now() +
+                                std::chrono::milliseconds(500);
+        while (!stop_ && cq_->AsyncNext(&tag, &ok, deadline))
         {
-            GPR_ASSERT(cq_->Next(&tag, &ok));
-            GPR_ASSERT(ok);
+            deadline = std::chrono::system_clock::now() +
+                                std::chrono::milliseconds(500);
+            if (!ok)
+            {
+                continue;
+            }
             AsyncCall *call = static_cast<AsyncCall*>(tag);
             ProcessCall(call);
         }
@@ -109,7 +117,7 @@ private:
         if (call->status_ == CREATE)
         {
             call->status_ = PROCESS;
-            service_->RequestNotifyUser(&call->ctx_, &call->request_, &call->responder_, &cq_, &cq_, call);
+            service_.RequestNotifyUser(&call->ctx_, &call->request_, &call->responder_, cq_.get(), cq_.get(), call);
         }
         else if (call->status_ == PROCESS)
         {
@@ -128,7 +136,7 @@ private:
                 int64_t newStamp = (int64_t)call;
                 call->request_.set_stamp(newStamp);
                 call->stamp_ = originStamp;
-                if (0 > sharedProxy->SendRequest(request_))
+                if (0 > sharedProxy->SendRequest(call->request_))
                 {
                     returnFailureResponse(call, "User busy or do not exist.");
                     return;
@@ -164,10 +172,12 @@ private:
             stamp = call->stamp_;
             response.set_stamp(stamp);
             call->reply_ = response;
-            call->responder_.Finish(reply_, Status::OK, call);
+            call->responder_.Finish(call->reply_, Status::OK, call);
             call->status_ = FINISH;
         }
     }
+
+    void Stop() {stop_ = true;}
 
 private:
     std::string serverAddress_;
@@ -177,6 +187,7 @@ private:
     std::weak_ptr<ProxyServer> proxy_;
     std::unordered_map<int64_t, AsyncCall*> stampToAsyncCall_;
     std::mutex stampToAsyncCallLock_;
+    bool stop_ = false;
 };
 
 #endif

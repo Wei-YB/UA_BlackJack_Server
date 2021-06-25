@@ -4,6 +4,7 @@
 #include <memory>
 #include "common.h"
 #include "common.pb.h"
+#include "EventLoop.h"
 #include "TcpConnection.h"
 
 using common::Request;
@@ -12,7 +13,7 @@ using common::Response;
 class Client
 {
 public:
-    Client(std::shared_ptr<TcpConnection> conn, 
+    Client(std::shared_ptr<TcpConnection> conn,
            const std::function<void(FileDesc, const Request &)> &requestCallBack,
            const std::function<void(const Response &)> &responseCallBack,
            const std::function<void(FileDesc)> &errorCallBack) 

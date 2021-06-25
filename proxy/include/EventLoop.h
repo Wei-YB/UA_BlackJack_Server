@@ -15,7 +15,6 @@
 
 #include <exception>
 #include <unordered_map>
-#include <list>
 
 #include "common.h"
 
@@ -94,6 +93,7 @@ public:
     }
 
     FileDesc fd() const {return fd_;}
+    
     friend class EventLoop;
 private:
     FileDesc fd_;
@@ -103,80 +103,6 @@ private:
     std::function<int()> inEventCallBack_;
     std::function<int()> outEventCallBack_;
     std::function<int()> errEventCallBack_;
-};
-
-class EventsHandler
-{
-public:
-    EventsHandler() {}
-    virtual ~EventsHandler() {}
-    EventsHandler(const EventsHandler &) = delete;
-    EventsHandler &operator=(const EventsHandler &) = delete;
-
-public:
-    virtual int addToEventLoop(EventLoop *loop) = 0;
-    virtual int handleEvents(int sockfd, Event events) = 0;
-    virtual int pushRpcRequest(void *call) {return 0;}
-    virtual int pushRpcResponse(void *response) {return 0;}
-};
-
-// this template class provide functionalities of recycling expired handlers 
-// and query for handlers by key.
-// Note: the Key type parameter must be hashtable
-template<typename Key>
-class HandlerManager 
-{
-public:
-    HandlerManager() {}
-    ~HandlerManager() {}
-    HandlerManager(const HandlerManager &) = delete;
-    HandlerManager &operator=(const HandlerManager &) = delete;
-
-public:
-    int registerHandler(const Key &key, EventsHandler *handler)
-    {
-        if (m_handlers.find(key) == m_handlers.end())
-        {
-            m_handlers.emplace(key, handler);
-            return 0;
-        }
-        return -1;
-    }
-
-    int expireHandler(const Key &key)
-    {
-        if (m_handlers.find(key) != m_handlers.end())
-        {
-            m_expiredHandler.push_back(m_handlers[key]);
-            return 0;
-        }
-        return -1;
-    }
-
-    int cleanExpired()
-    {
-        int ret = 0;
-        while (!m_expiredHandler.empty())
-        {
-            delete m_expiredHandler.front();
-            m_expiredHandler.pop_front();
-            ++ret;
-        }
-        return ret;
-    }
-
-    EventsHandler *find(const Key &key)
-    {
-        if (m_handlers.find(key) != m_handlers.end())
-        {
-            return m_handlers[key];
-        }
-        return NULL;
-    }
-
-private:
-    std::unordered_map<Key, EventsHandler *> m_handlers;
-    std::list<EventsHandler *> m_expiredHandler;
 };
 
 class EventLoop
@@ -226,9 +152,9 @@ public:
 
     int mod(const EventsSource &evsSource)
     {
-        if (fdToEventsSource_.find(evsSource.fd_) != fdToEventsSource_.end())
+        if (fdToEventsSource_.find(evsSource.fd_) == fdToEventsSource_.end())
         {
-            return -1;
+            return add(evsSource);
         }
 
         struct epoll_event ev;

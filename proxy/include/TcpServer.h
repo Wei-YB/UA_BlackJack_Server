@@ -38,13 +38,12 @@ class TcpServer
 {
 public:
     TcpServer(const char *ip, unsigned short port, EventLoop *loop,
-            const std::function<void(std::shared_ptr<TcpConnection>)> &connCb,
-            const std::function<void()> &errCb) 
+            const std::function<void(std::shared_ptr<TcpConnection>)> &connCb) 
             : eventsSource_(socket(AF_INET, SOCK_STREAM, 0), loop, 
                             std::bind(&TcpServer::OnConnection, this),
                             nullptr,
                             std::bind(&TcpServer::OnError, this)),
-            loop_(loop), connectionCallBack_(connCb), errorCallBack_(errCb)
+            loop_(loop), connectionCallBack_(connCb), errorCallBack_(nullptr)
     {
         addr_.sin_family = AF_INET;
         addr_.sin_port = htons(port);
@@ -95,7 +94,8 @@ public:
 
     int OnError()
     {
-        errorCallBack_();
+        if (errorCallBack_)
+            errorCallBack_();
         return -1;
     }
 

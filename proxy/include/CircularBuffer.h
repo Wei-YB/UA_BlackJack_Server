@@ -302,8 +302,6 @@ void circularBufferToString(const CircularBuffer &buffer, size_t length, std::st
     }
 }
 
-
-
 template<typename T>
 class CircularQueue {
 public:

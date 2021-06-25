@@ -121,8 +121,13 @@ const std::string cmdTypeMap[] = {
 //     os << std::endl;
 // }
 
-class ProxyServerServer {
+class ProxyServer {
 public:
+    ProxyServer(const char *ip, unsigned short port, Net::EventLoop *loop)
+    {
+        server_ = std::make_shared<Net::TcpServer>(ip, port, loop, 
+                                        std::bind(&ProxyServer::OnNewClient, this, std::placeholders::_1));
+    }
     // callbacks
     void OnNewClient(std::shared_ptr<TcpConnection> conn)
     {
@@ -192,7 +197,7 @@ public:
         }
     }
 
-    void OnClientResponse(const Response &response)
+    void OnClientResponse(Response &response)
     {
         // TODO: check the validity of clientResponseCallBack_
         clientResponseCallBack_(response);
@@ -233,6 +238,11 @@ public:
 
     void SetClientResponseCallBack(const std::function<void(Response &)> &clientResponseCallBack)
     {clientResponseCallBack_ = clientResponseCallBack;}
+
+    void RegisterServiceClient(Request::RequestType requestType, std::shared_ptr<ServiceClient> client)
+    {
+        requestTypeToServiceClient_.emplace(requestType, client);
+    }
 private:
     std::mutex uidToClientLock_;
     std::unordered_map<UserId, std::shared_ptr<Client>> uidToClient_;   
@@ -241,6 +251,7 @@ private:
     std::unordered_map<int64_t, std::weak_ptr<Client>> stampToClient_;
     std::unordered_map<Request::RequestType, std::weak_ptr<ServiceClient>> requestTypeToServiceClient_;
     std::function<void(Response &)> clientResponseCallBack_;
+    std::shared_ptr<Net::TcpServer> server_;
 };
 
 #endif
