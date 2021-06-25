@@ -16,8 +16,8 @@
  *
  */
 
-#ifndef PLAYER_CLIENT_DB_SYN
-#define PLAYER_CLIENT_DB_SYN
+#ifndef PLAYER_CLIENT_DB_SYN_H
+#define PLAYER_CLIENT_DB_SYN_H
 
 #include <grpcpp/grpcpp.h>
 

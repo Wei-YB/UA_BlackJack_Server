@@ -3,6 +3,7 @@ syntax = "proto3";
 package social;
 
 service SocialService {
+    // TODO: change to Notify
     rpc RequestSocial (Request) returns (Response) {}
 }
 

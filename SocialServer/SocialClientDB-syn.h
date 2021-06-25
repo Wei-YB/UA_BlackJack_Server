@@ -16,8 +16,8 @@
  *
  */
 
-#ifndef SOCIAL_CLIENT_DB_SYN
-#define SOCIAL_CLIENT_DB_SYN
+#ifndef SOCIAL_CLIENT_DB_SYN_H
+#define SOCIAL_CLIENT_DB_SYN_H
 
 #include <grpcpp/grpcpp.h>
 

@@ -86,6 +86,12 @@ private:
                 std::string name = "Aaron ";
                 // The actual processing.
                 reply_.set_name(name);
+                std::cout << "1 "
+                          << "2 "
+                          << "3 "
+                          << "4 "
+                          << "5 "
+                          << "\n";
 
                 // And we are done! Let the gRPC runtime know we've finished
                 status_ = FINISH;

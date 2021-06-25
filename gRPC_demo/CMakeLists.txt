@@ -34,8 +34,19 @@ target_link_libraries(hw_grpc_proto
   ${_PROTOBUF_LIBPROTOBUF})
 
 # cpp file dependent: change server and client to your own cpp file (withou .cc/.cpp suffix)
+# foreach(_target
+#   server-asyn client-asyn server-syn client-syn)
+#   add_executable(${_target} "${_target}.cc")
+#   target_link_libraries(${_target}
+#     hw_grpc_proto
+#     ${_REFLECTION}
+#     ${_GRPC_GRPCPP}
+#     ${_PROTOBUF_LIBPROTOBUF})
+# endforeach()
+
+
 foreach(_target
-  server-asyn client-asyn server-syn client-syn)
+  server-asyn-test client_test)
   add_executable(${_target} "${_target}.cc")
   target_link_libraries(${_target}
     hw_grpc_proto

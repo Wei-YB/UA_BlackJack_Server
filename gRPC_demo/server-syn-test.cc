@@ -42,10 +42,18 @@ using demo::NameReply;
 using demo::NameRequest;
 /*************************/
 
+int cnt = 0;
+
 // Logic and data behind the server's behavior.
 class GetNameServiceImpl final : public GetNameService::Service {
     Status GetName(ServerContext* context, const NameRequest* request, NameReply* reply) override {
         reply->set_name("Aaron");
+        std::cout << "1 "
+                  << "2 "
+                  << "3 "
+                  << "4 "
+                  << "5 "
+                  << "\n";
         return Status::OK;
     }
 };

@@ -1,3 +1,6 @@
+#ifndef PLAYER_SERVER_ASYN_H
+#define PLAYER_SERVER_ASYN_H
+
 #include <grpc/support/log.h>
 #include <grpcpp/grpcpp.h>
 
@@ -66,3 +69,5 @@ private:
     PlayerService::AsyncService service_;
     std::unique_ptr<Server> server_;
 };
+
+#endif
