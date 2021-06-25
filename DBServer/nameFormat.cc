@@ -5,7 +5,7 @@
 
 static char buffer[64]; // output format buffer
 
-char* ua_black_jack_server::data_base_server::nameFormat::GetKey(FormatType type, int64_t input) {
+char* ua_black_jack_server::data_base_server::name_format::GetKey(FormatType type, int64_t input) {
     const auto ret = snprintf(buffer, sizeof buffer, "%ld", input);
     // TODO: check the return value
     const auto next = buffer + ret;
@@ -37,7 +37,7 @@ char* ua_black_jack_server::data_base_server::nameFormat::GetKey(FormatType type
     return buffer;
 }
 
-char* ua_black_jack_server::data_base_server::nameFormat::GetKey(FormatType type, const char* input) {
+char* ua_black_jack_server::data_base_server::name_format::GetKey(FormatType type, const char* input) {
     if (type == FormatType::NICKNAME_TO_UID && input) {
         const auto len = strlen(input);
         std::strcpy(buffer, input);
@@ -47,7 +47,7 @@ char* ua_black_jack_server::data_base_server::nameFormat::GetKey(FormatType type
     return nullptr;
 }
 
-char* ua_black_jack_server::data_base_server::nameFormat::GetKey(FormatType type) {
+char* ua_black_jack_server::data_base_server::name_format::GetKey(FormatType type) {
     switch (type) {
     case FormatType::GET_NEXT_UID:
         strcpy(buffer, "UID");

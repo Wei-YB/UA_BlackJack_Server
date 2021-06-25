@@ -1,52 +1,53 @@
 #pragma once
 
-#include "Player.pb.h"
-#include "Player.grpc.pb.h"
+#include "UA_BlackJack.pb.h"
+#include "UA_BlackJack.grpc.pb.h"
 
 #include "Database.h"
 
 namespace ua_black_jack_server::data_base_server {
 
-using ::player::Request;
-using ::player::Response;
+using ::ua_blackjack::Request;
+using ::ua_blackjack::Response;
 using RepeatedString = ::google::protobuf::RepeatedPtrField<std::string>;
 
 
 class RequestParser {
 public:
-    RequestParser(const std::string& redis_host = "127.0.0.1:6379", int init_score = 2000) : database_(redis_host, init_score) {
+    RequestParser(const std::string& redis_host = "127.0.0.1:6379", int init_score = 2000) : database_(
+        redis_host, init_score) {
     }
 
 public:
     bool Parse(const Request& req, Response& response) {
         switch (req.requesttype()) {
-        case player::Request_RequestType_SIGNUP:
+        case ua_blackjack::Request_RequestType_SIGNUP:
             return ParseSignUp(req.args(), response);
-        case player::Request_RequestType_RANK_ME:
+        case ua_blackjack::Request_RequestType_RANK_ME:
             return ParseRankMe(req.uid(), response);
-        case player::Request_RequestType_RANK_TOP:
+        case ua_blackjack::Request_RequestType_RANK_TOP:
             return ParseRankTop(req.args(), response);
-        case player::Request_RequestType_ADD_FRIEND:
+        case ua_blackjack::Request_RequestType_ADD_FRIEND:
             return ParseAddFriend(req.uid(), req.args(), response);
-        case player::Request_RequestType_DELETE_FRIEND:
+        case ua_blackjack::Request_RequestType_DELETE_FRIEND:
             return ParseDeleteFriend(req.uid(), req.args(), response);
-        case player::Request_RequestType_LIST_FRIEND:
+        case ua_blackjack::Request_RequestType_LIST_FRIEND:
             return ParseGetFriendList(req.uid(), response);
-        case player::Request_RequestType_LIST_MATCH:
+        case ua_blackjack::Request_RequestType_LIST_MATCH:
             return ParseGetMatchList(req.uid(), response);
-        case player::Request_RequestType_LIST_WAITTING:
+        case ua_blackjack::Request_RequestType_LIST_WAITTING:
             return ParseGetWaitingFriendList(req.uid(), response);
-        case player::Request_RequestType_GET_NAME:
+        case ua_blackjack::Request_RequestType_GET_NAME:
             return ParseGetNickname(req.uid(), response);
-        case player::Request_RequestType_GET_UID:
+        case ua_blackjack::Request_RequestType_GET_UID:
             return ParseGetUid(req.args(), response);
-        case player::Request_RequestType_GET_PASSWORD:
+        case ua_blackjack::Request_RequestType_GET_PASSWORD:
             return ParseGetPassword(req.uid(), response);
-        case player::Request_RequestType_GET_SCORE:
+        case ua_blackjack::Request_RequestType_GET_SCORE:
             return ParseGetScore(req.uid(), response);
-        case player::Request_RequestType_GET_MATCH_INFO:
+        case ua_blackjack::Request_RequestType_GET_MATCH_INFO:
             return ParseGetMatchInfo(req.args(), response);
-        case player::Request_RequestType_MATCH_END:
+        case ua_blackjack::Request_RequestType_MATCH_END:
             return ParseMatchEnd(req.args(), response);
         default:
             return false;

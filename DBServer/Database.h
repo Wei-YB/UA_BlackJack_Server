@@ -1,7 +1,7 @@
 #pragma once
-
-
 #include "RedisService.h"
+
+#include <map>
 
 namespace ua_black_jack_server :: data_base_server {
 
@@ -55,5 +55,4 @@ private:
     RedisService      service_;
     const int         init_score_;
 };
-
 }
