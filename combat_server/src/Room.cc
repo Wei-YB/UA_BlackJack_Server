@@ -183,6 +183,7 @@ void Room::deleteRoom(void)
     // auto client = std::make_shared<ClientForDatebase>(grpc::CreateChannel(
     //     "9.134.69.87:50051", grpc::InsecureChannelCredentials()));
     // client->matchEnd(this->playerList);
+    //ClientForDatebase::getInstance().matchEnd(this->playerList);
     /*************存储数据到数据库**************/
 }
 Room::~Room() //房间解散

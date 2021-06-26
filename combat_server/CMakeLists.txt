@@ -12,15 +12,17 @@ aux_source_directory(./3rd/grpc/grpc_cpp RPC_SRCS)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++17  -Wall -Wno-unused-variable -O3 \
                         -pthread  -lstdc++ -Wl,--no-as-needed -ldl")
 set(COLIB_DIRECTORY "${PROJECT_SOURCE_DIR}/3rd/libco")
+set(SPDLOG_DIRECTORY "${PROJECT_SOURCE_DIR}/3rd/spdlog")
 set(EXAMPLE_DIRECTORY "${PROJECT_SOURCE_DIR}/example")
 include_directories(
     "${PROJECT_SOURCE_DIR}/inc"
     "${PROJECT_SOURCE_DIR}/3rd/grpc/grpc_h"
     "/root/.local/include/"
     ${COLIB_DIRECTORY}
-
+    "${SPDLOG_DIRECTORY}/inc/"
 )
 LINK_DIRECTORIES(${COLIB_DIRECTORY})
+LINK_DIRECTORIES(${SPDLOG_DIRECTORY})
 link_libraries(colib
 ${_REFLECTION}
   ${_GRPC_GRPCPP}

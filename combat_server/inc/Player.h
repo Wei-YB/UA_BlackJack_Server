@@ -16,9 +16,9 @@ public:
     typedef std::shared_ptr<Player> ptr;
     using PokerPointer = Poker::ptr;
     using PokerList = std::list<PokerPointer>;
-    PokerList pokerList;         //用户手上的牌
-    BlackJackMoney bettingMoney; //用户台面上的筹码
-    BlackJackUID uid;
+    PokerList pokerList;             //用户手上的牌
+    BlackJackMoney bettingMoney = 0; //用户台面上的筹码
+    BlackJackUID uid = -1;
 
     bool isDealer = false;               //用户是否为庄家
     bool isStand = false;                //是否停牌
@@ -41,6 +41,5 @@ public:
     ClientForTestUser::ptr client;
 
 private:
-    BlackJackMoney bankMoney; //用户账户中的钱
-    BlackJackRoomID room;     //用户当前所在房间，在一局对局当中，用户的room是不能被更改的
+    BlackJackRoomID room = -1; //用户当前所在房间，在一局对局当中，用户的room是不能被更改的
 };

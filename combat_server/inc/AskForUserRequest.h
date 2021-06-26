@@ -47,7 +47,7 @@ public:
 
     void askBettingMoney(const BlackJackUID uid);
     void askHitOrStand(const BlackJackUID uid);
-    void askUpdate(const BlackJackUID uid);
+    void askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser);
     void askEnd(const BlackJackUID uid, FinalResultOfGame isWin);
 
 private:

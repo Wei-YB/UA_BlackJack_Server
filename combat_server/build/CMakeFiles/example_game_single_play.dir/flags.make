@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++17  -Wall -Wno-unused-variable -O3                        
 
 CXX_DEFINES = -DCARES_STATICLIB
 
-CXX_INCLUDES = -I/home/tong/UA_BlackJack_Server/combat_server/inc -I/home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_h -I/home/tong/UA_BlackJack_Server/combat_server/3rd/libco -isystem /root/.local/include 
+CXX_INCLUDES = -I/home/tong/UA_BlackJack_Server/combat_server/inc -I/home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_h -I/home/tong/UA_BlackJack_Server/combat_server/3rd/libco -I/home/tong/UA_BlackJack_Server/combat_server/3rd/spdlog/inc -isystem /root/.local/include 
 

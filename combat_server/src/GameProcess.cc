@@ -4,6 +4,8 @@ std::unordered_map<BlackJackRoomID, stEnv_t::ptr> roomEnvirHashMap; //roomid和�
 std::unordered_map<BlackJackRoomID, bool> roomEnvirExistHashMap;    //roomid和句柄是否存在的hash映射
 stCoRoutine_t *receiveSignalFromRPC;
 stCoRoutine_t *recoverystCo;
+int conditionForWaitingRpc;                              //接受rpc的信号量
+int conditionForClearRoom;                               //清楚房间的信号量
 int createstEnv_t(BlackJackRoomID roomID, UidList &uids) //创建协程
 {
 #ifdef PRINT_LOG
@@ -41,7 +43,7 @@ void *createOneGame(void *arg) //开启一局游戏
 #ifdef PRINT_LOG
     std::cout << "GAME BEGIN" << std::endl;
 #endif
-    // std::cout << "NO ERROR" << std::endl;
+    // std::cout<<"NO ERROR" << std::endl;
     auto room = malloOneRoom(env->roomID, env->uids); //创建一个房间
     int conRet = 0;
     //选择筹码
@@ -53,15 +55,16 @@ void *createOneGame(void *arg) //开启一局游戏
             continue;
 
         player->client->askBettingMoney(player->uid);
+        myConditionSignal(conditionForWaitingRpc); //有机会唤醒
         conRet = 0;
-        conRet = myConditionWait(env->cond, 30000); //30秒内应收到信号
-        if (conRet == 0)                            //超时未收到信号，认为玩家已退出游戏
+        conRet = myConditionWait(env->cond, 1); //30秒内应收到信号
+        if (conRet == 0)                        //超时未收到信号，认为玩家已退出游戏
         {
             player->quit();             //托管
             player->isStand = true;     //玩家停牌
-            player->finalResult = DRAW; //筹码阶段退出应判平
+            player->finalResult = DRAW; //筹码阶段退出应判输0元
 #ifdef PRINT_LOG
-            std::cout << ((QuitArgument *)env->arg)->uid << " quit" << std::endl;
+            std::cout << player->uid << " quit" << std::endl;
 #endif
             continue;
         }
@@ -82,7 +85,8 @@ void *createOneGame(void *arg) //开启一局游戏
     {
         for (auto &player : room->playerList)
         {
-            player->hitPoker();
+            if (player->isStand == false) //用户没下注不准抽牌
+                player->hitPoker();
         }
     }
     room->playerList.front()->pokerList.front()->setHide(); //将第一个玩家的第一张牌设为不可见(庄家的第一张牌为暗牌)
@@ -113,6 +117,7 @@ void *createOneGame(void *arg) //开启一局游戏
             }
 
             player->client->askHitOrStand(player->uid);
+            myConditionSignal(conditionForWaitingRpc); //有机会唤醒
             conRet = 0;
             conRet = myConditionWait(env->cond, 30000); //30秒内应收到信号
             if (conRet == 0)                            //超时未收到信号，认为玩家已退出游戏
@@ -157,12 +162,14 @@ void *createOneGame(void *arg) //开启一局游戏
         player->client->askEnd(player->uid, player->finalResult);
     }
     unUsedstEnvRoomID.push((room->getRoomId())); //协程结束，return后栈中资源释放，接着回收协程的协程开始工作
+    myConditionSignal(conditionForClearRoom);    //唤醒清空协程
     return NULL;
 }
-uint64_t cnt = 0;
+
 void *waitingSignalFromOtherModule(void *arg)
 {
     co_enable_hook_sys();
+    conditionForWaitingRpc = createCondition(0);
     ServerImpl *server = (ServerImpl *)arg;
 
     // Spawn a new CallData instance to serve new clients.
@@ -177,7 +184,8 @@ void *waitingSignalFromOtherModule(void *arg)
     {
         while (server->cq_->AsyncNext<gpr_timespec>(&tag, &ok, deadline) != grpc::CompletionQueue::NextStatus::GOT_EVENT)
         {
-            poll(NULL, 0, 1); //必须要有挂起函数
+            myConditionWait(conditionForWaitingRpc, 1); //最长1ms检查一次
+            //poll(NULL, 0, 1); //必须要有挂起函数
         }
 
         GPR_ASSERT(ok);
@@ -187,15 +195,16 @@ void *waitingSignalFromOtherModule(void *arg)
 void *recoveryUnusedCo(void *arg) //回收协程的协程
 {
     co_enable_hook_sys();
-
+    conditionForClearRoom = createCondition(0);
     while (true)
     {
         if (unUsedstEnvRoomID.empty()) //没有需要释放的资源
         {
             // #ifdef PRINT_LOG
-            //             std::cout << cnt++ << "Free.." << std::endl;
+            //             std::cout<<cnt++ << "Free.." << std::endl;
             // #endif
-            poll(NULL, 0, 1); //必须要有挂起函数
+            // poll(NULL, 0, 1); //必须要有挂起函数
+            myConditionWait(conditionForClearRoom, -1);
         }
         else
         {
@@ -215,6 +224,6 @@ void UpdateAll(std::list<Player::ptr> &list, BlackJackUID uid)
 {
     for (auto player : list)
     {
-        player->client->askUpdate(uid);
+        player->client->askUpdate(uid, player->uid);
     }
 }

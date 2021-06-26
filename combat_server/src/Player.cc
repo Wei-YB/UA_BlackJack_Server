@@ -94,7 +94,7 @@ void Player::showMessage(void) const
 {
 
     std::cout << "Player-"
-              << "-uid-" << this->uid << "-bankMoney-" << bankMoney << "-bettingMoney-" << bettingMoney << "-roomid-" << room << std ::endl;
+              << "-uid-" << this->uid << "-bettingMoney-" << bettingMoney << "-roomid-" << room << std ::endl;
 
     for (auto &poker : pokerList)
     {

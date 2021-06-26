@@ -49,21 +49,20 @@ void ClientForTestUser::askHitOrStand(const BlackJackUID uid)
 
     call->response_reader->Finish(&call->reply, &call->status, (void *)call);
 }
-void ClientForTestUser::askUpdate(const BlackJackUID uid)
+void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser) //第一个uid是哪个用户的信息更新了，第二个参数是发送给哪个用户
 {
 #ifdef PRINT_LOG
     std::cout << "Start update" << std::endl;
 #endif
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
-    request.set_uid(this->uid);
+    request.set_uid(notifyUser);
     request.set_stamp(STAMP_ASK_UPDATE);
     request.add_args("update"); //"upate"：用户牌更新，任意一个用户的牌更新都需要通知Client
     auto player = playerHashMap[uid];
-    auto playerForClient = playerHashMap[this->uid];
+    auto playerForClient = playerHashMap[notifyUser];
     if (auto ptr = player.lock())
     {
-
         std::stringstream tmp;
         tmp << ptr->uid;
         std::string updateArg = tmp.str();
@@ -158,7 +157,10 @@ void ClientForTestUser::AsyncCompleteRpc() //开一个线程告知协程发送�
 
         if (call->status.ok())
         {
-            this->printResponce(call->reply);             //收到信号
+#ifdef PRINT_LOG
+            this->printResponce(call->reply); //收到信号
+#endif
+
             if (call->reply.stamp() == STAMP_ASK_BETTING) //ask betting有响应了
             {
                 auto replyuid = call->reply.uid();
@@ -227,8 +229,8 @@ void ClientForTestUser::AsyncCompleteRpc() //开一个线程告知协程发送�
         }
         else
         {
-            //std::cout << this->uid << call->status.error_message() << std::endl;
-            this->askBettingMoney(uid); //再call一次
+            std::cout << this->uid << call->status.error_message() << std::endl;
+            //this->askBettingMoney(uid); //再call一次
         }
         delete call;
     }

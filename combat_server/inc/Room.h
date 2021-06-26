@@ -29,6 +29,7 @@ public:
             playerList.emplace_back(std::make_shared<Player>(i));
             playerList.back()->setRoom(rid);
 
+            /*****************此处代码与proxy联调需要修改***************************/
             std::stringstream ss;
             ss << i;
             std::string str = ss.str();
@@ -39,6 +40,8 @@ public:
                                                                             i);
             std::thread thread_ = std::thread(&ClientForTestUser::AsyncCompleteRpc, playerList.back()->client.get()); //每个用户都用一个线程去监控发送给他的rpc命令有没有相应
             thread_.detach();
+
+            /*****************此处代码与proxy联调需要修改***************************/
 
             playerHashMap[i] = playerList.back(); //这个不能放在player的构造函数中，因为构造函数执行完时暂时没有shared_ptr指向他
         }

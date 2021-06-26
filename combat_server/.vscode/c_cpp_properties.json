@@ -5,6 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/inc",
                 "${workspaceFolder}/3rd/libco",
+                "${workspaceFolder}/3rd/spdlog/inc/**",
                 "${workspaceFolder}/3rd/grpc/grpc_h",
                 "/root/.local/include/"
             ],

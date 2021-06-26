@@ -31,8 +31,7 @@ class ClientForDatebase
 {
 public:
     typedef std::shared_ptr<ClientForDatebase> ptr;
-    ClientForDatebase(std::shared_ptr<Channel> channel)
-        : stub_(DatabaseService::NewStub(channel)) {}
+
     void printResponce(Response &responce)
     {
         std::cout << "status = " << responce.status() << " uid = " << responce.uid()
@@ -46,8 +45,20 @@ public:
     void AsyncCompleteRpc();
 
     void matchEnd(const std::list<Player::ptr> playerList);
+    static ClientForDatebase &getInstance()
+    {
+        static ClientForDatebase instance(grpc::CreateChannel(
+            "9.134.69.87:50051", grpc::InsecureChannelCredentials()));
+        return instance;
+    }
 
 private:
+    ClientForDatebase(std::shared_ptr<Channel> channel)
+        : stub_(DatabaseService::NewStub(channel)) {}
+    ~ClientForDatebase(){};
+    ClientForDatebase(const ClientForDatebase &);
+    ClientForDatebase &operator=(const ClientForDatebase &);
+
     // struct for keeping state and data information
     struct AsyncClientCall
     {

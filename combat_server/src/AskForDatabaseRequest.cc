@@ -3,6 +3,7 @@
 #include <sstream>
 void ClientForDatebase::matchEnd(const std::list<Player::ptr> playerList)
 {
+
 #ifdef PRINT_LOG
     std::cout << "Start database match end request" << std::endl;
 #endif

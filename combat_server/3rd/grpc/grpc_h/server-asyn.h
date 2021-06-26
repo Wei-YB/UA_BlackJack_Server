@@ -107,6 +107,23 @@ public:
         reply_.set_uid(uid);
         reply_.set_stamp(stamp);
 
+        /*
+        if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //真正的创建房间code
+        {
+          static UidList uids;
+          static BlackJackRoomID roomid = atoi(args[0].c_str());
+#ifdef PRINT_LOG
+          std::cout<<"Create Room Ask come" << std::endl;
+#endif
+          for (int i = 1; i < args.size(); i++)
+          {
+            uids.push_back(atoi(args[i].c_str()));
+          }
+
+          createstEnv_t(roomid, uids);
+          uids.clear();
+        }
+        */
         if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //创建房间
         {
           static uint64_t roomMemberSize = 0;
@@ -123,6 +140,7 @@ public:
 #ifdef PRINT_LOG
             std::cout << "CREATE ROOM" << std::endl;
 #endif
+
             createstEnv_t(roomid++, uids);
             uids.clear();
           }

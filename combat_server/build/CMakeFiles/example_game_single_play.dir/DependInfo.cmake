@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tong/UA_BlackJack_Server/combat_server/3rd/grpc/grpc_cpp/demo.pb.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_game_single_play.dir/3rd/grpc/grpc_cpp/demo.pb.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/example/example_game_single_play.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_game_single_play.dir/example/example_game_single_play.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/AskForDatabaseRequest.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_game_single_play.dir/src/AskForDatabaseRequest.cc.o"
+  "/home/tong/UA_BlackJack_Server/combat_server/src/AskForLobby..cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_game_single_play.dir/src/AskForLobby..cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/AskForUserRequest.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_game_single_play.dir/src/AskForUserRequest.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/GameProcess.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o"
   "/home/tong/UA_BlackJack_Server/combat_server/src/MycondintonCo.cc" "/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles/example_game_single_play.dir/src/MycondintonCo.cc.o"
@@ -28,6 +29,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../inc"
   "../3rd/grpc/grpc_h"
   "../3rd/libco"
+  "../3rd/spdlog/inc"
   "/root/.local/include"
   )
 

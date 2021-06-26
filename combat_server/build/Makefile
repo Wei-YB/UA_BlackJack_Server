@@ -349,6 +349,39 @@ src/AskForDatabaseRequest.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.s
 .PHONY : src/AskForDatabaseRequest.cc.s
 
+src/AskForLobby..o: src/AskForLobby..cc.o
+
+.PHONY : src/AskForLobby..o
+
+# target to build an object file
+src/AskForLobby..cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForLobby..cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForLobby..cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForLobby..cc.o
+.PHONY : src/AskForLobby..cc.o
+
+src/AskForLobby..i: src/AskForLobby..cc.i
+
+.PHONY : src/AskForLobby..i
+
+# target to preprocess a source file
+src/AskForLobby..cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForLobby..cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForLobby..cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForLobby..cc.i
+.PHONY : src/AskForLobby..cc.i
+
+src/AskForLobby..s: src/AskForLobby..cc.s
+
+.PHONY : src/AskForLobby..s
+
+# target to generate assembly for a file
+src/AskForLobby..cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForLobby..cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForLobby..cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForLobby..cc.s
+.PHONY : src/AskForLobby..cc.s
+
 src/AskForUserRequest.o: src/AskForUserRequest.cc.o
 
 .PHONY : src/AskForUserRequest.o
@@ -609,6 +642,9 @@ help:
 	@echo "... src/AskForDatabaseRequest.o"
 	@echo "... src/AskForDatabaseRequest.i"
 	@echo "... src/AskForDatabaseRequest.s"
+	@echo "... src/AskForLobby..o"
+	@echo "... src/AskForLobby..i"
+	@echo "... src/AskForLobby..s"
 	@echo "... src/AskForUserRequest.o"
 	@echo "... src/AskForUserRequest.i"
 	@echo "... src/AskForUserRequest.s"
