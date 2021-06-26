@@ -127,14 +127,53 @@ public:
             uids.clear();
           }
         }
-        else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //投降
+        else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //退出房间
         {
+          if (auto playerPtr = playerHashMap[uid].lock())
+          {
+#ifdef PRINT_LOG
+            std::cout << uid << " quit" << std::endl;
+#endif
+            playerPtr->quit(); //托管
+          }
+          else
+          {
+#ifdef PRINT_LOG
+            std::cout << "Quit error uid " << uid << " not existed in any room" << std::endl;
+#endif
+          }
         }
         else if (type == ua_blackjack::Request_RequestType::Request_RequestType_DOUBLE) //双倍
         {
+          if (auto playerPtr = playerHashMap[uid].lock())
+          {
+#ifdef PRINT_LOG
+            std::cout << uid << " double" << std::endl;
+#endif
+            playerPtr->bettingMoney *= 2;
+          }
+          else
+          {
+#ifdef PRINT_LOG
+            std::cout << "Double error uid " << uid << " not existed in any room" << std::endl;
+#endif
+          }
         }
         else if (type == ua_blackjack::Request_RequestType::Request_RequestType_SURRENDER) //投降
         {
+          if (auto playerPtr = playerHashMap[uid].lock())
+          {
+#ifdef PRINT_LOG
+            std::cout << uid << " surrond" << std::endl;
+#endif
+            playerPtr->bettingMoney *= 2;
+          }
+          else
+          {
+#ifdef PRINT_LOG
+            std::cout << "Surrond error uid " << uid << " not existed in any room" << std::endl;
+#endif
+          }
         }
 
         status_ = FINISH;

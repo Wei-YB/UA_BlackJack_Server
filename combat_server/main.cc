@@ -65,7 +65,6 @@ int main(int agrc, char *argv[])
 // #endif
 //                 playerPtr->quit();             //托管
 //                 playerPtr->isStand = true;     //玩家停牌
-//                 playerPtr->finalResult = DRAW; //筹码阶段退出应判平
 //             }
 //         }
 /*************************************托管代码***************************************************/
