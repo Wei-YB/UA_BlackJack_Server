@@ -14,14 +14,12 @@
 
 #include <chrono>
 
-#include "common.h"
+#include "UA_BlackJack.pb.h"
+#include "UA_BlackJack.grpc.pb.h"
 #include "EventLoop.h"
-#include "common.pb.h"
-#include "lobby.grpc.pb.h"
-#include "room.grpc.pb.h"
-#include "social.grpc.pb.h"
 
 typedef std::chrono::time_point<std::chrono::system_clock> time_point;
+
 using grpc::Channel;
 using grpc::ClientAsyncResponseReader;
 using grpc::ClientContext;
@@ -30,9 +28,11 @@ using grpc::Status;
 using grpc::CreateChannel;
 using grpc::InsecureChannelCredentials;
 
-using common::Request;
-using common::Response;
-
+using ua_blackjack::Response;
+using ua_blackjack::Request;
+using ua_blackjack::LobbyService;
+using ua_blackjack::GameService;
+using ua_blackjack::SocialService;
 
 struct AsyncClientCall
 {

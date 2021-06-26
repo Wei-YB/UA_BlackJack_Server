@@ -6,18 +6,17 @@
 #include <string>
 #include <mutex>
 #include <functional>
-
 #include <chrono>
+
 #include <grpc/support/log.h>
 #include <grpcpp/grpcpp.h>
-#include <grpcpp/server.h>
-#include <grpcpp/server_builder.h>
-#include <grpcpp/server_context.h>
 
-#include "common.pb.h"
-#include "proxy.grpc.pb.h"
+#include "UA_BlackJack.pb.h"
+#include "UA_BlackJack.grpc.pb.h"
 #include "EventLoop.h"
 #include "ProxyServer.h"
+
+typedef std::chrono::time_point<std::chrono::system_clock> time_point;
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
@@ -26,8 +25,9 @@ using grpc::ServerCompletionQueue;
 using grpc::ServerContext;
 using grpc::Status;
 
-using common::Response;
-using common::Request;
+using ua_blackjack::Response;
+using ua_blackjack::Request;
+using ua_blackjack::ProxyService;
 
 namespace {
     enum CallStatus {CREATE, PROCESS, FORWARD, FINISH};
@@ -117,15 +117,16 @@ private:
         if (call->status_ == CREATE)
         {
             call->status_ = PROCESS;
-            service_.RequestNotifyUser(&call->ctx_, &call->request_, &call->responder_, cq_.get(), cq_.get(), call);
+            service_.RequestNotify(&call->ctx_, &call->request_, &call->responder_, cq_.get(), cq_.get(), call);
         }
         else if (call->status_ == PROCESS)
         {
+            // new a AsyncCall object to wait for the next call
             AsyncCall *newCall = new AsyncCall;
+            ProcessCall(newCall);
             // check the validity of the request
-            if (call->request_.requesttype() != common::Request::NOTIFY_USER)
-            {
-                // drop the request, and return fail to caller
+            if (call->request_.requesttype() != Request::NOTIFY_USER)
+            {   // drop the request, and return fail to caller
                 returnFailureResponse(call, "Request type not allowed.");
                 return;
             }
@@ -147,7 +148,7 @@ private:
                 }
                 return;
             }
-            returnFailureResponse(call, "Proxy service unavailable.");
+            returnFailureResponse(call, "Proxy unavailable.");
         }
         else
         {
@@ -182,7 +183,7 @@ private:
 private:
     std::string serverAddress_;
     std::unique_ptr<Server> server_;
-    proxy::Proxy::AsyncService service_;
+    ProxyService::AsyncService service_;
     std::unique_ptr<ServerCompletionQueue> cq_;
     std::weak_ptr<ProxyServer> proxy_;
     std::unordered_map<int64_t, AsyncCall*> stampToAsyncCall_;

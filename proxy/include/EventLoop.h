@@ -1,21 +1,9 @@
 #ifndef _EVENTLOOP_H_
 #define _EVENTLOOP_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include <sys/types.h>
 #include <sys/epoll.h>
-#include <fcntl.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <errno.h>
-#include <memory>
-
-#include <exception>
 #include <unordered_map>
-
 #include "common.h"
 
 #define DEFAULT_MAX_EVENTS  1024
@@ -58,46 +46,18 @@ public:
     EventsSource(FileDesc fd, EventLoop *loop,
                 const std::function<int()> &inEventCallBack,
                 const std::function<int()> &outEventCallBack,
-                const std::function<int()> &errEventCallBack)
-                : fd_(fd), loop_(loop),
-                inEventCallBack_(inEventCallBack),
-                outEventCallBack_(outEventCallBack),
-                errEventCallBack_(errEventCallBack) {}
+                const std::function<int()> &errEventCallBack);
 public:
-    int HandleEvents(Net::Event events)
-    {
-        int ret = 0;
-        if (events & Net::EV_IN)
-        {
-            ret = inEventCallBack_() == -1 ? -1 : ret; 
-        }
-        if (events & Net::EV_OUT)
-        {
-            ret = outEventCallBack_() == -1 ? -1 : ret; 
-        }
-        if (events & Net::EV_ERR)
-        {
-            ret = errEventCallBack_() == -1 ? -1 : ret; 
-        }
-        return ret;
-    }
+    int HandleEvents(Net::Event events);
     
-    int Update(Net::Event events)
-    {
-        if (events_ == events)
-        {
-            return 0;
-        }
-        events_ = events;
-        return loop_->mod(*this);
-    }
+    int Update(Net::Event events);
 
-    FileDesc fd() const {return fd_;}
+    FileDesc fd() const;
     
     friend class EventLoop;
 private:
     FileDesc fd_;
-    Net::Event events_;
+    Net::Event events_ = 0;
     Net::Event out_events_;
     EventLoop *loop_;
     std::function<int()> inEventCallBack_;
@@ -108,122 +68,25 @@ private:
 class EventLoop
 {
 public:
-    EventLoop(int max_events = DEFAULT_MAX_EVENTS) : maxEvents_(max_events)
-    {
-        if ((epollfd_ = epoll_create(5)) < 0)
-        {
-            throw "EventLoop: fail to create epoll.\n";
-        }
+    EventLoop(int max_events = DEFAULT_MAX_EVENTS);
 
-        if ((events_ = new struct epoll_event[maxEvents_]) == NULL)
-        {
-            close(epollfd_);
-            throw "EventLoop: fail to assign epoll event array.\n";        
-        }
-    }
-
-    ~EventLoop() 
-    {
-        delete [] events_;
-        close(epollfd_);
-    }
+    ~EventLoop();
 
 public:
-    int add(const EventsSource &evsSource)
-    {
-        if (fdToEventsSource_.find(evsSource.fd_) != fdToEventsSource_.end() 
-            || eventsCnt_ >= maxEvents_)
-        {
-            return -1;
-        }
+    int add(EventsSource *evsSource);
 
-        struct epoll_event ev;
-        ev.data.fd = evsSource.fd_;
-        ev.events = toEpollEvent(evsSource.events_);
-        if (epoll_ctl(epollfd_, EPOLL_CTL_ADD, ev.data.fd, &ev) < 0)
-        {
-            return -1;
-        }
+    int mod(EventsSource *evsSource);
 
-        fdToEventsSource_.emplace(ev.data.fd, evsSource);
-        eventsCnt_++;
-        return 0;
-    }
+    int del(EventsSource *evsSource);
 
-    int mod(const EventsSource &evsSource)
-    {
-        if (fdToEventsSource_.find(evsSource.fd_) == fdToEventsSource_.end())
-        {
-            return add(evsSource);
-        }
-
-        struct epoll_event ev;
-        ev.data.fd = evsSource.fd_;
-        ev.events = toEpollEvent(evsSource.events_);
-
-        if (epoll_ctl(epollfd_, EPOLL_CTL_MOD, ev.data.fd, &ev) < 0)
-        {
-            return -1;
-        }
-
-        return 0;
-    }
-
-    int del(const EventsSource &evsSource)
-    {
-        if (fdToEventsSource_.find(evsSource.fd_) != fdToEventsSource_.end())
-        {
-            epoll_ctl(epollfd_, EPOLL_CTL_DEL, evsSource.fd_, NULL);
-            fdToEventsSource_.erase(evsSource.fd_);
-            eventsCnt_--;
-            return 0;
-        }
-        
-        return -1;
-    }
-
-    int loopOnce(int timeout = 0)
-    {
-        if (!eventsCnt_)
-        {
-            return -1;
-        }
-        // memset(m_events, 0, sizeof(struct epoll_event) * m_max_events);
-        int nfds = epoll_wait(epollfd_, events_, maxEvents_, timeout);
-        if (nfds < 0)
-        {
-            if (errno == EAGAIN || errno == EWOULDBLOCK || errno == EINTR)
-            {
-                return 0;
-            }
-            return -1;
-        }
-
-        for (int i = 0; i < nfds; ++i)
-        {
-            int sockfd = events_[i].data.fd;
-            int events = events_[i].events;   
-            if (fdToEventsSource_.find(sockfd) == fdToEventsSource_.end())
-            {
-                continue;
-            }
-
-            // if the return val is -1, it means we should remove this sockfd from poller
-            if (0 > fdToEventsSource_[sockfd].HandleEvents(toNetEvent(events)))
-            {
-                del(fdToEventsSource_[sockfd]);
-            }
-        }
-
-        return nfds;
-    }
+    int loopOnce(int timeout = 0);
 
 private:
     int epollfd_ = -1;
     int eventsCnt_ = 0;
     const int maxEvents_;
     struct epoll_event *events_ = NULL;
-    std::unordered_map<FileDesc, EventsSource> fdToEventsSource_;
+    std::unordered_map<FileDesc, EventsSource*> fdToEventsSource_;
 };
 
 };  // end of namespace tcp

@@ -4,7 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/ricki/UA_BlackJack_Server/proxy/test/client.cpp" "/root/ricki/UA_BlackJack_Server/proxy/test/build/CMakeFiles/client.dir/client.cpp.o"
+  "/home/ricki-laptop/UA_BackJackServer/proxy/test/client.cpp" "/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir/client.cpp.o"
+  "/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc" "/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.o"
+  "/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc" "/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.o"
+  "/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc" "/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.o"
+  "/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc" "/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.o"
+  "/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc" "/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.o"
+  "/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc" "/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.o"
+  "/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc" "/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.o"
+  "/home/ricki-laptop/UA_BackJackServer/proxy/src/UA_BlackJack.grpc.pb.cc" "/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/UA_BlackJack.grpc.pb.cc.o"
+  "/home/ricki-laptop/UA_BackJackServer/proxy/src/UA_BlackJack.pb.cc" "/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/UA_BlackJack.pb.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,16 +24,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/root/ricki/UA_BlackJack_Server/proxy/include/protos/../grpc"
-  "/root/ricki/UA_BlackJack_Server/proxy/include/protos/../net"
-  "/root/ricki/UA_BlackJack_Server/proxy/include/protos/../protocols"
-  "/root/ricki/UA_BlackJack_Server/proxy/include/protos/.."
+  "/home/ricki-laptop/UA_BackJackServer/proxy/include"
+  "/home/ricki-laptop/UA_BackJackServer/proxy/include/grpc"
+  "../"
   "/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/root/ricki/UA_BlackJack_Server/proxy/test/build/CMakeFiles/grpc_server_lib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

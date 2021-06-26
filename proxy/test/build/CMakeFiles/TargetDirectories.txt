@@ -1,6 +1,4 @@
-/root/ricki/UA_BlackJack_Server/proxy/test/build/CMakeFiles/rebuild_cache.dir
-/root/ricki/UA_BlackJack_Server/proxy/test/build/CMakeFiles/edit_cache.dir
-/root/ricki/UA_BlackJack_Server/proxy/test/build/CMakeFiles/simpleBackEnd.dir
-/root/ricki/UA_BlackJack_Server/proxy/test/build/CMakeFiles/client.dir
-/root/ricki/UA_BlackJack_Server/proxy/test/build/CMakeFiles/proxyServer.dir
-/root/ricki/UA_BlackJack_Server/proxy/test/build/CMakeFiles/grpc_server_lib.dir
+/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/rebuild_cache.dir
+/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/edit_cache.dir
+/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir
+/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/proxy.dir

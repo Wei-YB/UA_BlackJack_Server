@@ -1,8 +1,12 @@
 #ifndef _COMMON_H_
 #define _COMMON_H_
+#include <iostream>
 #include <string>
 #include <unordered_map>
-#include "common.pb.h"
+#include "UA_BlackJack.pb.h"
+
+using ua_blackjack::Response;
+using ua_blackjack::Request;
 
 #define NS UA_BLACKJACK_SERVER
 #define NAMESPACE_BEGIN namespace NS {
@@ -13,37 +17,37 @@ typedef int64_t UserId;
 
 enum BackEndModule {Proxy = 0, Lobby, Room, Social, DataBase};
 
-const std::unordered_map<common::Request_RequestType, BackEndModule> cmdTypeToModule = {
+static const std::unordered_map<ua_blackjack::Request_RequestType, BackEndModule> requestTypeToModule = {
     // Lobby request
-    {common::Request_RequestType_LOGIN, BackEndModule::Lobby}, 
-    {common::Request_RequestType_LOGOUT, BackEndModule::Lobby},
-    {common::Request_RequestType_ROOM_LIST, BackEndModule::Lobby},
-    {common::Request_RequestType_CREATE_ROOM, BackEndModule::Lobby},
-    {common::Request_RequestType_QUICK_MATCH, BackEndModule::Lobby},
-    {common::Request_RequestType_READY, BackEndModule::Lobby},
+    {ua_blackjack::Request_RequestType_LOGIN, BackEndModule::Lobby}, 
+    {ua_blackjack::Request_RequestType_LOGOUT, BackEndModule::Lobby},
+    {ua_blackjack::Request_RequestType_ROOM_LIST, BackEndModule::Lobby},
+    {ua_blackjack::Request_RequestType_CREATE_ROOM, BackEndModule::Lobby},
+    {ua_blackjack::Request_RequestType_QUICK_MATCH, BackEndModule::Lobby},
+    {ua_blackjack::Request_RequestType_READY, BackEndModule::Lobby},
     // Room request
-    {common::Request_RequestType_LEAVE_ROOM, BackEndModule::Room},
-    {common::Request_RequestType_BET, BackEndModule::Room},
-    {common::Request_RequestType_HIT, BackEndModule::Room},
-    {common::Request_RequestType_STAND, BackEndModule::Room},
-    {common::Request_RequestType_DOUBLE, BackEndModule::Room},
-    {common::Request_RequestType_SURRENDER, BackEndModule::Room},
+    {ua_blackjack::Request_RequestType_LEAVE_ROOM, BackEndModule::Room},
+    {ua_blackjack::Request_RequestType_BET, BackEndModule::Room},
+    {ua_blackjack::Request_RequestType_HIT, BackEndModule::Room},
+    {ua_blackjack::Request_RequestType_STAND, BackEndModule::Room},
+    {ua_blackjack::Request_RequestType_DOUBLE, BackEndModule::Room},
+    {ua_blackjack::Request_RequestType_SURRENDER, BackEndModule::Room},
     // Social request
-    {common::Request_RequestType_SIGNUP, BackEndModule::Social},
-    {common::Request_RequestType_INFO, BackEndModule::Social},
-    {common::Request_RequestType_RANK_ME, BackEndModule::Social},
-    {common::Request_RequestType_RANK_TOP, BackEndModule::Social},
-    {common::Request_RequestType_ADD_FRIEND, BackEndModule::Social},
-    {common::Request_RequestType_ACCEPT_FRIEND, BackEndModule::Social},
-    {common::Request_RequestType_DELETE_FRIEND, BackEndModule::Social},
-    {common::Request_RequestType_LIST_FRIEND, BackEndModule::Social},
-    {common::Request_RequestType_LIST_MATCH, BackEndModule::Social},
-    {common::Request_RequestType_LIST_WAITTING, BackEndModule::Social},
+    {ua_blackjack::Request_RequestType_SIGNUP, BackEndModule::Social},
+    {ua_blackjack::Request_RequestType_INFO, BackEndModule::Social},
+    {ua_blackjack::Request_RequestType_RANK_ME, BackEndModule::Social},
+    {ua_blackjack::Request_RequestType_RANK_TOP, BackEndModule::Social},
+    {ua_blackjack::Request_RequestType_ADD_FRIEND, BackEndModule::Social},
+    {ua_blackjack::Request_RequestType_ACCEPT_FRIEND, BackEndModule::Social},
+    {ua_blackjack::Request_RequestType_DELETE_FRIEND, BackEndModule::Social},
+    {ua_blackjack::Request_RequestType_LIST_FRIEND, BackEndModule::Social},
+    {ua_blackjack::Request_RequestType_LIST_MATCH, BackEndModule::Social},
+    {ua_blackjack::Request_RequestType_LIST_WAITTING, BackEndModule::Social},
     // Proxy request
-    {common::Request_RequestType_NOTIFY_USER, BackEndModule::Proxy},
+    {ua_blackjack::Request_RequestType_NOTIFY_USER, BackEndModule::Proxy},
 };
 
-const std::string cmdTypeToStr[] = {
+static const std::string requestTypeToStr[] = {
         "INVAL",  
         // client to proxy, proxy to lobby 
         "LOGIN",
@@ -76,8 +80,7 @@ const std::string cmdTypeToStr[] = {
         // 
 };
 
-std::unordered_map<std::string, Request::RequestType> 
-strToType = {
+static std::unordered_map<std::string, Request::RequestType> strToRequestType = {
     {"NULL", Request::INVAL},
     {"LOGIN", Request::LOGIN},
     {"LOGOUT", Request::LOGOUT},
@@ -103,5 +106,11 @@ strToType = {
     {"DELETE_FRIEND", Request::DELETE_FRIEND},
     {"LIST_FRIEND", Request::LIST_FRIEND}
 };
+
+void print(std::ostream &os, const Response &response);
+
+void print(std::ostream &os, const Request &request);
+
+void print(std::ostream &os, int events);
 
 #endif

@@ -12,293 +12,120 @@
 #include <sstream>
 #include <queue>
 
-#include "../include/net/EventLoop.h"
-#include "../include/net/circ_buf.h"
-#include "../include/grpc/common.pb.h"
-#include "../include/protocols/ClientProxyProtocol.h"
+#include "EventLoop.h"
+#include "CircularBuffer.h"
+#include "UA_BlackJack.pb.h"
+#include "TcpConnection.h"
+#include "ClientProxyProtocol.h"
+#include "common.h"
 
-using Net::EventsHandler;
+using Net::EventsSource;
 using Net::EventLoop;
 using Net::Event;
 using Net::CircularBuffer;
-using common::Request;
-using common::Response;
+using ua_blackjack::Request;
+using ua_blackjack::Response;
 
-const std::string typeToStr[] = {
-        "INVAL",  
-        // client to proxy, proxy to lobby 
-        "LOGIN",
-        "LOGOUT", 
-        "ROOM_LIST",
-        "JOIN_ROOM",
-        "CREATE_ROOM",
-        "QUICK_MATCH",
-        "READY",
-        // client to proxy, proxy to room
-        "LEAVE_ROOM",
-        "BET",
-        "HIT",
-        "STAND",
-        "DOUBLE",
-        "SURRENDER",
-        // client to proxy, proxy to social
-        "SIGNUP",
-        "INFO",  
-        "RANK_ME",
-        "RANK_TOP",  
-        "ADD_FRIEND",
-        "ACCEPT_FRIEND",
-        "DELETE_FRIEND",
-        "LIST_FRIEND",
-        "LIST_MATCH",
-        "LIST_WAITTING",
-        // room, lobby, and social to proxy, proxy to client
-        "NOTIFY_USER"
-        // 
-};
+#define DEFAULT_BUFFER_SIZE 4096
 
-std::unordered_map<std::string, Request::RequestType> 
-strToType = {
-    {"NULL", Request::INVAL},
-    {"LOGIN", Request::LOGIN},
-    {"LOGOUT", Request::LOGOUT},
-    {"ROOM_LIST", Request::ROOM_LIST},
-    {"JOIN_ROOM", Request::JOIN_ROOM},
-    {"CREATE_ROOM", Request::CREATE_ROOM},
-    {"QUICK_MATCH", Request::QUICK_MATCH},
-    // forward to room
-    {"LEAVE_ROOM", Request::LEAVE_ROOM},
-    {"READY", Request::READY},
-    {"BET", Request::BET},
-    {"HIT", Request::HIT},
-    {"STAND", Request::STAND},
-    {"DOUBLE", Request::DOUBLE},
-    {"SURRENDER", Request::SURRENDER},
-    // forward to social
-    {"SIGNIN", Request::SIGNUP},
-    {"INFO", Request::INFO},
-    {"RANK_ME", Request::RANK_ME},
-    {"RANK_TOP", Request::RANK_TOP},
-    {"ADD_FRIEND", Request::ADD_FRIEND},
-    {"ACCEPT_FRIEND", Request::ACCEPT_FRIEND},
-    {"DELETE_FRIEND", Request::DELETE_FRIEND},
-    {"LIST_FRIEND", Request::LIST_FRIEND}
-};
-
-void print(std::ostream &os, const Response &response)
+static int setNonBlocking(int fd)
 {
-    os << "get response." << std::endl; 
-    os << "status: " << response.status() << std::endl;
-    os << "stamp: " << response.stamp() << std::endl;
-    os << "uid: " << response.uid() << std::endl; 
-    if (response.args_size())
+    int opt = fcntl(fd, F_GETFL);
+    if (fcntl(fd, F_SETFL, opt | O_NONBLOCK) < 0)
     {
-        os << "args: ";
-        for (int i = 0; i < response.args_size(); ++i)
-        {
-            const std::string &arg = response.args(i);
-            os << arg << " ";
-        }
-        os << std::endl;
-        return;
+        return -1;
     }
-    os << "null" << std::endl;
+    return 0;
 }
 
-void print(std::ostream &os, const Request &request)
-{
-    os << "send request." << std::endl; 
-    os << "type: " << typeToStr[request.requesttype()] << std::endl;
-    os << "stamp: " << request.stamp() << std::endl;
-    os << "uid: " << request.uid() << std::endl; 
-    if (request.args_size())
-    {
-        os << "args: ";
-        for (int i = 0; i < request.args_size(); ++i)
-        {
-            const std::string &arg = request.args(i);
-            os << arg << " ";
-        }
-        os << std::endl;
-        return;
-    }
-    os << "null" << std::endl;
-}
-
-class TcpClient : public EventsHandler
+class BlackJackClient
 {
 public:
-    TcpClient(size_t bufferSize) : EventsHandler(), m_readBuffer(bufferSize), m_writeBuffer(bufferSize)
-    {
-        if ((m_sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
-        {
-            throw "Socket: fail to create socket.\n";
-        }
-    }
-
-    ~TcpClient() {close(m_sockfd);}
-
+    BlackJackClient(const char *server_ip, 
+                    unsigned short server_port, 
+                    EventLoop *loop, 
+                    size_t bufferSize = DEFAULT_BUFFER_SIZE) 
+                    : conn_(server_ip, server_port, loop),
+                    readBuffer_(bufferSize), 
+                    writeBuffer_(bufferSize) {}
 public:
-    int connect(const char *ipAddr, unsigned short port)
+    int Connect()
     {
-        m_addr.sin_family = AF_INET;
-        m_addr.sin_port = htons(port);
-        if (inet_pton(AF_INET, ipAddr, &m_addr.sin_addr) == 0)
+        int ret = conn_.Connect();
+        if (ret != -1)
         {
-            return -1;
-        }
-        if (::connect(m_sockfd, (struct sockaddr *)&m_addr, sizeof(m_addr)) == 0)
-        {
-            fcntl(m_sockfd, F_SETFL, fcntl(m_sockfd, F_GETFL) | O_NONBLOCK);
-            return 0;
+            conn_.SetInputCallBack(std::bind(&BlackJackClient::OnMessages, this, std::placeholders::_1, std::placeholders::_2));
+            conn_.SetOutPutCallBack(std::bind(&BlackJackClient::OnSendReady, this));
+            conn_.SetErrorCallBack(std::bind(&BlackJackClient::OnError, this));
+            return setNonBlocking(conn_.SockFd());
         }
         return -1;
     }
 
-    int addToEventLoop(EventLoop *loop)
-    {
-        m_eventLoop = loop;
-        m_events = Net::EV_IN | Net::EV_ET | Net::EV_ERR;
-        return m_eventLoop->add(m_sockfd, m_events, this);
-    }
-
-    int handleEvents(int sockfd, Event events)
-    {
-        int ret;
-        if (events & Net::EV_OUT)
-        {
-            if ((ret = onSend()) < 0)
-            {
-                return -1;
-            }
-        }
-        if (events & Net::EV_IN)
-        {
-            if ((ret = onRecv()) < 0)
-            {
-                return -1;
-            }
-        }
-        if (events & Net::EV_ERR)
-        {
-            return -1;
-        }
-        return ret;
-    }
-
     int sendRequest(const Request &request) 
     {
-        std::string rawRequest = request.SerializeAsString();
-        if (0 > NS::pack(NS::REQUEST, rawRequest, m_writeBuffer))
+        if (conn_.GetWriteBufferRoom() < request.ByteSizeLong() + 8)
         {
+            std::cout << "fail to send request." << std::endl;
             return -1;
         }
-        m_events |= Net::EV_OUT | Net::EV_ET;
-        m_eventLoop->mod(m_sockfd, m_events, this);
-        return 0;
+        std::string rawRequest = request.SerializeAsString();
+        std::string pkgData(8 + rawRequest.size(), '\0');
+        NS::pack(NS::REQUEST, rawRequest, &pkgData[0], pkgData.size());
+        return conn_.Send(pkgData);
     }
 
     int sendResponse(const Response &response) 
     {
+        if (conn_.GetWriteBufferRoom() < response.ByteSizeLong() + 8)
+        {
+            return -1;
+        }
         std::string rawResponse = response.SerializeAsString();
-        if (0 > NS::pack(NS::RESPONSE, rawResponse, m_writeBuffer))
-        {
-            return -1;
-        }
-        m_events |= Net::EV_OUT | Net::EV_ET;
-        m_eventLoop->mod(m_sockfd, m_events, this);
-        return 0;
+        std::string pkgData(8 + rawResponse.size(), '\0');
+        NS::pack(NS::REQUEST, rawResponse, &pkgData[0], pkgData.size());
+        return conn_.Send(pkgData);
     }
 
-    int64_t uid() const {return m_uid;}
 private:
-    int onRecv()
+    void OnMessages(std::vector<Request> &requests, std::vector<Response> &responses)
     {
-        int ret, byteRead, pkgProcessed = 0;
-        bool needToRead = true;
-        while (needToRead)
+        for (int i = 0; i < requests.size(); ++i)
         {
-            byteRead = read(m_sockfd, m_readBuffer); 
-            std::cout << "read " << ret << " bytes." << std::endl;
-            if (byteRead < 0)
-            {   // fatal error
-                return -1;
-            }
-            if (m_readBuffer.size() != m_readBuffer.capacity())
-		    {   // the tcp buffer has been cleared, don't have to read anymore
-		        needToRead = false;
-		    }
-            // handle packages in buffer one by one
-            while (m_readBuffer.size() >= 8)
+            std::cout << "request from server: " << std::endl;
+            print(std::cout, requests[i]);
+        }
+        for (int i = 0; i < responses.size(); ++i)
+        {
+            if (uid_ == -1 && responses[i].uid() != 0)
             {
-                int32_t msgType, msgLength;
-                Net::readAs(m_readBuffer, 0, msgType, true);
-                Net::readAs(m_readBuffer, sizeof(msgType), msgLength, true);
-        
-                if (msgLength == -1 || m_readBuffer.size() - 8 < msgLength)
-                {   // not a complete package, wait for the next read event
-                    return pkgProcessed;
-                }
-                m_readBuffer.free(sizeof(msgType) + sizeof(msgLength));
-
-                std::string rawMsg;
-                Net::circularBufferToString(m_readBuffer, msgLength, rawMsg);
-                m_readBuffer.free(msgLength);
-                if (msgType == NS::RESPONSE)
-                {
-                    Response response;
-                    response.ParseFromString(rawMsg);
-                    if (m_uid == -1)
-                    {
-                        m_uid = response.uid();
-                    }
-                    print(std::cout, response);
-                }
-                pkgProcessed++;
+                uid_ = responses[i].uid();
             }
+            std::cout << "response from server: " << std::endl;
+            print(std::cout, responses[i]);
         }
-        
-        return pkgProcessed;
     }
-
-    int onSend()
-    {
-        int ret = Net::write(m_sockfd, m_writeBuffer, true);
-        if (ret < 0)
-        {
-            return -1;
-        }
-        if (m_writeBuffer.empty())
-        {
-            m_events &= ~Net::EV_OUT;
-            m_eventLoop->mod(m_sockfd, m_events, this);
-        }
-        return ret;
-    }
-
+    void OnSendReady() {/*TODO: write requests/responses buffer to tcp connection*/;}
+    void OnError() {/*do nothing, since the loop will exit by itself*/}
 
 private:
-    int m_sockfd = -1;
-    int64_t m_uid = -1;
-    struct sockaddr_in m_addr;
-    EventLoop *m_eventLoop = NULL;
-    Event m_events;
-    CircularBuffer m_readBuffer;
-    CircularBuffer m_writeBuffer;
+    UserId uid_ = -1;
+    TcpConnection conn_;
+    CircularBuffer readBuffer_;
+    CircularBuffer writeBuffer_;
 };
 
-const char *samples_path = "/root/ricki/UA_BlackJack_Server/proxy/test/";
 
 int main(int argc, char **argv)
 {
-    if (argc < 3)
+    if (argc < 4)
     {
-        std::cout << "usage: " << std::string(argv[0]) << " ip port." << std::endl;
+        std::cout << "usage: " << std::string(argv[0]) << " ip port samples_path." << std::endl;
         exit(0);
     }
     // prepare all the request
     std::queue<Request> requests;
-    std::ifstream fin((std::string(samples_path) + std::string("samples.txt").c_str()), std::ifstream::in);
+    std::ifstream fin(argv[3], std::ifstream::in);
     while (fin.good())
     {
         Request request;
@@ -307,49 +134,41 @@ int main(int argc, char **argv)
         getline(fin, line);
         std::istringstream iss(line);
         iss >> item;
-        if (strToType.find(item) == strToType.end())
+        if (strToRequestType.find(item) == strToRequestType.end())
         {
             continue;
         }
         request.set_uid(12);
-        request.set_requesttype(strToType[item]);
+        request.set_requesttype(strToRequestType[item]);
         request.set_stamp((int64_t)&request);
         while (iss.good())
         {
             iss >> item;
             request.add_args(item);
         }
-
         requests.push(request);
     }
     fin.close();
     std::cout << requests.size() << " requests in total" << std::endl;
 
     Net::EventLoop loop;
-    TcpClient *client = new TcpClient(4096);
-    if (0 > client->connect(argv[1], atoi(argv[2])))
+    
+    BlackJackClient client(argv[1], (unsigned short)atoi(argv[2]), &loop);
+    if (client.Connect() != 0)
     {
         std::cout << "fail to connect to proxy." << std::endl;
-        delete client;
         exit(0);
     }
     std::cout << "successfully connect to host" << std::endl;
 
-    client->addToEventLoop(&loop);
     // write request to proxy one by one
     while (!requests.empty())
     {
         Request request = requests.front();
         requests.pop();
-        // if (client->uid() != -1 || (request.requesttype() == Request::LOGIN))
-        // {
-        //     if (client->sendRequest(request) != -1)
-        //     {
-        //         print(std::cout, request);
-        //     }
-        // }
-        if (client->sendRequest(request) != -1)
+        if (client.sendRequest(request) != -1)
         {
+            std::cout << "Send request: " << std::endl;
             print(std::cout, request);
         }
         if (0 > loop.loopOnce(1000))

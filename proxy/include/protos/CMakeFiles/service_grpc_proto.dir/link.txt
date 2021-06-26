@@ -1,2 +1,0 @@
-/usr/bin/ar qc libservice_grpc_proto.a  CMakeFiles/service_grpc_proto.dir/root/ricki/UA_BlackJack_Server/proxy/include/grpc/proxy.grpc.pb.cc.o CMakeFiles/service_grpc_proto.dir/root/ricki/UA_BlackJack_Server/proxy/include/grpc/room.grpc.pb.cc.o CMakeFiles/service_grpc_proto.dir/root/ricki/UA_BlackJack_Server/proxy/include/grpc/common.pb.cc.o
-/usr/bin/ranlib libservice_grpc_proto.a

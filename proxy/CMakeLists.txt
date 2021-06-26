@@ -19,62 +19,44 @@
 
 cmake_minimum_required(VERSION 3.5.1)
 
-project(RouteGuide C CXX)
+project(Proxy C CXX)
 
-include(../cmake/common.cmake)
+include(common.cmake)
 
 # Proto file
-get_filename_component(rg_proto "../../protos/route_guide.proto" ABSOLUTE)
-get_filename_component(rg_proto_path "${rg_proto}" PATH)
+get_filename_component(bj_proto "protos/UA_BlackJack.proto" ABSOLUTE)
+get_filename_component(bj_proto_path "${bj_proto}" PATH)
+get_filename_component(project_inc_path "${bj_proto_path}/../include/ProxyServer.h" PATH)
+get_filename_component(project_src_path "${bj_proto_path}/../src/ProxyServer.cpp" PATH)
+get_filename_component(project_lib_path "${bj_proto_path}/../libs/libblackjack_grpc.a" PATH)
 
-# Generated sources
-set(rg_proto_srcs "${CMAKE_CURRENT_BINARY_DIR}/route_guide.pb.cc")
-set(rg_proto_hdrs "${CMAKE_CURRENT_BINARY_DIR}/route_guide.pb.h")
-set(rg_grpc_srcs "${CMAKE_CURRENT_BINARY_DIR}/route_guide.grpc.pb.cc")
-set(rg_grpc_hdrs "${CMAKE_CURRENT_BINARY_DIR}/route_guide.grpc.pb.h")
-add_custom_command(
-      OUTPUT "${rg_proto_srcs}" "${rg_proto_hdrs}" "${rg_grpc_srcs}" "${rg_grpc_hdrs}"
-      COMMAND ${_PROTOBUF_PROTOC}
-      ARGS --grpc_out "${CMAKE_CURRENT_BINARY_DIR}"
-        --cpp_out "${CMAKE_CURRENT_BINARY_DIR}"
-        -I "${rg_proto_path}"
-        --plugin=protoc-gen-grpc="${_GRPC_CPP_PLUGIN_EXECUTABLE}"
-        "${rg_proto}"
-      DEPENDS "${rg_proto}")
+message(STATUS "project include path: ${project_inc_path}\
+                project srouce path: ${project_src_path}\
+                project library path: ${project_lib_path}\
+                protobuf files path: ${bj_proto_path}")
 
 # Include generated *.pb.h files
-include_directories("${CMAKE_CURRENT_BINARY_DIR}")
+include_directories("${project_inc_path}"
+                    "${project_inc_path}/grpc"
+                    "/include")
 
-# rg_grpc_proto
-add_library(rg_grpc_proto
-  ${rg_grpc_srcs}
-  ${rg_grpc_hdrs}
-  ${rg_proto_srcs}
-  ${rg_proto_hdrs})
-target_link_libraries(rg_grpc_proto
-  ${_REFLECTION}
-  ${_GRPC_GRPCPP}
-  ${_PROTOBUF_LIBPROTOBUF})
-
-# route_guide_helper
-add_library(route_guide_helper
-  "helper.h"
-  "helper.cc")
-target_link_libraries(route_guide_helper
-  rg_grpc_proto
-  ${_REFLECTION}
-  ${_GRPC_GRPCPP}
-  ${_PROTOBUF_LIBPROTOBUF})
+set(libblackjack_grpc "${project_lib_path}/libblackjack_grpc.a")
 
 # Targets route_guide_(client|server)
-foreach(_target
-  route_guide_client route_guide_server)
-  add_executable(${_target}
-    "${_target}.cc")
-  target_link_libraries(${_target}
-    rg_grpc_proto
-    route_guide_helper
-    ${_REFLECTION}
-    ${_GRPC_GRPCPP}
-    ${_PROTOBUF_LIBPROTOBUF})
-endforeach()
+file(GLOB CcSources ${project_src_path}/*.cc)
+add_library(net "${CcSources}")
+target_link_libraries(net
+  ${_REFLECTION}
+  ${_GRPC_GRPCPP}
+  ${_PROTOBUF_LIBPROTOBUF}
+)
+# aux_source_directory("${project_src_path}" CppSources)
+
+add_executable(proxy "${project_src_path}/main.cpp;${CcSources}")
+target_link_libraries(proxy
+  ${libblackjack_grpc}
+  ${_REFLECTION}
+  ${_GRPC_GRPCPP}
+  ${_PROTOBUF_LIBPROTOBUF}
+)
+
