@@ -61,6 +61,7 @@ TcpServer::TcpServer(const char *ip,
         close(eventsSource_.fd());
         throw "TcpListener: fail to listen.\n";
     }
+    setNonBlocking(eventsSource_.fd());
     eventsSource_.Update(Net::EV_IN | Net::EV_ET | Net::EV_ERR);
 }
 
@@ -72,18 +73,22 @@ TcpServer::~TcpServer()
 
 int TcpServer::OnConnection()
 {  
-    std::cout << "Comes a new connection." << std::endl;
+    //std::cout << "Comes a new connection." << std::endl;
+    int connCnt = 0;
     struct sockaddr_in addr;
     socklen_t len = sizeof(addr);
-    int connfd = ::accept(eventsSource_.fd(), (struct sockaddr *)&addr, &len);
-    if (connfd > 0)
+    // accept until no connections
+    FileDesc connfd;
+    while (-1 < (connfd = ::accept(eventsSource_.fd(), (struct sockaddr *)&addr, &len)))
     {
+        connCnt++;
         std::shared_ptr<TcpConnection> conn = std::make_shared<TcpConnection>(connfd, addr, loop_);
         if (connectionCallBack_)
         {
             connectionCallBack_(conn);
         }
     }
+    std::cout << connCnt << " new connections." << std::endl;
     return 0;
 }
 

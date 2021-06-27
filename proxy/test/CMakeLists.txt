@@ -1,34 +1,59 @@
+# Copyright 2018 gRPC authors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# cmake build file for C++ route_guide example.
+# Assumes protobuf and gRPC have been installed using cmake.
+# See cmake_externalproject/CMakeLists.txt for all-in-one cmake build
+# that automatically builds all the dependencies before building route_guide.
+
 cmake_minimum_required(VERSION 3.5.1)
 
-project(Tests C CXX)
+project(Proxy C CXX)
 
 include(../common.cmake)
-# Proto file
-get_filename_component(_dummy "." ABSOLUTE)
-get_filename_component(project_path "${_dummy}" PATH)
 
-set(project_inc_path "${project_path}/include")
-set(project_src_path "${project_path}/src")
-set(project_test_path "${project_path}/test")
-set(project_lib_path "${project_path}/lib")
+get_filename_component(project_inc_path "${PROJECT_SOURCE_DIR}/../include/ProxyServer.h" PATH)
+get_filename_component(project_src_path "${PROJECT_SOURCE_DIR}/../src/ProxyServer.cpp" PATH)
+get_filename_component(project_lib_path "${PROJECT_SOURCE_DIR}/../lib/libblackjack_grpc.a" PATH)
 
-# Include generated *.pb.h files
-include_directories("${project_inc_path}"
-                    "${project_inc_path}/grpc"
-                    "${project_test_path}"
-                    "/include")
+include_directories("${project_inc_path}" "${project_inc_path}/grpc" "/include")
 
-set(libblackjack_grpc "${project_lib_path}/libblackjack_grpc.a")
+message(STATUS "project include path: ${project_inc_path}\
+                project srouce path: ${project_src_path}\
+                project library path: ${project_lib_path}\
+                protobuf files path: ${bj_proto_path}")
 
+# # generate static library of this project
+# file(GLOB CcSources ${project_src_path}/*.cc)
+# set(LIBRARY_OUTPUT_PATH "${project_lib_path}") 
+# add_library(net "${CcSources}")
+# target_link_libraries(net
+#   ${_REFLECTION}
+#   ${_GRPC_GRPCPP}
+#   ${_PROTOBUF_LIBPROTOBUF}
+# )
+
+set(blackjack_grpc "${project_lib_path}/libblackjack_grpc.a")
+
+# now we generate the server 
 file(GLOB CcSources ${project_src_path}/*.cc)
-foreach(target_ proxy client simpleBackEnd)
-    add_executable(${target_} "${project_test_path}/${target_}.cpp;${CcSources}")
+foreach(target_ client proxy)
+    add_executable(${target_} "${target_}.cpp;${CcSources}")
     target_link_libraries(${target_}
-      ${libblackjack_grpc}
+      ${blackjack_grpc}
       ${_REFLECTION}
       ${_GRPC_GRPCPP}
       ${_PROTOBUF_LIBPROTOBUF}
     )
 endforeach()
-
-

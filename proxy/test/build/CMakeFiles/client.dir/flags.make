@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = -DCARES_STATICLIB
 
-CXX_INCLUDES = -I/home/ricki-laptop/UA_BackJackServer/proxy/include -I/home/ricki-laptop/UA_BackJackServer/proxy/include/grpc -I/home/ricki-laptop/UA_BackJackServer/proxy/test -isystem /include 
+CXX_INCLUDES = -I/home/ricki-laptop/UA_BackJackServer/proxy/test/../include -I/home/ricki-laptop/UA_BackJackServer/proxy/test/../include/grpc -isystem /include 
 

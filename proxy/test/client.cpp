@@ -8,6 +8,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <errno.h>
+#include <signal.h>
 #include <fstream>
 #include <sstream>
 #include <queue>
@@ -93,7 +94,10 @@ public:
             uid_ = -1;
         }
         // record
-        return conn_.Send(pkgData);
+        conn_.Send(pkgData);
+        
+        //print(std::cout, request);
+        return 1;
     }
     void SetRequests(const std::queue<Request> &requests) {requests_ = requests;}
     UserId uid() const {return uid_;}
@@ -108,9 +112,12 @@ private:
         }
         for (int i = 0; i < responses.size(); ++i)
         {
+            std::cout << "response from server" << std::endl;
+            waittingResponse_ = false;
             int64_t stamp = responses[i].stamp();
             if (uid_ == -1)
             {
+                std::cout << "setting client's uid" << std::endl;
                 uid_ = responses[i].uid();
             }
             else if (stampToRequest_[stamp].requesttype() == Request::LOGOUT)
@@ -121,20 +128,41 @@ private:
             time_point now = std::chrono::steady_clock::now();
             stamp = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count() - stamp;
             stamp = stamp < 0 ? 0 : stamp;
+            std::cout << "response time: " << stamp << " ms" << std::endl;
             // update statistic
             responseTime_ = responseTime_ * ((double)requestSent_ / (requestSent_ + 1)) + (double)stamp / (requestSent_ + 1);
+            requestSent_++;
             // std::cout << "response from server: " << std::endl;
             // print(std::cout, responses[i]);
+          
         }
-    }
-    
-    void OnSendReady() 
-    {
         if (!waittingResponse_ && !requests_.empty())
         {
             Request request = requests_.front();
-            if (sendRequest(request) >= 0)
+            if (sendRequest(request) > 0)
             {
+                std::cout << "successfully send request to proxy." << std::endl;
+                waittingResponse_ = true;
+                requests_.pop();
+            }
+        }
+        else if (!waittingResponse_ && requests_.empty())
+        {
+            std::cout << "we have sent all the request to proxy" << std::endl;
+            conn_.DisConnect();
+            stats[objId_] = responseTime_;
+        }
+    }
+
+    void OnSendReady() 
+    {
+        std::cout << "call to OnSendReady" << std::endl;
+        if (!waittingResponse_ && !requests_.empty())
+        {
+            Request request = requests_.front();
+            if (sendRequest(request) > 0)
+            {
+                std::cout << "successfully send a request to proxy." << std::endl;
                 requests_.pop();
                 waittingResponse_ = true;
             }
@@ -238,9 +266,9 @@ int main(int argc, char **argv)
     }
     std::cout << connCnt << " clients connected to proxy." << std::endl;
     
-    signal(SIGINT, stop_client)
+    signal(SIGINT, stop_client);
     // now start to flood the proxy
-    while (!flag && -1 < loop.loopOnce(1000));
+    while (!flag && loop.loopOnce(1000) != -1);
     
     if (flag)
     {

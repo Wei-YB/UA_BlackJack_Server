@@ -2,15 +2,10 @@
 #define _PROXYSERVER_H_
 
 #include <mutex>
-#include <utility>
 #include <unordered_map>
 #include <functional>
 
-#include "EventLoop.h"
-#include "TcpConnection.h"
-#include "CircularBuffer.h"
-#include "TcpServer.h"
-#include "Client.h"  
+#include "UA_BlackJack.pb.h"
 #include "common.h"
 
 using ua_blackjack::Request;
@@ -21,7 +16,16 @@ using ua_blackjack::Response;
 #define BUFFER_SIZE 1024 * 4     // 4 KB
 #define QUEUE_SIZE  128
 
+// forward declarations
 class ServiceClient;
+class Client;
+
+namespace Net {
+    class TcpServer;
+    class TcpConnection;
+    class EventLoop;
+}
+
 
 class ProxyServer {
 public:

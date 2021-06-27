@@ -145,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Tests
+CMAKE_PROJECT_NAME:STATIC=Proxy
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -234,10 +234,10 @@ Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libprotoc.so
 Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=/usr/local/lib/libprotoc.so
 
 //Value Computed by CMake
-Tests_BINARY_DIR:STATIC=/home/ricki-laptop/UA_BackJackServer/proxy/test/build
+Proxy_BINARY_DIR:STATIC=/home/ricki-laptop/UA_BackJackServer/proxy/test/build
 
 //Value Computed by CMake
-Tests_SOURCE_DIR:STATIC=/home/ricki-laptop/UA_BackJackServer/proxy/test
+Proxy_SOURCE_DIR:STATIC=/home/ricki-laptop/UA_BackJackServer/proxy/test
 
 //The directory containing a CMake configuration file for gRPC.
 gRPC_DIR:PATH=/usr/lib/cmake/grpc

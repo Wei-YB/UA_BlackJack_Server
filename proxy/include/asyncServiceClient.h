@@ -71,6 +71,7 @@ public:
     void StopClient() {stop_ = true;}
     
 private:
+#if (DEBUG_MODE == 0)
     void AsyncCompleteRpc_()
     {
         void *got_tag;
@@ -98,7 +99,7 @@ private:
         }
     }
 
-#if (DEBUG_MODE == 1)
+#else
     void AsyncCompleteRpc_stand_alone_()
     {
         while (!stop_)
@@ -117,9 +118,18 @@ private:
                     std::cout << "Get response for call (uid = " 
                               << call->request.uid() << "):" << std::endl;
                     std::cout << "status: " << call->reply.status() << std::endl;
-                    bool isSignupLogn = call->request.requesttype() == Request::LOGIN || 
-                                        call->request.requesttype() == Request::SIGNUP;
-                    call->reply.set_uid(isSignupLogn ? ++requestCnt_ : call->request.uid());
+                    if (call->request.requesttype() == Request::LOGIN 
+                        || call->request.requesttype() == Request::SIGNUP)
+                    {
+                        std::cout << "this is a login response." << std::endl;
+                        call->reply.set_uid(++requestCnt_);
+                        std::cout << "setting its uid to " << requestCnt_ << std::endl;
+                    }
+                    else
+                    {
+                        call->reply.set_uid(call->request.uid());
+                        std::cout << "setting the response uid to " << call->request.uid();
+                    }
                     call->reply.set_stamp(call->request.stamp());
                     call->reply.set_status(0);
                     call->reply.add_args(serviceName_ + " successfully handle your requets.");
@@ -136,7 +146,8 @@ private:
                 }
             }   // end of critical section
             }
-        }   
+        }
+        std::cout << serviceName_ << " leaving loop" << std::endl;
     }
 #endif
 
@@ -149,7 +160,7 @@ protected:
 #if (DEBUG_MODE == 1)
     std::queue<std::shared_ptr<AsyncClientCall>> callQueue_;
     std::mutex callQueueLock_;
-    int64_t requestCnt_;
+    int64_t requestCnt_ = 0;
 #else
 
 #endif
@@ -186,15 +197,36 @@ public:
         call->response_reader->Finish(&call->reply, &call->status, (void*)call);
 #else
         std::cout << "stand alone mode call." << std::endl;
-        std::shared_ptr<AsyncClientCall> call = std::make_shared<AsyncClientCall>();
-        call->request = request;
-        call->callTime = std::chrono::system_clock::now();
-        call->expiredTime = call->callTime + std::chrono::milliseconds(10);
+        Response res;
+        if (request.requesttype() == Request::LOGIN 
+            || request.requesttype() == Request::SIGNUP)
         {
-            std::lock_guard<std::mutex> guard(callQueueLock_);
-            std::cout << "push into call queue." << std::endl;
-            callQueue_.push(call);
+            std::cout << "this is a login response." << std::endl;
+            res.set_uid(++requestCnt_);
+            std::cout << "setting its uid to " << requestCnt_ << std::endl;
         }
+        else
+        {
+            res.set_uid(request.uid());
+            std::cout << "setting the response uid to " << request.uid();
+        }
+        res.set_stamp(request.stamp());
+        res.set_status(0);
+        res.add_args(serviceName_ + " successfully handle your requets.");
+        if (responseCallBack_)
+        {
+            std::cout << "call proxy to handle this response." << std::endl;
+            responseCallBack_(res);
+        }
+        std::shared_ptr<AsyncClientCall> call = std::make_shared<AsyncClientCall>();
+        // call->request = request;
+        // call->callTime = std::chrono::system_clock::now();
+        // call->expiredTime = call->callTime;// + std::chrono::milliseconds(10);
+        // {
+        //     std::lock_guard<std::mutex> guard(callQueueLock_);
+        //     std::cout << "push into call queue." << std::endl;
+        //     callQueue_.push(call);
+        // }
 #endif
         return 0;
     }

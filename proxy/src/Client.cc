@@ -46,6 +46,7 @@ int Client::SendRequest(const Request &request)
 
 int Client::SendResponse(const Response &response)
 {
+    std::cout << "going to send response to client." << std::endl;
     int ret = 0;
     std::string rawResponse = response.SerializeAsString();
     std::string pkgData(8 + rawResponse.size(), '\0');

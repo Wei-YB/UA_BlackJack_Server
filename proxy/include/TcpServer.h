@@ -9,7 +9,6 @@
 #include "TcpConnection.h"
 
 #define DEFAULT_WAIT_QUEUE_LEN  64
-#define DEFAULT_MAX_EVENTS  1024
 
 namespace Net {
 

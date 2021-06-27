@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named simpleBackEnd
+# Target rules for targets named proxy
 
 # Build rule for target.
-simpleBackEnd: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 simpleBackEnd
-.PHONY : simpleBackEnd
+proxy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 proxy
+.PHONY : proxy
 
 # fast build rule for target.
-simpleBackEnd/fast:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/build
-.PHONY : simpleBackEnd/fast
+proxy/fast:
+	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/build
+.PHONY : proxy/fast
 
 #=============================================================================
 # Target rules for targets named client
@@ -135,19 +135,6 @@ client: cmake_check_build_system
 client/fast:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
-
-#=============================================================================
-# Target rules for targets named proxy
-
-# Build rule for target.
-proxy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 proxy
-.PHONY : proxy
-
-# fast build rule for target.
-proxy/fast:
-	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/build
-.PHONY : proxy/fast
 
 client.o: client.cpp.o
 
@@ -182,9 +169,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.o: home/ricki-lapto
 
 # target to build an object file
 home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.o:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.o
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.o
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.o
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.o
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.i: home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.i
@@ -193,9 +179,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.i: home/ricki-lapto
 
 # target to preprocess a source file
 home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.i:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.i
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.i
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.i
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.i
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.s: home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.s
@@ -204,9 +189,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.s: home/ricki-lapto
 
 # target to generate assembly for a file
 home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.s:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.s
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.s
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.s
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/CircularBuffer.cc.s
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/Client.o: home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.o
@@ -215,9 +199,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/Client.o: home/ricki-laptop/UA_Bac
 
 # target to build an object file
 home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.o:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.o
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.o
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.o
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.o
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/Client.i: home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.i
@@ -226,9 +209,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/Client.i: home/ricki-laptop/UA_Bac
 
 # target to preprocess a source file
 home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.i:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.i
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.i
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.i
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.i
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/Client.s: home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.s
@@ -237,9 +219,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/Client.s: home/ricki-laptop/UA_Bac
 
 # target to generate assembly for a file
 home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.s:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.s
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.s
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.s
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/Client.cc.s
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.o: home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.o
@@ -248,9 +229,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.o: home/ricki-
 
 # target to build an object file
 home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.o:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.o
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.o
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.o
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.o
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.i: home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.i
@@ -259,9 +239,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.i: home/ricki-
 
 # target to preprocess a source file
 home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.i:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.i
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.i
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.i
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.i
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.s: home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.s
@@ -270,9 +249,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.s: home/ricki-
 
 # target to generate assembly for a file
 home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.s:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.s
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.s
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.s
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/ClientProxyProtocol.cc.s
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.o: home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.o
@@ -281,9 +259,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.o: home/ricki-laptop/UA_
 
 # target to build an object file
 home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.o:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.o
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.o
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.o
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.o
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.i: home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.i
@@ -292,9 +269,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.i: home/ricki-laptop/UA_
 
 # target to preprocess a source file
 home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.i:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.i
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.i
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.i
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.i
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.s: home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.s
@@ -303,9 +279,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.s: home/ricki-laptop/UA_
 
 # target to generate assembly for a file
 home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.s:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.s
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.s
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.s
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/EventLoop.cc.s
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.o: home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.o
@@ -314,9 +289,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.o: home/ricki-laptop/U
 
 # target to build an object file
 home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.o:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.o
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.o
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.o
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.o
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.i: home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.i
@@ -325,9 +299,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.i: home/ricki-laptop/U
 
 # target to preprocess a source file
 home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.i:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.i
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.i
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.i
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.i
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.s: home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.s
@@ -336,9 +309,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.s: home/ricki-laptop/U
 
 # target to generate assembly for a file
 home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.s:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.s
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.s
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.s
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyServer.cc.s
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.o: home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.o
@@ -347,9 +319,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.o: home/ricki-laptop
 
 # target to build an object file
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.o:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.o
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.o
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.o
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.o
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.i: home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.i
@@ -358,9 +329,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.i: home/ricki-laptop
 
 # target to preprocess a source file
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.i:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.i
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.i
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.i
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.i
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.s: home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.s
@@ -369,9 +339,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.s: home/ricki-laptop
 
 # target to generate assembly for a file
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.s:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.s
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.s
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.s
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.s
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.o: home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.o
@@ -380,9 +349,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.o: home/ricki-laptop/UA_
 
 # target to build an object file
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.o:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.o
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.o
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.o
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.o
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.i: home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.i
@@ -391,9 +359,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.i: home/ricki-laptop/UA_
 
 # target to preprocess a source file
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.i:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.i
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.i
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.i
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.i
 
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.s: home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.s
@@ -402,9 +369,8 @@ home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.s: home/ricki-laptop/UA_
 
 # target to generate assembly for a file
 home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.s:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.s
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.s
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.s
 .PHONY : home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.s
 
 proxy.o: proxy.cpp.o
@@ -434,33 +400,6 @@ proxy.cpp.s:
 	$(MAKE) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/proxy.cpp.s
 .PHONY : proxy.cpp.s
 
-simpleBackEnd.o: simpleBackEnd.cpp.o
-
-.PHONY : simpleBackEnd.o
-
-# target to build an object file
-simpleBackEnd.cpp.o:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/simpleBackEnd.cpp.o
-.PHONY : simpleBackEnd.cpp.o
-
-simpleBackEnd.i: simpleBackEnd.cpp.i
-
-.PHONY : simpleBackEnd.i
-
-# target to preprocess a source file
-simpleBackEnd.cpp.i:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/simpleBackEnd.cpp.i
-.PHONY : simpleBackEnd.cpp.i
-
-simpleBackEnd.s: simpleBackEnd.cpp.s
-
-.PHONY : simpleBackEnd.s
-
-# target to generate assembly for a file
-simpleBackEnd.cpp.s:
-	$(MAKE) -f CMakeFiles/simpleBackEnd.dir/build.make CMakeFiles/simpleBackEnd.dir/simpleBackEnd.cpp.s
-.PHONY : simpleBackEnd.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -469,9 +408,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... simpleBackEnd"
-	@echo "... client"
 	@echo "... proxy"
+	@echo "... client"
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"
@@ -499,9 +437,6 @@ help:
 	@echo "... proxy.o"
 	@echo "... proxy.i"
 	@echo "... proxy.s"
-	@echo "... simpleBackEnd.o"
-	@echo "... simpleBackEnd.i"
-	@echo "... simpleBackEnd.s"
 .PHONY : help
 
 

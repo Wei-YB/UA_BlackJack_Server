@@ -135,7 +135,7 @@ int Net::EventLoop::del(EventsSource *evsSource)
 
 int Net::EventLoop::loopOnce(int timeout)
 {
-    if (!eventsCnt_)
+    if (fdToEventsSource_.size() == 0)
     {
         return -1;
     }

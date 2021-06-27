@@ -113,7 +113,7 @@ int TcpConnection::OnOutput()
 {
     // check whether we can get some data from upper layer
     if (outputCallBack_ 
-        && writeBuffer_.size() + 2 * PACKAGE_HDR_LEN > writeBuffer_.capacity())
+        && writeBuffer_.size() + 2 * PACKAGE_HDR_LEN < writeBuffer_.capacity())
     {
         outputCallBack_();
     }
@@ -170,6 +170,6 @@ int TcpConnection::Connect()
 int TcpConnection::DisConnect()
 {
     ::close(eventsSource_.fd());
-    
+    eventsSource_.Close(); 
     return 0;
 }

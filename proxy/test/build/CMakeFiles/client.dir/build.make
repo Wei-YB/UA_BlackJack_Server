@@ -184,7 +184,7 @@ client: CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/Prox
 client: CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.o
 client: CMakeFiles/client.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.o
 client: CMakeFiles/client.dir/build.make
-client: /home/ricki-laptop/UA_BackJackServer/proxy/lib/libblackjack_grpc.a
+client: ../../lib/libblackjack_grpc.a
 client: /lib/libgrpc++_reflection.a
 client: /lib/libgrpc++.a
 client: /usr/local/lib/libprotobuf.so

@@ -6,7 +6,7 @@
 #include <unordered_map>
 #include "common.h"
 
-#define DEFAULT_MAX_EVENTS  1024
+#define DEFAULT_MAX_EVENTS  20000
 
 namespace Net {
 

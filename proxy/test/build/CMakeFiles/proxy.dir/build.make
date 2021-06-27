@@ -184,7 +184,7 @@ proxy: CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/ProxyS
 proxy: CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpConnection.cc.o
 proxy: CMakeFiles/proxy.dir/home/ricki-laptop/UA_BackJackServer/proxy/src/TcpServer.cc.o
 proxy: CMakeFiles/proxy.dir/build.make
-proxy: /home/ricki-laptop/UA_BackJackServer/proxy/lib/libblackjack_grpc.a
+proxy: ../../lib/libblackjack_grpc.a
 proxy: /lib/libgrpc++_reflection.a
 proxy: /lib/libgrpc++.a
 proxy: /usr/local/lib/libprotobuf.so

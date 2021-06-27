@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/test.dir/test.cpp.o CMakeFiles/test.dir/log.cc.o  -o test  /usr/local/lib/libspdlog.a -lpthread 

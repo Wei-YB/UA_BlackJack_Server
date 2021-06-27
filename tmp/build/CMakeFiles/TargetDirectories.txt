@@ -1,0 +1,3 @@
+/home/ricki-laptop/UA_BackJackServer/tmp/build/CMakeFiles/rebuild_cache.dir
+/home/ricki-laptop/UA_BackJackServer/tmp/build/CMakeFiles/edit_cache.dir
+/home/ricki-laptop/UA_BackJackServer/tmp/build/CMakeFiles/test.dir

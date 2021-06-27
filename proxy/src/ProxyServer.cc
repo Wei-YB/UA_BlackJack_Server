@@ -14,15 +14,15 @@
 #include "ClientProxyProtocol.h"   
 #include "common.h"
 #include "ProxyServer.h"
+#include "UA_BlackJack.pb.h"
+#include "log.h"
 
 using ua_blackjack::Request;
 using ua_blackjack::Response;
+
 using namespace Net;
 
-#define MAX_FORWORD_FAILURE 5
-
 #define BUFFER_SIZE 1024 * 4     // 4 KB
-#define QUEUE_SIZE  128
 
 void print(std::ostream &os, const Response &response)
 {
@@ -74,7 +74,7 @@ void print(std::ostream &os, Net::Event events)
     os << std::endl;
 }
 
-ProxyServer::ProxyServer(const char *ip, unsigned short port, Net::EventLoop *loop)
+ProxyServer::ProxyServer(const char *ip, unsigned short port, EventLoop *loop)
 {
     server_ = std::make_shared<Net::TcpServer>(ip, port, loop, 
                                     std::bind(&ProxyServer::OnNewClient, this, std::placeholders::_1),
@@ -83,7 +83,7 @@ ProxyServer::ProxyServer(const char *ip, unsigned short port, Net::EventLoop *lo
 
 void ProxyServer::OnNewClient(std::shared_ptr<TcpConnection> conn)
 {
-    // std::cout << "ProxyServer::OnNewClient" << std::endl;
+    logger_ptr->info("In main thread: Get a new client connection")
     std::shared_ptr<Client> newClient = std::make_shared<Client>(conn, 
                                                                 std::bind(&ProxyServer::OnClientRequest, this, std::placeholders::_1, std::placeholders::_2),
                                                                 std::bind(&ProxyServer::OnClientResponse, this, std::placeholders::_1),
@@ -93,11 +93,18 @@ void ProxyServer::OnNewClient(std::shared_ptr<TcpConnection> conn)
 
 void ProxyServer::OnClientRequest(FileDesc fd, Request &request)
 {   
-    // std::cout << "ProxyServer::OnClientRequest: get request from " << (request.uid() ? request.uid() : fd)<<  
-    // check whether the service exist
-    std::shared_ptr<ServiceClient> serviceClient = requestTypeToServiceClient_[request.requesttype()].lock();
+     std::cout << "ProxyServer::OnClientRequest: get request from " << (request.uid() ? request.uid() : fd) << std::endl;  
+     std::cout << "requestType: " << request.requesttype() << std::endl;
+     // check whether the service exist
+     if (requestTypeToModule.find(request.requesttype()) == requestTypeToModule.end()) 
+     {
+         std::cout << "an request type that is not known by proxy!" <<std::endl;
+         return;
+     }
+     std::shared_ptr<ServiceClient> serviceClient = requestTypeToServiceClient_[request.requesttype()].lock();
     if (!serviceClient)
     {
+        std::cout << "service client down!" << std::endl;
         return;
     }
     // for unlogin user, we only handle signin and login request
@@ -105,6 +112,7 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request &request)
         && (request.requesttype() == Request::LOGIN
             || request.requesttype() == Request::SIGNUP))
     {
+        std::cout << "comes a unlogin client want to login." << std::endl;
         std::shared_ptr<Client> client = fdToClient_[fd];
         // we use the memory addr of the client as its identity,
         // since stamps from multiple clients might conflict
@@ -120,10 +128,12 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request &request)
     }
     else if (fdToClient_[fd]->uid() != -1)
     {
+        std::cout << "login client's request (uid: " << fdToClient_[fd]->uid() << ")" <<std::endl;
         serviceClient->Call(request);
     }
     else
     {
+        std::cout << "unlogin client try to send illegal request" <<std::endl;
         // simply drop it
     }
 }
@@ -137,6 +147,7 @@ void ProxyServer::OnClientResponse(Response &response)
 
 void ProxyServer::OnServiceResponse(const Response& response)
 {
+    std::cout << "On service response (uid: " << response.uid() << std::endl;
     UserId uid = response.uid();
     int64_t stamp = response.stamp();
     // if the response is for a logined client
@@ -150,6 +161,7 @@ void ProxyServer::OnServiceResponse(const Response& response)
     }
     if (client)
     {
+        std::cout << "a login client's response" << std::endl;
         client->SendResponse(response);
         return;
     }
@@ -173,6 +185,10 @@ void ProxyServer::OnServiceResponse(const Response& response)
             uidToClient_.emplace(uid, client);
         }
         client->SendResponse(response);
+    }
+    else
+    {
+        std::cout << "an unknown response for uid: " << uid  << std::endl;
     }
 }
 
