@@ -1,4 +1,0 @@
-/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/rebuild_cache.dir
-/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/edit_cache.dir
-/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/client.dir
-/home/ricki-laptop/UA_BackJackServer/proxy/test/build/CMakeFiles/proxy.dir

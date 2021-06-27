@@ -1,9 +1,0 @@
-syntax = "proto3";
-import "common.proto";
-
-package social;
-
-
-service Social {
-    rpc Notify (common.Request) returns (common.Response) {}
-}

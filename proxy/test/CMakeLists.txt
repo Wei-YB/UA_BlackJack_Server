@@ -10,7 +10,7 @@ get_filename_component(project_path "${_dummy}" PATH)
 set(project_inc_path "${project_path}/include")
 set(project_src_path "${project_path}/src")
 set(project_test_path "${project_path}/test")
-set(project_lib_path "${project_path}/libs")
+set(project_lib_path "${project_path}/lib")
 
 # Include generated *.pb.h files
 include_directories("${project_inc_path}"
@@ -21,7 +21,7 @@ include_directories("${project_inc_path}"
 set(libblackjack_grpc "${project_lib_path}/libblackjack_grpc.a")
 
 file(GLOB CcSources ${project_src_path}/*.cc)
-foreach(target_ proxy client)
+foreach(target_ proxy client simpleBackEnd)
     add_executable(${target_} "${project_test_path}/${target_}.cpp;${CcSources}")
     target_link_libraries(${target_}
       ${libblackjack_grpc}

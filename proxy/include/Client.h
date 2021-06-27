@@ -9,6 +9,7 @@
 
 using ua_blackjack::Response;
 using ua_blackjack::Request;
+using namespace Net;
 
 class Client
 {

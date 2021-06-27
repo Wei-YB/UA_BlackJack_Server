@@ -23,38 +23,40 @@ project(Proxy C CXX)
 
 include(common.cmake)
 
-# Proto file
-get_filename_component(bj_proto "protos/UA_BlackJack.proto" ABSOLUTE)
+
+get_filename_component(bj_proto "${PROJECT_SOURCE_DIR}/protos/UA_BlackJack.proto" ABSOLUTE)
 get_filename_component(bj_proto_path "${bj_proto}" PATH)
+
+include_directories("${PROJECT_SOURCE_DIR}/include" "/include")
+
+
+# Now we build the project
 get_filename_component(project_inc_path "${bj_proto_path}/../include/ProxyServer.h" PATH)
 get_filename_component(project_src_path "${bj_proto_path}/../src/ProxyServer.cpp" PATH)
-get_filename_component(project_lib_path "${bj_proto_path}/../libs/libblackjack_grpc.a" PATH)
+get_filename_component(project_lib_path "${bj_proto_path}/../lib/libblackjack_grpc.a" PATH)
 
 message(STATUS "project include path: ${project_inc_path}\
                 project srouce path: ${project_src_path}\
                 project library path: ${project_lib_path}\
                 protobuf files path: ${bj_proto_path}")
 
-# Include generated *.pb.h files
-include_directories("${project_inc_path}"
-                    "${project_inc_path}/grpc"
-                    "/include")
+# # generate static library of this project
+# file(GLOB CcSources ${project_src_path}/*.cc)
+# set(LIBRARY_OUTPUT_PATH "${project_lib_path}") 
+# add_library(net "${CcSources}")
+# target_link_libraries(net
+#   ${_REFLECTION}
+#   ${_GRPC_GRPCPP}
+#   ${_PROTOBUF_LIBPROTOBUF}
+# )
 
-set(libblackjack_grpc "${project_lib_path}/libblackjack_grpc.a")
+set(backjack_grpc "${project_lib_path}/libbackjack_grpc.a")
 
-# Targets route_guide_(client|server)
+# now we generate the server 
 file(GLOB CcSources ${project_src_path}/*.cc)
-add_library(net "${CcSources}")
-target_link_libraries(net
-  ${_REFLECTION}
-  ${_GRPC_GRPCPP}
-  ${_PROTOBUF_LIBPROTOBUF}
-)
-# aux_source_directory("${project_src_path}" CppSources)
-
 add_executable(proxy "${project_src_path}/main.cpp;${CcSources}")
 target_link_libraries(proxy
-  ${libblackjack_grpc}
+  ${backjack_grpc}
   ${_REFLECTION}
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF}

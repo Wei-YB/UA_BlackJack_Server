@@ -9,10 +9,8 @@
 #include <grpc/support/log.h>
 #include <grpcpp/grpcpp.h>
 
-#include "lobby.grpc.pb.h"
-#include "room.grpc.pb.h"
-#include "social.grpc.pb.h"
-#include "common.pb.h"
+#include "UA_BlackJack.grpc.pb.h"
+#include "UA_BlackJack.pb.h"
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
@@ -20,17 +18,15 @@ using grpc::ServerBuilder;
 using grpc::ServerCompletionQueue;
 using grpc::ServerContext;
 using grpc::Status;
-using common::Request;
-using common::Response;
 
+using namespace ua_blackjack;
 
-
-template<typename AsyncService>
+template<typename AsyncRpcService>
 class AsyncCall
 {
     typedef std::function<void(const Request&, Response&)> RequestCallBack;
 public:
-    AsyncCall(AsyncService *service, 
+    AsyncCall(AsyncRpcService *service, 
             ServerCompletionQueue *cq,
             const RequestCallBack &cb)
             : service_(service), cq_(cq), 
@@ -46,8 +42,7 @@ public:
         }
         else if (status_ == PROCESS)
         {
-            new AsyncCall<AsyncService>(service_, cq_, cb_);
-            //new AsyncCall(service_, cq_, cb_);
+            new AsyncCall<AsyncRpcService>(service_, cq_, cb_);
             cb_(request_, response_);
             status_ = FINISH;
             responder_.Finish(response_, Status::OK, this);
@@ -59,27 +54,28 @@ public:
     }
 
 private:
-    AsyncService *service_;
-    //lobby::Lobby::AsyncService *service_;
+    AsyncRpcService *service_;
     ServerCompletionQueue *cq_;
     ServerContext ctx_;
     Request request_;
     Response response_;
     ServerAsyncResponseWriter<Response> responder_;
-    enum CallStatus {CREATE, PROCESS, FORWARD, FINISH};
+    enum CallStatus {CREATE, PROCESS, FINISH};
     CallStatus status_;
     RequestCallBack cb_;
 };
 
-template<typename AsyncService>
-class AsyncServer final {
+template<typename AsyncRpcService>
+class AsyncRpcServer final {
     typedef std::function<void(const Request&, Response&)> RequestCallBack;
 public:
-    AsyncServer(const std::string &serverAddr, 
-                const RequestCallBack &cb) 
-                : serverAddr_(serverAddr),
-                cb_(cb) {}
-    ~AsyncServer() {server_->Shutdown(); cq_->Shutdown();}
+    // the callback is used to tell the server how to deal with the 
+    // request when it comes
+    AsyncRpcServer( const std::string &serverAddr, 
+                    const RequestCallBack &cb) 
+                    : serverAddr_(serverAddr),
+                    cb_(cb) {}
+    ~AsyncRpcServer() {server_->Shutdown(); cq_->Shutdown();}
 
     void Run()
     {
@@ -95,24 +91,21 @@ public:
 private:
     void HandleRpcs()
     {
-        new AsyncCall<AsyncService>(&service_, cq_.get(), cb_);
-        //new AsyncCall(&service_, cq_.get(), cb_);
+        new AsyncCall<AsyncRpcService>(&service_, cq_.get(), cb_);
         void *tag;
         bool ok;
         while (true)
         {
             GPR_ASSERT(cq_->Next(&tag, &ok));
             GPR_ASSERT(ok);
-            //static_cast<AsyncCall<AsyncService>*>(tag)->Proceed();
-            static_cast<AsyncCall<AsyncService>*>(tag)->Proceed();
+            static_cast<AsyncCall<AsyncRpcService>*>(tag)->Proceed();
         }
     }
 
 private:
     std::string serverAddr_;
     std::unique_ptr<ServerCompletionQueue> cq_;
-    AsyncService service_;
-    //lobby::Lobby::AsyncService service_;
+    AsyncRpcService service_;
     std::unique_ptr<Server> server_;
     RequestCallBack cb_;
 };

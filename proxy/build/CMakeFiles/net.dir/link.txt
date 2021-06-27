@@ -1,2 +1,0 @@
-/usr/bin/ar qc libnet.a  CMakeFiles/net.dir/src/CircularBuffer.cc.o CMakeFiles/net.dir/src/Client.cc.o CMakeFiles/net.dir/src/ClientProxyProtocol.cc.o CMakeFiles/net.dir/src/EventLoop.cc.o CMakeFiles/net.dir/src/ProxyServer.cc.o CMakeFiles/net.dir/src/TcpConnection.cc.o CMakeFiles/net.dir/src/TcpServer.cc.o CMakeFiles/net.dir/src/UA_BlackJack.grpc.pb.cc.o CMakeFiles/net.dir/src/UA_BlackJack.pb.cc.o
-/usr/bin/ranlib libnet.a

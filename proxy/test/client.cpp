@@ -19,10 +19,7 @@
 #include "ClientProxyProtocol.h"
 #include "common.h"
 
-using Net::EventsSource;
-using Net::EventLoop;
-using Net::Event;
-using Net::CircularBuffer;
+using namespace Net;
 using ua_blackjack::Request;
 using ua_blackjack::Response;
 
@@ -30,12 +27,7 @@ using ua_blackjack::Response;
 
 static int setNonBlocking(int fd)
 {
-    int opt = fcntl(fd, F_GETFL);
-    if (fcntl(fd, F_SETFL, opt | O_NONBLOCK) < 0)
-    {
-        return -1;
-    }
-    return 0;
+    return fcntl(fd, F_SETFL, fcntl(fd, F_GETFL) | O_NONBLOCK);
 }
 
 class BlackJackClient

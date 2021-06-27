@@ -1,8 +1,0 @@
-syntax = "proto3";
-import "common.proto";
-
-package lobby;
-
-service Lobby {
-    rpc Notify (common.Request) returns (common.Response) {}
-}

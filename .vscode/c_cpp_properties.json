@@ -6,7 +6,8 @@
 				"${workspaceFolder}/proxy/include",
 				"${workspaceFolder}/proxy/include/grpc",
 				"/include",
-				"/usr/local/include/google/protobuf"
+				"/usr/local/include/google/protobuf",
+				"/"
 			],
 			"defines":[],
 			"compilerPath": "/usr/bin/gcc",

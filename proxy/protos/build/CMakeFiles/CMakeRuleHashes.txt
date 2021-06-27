@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-72ec0674fbec8c4ba2ce4d0ef5b74875 UA_BlackJack.pb.cc

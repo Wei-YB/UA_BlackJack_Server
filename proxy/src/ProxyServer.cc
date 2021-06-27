@@ -104,15 +104,15 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request &request)
     if (request.uid() == -1)
     {
         std::shared_ptr<Client> client = fdToClient_[fd];
-        // we use the memory addr of the client as the identity of this client
-        // since the stamps from multiple client might conflict
+        // we use the memory addr of the client as its identity,
+        // since stamps from multiple clients might conflict
         int64_t stamp = (int64_t)client.get();
         {
         std::lock_guard<std::mutex> guard(stampToClientLock_);
         stampToClient_.emplace(stamp, client);
         }
         client->SetUnloginStamp(request.stamp());
-        // modify the stamp so we can reconize the corresponding response
+        // modify the stamp so we can recognize when we get response 
         request.set_stamp(stamp);
     }
     serviceClient->Call(request);
@@ -143,7 +143,7 @@ void ProxyServer::OnServiceResponse(const Response& response)
         client->SendResponse(response);
         return;
     }
-    // if the response is for non-login client
+    // if the response is for unlogin client
     std::weak_ptr<Client> client_weak;
     {
         std::lock_guard<std::mutex> guard(stampToClientLock_);
@@ -153,8 +153,7 @@ void ProxyServer::OnServiceResponse(const Response& response)
             stampToClient_.erase(stamp);
         }
     }
-    client = client_weak.lock();
-    if (client)
+    if (client = client_weak.lock())
     {
         client->SetUid(uid);
         {
