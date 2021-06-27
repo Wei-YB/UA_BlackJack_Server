@@ -100,8 +100,10 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request &request)
     {
         return;
     }
-    // remenber an unlogin user
-    if (request.uid() == -1)
+    // for unlogin user, we only handle signin and login request
+    if (fdToClient_[fd]->uid() == -1 
+        && (request.requesttype() == Request::LOGIN
+            || request.requesttype() == Request::SIGNUP))
     {
         std::shared_ptr<Client> client = fdToClient_[fd];
         // we use the memory addr of the client as its identity,
@@ -114,8 +116,16 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request &request)
         client->SetUnloginStamp(request.stamp());
         // modify the stamp so we can recognize when we get response 
         request.set_stamp(stamp);
+        serviceClient->Call(request);
     }
-    serviceClient->Call(request);
+    else if (fdToClient_[fd]->uid() != -1)
+    {
+        serviceClient->Call(request);
+    }
+    else
+    {
+        // simply drop it
+    }
 }
 
 // this callback directly forward the response to RpcServer
@@ -155,6 +165,8 @@ void ProxyServer::OnServiceResponse(const Response& response)
     }
     if (client = client_weak.lock())
     {
+        std::cout << "an unlogin client." << std::endl;
+        std::cout << "set its uid to be " << uid << std::endl;
         client->SetUid(uid);
         {
             std::lock_guard<std::mutex> guard(uidToClientLock_);

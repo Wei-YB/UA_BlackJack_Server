@@ -1,5 +1,5 @@
+SIGNIN ruiqizhang@tencent.com ruiqi 123456
 LOGIN ruiqizhang@tencent.com 123456
-LOGOUT
 ROOM_LIST
 JOIN_ROOM 1
 CREATE_ROOM
@@ -12,10 +12,10 @@ STAND
 DOUBLE
 SPLIT
 SURRENDER
-SIGNIN ruiqizhang@tencent.com ruiqi 123456
 INFO
 RANK_ME
 RANK_TOP 10
 ADD_FRIEND ruiqi
 DELETE_FRIEND ruiqi
 LIST_FRIEND
+LOGOUT

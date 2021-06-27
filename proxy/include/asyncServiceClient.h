@@ -52,7 +52,8 @@ public:
     ServiceClient(const std::string &serviceName, 
                   const std::string &serviceAddr) 
                   : serviceName_(serviceName),
-                    serviceAddr_(serviceAddr) {}
+                    serviceAddr_(serviceAddr),
+                    stop_(false) {}
     ~ServiceClient() {}
 public:
     virtual int Call(const Request &) = 0;
@@ -109,6 +110,7 @@ private:
             std::lock_guard<std::mutex> guard(callQueueLock_);
             while (!callQueue_.empty())
             {
+                std::cout << "check the queue" << std::endl;
                 std::shared_ptr<AsyncClientCall> call = callQueue_.front();
                 if (call->expiredTime <= now)
                 {
@@ -190,6 +192,7 @@ public:
         call->expiredTime = call->callTime + std::chrono::milliseconds(10);
         {
             std::lock_guard<std::mutex> guard(callQueueLock_);
+            std::cout << "push into call queue." << std::endl;
             callQueue_.push(call);
         }
 #endif

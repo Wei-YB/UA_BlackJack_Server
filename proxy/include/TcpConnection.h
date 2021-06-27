@@ -32,6 +32,8 @@ public:
 
     int Connect();
 
+    int DisConnect();
+
     int SockFd() const {return eventsSource_.fd();}
     int GetWriteBufferRoom() const {return writeBuffer_.capacity() - writeBuffer_.size();}
     // 

@@ -142,11 +142,14 @@ int TcpConnection::Send(const std::string &pkgsData)
     int bytesWritten = write(eventsSource_.fd(), writeBuffer_);
     if (bytesWritten < 0 && errno != EWOULDBLOCK && errno != EAGAIN)
     {
+        std::cout << "TcpConnection::Send: fail." << std::endl;
         return -1;
     }
+    std::cout << "TcpConnection::Send: send." << bytesWritten << "bytes." << std::endl;
     // if there are data left
     if (!writeBuffer_.empty())
     {
+        std::cout << "TcpConnection::Send: wait for the next round." << std::endl;
         eventsSource_.Update(Net::EV_IN | Net::EV_OUT | Net::EV_ET | Net::EV_ERR);
     }
     
@@ -158,8 +161,15 @@ int TcpConnection::Connect()
     int ret = connect(eventsSource_.fd(), (struct sockaddr*)&addr_, sizeof(addr_));
     if (ret != -1)
     {
-        eventsSource_.Update(Net::EV_OUT | Net::EV_ET | Net::EV_ERR);
+        eventsSource_.Update(Net::EV_IN | Net::EV_OUT | Net::EV_ET | Net::EV_ERR);
         return 0;
     }
     return -1;
+}
+
+int TcpConnection::DisConnect()
+{
+    ::close(eventsSource_.fd());
+    
+    return 0;
 }

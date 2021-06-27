@@ -52,6 +52,8 @@ public:
     
     int Update(Net::Event events);
 
+    int Close();
+
     FileDesc fd() const;
     
     friend class EventLoop;

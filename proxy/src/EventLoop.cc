@@ -56,6 +56,11 @@ int Net::EventsSource::Update(Event events)
     return loop_->mod(this);
 }
 
+int Net::EventsSource::Close()
+{
+    return loop_->del(this);
+}
+
 FileDesc Net::EventsSource::fd() const 
 {
     return fd_;
