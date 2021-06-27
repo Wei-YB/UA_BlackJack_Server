@@ -6,8 +6,6 @@
 #include <unordered_map>
 #include <functional>
 
-#include "asyncServiceClient.h"
-
 #include "EventLoop.h"
 #include "TcpConnection.h"
 #include "CircularBuffer.h"
@@ -22,6 +20,8 @@ using ua_blackjack::Response;
 
 #define BUFFER_SIZE 1024 * 4     // 4 KB
 #define QUEUE_SIZE  128
+
+class ServiceClient;
 
 class ProxyServer {
 public:

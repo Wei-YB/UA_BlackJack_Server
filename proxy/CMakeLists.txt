@@ -27,13 +27,12 @@ include(common.cmake)
 get_filename_component(bj_proto "${PROJECT_SOURCE_DIR}/protos/UA_BlackJack.proto" ABSOLUTE)
 get_filename_component(bj_proto_path "${bj_proto}" PATH)
 
-include_directories("${PROJECT_SOURCE_DIR}/include" "/include")
-
-
 # Now we build the project
 get_filename_component(project_inc_path "${bj_proto_path}/../include/ProxyServer.h" PATH)
 get_filename_component(project_src_path "${bj_proto_path}/../src/ProxyServer.cpp" PATH)
 get_filename_component(project_lib_path "${bj_proto_path}/../lib/libblackjack_grpc.a" PATH)
+
+include_directories("${project_inc_path}" "${project_inc_path}/grpc" "/include")
 
 message(STATUS "project include path: ${project_inc_path}\
                 project srouce path: ${project_src_path}\
@@ -50,13 +49,13 @@ message(STATUS "project include path: ${project_inc_path}\
 #   ${_PROTOBUF_LIBPROTOBUF}
 # )
 
-set(backjack_grpc "${project_lib_path}/libbackjack_grpc.a")
+set(blackjack_grpc "${project_lib_path}/libblackjack_grpc.a")
 
 # now we generate the server 
 file(GLOB CcSources ${project_src_path}/*.cc)
 add_executable(proxy "${project_src_path}/main.cpp;${CcSources}")
 target_link_libraries(proxy
-  ${backjack_grpc}
+  ${blackjack_grpc}
   ${_REFLECTION}
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF}

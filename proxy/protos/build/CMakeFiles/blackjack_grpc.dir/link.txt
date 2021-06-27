@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/ricki-laptop/UA_BackJackServer/proxy/lib/libblackjack_grpc.a  CMakeFiles/blackjack_grpc.dir/UA_BlackJack.pb.cc.o CMakeFiles/blackjack_grpc.dir/UA_BlackJack.grpc.pb.cc.o
+/usr/bin/ranlib /home/ricki-laptop/UA_BackJackServer/proxy/lib/libblackjack_grpc.a

@@ -41,7 +41,7 @@ include_directories("/include" "${project_inc_path}")
 
 # service_grpc_proto
 set(LIBRARY_OUTPUT_PATH "${bj_proto_path}/../lib") 
-add_library(backjack_grpc
+add_library(blackjack_grpc
     ${bj_proto_srcs}
     ${bj_proto_hdrs}
     ${bj_grpc_srcs}

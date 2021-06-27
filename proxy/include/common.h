@@ -8,6 +8,8 @@
 using ua_blackjack::Response;
 using ua_blackjack::Request;
 
+#define DEBUG_MODE  1
+
 #define NS UA_BLACKJACK_SERVER
 #define NAMESPACE_BEGIN namespace NS {
 

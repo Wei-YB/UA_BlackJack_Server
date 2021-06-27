@@ -38,11 +38,12 @@ int main(int argc, char **argv)
 
     Net::EventLoop loop;
     std::shared_ptr<ServiceClient> lobbyClient = 
-            std::make_shared<ConcreteServiceClient<LobbyService>>(std::string(lobbyAddress));
+            std::make_shared<ConcreteServiceClient<LobbyService>>("Lobby", std::string(lobbyAddress));
     std::shared_ptr<ServiceClient> roomClient = 
-            std::make_shared<ConcreteServiceClient<GameService>>(std::string(roomAddress));
+            std::make_shared<ConcreteServiceClient<GameService>>("Room", std::string(roomAddress));
     std::shared_ptr<ServiceClient> socialClient = 
-            std::make_shared<ConcreteServiceClient<SocialService>>(std::string(socialAddress));
+            std::make_shared<ConcreteServiceClient<SocialService>>("Social", std::string(socialAddress));
+
 
     std::shared_ptr<ProxyServer> proxyServer = std::make_shared<ProxyServer>(argv[1], (unsigned short)(atoi(argv[2])), &loop);
     // resgister the service Clients to the proxy server
@@ -70,6 +71,10 @@ int main(int argc, char **argv)
         }
     }
    
+    lobbyClient->SetResponseCallBack(std::bind(&ProxyServer::OnServiceResponse, proxyServer.get(), std::placeholders::_1));
+    roomClient->SetResponseCallBack(std::bind(&ProxyServer::OnServiceResponse, proxyServer.get(), std::placeholders::_1));
+    socialClient->SetResponseCallBack(std::bind(&ProxyServer::OnServiceResponse, proxyServer.get(), std::placeholders::_1));
+
     // start service clients as threads
     std::thread lobbyClientThread = std::thread(&ConcreteServiceClient<LobbyService>::AsyncCompleteRpc, lobbyClient.get());
     std::thread roomClientThread = std::thread(&ConcreteServiceClient<GameService>::AsyncCompleteRpc, roomClient.get());
