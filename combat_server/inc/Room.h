@@ -8,8 +8,8 @@
 #include "Player.h"
 #include "spdlog/spdlog.h"
 #include <sstream>
-#include "AskForDatabaseRequest.h"
-#include "AskForUserRequest.h"
+#include "ClientForDatebase.h"
+#include "ClientForTestUser.h"
 class Room;
 extern std::unordered_map<BlackJackRoomID, std::weak_ptr<Room>> roomHashMap;
 class Room : std::enable_shared_from_this<Room>

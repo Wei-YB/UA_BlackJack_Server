@@ -1,9 +1,9 @@
 #include <iostream>
 #include <queue>
 #include "GameProcess.h"
-#include "AskForDatabaseRequest.h"
-#include "AskForLobby.h"
-#include "AskForUserRequest.h"
+#include "ClientForDatebase.h"
+#include "ClientForLobby.h"
+#include "ClientForTestUser.h"
 #include "spdlog/spdlog.h"
 #include <sstream>
 int main(int agrc, char *argv[])

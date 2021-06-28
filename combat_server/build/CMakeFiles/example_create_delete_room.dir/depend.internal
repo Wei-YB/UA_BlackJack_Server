@@ -252,8 +252,8 @@ CMakeFiles/example_create_delete_room.dir/example/example_create_delete_room.cc.
  ../3rd/spdlog/inc/spdlog/spdlog.h
  ../3rd/spdlog/inc/spdlog/tweakme.h
  ../3rd/spdlog/inc/spdlog/version.h
- ../inc/AskForDatabaseRequest.h
- ../inc/AskForUserRequest.h
+ ../inc/ClientForDatebase.h
+ ../inc/ClientForTestUser.h
  ../inc/Player.h
  ../inc/Poker.h
  ../inc/Room.h
@@ -453,7 +453,7 @@ CMakeFiles/example_create_delete_room.dir/example/example_create_delete_room.cc.
  /root/.local/include/grpcpp/support/config.h
  /root/.local/include/grpcpp/support/status.h
  /root/.local/include/grpcpp/support/string_ref.h
-CMakeFiles/example_create_delete_room.dir/src/AskForDatabaseRequest.cc.o
+CMakeFiles/example_create_delete_room.dir/src/ClientForDatebase.cc.o
  ../3rd/grpc/grpc_h/demo.grpc.pb.h
  ../3rd/grpc/grpc_h/demo.pb.h
  ../3rd/libco/co_routine.h
@@ -499,12 +499,12 @@ CMakeFiles/example_create_delete_room.dir/src/AskForDatabaseRequest.cc.o
  ../3rd/spdlog/inc/spdlog/spdlog.h
  ../3rd/spdlog/inc/spdlog/tweakme.h
  ../3rd/spdlog/inc/spdlog/version.h
- ../inc/AskForDatabaseRequest.h
- ../inc/AskForUserRequest.h
+ ../inc/ClientForDatebase.h
+ ../inc/ClientForTestUser.h
  ../inc/Player.h
  ../inc/Poker.h
  ../inc/combat_typedef.h
- /home/tong/UA_BlackJack_Server/combat_server/src/AskForDatabaseRequest.cc
+ /home/tong/UA_BlackJack_Server/combat_server/src/ClientForDatebase.cc
  /root/.local/include/absl/base/attributes.h
  /root/.local/include/absl/base/config.h
  /root/.local/include/absl/base/const_init.h
@@ -698,7 +698,7 @@ CMakeFiles/example_create_delete_room.dir/src/AskForDatabaseRequest.cc.o
  /root/.local/include/grpcpp/support/config.h
  /root/.local/include/grpcpp/support/status.h
  /root/.local/include/grpcpp/support/string_ref.h
-CMakeFiles/example_create_delete_room.dir/src/AskForLobby..cc.o
+CMakeFiles/example_create_delete_room.dir/src/ClientForLobby.cc.o
  ../3rd/grpc/grpc_h/demo.grpc.pb.h
  ../3rd/grpc/grpc_h/demo.pb.h
  ../3rd/libco/co_routine.h
@@ -744,12 +744,12 @@ CMakeFiles/example_create_delete_room.dir/src/AskForLobby..cc.o
  ../3rd/spdlog/inc/spdlog/spdlog.h
  ../3rd/spdlog/inc/spdlog/tweakme.h
  ../3rd/spdlog/inc/spdlog/version.h
- ../inc/AskForLobby.h
- ../inc/AskForUserRequest.h
+ ../inc/ClientForLobby.h
+ ../inc/ClientForTestUser.h
  ../inc/Player.h
  ../inc/Poker.h
  ../inc/combat_typedef.h
- /home/tong/UA_BlackJack_Server/combat_server/src/AskForLobby..cc
+ /home/tong/UA_BlackJack_Server/combat_server/src/ClientForLobby.cc
  /root/.local/include/absl/base/attributes.h
  /root/.local/include/absl/base/config.h
  /root/.local/include/absl/base/const_init.h
@@ -943,7 +943,7 @@ CMakeFiles/example_create_delete_room.dir/src/AskForLobby..cc.o
  /root/.local/include/grpcpp/support/config.h
  /root/.local/include/grpcpp/support/status.h
  /root/.local/include/grpcpp/support/string_ref.h
-CMakeFiles/example_create_delete_room.dir/src/AskForUserRequest.cc.o
+CMakeFiles/example_create_delete_room.dir/src/ClientForTestUser.cc.o
  ../3rd/grpc/grpc_h/demo.grpc.pb.h
  ../3rd/grpc/grpc_h/demo.pb.h
  ../3rd/grpc/grpc_h/server-asyn.h
@@ -990,8 +990,8 @@ CMakeFiles/example_create_delete_room.dir/src/AskForUserRequest.cc.o
  ../3rd/spdlog/inc/spdlog/spdlog.h
  ../3rd/spdlog/inc/spdlog/tweakme.h
  ../3rd/spdlog/inc/spdlog/version.h
- ../inc/AskForDatabaseRequest.h
- ../inc/AskForUserRequest.h
+ ../inc/ClientForDatebase.h
+ ../inc/ClientForTestUser.h
  ../inc/GameProcess.h
  ../inc/MycondintonCo.h
  ../inc/Player.h
@@ -999,7 +999,7 @@ CMakeFiles/example_create_delete_room.dir/src/AskForUserRequest.cc.o
  ../inc/Room.h
  ../inc/ShuffledPokers.h
  ../inc/combat_typedef.h
- /home/tong/UA_BlackJack_Server/combat_server/src/AskForUserRequest.cc
+ /home/tong/UA_BlackJack_Server/combat_server/src/ClientForTestUser.cc
  /root/.local/include/absl/base/attributes.h
  /root/.local/include/absl/base/config.h
  /root/.local/include/absl/base/const_init.h
@@ -1240,8 +1240,8 @@ CMakeFiles/example_create_delete_room.dir/src/GameProcess.cc.o
  ../3rd/spdlog/inc/spdlog/spdlog.h
  ../3rd/spdlog/inc/spdlog/tweakme.h
  ../3rd/spdlog/inc/spdlog/version.h
- ../inc/AskForDatabaseRequest.h
- ../inc/AskForUserRequest.h
+ ../inc/ClientForDatebase.h
+ ../inc/ClientForTestUser.h
  ../inc/GameProcess.h
  ../inc/MycondintonCo.h
  ../inc/Player.h
@@ -1493,8 +1493,8 @@ CMakeFiles/example_create_delete_room.dir/src/Player.cc.o
  ../3rd/spdlog/inc/spdlog/spdlog.h
  ../3rd/spdlog/inc/spdlog/tweakme.h
  ../3rd/spdlog/inc/spdlog/version.h
- ../inc/AskForDatabaseRequest.h
- ../inc/AskForUserRequest.h
+ ../inc/ClientForDatebase.h
+ ../inc/ClientForTestUser.h
  ../inc/Player.h
  ../inc/Poker.h
  ../inc/Room.h
@@ -1783,9 +1783,9 @@ CMakeFiles/example_create_delete_room.dir/src/Room.cc.o
  ../3rd/spdlog/inc/spdlog/spdlog.h
  ../3rd/spdlog/inc/spdlog/tweakme.h
  ../3rd/spdlog/inc/spdlog/version.h
- ../inc/AskForDatabaseRequest.h
- ../inc/AskForLobby.h
- ../inc/AskForUserRequest.h
+ ../inc/ClientForDatebase.h
+ ../inc/ClientForLobby.h
+ ../inc/ClientForTestUser.h
  ../inc/Player.h
  ../inc/Poker.h
  ../inc/Room.h

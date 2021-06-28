@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <queue>
 #include "co_routine.h"
-#include "AskForDatabaseRequest.h"
-#include "AskForLobby.h"
-#include "AskForUserRequest.h"
+#include "ClientForDatebase.h"
+#include "ClientForLobby.h"
+#include "ClientForTestUser.h"
 #include "spdlog/spdlog.h"
 #include <sstream>
 std::unordered_map<BlackJackRoomID, std::weak_ptr<Room>> roomHashMap;

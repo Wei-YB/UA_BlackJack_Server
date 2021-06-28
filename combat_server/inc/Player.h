@@ -7,7 +7,7 @@ class Room;
 #include <memory>
 #include <vector>
 #include "Poker.h"
-#include "AskForUserRequest.h"
+#include "ClientForTestUser.h"
 class Player;
 extern std::unordered_map<BlackJackUID, std::weak_ptr<Player>> playerHashMap;
 class Player : std::enable_shared_from_this<Player>

@@ -90,44 +90,44 @@ CMakeFiles/Main.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/main.cc.s"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/main.cc -o CMakeFiles/Main.dir/main.cc.s
 
-CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o: CMakeFiles/Main.dir/flags.make
-CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o: ../src/AskForDatabaseRequest.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/AskForDatabaseRequest.cc
+CMakeFiles/Main.dir/src/ClientForDatebase.cc.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/src/ClientForDatebase.cc.o: ../src/ClientForDatebase.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Main.dir/src/ClientForDatebase.cc.o"
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/ClientForDatebase.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/ClientForDatebase.cc
 
-CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/src/AskForDatabaseRequest.cc > CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.i
+CMakeFiles/Main.dir/src/ClientForDatebase.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/src/ClientForDatebase.cc.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/src/ClientForDatebase.cc > CMakeFiles/Main.dir/src/ClientForDatebase.cc.i
 
-CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/src/AskForDatabaseRequest.cc -o CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.s
+CMakeFiles/Main.dir/src/ClientForDatebase.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/src/ClientForDatebase.cc.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/src/ClientForDatebase.cc -o CMakeFiles/Main.dir/src/ClientForDatebase.cc.s
 
-CMakeFiles/Main.dir/src/AskForLobby..cc.o: CMakeFiles/Main.dir/flags.make
-CMakeFiles/Main.dir/src/AskForLobby..cc.o: ../src/AskForLobby..cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Main.dir/src/AskForLobby..cc.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/AskForLobby..cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/AskForLobby..cc
+CMakeFiles/Main.dir/src/ClientForLobby.cc.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/src/ClientForLobby.cc.o: ../src/ClientForLobby.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Main.dir/src/ClientForLobby.cc.o"
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/ClientForLobby.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/ClientForLobby.cc
 
-CMakeFiles/Main.dir/src/AskForLobby..cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/src/AskForLobby..cc.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/src/AskForLobby..cc > CMakeFiles/Main.dir/src/AskForLobby..cc.i
+CMakeFiles/Main.dir/src/ClientForLobby.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/src/ClientForLobby.cc.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/src/ClientForLobby.cc > CMakeFiles/Main.dir/src/ClientForLobby.cc.i
 
-CMakeFiles/Main.dir/src/AskForLobby..cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/src/AskForLobby..cc.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/src/AskForLobby..cc -o CMakeFiles/Main.dir/src/AskForLobby..cc.s
+CMakeFiles/Main.dir/src/ClientForLobby.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/src/ClientForLobby.cc.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/src/ClientForLobby.cc -o CMakeFiles/Main.dir/src/ClientForLobby.cc.s
 
-CMakeFiles/Main.dir/src/AskForUserRequest.cc.o: CMakeFiles/Main.dir/flags.make
-CMakeFiles/Main.dir/src/AskForUserRequest.cc.o: ../src/AskForUserRequest.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Main.dir/src/AskForUserRequest.cc.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/AskForUserRequest.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/AskForUserRequest.cc
+CMakeFiles/Main.dir/src/ClientForTestUser.cc.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/src/ClientForTestUser.cc.o: ../src/ClientForTestUser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/combat_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Main.dir/src/ClientForTestUser.cc.o"
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/src/ClientForTestUser.cc.o -c /home/tong/UA_BlackJack_Server/combat_server/src/ClientForTestUser.cc
 
-CMakeFiles/Main.dir/src/AskForUserRequest.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/src/AskForUserRequest.cc.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/src/AskForUserRequest.cc > CMakeFiles/Main.dir/src/AskForUserRequest.cc.i
+CMakeFiles/Main.dir/src/ClientForTestUser.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/src/ClientForTestUser.cc.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/combat_server/src/ClientForTestUser.cc > CMakeFiles/Main.dir/src/ClientForTestUser.cc.i
 
-CMakeFiles/Main.dir/src/AskForUserRequest.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/src/AskForUserRequest.cc.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/src/AskForUserRequest.cc -o CMakeFiles/Main.dir/src/AskForUserRequest.cc.s
+CMakeFiles/Main.dir/src/ClientForTestUser.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/src/ClientForTestUser.cc.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/combat_server/src/ClientForTestUser.cc -o CMakeFiles/Main.dir/src/ClientForTestUser.cc.s
 
 CMakeFiles/Main.dir/src/GameProcess.cc.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/src/GameProcess.cc.o: ../src/GameProcess.cc
@@ -236,9 +236,9 @@ CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/demo.pb.cc.s: cmake_force
 # Object files for target Main
 Main_OBJECTS = \
 "CMakeFiles/Main.dir/main.cc.o" \
-"CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o" \
-"CMakeFiles/Main.dir/src/AskForLobby..cc.o" \
-"CMakeFiles/Main.dir/src/AskForUserRequest.cc.o" \
+"CMakeFiles/Main.dir/src/ClientForDatebase.cc.o" \
+"CMakeFiles/Main.dir/src/ClientForLobby.cc.o" \
+"CMakeFiles/Main.dir/src/ClientForTestUser.cc.o" \
 "CMakeFiles/Main.dir/src/GameProcess.cc.o" \
 "CMakeFiles/Main.dir/src/MycondintonCo.cc.o" \
 "CMakeFiles/Main.dir/src/Player.cc.o" \
@@ -252,9 +252,9 @@ Main_OBJECTS = \
 Main_EXTERNAL_OBJECTS =
 
 Main: CMakeFiles/Main.dir/main.cc.o
-Main: CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o
-Main: CMakeFiles/Main.dir/src/AskForLobby..cc.o
-Main: CMakeFiles/Main.dir/src/AskForUserRequest.cc.o
+Main: CMakeFiles/Main.dir/src/ClientForDatebase.cc.o
+Main: CMakeFiles/Main.dir/src/ClientForLobby.cc.o
+Main: CMakeFiles/Main.dir/src/ClientForTestUser.cc.o
 Main: CMakeFiles/Main.dir/src/GameProcess.cc.o
 Main: CMakeFiles/Main.dir/src/MycondintonCo.cc.o
 Main: CMakeFiles/Main.dir/src/Player.cc.o

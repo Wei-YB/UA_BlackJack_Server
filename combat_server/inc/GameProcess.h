@@ -8,7 +8,7 @@
 #include "co_routine.h"
 #include "server-asyn.h"
 #include "MycondintonCo.h"
-#include "AskForUserRequest.h"
+#include "ClientForTestUser.h"
 struct stEnv_t
 {
     typedef std::shared_ptr<stEnv_t> ptr;

@@ -316,104 +316,104 @@ main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cc.s
 .PHONY : main.cc.s
 
-src/AskForDatabaseRequest.o: src/AskForDatabaseRequest.cc.o
+src/ClientForDatebase.o: src/ClientForDatebase.cc.o
 
-.PHONY : src/AskForDatabaseRequest.o
-
-# target to build an object file
-src/AskForDatabaseRequest.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForDatabaseRequest.cc.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForDatabaseRequest.cc.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o
-.PHONY : src/AskForDatabaseRequest.cc.o
-
-src/AskForDatabaseRequest.i: src/AskForDatabaseRequest.cc.i
-
-.PHONY : src/AskForDatabaseRequest.i
-
-# target to preprocess a source file
-src/AskForDatabaseRequest.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForDatabaseRequest.cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForDatabaseRequest.cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.i
-.PHONY : src/AskForDatabaseRequest.cc.i
-
-src/AskForDatabaseRequest.s: src/AskForDatabaseRequest.cc.s
-
-.PHONY : src/AskForDatabaseRequest.s
-
-# target to generate assembly for a file
-src/AskForDatabaseRequest.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForDatabaseRequest.cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForDatabaseRequest.cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.s
-.PHONY : src/AskForDatabaseRequest.cc.s
-
-src/AskForLobby..o: src/AskForLobby..cc.o
-
-.PHONY : src/AskForLobby..o
+.PHONY : src/ClientForDatebase.o
 
 # target to build an object file
-src/AskForLobby..cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForLobby..cc.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForLobby..cc.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForLobby..cc.o
-.PHONY : src/AskForLobby..cc.o
+src/ClientForDatebase.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ClientForDatebase.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ClientForDatebase.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ClientForDatebase.cc.o
+.PHONY : src/ClientForDatebase.cc.o
 
-src/AskForLobby..i: src/AskForLobby..cc.i
+src/ClientForDatebase.i: src/ClientForDatebase.cc.i
 
-.PHONY : src/AskForLobby..i
+.PHONY : src/ClientForDatebase.i
 
 # target to preprocess a source file
-src/AskForLobby..cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForLobby..cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForLobby..cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForLobby..cc.i
-.PHONY : src/AskForLobby..cc.i
+src/ClientForDatebase.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ClientForDatebase.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ClientForDatebase.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ClientForDatebase.cc.i
+.PHONY : src/ClientForDatebase.cc.i
 
-src/AskForLobby..s: src/AskForLobby..cc.s
+src/ClientForDatebase.s: src/ClientForDatebase.cc.s
 
-.PHONY : src/AskForLobby..s
+.PHONY : src/ClientForDatebase.s
 
 # target to generate assembly for a file
-src/AskForLobby..cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForLobby..cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForLobby..cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForLobby..cc.s
-.PHONY : src/AskForLobby..cc.s
+src/ClientForDatebase.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ClientForDatebase.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ClientForDatebase.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ClientForDatebase.cc.s
+.PHONY : src/ClientForDatebase.cc.s
 
-src/AskForUserRequest.o: src/AskForUserRequest.cc.o
+src/ClientForLobby.o: src/ClientForLobby.cc.o
 
-.PHONY : src/AskForUserRequest.o
+.PHONY : src/ClientForLobby.o
 
 # target to build an object file
-src/AskForUserRequest.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForUserRequest.cc.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForUserRequest.cc.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForUserRequest.cc.o
-.PHONY : src/AskForUserRequest.cc.o
+src/ClientForLobby.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ClientForLobby.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ClientForLobby.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ClientForLobby.cc.o
+.PHONY : src/ClientForLobby.cc.o
 
-src/AskForUserRequest.i: src/AskForUserRequest.cc.i
+src/ClientForLobby.i: src/ClientForLobby.cc.i
 
-.PHONY : src/AskForUserRequest.i
+.PHONY : src/ClientForLobby.i
 
 # target to preprocess a source file
-src/AskForUserRequest.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForUserRequest.cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForUserRequest.cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForUserRequest.cc.i
-.PHONY : src/AskForUserRequest.cc.i
+src/ClientForLobby.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ClientForLobby.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ClientForLobby.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ClientForLobby.cc.i
+.PHONY : src/ClientForLobby.cc.i
 
-src/AskForUserRequest.s: src/AskForUserRequest.cc.s
+src/ClientForLobby.s: src/ClientForLobby.cc.s
 
-.PHONY : src/AskForUserRequest.s
+.PHONY : src/ClientForLobby.s
 
 # target to generate assembly for a file
-src/AskForUserRequest.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/AskForUserRequest.cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/AskForUserRequest.cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/AskForUserRequest.cc.s
-.PHONY : src/AskForUserRequest.cc.s
+src/ClientForLobby.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ClientForLobby.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ClientForLobby.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ClientForLobby.cc.s
+.PHONY : src/ClientForLobby.cc.s
+
+src/ClientForTestUser.o: src/ClientForTestUser.cc.o
+
+.PHONY : src/ClientForTestUser.o
+
+# target to build an object file
+src/ClientForTestUser.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ClientForTestUser.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ClientForTestUser.cc.o
+.PHONY : src/ClientForTestUser.cc.o
+
+src/ClientForTestUser.i: src/ClientForTestUser.cc.i
+
+.PHONY : src/ClientForTestUser.i
+
+# target to preprocess a source file
+src/ClientForTestUser.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ClientForTestUser.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ClientForTestUser.cc.i
+.PHONY : src/ClientForTestUser.cc.i
+
+src/ClientForTestUser.s: src/ClientForTestUser.cc.s
+
+.PHONY : src/ClientForTestUser.s
+
+# target to generate assembly for a file
+src/ClientForTestUser.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_game_single_play.dir/build.make CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_create_delete_room.dir/build.make CMakeFiles/example_create_delete_room.dir/src/ClientForTestUser.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/ClientForTestUser.cc.s
+.PHONY : src/ClientForTestUser.cc.s
 
 src/GameProcess.o: src/GameProcess.cc.o
 
@@ -639,15 +639,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/AskForDatabaseRequest.o"
-	@echo "... src/AskForDatabaseRequest.i"
-	@echo "... src/AskForDatabaseRequest.s"
-	@echo "... src/AskForLobby..o"
-	@echo "... src/AskForLobby..i"
-	@echo "... src/AskForLobby..s"
-	@echo "... src/AskForUserRequest.o"
-	@echo "... src/AskForUserRequest.i"
-	@echo "... src/AskForUserRequest.s"
+	@echo "... src/ClientForDatebase.o"
+	@echo "... src/ClientForDatebase.i"
+	@echo "... src/ClientForDatebase.s"
+	@echo "... src/ClientForLobby.o"
+	@echo "... src/ClientForLobby.i"
+	@echo "... src/ClientForLobby.s"
+	@echo "... src/ClientForTestUser.o"
+	@echo "... src/ClientForTestUser.i"
+	@echo "... src/ClientForTestUser.s"
 	@echo "... src/GameProcess.o"
 	@echo "... src/GameProcess.i"
 	@echo "... src/GameProcess.s"
