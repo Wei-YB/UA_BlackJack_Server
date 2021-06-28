@@ -1740,6 +1740,7 @@ CMakeFiles/example_create_delete_room.dir/src/Poker.cc.o
 CMakeFiles/example_create_delete_room.dir/src/Room.cc.o
  ../3rd/grpc/grpc_h/demo.grpc.pb.h
  ../3rd/grpc/grpc_h/demo.pb.h
+ ../3rd/grpc/grpc_h/server-asyn.h
  ../3rd/libco/co_routine.h
  ../3rd/libco/co_routine_inner.h
  ../3rd/libco/coctx.h
@@ -1786,6 +1787,8 @@ CMakeFiles/example_create_delete_room.dir/src/Room.cc.o
  ../inc/ClientForDatebase.h
  ../inc/ClientForLobby.h
  ../inc/ClientForTestUser.h
+ ../inc/GameProcess.h
+ ../inc/MycondintonCo.h
  ../inc/Player.h
  ../inc/Poker.h
  ../inc/Room.h
