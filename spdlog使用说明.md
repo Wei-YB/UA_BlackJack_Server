@@ -47,6 +47,12 @@ $ sudo cp include/spdlog /usr/local/include -r
 **1 控制台输出**
 
 ```c++
+
+//为了支持日志中输出文件名和行号，需要在所有的spdlog头文件前定义如下的宏，并在程序中使用相应的宏函数 SPDLOG_TRACE() SPDLOG_DEBEG().
+//(spdlog里默认的SPDLOG_ACTIVE_LEVEL被设置为SPDLOG_LEVEL_INFO，即在调用宏函数时只有级别大于等于INFO的日志才会被输出)
+
+#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
+
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
 #include "spdlog/sinks/basic_file_sink.h"
@@ -59,7 +65,8 @@ int main()
     auto logger = spdlog::stdout_color_mt("stdout logger");
     spdlog::set_default_logger(logger);
     
-    //在main函数里设置好默认的logger后，在各个class的成员函数里直接使用spdlog命名空间下的info error debug等方法就可以使用logger配置的模式
+    //在main函数里设置好默认的logger后，在各个class的成员函数里直接使用spdlog命名空间下的info() error() debug()，
+    //或者相应的宏版本函数(支持输出文件名和行号) 就可以使用logger配置的模式.
     spdlog::info("Welcome to spdlog!");
     spdlog::error("Some error message with arg: {}", 1);
     
@@ -69,10 +76,10 @@ int main()
     spdlog::info("Positional args are {1} {0}..", "too", "supported");
     spdlog::info("{:<30}", "left aligned");
     
-    spdlog::set_level(spdlog::level::debug); // Set global log level to debug
+    spdlog::set_level(spdlog::level::trace); // Set global log level to trace
     spdlog::debug("This message should be displayed..");    
     
-    
+    //只有调用宏函数版本，才会在日志中输出文件名和行号
     SPDLOG_TRACE("Some trace message with param {}", 42);
     SPDLOG_DEBUG("Some debug message");
 }
