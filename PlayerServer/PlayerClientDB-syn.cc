@@ -18,19 +18,73 @@
 
 #include "PlayerClientDB-syn.h"
 
-Response Client::RequestDB(Request& request) {
-    Response reply;
-
-    ClientContext context;
-
-    // The actual RPC.
-    Status status = stub_->Notify(&context, request, &reply);
-
+void Client::CheckStatus(const Status& status) {
     // Act upon its status.
     if (status.ok()) {
         std::cout << "Got Reply" << std::endl;
     } else {
         std::cout << "Request Error " << status.error_code() << ": " << status.error_message() << std::endl;
+    }
+}
+
+int Client::Name2Uid(ClientContext& context, const std::string& name) {
+    Response reply;
+    Request request;
+
+    request.set_requesttype(Request::GET_UID);
+    request.set_uid(-1);
+    request.set_stamp(std::time(nullptr));
+    request.add_args(name);
+
+    CheckStatus(stub_->Notify(&context, request, &reply));
+    return reply.uid();
+}
+
+std::string Client::GetScore(ClientContext& context, int uid) {
+    Response reply;
+    Request request;
+
+    request.set_requesttype(Request::GET_SCORE);
+    request.set_uid(uid);
+    request.set_stamp(std::time(nullptr));
+
+    CheckStatus(stub_->Notify(&context, request, &reply));
+    return reply.args()[0];
+}
+
+std::string Client::Uid2Name(ClientContext& context, int uid) {
+    Response reply;
+    Request request;
+
+    request.set_requesttype(Request::GET_NAME);
+    request.set_uid(uid);
+    request.set_stamp(std::time(nullptr));
+
+    CheckStatus(stub_->Notify(&context, request, &reply));
+    return reply.args()[0];
+}
+
+Response Client::RequestDB(Request& request) {
+    Response reply;
+
+    ClientContext context;
+
+    int uid = request.uid();
+
+    // The actual RPC.
+    CheckStatus(stub_->Notify(&context, request, &reply));
+
+    if (request.requesttype() == Request::RANK_ME) {
+        std::string score = GetScore(context, uid);
+        reply.add_args(score);
+    } else if (request.requesttype() == Request::RANK_TOP) {
+        int sz = reply.args().size();
+        for (int i = 0; i < sz; ++i) {
+            int uid = atoi(reply.args()[i].c_str());
+            std::string name = Uid2Name(context, uid);
+            std::string score = GetScore(context, uid);
+            reply.set_args(i, name + ": " + score);
+        }
     }
 
     return reply;

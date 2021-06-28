@@ -68,13 +68,14 @@ public:
           idx_(0),
           request_type_(ua_blackjack::Request::INVAL) {}
 
-    void Run();
+    void Run(const char* ip, const char* port);
 
 private:
     int sfd_;   // server fd
     int uid_;   // user id
     int rid_;   // room id
     int epfd_;  // epoll fd
+    std::string name_;
     std::unordered_map<std::string, std::pair<ua_blackjack::Request::RequestType, int>> cmd2req_;
     enum State { INVALID, OFFLINE, ONLINE, INROOM_UNREADY, INROOM_READY, INGAME_IDLE, INGAME_TURN } state_, next_state_;
     enum DataType { REQUEST = 1, RESPONSE = 2 };

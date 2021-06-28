@@ -50,6 +50,10 @@ public:
     // from the server.
     Response RequestDB(Request& request);
 
+    void CheckStatus(const Status& status);
+    int Name2Uid(ClientContext& context, const std::string& name);
+    std::string Uid2Name(ClientContext& context, int uid);
+
 private:
     std::unique_ptr<DatabaseService::Stub> stub_;
 };

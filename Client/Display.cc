@@ -163,7 +163,8 @@ void Display::DisplayResponseRankMe(ua_blackjack::Response& response) {
     }
 
     PrintPrompt("RankMe Successful");
-    std::cout << response.args()[0] << std::endl;
+    std::cout << "Rank: " << response.args()[0] << std::endl;
+    std::cout << "Score: " << response.args()[1] << std::endl;
 }
 void Display::DisplayResponseRankTop(ua_blackjack::Response& response) {
     if (response.status() == -1) {
@@ -174,7 +175,7 @@ void Display::DisplayResponseRankTop(ua_blackjack::Response& response) {
     PrintPrompt("RankTop Successful");
     int sz = response.args().size();
     for (int i = 0; i < sz; ++i) {
-        std::cout << (i + 1) << ": " << response.args()[i] << std::endl;
+        std::cout << (i + 1) << ". " << response.args()[i] << std::endl;
     }
 }
 void Display::DisplayResponseAddFriend(ua_blackjack::Response& response) {
@@ -182,7 +183,7 @@ void Display::DisplayResponseAddFriend(ua_blackjack::Response& response) {
         std::cout << ":( AddFriend Failed" << std::endl;
         return;
     }
-    PrintPrompt("AddFriend Successful");
+    PrintPrompt("Send AddFriend Request Successful");
 }
 void Display::DisplayResponseAcceptFriend(ua_blackjack::Response& response) {
     if (response.status() == -1) {

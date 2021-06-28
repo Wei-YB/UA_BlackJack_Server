@@ -90,9 +90,9 @@ std::vector<std::string> Client::GetCommandArgs() {
     int input_args_num = args.size() - 1, expect_args_num = cmd2req_[args[0]].second;
     if (input_args_num != expect_args_num) {
         if (input_args_num < expect_args_num)
-            std::cout << ":( Expect more args.";
+            std::cout << ":( Expect more args." << std::endl;
         else
-            std::cout << ":( Too many args.";
+            std::cout << ":( Too many args." << std::endl;
 
         return {};
     }
@@ -542,8 +542,8 @@ void Client::ProcessSocket(Rio& rio) {
               << " > " << std::flush;
 }
 
-void Client::Run() {
-    sfd_ = Connect("localhost", "50051", SOCK_STREAM);
+void Client::Run(const char* ip, const char* port) {
+    sfd_ = Connect(ip, port, SOCK_STREAM);
     if (sfd_ == -1) {
         std::cout << ":( Connection failed!" << std::endl;
         exit(EXIT_FAILURE);
@@ -583,9 +583,11 @@ void Client::Run() {
     }
 }
 
-int main() {
+int main(int argc, char* argv[]) {
+    assert(argc == 3);
+
     Client client;
-    client.Run();
+    client.Run(argv[1], argv[2]);
 
     return 0;
 }
