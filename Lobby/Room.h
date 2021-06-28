@@ -4,7 +4,7 @@
 #include <unordered_set>
 #include "Players.h"
 
-namespace ua_black_jack_server { namespace lobby{
+namespace ua_blackjack { namespace lobby{
 
 /*
     room doesn't need to save the status of itself, thus the lobby directly change the status of players, not through the room!

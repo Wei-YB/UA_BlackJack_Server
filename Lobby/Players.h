@@ -4,7 +4,7 @@
 #include <string>
 
 
-namespace ua_black_jack_server { namespace lobby {
+namespace ua_blackjack { namespace lobby {
 
 class Players {
 public:
