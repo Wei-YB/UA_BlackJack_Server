@@ -14,6 +14,8 @@
 #include "demo.grpc.pb.h"
 #endif
 #include "combat_typedef.h"
+#include "spdlog/spdlog.h"
+#include <sstream>
 using grpc::Channel;
 using grpc::ClientAsyncResponseReader;
 using grpc::ClientContext;
@@ -21,9 +23,9 @@ using grpc::CompletionQueue;
 using grpc::Status;
 // Service dependent
 /*************************/
+using ua_blackjack::ProxyService;
 using ua_blackjack::Request;
 using ua_blackjack::Response;
-using ua_blackjack::UserService;
 /*************************/
 
 #include <memory>
@@ -31,17 +33,23 @@ class ClientForTestUser
 {
 public:
     typedef std::shared_ptr<ClientForTestUser> ptr;
-    ClientForTestUser(std::shared_ptr<Channel> channel, BlackJackUID _uid)
-        : stub_(UserService::NewStub(channel)), uid(_uid) {}
+    static ClientForTestUser &getInstance()
+    {
+        static ClientForTestUser instance(grpc::CreateChannel(
+            ProxyServiceAddr, grpc::InsecureChannelCredentials()));
+        return instance;
+    }
     void printResponce(Response &responce)
     {
-        std::cout << "status = " << responce.status() << " uid = " << responce.uid()
-                  << " stamp = " << responce.stamp() << " args = " << std::endl;
+        std::stringstream ss;
+        ss << "status = " << responce.status() << " uid = " << responce.uid()
+           << " stamp = " << responce.stamp() << " args = ";
         for (auto &s : responce.args())
         {
-            std::cout << s << " ";
+            ss << s << " ";
         }
-        std::cout << std::endl;
+
+        spdlog::info(ss.str());
     }
     void AsyncCompleteRpc();
 
@@ -51,6 +59,11 @@ public:
     void askEnd(const BlackJackUID uid, FinalResultOfGame isWin);
 
 private:
+    ClientForTestUser(std::shared_ptr<Channel> channel)
+        : stub_(ProxyService::NewStub(channel)) {}
+    ~ClientForTestUser(){};
+    ClientForTestUser(const ClientForTestUser &);
+    ClientForTestUser &operator=(const ClientForTestUser &);
     // struct for keeping state and data information
     struct AsyncClientCall
     {
@@ -63,8 +76,7 @@ private:
         std::unique_ptr<ClientAsyncResponseReader<Response>> response_reader;
     };
 
-    std::unique_ptr<UserService::Stub> stub_;
+    std::unique_ptr<ProxyService::Stub> stub_;
     CompletionQueue cq_;
     uint64_t stamp = 0;
-    BlackJackUID uid;
 };

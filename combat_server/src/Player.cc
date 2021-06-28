@@ -1,5 +1,7 @@
 #include "Player.h"
 #include "Room.h"
+#include "spdlog/spdlog.h"
+#include <sstream>
 std::unordered_map<BlackJackUID, std::weak_ptr<Player>> playerHashMap;
 const int maxAcePokerValue[] = {-1, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21}; //n张ACE最大组成的值（前提是不超过21）
 int Player::getAccumulateOfPoker(void) const                                                                             //获取用户当前手头的牌的大小
@@ -57,7 +59,7 @@ void Player::hitPoker(void) //用户从牌堆中拿取一张牌
     }
     else
     {
-        std::cout << "抽牌失败" << std::endl;
+        spdlog::error("Hit poker error uid {}", this->uid);
         exit(1);
     }
 
@@ -92,13 +94,13 @@ void Player::quit(void) //用户强行退游，需要托管
 }
 void Player::showMessage(void) const
 {
-
-    std::cout << "Player-"
-              << "-uid-" << this->uid << "-bettingMoney-" << bettingMoney << "-roomid-" << room << std ::endl;
-
+    std::stringstream ss;
+    ss << "Player-"
+       << "-uid-" << this->uid << "-bettingMoney-" << bettingMoney << "-roomid-" << room << "-accumulate-" << this->getAccumulateOfPoker();
+    ;
+    spdlog::info(ss.str());
     for (auto &poker : pokerList)
     {
         poker->showMessage();
     }
-    std::cout << "-accumulate-" << this->getAccumulateOfPoker() << std::endl;
 }

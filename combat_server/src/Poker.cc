@@ -1,4 +1,6 @@
 #include "Poker.h"
+#include "spdlog/spdlog.h"
+#include <sstream>
 const std::string pokerMap[] =
     {
         //黑桃
@@ -63,6 +65,8 @@ const std::string pokerMap[] =
 };
 void Poker::showMessage() const
 {
-    std::cout << "Poker"
-              << "-isHide-" << this->_isHide << "-value-" << this->_value << "-poke-" << pokerMap[this->_value] << std::endl;
+    std::stringstream ss;
+    ss << "Poker"
+       << "-isHide-" << this->_isHide << "-value-" << this->_value << "-poke-" << pokerMap[this->_value];
+    spdlog::info(ss.str());
 }

@@ -5,15 +5,18 @@
 #include "AskForLobby.h"
 #include "AskForUserRequest.h"
 #include "spdlog/spdlog.h"
+#include <sstream>
 int main(int agrc, char *argv[])
 {
-    // std::cout<<"Welcome to spdlog!");
+
+    std::thread thread_ = std::thread(&ClientForTestUser::AsyncCompleteRpc, &ClientForTestUser::getInstance());
+    thread_.detach();
+
+    spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^---%L---%$] [thread %t] %v");
     ServerImpl server;
     server.Run();
 
-#ifdef PRINT_LOG
-    std::cout << "grpc async begin..." << std::endl;
-#endif
+    spdlog::info("grpc async begin...");
 
     //创建等待RPC的协程
     co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, &server);

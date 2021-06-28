@@ -31,6 +31,7 @@
 #include "demo.grpc.pb.h"
 #endif
 #include "demo.pb.h"
+#include "spdlog/spdlog.h"
 int createstEnv_t(BlackJackRoomID roomID, UidList &uids);
 void *createOneGame(void *arg);
 void *waitingSignalFromOtherModule(void *arg);
@@ -74,7 +75,7 @@ public:
 
     cq_ = builder.AddCompletionQueue();
     server_ = builder.BuildAndStart();
-    std::cout << "Server listening on " << server_address << std::endl;
+    spdlog::info("Server listening on {0:d}", server_address);
   }
 
 public:
@@ -106,15 +107,13 @@ public:
         reply_.set_status(0);
         reply_.set_uid(uid);
         reply_.set_stamp(stamp);
-
-        /*
+        spdlog::info("type = {0:d} uid = {1:d} stamp = {2:d}", type, uid, stamp);
         if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //真正的创建房间code
         {
           static UidList uids;
           static BlackJackRoomID roomid = atoi(args[0].c_str());
-#ifdef PRINT_LOG
-          std::cout<<"Create Room Ask come" << std::endl;
-#endif
+
+          spdlog::info("Create Room Ask come");
           for (int i = 1; i < args.size(); i++)
           {
             uids.push_back(atoi(args[i].c_str()));
@@ -123,74 +122,59 @@ public:
           createstEnv_t(roomid, uids);
           uids.clear();
         }
-        */
+        /*
         if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //创建房间
         {
           static uint64_t roomMemberSize = 0;
           static UidList uids;
           static BlackJackRoomID roomid;
-#ifdef PRINT_LOG
-          std::cout << "ONE PEROSON COME IN" << std::endl;
-#endif
+          spdlog::info("ONE PEROSON COME IN");
           roomMemberSize++;
           roomMemberSize %= 4;
           uids.push_back(uid);
           if (roomMemberSize == 0) //凑够2个人 demo，后面不需要这些，而是由lobby分配人过来
           {
-#ifdef PRINT_LOG
-            std::cout << "CREATE ROOM" << std::endl;
-#endif
-
+            spdlog::info("CREATE ROOM");
             createstEnv_t(roomid++, uids);
             uids.clear();
           }
         }
+        */
         else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //退出房间
         {
           if (auto playerPtr = playerHashMap[uid].lock())
           {
-#ifdef PRINT_LOG
-            std::cout << uid << " quit" << std::endl;
-#endif
+            spdlog::info("{0:d} quit by itself", uid);
             playerPtr->quit(); //托管
           }
           else
           {
-#ifdef PRINT_LOG
-            std::cout << "Quit error uid " << uid << " not existed in any room" << std::endl;
-#endif
+            spdlog::error("Quit error uid {0:d}   not existed in any room", uid);
           }
         }
         else if (type == ua_blackjack::Request_RequestType::Request_RequestType_DOUBLE) //双倍
         {
           if (auto playerPtr = playerHashMap[uid].lock())
           {
-#ifdef PRINT_LOG
-            std::cout << uid << " double" << std::endl;
-#endif
+            spdlog::info("{0:d} double by itself", uid);
+
             playerPtr->bettingMoney *= 2;
           }
           else
           {
-#ifdef PRINT_LOG
-            std::cout << "Double error uid " << uid << " not existed in any room" << std::endl;
-#endif
+            spdlog::error("Double error uid {0:d}   not existed in any room", uid);
           }
         }
         else if (type == ua_blackjack::Request_RequestType::Request_RequestType_SURRENDER) //投降
         {
           if (auto playerPtr = playerHashMap[uid].lock())
           {
-#ifdef PRINT_LOG
-            std::cout << uid << " surrond" << std::endl;
-#endif
+            spdlog::info("{0:d} surrond by itself", uid);
             playerPtr->bettingMoney *= 2;
           }
           else
           {
-#ifdef PRINT_LOG
-            std::cout << "Surrond error uid " << uid << " not existed in any room" << std::endl;
-#endif
+            spdlog::error("Surrond error uid {0:d}   not existed in any room", uid);
           }
         }
 

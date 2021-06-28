@@ -1,4 +1,6 @@
 #include "ShuffledPokers.h"
+#include "spdlog/spdlog.h"
+#include <sstream>
 ShuffledPokers::ShuffledPokers()
 {
     for (int i = 0; i < 52; i++)
@@ -11,7 +13,7 @@ ShuffledPokers::ShuffledPokers()
 }
 void ShuffledPokers::showMessage(void) const
 {
-    std::cout << "ShuffledMessage-" << std::endl;
+    spdlog::info("ShuffledMessage-");
     for (auto &poke : pokers)
     {
         poke->showMessage();

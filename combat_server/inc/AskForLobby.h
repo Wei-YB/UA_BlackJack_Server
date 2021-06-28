@@ -27,6 +27,8 @@ using ua_blackjack::Response;
 /*************************/
 #include <memory>
 #include "Player.h"
+#include "spdlog/spdlog.h"
+#include <sstream>
 class ClientForLobby
 {
 public:
@@ -34,13 +36,15 @@ public:
 
     void printResponce(Response &responce)
     {
-        std::cout << "status = " << responce.status() << " uid = " << responce.uid()
-                  << " stamp = " << responce.stamp() << " args = " << std::endl;
+        std::stringstream ss;
+        ss << "status = " << responce.status() << " uid = " << responce.uid()
+           << " stamp = " << responce.stamp() << " args = ";
         for (auto &s : responce.args())
         {
-            std::cout << s << " ";
+            ss << s << " ";
         }
-        std::cout << std::endl;
+
+        spdlog::info(ss.str());
     }
     void AsyncCompleteRpc();
 
@@ -49,14 +53,14 @@ public:
     static ClientForLobby &getInstance()
     {
         static ClientForLobby instance(grpc::CreateChannel(
-            "9.134.69.87:50051", grpc::InsecureChannelCredentials()));
+            LobbyServiceAddr, grpc::InsecureChannelCredentials()));
         return instance;
     }
 
 private:
     ClientForLobby(std::shared_ptr<Channel> channel)
         : stub_(LobbyService::NewStub(channel)) {}
-    ~ClientForLobby();
+    ~ClientForLobby(){};
     ClientForLobby(const ClientForLobby &);
     ClientForLobby &operator=(const ClientForLobby &);
     // struct for keeping state and data information

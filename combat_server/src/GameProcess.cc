@@ -1,4 +1,6 @@
 #include "GameProcess.h"
+#include "spdlog/spdlog.h"
+#include <sstream>
 std::queue<BlackJackRoomID> unUsedstEnvRoomID;                      //结束了的游戏ID
 std::unordered_map<BlackJackRoomID, stEnv_t::ptr> roomEnvirHashMap; //roomid和句柄的hash映射
 std::unordered_map<BlackJackRoomID, bool> roomEnvirExistHashMap;    //roomid和句柄是否存在的hash映射
@@ -8,20 +10,18 @@ int conditionForWaitingRpc;                              //接受rpc的信号量
 int conditionForClearRoom;                               //清楚房间的信号量
 int createstEnv_t(BlackJackRoomID roomID, UidList &uids) //创建协程
 {
-#ifdef PRINT_LOG
-    std::cout << "roomid = " << roomID << std::endl;
-    std::cout << "uids = " << std::endl;
+    std::stringstream ss;
+    ss << " roomid = " << roomID;
+    ss << " uids = ";
     for (auto uid : uids)
     {
-        std::cout << uid << " ";
+        ss << uid << " ";
     }
-    std::cout << std::endl;
-#endif
+    spdlog::info(ss.str());
+
     if (roomEnvirExistHashMap.count(roomID) > 0 && roomEnvirExistHashMap[roomID] == true) //原先已经有房间存在了
     {
-#ifdef PRINT_LOG
-        std::cout << "room has already existed" << std::endl;
-#endif
+        spdlog::error("room has already existed");
         return -1; //无法再创建同一个房间号的ID
     }
 
@@ -40,10 +40,7 @@ void *createOneGame(void *arg) //开启一局游戏
     co_enable_hook_sys();
     stEnv_t *env = (stEnv_t *)arg;
 
-#ifdef PRINT_LOG
-    std::cout << "GAME BEGIN" << std::endl;
-#endif
-    // std::cout<<"NO ERROR" << std::endl;
+    spdlog::info("GAME BEGIN");
     auto room = malloOneRoom(env->roomID, env->uids); //创建一个房间
     int conRet = 0;
     //选择筹码
@@ -54,18 +51,16 @@ void *createOneGame(void *arg) //开启一局游戏
         if (player->isQuit == true) //玩家已退出游戏,不需要设置筹码
             continue;
 
-        player->client->askBettingMoney(player->uid);
+        ClientForTestUser::getInstance().askBettingMoney(player->uid);
         myConditionSignal(conditionForWaitingRpc); //有机会唤醒
         conRet = 0;
-        conRet = myConditionWait(env->cond, 1); //30秒内应收到信号
-        if (conRet == 0)                        //超时未收到信号，认为玩家已退出游戏
+        conRet = myConditionWait(env->cond, 30000); //30秒内应收到信号
+        if (conRet == 0)                            //超时未收到信号，认为玩家已退出游戏
         {
             player->quit();             //托管
             player->isStand = true;     //玩家停牌
             player->finalResult = DRAW; //筹码阶段退出应判输0元
-#ifdef PRINT_LOG
-            std::cout << player->uid << " quit" << std::endl;
-#endif
+            spdlog::warn("uid {0:d} timeout and quit game", player->uid);
             continue;
         }
         //接收到玩家的筹码信号
@@ -73,9 +68,8 @@ void *createOneGame(void *arg) //开启一局游戏
         {
             auto money = ((BetMoneyArgument *)env->arg)->money;
             player->bettingMoney = money;
-#ifdef PRINT_LOG
-            std::cout << ((QuitArgument *)env->arg)->uid << " setBetMonney " << money << std::endl;
-#endif
+            spdlog::info("uid {0:d} set betting money", player->uid);
+
             continue;
         }
     }
@@ -116,7 +110,7 @@ void *createOneGame(void *arg) //开启一局游戏
                 continue;
             }
 
-            player->client->askHitOrStand(player->uid);
+            ClientForTestUser::getInstance().askHitOrStand(player->uid);
             myConditionSignal(conditionForWaitingRpc); //有机会唤醒
             conRet = 0;
             conRet = myConditionWait(env->cond, 30000); //30秒内应收到信号
@@ -124,9 +118,7 @@ void *createOneGame(void *arg) //开启一局游戏
             {
                 player->quit(); //托管
                 player->hitPoker();
-#ifdef PRINT_LOG
-                std::cout << ((QuitArgument *)env->arg)->uid << " quit" << std::endl;
-#endif
+                spdlog::warn("uid {0:d} timeout and quit game", player->uid);
                 continue;
             }
             //接收到玩家的打牌/停牌信号
@@ -136,16 +128,12 @@ void *createOneGame(void *arg) //开启一局游戏
                 {
                     player->hitPoker();
                     UpdateAll(room->playerList, player->uid); //抽牌，更新下
-#ifdef PRINT_LOG
-                    std::cout << ((QuitArgument *)env->arg)->uid << " Hit " << std::endl;
-#endif
+                    spdlog::info("uid {0:d} hit", player->uid);
                 }
                 else if (env->operateId == OPERATE_STAND)
                 {
                     player->standPoker();
-#ifdef PRINT_LOG
-                    std::cout << ((QuitArgument *)env->arg)->uid << " Stand " << std::endl;
-#endif
+                    spdlog::info("uid {0:d} stand", player->uid);
                 }
                 continue;
             }
@@ -159,7 +147,7 @@ void *createOneGame(void *arg) //开启一局游戏
     UpdateAll(room->playerList, room->playerList.front()->uid); //更新庄家的牌
     for (auto &player : room->playerList)
     {
-        player->client->askEnd(player->uid, player->finalResult);
+        ClientForTestUser::getInstance().askEnd(player->uid, player->finalResult); //send end request
     }
     unUsedstEnvRoomID.push((room->getRoomId())); //协程结束，return后栈中资源释放，接着回收协程的协程开始工作
     myConditionSignal(conditionForClearRoom);    //唤醒清空协程
@@ -200,23 +188,18 @@ void *recoveryUnusedCo(void *arg) //回收协程的协程
     {
         if (unUsedstEnvRoomID.empty()) //没有需要释放的资源
         {
-            // #ifdef PRINT_LOG
-            //             std::cout<<cnt++ << "Free.." << std::endl;
-            // #endif
-            // poll(NULL, 0, 1); //必须要有挂起函数
             myConditionWait(conditionForClearRoom, -1);
         }
         else
         {
             BlackJackRoomID roomid = unUsedstEnvRoomID.front();
+            spdlog::info("start delete room {0:d}", roomid);
             unUsedstEnvRoomID.pop();
             free(roomEnvirHashMap[roomid]->arg);
             co_release(roomEnvirHashMap[roomid]->coRoutine); //释放协程资源
-            roomEnvirHashMap[roomid].reset();                //释放指针
+            roomEnvirHashMap[roomid].reset();                //释放智能 指针
             roomEnvirExistHashMap[roomid] = false;
-#ifdef PRINT_LOG
-            std::cout << "delete one room" << std::endl;
-#endif
+            spdlog::info("complete delete room {0:d}", roomid);
         }
     }
 }
@@ -224,6 +207,6 @@ void UpdateAll(std::list<Player::ptr> &list, BlackJackUID uid)
 {
     for (auto player : list)
     {
-        player->client->askUpdate(uid, player->uid);
+        ClientForTestUser::getInstance().askUpdate(uid, player->uid);
     }
 }

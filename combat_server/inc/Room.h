@@ -6,7 +6,10 @@
 #include <unordered_map>
 #include "ShuffledPokers.h"
 #include "Player.h"
+#include "spdlog/spdlog.h"
 #include <sstream>
+#include "AskForDatabaseRequest.h"
+#include "AskForUserRequest.h"
 class Room;
 extern std::unordered_map<BlackJackRoomID, std::weak_ptr<Room>> roomHashMap;
 class Room : std::enable_shared_from_this<Room>
@@ -28,21 +31,6 @@ public:
         {
             playerList.emplace_back(std::make_shared<Player>(i));
             playerList.back()->setRoom(rid);
-
-            /*****************此处代码与proxy联调需要修改***************************/
-            std::stringstream ss;
-            ss << i;
-            std::string str = ss.str();
-            str = "localhost:" + str;
-            std::cout << "client addr " << str << std::endl;
-            playerList.back()->client = std::make_shared<ClientForTestUser>(grpc::CreateChannel(
-                                                                                str, grpc::InsecureChannelCredentials()),
-                                                                            i);
-            std::thread thread_ = std::thread(&ClientForTestUser::AsyncCompleteRpc, playerList.back()->client.get()); //每个用户都用一个线程去监控发送给他的rpc命令有没有相应
-            thread_.detach();
-
-            /*****************此处代码与proxy联调需要修改***************************/
-
             playerHashMap[i] = playerList.back(); //这个不能放在player的构造函数中，因为构造函数执行完时暂时没有shared_ptr指向他
         }
         playerList.front()->isDealer = true; //创建房间时，庄家为第一个进入房间的用户

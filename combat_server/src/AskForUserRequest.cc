@@ -1,15 +1,16 @@
 #include "AskForUserRequest.h"
 #include "Player.h"
 #include "GameProcess.h"
+#include "spdlog/spdlog.h"
+#include <sstream>
 #define STAMP_ASK_BETTING 0x1
 #define STAMP_ASK_HIT 0X2
 #define STAMP_ASK_UPDATE 0X3
 #define STAMP_ASK_END 0X4
 void ClientForTestUser::askBettingMoney(const BlackJackUID uid)
 {
-#ifdef PRINT_LOG
-    std::cout << "Start betting rpc request" << std::endl;
-#endif
+
+    spdlog::info("Start betting rpc request");
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);
@@ -29,9 +30,7 @@ void ClientForTestUser::askBettingMoney(const BlackJackUID uid)
 
 void ClientForTestUser::askHitOrStand(const BlackJackUID uid)
 {
-#ifdef PRINT_LOG
-    std::cout << "Start ask hit" << std::endl;
-#endif
+    spdlog::info("Start ask hit");
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);
@@ -51,9 +50,8 @@ void ClientForTestUser::askHitOrStand(const BlackJackUID uid)
 }
 void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser) //第一个uid是哪个用户的信息更新了，第二个参数是发送给哪个用户
 {
-#ifdef PRINT_LOG
-    std::cout << "Start update" << std::endl;
-#endif
+    spdlog::info("Start update");
+
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(notifyUser);
@@ -76,6 +74,11 @@ void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID not
                     continue;
                 }
             }
+            else
+            {
+                spdlog::error("Player not exist!!! {0}", notifyUser);
+                exit(1);
+            }
             int color = poker->getValue() / 13 + 1;
             updateArg += " ";
             tmp.clear();
@@ -93,7 +96,7 @@ void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID not
     }
     else
     {
-        std::cout << "Player not exist!!!" << std::endl;
+        spdlog::error("Player not exist!!! {0}", uid);
         exit(1);
     }
     // Call object to store rpc data
@@ -109,9 +112,9 @@ void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID not
 }
 void ClientForTestUser::askEnd(const BlackJackUID uid, FinalResultOfGame isWin)
 {
-#ifdef PRINT_LOG
-    std::cout << "Start End request" << std::endl;
-#endif
+
+    spdlog::info("Start End request");
+
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);
@@ -157,21 +160,26 @@ void ClientForTestUser::AsyncCompleteRpc() //开一个线程告知协程发送�
 
         if (call->status.ok())
         {
-#ifdef PRINT_LOG
             this->printResponce(call->reply); //收到信号
-#endif
 
-            if (call->reply.stamp() == STAMP_ASK_BETTING) //ask betting有响应了
+            auto replyuid = call->reply.uid();
+            auto replyargs = call->reply.args();
+            auto player = playerHashMap[replyuid];
+            if (auto ptr = player.lock())
             {
-                auto replyuid = call->reply.uid();
-                auto replyargs = call->reply.args();
-                auto player = playerHashMap[uid];
-                if (auto ptr = player.lock())
+
+                if (call->reply.stamp() == STAMP_ASK_BETTING) //ask betting有响应了
                 {
+                    if (ptr->isQuit == true) //已退出玩家的相应不处理
+                    {
+                        spdlog::warn("uid {0:d}user quit but reply later", replyuid);
+                        delete call;
+                        return;
+                    }
                     int roomId = ptr->getRoom();
                     auto env = roomEnvirHashMap[roomId];
                     env->operateId = OPERATE_BETMONEY;
-                    ((BetMoneyArgument *)env->arg)->uid = uid;
+                    ((BetMoneyArgument *)env->arg)->uid = replyuid;
                     for (auto &money : replyargs)
                     {
                         if (money == "Bet")
@@ -181,17 +189,18 @@ void ClientForTestUser::AsyncCompleteRpc() //开一个线程告知协程发送�
 
                     myConditionSignal(env->cond);
                 }
-            }
-            else if (call->reply.stamp() == STAMP_ASK_HIT) //ask hit有响应了
-            {
-                auto replyuid = call->reply.uid();
-                auto replyargs = call->reply.args();
-                auto player = playerHashMap[uid];
-                if (auto ptr = player.lock())
+                else if (call->reply.stamp() == STAMP_ASK_HIT) //ask hit有响应了
                 {
+                    if (ptr->isQuit == true) //已退出玩家的相应不处理
+                    {
+                        spdlog::warn("uid {0:d}user quit but reply later", replyuid);
+                        delete call;
+                        return;
+                    }
+
                     int roomId = ptr->getRoom();
                     auto env = roomEnvirHashMap[roomId];
-                    ((HitArgument *)env->arg)->uid = uid;
+                    ((HitArgument *)env->arg)->uid = replyuid;
                     for (auto &s : replyargs)
                     {
                         if (s == "Hit") // hit
@@ -204,32 +213,36 @@ void ClientForTestUser::AsyncCompleteRpc() //开一个线程告知协程发送�
                         }
                         else
                         {
-                            std::cout << "HIT OR STAND ERROR" << std::endl;
+                            spdlog::error("{0} HIT OR STAND ERROR", call->reply.uid());
                             exit(1);
                         }
                     }
 
                     myConditionSignal(env->cond);
                 }
-            }
-            else if (call->reply.stamp() == STAMP_ASK_UPDATE) //ask update有响应了
-            {
-                /*
+                else if (call->reply.stamp() == STAMP_ASK_UPDATE) //ask update有响应了
+                {
+                    /*
                 不检客户端有没有收到update
                 
                 */
-            }
-            else if (call->reply.stamp() == STAMP_ASK_END)
-            {
-                /*
+                }
+                else if (call->reply.stamp() == STAMP_ASK_END)
+                {
+                    /*
                 不检客户端有没有收到end
                 
                 */
+                }
+            }
+            else
+            {
+                spdlog::warn("unexpected reply uid {0:d}", replyuid);
             }
         }
         else
         {
-            std::cout << this->uid << call->status.error_message() << std::endl;
+            spdlog::error("{1}", call->status.error_message());
             //this->askBettingMoney(uid); //再call一次
         }
         delete call;

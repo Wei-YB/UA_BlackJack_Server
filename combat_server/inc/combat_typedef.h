@@ -40,3 +40,7 @@ struct BetMoneyArgument
 };
 
 #define PRINT_LOG
+
+#define ProxyServiceAddr "9.134.125.154:50050"
+#define LobbyServiceAddr "9.134.69.87:50050"
+#define DatabaseServiceAddr "9.134.69.87:50050"

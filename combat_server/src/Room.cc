@@ -3,6 +3,10 @@
 #include <queue>
 #include "co_routine.h"
 #include "AskForDatabaseRequest.h"
+#include "AskForLobby.h"
+#include "AskForUserRequest.h"
+#include "spdlog/spdlog.h"
+#include <sstream>
 std::unordered_map<BlackJackRoomID, std::weak_ptr<Room>> roomHashMap;
 Room::ptr malloOneRoom(BlackJackRoomID rid, UidList &uids)
 {
@@ -20,8 +24,10 @@ Poker::ptr Room::getPokerFromShuffledPokers(void)
 
 void Room::showMessage(void) const
 {
-    std::cout << "Room-"
-              << "-roomid-" << this->rid << std::endl;
+    std::stringstream ss;
+    ss << "Room-"
+       << "-roomid-" << this->rid;
+    spdlog::info(ss.str());
     for (auto &player : this->playerList)
     {
         player->showMessage();
@@ -163,8 +169,7 @@ void Room::deleteRoom(void)
         this->playerList.front()->finalResult = DRAW;
     }
 
-#ifdef PRINT_LOG
-    std::cout << "game over" << std::endl;
+    spdlog::info("game over");
     for (auto &player : playerList)
     {
         player->showMessage();
@@ -172,18 +177,16 @@ void Room::deleteRoom(void)
     for (auto &player : playerList)
     {
         if (player->finalResult == WIN)
-            std::cout << player->uid << " WIN " << player->bettingMoney << std::endl;
+            spdlog::info("{0:d} WIN {1:d}", player->uid, player->bettingMoney);
         else if (player->finalResult == DRAW)
-            std::cout << player->uid << " DRAW " << std::endl;
+            spdlog::info("{0:d} Draw ", player->uid);
         else if (player->finalResult == LOSE)
-            std::cout << player->uid << " LOSE " << player->bettingMoney << std::endl;
+            spdlog::info("{0:d} LOSE {1:d}", player->uid, player->bettingMoney);
     }
-#endif
+
     /*************存储数据到数据库**************/
-    // auto client = std::make_shared<ClientForDatebase>(grpc::CreateChannel(
-    //     "9.134.69.87:50051", grpc::InsecureChannelCredentials()));
-    // client->matchEnd(this->playerList);
-    //ClientForDatebase::getInstance().matchEnd(this->playerList);
+    ClientForDatebase::getInstance().matchEnd(this->playerList); //向数据库发送
+    ClientForLobby::getInstance().matchEnd(this->getRoomId());   //向lobby发送
     /*************存储数据到数据库**************/
 }
 Room::~Room() //房间解散

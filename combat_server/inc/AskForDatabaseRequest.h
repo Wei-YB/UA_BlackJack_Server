@@ -27,6 +27,8 @@ using ua_blackjack::Response;
 /*************************/
 #include <memory>
 #include "Player.h"
+#include "spdlog/spdlog.h"
+#include <sstream>
 class ClientForDatebase
 {
 public:
@@ -34,13 +36,15 @@ public:
 
     void printResponce(Response &responce)
     {
-        std::cout << "status = " << responce.status() << " uid = " << responce.uid()
-                  << " stamp = " << responce.stamp() << " args = " << std::endl;
+        std::stringstream ss;
+        ss << "status = " << responce.status() << " uid = " << responce.uid()
+           << " stamp = " << responce.stamp() << " args = ";
         for (auto &s : responce.args())
         {
-            std::cout << s << " ";
+            ss << s << " ";
         }
-        std::cout << std::endl;
+
+        spdlog::info(ss.str());
     }
     void AsyncCompleteRpc();
 
@@ -48,7 +52,7 @@ public:
     static ClientForDatebase &getInstance()
     {
         static ClientForDatebase instance(grpc::CreateChannel(
-            "9.134.69.87:50051", grpc::InsecureChannelCredentials()));
+            DatabaseServiceAddr, grpc::InsecureChannelCredentials()));
         return instance;
     }
 

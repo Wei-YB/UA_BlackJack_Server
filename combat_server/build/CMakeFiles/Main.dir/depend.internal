@@ -463,6 +463,46 @@ CMakeFiles/Main.dir/src/AskForDatabaseRequest.cc.o
  ../3rd/libco/co_routine.h
  ../3rd/libco/co_routine_inner.h
  ../3rd/libco/coctx.h
+ ../3rd/spdlog/inc/spdlog/common-inl.h
+ ../3rd/spdlog/inc/spdlog/common.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer.h
+ ../3rd/spdlog/inc/spdlog/details/circular_q.h
+ ../3rd/spdlog/inc/spdlog/details/console_globals.h
+ ../3rd/spdlog/inc/spdlog/details/fmt_helper.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer.h
+ ../3rd/spdlog/inc/spdlog/details/null_mutex.h
+ ../3rd/spdlog/inc/spdlog/details/os-inl.h
+ ../3rd/spdlog/inc/spdlog/details/os.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker-inl.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker.h
+ ../3rd/spdlog/inc/spdlog/details/registry-inl.h
+ ../3rd/spdlog/inc/spdlog/details/registry.h
+ ../3rd/spdlog/inc/spdlog/details/synchronous_factory.h
+ ../3rd/spdlog/inc/spdlog/details/windows_include.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/core.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format-inl.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/xchar.h
+ ../3rd/spdlog/inc/spdlog/fmt/fmt.h
+ ../3rd/spdlog/inc/spdlog/formatter.h
+ ../3rd/spdlog/inc/spdlog/logger-inl.h
+ ../3rd/spdlog/inc/spdlog/logger.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter-inl.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink.h
+ ../3rd/spdlog/inc/spdlog/spdlog-inl.h
+ ../3rd/spdlog/inc/spdlog/spdlog.h
+ ../3rd/spdlog/inc/spdlog/tweakme.h
+ ../3rd/spdlog/inc/spdlog/version.h
  ../inc/AskForDatabaseRequest.h
  ../inc/AskForUserRequest.h
  ../inc/Player.h
@@ -668,6 +708,46 @@ CMakeFiles/Main.dir/src/AskForLobby..cc.o
  ../3rd/libco/co_routine.h
  ../3rd/libco/co_routine_inner.h
  ../3rd/libco/coctx.h
+ ../3rd/spdlog/inc/spdlog/common-inl.h
+ ../3rd/spdlog/inc/spdlog/common.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer.h
+ ../3rd/spdlog/inc/spdlog/details/circular_q.h
+ ../3rd/spdlog/inc/spdlog/details/console_globals.h
+ ../3rd/spdlog/inc/spdlog/details/fmt_helper.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer.h
+ ../3rd/spdlog/inc/spdlog/details/null_mutex.h
+ ../3rd/spdlog/inc/spdlog/details/os-inl.h
+ ../3rd/spdlog/inc/spdlog/details/os.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker-inl.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker.h
+ ../3rd/spdlog/inc/spdlog/details/registry-inl.h
+ ../3rd/spdlog/inc/spdlog/details/registry.h
+ ../3rd/spdlog/inc/spdlog/details/synchronous_factory.h
+ ../3rd/spdlog/inc/spdlog/details/windows_include.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/core.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format-inl.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/xchar.h
+ ../3rd/spdlog/inc/spdlog/fmt/fmt.h
+ ../3rd/spdlog/inc/spdlog/formatter.h
+ ../3rd/spdlog/inc/spdlog/logger-inl.h
+ ../3rd/spdlog/inc/spdlog/logger.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter-inl.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink.h
+ ../3rd/spdlog/inc/spdlog/spdlog-inl.h
+ ../3rd/spdlog/inc/spdlog/spdlog.h
+ ../3rd/spdlog/inc/spdlog/tweakme.h
+ ../3rd/spdlog/inc/spdlog/version.h
  ../inc/AskForLobby.h
  ../inc/AskForUserRequest.h
  ../inc/Player.h
@@ -874,6 +954,47 @@ CMakeFiles/Main.dir/src/AskForUserRequest.cc.o
  ../3rd/libco/co_routine.h
  ../3rd/libco/co_routine_inner.h
  ../3rd/libco/coctx.h
+ ../3rd/spdlog/inc/spdlog/common-inl.h
+ ../3rd/spdlog/inc/spdlog/common.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer.h
+ ../3rd/spdlog/inc/spdlog/details/circular_q.h
+ ../3rd/spdlog/inc/spdlog/details/console_globals.h
+ ../3rd/spdlog/inc/spdlog/details/fmt_helper.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer.h
+ ../3rd/spdlog/inc/spdlog/details/null_mutex.h
+ ../3rd/spdlog/inc/spdlog/details/os-inl.h
+ ../3rd/spdlog/inc/spdlog/details/os.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker-inl.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker.h
+ ../3rd/spdlog/inc/spdlog/details/registry-inl.h
+ ../3rd/spdlog/inc/spdlog/details/registry.h
+ ../3rd/spdlog/inc/spdlog/details/synchronous_factory.h
+ ../3rd/spdlog/inc/spdlog/details/windows_include.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/core.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format-inl.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/xchar.h
+ ../3rd/spdlog/inc/spdlog/fmt/fmt.h
+ ../3rd/spdlog/inc/spdlog/formatter.h
+ ../3rd/spdlog/inc/spdlog/logger-inl.h
+ ../3rd/spdlog/inc/spdlog/logger.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter-inl.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink.h
+ ../3rd/spdlog/inc/spdlog/spdlog-inl.h
+ ../3rd/spdlog/inc/spdlog/spdlog.h
+ ../3rd/spdlog/inc/spdlog/tweakme.h
+ ../3rd/spdlog/inc/spdlog/version.h
+ ../inc/AskForDatabaseRequest.h
  ../inc/AskForUserRequest.h
  ../inc/GameProcess.h
  ../inc/MycondintonCo.h
@@ -1083,6 +1204,47 @@ CMakeFiles/Main.dir/src/GameProcess.cc.o
  ../3rd/libco/co_routine.h
  ../3rd/libco/co_routine_inner.h
  ../3rd/libco/coctx.h
+ ../3rd/spdlog/inc/spdlog/common-inl.h
+ ../3rd/spdlog/inc/spdlog/common.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer.h
+ ../3rd/spdlog/inc/spdlog/details/circular_q.h
+ ../3rd/spdlog/inc/spdlog/details/console_globals.h
+ ../3rd/spdlog/inc/spdlog/details/fmt_helper.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer.h
+ ../3rd/spdlog/inc/spdlog/details/null_mutex.h
+ ../3rd/spdlog/inc/spdlog/details/os-inl.h
+ ../3rd/spdlog/inc/spdlog/details/os.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker-inl.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker.h
+ ../3rd/spdlog/inc/spdlog/details/registry-inl.h
+ ../3rd/spdlog/inc/spdlog/details/registry.h
+ ../3rd/spdlog/inc/spdlog/details/synchronous_factory.h
+ ../3rd/spdlog/inc/spdlog/details/windows_include.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/core.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format-inl.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/xchar.h
+ ../3rd/spdlog/inc/spdlog/fmt/fmt.h
+ ../3rd/spdlog/inc/spdlog/formatter.h
+ ../3rd/spdlog/inc/spdlog/logger-inl.h
+ ../3rd/spdlog/inc/spdlog/logger.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter-inl.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink.h
+ ../3rd/spdlog/inc/spdlog/spdlog-inl.h
+ ../3rd/spdlog/inc/spdlog/spdlog.h
+ ../3rd/spdlog/inc/spdlog/tweakme.h
+ ../3rd/spdlog/inc/spdlog/version.h
+ ../inc/AskForDatabaseRequest.h
  ../inc/AskForUserRequest.h
  ../inc/GameProcess.h
  ../inc/MycondintonCo.h
@@ -1295,6 +1457,47 @@ CMakeFiles/Main.dir/src/Player.cc.o
  ../3rd/libco/co_routine.h
  ../3rd/libco/co_routine_inner.h
  ../3rd/libco/coctx.h
+ ../3rd/spdlog/inc/spdlog/common-inl.h
+ ../3rd/spdlog/inc/spdlog/common.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer.h
+ ../3rd/spdlog/inc/spdlog/details/circular_q.h
+ ../3rd/spdlog/inc/spdlog/details/console_globals.h
+ ../3rd/spdlog/inc/spdlog/details/fmt_helper.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer.h
+ ../3rd/spdlog/inc/spdlog/details/null_mutex.h
+ ../3rd/spdlog/inc/spdlog/details/os-inl.h
+ ../3rd/spdlog/inc/spdlog/details/os.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker-inl.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker.h
+ ../3rd/spdlog/inc/spdlog/details/registry-inl.h
+ ../3rd/spdlog/inc/spdlog/details/registry.h
+ ../3rd/spdlog/inc/spdlog/details/synchronous_factory.h
+ ../3rd/spdlog/inc/spdlog/details/windows_include.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/core.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format-inl.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/xchar.h
+ ../3rd/spdlog/inc/spdlog/fmt/fmt.h
+ ../3rd/spdlog/inc/spdlog/formatter.h
+ ../3rd/spdlog/inc/spdlog/logger-inl.h
+ ../3rd/spdlog/inc/spdlog/logger.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter-inl.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink.h
+ ../3rd/spdlog/inc/spdlog/spdlog-inl.h
+ ../3rd/spdlog/inc/spdlog/spdlog.h
+ ../3rd/spdlog/inc/spdlog/tweakme.h
+ ../3rd/spdlog/inc/spdlog/version.h
+ ../inc/AskForDatabaseRequest.h
  ../inc/AskForUserRequest.h
  ../inc/Player.h
  ../inc/Poker.h
@@ -1496,6 +1699,46 @@ CMakeFiles/Main.dir/src/Player.cc.o
  /root/.local/include/grpcpp/support/status.h
  /root/.local/include/grpcpp/support/string_ref.h
 CMakeFiles/Main.dir/src/Poker.cc.o
+ ../3rd/spdlog/inc/spdlog/common-inl.h
+ ../3rd/spdlog/inc/spdlog/common.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer.h
+ ../3rd/spdlog/inc/spdlog/details/circular_q.h
+ ../3rd/spdlog/inc/spdlog/details/console_globals.h
+ ../3rd/spdlog/inc/spdlog/details/fmt_helper.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer.h
+ ../3rd/spdlog/inc/spdlog/details/null_mutex.h
+ ../3rd/spdlog/inc/spdlog/details/os-inl.h
+ ../3rd/spdlog/inc/spdlog/details/os.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker-inl.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker.h
+ ../3rd/spdlog/inc/spdlog/details/registry-inl.h
+ ../3rd/spdlog/inc/spdlog/details/registry.h
+ ../3rd/spdlog/inc/spdlog/details/synchronous_factory.h
+ ../3rd/spdlog/inc/spdlog/details/windows_include.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/core.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format-inl.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/xchar.h
+ ../3rd/spdlog/inc/spdlog/fmt/fmt.h
+ ../3rd/spdlog/inc/spdlog/formatter.h
+ ../3rd/spdlog/inc/spdlog/logger-inl.h
+ ../3rd/spdlog/inc/spdlog/logger.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter-inl.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink.h
+ ../3rd/spdlog/inc/spdlog/spdlog-inl.h
+ ../3rd/spdlog/inc/spdlog/spdlog.h
+ ../3rd/spdlog/inc/spdlog/tweakme.h
+ ../3rd/spdlog/inc/spdlog/version.h
  ../inc/Poker.h
  /home/tong/UA_BlackJack_Server/combat_server/src/Poker.cc
 CMakeFiles/Main.dir/src/Room.cc.o
@@ -1504,7 +1747,48 @@ CMakeFiles/Main.dir/src/Room.cc.o
  ../3rd/libco/co_routine.h
  ../3rd/libco/co_routine_inner.h
  ../3rd/libco/coctx.h
+ ../3rd/spdlog/inc/spdlog/common-inl.h
+ ../3rd/spdlog/inc/spdlog/common.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer.h
+ ../3rd/spdlog/inc/spdlog/details/circular_q.h
+ ../3rd/spdlog/inc/spdlog/details/console_globals.h
+ ../3rd/spdlog/inc/spdlog/details/fmt_helper.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer.h
+ ../3rd/spdlog/inc/spdlog/details/null_mutex.h
+ ../3rd/spdlog/inc/spdlog/details/os-inl.h
+ ../3rd/spdlog/inc/spdlog/details/os.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker-inl.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker.h
+ ../3rd/spdlog/inc/spdlog/details/registry-inl.h
+ ../3rd/spdlog/inc/spdlog/details/registry.h
+ ../3rd/spdlog/inc/spdlog/details/synchronous_factory.h
+ ../3rd/spdlog/inc/spdlog/details/windows_include.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/core.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format-inl.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/xchar.h
+ ../3rd/spdlog/inc/spdlog/fmt/fmt.h
+ ../3rd/spdlog/inc/spdlog/formatter.h
+ ../3rd/spdlog/inc/spdlog/logger-inl.h
+ ../3rd/spdlog/inc/spdlog/logger.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter-inl.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink.h
+ ../3rd/spdlog/inc/spdlog/spdlog-inl.h
+ ../3rd/spdlog/inc/spdlog/spdlog.h
+ ../3rd/spdlog/inc/spdlog/tweakme.h
+ ../3rd/spdlog/inc/spdlog/version.h
  ../inc/AskForDatabaseRequest.h
+ ../inc/AskForLobby.h
  ../inc/AskForUserRequest.h
  ../inc/Player.h
  ../inc/Poker.h
@@ -1706,6 +1990,46 @@ CMakeFiles/Main.dir/src/Room.cc.o
  /root/.local/include/grpcpp/support/status.h
  /root/.local/include/grpcpp/support/string_ref.h
 CMakeFiles/Main.dir/src/ShuffledPokers.cc.o
+ ../3rd/spdlog/inc/spdlog/common-inl.h
+ ../3rd/spdlog/inc/spdlog/common.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/backtracer.h
+ ../3rd/spdlog/inc/spdlog/details/circular_q.h
+ ../3rd/spdlog/inc/spdlog/details/console_globals.h
+ ../3rd/spdlog/inc/spdlog/details/fmt_helper.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer-inl.h
+ ../3rd/spdlog/inc/spdlog/details/log_msg_buffer.h
+ ../3rd/spdlog/inc/spdlog/details/null_mutex.h
+ ../3rd/spdlog/inc/spdlog/details/os-inl.h
+ ../3rd/spdlog/inc/spdlog/details/os.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker-inl.h
+ ../3rd/spdlog/inc/spdlog/details/periodic_worker.h
+ ../3rd/spdlog/inc/spdlog/details/registry-inl.h
+ ../3rd/spdlog/inc/spdlog/details/registry.h
+ ../3rd/spdlog/inc/spdlog/details/synchronous_factory.h
+ ../3rd/spdlog/inc/spdlog/details/windows_include.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/core.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format-inl.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/format.h
+ ../3rd/spdlog/inc/spdlog/fmt/bundled/xchar.h
+ ../3rd/spdlog/inc/spdlog/fmt/fmt.h
+ ../3rd/spdlog/inc/spdlog/formatter.h
+ ../3rd/spdlog/inc/spdlog/logger-inl.h
+ ../3rd/spdlog/inc/spdlog/logger.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter-inl.h
+ ../3rd/spdlog/inc/spdlog/pattern_formatter.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/ansicolor_sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/sink.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink-inl.h
+ ../3rd/spdlog/inc/spdlog/sinks/wincolor_sink.h
+ ../3rd/spdlog/inc/spdlog/spdlog-inl.h
+ ../3rd/spdlog/inc/spdlog/spdlog.h
+ ../3rd/spdlog/inc/spdlog/tweakme.h
+ ../3rd/spdlog/inc/spdlog/version.h
  ../inc/Poker.h
  ../inc/ShuffledPokers.h
  /home/tong/UA_BlackJack_Server/combat_server/src/ShuffledPokers.cc

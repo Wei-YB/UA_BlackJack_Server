@@ -1,11 +1,10 @@
 #include "AskForLobby.h"
 #include <chrono>
+#include "spdlog/spdlog.h"
 #include <sstream>
 void ClientForLobby::matchEnd(const BlackJackRoomID roomid)
 {
-#ifdef PRINT_LOG
-    std::cout << "Start lobby match end request" << std::endl;
-#endif
+    spdlog::info("Start lobby match end request");
     Request request;
     std::stringstream ss;
     ss << roomid;
