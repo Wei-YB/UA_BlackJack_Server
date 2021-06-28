@@ -4,6 +4,8 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <netdb.h>
+#include <spdlog/sinks/basic_file_sink.h>
+#include <spdlog/spdlog.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -5,11 +5,14 @@
 
 #include <ctime>
 #include <iostream>
+#include <memory>
 #include <utility>
 
 #include "Rio.h"
 
 static Display& display = Display::DisplayInstance();
+
+std::shared_ptr<spdlog::logger> logger = nullptr;
 
 int Client::Connect(const char* host, const char* service, int type) {
     struct addrinfo hints;
@@ -383,10 +386,15 @@ int Client::SerializeRoomResponse(ua_blackjack::Response& response) {
 }
 
 void Client::ProcessResponse(ua_blackjack::Response& response) {
+    logger->info("Receive response, status:{0} uid: {1}, stamp: {2}", response.status(), response.uid(),
+                 response.stamp());
     display.DisplayResponse(response, request_type_);
     request_type_ = ua_blackjack::Request::INVAL;
 
-    if (response.status() == -1) return;
+    if (response.status() == -1) {
+        next_state_ = INVALID;
+        return;
+    }
 
     if (uid_ == -1) {
         uid_ = response.uid();
@@ -396,6 +404,9 @@ void Client::ProcessResponse(ua_blackjack::Response& response) {
 }
 
 void Client::ProcessRoomRequest(ua_blackjack::Request& request) {
+    logger->info("Received room request, type: {0}, uid: {1}, stamp{2}", request.requesttype(), request.uid(),
+                 request.stamp());
+
     Rio rio(sfd_);
     rio.RioReadInit(sfd_);
 
@@ -410,12 +421,20 @@ void Client::ProcessRoomRequest(ua_blackjack::Request& request) {
     ua_blackjack::Response room_response = ConstructRoomResponse(valid, request);
     int res_len = SerializeRoomResponse(room_response);
 
+    logger->info("Constructed Room Response status:{0} uid:{1} stamp:{2}", room_response.status(), room_response.uid(),
+                 room_response.stamp());
+
     // write response to proxy
     rio.RioWriten((char*)buffer_out_, res_len);
 
+    logger->info("Send {0} bytes Response to proxy", res_len);
+
     auto& res_args = request.args();
     if (res_args.size() > 0 && res_args[0] == "update") UpdateCards(request);
+    logger->info("Cards update");
+
     if (res_args.size() > 0 && res_args[0] == "end") GameEnd(request);
+    logger->info("Game end");
 }
 
 std::vector<int> Client::ParseCards(const std::string& str) {
@@ -487,6 +506,8 @@ void Client::ProcessCommand(Rio& rio) {
         return;
     }
 
+    logger->info("Get command from console");
+
     next_state_ = GetNextState(args[0]);
     if (next_state_ == INVALID) {
         std::cout << "21Game "
@@ -501,18 +522,27 @@ void Client::ProcessCommand(Rio& rio) {
 
     // write data to proxy
     rio.RioWriten((char*)buffer_out_, req_len);
+
+    logger->info("Send request to proxy, type: {0}, uid: {1}, stamp: {2}", request.requesttype(), request.uid(),
+                 request.stamp());
 }
 
 void Client::ProcessSocket(Rio& rio) {
     // read data type
     uint32_t data_type;
-    rio.RioReadn((char*)&data_type, sizeof(data_type));
+    int len = rio.RioReadn((char*)&data_type, sizeof(data_type));
+    if (len == 0) return;
     data_type = ntohl(data_type);
+
+    logger->info("Get data type from proxy, type: {0}", data_type);
 
     // read data length
     uint32_t data_length;
-    rio.RioReadn((char*)&data_length, sizeof(data_length));
+    len = rio.RioReadn((char*)&data_length, sizeof(data_length));
+    if (len == 0) return;
     data_length = ntohl(data_length);
+
+    logger->info("Get data length from proxy, length: {0}", data_length);
 
     assert(data_length > 0);
 
@@ -520,7 +550,10 @@ void Client::ProcessSocket(Rio& rio) {
     std::string data;
     data.resize(data_length);
     char* p = &data[0];
-    rio.RioReadn(p, data_length);
+    len = rio.RioReadn(p, data_length);
+    if (len == 0) return;
+
+    logger->info("Get complete data from proxy, {0} bytes", data_length);
 
     if (data_type == REQUEST) {
         ua_blackjack::Request request;
@@ -531,7 +564,7 @@ void Client::ProcessSocket(Rio& rio) {
         response.ParseFromString(data);
         ProcessResponse(response);
     } else {
-        std::cout << "ListenProxy: Wrong data type" << std::endl;
+        logger->error("ListenProxy: Wrong data type");
         return;
     }
 
@@ -545,13 +578,14 @@ void Client::ProcessSocket(Rio& rio) {
 void Client::Run(const char* ip, const char* port) {
     sfd_ = Connect(ip, port, SOCK_STREAM);
     if (sfd_ == -1) {
-        std::cout << ":( Connection failed!" << std::endl;
+        logger->error(":( Connection failed!");
         exit(EXIT_FAILURE);
     }
 
     GameInit();
+    logger->info("Client Init");
 
-    std::cin.clear();
+    // std::cin.clear();
 
     std::cout << "21Game "
               << "(" << state2str_[state_] << ")"
@@ -568,7 +602,7 @@ void Client::Run(const char* ip, const char* port) {
     while (true) {
         int number = epoll_wait(epfd_, evlist, MAX_EVENTS, -1);
         if (number < 0 && errno != EINTR) {
-            std::cout << "epoll failed" << std::endl;
+            logger->error("epoll failed");
             break;
         }
 
@@ -584,7 +618,10 @@ void Client::Run(const char* ip, const char* port) {
 }
 
 int main(int argc, char* argv[]) {
-    assert(argc == 3);
+    assert(argc == 4);
+
+    logger = spdlog::basic_logger_mt("basic_logger", argv[3]);
+    logger->flush_on(spdlog::level::trace);
 
     Client client;
     client.Run(argv[1], argv[2]);

@@ -115,6 +115,8 @@ void Display::DisplayResponseCreateRoom(ua_blackjack::Response& response) {
     }
 
     PrintPrompt("CreateRoom Successful");
+
+    std::cout << response.args()[0] << std::endl;
 }
 void Display::DisplayResponseQuickMatch(ua_blackjack::Response& response) {
     if (response.status() == -1) {
@@ -247,7 +249,10 @@ void Display::DisplayCards(int idx_, std::unordered_map<int, int>& idx2uid_, std
     for (int i = 0; i < idx_; ++i) {
         std::cout << idx2uid_[i] << ": ";
         for (int j = 0; j < cards_[i].size(); ++j) {
-            std::cout << cards_[i][j].second << " ";
+            if (cards_[i][j].second == 0)
+                std::cout << "* ";
+            else
+                std::cout << cards_[i][j].second << " ";
         }
         std::cout << std::endl;
     }
