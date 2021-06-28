@@ -9,8 +9,7 @@
 
 #include "Rio.h"
 
-static pthread_mutex_t mtx_response = PTHREAD_MUTEX_INITIALIZER;
-static pthread_mutex_t mtx_request = PTHREAD_MUTEX_INITIALIZER;
+static Display& display = Display::DisplayInstance();
 
 int Client::Connect(const char* host, const char* service, int type) {
     struct addrinfo hints;
@@ -52,6 +51,18 @@ int Client::Connect(const char* host, const char* service, int type) {
     return (rp == nullptr) ? -1 : sfd;
 }
 
+void Client::addfd(int epollfd, int fd) {
+    epoll_event event;
+    event.data.fd = fd;
+    event.events = EPOLLIN;
+    epoll_ctl(epollfd, EPOLL_CTL_ADD, fd, &event);
+}
+
+void Client::removefd(int epollfd, int fd) {
+    epoll_ctl(epollfd, EPOLL_CTL_DEL, fd, 0);
+    close(fd);
+}
+
 std::vector<std::string> Client::Parse(const std::string& command) {
     std::vector<std::string> args;
     int n = command.size(), l = 0, r = 0;
@@ -72,16 +83,16 @@ std::vector<std::string> Client::GetCommandArgs() {
 
     auto args = Parse(command);
     if (args.size() < 1 || cmd2req_.find(args[0]) == cmd2req_.end()) {
-        std::cout << "Invalid command." << std::endl;
+        std::cout << ":( Invalid command." << std::endl;
         return {};
     }
 
     int input_args_num = args.size() - 1, expect_args_num = cmd2req_[args[0]].second;
     if (input_args_num != expect_args_num) {
         if (input_args_num < expect_args_num)
-            std::cout << "Expect more args.";
+            std::cout << ":( Expect more args.";
         else
-            std::cout << "Too many args.";
+            std::cout << ":( Too many args.";
 
         return {};
     }
@@ -89,8 +100,8 @@ std::vector<std::string> Client::GetCommandArgs() {
     return args;
 }
 
-proxy::Request Client::ConstructRequest(const std::vector<std::string>& args) {
-    proxy::Request request;
+ua_blackjack::Request Client::ConstructRequest(const std::vector<std::string>& args) {
+    ua_blackjack::Request request;
     auto type = cmd2req_[args[0]].first;
     request.set_requesttype(type);
     request.set_uid(uid_);
@@ -102,7 +113,7 @@ proxy::Request Client::ConstructRequest(const std::vector<std::string>& args) {
     return request;
 }
 
-int Client::SerializeRequest(proxy::Request& request) {
+int Client::SerializeRequest(ua_blackjack::Request& request) {
     auto data = request.SerializeAsString();
 
     uint32_t data_type = REQUEST;
@@ -139,20 +150,20 @@ Client::State Client::GetNextState(const std::string& cmd) {
     bool valid = true;
 
     switch (cmd_type) {
-        case proxy::Request::SIGNUP:
+        case ua_blackjack::Request::SIGNUP:
             if (state_ != OFFLINE) {
                 valid = false;
             }
             break;
 
-        case proxy::Request::LOGIN:
+        case ua_blackjack::Request::LOGIN:
             if (state_ != OFFLINE) {
                 valid = false;
             } else {
                 new_state = ONLINE;
             }
             break;
-        case proxy::Request::LOGOUT:
+        case ua_blackjack::Request::LOGOUT:
             if (state_ == OFFLINE) {
                 valid = false;
             } else {
@@ -160,15 +171,15 @@ Client::State Client::GetNextState(const std::string& cmd) {
             }
             break;
 
-        case proxy::Request::ROOM_LIST:
-        case proxy::Request::CREATE_ROOM:
+        case ua_blackjack::Request::ROOM_LIST:
+        case ua_blackjack::Request::CREATE_ROOM:
             if (state_ != ONLINE) {
                 valid = false;
             }
             break;
 
-        case proxy::Request::JOIN_ROOM:
-        case proxy::Request::QUICK_MATCH:
+        case ua_blackjack::Request::JOIN_ROOM:
+        case ua_blackjack::Request::QUICK_MATCH:
             if (state_ != ONLINE) {
                 valid = false;
             } else {
@@ -176,7 +187,7 @@ Client::State Client::GetNextState(const std::string& cmd) {
             }
             break;
 
-        case proxy::Request::READY:
+        case ua_blackjack::Request::READY:
             if (state_ != INROOM_UNREADY) {
                 valid = false;
             } else {
@@ -184,7 +195,7 @@ Client::State Client::GetNextState(const std::string& cmd) {
             }
             break;
 
-        case proxy::Request::LEAVE_ROOM:
+        case ua_blackjack::Request::LEAVE_ROOM:
             if (state_ == OFFLINE || state_ == ONLINE) {
                 valid = false;
             } else {
@@ -192,9 +203,9 @@ Client::State Client::GetNextState(const std::string& cmd) {
             }
             break;
 
-        case proxy::Request::BET:
-        case proxy::Request::HIT:
-        case proxy::Request::STAND:
+        case ua_blackjack::Request::BET:
+        case ua_blackjack::Request::HIT:
+        case ua_blackjack::Request::STAND:
             if (state_ != INGAME_TURN) {
                 valid = false;
             } else {
@@ -202,13 +213,13 @@ Client::State Client::GetNextState(const std::string& cmd) {
             }
             break;
 
-        case proxy::Request::DOUBLE:
+        case ua_blackjack::Request::DOUBLE:
             if (state_ != INGAME_TURN && state_ != INGAME_IDLE) {
                 valid = false;
             }
             break;
 
-        case proxy::Request::SURRENDER:
+        case ua_blackjack::Request::SURRENDER:
             if (state_ != INGAME_IDLE && state_ != INGAME_TURN) {
                 valid = false;
             } else {
@@ -216,14 +227,14 @@ Client::State Client::GetNextState(const std::string& cmd) {
             }
             break;
 
-        case proxy::Request::INFO:
-        case proxy::Request::RANK_ME:
-        case proxy::Request::RANK_TOP:
-        case proxy::Request::ADD_FRIEND:
-        case proxy::Request::ACCEPT_FRIEND:
-        case proxy::Request::DELETE_FRIEND:
-        case proxy::Request::LIST_FRIEND:
-        case proxy::Request::LIST_WAITTING:
+        case ua_blackjack::Request::INFO:
+        case ua_blackjack::Request::RANK_ME:
+        case ua_blackjack::Request::RANK_TOP:
+        case ua_blackjack::Request::ADD_FRIEND:
+        case ua_blackjack::Request::ACCEPT_FRIEND:
+        case ua_blackjack::Request::DELETE_FRIEND:
+        case ua_blackjack::Request::LIST_FRIEND:
+        case ua_blackjack::Request::LIST_WAITTING:
             if (state_ == OFFLINE || state_ == INGAME_IDLE || state_ == INGAME_TURN) {
                 valid = false;
             }
@@ -233,12 +244,13 @@ Client::State Client::GetNextState(const std::string& cmd) {
     if (valid) {
         return new_state;
     } else {
-        std::cout << "Invalid State for command" << std::endl;
+        std::cout << ":( Invalid State for command" << std::endl;
+        std::cout << "Current State: " << state2str_[state_] << std::endl;
         return INVALID;
     }
 }
 
-Client::State Client::GetNextState(proxy::Request& request) {
+Client::State Client::GetNextState(ua_blackjack::Request& request) {
     auto& req_args = request.args();
     assert(req_args.size() > 0);
 
@@ -268,19 +280,19 @@ Client::State Client::GetNextState(proxy::Request& request) {
             new_state = INROOM_UNREADY;
         }
     } else {
-        std::cout << "Unrecognized request from server" << std::endl;
+        std::cout << ":( Unrecognized request from server" << std::endl;
     }
 
     if (valid) {
         return new_state;
     } else {
-        std::cout << "Invalid State for request" << std::endl;
+        std::cout << ":( Invalid State for request" << std::endl;
         return INVALID;
     }
 }
 
-proxy::Response Client::ConstructRoomResponse(bool valid, proxy::Request& request) {
-    proxy::Response response;
+ua_blackjack::Response Client::ConstructRoomResponse(bool valid, ua_blackjack::Request& request) {
+    ua_blackjack::Response response;
     if (!valid) {
         response.set_status(-1);
         return response;
@@ -293,8 +305,9 @@ proxy::Response Client::ConstructRoomResponse(bool valid, proxy::Request& reques
     std::vector<std::string> res_args;
 
     if (request.args()[0] == "start") {
+        display.PrintPrompt("Game Start, Bet!");
         while (true) {
-            PrintPrompt("Start Bet");
+            std::cout << std::endl << " > " << std::flush;
             res_args = GetCommandArgs();
 
             if (res_args.empty()) {
@@ -302,15 +315,16 @@ proxy::Response Client::ConstructRoomResponse(bool valid, proxy::Request& reques
 
             } else {
                 if (res_args[0] != "Bet") {
-                    std::cout << "Invaild Command, Bet!" << std::endl;
+                    std::cout << ":( Invaild Command, Bet!" << std::endl;
                 } else {
                     break;
                 }
             }
         }
     } else if (request.args()[0] == "hit") {
+        display.PrintPrompt("Select Hit or Stand");
         while (true) {
-            PrintPrompt("Select Hit or Stand");
+            std::cout << std::endl << " > " << std::flush;
             res_args = GetCommandArgs();
 
             if (res_args.empty()) {
@@ -318,7 +332,7 @@ proxy::Response Client::ConstructRoomResponse(bool valid, proxy::Request& reques
 
             } else {
                 if (res_args[0] != "Hit" && res_args[0] != "Stand") {
-                    std::cout << "Invaild Command, Hit or Stand!" << std::endl;
+                    std::cout << ":( Invaild Command, Hit or Stand!" << std::endl;
                 } else {
                     break;
                 }
@@ -329,7 +343,7 @@ proxy::Response Client::ConstructRoomResponse(bool valid, proxy::Request& reques
     } else if (request.args()[0] == "end") {
         res_args = {"end"};
     } else {
-        std::cout << "Unrecognized request from server" << std::endl;
+        std::cout << ":( Unrecognized request from server" << std::endl;
     }
 
     for (auto& res_arg : res_args) {
@@ -339,7 +353,7 @@ proxy::Response Client::ConstructRoomResponse(bool valid, proxy::Request& reques
     return response;
 }
 
-int Client::SerializeRoomResponse(proxy::Response& response) {
+int Client::SerializeRoomResponse(ua_blackjack::Response& response) {
     auto data = response.SerializeAsString();
 
     uint32_t data_type = RESPONSE;
@@ -368,49 +382,36 @@ int Client::SerializeRoomResponse(proxy::Response& response) {
     return sizeof(data_type) + sizeof(data_length) + data.size();
 }
 
-void Client::ProcessResponse(int64_t stamp) {
-    pthread_mutex_lock(&mtx_response);
-    proxy::Response response = stamp2response_[stamp];
-    stamp2response_.erase(stamp);
-    pthread_mutex_unlock(&mtx_response);
+void Client::ProcessResponse(ua_blackjack::Response& response) {
+    display.DisplayResponse(response, request_type_);
+    request_type_ = ua_blackjack::Request::INVAL;
 
-    if (response.status() == -1) {
-        std::cout << "Response Status: -1" << std::endl;
-        return;
+    if (response.status() == -1) return;
+
+    if (uid_ == -1) {
+        uid_ = response.uid();
+    } else if (response.uid() != uid_) {
+        std::cout << ":( Not my uid, wrong response" << std::endl;
     }
-
-    std::cout << "Got Response!" << std::endl;
-
-    if (uid_ == -1) uid_ = response.uid();
-
-    auto res_args = response.args();
-    for (std::string& str : res_args) {
-        std::cout << str << " ";
-    }
-
-    std::cout << std::endl;
 }
 
-void Client::ProcessRoomRequest(proxy::Request& request) {
+void Client::ProcessRoomRequest(ua_blackjack::Request& request) {
     Rio rio(sfd_);
     rio.RioReadInit(sfd_);
 
     if (request.uid() != uid_) {
-        std::cout << "Not my uid, ignore request" << std::endl;
+        std::cout << ":( Not my uid, ignore request" << std::endl;
         return;
     }
 
-    State next_state_after_notified = GetNextState(request);
-    bool valid = (next_state_after_notified != INVALID);
+    next_state_ = GetNextState(request);
+    bool valid = (next_state_ != INVALID);
 
-    proxy::Response room_response = ConstructRoomResponse(valid, request);
+    ua_blackjack::Response room_response = ConstructRoomResponse(valid, request);
     int res_len = SerializeRoomResponse(room_response);
 
     // write response to proxy
     rio.RioWriten((char*)buffer_out_, res_len);
-
-    // change state
-    if (next_state_after_notified != INVALID) state_ = next_state_after_notified;
 
     auto& res_args = request.args();
     if (res_args.size() > 0 && res_args[0] == "update") UpdateCards(request);
@@ -428,7 +429,7 @@ std::vector<int> Client::ParseCards(const std::string& str) {
     return ret;
 }
 
-void Client::UpdateCards(proxy::Request& request) {
+void Client::UpdateCards(ua_blackjack::Request& request) {
     // update
     int num = request.args().size();
     for (int i = 1; i < num; ++i) {
@@ -447,40 +448,16 @@ void Client::UpdateCards(proxy::Request& request) {
         }
     }
 
-    // print
-    PrintPrompt("Cards Update");
-    for (int i = 0; i < idx_; ++i) {
-        std::cout << idx2uid_[i] << ": ";
-        for (int j = 0; j < cards_[i].size(); ++j) {
-            std::cout << cards_[i][j].second << " ";
-        }
-        std::cout << std::endl;
-    }
+    display.DisplayCards(idx_, idx2uid_, cards_);
 }
 
-void Client::PrintPrompt(const std::string& prompt) {
-    std::string star = "************************************";
-
-    int sz = star.size(), prompt_sz = prompt.size();
-    int space_num = (sz - 2 - prompt_sz) / 2;
-
-    std::cout << star << std::endl;
-    std::cout << "*";
-    for (int i = 0; i < space_num; ++i) std::cout << " ";
-    std::cout << prompt;
-    for (int i = 0; i < space_num; ++i) std::cout << " ";
-    std::cout << "*";
-    std::cout << std::endl;
-    std::cout << star << std::endl;
-}
-
-void Client::GameEnd(proxy::Request& request) {
+void Client::GameEnd(ua_blackjack::Request& request) {
     std::string result = request.args()[1];
     if (result == "win") result = "WIN";
     if (result == "lose") result = "LOSE";
     result = "Game over. You " + result;
 
-    PrintPrompt(result);
+    display.PrintPrompt(result);
 
     // reset idx and uid2idx;
     idx_ = 0;
@@ -498,107 +475,110 @@ void Client::GameInit() {
     std::cout << "*         Welcome to 21Game        *" << std::endl;
     std::cout << "*                                  *" << std::endl;
     std::cout << "************************************" << std::endl;
+    std::cout << std::endl;
+}
+
+void Client::ProcessCommand(Rio& rio) {
+    std::vector<std::string> args = GetCommandArgs();
+    if (args.empty()) {
+        std::cout << "21Game "
+                  << "(" << state2str_[state_] << ")"
+                  << " > " << std::flush;
+        return;
+    }
+
+    next_state_ = GetNextState(args[0]);
+    if (next_state_ == INVALID) {
+        std::cout << "21Game "
+                  << "(" << state2str_[state_] << ")"
+                  << " > " << std::flush;
+        return;
+    }
+
+    ua_blackjack::Request request = ConstructRequest(args);
+    request_type_ = request.requesttype();
+    int req_len = SerializeRequest(request);
+
+    // write data to proxy
+    rio.RioWriten((char*)buffer_out_, req_len);
+}
+
+void Client::ProcessSocket(Rio& rio) {
+    // read data type
+    uint32_t data_type;
+    rio.RioReadn((char*)&data_type, sizeof(data_type));
+    data_type = ntohl(data_type);
+
+    // read data length
+    uint32_t data_length;
+    rio.RioReadn((char*)&data_length, sizeof(data_length));
+    data_length = ntohl(data_length);
+
+    assert(data_length > 0);
+
+    // read data
+    std::string data;
+    data.resize(data_length);
+    char* p = &data[0];
+    rio.RioReadn(p, data_length);
+
+    if (data_type == REQUEST) {
+        ua_blackjack::Request request;
+        request.ParseFromString(data);
+        ProcessRoomRequest(request);
+    } else if (data_type == RESPONSE) {
+        ua_blackjack::Response response;
+        response.ParseFromString(data);
+        ProcessResponse(response);
+    } else {
+        std::cout << "ListenProxy: Wrong data type" << std::endl;
+        return;
+    }
+
+    // change state
+    if (next_state_ != INVALID) state_ = next_state_;
+    std::cout << "21Game "
+              << "(" << state2str_[state_] << ")"
+              << " > " << std::flush;
 }
 
 void Client::Run() {
-    sfd_ = Connect("9.135.113.138", "50051", SOCK_DGRAM);
+    sfd_ = Connect("localhost", "50051", SOCK_STREAM);
     if (sfd_ == -1) {
-        std::cout << "Connection failed!" << std::endl;
+        std::cout << ":( Connection failed!" << std::endl;
         exit(EXIT_FAILURE);
     }
 
     GameInit();
 
-    pthread_t tid;
-    pthread_create(&tid, nullptr, ListenProxy, (void*)this);
+    std::cin.clear();
+
+    std::cout << "21Game "
+              << "(" << state2str_[state_] << ")"
+              << " > " << std::flush;
 
     Rio rio(sfd_);
     rio.RioReadInit(sfd_);
 
+    epfd_ = epoll_create(5);
+    addfd(epfd_, STDIN_FILENO);
+    addfd(epfd_, sfd_);
+
+    struct epoll_event evlist[MAX_EVENTS];
     while (true) {
-        std::cout << "21Game > " << std::flush;
-
-        std::vector<std::string> args = GetCommandArgs();
-        if (args.empty()) continue;
-
-        State next_state = GetNextState(args[0]);
-        if (next_state == INVALID) continue;
-
-        proxy::Request request = ConstructRequest(args);
-        int req_len = SerializeRequest(request);
-
-        // write data to proxy
-        rio.RioWriten((char*)buffer_out_, req_len);
-
-        // wait for server response or request
-        while (stamp2response_.find(request.stamp()) == stamp2response_.end() && room_request_ == nullptr) {
-            continue;
+        int number = epoll_wait(epfd_, evlist, MAX_EVENTS, -1);
+        if (number < 0 && errno != EINTR) {
+            std::cout << "epoll failed" << std::endl;
+            break;
         }
 
-        // receive response
-        if (stamp2response_.find(request.stamp()) != stamp2response_.end()) {
-            ProcessResponse(request.stamp());
-
-            // Got Response, change to next state
-            state_ = next_state;
-            std::cout << "Current State: " << state2str_[state_] << std::endl;
-        }
-
-        // receive request
-        if (room_request_) {
-            ProcessRoomRequest(*room_request_);
-
-            // clear room request
-            pthread_mutex_lock(&mtx_request);
-            delete room_request_;
-            room_request_ = nullptr;
-            pthread_mutex_unlock(&mtx_request);
-        }
-    }
-
-    pthread_join(tid, nullptr);
-}
-
-void* Client::ListenProxy(void* arg) {
-    Client* client = (Client*)arg;
-    Rio rio(client->sfd_);
-    rio.RioReadInit(client->sfd_);
-
-    while (true) {
-        // read data type
-        uint32_t data_type;
-        rio.RioReadn((char*)&data_type, sizeof(data_type));
-        data_type = ntohl(data_type);
-
-        // read data length
-        uint32_t data_length;
-        rio.RioReadn((char*)&data_length, sizeof(data_length));
-        data_length = ntohl(data_length);
-
-        assert(data_length > 0);
-
-        // read data
-        std::string data;
-        data.resize(data_length);
-        char* p = &data[0];
-        rio.RioReadn(p, data_length);
-
-        if (data_type == REQUEST) {
-            proxy::Request request;
-            request.ParseFromString(data);
-
-            pthread_mutex_lock(&mtx_request);
-            client->room_request_ = new proxy::Request(request);
-            pthread_mutex_unlock(&mtx_request);
-        } else if (data_type == RESPONSE) {
-            proxy::Response response;
-            response.ParseFromString(data);
-
-            pthread_mutex_lock(&mtx_response);
-            client->stamp2response_[response.stamp()] = response;
-            pthread_mutex_unlock(&mtx_response);
-        } else {
-            std::cout << "ListenProxy: Wrong data type" << std::endl;
+        for (int i = 0; i < number; ++i) {
+            int fd = evlist[i].data.fd;
+            if (fd == STDIN_FILENO) {
+                ProcessCommand(rio);
+            } else if (fd == sfd_) {
+                ProcessSocket(rio);
+            }
         }
     }
 }

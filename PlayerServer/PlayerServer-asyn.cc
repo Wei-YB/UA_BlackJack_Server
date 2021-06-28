@@ -10,7 +10,7 @@
 #include <thread>
 
 #include "PlayerClientDB-syn.h"
-#include "player.grpc.pb.h"
+#include "UA_BlackJack.grpc.pb.h"
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
@@ -21,9 +21,9 @@ using grpc::Status;
 
 // Service dependent
 /*************************/
-using player::PlayerService;
-using player::Request;
-using player::Response;
+using ua_blackjack::PlayerService;
+using ua_blackjack::Request;
+using ua_blackjack::Response;
 /*************************/
 
 Client* client = nullptr;
@@ -46,7 +46,7 @@ void ServerImpl::Run() {
 void ServerImpl::CallData::Proceed() {
     if (status_ == CREATE) {
         status_ = PROCESS;
-        service_->RequestRequestPlayer(&ctx_, &request_, &responder_, cq_, cq_, this);
+        service_->RequestNotify(&ctx_, &request_, &responder_, cq_, cq_, this);
     } else if (status_ == PROCESS) {
         new CallData(service_, cq_);
 

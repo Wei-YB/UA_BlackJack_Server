@@ -27,8 +27,8 @@ int Rio::RioBufferRead(char* usrbuf, int n) {
 }
 
 int Rio::RioBufferReadn(char* usrbuf, int n) {
-    size_t nleft = n;
-    ssize_t nread;
+    int nleft = n;
+    int nread;
     char* bufp = usrbuf;
     while (nleft > 0) {
         if ((nread = RioBufferRead(bufp, nleft)) < 0) {
@@ -41,6 +41,31 @@ int Rio::RioBufferReadn(char* usrbuf, int n) {
     }
 
     return n - nleft;
+}
+
+int Rio::RioBufferReadLine(char* usrbuf, int maxlen) {
+    int n, rc;
+    char* bufp = usrbuf;
+    char c;
+    for (n = 1; n < maxlen; ++n) {
+        if ((rc = RioBufferRead(&c, 1)) == 1) {
+            *bufp++ = c;
+            if (c == '\n') {
+                ++n;
+                break;
+            }
+        } else if (rc == 0) {
+            if (n == 1) {
+                return 0;
+            } else {
+                break;
+            }
+        } else {
+            return -1;
+        }
+    }
+    *bufp = 0;
+    return n - 1;
 }
 
 int Rio::RioReadn(char* usrbuf, int n) {

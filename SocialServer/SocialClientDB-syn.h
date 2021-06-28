@@ -28,7 +28,7 @@
 #ifdef BAZEL_BUILD
 #include "examples/protos/helloworld.grpc.pb.h"
 #else
-#include "social.grpc.pb.h"
+#include "UA_BlackJack.grpc.pb.h"
 #endif
 
 using grpc::Channel;
@@ -37,9 +37,9 @@ using grpc::Status;
 
 // Service dependent
 /*************************/
-using social::DatabaseService;
-using social::Request;
-using social::Response;
+using ua_blackjack::DatabaseService;
+using ua_blackjack::Request;
+using ua_blackjack::Response;
 /*************************/
 
 class Client {

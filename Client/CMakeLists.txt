@@ -5,9 +5,17 @@ set (CMAKE_CXX_STANDARD 11)
 include(common.cmake)
 include_directories("/root/.local/include")
 
-add_executable(Client Client.cc Rio.cc client.pb.cc)
+add_executable(Client Client.cc Rio.cc UA_BlackJack.pb.cc Display.cc)
 
 target_link_libraries(Client   
+${_REFLECTION}
+${_GRPC_GRPCPP}
+${_PROTOBUF_LIBPROTOBUF}
+)
+
+add_executable(Server Server-test.cc Rio.cc UA_BlackJack.pb.cc Display.cc)
+
+target_link_libraries(Server  
 ${_REFLECTION}
 ${_GRPC_GRPCPP}
 ${_PROTOBUF_LIBPROTOBUF}

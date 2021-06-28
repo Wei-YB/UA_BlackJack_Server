@@ -14,6 +14,7 @@ public:
     Rio(int fd) : fd_(fd), cnt_(0), bufptr_(buff_) {}
     void RioReadInit(int fd);
     int RioBufferReadn(char* usrbuf, int n);
+    int RioBufferReadLine(char* usrbuf, int maxlen);
     int RioReadn(char* usrbuf, int n);
     int RioWriten(char* usrbuf, int n);
 

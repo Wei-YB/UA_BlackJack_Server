@@ -24,7 +24,7 @@ Response Client::RequestDB(Request& request) {
     ClientContext context;
 
     // The actual RPC.
-    Status status = stub_->RequestDB(&context, request, &reply);
+    Status status = stub_->Notify(&context, request, &reply);
 
     // Act upon its status.
     if (status.ok()) {

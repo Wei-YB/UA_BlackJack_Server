@@ -9,7 +9,7 @@
 #include <string>
 #include <thread>
 
-#include "player.grpc.pb.h"
+#include "UA_BlackJack.grpc.pb.h"
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
@@ -20,9 +20,9 @@ using grpc::Status;
 
 // Service dependent
 /*************************/
-using player::PlayerService;
-using player::Request;
-using player::Response;
+using ua_blackjack::PlayerService;
+using ua_blackjack::Request;
+using ua_blackjack::Response;
 /*************************/
 
 class ServerImpl final {

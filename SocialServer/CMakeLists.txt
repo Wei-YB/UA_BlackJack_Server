@@ -3,14 +3,14 @@ cmake_minimum_required(VERSION 3.5.1)
 project(social C CXX)
 
 include(common.cmake)
-
-get_filename_component(hw_proto "social.proto" ABSOLUTE)  # demo dependent
+include_directories("/root/.local/include")
+get_filename_component(hw_proto "UA_BlackJack.proto" ABSOLUTE)  # demo dependent
 get_filename_component(hw_proto_path "${hw_proto}" PATH)
 
-set(hw_proto_srcs "${CMAKE_CURRENT_BINARY_DIR}/social.pb.cc") # demo dependent
-set(hw_proto_hdrs "${CMAKE_CURRENT_BINARY_DIR}/social.pb.h")  # demo dependent
-set(hw_grpc_srcs "${CMAKE_CURRENT_BINARY_DIR}/social.grpc.pb.cc") # demo dependent
-set(hw_grpc_hdrs "${CMAKE_CURRENT_BINARY_DIR}/social.grpc.pb.h")  # demo dependent
+set(hw_proto_srcs "${CMAKE_CURRENT_BINARY_DIR}/UA_BlackJack.pb.cc") # demo dependent
+set(hw_proto_hdrs "${CMAKE_CURRENT_BINARY_DIR}/UA_BlackJack.pb.h")  # demo dependent
+set(hw_grpc_srcs "${CMAKE_CURRENT_BINARY_DIR}/UA_BlackJack.grpc.pb.cc") # demo dependent
+set(hw_grpc_hdrs "${CMAKE_CURRENT_BINARY_DIR}/UA_BlackJack.grpc.pb.h")  # demo dependent
 add_custom_command(
       OUTPUT "${hw_proto_srcs}" "${hw_proto_hdrs}" "${hw_grpc_srcs}" "${hw_grpc_hdrs}"
       COMMAND ${_PROTOBUF_PROTOC}
