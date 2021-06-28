@@ -23,19 +23,47 @@ set (CMAKE_CXX_STANDARD 11)
 
 find_package(Threads REQUIRED)
 
-find_package(Protobuf)
+if(NOT TARGET spdlog)
+    # Stand-alone build
+    find_package(spdlog REQUIRED
+                PATHS /usr/local/lib64/cmake/spdlog)
+endif()
+
+# find_package(Protobuf)
+# message(STATUS "Using protobuf ${Protobuf_VERSION}")
+# set(_PROTOBUF_LIBPROTOBUF protobuf::libprotobuf)
+# set(_REFLECTION gRPC::grpc++_reflection)
+# set(_PROTOBUF_PROTOC $<TARGET_FILE:protobuf::protoc>)
+
+# find_package(gRPC)
+# message(STATUS "Using gRPC ${gRPC_VERSION}")
+# set(_GRPC_GRPCPP gRPC::grpc++)
+# set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:gRPC::grpc_cpp_plugin>)
+
+#
+set(protobuf_MODULE_COMPATIBLE TRUE)
+find_package(Protobuf CONFIG REQUIRED)
 message(STATUS "Using protobuf ${Protobuf_VERSION}")
+
 set(_PROTOBUF_LIBPROTOBUF protobuf::libprotobuf)
 set(_REFLECTION gRPC::grpc++_reflection)
-set(_PROTOBUF_PROTOC $<TARGET_FILE:protobuf::protoc>)
+if(CMAKE_CROSSCOMPILING)
+  find_program(_PROTOBUF_PROTOC protoc)
+else()
+  set(_PROTOBUF_PROTOC $<TARGET_FILE:protobuf::protoc>)
+endif()
 
-find_package(gRPC)
+# Find gRPC installation
+# Looks for gRPCConfig.cmake file installed by gRPC's cmake installation.
+find_package(gRPC CONFIG REQUIRED)
 message(STATUS "Using gRPC ${gRPC_VERSION}")
+
 set(_GRPC_GRPCPP gRPC::grpc++)
-set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:gRPC::grpc_cpp_plugin>)
-
-
-
+if(CMAKE_CROSSCOMPILING)
+  find_program(_GRPC_CPP_PLUGIN_EXECUTABLE grpc_cpp_plugin)
+else()
+  set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:gRPC::grpc_cpp_plugin>)
+endif()
 
 # find_program(_GRPC_CPP_PLUGIN_EXECUTABLE grpc_cpp_plugin)
 

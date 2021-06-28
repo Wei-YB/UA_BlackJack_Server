@@ -1,10 +1,35 @@
-+ 防止重复登陆这个功能是否应该由Social模块来做
-+ 
-## proxy模块介绍
-proxy在整个服务器中只是承担了转发和过滤客户端的请求和响应，以及后端服务向客户发送的消息的功能，基本不涉及到业务细节。因此在流过proxy的任何消息都要遵循proxy能够识别的约定。
+# 代理模块介绍
+代理在整个BlackJack Server中承担了转发和过滤客户端请求和响应的功能，以及转发后端服务向客户发送消息的功能。
 
-### 消息体的结构
-我们约定流过proxy的任何消息只有两种类型：REQUEST还有RESPONSE。例如客户端向服务器请求房间列表、请求加入房间、请求加好友等，后端模块也能（通过代理）向客户端发送请求。这些请求所包含的字段的意义和类型可能不相同，但我们规定他们具有一致的protobuf定义：
+## 编译与运行
+代理模块的编译需要用到protobuf、gRPC、spdlog三个库，通常只需要源码安装gRPC库，因为它包含了protobuf等库。gRPC库的安装可以参考<https://grpc.io/docs/languages/cpp/quickstart/>，spdlog库的安装可以参考<https://github.com/gabime/spdlog>。
+
+安装完上述依赖后就可以编译本单元了（切换到本模块的目录）：
+```bash
+cd protos/build
+cmake ..
+make -j
+cd ../../build
+cmake ..
+make -j
+```
+若上面两步编译成功，就可以启动代理服务进程了：
+```bash
+./proxy ip port log_path
+```
+其中ip和port是代理监听客户端连接和请求的ip和端口，log_path是代理服务输出日志文件的路径。至于暴露给后端各模块的gRPC服务的ip和端口目前是写死的，后续会添加一个config文件来配置这些参数。如果想改gRPC服务的ip和端口可以通过修改include目录下的serverAddresses.h中的`proxyAddress`变量来实现。
+
+在test目录下包含了代理的一个简单的单元测试：它可以将samples.txt文件中的请求序列顺序地发送给proxy，并打出发出的它模拟n个（n可以自己在命令行参数中指定）客户端并发地往proxy发送一系列的请求，并统计所有请求-响应时间差的平均值，以此来
+
+## 代理与后端模块的通信
+
+
+## 代理与客户端的通信
+我们约定客户端和代理之间的通信协议遵循如下形式：`| message type (4 bytes) | message length (4 bytes) | message (variable) |`。其中`message type`可能取值为1（REQUEST）和2（RESPONSE），当前版本中其它取值均非法，会被代理丢弃。`message length`为消息内容`message`的字节长度。`message type`和`message length`均为网络字节序。
+
+`message`是protobuf消息体序列化后的内容，并且我们约定。
+
+的任何消息只有两种类型：REQUEST还有RESPONSE。例如客户端向服务器请求房间列表、请求加入房间、请求加好友等，后端模块也能（通过代理）向客户端发送请求。这些请求所包含的字段的意义和类型可能不相同，但我们规定他们具有一致的protobuf定义：
 ```
 message Request 
 {
@@ -121,7 +146,7 @@ int circularBufferToString(const CircularBuffer &buffer, std::string &str);
 ### 超时事件
 一个维持着长连接的应用层协议应该需要心跳机制来确定客户端/服务是否还在正常工作。当然客户端这边若是shutdown的话一般是会有一个EPOLLHUP之类的事件来提醒服务端的，在我们这个项目里面就是提醒proxy。但如果我们考虑特殊情况的话就是客户端意外关断/网络丢包，使得这个EPOLLHUP事件没法到达proxy。这样的话proxy就会白白的浪费一个Handler资源。那究竟用什么样的方式来判断一个客户端是否还存活呢？一个办法就是客户端定期发心跳信号给proxy，若proxy在3个心跳周期内都没有收到客户端的心跳信号，那么就释放掉这个Handler。那么每个Handler应该向epoll注册一个timerfd，并且自己也保存这个timerfd。每当proxy收到客户端的一个消息（任何消息，不管是心跳还是请求），都得重置这个timerfd。因此当收到timerfd的事件时，我们就知道应该释放该Handler了。
 
-### ClientHandler类太复杂的问题
+### 
 
 
 

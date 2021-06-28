@@ -18,6 +18,8 @@ inline void set_log_path(const std::string &log_path)
     g_log_path = log_path;
 }
 
+#define logger_flush_on() spdlog::flush_on(spdlog::level::trace)
+
 #define create_logger() spdlog::basic_logger_mt<spdlog::async_factory>(g_logger_name, g_log_path)
 
 

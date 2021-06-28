@@ -19,6 +19,7 @@
 #include "UA_BlackJack.grpc.pb.h"
 #include "EventLoop.h"
 #include "common.h"
+#include "log.h"
 
 typedef std::chrono::time_point<std::chrono::system_clock> time_point;
 
@@ -36,15 +37,7 @@ using ua_blackjack::LobbyService;
 using ua_blackjack::GameService;
 using ua_blackjack::SocialService;
 
-struct AsyncClientCall
-{
-    ClientContext context;
-    std::unique_ptr<ClientAsyncResponseReader<Response>> response_reader;
-    Request request;
-    Response reply;
-    time_point callTime;
-    time_point expiredTime;
-};
+
 
 class ServiceClient
 {
@@ -76,27 +69,45 @@ private:
     {
         void *got_tag;
         bool ok = false;
-
+        std::cout << "enter " << serviceName_ << " thread" << std::endl;
         time_point deadline = std::chrono::system_clock::now() +
                                 std::chrono::milliseconds(500);
-        while (!stop_ && cq_.AsyncNext(&got_tag, &ok, deadline))
+        grpc::CompletionQueue::NextStatus sta;
+        while (!stop_ && (sta = cq_.AsyncNext(&got_tag, &ok, deadline)))
         {
-            deadline = std::chrono::system_clock::now() +
-                        std::chrono::milliseconds(500);
-            if (!ok)
+            AsyncClientCall* call = static_cast<AsyncClientCall*>(got_tag);
+            if (!ok || sta == grpc::CompletionQueue::NextStatus::TIMEOUT)
             {
                 continue;
             }
-            //std::cout << "get response" << std::endl;
             // get a response, forward to the corresponding client
-            AsyncClientCall *call = static_cast<AsyncClientCall*>(got_tag);
+            // int64_t callKey = (int64_t)got_tag;
+            // std::shared_ptr<AsyncClientCall> call;
+            // {
+            // std::lock_guard<std::mutex> guard(asyncCallsLock_);
+            // call = asyncCalls_[callKey];
+            // asyncCalls_.erase(callKey);
+            // }
+            
             // call back the Proxy
-            if (responseCallBack_)
+            if (responseCallBack_ && call->status.ok())
             {
                 responseCallBack_(call->reply);
             }
+            else 
+            {
+                logger_ptr->info("In {} thread: response not ok", serviceName_);
+                Response res;
+                res.set_status(-1);
+                res.set_uid(call->request.uid());
+                res.set_stamp(call->request.stamp());
+                responseCallBack_(call->reply);
+            }
             delete call;
+            deadline = std::chrono::system_clock::now() +
+                        std::chrono::milliseconds(500);
         }
+        std::cout << "In gRPC client {0} thread: leaving the thread" << std::endl;
     }
 
 #else
@@ -111,31 +122,25 @@ private:
             std::lock_guard<std::mutex> guard(callQueueLock_);
             while (!callQueue_.empty())
             {
-                std::cout << "check the queue" << std::endl;
                 std::shared_ptr<AsyncClientCall> call = callQueue_.front();
                 if (call->expiredTime <= now)
                 {
-                    std::cout << "Get response for call (uid = " 
-                              << call->request.uid() << "):" << std::endl;
-                    std::cout << "status: " << call->reply.status() << std::endl;
                     if (call->request.requesttype() == Request::LOGIN 
                         || call->request.requesttype() == Request::SIGNUP)
                     {
-                        std::cout << "this is a login response." << std::endl;
                         call->reply.set_uid(++requestCnt_);
-                        std::cout << "setting its uid to " << requestCnt_ << std::endl;
+                        logger_ptr->info("In gRPC client {0} thread: this is a login request, set its uid to {1}", serviceName_, requestCnt_);
                     }
                     else
                     {
                         call->reply.set_uid(call->request.uid());
-                        std::cout << "setting the response uid to " << call->request.uid();
+                        logger_ptr->info("In gRPC client {0} thread: this is a normal request, simply echo back", serviceName_);
                     }
                     call->reply.set_stamp(call->request.stamp());
-                    call->reply.set_status(0);
+                    call->reply.set_status(-1);
                     call->reply.add_args(serviceName_ + " successfully handle your requets.");
                     if (responseCallBack_)
                     {
-                        std::cout << "call proxy to handle this response." << std::endl;
                         responseCallBack_(call->reply);
                     }
                     callQueue_.pop();
@@ -147,14 +152,27 @@ private:
             }   // end of critical section
             }
         }
-        std::cout << serviceName_ << " leaving loop" << std::endl;
+        logger_ptr->info("In gRPC client {0} thread: leaving the thread", serviceName_);
     }
 #endif
 
 protected:
+    struct AsyncClientCall
+    {
+        Response reply;
+        ClientContext context;
+        Status status;
+        std::unique_ptr<ClientAsyncResponseReader<Response>> response_reader;
+        Request request;
+        time_point callTime;
+        time_point expiredTime;
+    };
+
     std::string serviceName_;
     std::string serviceAddr_;
     CompletionQueue cq_;
+    std::mutex asyncCallsLock_;
+    std::unordered_map<int64_t, std::shared_ptr<AsyncClientCall>> asyncCalls_;
     std::function<void(const Response&)> responseCallBack_;
     bool stop_;
 #if (DEBUG_MODE == 1)
@@ -187,46 +205,47 @@ public:
     int Call(const Request &request)
     {  
 #if (DEBUG_MODE == 0)
-        std::cout << "remote mode call." << std::endl;
-        AsyncClientCall *call = new AsyncClientCall;
+        logger_ptr->info("In main thread: client (uid: {0}) call {1}", request.uid(), serviceName_);
+        //std::shared_ptr<AsyncClientCall> call = std::make_shared<AsyncClientCall>();
+        AsyncClientCall *call =  new AsyncClientCall;
+        //asyncCalls_.emplace((int64_t)call.get(), call);
         call->request = request;    
         call->response_reader =
-            stub_->PrepareAsyncNotify(&call->context, call->request, &cq_);
+            stub_->PrepareAsyncNotify(&call->context, request, &cq_);
 
         call->response_reader->StartCall();
         call->response_reader->Finish(&call->reply, &call->status, (void*)call);
 #else
-        std::cout << "stand alone mode call." << std::endl;
-        Response res;
-        if (request.requesttype() == Request::LOGIN 
-            || request.requesttype() == Request::SIGNUP)
-        {
-            std::cout << "this is a login response." << std::endl;
-            res.set_uid(++requestCnt_);
-            std::cout << "setting its uid to " << requestCnt_ << std::endl;
-        }
-        else
-        {
-            res.set_uid(request.uid());
-            std::cout << "setting the response uid to " << request.uid();
-        }
-        res.set_stamp(request.stamp());
-        res.set_status(0);
-        res.add_args(serviceName_ + " successfully handle your requets.");
-        if (responseCallBack_)
-        {
-            std::cout << "call proxy to handle this response." << std::endl;
-            responseCallBack_(res);
-        }
-        std::shared_ptr<AsyncClientCall> call = std::make_shared<AsyncClientCall>();
-        // call->request = request;
-        // call->callTime = std::chrono::system_clock::now();
-        // call->expiredTime = call->callTime;// + std::chrono::milliseconds(10);
+        // Response res;
+        // if (request.requesttype() == Request::LOGIN 
+        //     || request.requesttype() == Request::SIGNUP)
         // {
-        //     std::lock_guard<std::mutex> guard(callQueueLock_);
-        //     std::cout << "push into call queue." << std::endl;
-        //     callQueue_.push(call);
+        //     std::cout << "this is a login response." << std::endl;
+        //     res.set_uid(++requestCnt_);
+        //     std::cout << "setting its uid to " << requestCnt_ << std::endl;
         // }
+        // else
+        // {
+        //     res.set_uid(request.uid());
+        //     std::cout << "setting the response uid to " << request.uid();
+        // }
+        // res.set_stamp(request.stamp());
+        // res.set_status(0);
+        // res.add_args(serviceName_ + " successfully handle your requets.");
+        // if (responseCallBack_)
+        // {
+        //     std::cout << "call proxy to handle this response." << std::endl;
+        //     responseCallBack_(res);
+        // }
+        std::shared_ptr<AsyncClientCall> call = std::make_shared<AsyncClientCall>();
+        call->request = request;
+        call->callTime = std::chrono::system_clock::now();
+        call->expiredTime = call->callTime;// + std::chrono::milliseconds(10);
+        {
+            std::lock_guard<std::mutex> guard(callQueueLock_);
+            logger_ptr->info("push request (type: {0}, from: uid = {1}) into call queue.", request.requesttype(), request.uid());
+            callQueue_.push(call);
+        }
 #endif
         return 0;
     }

@@ -3,6 +3,7 @@
 
 #include <sys/types.h>
 #include <sys/epoll.h>
+#include <memory>
 #include <unordered_map>
 #include "common.h"
 
@@ -40,7 +41,7 @@ inline Event toNetEvent(int epEv)
 
 class EventLoop;
 
-class EventsSource
+class EventsSource : public std::enable_shared_from_this<EventsSource>
 {
 public:
     EventsSource(FileDesc fd, EventLoop *loop,
@@ -55,11 +56,11 @@ public:
     int Close();
 
     FileDesc fd() const;
-    
+    Net::Event events_ = 0;
     friend class EventLoop;
 private:
     FileDesc fd_;
-    Net::Event events_ = 0;
+    
     Net::Event out_events_;
     EventLoop *loop_;
     std::function<int()> inEventCallBack_;
@@ -75,11 +76,11 @@ public:
     ~EventLoop();
 
 public:
-    int add(EventsSource *evsSource);
+    int add(std::shared_ptr<EventsSource> evsSource);
 
-    int mod(EventsSource *evsSource);
+    int mod(std::shared_ptr<EventsSource> evsSource);
 
-    int del(EventsSource *evsSource);
+    int del(std::shared_ptr<EventsSource> evsSource);
 
     int loopOnce(int timeout = 0);
 
@@ -88,7 +89,7 @@ private:
     int eventsCnt_ = 0;
     const int maxEvents_;
     struct epoll_event *events_ = NULL;
-    std::unordered_map<FileDesc, EventsSource*> fdToEventsSource_;
+    std::unordered_map<FileDesc, std::shared_ptr<EventsSource>> fdToEventsSource_;
 };
 
 };  // end of namespace tcp

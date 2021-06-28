@@ -25,7 +25,7 @@ void trivialRpcHandler(const Request &request, Response &response)
         uid = (int64_t)&request;
     }
     response.set_status(0);
-    response.set_stamp(response.stamp());
+    response.set_stamp(request.stamp());
     response.set_uid(uid);
     response.add_args("Sucessfully handle the request.");
 }
@@ -51,6 +51,11 @@ int main(int argc, char **argv)
     else if (moduleName == "social")
     {
         AsyncRpcServer<SocialService::AsyncService> server(std::string(socialAddress), trivialRpcHandler);
+        server.Run();
+    }
+    else if (moduleName == "player")
+    {
+        AsyncRpcServer<SocialService::AsyncService> server(std::string(playerAddress), trivialRpcHandler);
         server.Run();
     }
     else

@@ -6,8 +6,8 @@
 
 #include "ProxyServer.h"
 #include "Client.h"
-#include "TcpServer.h"
 #include "EventLoop.h"
+#include "TcpServer.h"
 #include "asyncServiceClient.h"
 #include "asyncProxyServer.h"
 #include "serverAddresses.h"
@@ -20,6 +20,7 @@
 using ua_blackjack::LobbyService;
 using ua_blackjack::GameService;
 using ua_blackjack::SocialService;
+using ua_blackjack::PlayerService;
 
 bool flag = false;
 
@@ -38,6 +39,9 @@ int main(int argc, char **argv)
 
     set_logger_name("async_logger");
     set_log_path(std::string(argv[3]));
+
+    logger_flush_on();
+
     auto logger = create_logger();
 
     logger_ptr->info("In main thread: Successfully create an async logger.");
@@ -51,8 +55,10 @@ int main(int argc, char **argv)
             std::make_shared<ConcreteServiceClient<GameService>>("Room", std::string(roomAddress));
     std::shared_ptr<ServiceClient> socialClient = 
             std::make_shared<ConcreteServiceClient<SocialService>>("Social", std::string(socialAddress));
+    std::shared_ptr<ServiceClient> playerClient = 
+            std::make_shared<ConcreteServiceClient<PlayerService>>("Player", std::string(playerAddress));
 
-    logger_ptr->info("In main thread: Successfully create three rpc client.");
+    logger_ptr->info("In main thread: Successfully create four rpc clients.");
 
     std::shared_ptr<ProxyServer> proxyServer = std::make_shared<ProxyServer>(argv[1], (unsigned short)(atoi(argv[2])), &loop);
     // resgister the service Clients to the proxy server
@@ -75,6 +81,10 @@ int main(int argc, char **argv)
                 proxyServer->RegisterServiceClient(iter->first, socialClient);
                 break;
             }
+            case BackEndModule::Player:
+            {
+                proxyServer->RegisterServiceClient(iter->first, playerClient);
+            }
             default:
                 break;
         }
@@ -85,14 +95,22 @@ int main(int argc, char **argv)
     lobbyClient->SetResponseCallBack(std::bind(&ProxyServer::OnServiceResponse, proxyServer.get(), std::placeholders::_1));
     roomClient->SetResponseCallBack(std::bind(&ProxyServer::OnServiceResponse, proxyServer.get(), std::placeholders::_1));
     socialClient->SetResponseCallBack(std::bind(&ProxyServer::OnServiceResponse, proxyServer.get(), std::placeholders::_1));
-
+    playerClient->SetResponseCallBack(std::bind(&ProxyServer::OnServiceResponse, proxyServer.get(), std::placeholders::_1));
    
     // start service clients as threads
     std::thread lobbyClientThread = std::thread(&ConcreteServiceClient<LobbyService>::AsyncCompleteRpc, lobbyClient.get());
     std::thread roomClientThread = std::thread(&ConcreteServiceClient<GameService>::AsyncCompleteRpc, roomClient.get());
     std::thread socialClientThread = std::thread(&ConcreteServiceClient<SocialService>::AsyncCompleteRpc, socialClient.get());
-    
-    logger_ptr->info("In main thread: Three rpc client threads start.");
+    std::thread playerClientThread = std::thread(&ConcreteServiceClient<PlayerService>::AsyncCompleteRpc, playerClient.get());
+
+    // start the gRPC service
+    ProxyRpcServer gRpcServer(std::string(proxyAddress), proxyServer);
+    proxyServer->SetClientResponseCallBack(std::bind(&ProxyRpcServer::OnClientResponse, &gRpcServer, std::placeholders::_1));
+    std::thread gRpcServerThread = std::thread(&ProxyRpcServer::Run, &gRpcServer);
+
+
+
+    logger_ptr->info("In main thread: Four rpc client threads start.");
 
     while (!flag)
     {
@@ -105,10 +123,14 @@ int main(int argc, char **argv)
     lobbyClient->StopClient();
     roomClient->StopClient();
     socialClient->StopClient();
+    playerClient->StopClient();
+    gRpcServer.Stop();
 
     lobbyClientThread.join();
     roomClientThread.join();
     socialClientThread.join();
+    playerClientThread.join();
+    gRpcServerThread.join();
 
     logger_ptr->info("Exit the program.");
     return 0;

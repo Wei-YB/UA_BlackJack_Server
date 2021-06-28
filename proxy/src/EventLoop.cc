@@ -14,6 +14,7 @@
 #include <functional>
 
 #include "EventLoop.h"
+#include "log.h"
 
 using namespace Net;
 
@@ -31,16 +32,17 @@ int Net::EventsSource::HandleEvents(Event events)
     int ret = 0;
     if (events & EV_IN)
     {
-        std::cout << "On Input event." << std::endl;
+        logger_ptr->info("In main thread: On input event from fd: {}", fd_);
         ret = inEventCallBack_() == -1 ? -1 : ret; 
     }
     if (events & EV_OUT)
     {
-        std::cout << "On Output event." << std::endl;
+        logger_ptr->info("In main thread: On onput event from fd: {}", fd_);
         ret = outEventCallBack_() == -1 ? -1 : ret; 
     }
     if (events & EV_ERR)
     {
+        logger_ptr->info("In main thread: On error event from fd: {}", fd_);
         ret = errEventCallBack_() == -1 ? -1 : ret; 
     }
     return ret;
@@ -53,12 +55,12 @@ int Net::EventsSource::Update(Event events)
         return 0;
     }
     events_ = events;
-    return loop_->mod(this);
+    return loop_->mod(shared_from_this());
 }
 
 int Net::EventsSource::Close()
 {
-    return loop_->del(this);
+    return loop_->del(shared_from_this());
 }
 
 FileDesc Net::EventsSource::fd() const 
@@ -85,7 +87,7 @@ Net::EventLoop::~EventLoop()
     close(epollfd_);
 }
 
-int Net::EventLoop::add(EventsSource *evsSource)
+int Net::EventLoop::add(std::shared_ptr<EventsSource> evsSource)
 {
     if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end() 
         || eventsCnt_ >= maxEvents_)
@@ -101,10 +103,11 @@ int Net::EventLoop::add(EventsSource *evsSource)
     }
     fdToEventsSource_.emplace(evsSource->fd_, evsSource);
     eventsCnt_++;
+    logger_ptr->info("In main thread: Successfully add event source.");
     return 0;
 }
 
-int Net::EventLoop::mod(EventsSource *evsSource)
+int Net::EventLoop::mod(std::shared_ptr<EventsSource> evsSource)
 {
     if (fdToEventsSource_.find(evsSource->fd_) == fdToEventsSource_.end())
     {
@@ -117,10 +120,11 @@ int Net::EventLoop::mod(EventsSource *evsSource)
     {
         return -1;
     }
+    logger_ptr->info("In main thread: Successfully modify events.");
     return 0;
 }
 
-int Net::EventLoop::del(EventsSource *evsSource)
+int Net::EventLoop::del(std::shared_ptr<EventsSource> evsSource)
 {
     if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end())
     {
@@ -152,7 +156,7 @@ int Net::EventLoop::loopOnce(int timeout)
     for (int i = 0; i < nfds; ++i)
     {
         int sockfd = events_[i].data.fd;
-        int events = events_[i].events;   
+        int events = events_[i].events;  
         if (fdToEventsSource_.find(sockfd) == fdToEventsSource_.end())
         {
             continue;

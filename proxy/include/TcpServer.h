@@ -4,13 +4,12 @@
 #include <sys/types.h>
 #include <netinet/in.h>
 
-#include "CircularBuffer.h"
-#include "EventLoop.h"
-#include "TcpConnection.h"
-
 #define DEFAULT_WAIT_QUEUE_LEN  64
 
 namespace Net {
+class EventsSource;
+class EventLoop;
+class TcpConnection;
 
 class TcpServer
 {
@@ -33,7 +32,7 @@ public:
     int OnError();
 
 private:
-    EventsSource eventsSource_;
+    std::shared_ptr<EventsSource> eventsSource_;
     struct sockaddr_in addr_;
     EventLoop *loop_;
     std::function<void(std::shared_ptr<TcpConnection>)> connectionCallBack_;

@@ -55,6 +55,7 @@ set(blackjack_grpc "${project_lib_path}/libblackjack_grpc.a")
 file(GLOB CcSources ${project_src_path}/*.cc)
 add_executable(proxy "${project_src_path}/main.cpp;${CcSources}")
 target_link_libraries(proxy
+  spdlog::spdlog
   ${blackjack_grpc}
   ${_REFLECTION}
   ${_GRPC_GRPCPP}

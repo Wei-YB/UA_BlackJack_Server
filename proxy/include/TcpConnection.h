@@ -3,14 +3,19 @@
 #include <functional>
 #include <netinet/in.h>
 #include "common.h"
-#include "UA_BlackJack.pb.h"
-#include "EventLoop.h"
 #include "CircularBuffer.h"
+#include "EventLoop.h"
 
-using ua_blackjack::Request;
-using ua_blackjack::Response;
+namespace ua_blackjack {
+    class Response;
+    class Request;
+}
+
+using namespace ua_blackjack;
 
 namespace Net {
+
+class EventLoop;
 
 class TcpConnection
 {
@@ -34,21 +39,23 @@ public:
 
     int DisConnect();
 
-    int SockFd() const {return eventsSource_.fd();}
-    int GetWriteBufferRoom() const {return writeBuffer_.capacity() - writeBuffer_.size();}
+    int SockFd() const;
+    int GetWriteBufferRoom() const;
     // 
     void SetInputCallBack(const std::function<void(std::vector<Request>&, std::vector<Response>&)> &cb) {inputCallBack_ = cb;}
     void SetOutPutCallBack(const std::function<void()> &cb) {outputCallBack_ = cb;}
+    void SetHupCallBack(const std::function<void()> &cb) {hupCallBack_ = cb;}
     void SetErrorCallBack(const std::function<void()> &cb) {errorCallBack_ = cb;}
 
 private:
     struct sockaddr_in addr_;
-    Net::EventsSource eventsSource_;
+    std::shared_ptr<EventsSource> eventsSource_;
     std::function<void(std::vector<Request>&, std::vector<Response>&)> inputCallBack_;
     std::function<void()> outputCallBack_;
     std::function<void()> errorCallBack_;
-    Net::CircularBuffer writeBuffer_;
-    Net::CircularBuffer readBuffer_;
+    std::function<void()> hupCallBack_;
+    CircularBuffer writeBuffer_;
+    CircularBuffer readBuffer_;
 };
 
 }   // namespace Net
