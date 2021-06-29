@@ -17,64 +17,122 @@
 
 using namespace Net;
 
-Net::EventsSource::EventsSource(FileDesc fd, EventLoop *loop,
+EventsSource::EventsSource(FileDesc fd, EventLoop *loop,
                         const std::function<int()> &inEventCallBack,
                         const std::function<int()> &outEventCallBack,
-                        const std::function<int()> &errEventCallBack)
+                        const std::function<int()> &errEventCallBack,
+                        const std::function<int()> &closeEventCallBack)
                         : fd_(fd), loop_(loop),
                         inEventCallBack_(inEventCallBack),
                         outEventCallBack_(outEventCallBack),
-                        errEventCallBack_(errEventCallBack) {}
+                        errEventCallBack_(errEventCallBack),
+                        closeEventCallBack_(closeEventCallBack) {}
 
-int Net::EventsSource::HandleEvents(Event events)
+int EventsSource::HandleEvents(Event events)
 {
-    int ret = 0;
+    if (events & EV_HUP || events & EV_ERR)
+    {   // logger_ptr->warn("fatal error happens in event source (fd: {}), close it now.", fd_);
+        if (closeEventCallBack_) 
+        {
+            closeEventCallBack_();
+        }
+        return -1;
+    }
     if (events & EV_IN)
-    {
-        std::cout << "On Input event." << std::endl;
-        ret = inEventCallBack_() == -1 ? -1 : ret; 
+    {   // logger_ptr->info("input event from event source (fd: {}).", fd_);
+        if (inEventCallBack_ && inEventCallBack_() < 0)
+        {
+            return -1;
+        }
+    }
+    if (events & EV_RDHUP)
+    {   // logger_ptr->info("peer-shut-down event from event source (fd: {}).", fd_);
+        if (closeEventCallBack_)
+        {
+            closeEventCallBack_()
+        }
+        return -1;
     }
     if (events & EV_OUT)
-    {
-        std::cout << "On Output event." << std::endl;
-        ret = outEventCallBack_() == -1 ? -1 : ret; 
+    {   // logger_ptr->info("output event from event source (fd: {}).", fd_);
+        if (outEventCallBack_ && outEventCallBack_() < 0)
+        {
+            return -1;
+        } 
     }
-    if (events & EV_ERR)
-    {
-        ret = errEventCallBack_() == -1 ? -1 : ret; 
-    }
-    return ret;
+    
+    return 0;
 }
 
-int Net::EventsSource::Update(Event events)
+int EventsSource::EnableWrite()
 {
-    if (events_ == events)
+    if (events_ & EV_OUT)
     {
         return 0;
     }
-    events_ = events;
-    return loop_->mod(this);
+    events_ |= EV_OUT | EV_ET;
+    return loop->mod(share_from_this());
 }
 
-int Net::EventsSource::Close()
+int EventsSource::EnableRead()
 {
-    return loop_->del(this);
+    if (events_ & EV_IN)
+    {
+        return 0;
+    }
+    events_ |= EV_IN | EV_ET;
+    return loop->mod(share_from_this());
 }
 
-FileDesc Net::EventsSource::fd() const 
+int EventsSource::DisableWrite()
+{
+    if (events_ & EV_OUT)
+    {
+        events_ &= ~EV_OUT;
+        return loop->mod(share_from_this());
+    }
+    return 0;
+}
+
+int EventsSource::DisableRead()
+{
+    if (events_ & EV_IN)
+    {
+        events_ &= ~EV_IN;
+        return loop->mod(share_from_this());
+    }
+    return 0;
+}
+
+int EventsSource::SetNonBlocking(bool flag)
+{
+    if (flag)
+        return fcntl(fd_, F_SETFL, fcntl(fd, F_GETFL) | O_NONBLOCK);
+    else
+        return fcntl(fd_, F_SETFL, fcntl(fd, F_GETFL) & (~O_NONBLOCK));
+}
+
+int EventsSource::Close()
+{
+    ::close(fd_);
+    return loop_->del(share_from_this());
+}
+
+FileDesc EventsSource::fd() const 
 {
     return fd_;
 }
 
-Net::EventLoop::EventLoop(int max_events) : maxEvents_(max_events)
+EventLoop::EventLoop(int max_events) : maxEvents_(max_events)
 {
     if ((epollfd_ = epoll_create(5)) < 0)
     {
-        throw "EventLoop: fail to create epoll.\n";
+        // logger_ptr->error("fail to create epollfd.");
     }
     if ((events_ = new struct epoll_event[maxEvents_]) == NULL)
     {
         close(epollfd_);
+        // logger_ptr->error("fail to assign epoll event array.");
         throw "EventLoop: fail to assign epoll event array.\n";        
     }
 }
