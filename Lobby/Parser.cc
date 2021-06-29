@@ -191,7 +191,9 @@ ParserFactory::ParserFactory(Lobby& lobby, RPCClient& client):
 std::shared_ptr<Parser> ParserFactory::NewParser(ua_blackjack::Request_RequestType type) {
     if (type == ua_blackjack::Request_RequestType_LOGIN)
         return std::make_shared<LoginParser>(lobby_, rpc_client_);
+
     if (type == ua_blackjack::Request_RequestType_READY)
         return std::make_shared<ReadyParser>(lobby_, rpc_client_);
+        
     return std::make_shared<Parser>(lobby_);
 }

@@ -8,7 +8,7 @@ ua_blackjack::LobbyServer::LobbyServer(const std::string& game_server, const std
 }
 
 void ua_blackjack::LobbyServer::Run() {
-    std::thread work_thread([this]() { this->WorkThread(); });
+    std::thread work_thread([this]() { this->WorkThread(); });//创建新线程执行WorkThread()
     std::thread response_listen_thread([this]() { this->rpc_client_.AsyncCompleteRpc(); });
     server_.Run();
 }

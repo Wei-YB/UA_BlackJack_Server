@@ -10,6 +10,7 @@ namespace ua_blackjack::lobby {
 using ua_blackjack::Request;
 using ua_blackjack::Response;
 
+//基类Parser里只有Lobby类的引用，
 class Parser {
 public:
     Parser(Lobby& lobby);
@@ -31,8 +32,10 @@ protected:
     Lobby&  lobby_;
 };
 
+//此parser需要向数据库发起rpc call，于是需要保存一个RPCclient的引用
 class LoginParser final : public Parser {
 public:
+    
     LoginParser(Lobby& lobby, RPCClient& client);
 
     bool Parse(const Request& request, Response* rpcResult, Response& response) override;
@@ -72,10 +75,12 @@ public:
     char       padding_[4];
 };
 
+//根据requestType的不同，返回不同的parser！
 class ParserFactory {
 public:
     ParserFactory(Lobby& lobby, RPCClient& client);
 
+    //这个返回结果是不需要类内成员保存的！
     std::shared_ptr<Parser> NewParser(ua_blackjack::Request_RequestType type);
 
 private:

@@ -75,6 +75,7 @@ private:
     RoomID curMaxRoomID;
     std::shared_ptr<spdlog::logger> logger;
 
+    //需要加上RPCClient的引用
     RPCClient& client_;
 
 };
