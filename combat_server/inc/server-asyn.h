@@ -28,9 +28,9 @@
 #ifdef BAZEL_BUILD
 #include "examples/protos/helloworld.grpc.pb.h"
 #else
-#include "demo.grpc.pb.h"
+#include "UA_BlackJack.grpc.pb.h"
 #endif
-#include "demo.pb.h"
+#include "UA_BlackJack.pb.h"
 #include "spdlog/spdlog.h"
 int createstEnv_t(BlackJackRoomID roomID, UidList &uids);
 void *createOneGame(void *arg);

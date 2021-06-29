@@ -78,6 +78,3 @@ service ProxyService{
     rpc Notify(Request) returns (Response){}
 }
 
-service UserService{    //只是自己用来测试用的
-  rpc Notify(Request) returns (Response){}
-}
