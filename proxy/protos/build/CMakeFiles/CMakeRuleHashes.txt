@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+a03892233deff381891008f4c1b44927 /root/ricki/UA_BlackJack_Server/proxy/include/grpc/UA_BlackJack.pb.h
+b75f5c3f17c6f8819e1ff594f8df41c6 UA_BlackJack.pb.cc

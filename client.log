@@ -1,0 +1,35 @@
+[2021-06-29 19:55:33.302] [basic_logger] [error] :( Connection failed!
+[2021-06-29 19:55:44.093] [basic_logger] [error] :( Connection failed!
+[2021-06-29 19:55:50.675] [basic_logger] [error] :( Connection failed!
+[2021-06-29 19:58:13.988] [basic_logger] [info] Client Init
+[2021-06-29 19:58:20.497] [basic_logger] [info] Get command from console
+[2021-06-29 19:58:20.497] [basic_logger] [info] Send request to proxy, type: 1, uid: -1, stamp: 1624967900
+[2021-06-29 19:58:20.509] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-06-29 19:58:20.509] [basic_logger] [info] Get data length from proxy, length: 10
+[2021-06-29 19:58:20.509] [basic_logger] [info] Get complete data from proxy, 10 bytes
+[2021-06-29 19:58:20.509] [basic_logger] [info] Receive response, status:0 uid: 2036, stamp: 34903008
+[2021-06-29 19:58:32.564] [basic_logger] [info] Client Init
+[2021-06-29 19:58:40.147] [basic_logger] [info] Get command from console
+[2021-06-29 19:58:40.147] [basic_logger] [info] Send request to proxy, type: 1, uid: -1, stamp: 1624967920
+[2021-06-29 19:58:40.152] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-06-29 19:58:40.152] [basic_logger] [info] Get data length from proxy, length: 10
+[2021-06-29 19:58:40.152] [basic_logger] [info] Get complete data from proxy, 10 bytes
+[2021-06-29 19:58:40.152] [basic_logger] [info] Receive response, status:0 uid: 2036, stamp: 34924688
+[2021-06-29 19:58:51.336] [basic_logger] [info] Get command from console
+[2021-06-29 19:58:51.336] [basic_logger] [info] Send request to proxy, type: 21, uid: 2036, stamp: 1624967931
+[2021-06-29 19:58:51.354] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-06-29 19:58:51.354] [basic_logger] [info] Get data length from proxy, length: 22
+[2021-06-29 19:58:51.354] [basic_logger] [info] Get complete data from proxy, 22 bytes
+[2021-06-29 19:58:51.354] [basic_logger] [info] Receive response, status:0 uid: 2036, stamp: 1624967931
+[2021-06-29 19:59:05.305] [basic_logger] [info] Get command from console
+[2021-06-29 19:59:05.305] [basic_logger] [info] Send request to proxy, type: 23, uid: 2036, stamp: 1624967945
+[2021-06-29 19:59:05.314] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-06-29 19:59:05.314] [basic_logger] [info] Get data length from proxy, length: 16
+[2021-06-29 19:59:05.314] [basic_logger] [info] Get complete data from proxy, 16 bytes
+[2021-06-29 19:59:05.314] [basic_logger] [info] Receive response, status:0 uid: 2036, stamp: 1624967945
+[2021-06-29 19:59:18.745] [basic_logger] [info] Get command from console
+[2021-06-29 19:59:18.745] [basic_logger] [info] Send request to proxy, type: 19, uid: 2036, stamp: 1624967958
+[2021-06-29 19:59:18.752] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-06-29 19:59:18.752] [basic_logger] [info] Get data length from proxy, length: 20
+[2021-06-29 19:59:18.752] [basic_logger] [info] Get complete data from proxy, 20 bytes
+[2021-06-29 19:59:18.752] [basic_logger] [info] Receive response, status:-1 uid: 2036, stamp: 1624967958

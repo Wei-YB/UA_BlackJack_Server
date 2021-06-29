@@ -19,10 +19,14 @@
 
 cmake_minimum_required(VERSION 3.5.1)
 
+message(STATUS "Start to build proxy")
+
+include(../common.cmake)
+
+# after this command, the necessary pb.h/cc and grpc.pb.h/cc will be produced
+add_subdirectory(protos)
+
 project(Proxy C CXX)
-
-include(common.cmake)
-
 
 get_filename_component(bj_proto "${PROJECT_SOURCE_DIR}/protos/UA_BlackJack.proto" ABSOLUTE)
 get_filename_component(bj_proto_path "${bj_proto}" PATH)
@@ -32,26 +36,10 @@ get_filename_component(project_inc_path "${bj_proto_path}/../include/ProxyServer
 get_filename_component(project_src_path "${bj_proto_path}/../src/ProxyServer.cpp" PATH)
 get_filename_component(project_lib_path "${bj_proto_path}/../lib/libblackjack_grpc.a" PATH)
 
-include_directories("${project_inc_path}" "${project_inc_path}/grpc" "/include")
-
-message(STATUS "project include path: ${project_inc_path}\
-                project srouce path: ${project_src_path}\
-                project library path: ${project_lib_path}\
-                protobuf files path: ${bj_proto_path}")
-
-# # generate static library of this project
-# file(GLOB CcSources ${project_src_path}/*.cc)
-# set(LIBRARY_OUTPUT_PATH "${project_lib_path}") 
-# add_library(net "${CcSources}")
-# target_link_libraries(net
-#   ${_REFLECTION}
-#   ${_GRPC_GRPCPP}
-#   ${_PROTOBUF_LIBPROTOBUF}
-# )
-
+# this library is produced by building protos
 set(blackjack_grpc "${project_lib_path}/libblackjack_grpc.a")
 
-# now we generate the server 
+# now we generate the proxy server 
 file(GLOB CcSources ${project_src_path}/*.cc)
 add_executable(proxy "${project_src_path}/main.cpp;${CcSources}")
 target_link_libraries(proxy
