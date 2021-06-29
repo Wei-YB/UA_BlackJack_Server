@@ -35,7 +35,7 @@ public:
     ProxyServer(const char *ip, unsigned short port, Net::EventLoop *loop);
 
     // conn: shared ptr to new tcp connection
-    void OnNewClient(std::shared_ptr<TcpConnection> conn);
+    void OnNewClient(std::shared_ptr<Net::TcpConnection> conn);
 
     // fd: file descriptor for the tcp connection of the client
     // request: request from client
@@ -46,7 +46,6 @@ public:
 
     // response: response from rpc server
     void OnServiceResponse(const Response& response);
-
     // fd: file descriptor for the tcp connection of the client
     void OnDisConnection(FileDesc fd);
 
@@ -66,8 +65,10 @@ private:
     std::mutex uidToClientLock_;
     std::unordered_map<UserId, std::shared_ptr<Client>> uidToClient_;   
     std::unordered_map<FileDesc, std::shared_ptr<Client>> fdToClient_;  // only accessible from the main thread, no lock protected
-    std::mutex stampToClientLock_;
-    std::unordered_map<int64_t, std::weak_ptr<Client>> stampToClient_;
+    std::mutex stampToUnloginClientLock_;
+    std::unordered_map<int64_t, std::weak_ptr<Client>> stampToUnloginClient_;
+    std::mutex stampToSignupClientLock_;
+    std::unordered_map<int64_t, std::weak_ptr<Client>> stampToSignupClient_;
     std::unordered_map<Request::RequestType, std::weak_ptr<ServiceClient>> requestTypeToServiceClient_;
     std::function<void(Response &)> clientResponseCallBack_;
     std::shared_ptr<Net::TcpServer> server_;

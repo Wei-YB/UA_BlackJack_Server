@@ -11,6 +11,7 @@
 
 #include "UA_BlackJack.grpc.pb.h"
 #include "UA_BlackJack.pb.h"
+#include "log.h"
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
@@ -84,9 +85,11 @@ public:
         builder.RegisterService(&service_);
         cq_ = builder.AddCompletionQueue();
         server_ = builder.BuildAndStart();
-        std::cout << "Server listening on " << serverAddr_ << std::endl;
+        logger_ptr->info("Server listening on {}", serverAddr_);
         HandleRpcs();
     }
+
+    void Stop() {flag_ = true;}
 
 private:
     void HandleRpcs()
@@ -94,7 +97,7 @@ private:
         new AsyncCall<AsyncRpcService>(&service_, cq_.get(), cb_);
         void *tag;
         bool ok;
-        while (true)
+        while (!flag_)
         {
             GPR_ASSERT(cq_->Next(&tag, &ok));
             GPR_ASSERT(ok);
@@ -108,6 +111,7 @@ private:
     AsyncRpcService service_;
     std::unique_ptr<Server> server_;
     RequestCallBack cb_;
+    bool flag_ = false;
 };
 
 // AsyncServer<lobby::Lobby::AsyncService>;

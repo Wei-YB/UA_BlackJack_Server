@@ -7,6 +7,7 @@
 #include "EventLoop.h"
 #include "CircularBuffer.h"
 #include "common.h"
+#include "log.h"
 
 #include "UA_BlackJack.pb.h"
 
@@ -22,12 +23,12 @@ static int setNonBlocking(int fd)
 TcpConnection::TcpConnection(const char *ip, 
                             unsigned short port, 
                             EventLoop *loop)
-                            : writeBuffer_(bufferSize_), readBuffer_(bufferSize_),
-                            eventsSource_(socket(AF_INET, SOCK_STREAM, 0), loop,
+                            : writeBuffer_(bufferSize_), readBuffer_(bufferSize_) 
+{
+    eventsSource_ = std::make_shared<EventsSource>(socket(AF_INET, SOCK_STREAM, 0), loop,
                                             std::bind(&TcpConnection::OnInput, this), 
                                             std::bind(&TcpConnection::OnOutput, this), 
-                                            std::bind(&TcpConnection::OnError, this)) 
-{
+                                            std::bind(&TcpConnection::OnError, this));
     addr_.sin_family = AF_INET;
     addr_.sin_port = htons(port);
     inet_pton(AF_INET, ip, &addr_.sin_addr);
@@ -36,25 +37,28 @@ TcpConnection::TcpConnection(const char *ip,
 TcpConnection::TcpConnection(FileDesc connfd, 
                             const struct sockaddr_in &addr, 
                             EventLoop *loop)
-                            : writeBuffer_(bufferSize_), readBuffer_(bufferSize_), 
-                            addr_(addr), eventsSource_(connfd, loop,
-                                        std::bind(&TcpConnection::OnInput, this), 
-                                        std::bind(&TcpConnection::OnOutput, this), 
-                                        std::bind(&TcpConnection::OnError, this)) 
+                            : writeBuffer_(bufferSize_), 
+                            readBuffer_(bufferSize_), 
+                            addr_(addr)
 {
+    eventsSource_ = std::make_shared<EventsSource>(connfd, loop,
+                                            std::bind(&TcpConnection::OnInput, this), 
+                                            std::bind(&TcpConnection::OnOutput, this), 
+                                            std::bind(&TcpConnection::OnError, this));
     setNonBlocking(connfd);
-    eventsSource_.Update(Net::EV_IN | Net::EV_ET | Net::EV_ERR);
+    logger_ptr->info("In main thread: in creating tcp connection, now modify events to EV_IN");
+    eventsSource_->Update(Net::EV_IN | Net::EV_ET | Net::EV_ERR);
+    logger_ptr->info("In main thread: events: {} after modifying", (int)eventsSource_->events_);
 }
 
 TcpConnection::~TcpConnection() 
 {
-    close(eventsSource_.fd());
+    close(eventsSource_->fd());
 }
 
 int TcpConnection::OnInput()
 {
-    // std::cout << "TcpConnection::OnInput." << std::endl;
-    FileDesc clientfd = eventsSource_.fd();
+    FileDesc clientfd = eventsSource_->fd();
     int byteRead, pkgProcessed = 0;
     bool needToRead = true;
     std::vector<Request> requests;
@@ -62,7 +66,8 @@ int TcpConnection::OnInput()
     while (needToRead)
     {
         if ((byteRead = read(clientfd, readBuffer_)) <= 0)
-        {   // std::cout << "TcpConnection::OnInput: connection shutdown by peer." << std::endl;
+        {   logger_ptr->info("In main thread: connection (sockfd: {}) shutdown by peer.", SockFd());
+            if (byteRead < 0 && hupCallBack_) hupCallBack_();
             return byteRead;
         }
         if (readBuffer_.size() != readBuffer_.capacity())
@@ -102,10 +107,12 @@ int TcpConnection::OnInput()
         }
     }
 
+    logger_ptr->info("In main thread: connection (sockfd: {0}) receives {1} packages.", SockFd(), requests.size() + responses.size());
     if (inputCallBack_)
     {
         inputCallBack_(requests, responses);
     }
+    
     return pkgProcessed;;
 }
 
@@ -113,23 +120,24 @@ int TcpConnection::OnOutput()
 {
     // check whether we can get some data from upper layer
     if (outputCallBack_ 
-        && writeBuffer_.size() + 2 * PACKAGE_HDR_LEN < writeBuffer_.capacity())
+        && (writeBuffer_.size() + 2 * PACKAGE_HDR_LEN < writeBuffer_.capacity()))
     {
         outputCallBack_();
     }
     if (writeBuffer_.empty())
-    {   // std::cout << "TcpConnection::OnOutput: no data to send, unregister EV_IN event." << std::endl;
-        eventsSource_.Update(Net::EV_IN | Net::EV_ET | Net::EV_ERR);
+    {   
+        logger_ptr->info("In main thread: connection (sockfd: {0}) has no data to send, unregister EV_IN event.", SockFd());
+        eventsSource_->Update(Net::EV_IN | Net::EV_ET | Net::EV_ERR);
         return 0;
     }
-    int ret = Net::write(eventsSource_.fd(), writeBuffer_);
-    // std::cout << "TcpConnection::OnOutput: write " << (ret > 0 ? ret : 0) << " byte(s) to client." << std::endl;
-    // std::cout << "                        " << writeBuffer_.size() << " bytes left in buffer." << std::endl;
+    int ret = Net::write(eventsSource_->fd(), writeBuffer_);
+    logger_ptr->info("In main thread: connection (sockfd: {0}) write {1} bytes.", SockFd(), ret);
     return ret;
 }
 
 int TcpConnection::OnError()
 {
+    logger_ptr->info("In main thread: connection (sockfd: {0}) has error!", SockFd());
     if (errorCallBack_)
         errorCallBack_();
     return -1;
@@ -139,37 +147,42 @@ int TcpConnection::Send(const std::string &pkgsData)
 {
     put(writeBuffer_, pkgsData.c_str(), pkgsData.size());
     // try to write it immediately
-    int bytesWritten = write(eventsSource_.fd(), writeBuffer_);
-    if (bytesWritten < 0 && errno != EWOULDBLOCK && errno != EAGAIN)
-    {
-        std::cout << "TcpConnection::Send: fail." << std::endl;
+    int bytesWritten = write(eventsSource_->fd(), writeBuffer_);
+    if (bytesWritten < 0)
+    {   logger_ptr->info("In main thread: connection (sockfd: {0}) send with fatal error!", SockFd());
         return -1;
     }
-    std::cout << "TcpConnection::Send: send." << bytesWritten << "bytes." << std::endl;
     // if there are data left
     if (!writeBuffer_.empty())
     {
-        std::cout << "TcpConnection::Send: wait for the next round." << std::endl;
-        eventsSource_.Update(Net::EV_IN | Net::EV_OUT | Net::EV_ET | Net::EV_ERR);
+        eventsSource_->Update(Net::EV_IN | Net::EV_OUT | Net::EV_ET | Net::EV_ERR);
     }
-    
+
+    logger_ptr->info("In main thread: connection (sockfd: {0}) send {1} bytes data.", SockFd(), bytesWritten);
+
     return 0;
 }
 
 int TcpConnection::Connect()
 {
-    int ret = connect(eventsSource_.fd(), (struct sockaddr*)&addr_, sizeof(addr_));
+    int ret = connect(eventsSource_->fd(), (struct sockaddr*)&addr_, sizeof(addr_));
     if (ret != -1)
     {
-        eventsSource_.Update(Net::EV_IN | Net::EV_OUT | Net::EV_ET | Net::EV_ERR);
+        logger_ptr->info("In main thread: (sockfd: {0}) successfully connect to host", SockFd());
+        eventsSource_->Update(Net::EV_IN | Net::EV_OUT | Net::EV_ET | Net::EV_ERR);
         return 0;
     }
+    logger_ptr->info("In main thread: (sockfd: {0}) fail to connect to host", SockFd());
     return -1;
 }
 
 int TcpConnection::DisConnect()
 {
-    ::close(eventsSource_.fd());
-    eventsSource_.Close(); 
+    logger_ptr->info("In main thread: (sockfd: {0}) disconnect from host", SockFd());
+    ::close(eventsSource_->fd());
+    eventsSource_->Close(); 
     return 0;
 }
+
+int TcpConnection::SockFd() const {return eventsSource_->fd();}
+int TcpConnection::GetWriteBufferRoom() const {return writeBuffer_.capacity() - writeBuffer_.size();}

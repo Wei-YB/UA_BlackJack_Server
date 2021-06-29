@@ -6,11 +6,11 @@
 #include "CircularBuffer.h"
 
 NAMESPACE_BEGIN
-
+#define DUMMY   
 #define PACKAGE_HDR_LEN 8
 
-const int32_t REQUEST = 0;
-const int32_t RESPONSE = 1;
+const int32_t REQUEST = 1;
+const int32_t RESPONSE = 2;
 
 
 int pack(int32_t type, const std::string &msg, char *buffer, size_t size);

@@ -14,6 +14,7 @@
 #include "UA_BlackJack.pb.h"
 #include "UA_BlackJack.grpc.pb.h"
 #include "EventLoop.h"
+#include "log.h"
 #include "ProxyServer.h"
 
 typedef std::chrono::time_point<std::chrono::system_clock> time_point;
@@ -85,10 +86,37 @@ public:
 
         cq_ = builder.AddCompletionQueue();
         server_ = builder.BuildAndStart();
-        std::cout << "Server listening on " << serverAddress_ << std::endl;
+        logger_ptr->info("Server listening on {}", serverAddress_);
     
         HandleRpcs();
     }
+
+    void OnClientResponse(Response &response)
+    {
+        int64_t stamp = response.stamp();
+        AsyncCall *call = NULL;
+        {
+            std::lock_guard<std::mutex> guard(stampToAsyncCallLock_);
+            if (stampToAsyncCall_.find(stamp) != stampToAsyncCall_.end())
+            {
+                call = stampToAsyncCall_[stamp];
+                stampToAsyncCall_.erase(stamp);
+            }
+        }
+        if (call)
+        {
+            logger_ptr->info("In main thread: found the caller for response (stamp: {})", response.stamp());
+            stamp = call->stamp_;
+            response.set_stamp(stamp);
+            call->reply_ = response;
+            call->responder_.Finish(call->reply_, Status::OK, call);
+            call->status_ = FINISH;
+            return;
+        }
+        logger_ptr->info("In main thread: can not find the caller for response (stamp: {})", response.stamp());
+    }
+
+    void Stop() {stop_ = true;}
 
 private:
     void HandleRpcs()
@@ -99,16 +127,17 @@ private:
         bool ok;
         time_point deadline = std::chrono::system_clock::now() +
                                 std::chrono::milliseconds(500);
-        while (!stop_ && cq_->AsyncNext(&tag, &ok, deadline))
+        grpc::CompletionQueue::NextStatus sta;
+        while (!stop_ && (sta = cq_->AsyncNext(&tag, &ok, deadline)))
         {
-            deadline = std::chrono::system_clock::now() +
-                                std::chrono::milliseconds(500);
-            if (!ok)
+            if (!ok || sta == grpc::CompletionQueue::NextStatus::TIMEOUT)
             {
                 continue;
             }
             AsyncCall *call = static_cast<AsyncCall*>(tag);
             ProcessCall(call);
+            deadline = std::chrono::system_clock::now() +
+                                std::chrono::milliseconds(500);
         }
     }
 
@@ -156,29 +185,7 @@ private:
         }
     }
 
-    void OnClientResponse(Response &response)
-    {
-        int64_t stamp = response.stamp();
-        AsyncCall *call = NULL;
-        {
-            std::lock_guard<std::mutex> guard(stampToAsyncCallLock_);
-            if (stampToAsyncCall_.find(stamp) != stampToAsyncCall_.end())
-            {
-                call = stampToAsyncCall_[stamp];
-                stampToAsyncCall_.erase(stamp);
-            }
-        }
-        if (call)
-        {
-            stamp = call->stamp_;
-            response.set_stamp(stamp);
-            call->reply_ = response;
-            call->responder_.Finish(call->reply_, Status::OK, call);
-            call->status_ = FINISH;
-        }
-    }
-
-    void Stop() {stop_ = true;}
+    
 
 private:
     std::string serverAddress_;

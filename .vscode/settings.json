@@ -57,6 +57,9 @@
         "bit": "cpp",
         "complex": "cpp",
         "numeric": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "forward_list": "cpp",
+        "cfenv": "cpp",
+        "variant": "cpp"
     }
 }

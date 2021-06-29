@@ -4,6 +4,7 @@
 #include "ClientProxyProtocol.h"
 #include "common.h"
 #include "EventLoop.h"
+#include "log.h"
 
 #include "UA_BlackJack.pb.h"
 
@@ -16,14 +17,17 @@ using namespace Net;
 Client::Client(std::shared_ptr<TcpConnection> conn,
            const std::function<void(FileDesc, Request &)> &requestCallBack,
            const std::function<void(Response &)> &responseCallBack,
+           const std::function<void(FileDesc)> &disconnectCallBack,
            const std::function<void(FileDesc)> &errorCallBack)
        : conn_(conn), 
         requestCallBack_(requestCallBack),
         responseCallBack_(responseCallBack),
-        errorCallBack_(errorCallBack) 
+        errorCallBack_(errorCallBack),
+        disconnectCallBack_(disconnectCallBack) 
 {
     conn_->SetInputCallBack(std::bind(&Client::OnMessages, this, std::placeholders::_1, std::placeholders::_2));
     conn_->SetOutPutCallBack(std::bind(&Client::OnSendReady, this));
+    conn_->SetHupCallBack(std::bind(&Client::OnLeave, this));
     conn_->SetErrorCallBack(std::bind(&Client::OnError, this));
 }
 
@@ -37,6 +41,7 @@ int Client::SendRequest(const Request &request)
         std::lock_guard<std::mutex> guard(connLock_);
         if (pkgData.size() > conn_->GetWriteBufferRoom())
         {   // TODO: maybe we can buffer this request
+            logger_ptr->info("In gRPC server thread: Try to send request to client (uid: {}), but tcp buffer has no free room.", request.uid());
             return -1;
         }
         ret = conn_->Send(pkgData);
@@ -46,7 +51,6 @@ int Client::SendRequest(const Request &request)
 
 int Client::SendResponse(const Response &response)
 {
-    std::cout << "going to send response to client." << std::endl;
     int ret = 0;
     std::string rawResponse = response.SerializeAsString();
     std::string pkgData(8 + rawResponse.size(), '\0');
@@ -55,7 +59,7 @@ int Client::SendResponse(const Response &response)
         std::lock_guard<std::mutex> guard(connLock_);
         if (pkgData.size() > conn_->GetWriteBufferRoom())
         {   // TODO: maybe we can buffer this request
-            std::cout << "no room to write response to client!" << std::endl;
+            logger_ptr->info("In gRPC server thread: Try to send request to response (uid: {}), but tcp buffer has no free room.", response.uid());
             return -1;
         }
         ret = conn_->Send(pkgData);
@@ -65,6 +69,8 @@ int Client::SendResponse(const Response &response)
 
 void Client::OnMessages(std::vector<Request> &requests, std::vector<Response> &responses)
 {
+    logger_ptr->info("In main thread: tcp (sockfd: {0}) get {1} requests and {2} response from client (uid: {3})", 
+                                            conn_->SockFd(), requests.size(), responses.size(), uid_);
     if (requestCallBack_)
     {
         for (int i = 0; i < requests.size(); ++i)
@@ -80,3 +86,7 @@ void Client::OnMessages(std::vector<Request> &requests, std::vector<Response> &r
         }
     }
 }
+
+void Client::OnLeave() {errorCallBack_(conn_->SockFd());}
+
+void Client::OnError() {disconnectCallBack_(conn_->SockFd());}

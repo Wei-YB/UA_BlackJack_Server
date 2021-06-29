@@ -14,6 +14,7 @@
 #include <functional>
 
 #include "EventLoop.h"
+#include "log.h"
 
 using namespace Net;
 
@@ -39,26 +40,14 @@ int EventsSource::HandleEvents(Event events)
         return -1;
     }
     if (events & EV_IN)
-    {   // logger_ptr->info("input event from event source (fd: {}).", fd_);
-        if (inEventCallBack_ && inEventCallBack_() < 0)
-        {
-            return -1;
-        }
-    }
-    if (events & EV_RDHUP)
-    {   // logger_ptr->info("peer-shut-down event from event source (fd: {}).", fd_);
-        if (closeEventCallBack_)
-        {
-            closeEventCallBack_()
-        }
-        return -1;
+    {
+        logger_ptr->info("In main thread: On input event from fd: {}", fd_);
+        ret = inEventCallBack_() == -1 ? -1 : ret; 
     }
     if (events & EV_OUT)
-    {   // logger_ptr->info("output event from event source (fd: {}).", fd_);
-        if (outEventCallBack_ && outEventCallBack_() < 0)
-        {
-            return -1;
-        } 
+    {
+        logger_ptr->info("In main thread: On onput event from fd: {}", fd_);
+        ret = outEventCallBack_() == -1 ? -1 : ret; 
     }
     
     return 0;
@@ -68,7 +57,8 @@ int EventsSource::EnableWrite()
 {
     if (events_ & EV_OUT)
     {
-        return 0;
+        logger_ptr->info("In main thread: On error event from fd: {}", fd_);
+        ret = errEventCallBack_() == -1 ? -1 : ret; 
     }
     events_ |= EV_OUT | EV_ET;
     return loop->mod(share_from_this());
@@ -84,36 +74,7 @@ int EventsSource::EnableRead()
     return loop->mod(share_from_this());
 }
 
-int EventsSource::DisableWrite()
-{
-    if (events_ & EV_OUT)
-    {
-        events_ &= ~EV_OUT;
-        return loop->mod(share_from_this());
-    }
-    return 0;
-}
-
-int EventsSource::DisableRead()
-{
-    if (events_ & EV_IN)
-    {
-        events_ &= ~EV_IN;
-        return loop->mod(share_from_this());
-    }
-    return 0;
-}
-
-int EventsSource::SetNonBlocking(bool flag)
-{
-    if (flag)
-        return fcntl(fd_, F_SETFL, fcntl(fd, F_GETFL) | O_NONBLOCK);
-    else
-        return fcntl(fd_, F_SETFL, fcntl(fd, F_GETFL) & (~O_NONBLOCK));
-}
-
 int EventsSource::Close()
-{
     ::close(fd_);
     return loop_->del(share_from_this());
 }
@@ -143,7 +104,7 @@ Net::EventLoop::~EventLoop()
     close(epollfd_);
 }
 
-int Net::EventLoop::add(EventsSource *evsSource)
+int Net::EventLoop::add(std::shared_ptr<EventsSource> evsSource)
 {
     if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end() 
         || eventsCnt_ >= maxEvents_)
@@ -159,10 +120,11 @@ int Net::EventLoop::add(EventsSource *evsSource)
     }
     fdToEventsSource_.emplace(evsSource->fd_, evsSource);
     eventsCnt_++;
+    logger_ptr->info("In main thread: Successfully add event source.");
     return 0;
 }
 
-int Net::EventLoop::mod(EventsSource *evsSource)
+int Net::EventLoop::mod(std::shared_ptr<EventsSource> evsSource)
 {
     if (fdToEventsSource_.find(evsSource->fd_) == fdToEventsSource_.end())
     {
@@ -175,10 +137,11 @@ int Net::EventLoop::mod(EventsSource *evsSource)
     {
         return -1;
     }
+    logger_ptr->info("In main thread: Successfully modify events.");
     return 0;
 }
 
-int Net::EventLoop::del(EventsSource *evsSource)
+int Net::EventLoop::del(std::shared_ptr<EventsSource> evsSource)
 {
     if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end())
     {
@@ -210,7 +173,7 @@ int Net::EventLoop::loopOnce(int timeout)
     for (int i = 0; i < nfds; ++i)
     {
         int sockfd = events_[i].data.fd;
-        int events = events_[i].events;   
+        int events = events_[i].events;  
         if (fdToEventsSource_.find(sockfd) == fdToEventsSource_.end())
         {
             continue;
