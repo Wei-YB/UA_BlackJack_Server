@@ -52,7 +52,7 @@ namespace ua_blackjack
             }
             void AsyncCompleteRpc();
 
-            void matchEnd(const std::list<Player::ptr> playerList);
+            void matchEnd(const std::list<ua_blackjack::Game::Player::ptr> playerList);
             void askPlayerNickName(const BlackJackUID uid);
             static ClientForDatebase &getInstance()
             {

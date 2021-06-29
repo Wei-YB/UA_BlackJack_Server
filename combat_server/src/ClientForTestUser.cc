@@ -8,7 +8,7 @@
 #define STAMP_ASK_HIT 0X2
 #define STAMP_ASK_UPDATE 0X3
 #define STAMP_ASK_END 0X4
-void ClientForTestUser::askBettingMoney(const BlackJackUID uid)
+void ua_blackjack::Game::ClientForTestUser::askBettingMoney(const BlackJackUID uid)
 {
 
     spdlog::info("Start betting rpc request uid {0}", uid);
@@ -38,7 +38,7 @@ void ClientForTestUser::askBettingMoney(const BlackJackUID uid)
     call->response_reader->Finish(&call->reply, &call->status, (void *)call);
 }
 
-void ClientForTestUser::askHitOrStand(const BlackJackUID uid)
+void ua_blackjack::Game::ClientForTestUser::askHitOrStand(const BlackJackUID uid)
 {
     spdlog::info("Start ask hit uid {0}", uid);
     Request request;
@@ -58,7 +58,7 @@ void ClientForTestUser::askHitOrStand(const BlackJackUID uid)
 
     call->response_reader->Finish(&call->reply, &call->status, (void *)call);
 }
-void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser) //第一个uid是哪个用户的信息更新了，第二个参数是发送给哪个用户
+void ua_blackjack::Game::ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser) //第一个uid是哪个用户的信息更新了，第二个参数是发送给哪个用户
 {
 
     Request request;
@@ -110,7 +110,7 @@ void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID not
 
     call->response_reader->Finish(&call->reply, &call->status, (void *)call);
 }
-void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser, bool showDealerHidePker)
+void ua_blackjack::Game::ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser, bool showDealerHidePker)
 {
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
@@ -162,7 +162,7 @@ void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID not
     call->response_reader->Finish(&call->reply, &call->status, (void *)call);
 }
 
-void ClientForTestUser::askUpdate(const std::list<Player::ptr> &playerList, const BlackJackUID notifyUser)
+void ua_blackjack::Game::ClientForTestUser::askUpdate(const std::list<ua_blackjack::Game::Player::ptr> &playerList, const BlackJackUID notifyUser)
 {
 
     Request request;
@@ -215,7 +215,7 @@ void ClientForTestUser::askUpdate(const std::list<Player::ptr> &playerList, cons
     call->response_reader->Finish(&call->reply, &call->status, (void *)call);
 }
 
-void ClientForTestUser::askEnd(const BlackJackUID uid, FinalResultOfGame isWin)
+void ua_blackjack::Game::ClientForTestUser::askEnd(const BlackJackUID uid, FinalResultOfGame isWin)
 {
 
     spdlog::info("Start End request uid {0} iswin{1}", uid, isWin);
@@ -251,7 +251,7 @@ void ClientForTestUser::askEnd(const BlackJackUID uid, FinalResultOfGame isWin)
     call->response_reader->Finish(&call->reply, &call->status, (void *)call);
 }
 
-void ClientForTestUser::AsyncCompleteRpc() //开一个线程告知协程发送的消息得到了相应
+void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程告知协程发送的消息得到了相应
 {
     void *got_tag;
     bool ok = false;

@@ -49,80 +49,85 @@ using ua_blackjack::GameService;
 using ua_blackjack::Request;
 using ua_blackjack::Response;
 /*************************/
-enum
+
+namespace ua_blackjack
 {
-  STATUS_OK = 0,
-  STATUS_ERROR = 1
-};
-class ServerImpl final
-{
-public:
-  ~ServerImpl()
+  namespace Game
   {
-    server_->Shutdown();
-    // Always shutdown the completion queue after the server.
-    cq_->Shutdown();
-  }
-
-  // There is no shutdown handling in this code.
-  void Run()
-  {
-    std::string server_address("0.0.0.0:50051");
-
-    ServerBuilder builder;
-    builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
-    builder.RegisterService(&service_);
-
-    cq_ = builder.AddCompletionQueue();
-    server_ = builder.BuildAndStart();
-    spdlog::info("Server listening on {0:d}", server_address);
-  }
-
-public:
-  // Class encompasing the state and logic needed to serve a request.
-  class CallData
-  {
-  public:
-    CallData(GameService::AsyncService *service, ServerCompletionQueue *cq)
-        : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE)
+    enum
     {
-      Proceed();
-    }
-
-    void Proceed()
+      STATUS_OK = 0,
+      STATUS_ERROR = 1
+    };
+    class ServerImpl final
     {
-
-      if (status_ == CREATE)
+    public:
+      ~ServerImpl()
       {
-        status_ = PROCESS;
-        service_->RequestNotify(&ctx_, &request_, &responder_, cq_, cq_, this);
+        server_->Shutdown();
+        // Always shutdown the completion queue after the server.
+        cq_->Shutdown();
       }
-      else if (status_ == PROCESS)
+
+      // There is no shutdown handling in this code.
+      void Run()
       {
-        new CallData(service_, cq_);
-        auto type = request_.requesttype();
-        auto uid = request_.uid();
-        auto stamp = request_.stamp();
-        auto args = request_.args();
-        reply_.set_status(0);
-        reply_.set_uid(uid);
-        reply_.set_stamp(stamp);
-        spdlog::info("type = {0:d} uid = {1:d} stamp = {2:d}", type, uid, stamp);
-        if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //真正的创建房间code
+        std::string server_address("0.0.0.0:50051");
+
+        ServerBuilder builder;
+        builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
+        builder.RegisterService(&service_);
+
+        cq_ = builder.AddCompletionQueue();
+        server_ = builder.BuildAndStart();
+        spdlog::info("Server listening on {0:d}", server_address);
+      }
+
+    public:
+      // Class encompasing the state and logic needed to serve a request.
+      class CallData
+      {
+      public:
+        CallData(GameService::AsyncService *service, ServerCompletionQueue *cq)
+            : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE)
         {
-          UidList uids;
-          BlackJackRoomID roomid = atoi(args[0].c_str());
-
-          spdlog::info("Create Room Ask come");
-          for (int i = 1; i < args.size(); i++)
-          {
-            uids.push_back(atoi(args[i].c_str()));
-          }
-
-          createstEnv_t(roomid, uids);
-          uids.clear();
+          Proceed();
         }
-        /*
+
+        void Proceed()
+        {
+
+          if (status_ == CREATE)
+          {
+            status_ = PROCESS;
+            service_->RequestNotify(&ctx_, &request_, &responder_, cq_, cq_, this);
+          }
+          else if (status_ == PROCESS)
+          {
+            new CallData(service_, cq_);
+            auto type = request_.requesttype();
+            auto uid = request_.uid();
+            auto stamp = request_.stamp();
+            auto args = request_.args();
+            reply_.set_status(0);
+            reply_.set_uid(uid);
+            reply_.set_stamp(stamp);
+            spdlog::info("type = {0:d} uid = {1:d} stamp = {2:d}", type, uid, stamp);
+            if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //真正的创建房间code
+            {
+              UidList uids;
+              BlackJackRoomID roomid = atoi(args[0].c_str());
+
+              spdlog::info("Create Room Ask come");
+              for (int i = 1; i < args.size(); i++)
+              {
+                uids.push_back(atoi(args[i].c_str()));
+              }
+
+              createstEnv_t(roomid, uids);
+              uids.clear();
+            }
+            /*
         if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //创建房间
         {
           static uint64_t roomMemberSize = 0;
@@ -140,96 +145,98 @@ public:
           }
         }
         */
-        else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //退出房间
-        {
-          if (auto playerPtr = playerHashMap[uid].lock())
-          {
-            spdlog::info("{0:d} quit by itself", uid);
-            playerPtr->quit(); //托管
-          }
-          else
-          {
-            spdlog::error("Quit error uid {0:d}   not existed in any room", uid);
-          }
-        }
-        else if (type == ua_blackjack::Request_RequestType::Request_RequestType_DOUBLE) //双倍
-        {
-          if (auto playerPtr = playerHashMap[uid].lock())
-          {
-            spdlog::info("{0:d} double by itself", uid);
+            else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //退出房间
+            {
+              if (auto playerPtr = playerHashMap[uid].lock())
+              {
+                spdlog::info("{0:d} quit by itself", uid);
+                playerPtr->quit(); //托管
+              }
+              else
+              {
+                spdlog::error("Quit error uid {0:d}   not existed in any room", uid);
+              }
+            }
+            else if (type == ua_blackjack::Request_RequestType::Request_RequestType_DOUBLE) //双倍
+            {
+              if (auto playerPtr = playerHashMap[uid].lock())
+              {
+                spdlog::info("{0:d} double by itself", uid);
 
-            playerPtr->bettingMoney *= 2;
+                playerPtr->bettingMoney *= 2;
+              }
+              else
+              {
+                spdlog::error("Double error uid {0:d}   not existed in any room", uid);
+              }
+            }
+            else if (type == ua_blackjack::Request_RequestType::Request_RequestType_SURRENDER) //投降
+            {
+              if (auto playerPtr = playerHashMap[uid].lock())
+              {
+                spdlog::info("{0:d} surrond by itself", uid);
+                playerPtr->bettingMoney *= 2;
+              }
+              else
+              {
+                spdlog::error("Surrond error uid {0:d}   not existed in any room", uid);
+              }
+            }
+
+            status_ = FINISH;
+            responder_.Finish(reply_, Status::OK, this); //运行这行，调用方就收到response
           }
           else
           {
-            spdlog::error("Double error uid {0:d}   not existed in any room", uid);
-          }
-        }
-        else if (type == ua_blackjack::Request_RequestType::Request_RequestType_SURRENDER) //投降
-        {
-          if (auto playerPtr = playerHashMap[uid].lock())
-          {
-            spdlog::info("{0:d} surrond by itself", uid);
-            playerPtr->bettingMoney *= 2;
-          }
-          else
-          {
-            spdlog::error("Surrond error uid {0:d}   not existed in any room", uid);
+
+            GPR_ASSERT(status_ == FINISH);
+
+            delete this;
           }
         }
 
-        status_ = FINISH;
-        responder_.Finish(reply_, Status::OK, this); //运行这行，调用方就收到response
-      }
-      else
+      private:
+        GameService::AsyncService *service_;
+        ServerCompletionQueue *cq_;
+        ServerContext ctx_;
+
+        Request request_;
+        Response reply_;
+
+        // The means to get back to the client.
+        ServerAsyncResponseWriter<Response> responder_;
+
+        enum CallStatus
+        {
+          CREATE,
+          PROCESS,
+          FINISH
+        };
+        CallStatus status_; // The current serving state.
+      };
+
+      // This can be run in multiple threads if needed.
+      void HandleRpcs()
       {
+        // Spawn a new CallData instance to serve new clients.
+        new CallData(&service_, cq_.get());
+        void *tag; // uniquely identifies a request.
+        bool ok;
+        while (true)
+        {
 
-        GPR_ASSERT(status_ == FINISH);
+          GPR_ASSERT(cq_->Next(&tag, &ok));
+          GPR_ASSERT(ok);
 
-        delete this;
+          static_cast<CallData *>(tag)->Proceed();
+        }
       }
-    }
 
-  private:
-    GameService::AsyncService *service_;
-    ServerCompletionQueue *cq_;
-    ServerContext ctx_;
+    public:
+      std::unique_ptr<ServerCompletionQueue> cq_;
 
-    Request request_;
-    Response reply_;
-
-    // The means to get back to the client.
-    ServerAsyncResponseWriter<Response> responder_;
-
-    enum CallStatus
-    {
-      CREATE,
-      PROCESS,
-      FINISH
+      GameService::AsyncService service_;
+      std::unique_ptr<Server> server_;
     };
-    CallStatus status_; // The current serving state.
-  };
-
-  // This can be run in multiple threads if needed.
-  void HandleRpcs()
-  {
-    // Spawn a new CallData instance to serve new clients.
-    new CallData(&service_, cq_.get());
-    void *tag; // uniquely identifies a request.
-    bool ok;
-    while (true)
-    {
-
-      GPR_ASSERT(cq_->Next(&tag, &ok));
-      GPR_ASSERT(ok);
-
-      static_cast<CallData *>(tag)->Proceed();
-    }
   }
-
-public:
-  std::unique_ptr<ServerCompletionQueue> cq_;
-
-  GameService::AsyncService service_;
-  std::unique_ptr<Server> server_;
-};
+}

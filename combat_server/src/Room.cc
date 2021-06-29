@@ -8,22 +8,22 @@
 #include "spdlog/spdlog.h"
 #include <sstream>
 #include "GameProcess.h"
-std::unordered_map<BlackJackRoomID, std::weak_ptr<Room>> roomHashMap;
-Room::ptr malloOneRoom(BlackJackRoomID rid, UidList &uids)
+std::unordered_map<BlackJackRoomID, std::weak_ptr<ua_blackjack::Game::Room>> roomHashMap;
+ua_blackjack::Game::Room::ptr malloOneRoom(BlackJackRoomID rid, UidList &uids)
 {
 
-    Room::ptr room = std::make_shared<Room>(rid, uids);
+    ua_blackjack::Game::Room::ptr room = std::make_shared<ua_blackjack::Game::Room>(rid, uids);
     roomHashMap[room->getRoomId()] = room;
     return room;
 }
-Poker::ptr Room::getPokerFromShuffledPokers(void)
+ua_blackjack::Game::Poker::ptr ua_blackjack::Game::Room::getPokerFromShuffledPokers(void)
 {
     int index = this->shuffledPokers->nowIndex;
     this->shuffledPokers->nowIndex++;
     return this->shuffledPokers->pokers[index];
 }
 
-void Room::showMessage(void) const
+void ua_blackjack::Game::Room::showMessage(void) const
 {
     std::stringstream ss;
     ss << "Room-"
@@ -36,7 +36,7 @@ void Room::showMessage(void) const
     // this->shuffledPokers->showMessage();
 }
 
-void Room::judgeWinOrLose(void) //判断最后的输赢
+void ua_blackjack::Game::Room::judgeWinOrLose(void) //判断最后的输赢
 {
     //庄家在游戏结束前投降了或提前退出游戏了或爆了
     if (playerList.front()->finalResult != WIN)
@@ -122,9 +122,9 @@ void Room::judgeWinOrLose(void) //判断最后的输赢
     }
 }
 
-int Room::setBettingMoney(BlackJackUID uid, BlackJackMoney money)
+int ua_blackjack::Game::Room::setBettingMoney(BlackJackUID uid, BlackJackMoney money)
 {
-    if (Player::ptr player = playerHashMap[uid].lock())
+    if (auto player = playerHashMap[uid].lock())
     {
         if (auto room = roomHashMap[player->getRoom()].lock())
         {
@@ -140,7 +140,7 @@ int Room::setBettingMoney(BlackJackUID uid, BlackJackMoney money)
     }
     return -1;
 }
-void Room::deleteRoom(void)
+void ua_blackjack::Game::Room::deleteRoom(void)
 {
     this->judgeWinOrLose();
     for (auto player : this->playerList)
@@ -191,6 +191,6 @@ void Room::deleteRoom(void)
     ua_blackjack::Game::ClientForLobby::getInstance().matchEnd(this->getRoomId());   //向lobby发送
     /*************存储数据到数据库**************/
 }
-Room::~Room() //房间解散
+ua_blackjack::Game::Room::~Room() //房间解散
 {
 }

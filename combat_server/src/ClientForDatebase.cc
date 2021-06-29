@@ -3,7 +3,7 @@
 #include "spdlog/spdlog.h"
 #include <sstream>
 #define STAMP_GET_NICKNAME 123456
-void ua_blackjack::Game::ClientForDatebase::matchEnd(const std::list<Player::ptr> playerList)
+void ua_blackjack::Game::ClientForDatebase::matchEnd(const std::list<ua_blackjack::Game::Player::ptr> playerList)
 {
     spdlog::info("Start database match end request");
     std::chrono::time_point<std::chrono::system_clock, std::chrono::milliseconds> tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now()); //获取当前时间点

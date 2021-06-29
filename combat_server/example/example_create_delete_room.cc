@@ -17,7 +17,7 @@ void *createRoom(void *args)
 
     UidList playerId;
     playerId.emplace_back(roomID->id); //room i 中有 id为1的player
-    std::shared_ptr<Room> room = std::make_shared<Room>(roomID->id, playerId);
+    std::shared_ptr<ua_blackjack::Game::Room> room = std::make_shared<ua_blackjack::Game::Room>(roomID->id, playerId);
 
     roomHashMap[room->getRoomId()] = room;
     while (true)
@@ -37,7 +37,7 @@ void *destroyRoom(void *args)
     {
         poll(NULL, 0, 20); //每两秒删除一个房间
         std::cout << "delete one room" << std::endl;
-        if (std::shared_ptr<Room> roomPtr = roomHashMap[task.id].lock())
+        if (std::shared_ptr<ua_blackjack::Game::Room> roomPtr = roomHashMap[task.id].lock())
         {
             roomPtr->setExpire();
             co_resume(task.routine); //恢复协程，让其自己释放资源

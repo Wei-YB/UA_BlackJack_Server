@@ -29,57 +29,62 @@ using ua_blackjack::Response;
 /*************************/
 
 #include <memory>
-
-class ClientForTestUser
+namespace ua_blackjack
 {
-public:
-    typedef std::shared_ptr<ClientForTestUser> ptr;
-    static ClientForTestUser &getInstance()
+    namespace Game
     {
-        static ClientForTestUser instance(grpc::CreateChannel(
-            ProxyServiceAddr, grpc::InsecureChannelCredentials()));
-        return instance;
-    }
-    void printResponce(Response &responce)
-    {
-        std::stringstream ss;
-        ss << "ClientForTestUser status = " << responce.status() << " uid = " << responce.uid()
-           << " stamp = " << responce.stamp() << " args = ";
-        for (auto &s : responce.args())
+        class ClientForTestUser
         {
-            ss << s << " ";
-        }
+        public:
+            typedef std::shared_ptr<ClientForTestUser> ptr;
+            static ClientForTestUser &getInstance()
+            {
+                static ClientForTestUser instance(grpc::CreateChannel(
+                    ProxyServiceAddr, grpc::InsecureChannelCredentials()));
+                return instance;
+            }
+            void printResponce(Response &responce)
+            {
+                std::stringstream ss;
+                ss << "ClientForTestUser status = " << responce.status() << " uid = " << responce.uid()
+                   << " stamp = " << responce.stamp() << " args = ";
+                for (auto &s : responce.args())
+                {
+                    ss << s << " ";
+                }
 
-        spdlog::info(ss.str());
+                spdlog::info(ss.str());
+            }
+            void AsyncCompleteRpc();
+
+            void askBettingMoney(const BlackJackUID uid);
+            void askHitOrStand(const BlackJackUID uid);
+            void askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser);
+            void askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser, bool showDealerHidePker);
+            void askUpdate(const std::list<ua_blackjack::Game::Player::ptr> &playerList, const BlackJackUID notifyUser);
+            void askEnd(const BlackJackUID uid, FinalResultOfGame isWin);
+
+        private:
+            ClientForTestUser(std::shared_ptr<Channel> channel)
+                : stub_(ProxyService::NewStub(channel)) {}
+            ~ClientForTestUser(){};
+            ClientForTestUser(const ClientForTestUser &);
+            ClientForTestUser &operator=(const ClientForTestUser &);
+            // struct for keeping state and data information
+            struct AsyncClientCall
+            {
+                Response reply;
+
+                ClientContext context;
+
+                Status status;
+
+                std::unique_ptr<ClientAsyncResponseReader<Response>> response_reader;
+            };
+
+            std::unique_ptr<ProxyService::Stub> stub_;
+            CompletionQueue cq_;
+            uint64_t stamp = 0;
+        };
     }
-    void AsyncCompleteRpc();
-
-    void askBettingMoney(const BlackJackUID uid);
-    void askHitOrStand(const BlackJackUID uid);
-    void askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser);
-    void askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser, bool showDealerHidePker);
-    void askUpdate(const std::list<Player::ptr> &playerList, const BlackJackUID notifyUser);
-    void askEnd(const BlackJackUID uid, FinalResultOfGame isWin);
-
-private:
-    ClientForTestUser(std::shared_ptr<Channel> channel)
-        : stub_(ProxyService::NewStub(channel)) {}
-    ~ClientForTestUser(){};
-    ClientForTestUser(const ClientForTestUser &);
-    ClientForTestUser &operator=(const ClientForTestUser &);
-    // struct for keeping state and data information
-    struct AsyncClientCall
-    {
-        Response reply;
-
-        ClientContext context;
-
-        Status status;
-
-        std::unique_ptr<ClientAsyncResponseReader<Response>> response_reader;
-    };
-
-    std::unique_ptr<ProxyService::Stub> stub_;
-    CompletionQueue cq_;
-    uint64_t stamp = 0;
-};
+}

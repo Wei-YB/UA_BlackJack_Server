@@ -9,11 +9,11 @@
 int main(int agrc, char *argv[])
 {
 
-    std::thread thread_ = std::thread(&ClientForTestUser::AsyncCompleteRpc, &ClientForTestUser::getInstance());
+    std::thread thread_ = std::thread(&ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc, &ua_blackjack::Game::ClientForTestUser::getInstance());
     std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
 
     spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^---%L---%$] [thread %t] %v");
-    ServerImpl server;
+    ua_blackjack::Game::ServerImpl server;
     server.Run();
 
     spdlog::info("grpc async begin...");

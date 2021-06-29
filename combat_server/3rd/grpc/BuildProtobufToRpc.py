@@ -6,6 +6,24 @@ if os.path.exists("./cmake/build"):
 else:
     print("create ./cmake/build ")
     os.system("mkdir -p cmake/build")
+
+if os.path.exists("./grpc_cpp"):
+    print("./grpc_cpp exist")
+else:
+    print("create ./grpc_cpp ")
+    os.system("mkdir -p grpc_cpp")
+
+if os.path.exists("./grpc_h"):
+    print("./grpc_h exist")
+else:
+    print("create ./grpc_h ")
+    os.system("mkdir -p grpc_h")    
+
 os.chdir("./cmake/build")
 os.system("cmake -DCMAKE_PREFIX_PATH=$MY_INSTALL_DIR ../..")
 os.system("make")
+
+os.system("cp ./demo.grpc.pb.cc ../../grpc_cpp")
+os.system("cp ./demo.pb.cc ../../grpc_cpp")
+os.system("cp ./demo.grpc.pb.h ../../grpc_h")
+os.system("cp ./demo.pb.h ../../grpc_h")

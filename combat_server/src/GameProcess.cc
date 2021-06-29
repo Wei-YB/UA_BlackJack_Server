@@ -49,14 +49,14 @@ void *createOneGame(void *arg) //开启一局游戏
     {
         if (player->isDealer == true) //庄家无需设置筹码,但需要发开始信号
         {
-            ClientForTestUser::getInstance().askBettingMoney(player->uid);
+            ua_blackjack::Game::ClientForTestUser::getInstance().askBettingMoney(player->uid);
             myConditionSignal(conditionForWaitingRpc); //有机会唤醒
             continue;
         }
         if (player->isQuit == true) //玩家已退出游戏,不需要设置筹码
             continue;
 
-        ClientForTestUser::getInstance().askBettingMoney(player->uid);
+        ua_blackjack::Game::ClientForTestUser::getInstance().askBettingMoney(player->uid);
         myConditionSignal(conditionForWaitingRpc); //有机会唤醒
         conRet = 0;
         conRet = myConditionWait(env->cond, TIMEOUT_FOR_USER); //30秒内应收到信号
@@ -110,7 +110,7 @@ void *createOneGame(void *arg) //开启一局游戏
                 continue;
             }
 
-            ClientForTestUser::getInstance().askHitOrStand(player->uid);
+            ua_blackjack::Game::ClientForTestUser::getInstance().askHitOrStand(player->uid);
             myConditionSignal(conditionForWaitingRpc); //有机会唤醒
             conRet = 0;
             conRet = myConditionWait(env->cond, TIMEOUT_FOR_USER); //30秒内应收到信号
@@ -149,7 +149,7 @@ void *createOneGame(void *arg) //开启一局游戏
     for (auto &player : room->playerList)
     {
         if (player->isQuit == false)
-            ClientForTestUser::getInstance().askEnd(player->uid, player->finalResult); //send end request
+            ua_blackjack::Game::ClientForTestUser::getInstance().askEnd(player->uid, player->finalResult); //send end request
     }
     unUsedstEnvRoomID.push((room->getRoomId())); //协程结束，return后栈中资源释放，接着回收协程的协程开始工作
     myConditionSignal(conditionForClearRoom);    //唤醒清空协程
@@ -160,10 +160,10 @@ void *waitingSignalFromOtherModule(void *arg)
 {
     co_enable_hook_sys();
     conditionForWaitingRpc = createCondition(0);
-    ServerImpl *server = (ServerImpl *)arg;
+    ua_blackjack::Game::ServerImpl *server = (ua_blackjack::Game::ServerImpl *)arg;
 
     // Spawn a new CallData instance to serve new clients.
-    new ServerImpl::CallData(&server->service_, server->cq_.get());
+    new ua_blackjack::Game::ServerImpl::CallData(&server->service_, server->cq_.get());
     void *tag; // uniquely identifies a request.
     bool ok;
     gpr_timespec deadline;
@@ -179,7 +179,7 @@ void *waitingSignalFromOtherModule(void *arg)
         }
 
         GPR_ASSERT(ok);
-        static_cast<ServerImpl::CallData *>(tag)->Proceed();
+        static_cast<ua_blackjack::Game::ServerImpl::CallData *>(tag)->Proceed();
     }
 }
 void *recoveryUnusedCo(void *arg) //回收协程的协程
@@ -205,22 +205,22 @@ void *recoveryUnusedCo(void *arg) //回收协程的协程
         }
     }
 }
-void UpdateAll(std::list<Player::ptr> &list, BlackJackUID uid)
+void UpdateAll(std::list<ua_blackjack::Game::Player::ptr> &list, BlackJackUID uid)
 {
     for (auto player : list)
     {
         if (player->isQuit == false)
-            ClientForTestUser::getInstance().askUpdate(uid, player->uid);
+            ua_blackjack::Game::ClientForTestUser::getInstance().askUpdate(uid, player->uid);
     }
 }
-void UpdateAll(std::list<Player::ptr> &list, BlackJackUID uid, bool showDealerHide)
+void UpdateAll(std::list<ua_blackjack::Game::Player::ptr> &list, BlackJackUID uid, bool showDealerHide)
 {
     if (showDealerHide == true)
     {
         for (auto player : list)
         {
             if (player->isQuit == false)
-                ClientForTestUser::getInstance().askUpdate(uid, player->uid, showDealerHide);
+                ua_blackjack::Game::ClientForTestUser::getInstance().askUpdate(uid, player->uid, showDealerHide);
         }
     }
     else //这里不在意是谁的uid了
@@ -228,7 +228,7 @@ void UpdateAll(std::list<Player::ptr> &list, BlackJackUID uid, bool showDealerHi
         for (auto player : list)
         {
             if (player->isQuit == false)
-                ClientForTestUser::getInstance().askUpdate(list, player->uid);
+                ua_blackjack::Game::ClientForTestUser::getInstance().askUpdate(list, player->uid);
         }
     }
 }

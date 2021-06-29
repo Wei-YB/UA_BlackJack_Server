@@ -63,7 +63,7 @@ const std::string pokerMap[] =
         "diamondsK"
 
 };
-void Poker::showMessage() const
+void ua_blackjack::Game::Poker::showMessage() const
 {
     std::stringstream ss;
     ss << "Poker"
