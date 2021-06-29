@@ -945,7 +945,6 @@ CMakeFiles/example_game_single_play.dir/src/ClientForLobby.cc.o: /root/.local/in
 
 CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../3rd/grpc/grpc_h/demo.grpc.pb.h
 CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../3rd/grpc/grpc_h/demo.pb.h
-CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../3rd/grpc/grpc_h/server-asyn.h
 CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../3rd/libco/co_routine.h
 CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../3rd/libco/co_routine_inner.h
 CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../3rd/libco/coctx.h
@@ -998,6 +997,7 @@ CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../inc/Poker
 CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../inc/Room.h
 CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../inc/ShuffledPokers.h
 CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../inc/combat_typedef.h
+CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../inc/server-asyn.h
 CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: ../src/ClientForTestUser.cc
 CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: /root/.local/include/absl/base/attributes.h
 CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: /root/.local/include/absl/base/config.h
@@ -1195,7 +1195,6 @@ CMakeFiles/example_game_single_play.dir/src/ClientForTestUser.cc.o: /root/.local
 
 CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../3rd/grpc/grpc_h/demo.grpc.pb.h
 CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../3rd/grpc/grpc_h/demo.pb.h
-CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../3rd/grpc/grpc_h/server-asyn.h
 CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../3rd/libco/co_routine.h
 CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../3rd/libco/co_routine_inner.h
 CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../3rd/libco/coctx.h
@@ -1248,6 +1247,7 @@ CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../inc/Poker.h
 CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../inc/Room.h
 CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../inc/ShuffledPokers.h
 CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../inc/combat_typedef.h
+CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../inc/server-asyn.h
 CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: ../src/GameProcess.cc
 CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: /root/.local/include/absl/base/attributes.h
 CMakeFiles/example_game_single_play.dir/src/GameProcess.cc.o: /root/.local/include/absl/base/config.h
@@ -1739,7 +1739,6 @@ CMakeFiles/example_game_single_play.dir/src/Poker.cc.o: ../src/Poker.cc
 
 CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../3rd/grpc/grpc_h/demo.grpc.pb.h
 CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../3rd/grpc/grpc_h/demo.pb.h
-CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../3rd/grpc/grpc_h/server-asyn.h
 CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../3rd/libco/co_routine.h
 CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../3rd/libco/co_routine_inner.h
 CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../3rd/libco/coctx.h
@@ -1793,6 +1792,7 @@ CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../inc/Poker.h
 CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../inc/Room.h
 CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../inc/ShuffledPokers.h
 CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../inc/combat_typedef.h
+CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../inc/server-asyn.h
 CMakeFiles/example_game_single_play.dir/src/Room.cc.o: ../src/Room.cc
 CMakeFiles/example_game_single_play.dir/src/Room.cc.o: /root/.local/include/absl/base/attributes.h
 CMakeFiles/example_game_single_play.dir/src/Room.cc.o: /root/.local/include/absl/base/config.h

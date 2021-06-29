@@ -81,13 +81,10 @@ void *createOneGame(void *arg) //开启一局游戏
         {
             if (player->isStand == false) //用户没下注不准抽牌
                 player->hitPoker();
-        }
-    }
-    room->playerList.front()->pokerList.front()->setHide(); //将第一个玩家的第一张牌设为不可见(庄家的第一张牌为暗牌)
+            room->playerList.front()->pokerList.front()->setHide(); //将第一个玩家的第一张牌设为不可见(庄家的第一张牌为暗牌)
 
-    for (auto &player : room->playerList) //通知所有玩家把所有人的牌更新一下
-    {
-        UpdateAll(room->playerList, player->uid);
+            UpdateAll(room->playerList, player->uid);
+        }
     }
 
     //玩家可操作游戏
@@ -118,6 +115,7 @@ void *createOneGame(void *arg) //开启一局游戏
             {
                 player->quit(); //托管
                 player->hitPoker();
+                UpdateAll(room->playerList, player->uid);
                 spdlog::warn("uid {0:d} timeout and quit game", player->uid);
                 continue;
             }
@@ -142,9 +140,9 @@ void *createOneGame(void *arg) //开启一局游戏
         if (hasPlayerContinuePlay == false) //所有玩家均已停牌
             break;
     }
-    room->deleteRoom();
-    room->playerList.front()->pokerList.front()->cancelHide();  //庄家最后名牌
-    UpdateAll(room->playerList, room->playerList.front()->uid); //更新庄家的牌
+    room->playerList.front()->pokerList.front()->cancelHide();        //庄家最后名牌
+    UpdateAll(room->playerList, room->playerList.front()->uid, true); //更新庄家的牌
+    room->deleteRoom();                                               //检查输赢
     for (auto &player : room->playerList)
     {
         ClientForTestUser::getInstance().askEnd(player->uid, player->finalResult); //send end request
@@ -208,5 +206,12 @@ void UpdateAll(std::list<Player::ptr> &list, BlackJackUID uid)
     for (auto player : list)
     {
         ClientForTestUser::getInstance().askUpdate(uid, player->uid);
+    }
+}
+void UpdateAll(std::list<Player::ptr> &list, BlackJackUID uid, bool showDealerHide)
+{
+    for (auto player : list)
+    {
+        ClientForTestUser::getInstance().askUpdate(uid, player->uid, showDealerHide);
     }
 }

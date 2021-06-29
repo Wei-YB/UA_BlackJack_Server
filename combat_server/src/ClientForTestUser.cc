@@ -50,7 +50,6 @@ void ClientForTestUser::askHitOrStand(const BlackJackUID uid)
 }
 void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser) //第一个uid是哪个用户的信息更新了，第二个参数是发送给哪个用户
 {
-    spdlog::info("Start update");
 
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
@@ -64,21 +63,74 @@ void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID not
         std::stringstream tmp;
         tmp << ptr->uid;
         std::string updateArg = tmp.str();
-        for (auto &poker : ptr->pokerList)
+
+        auto poker = ptr->pokerList.back(); //发最后一张牌
+
+        if (auto ptrForThisClient = playerForClient.lock())
         {
-            if (auto ptrForThisClient = playerForClient.lock())
+            if (poker->isHide() == true && ptrForThisClient->isDealer == false) //普通玩家是看不到隐藏牌的
             {
-                if (poker->isHide() == true && ptrForThisClient->isDealer == false) //普通玩家是看不到隐藏牌的
-                {
-                    updateArg += " 0 0";
-                    continue;
-                }
+                updateArg += " 0 0";
             }
             else
             {
-                spdlog::error("Player not exist!!! {0}", notifyUser);
-                exit(1);
+                int color = poker->getValue() / 13 + 1;
+                updateArg += " ";
+                tmp.clear();
+                tmp.str(std::string());
+                tmp << color;
+                updateArg += tmp.str();
+                int num = poker->getValue() % 13 + 1;
+                updateArg += " ";
+                tmp.clear();
+                tmp.str(std::string());
+                tmp << num;
+                updateArg += tmp.str();
             }
+            request.add_args(updateArg);
+        }
+        else
+        {
+            spdlog::error("Player not exist!!! {0}", notifyUser);
+            exit(1);
+        }
+    }
+    else
+    {
+        spdlog::error("Player not exist!!! {0}", uid);
+        exit(1);
+    }
+    // Call object to store rpc data
+    AsyncClientCall *call = new AsyncClientCall;
+
+    call->response_reader =
+        stub_->PrepareAsyncNotify(&call->context, request, &cq_);
+
+    // StartCall initiates the RPC call
+    call->response_reader->StartCall();
+
+    call->response_reader->Finish(&call->reply, &call->status, (void *)call);
+}
+void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser, bool showDealerHidePker)
+{
+    Request request;
+    request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
+    request.set_uid(notifyUser);
+    request.set_stamp(STAMP_ASK_UPDATE);
+    request.add_args("update"); //"upate"：用户牌更新，任意一个用户的牌更新都需要通知Client
+    auto player = playerHashMap[uid];
+    auto playerForClient = playerHashMap[notifyUser];
+    if (auto ptr = player.lock())
+    {
+        std::stringstream tmp;
+        tmp << ptr->uid;
+        std::string updateArg = tmp.str();
+
+        auto poker = ptr->pokerList.front();
+
+        if (auto ptrForThisClient = playerForClient.lock())
+        {
+
             int color = poker->getValue() / 13 + 1;
             updateArg += " ";
             tmp.clear();
@@ -91,8 +143,14 @@ void ClientForTestUser::askUpdate(const BlackJackUID uid, const BlackJackUID not
             tmp.str(std::string());
             tmp << num;
             updateArg += tmp.str();
+
+            request.add_args(updateArg);
         }
-        request.add_args(updateArg);
+        else
+        {
+            spdlog::error("Player not exist!!! {0}", notifyUser);
+            exit(1);
+        }
     }
     else
     {

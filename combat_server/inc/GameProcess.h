@@ -31,3 +31,4 @@ void *waitingSignalFromOtherModule(void *arg);
 void *recoveryUnusedCo(void *arg); //回收协程的协程
 void askPlayerToSetBettingMoney(BlackJackUID uid);
 void UpdateAll(std::list<Player::ptr> &list, BlackJackUID uid);
+void UpdateAll(std::list<Player::ptr> &list, BlackJackUID uid, bool showDealerHide);

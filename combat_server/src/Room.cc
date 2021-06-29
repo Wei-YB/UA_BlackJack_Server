@@ -7,6 +7,7 @@
 #include "ClientForTestUser.h"
 #include "spdlog/spdlog.h"
 #include <sstream>
+#include "GameProcess.h"
 std::unordered_map<BlackJackRoomID, std::weak_ptr<Room>> roomHashMap;
 Room::ptr malloOneRoom(BlackJackRoomID rid, UidList &uids)
 {
@@ -57,6 +58,7 @@ void Room::judgeWinOrLose(void) //判断最后的输赢
     while (dealerFinalGameValue < 17)
     {
         dealer->hitPoker(); //抽牌
+        UpdateAll(playerList, dealer->uid);
         dealer->showMessage();
         int val = dealer->pokerList.back()->getValue() % 13 + 1;
         if (val == 1) //ace
