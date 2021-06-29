@@ -272,8 +272,10 @@ int main(int argc, char **argv)
     
     signal(SIGINT, stop_client);
     // now start to flood the proxy
+    time_point begin = std::chrono::steady_clock::now();
     while (!flag && loop.loopOnce(1000) != -1);
-    
+    time_point end = std::chrono::steady_clock::now();
+
     if (flag)
     {
         logger_ptr->info("program stopped by SIGINT.");
@@ -283,7 +285,10 @@ int main(int argc, char **argv)
         double sum = 0.0;
         for (int i = 0; i < stats.size(); ++i) sum += stats[i];
         sum /= stats.size();
-        std::cout << "average response time from proxy: " << sum << " ms" << std::endl;
+        std::cout << "QPS: " 
+                  << requests.size() * clientno / std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count()
+                  << std::endl;
+        std::cout << "average response time: " << sum << " ms" << std::endl;
     }
     //delete client;
     return 0;

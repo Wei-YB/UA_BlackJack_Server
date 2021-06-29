@@ -17,25 +17,22 @@ make -j
 ```bash
 ./proxy config_path start
 ```
-其中config_path是代理服务的配置文件路径，文件主要包含了监听客户端连接和请求的ip和端口、输出日志路径、代理对后端模块开放的gRPC服务地址，以及后端模块提供的gRPC服务的地址。最后一个参数除了可以填start外，还可以填stop，后者用于关闭该服务。
+其中config_path是代理服务的配置文件路径，文件主要包含了监听客户端连接和请求的ip和端口、输出日志路径、代理对后端模块开放的gRPC服务地址，以及后端模块提供的gRPC服务的地址。config文件夹中提供了两个配置例子，proxy.config是我们调试整个后端时的一个配置，test.config是压测时的配置。最后一个参数除了可以填start外，还可以填stop，后者用于关闭该服务。
 
-此外在test目录下包含了本模块简单的单元测试源码client.cpp和simpleBackEnd.cpp，后者主要用来模拟后端服务。client.cpp将samples.txt文件中指定的请求序列顺序地发送给proxy，并打印出发出的请求和接收到的请求内容（只有当模拟的客户端数量为1时才会打印出来）。为实现压力测试，它模拟n个（n可以自己在命令行参数中指定）客户端并发地往proxy发送一系列的请求，并统计所有请求-响应时间差的平均值，以此来衡量代理服务随客户端数量的性能变化曲线。单元测试的编译和运行
+此外在test目录下包含了本模块的单元测试源码client.cpp，它实现了简单的压力测试：在单线程中模拟n个（n可以自己在命令行参数中指定）客户端并发地往proxy发送一系列的请求，并记录每个请求收到响应所需的时间，最后计算出代理的QPS和平均响应时间。该测试中没有包含gRPC服务性能的测试，并且是在没有后端模块参与的情况下测试的，也就是说当代理收到用户请求、发给gRPC Client线程之后，gRPC Client线程并不会真发给后端服务模块，而是本地简单处理后直接发回给客户端。在测试代理模块之前，需要将include文件夹下的common.h文件中的`DEBUG_MODE`宏定义从0修改为1，然后重新编译代理模块。测试用例的编译和运行步骤如下：
+
 ```bash
+cd build
+make -j
+./proxy config_path start
+cd ..
 mkdir -p test/build
 cd test/build
 cmake ..
 make -j
-./simpleBackEnd log_path
 ./client host port samples_path client_number log_path
 ```
-其中log_path参数均为输出运行日志路径，host和port是代理监听的ip和端口，samples_path是samples.txt文件的路径，test文件夹下有一个预先写好的，client_number是要模拟的客户端数量。但在测试时候需要将代理的配置文件中各个后端服务模块的地址修改成
-```
-lobbyAddress localhost:50051
-roomAddress localhost:50052
-socialAddress localhost:50053
-playerAddress localhost:50054
-```
-然后再重启代理服务。
+其中log_path参数均为输出运行日志路径，host和port是代理监听的ip和端口，samples_path是samples.txt文件的路径，test文件夹下有一个预先写好的，client_number是要模拟的客户端数量。在测试时候需要用到config文件夹下的test.config配置。
 
 ## 代理与后端模块的通信
 代理模块与后端之间的通信通过gRPC来实现，并约定所有与代理交互的后端模块都暴露一个名为Notify的接口，代理模块也向后端暴露一个名为Notify的接口。接口入参和出参为protobuf message类型`Request`和`Response`，它的具体定义在protos文件夹下的UA_BlackJack.proto文件中。
