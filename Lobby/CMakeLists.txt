@@ -5,9 +5,12 @@ project("Lobby")
 
 include(common.cmake)
 
+if(CMAKE_BUILD_TYPE STREQUAL Debug)
+	 add_definitions(-D_DEBUG)
+	 message("DEBUG MODE ENABLE")
+endif()
 
 aux_source_directory(. LobbyFile)
 
-message(${LobbyFile})
 add_executable (LobbyServer  ${LobbyFile}   )
 target_link_libraries(LobbyServer ${_REFLECTION} ${_GRPC_GRPCPP} ${_PROTOBUF_LIBPROTOBUF} pthread spdlog)

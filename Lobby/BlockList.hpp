@@ -33,7 +33,7 @@ public:
 
 
     void PushBack(T&& call_data) {
-        spdlog::trace("new element push into block list");
+        SPDLOG_TRACE("new element push into block list");
         {
             std::lock_guard<std::mutex> lock_guard(mutex_);
             data_list_.emplace_back(std::move(call_data));
@@ -43,7 +43,7 @@ public:
     }
 
     void PushBack(const T& call_data) {
-        spdlog::trace("new element push into block list");
+        SPDLOG_TRACE("new element push into block list");
         {
             std::lock_guard<std::mutex> lock_guard(mutex_);
             data_list_.emplace_back(call_data);

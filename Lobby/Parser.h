@@ -1,5 +1,10 @@
 #pragma once
 
+#ifdef _DEBUG
+#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
+#endif
+
+
 #include "Lobby.h"
 #include "RPCClient.h"
 #include "UA_BlackJack.grpc.pb.h"

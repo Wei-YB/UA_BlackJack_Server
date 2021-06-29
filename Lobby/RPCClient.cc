@@ -60,11 +60,11 @@ void RPCClient::AsyncCompleteRpc() {
         auto*       call = static_cast<AsyncClientCall*>(got_tag);
         GPR_ASSERT(ok);
         if (call->status.ok()) {
-            spd::trace("success response with stamp {0}", call->reply.stamp());
+            SPDLOG_TRACE("success response with stamp {0}", call->reply.stamp());
             result_list_.PushBack(std::move(call->reply));
         }
         else {
-            spd::trace("got bad response");
+            SPDLOG_TRACE("got bad response");
             Response bad_response;
             bad_response.set_stamp(call->stamp);
             bad_response.set_status(-1);

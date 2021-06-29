@@ -1,13 +1,12 @@
 #pragma once
 
+#ifdef _DEBUG
+#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
+#endif
+
 
 #include <unordered_set>
-
 #include <vector>
-
-
-
-
 #include "RPCClient.h"
 #include "Players.h"
 #include "Room.h"
