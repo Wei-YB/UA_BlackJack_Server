@@ -187,8 +187,8 @@ void Room::deleteRoom(void)
     }
 
     /*************存储数据到数据库**************/
-    ClientForDatebase::getInstance().matchEnd(this->playerList); //向数据库发送
-    ClientForLobby::getInstance().matchEnd(this->getRoomId());   //向lobby发送
+    ua_blackjack::Game::ClientForDatebase::getInstance().matchEnd(this->playerList); //向数据库发送
+    ua_blackjack::Game::ClientForLobby::getInstance().matchEnd(this->getRoomId());   //向lobby发送
     /*************存储数据到数据库**************/
 }
 Room::~Room() //房间解散

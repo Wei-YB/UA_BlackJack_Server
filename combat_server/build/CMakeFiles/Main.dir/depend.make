@@ -503,7 +503,6 @@ CMakeFiles/Main.dir/src/ClientForDatebase.cc.o: ../3rd/spdlog/inc/spdlog/spdlog.
 CMakeFiles/Main.dir/src/ClientForDatebase.cc.o: ../3rd/spdlog/inc/spdlog/tweakme.h
 CMakeFiles/Main.dir/src/ClientForDatebase.cc.o: ../3rd/spdlog/inc/spdlog/version.h
 CMakeFiles/Main.dir/src/ClientForDatebase.cc.o: ../inc/ClientForDatebase.h
-CMakeFiles/Main.dir/src/ClientForDatebase.cc.o: ../inc/ClientForTestUser.h
 CMakeFiles/Main.dir/src/ClientForDatebase.cc.o: ../inc/Player.h
 CMakeFiles/Main.dir/src/ClientForDatebase.cc.o: ../inc/Poker.h
 CMakeFiles/Main.dir/src/ClientForDatebase.cc.o: ../inc/combat_typedef.h
@@ -748,7 +747,6 @@ CMakeFiles/Main.dir/src/ClientForLobby.cc.o: ../3rd/spdlog/inc/spdlog/spdlog.h
 CMakeFiles/Main.dir/src/ClientForLobby.cc.o: ../3rd/spdlog/inc/spdlog/tweakme.h
 CMakeFiles/Main.dir/src/ClientForLobby.cc.o: ../3rd/spdlog/inc/spdlog/version.h
 CMakeFiles/Main.dir/src/ClientForLobby.cc.o: ../inc/ClientForLobby.h
-CMakeFiles/Main.dir/src/ClientForLobby.cc.o: ../inc/ClientForTestUser.h
 CMakeFiles/Main.dir/src/ClientForLobby.cc.o: ../inc/Player.h
 CMakeFiles/Main.dir/src/ClientForLobby.cc.o: ../inc/Poker.h
 CMakeFiles/Main.dir/src/ClientForLobby.cc.o: ../inc/combat_typedef.h

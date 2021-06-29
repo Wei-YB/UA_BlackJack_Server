@@ -31,7 +31,8 @@ public:
         {
             playerList.emplace_back(std::make_shared<Player>(i));
             playerList.back()->setRoom(rid);
-            playerHashMap[i] = playerList.back(); //这个不能放在player的构造函数中，因为构造函数执行完时暂时没有shared_ptr指向他
+            playerHashMap[i] = playerList.back();                                      //这个不能放在player的构造函数中，因为构造函数执行完时暂时没有shared_ptr指向他
+            ua_blackjack::Game::ClientForDatebase::getInstance().askPlayerNickName(i); //设置nickname
         }
         playerList.front()->isDealer = true; //创建房间时，庄家为第一个进入房间的用户
     };

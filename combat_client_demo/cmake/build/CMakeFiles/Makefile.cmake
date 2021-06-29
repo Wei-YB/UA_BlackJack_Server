@@ -63,6 +63,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/testClinet.dir/DependInfo.cmake"
   "CMakeFiles/server-asyn.dir/DependInfo.cmake"
   "CMakeFiles/client-asyn.dir/DependInfo.cmake"
   "CMakeFiles/client-syn.dir/DependInfo.cmake"

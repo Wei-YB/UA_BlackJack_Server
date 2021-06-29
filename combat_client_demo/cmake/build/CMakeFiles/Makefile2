@@ -73,6 +73,7 @@ CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/testClinet.dir/all
 all: CMakeFiles/server-asyn.dir/all
 all: CMakeFiles/client-asyn.dir/all
 all: CMakeFiles/client-syn.dir/all
@@ -86,12 +87,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/testClinet.dir/clean
 clean: CMakeFiles/server-asyn.dir/clean
 clean: CMakeFiles/client-asyn.dir/clean
 clean: CMakeFiles/client-syn.dir/clean
 clean: CMakeFiles/hw_grpc_proto.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/testClinet.dir
+
+# All Build rule for target.
+CMakeFiles/testClinet.dir/all: CMakeFiles/hw_grpc_proto.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testClinet.dir/build.make CMakeFiles/testClinet.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testClinet.dir/build.make CMakeFiles/testClinet.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles --progress-num=11,12 "Built target testClinet"
+.PHONY : CMakeFiles/testClinet.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/testClinet.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/testClinet.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles 0
+.PHONY : CMakeFiles/testClinet.dir/rule
+
+# Convenience name for target.
+testClinet: CMakeFiles/testClinet.dir/rule
+
+.PHONY : testClinet
+
+# clean rule for target.
+CMakeFiles/testClinet.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testClinet.dir/build.make CMakeFiles/testClinet.dir/clean
+.PHONY : CMakeFiles/testClinet.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/server-asyn.dir

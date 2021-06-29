@@ -6,8 +6,9 @@ std::unordered_map<BlackJackRoomID, stEnv_t::ptr> roomEnvirHashMap; //roomid和�
 std::unordered_map<BlackJackRoomID, bool> roomEnvirExistHashMap;    //roomid和句柄是否存在的hash映射
 stCoRoutine_t *receiveSignalFromRPC;
 stCoRoutine_t *recoverystCo;
-int conditionForWaitingRpc;                              //接受rpc的信号量
-int conditionForClearRoom;                               //清楚房间的信号量
+int conditionForWaitingRpc; //接受rpc的信号量
+int conditionForClearRoom;  //清楚房间的信号量
+#define TIMEOUT_FOR_USER -1
 int createstEnv_t(BlackJackRoomID roomID, UidList &uids) //创建协程
 {
     std::stringstream ss;
@@ -46,16 +47,20 @@ void *createOneGame(void *arg) //开启一局游戏
     //选择筹码
     for (auto &player : room->playerList)
     {
-        if (player->isDealer == true) //庄家无需设置筹码
+        if (player->isDealer == true) //庄家无需设置筹码,但需要发开始信号
+        {
+            ClientForTestUser::getInstance().askBettingMoney(player->uid);
+            myConditionSignal(conditionForWaitingRpc); //有机会唤醒
             continue;
+        }
         if (player->isQuit == true) //玩家已退出游戏,不需要设置筹码
             continue;
 
         ClientForTestUser::getInstance().askBettingMoney(player->uid);
         myConditionSignal(conditionForWaitingRpc); //有机会唤醒
         conRet = 0;
-        conRet = myConditionWait(env->cond, 30000); //30秒内应收到信号
-        if (conRet == 0)                            //超时未收到信号，认为玩家已退出游戏
+        conRet = myConditionWait(env->cond, TIMEOUT_FOR_USER); //30秒内应收到信号
+        if (conRet == 0)                                       //超时未收到信号，认为玩家已退出游戏
         {
             player->quit();             //托管
             player->isStand = true;     //玩家停牌
@@ -81,12 +86,10 @@ void *createOneGame(void *arg) //开启一局游戏
         {
             if (player->isStand == false) //用户没下注不准抽牌
                 player->hitPoker();
-            room->playerList.front()->pokerList.front()->setHide(); //将第一个玩家的第一张牌设为不可见(庄家的第一张牌为暗牌)
-
-            UpdateAll(room->playerList, player->uid);
         }
     }
-
+    room->playerList.front()->pokerList.front()->setHide(); //将第一个玩家的第一张牌设为不可见(庄家的第一张牌为暗牌)
+    UpdateAll(room->playerList, 0, false);
     //玩家可操作游戏
     while (true)
     {
@@ -110,8 +113,8 @@ void *createOneGame(void *arg) //开启一局游戏
             ClientForTestUser::getInstance().askHitOrStand(player->uid);
             myConditionSignal(conditionForWaitingRpc); //有机会唤醒
             conRet = 0;
-            conRet = myConditionWait(env->cond, 30000); //30秒内应收到信号
-            if (conRet == 0)                            //超时未收到信号，认为玩家已退出游戏
+            conRet = myConditionWait(env->cond, TIMEOUT_FOR_USER); //30秒内应收到信号
+            if (conRet == 0)                                       //超时未收到信号，认为玩家已退出游戏
             {
                 player->quit(); //托管
                 player->hitPoker();
@@ -145,7 +148,8 @@ void *createOneGame(void *arg) //开启一局游戏
     room->deleteRoom();                                               //检查输赢
     for (auto &player : room->playerList)
     {
-        ClientForTestUser::getInstance().askEnd(player->uid, player->finalResult); //send end request
+        if (player->isQuit == false)
+            ClientForTestUser::getInstance().askEnd(player->uid, player->finalResult); //send end request
     }
     unUsedstEnvRoomID.push((room->getRoomId())); //协程结束，return后栈中资源释放，接着回收协程的协程开始工作
     myConditionSignal(conditionForClearRoom);    //唤醒清空协程
@@ -205,13 +209,26 @@ void UpdateAll(std::list<Player::ptr> &list, BlackJackUID uid)
 {
     for (auto player : list)
     {
-        ClientForTestUser::getInstance().askUpdate(uid, player->uid);
+        if (player->isQuit == false)
+            ClientForTestUser::getInstance().askUpdate(uid, player->uid);
     }
 }
 void UpdateAll(std::list<Player::ptr> &list, BlackJackUID uid, bool showDealerHide)
 {
-    for (auto player : list)
+    if (showDealerHide == true)
     {
-        ClientForTestUser::getInstance().askUpdate(uid, player->uid, showDealerHide);
+        for (auto player : list)
+        {
+            if (player->isQuit == false)
+                ClientForTestUser::getInstance().askUpdate(uid, player->uid, showDealerHide);
+        }
+    }
+    else //这里不在意是谁的uid了
+    {
+        for (auto player : list)
+        {
+            if (player->isQuit == false)
+                ClientForTestUser::getInstance().askUpdate(list, player->uid);
+        }
     }
 }

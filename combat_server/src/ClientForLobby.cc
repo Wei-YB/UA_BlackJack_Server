@@ -2,7 +2,7 @@
 #include <chrono>
 #include "spdlog/spdlog.h"
 #include <sstream>
-void ClientForLobby::matchEnd(const BlackJackRoomID roomid)
+void ua_blackjack::Game::ClientForLobby::matchEnd(const BlackJackRoomID roomid)
 {
     spdlog::info("Start lobby match end request");
     Request request;

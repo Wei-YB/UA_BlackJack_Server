@@ -39,5 +39,5 @@ macro(add_example_target EXAMPLE_TARGET)
     add_executable("example_${EXAMPLE_TARGET}" "${EXAMPLE_DIRECTORY}/example_${EXAMPLE_TARGET}.cc" ${DIR_SRCS} ${RPC_SRCS})
 endmacro(add_example_target)
 # 指定生成目标 
-add_example_target(create_delete_room)
-add_example_target(game_single_play)
+# add_example_target(create_delete_room)
+# add_example_target(game_single_play)

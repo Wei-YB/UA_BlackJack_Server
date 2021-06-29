@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Player.h"
 #include <iostream>
 #include <memory>
 #include <string>
@@ -29,6 +29,7 @@ using ua_blackjack::Response;
 /*************************/
 
 #include <memory>
+
 class ClientForTestUser
 {
 public:
@@ -42,7 +43,7 @@ public:
     void printResponce(Response &responce)
     {
         std::stringstream ss;
-        ss << "status = " << responce.status() << " uid = " << responce.uid()
+        ss << "ClientForTestUser status = " << responce.status() << " uid = " << responce.uid()
            << " stamp = " << responce.stamp() << " args = ";
         for (auto &s : responce.args())
         {
@@ -57,6 +58,7 @@ public:
     void askHitOrStand(const BlackJackUID uid);
     void askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser);
     void askUpdate(const BlackJackUID uid, const BlackJackUID notifyUser, bool showDealerHidePker);
+    void askUpdate(const std::list<Player::ptr> &playerList, const BlackJackUID notifyUser);
     void askEnd(const BlackJackUID uid, FinalResultOfGame isWin);
 
 private:

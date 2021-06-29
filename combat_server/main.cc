@@ -10,7 +10,7 @@ int main(int agrc, char *argv[])
 {
 
     std::thread thread_ = std::thread(&ClientForTestUser::AsyncCompleteRpc, &ClientForTestUser::getInstance());
-    thread_.detach();
+    std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
 
     spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^---%L---%$] [thread %t] %v");
     ServerImpl server;
@@ -28,5 +28,8 @@ int main(int agrc, char *argv[])
 
     //开启协程
     co_eventloop(co_get_epoll_ct(), NULL, NULL);
+
+    thread_.join();
+    thread2_.join();
     return 0;
 }

@@ -504,7 +504,6 @@ CMakeFiles/Main.dir/src/ClientForDatebase.cc.o
  ../3rd/spdlog/inc/spdlog/tweakme.h
  ../3rd/spdlog/inc/spdlog/version.h
  ../inc/ClientForDatebase.h
- ../inc/ClientForTestUser.h
  ../inc/Player.h
  ../inc/Poker.h
  ../inc/combat_typedef.h
@@ -749,7 +748,6 @@ CMakeFiles/Main.dir/src/ClientForLobby.cc.o
  ../3rd/spdlog/inc/spdlog/tweakme.h
  ../3rd/spdlog/inc/spdlog/version.h
  ../inc/ClientForLobby.h
- ../inc/ClientForTestUser.h
  ../inc/Player.h
  ../inc/Poker.h
  ../inc/combat_typedef.h

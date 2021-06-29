@@ -92,10 +92,12 @@ public:
                 {
                     reply_.add_args("Bet");
                     reply_.add_args("12345");
+                    std::cout << uid << " reply start successs" << std::endl;
                 }
                 else if (args[0] == "hit")
                 {
                     reply_.add_args("Hit");
+                    std::cout << uid << " reply hit successs" << std::endl;
                 }
                 std::cout << std::endl;
                 reply_.set_status(0);
@@ -226,7 +228,7 @@ int main()
     Client client(
         grpc::CreateChannel(target_str, grpc::InsecureChannelCredentials()));
 
-    for (int64_t rid = 0; rid < 0xffff; rid += 5)
+    for (int64_t rid = 3000; rid < 1; rid += 5)
     {
         client.StartGame(rid);
     }

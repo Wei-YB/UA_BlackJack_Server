@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named testClinet
+
+# Build rule for target.
+testClinet: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testClinet
+.PHONY : testClinet
+
+# fast build rule for target.
+testClinet/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testClinet.dir/build.make CMakeFiles/testClinet.dir/build
+.PHONY : testClinet/fast
+
+#=============================================================================
 # Target rules for targets named server-asyn
 
 # Build rule for target.
@@ -317,6 +330,33 @@ server-asyn.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/server-asyn.cc.s
 .PHONY : server-asyn.cc.s
 
+testClinet.o: testClinet.cc.o
+
+.PHONY : testClinet.o
+
+# target to build an object file
+testClinet.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testClinet.dir/build.make CMakeFiles/testClinet.dir/testClinet.cc.o
+.PHONY : testClinet.cc.o
+
+testClinet.i: testClinet.cc.i
+
+.PHONY : testClinet.i
+
+# target to preprocess a source file
+testClinet.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testClinet.dir/build.make CMakeFiles/testClinet.dir/testClinet.cc.i
+.PHONY : testClinet.cc.i
+
+testClinet.s: testClinet.cc.s
+
+.PHONY : testClinet.s
+
+# target to generate assembly for a file
+testClinet.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testClinet.dir/build.make CMakeFiles/testClinet.dir/testClinet.cc.s
+.PHONY : testClinet.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -329,6 +369,7 @@ help:
 	@echo "... client-syn"
 	@echo "... hw_grpc_proto"
 	@echo "... server-asyn"
+	@echo "... testClinet"
 	@echo "... client-asyn.o"
 	@echo "... client-asyn.i"
 	@echo "... client-asyn.s"
@@ -344,6 +385,9 @@ help:
 	@echo "... server-asyn.o"
 	@echo "... server-asyn.i"
 	@echo "... server-asyn.s"
+	@echo "... testClinet.o"
+	@echo "... testClinet.i"
+	@echo "... testClinet.s"
 .PHONY : help
 
 

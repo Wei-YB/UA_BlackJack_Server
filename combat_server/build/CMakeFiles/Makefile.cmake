@@ -63,7 +63,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/example_game_single_play.dir/DependInfo.cmake"
-  "CMakeFiles/example_create_delete_room.dir/DependInfo.cmake"
   "CMakeFiles/Main.dir/DependInfo.cmake"
   )

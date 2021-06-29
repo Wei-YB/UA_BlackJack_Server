@@ -7,7 +7,7 @@ class Room;
 #include <memory>
 #include <vector>
 #include "Poker.h"
-#include "ClientForTestUser.h"
+#include <string>
 class Player;
 extern std::unordered_map<BlackJackUID, std::weak_ptr<Player>> playerHashMap;
 class Player : std::enable_shared_from_this<Player>
@@ -24,6 +24,7 @@ public:
     bool isStand = false;                //是否停牌
     bool isQuit = false;                 //是否退游
     FinalResultOfGame finalResult = WIN; //默认用户会赢
+    std::string nickNmae;
 
     int getAccumulateOfPoker(void) const;     //获取用户当前手头的牌的大小
     void hitPoker(void);                      //用户从牌堆中拿取一张牌
