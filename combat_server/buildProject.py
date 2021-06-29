@@ -11,5 +11,5 @@ else:
     os.system("mkdir -p build")
 os.chdir("./build")
 os.system("cmake ..")
-os.system("make")
+os.system("make -j8")
 os.system("cp ./Main ..")

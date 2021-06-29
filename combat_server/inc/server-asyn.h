@@ -127,24 +127,7 @@ namespace ua_blackjack
               createstEnv_t(roomid, uids);
               uids.clear();
             }
-            /*
-        if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //创建房间
-        {
-          static uint64_t roomMemberSize = 0;
-          static ua_blackjack::GameServiceNamespace::UidList uids;
-          static ua_blackjack::GameServiceNamespace::BlackJackRoomID roomid;
-          spdlog::info("ONE PEROSON COME IN");
-          roomMemberSize++;
-          roomMemberSize %= 4;
-          uids.push_back(uid);
-          if (roomMemberSize == 0) //凑够2个人 demo，后面不需要这些，而是由lobby分配人过来
-          {
-            spdlog::info("CREATE ROOM");
-            createstEnv_t(roomid++, uids);
-            uids.clear();
-          }
-        }
-        */
+
             else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //退出房间
             {
               if (auto playerPtr = playerHashMap[uid].lock())

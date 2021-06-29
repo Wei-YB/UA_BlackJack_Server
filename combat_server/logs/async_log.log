@@ -1,0 +1,139 @@
+[16:50:47 +08:00] [async_file_logger] [---I---] [thread 27953] Server listening on 0.0.0.0:50051
+[16:50:47 +08:00] [async_file_logger] [---I---] [thread 27953] grpc async begin...
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27953] type = 33 uid = 0 stamp = 19
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27953] Create Room Ask come
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27953]  roomid = 2 uids = 2035 2033 2036 2034 
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27953] GAME BEGIN
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27953] Start database nickname request
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27953] Start database nickname request
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27953] Start database nickname request
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27953] Start database nickname request
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27953] Start betting rpc request uid 2035
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27953] Start betting rpc request uid 2033
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27958] ClientForDatebase status = 0 uid = 2034 stamp = 123456 args = krist 
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27958] ClientForDatebase status = 0 uid = 2036 stamp = 123456 args = ricki 
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27958] ClientForDatebase status = 0 uid = 2033 stamp = 123456 args = Owen 
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27958] ClientForDatebase status = 0 uid = 2035 stamp = 123456 args = Aaron 
+[17:03:22 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2035 stamp = 1 args = 
+[17:03:22 +08:00] [async_file_logger] [---W---] [thread 27957] uid 2035 dealer reply start game
+[17:03:30 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2033 stamp = 1 args = Bet 500 
+[17:03:30 +08:00] [async_file_logger] [---I---] [thread 27953] uid 2033 set betting money
+[17:03:30 +08:00] [async_file_logger] [---I---] [thread 27953] Start betting rpc request uid 2036
+[17:03:38 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2036 stamp = 1 args = Bet 20000 
+[17:03:38 +08:00] [async_file_logger] [---I---] [thread 27953] uid 2036 set betting money
+[17:03:38 +08:00] [async_file_logger] [---I---] [thread 27953] Start betting rpc request uid 2034
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2034 stamp = 1 args = Bet 1 
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] uid 2034 set betting money
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 4 9 3 5 uid 2035 index 1
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Owen 3 13 2 7 uid 2035 index 2
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args ricki 2 4 2 11 uid 2035 index 3
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args krist 3 9 2 8 uid 2035 index 4
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 0 0 3 5 uid 2033 index 1
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Owen 3 13 2 7 uid 2033 index 2
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args ricki 2 4 2 11 uid 2033 index 3
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args krist 3 9 2 8 uid 2033 index 4
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 0 0 3 5 uid 2036 index 1
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Owen 3 13 2 7 uid 2036 index 2
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args ricki 2 4 2 11 uid 2036 index 3
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args krist 3 9 2 8 uid 2036 index 4
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 0 0 3 5 uid 2034 index 1
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Owen 3 13 2 7 uid 2034 index 2
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args ricki 2 4 2 11 uid 2034 index 3
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args krist 3 9 2 8 uid 2034 index 4
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27953] Start ask hit uid 2033
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2036 stamp = 3 args = update 
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[17:03:43 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[17:04:05 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2033 stamp = 2 args = Hit 
+[17:04:05 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Owen 3 12 uid 2035
+[17:04:05 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Owen 3 12 uid 2033
+[17:04:05 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Owen 3 12 uid 2036
+[17:04:05 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Owen 3 12 uid 2034
+[17:04:05 +08:00] [async_file_logger] [---I---] [thread 27953] uid 2033 hit
+[17:04:05 +08:00] [async_file_logger] [---I---] [thread 27953] Start ask hit uid 2036
+[17:04:05 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2036 stamp = 3 args = update 
+[17:04:05 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[17:04:05 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[17:04:05 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[17:04:10 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2036 stamp = 2 args = Hit 
+[17:04:10 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args ricki 4 3 uid 2035
+[17:04:10 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args ricki 4 3 uid 2033
+[17:04:10 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args ricki 4 3 uid 2036
+[17:04:10 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args ricki 4 3 uid 2034
+[17:04:10 +08:00] [async_file_logger] [---I---] [thread 27953] uid 2036 hit
+[17:04:10 +08:00] [async_file_logger] [---I---] [thread 27953] Start ask hit uid 2034
+[17:04:10 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2036 stamp = 3 args = update 
+[17:04:10 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[17:04:10 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[17:04:10 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[17:04:14 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2034 stamp = 2 args = Stand 
+[17:04:14 +08:00] [async_file_logger] [---I---] [thread 27953] uid 2034 stand
+[17:04:14 +08:00] [async_file_logger] [---I---] [thread 27953] Start ask hit uid 2036
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2036 stamp = 2 args = Stand 
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] uid 2036 stand
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 4 9 uid 2035
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 4 9 uid 2033
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 4 9 uid 2036
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 4 9 uid 2034
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 1 4 uid 2035
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 1 4 uid 2033
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 1 4 uid 2036
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start Update request args Aaron 1 4 uid 2034
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Player--uid-2035-bettingMoney-0-roomid-2-accumulate-18
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-47-poke-diamonds9
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-30-poke-clubs5
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-3-poke-spades4
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] game over
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Player--uid-2035-bettingMoney-20501-roomid-2-accumulate-18
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-47-poke-diamonds9
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-30-poke-clubs5
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-3-poke-spades4
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Player--uid-2033-bettingMoney-500-roomid-2-accumulate-27
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-38-poke-clubsK
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-19-poke-hearts7
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-37-poke-clubsQ
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Player--uid-2036-bettingMoney-20000-roomid-2-accumulate-17
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-16-poke-hearts4
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-23-poke-heartsJ
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-41-poke-diamonds3
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Player--uid-2034-bettingMoney-1-roomid-2-accumulate-17
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-34-poke-clubs9
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Poker-isHide-0-value-20-poke-hearts8
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] 2035 WIN 20501
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] 2033 LOSE 500
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] 2036 LOSE 20000
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] 2034 LOSE 1
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start database match end request
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start lobby match end request
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start End request uid 2035 iswin0
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start End request uid 2033 iswin2
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start End request uid 2036 iswin2
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] Start End request uid 2034 iswin2
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2036 stamp = 3 args = update 
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2036
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2033
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2036 stamp = 3 args = update 
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] start delete room 2
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2036
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27953] complete delete room 2
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2034
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2033
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27958] ClientForDatebase status = 0 uid = 0 stamp = 0 args = 
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2034
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2036 stamp = 4 args = end 
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2036
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2033 stamp = 4 args = end 
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2033
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2035
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2034 stamp = 4 args = end 
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2034
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2035
+[17:04:17 +08:00] [async_file_logger] [---I---] [thread 27957] ClientForTestUser status = 1 uid = 2035 stamp = 4 args = end 
+[17:04:17 +08:00] [async_file_logger] [---W---] [thread 27957] unexpected reply uid 2035

@@ -6,12 +6,18 @@
 #include "ClientForTestUser.h"
 #include "spdlog/spdlog.h"
 #include <sstream>
+#include "spdlog/async.h"
+#include "spdlog/sinks/basic_file_sink.h"
 int main(int agrc, char *argv[])
 {
 
     std::thread thread_ = std::thread(&ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc, &ua_blackjack::Game::ClientForTestUser::getInstance());
     std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
 
+    auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", "logs/async_log.log");
+    spdlog::set_default_logger(async_file);
+
+    spdlog::flush_on(spdlog::level::trace);
     spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^---%L---%$] [thread %t] %v");
     ua_blackjack::Game::ServerImpl server;
     server.Run();
