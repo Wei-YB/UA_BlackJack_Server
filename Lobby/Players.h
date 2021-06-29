@@ -1,5 +1,10 @@
 #pragma once
 
+#ifdef _DEBUG
+#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
+#endif
+
+
 #include <unordered_map>
 #include <string>
 

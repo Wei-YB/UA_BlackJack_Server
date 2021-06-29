@@ -44,16 +44,19 @@ void CallData::ProceedCreate() {
     service_->RequestNotify(&ctx_, &request_, &responder_, cq_, cq_, this);
 }
 
+
 void CallData::ProceedNewRequest() {
     const auto request_type = request_.requesttype();
-    spd::info("new request come from {0}", ctx_.peer());
+    SPDLOG_INFO("new request come from {0}", ctx_.peer());
+    const auto& arg = request_.args();
+    SPDLOG_INFO("request type is {0}, uid is {1}", Request::RequestType_Name(request_type), request_.uid());
     parser_ = parser_factory_->NewParser(request_type);
     request_list_.PushBack(this);
     status_ = PROCESS;
 }
 
 void CallData::ProceedProcess(Response* rpc_result) {
-    spd::trace("process the request ");
+    SPDLOG_TRACE("process the request ");
     const auto result = parser_->Parse(request_, rpc_result, reply_);
     if (result) {
         status_ = FINISH;

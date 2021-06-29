@@ -24,7 +24,7 @@ void ua_blackjack::LobbyServer::ServerImpl::Run() {
 
     cq_     = builder.AddCompletionQueue();
     server_ = builder.BuildAndStart();
-    std::cout << "server listening on " << server_address << std::endl;
+    SPDLOG_INFO("server listening on {}", server_address);
     HandleRpcs();
 }
 
@@ -44,10 +44,10 @@ std::shared_ptr<grpc::Channel> ua_blackjack::LobbyServer::NewChannel(const std::
 }
 
 void ua_blackjack::LobbyServer::WorkThread() {
-    spdlog::info("event loop start");
+    SPDLOG_INFO("event loop start");
     auto epoll_fd = epoll_create(1);
     if (epoll_fd < 0) {
-        spd::error("create epoll fd error: ", strerror(errno));
+        SPDLOG_ERROR("create epoll fd error: ", strerror(errno));
     }
 
     epoll_event                          events[2] = {request_list_.GetEpollEvent(), response_list_.GetEpollEvent()};
@@ -56,20 +56,20 @@ void ua_blackjack::LobbyServer::WorkThread() {
     handler_map[response_list_.fd()] = [this]() { this->HandleResponse(); };
 
     if (epoll_ctl(epoll_fd, EPOLL_CTL_ADD, request_list_.fd(), events) < 0) {
-        spdlog::error("error in add request list: ", strerror(errno));
+        SPDLOG_ERROR("error in add request list: ", strerror(errno));
     }
     if (epoll_ctl(epoll_fd, EPOLL_CTL_ADD, response_list_.fd(), events + 1) < 0) {
-        spdlog::error("error in add response list: ", strerror(errno));
+        SPDLOG_ERROR("error in add response list: ", strerror(errno));
     }
 
     while (true) {
-        spd::trace("start next loop");
+        SPDLOG_TRACE("start next loop");
         auto ret = epoll_wait(epoll_fd, events, 2, -1);
         if (ret < 0) {
-            spd::error("epoll wait return error: {0}", strerror(errno));
+            SPDLOG_ERROR("epoll wait return error: {0}", strerror(errno));
         }
         else
-            spd::trace("{0} event active", ret);
+            SPDLOG_TRACE("{0} event active", ret);
         for (int i = 0; i < ret; ++i) {
             handler_map[events[i].data.fd]();
         }
@@ -77,38 +77,38 @@ void ua_blackjack::LobbyServer::WorkThread() {
 }
 
 void ua_blackjack::LobbyServer::HandleRequest() {
-    spd::trace("request list active");
+    SPDLOG_TRACE("request list active");
     uint64_t val;
     read(request_list_.fd(), &val, sizeof val);
 
     auto top = request_list_.PopFront();
     top->Proceed();
-    auto stage = top->GetCallStatus();
+    const auto stage = top->GetCallStatus();
     if (stage != CallData::FINISH) {
         rpc_info_[top->GetStamp()] = top;
     }
 }
 
 void ua_blackjack::LobbyServer::HandleResponse() {
-    spd::trace("response list active");
+    SPDLOG_TRACE("response list active");
 
     uint64_t val;
     read(response_list_.fd(), &val, sizeof val);
     auto response = response_list_.PopFront();
     auto stamp    = response.stamp();
-    spd::trace("get response with stamp {0}", stamp);
+    SPDLOG_TRACE("get response with stamp {0}", stamp);
     if (rpc_info_.count(stamp)) {
         auto call_data = rpc_info_[stamp];
         call_data->Proceed(&response);
         auto stage = call_data->GetCallStatus();
         if (stage != CallData::FINISH) {
             auto new_stamp = call_data->GetStamp();
-            spd::trace("unfinish call data with rpc call stamp {0}", new_stamp);
+            SPDLOG_TRACE("call data with another rpc call stamp {0}", new_stamp);
             rpc_info_[new_stamp] = call_data;
         }
         rpc_info_.erase(stamp);
     }
     else {
-        spd::trace("useless stamp, no need to process");
+        SPDLOG_TRACE("useless stamp, no need to process");
     }
 }

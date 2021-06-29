@@ -1,3 +1,7 @@
+#ifdef _DEBUG
+#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
+#endif
+
 #include "LobbyService.h"
 
 using ua_blackjack::LobbyServer;

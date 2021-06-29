@@ -38,6 +38,9 @@ void Lobby::Logout(UID uid) {
     if (AllPlayers_.GetStatus(uid) == Players::Status::OFFLINE) {
         return;
     }
+    if(AllPlayers_.GetStatus(uid) == Players::Status::PLAYING) {
+        client_.LeaveRoom(uid);
+    }
     if (AllPlayers_.GetStatus(uid) == Players::Status::IN_ROOM_NOT_READY ||
         AllPlayers_.GetStatus(uid) == Players::Status::IN_ROOM_READY ||
         AllPlayers_.GetStatus(uid) == Players::Status::PLAYING) {
@@ -101,9 +104,9 @@ bool Lobby::JoinRoom(UID uid, RoomID rid) {
 }
 
 bool Lobby::LeaveRoom(UID uid) {
-    //the players status is not in room   
-    if (AllPlayers_.GetStatus(uid) != Players::Status::IN_ROOM_NOT_READY &&
-        AllPlayers_.GetStatus(uid) != Players::Status::IN_ROOM_READY) {
+    //the players status is not in room
+    const auto status = AllPlayers_.GetStatus(uid);
+    if (!(status == Players::Status::IN_ROOM_NOT_READY || status== Players::Status::IN_ROOM_READY)) {
         logger->warn("Player:{0:d} is not in room, can not leave any room.", uid);
         return false;
     }
@@ -144,8 +147,12 @@ bool Lobby::LeaveRoom(UID uid) {
 }
 
 bool Lobby::PlayerReady(UID uid) {
+    if (AllPlayers_.GetStatus(uid) == Players::Status::IN_ROOM_READY) {
+        SPDLOG_TRACE("player {0} is ready, no need to read agagin", uid);
+        return true;
+    }
     if (AllPlayers_.GetStatus(uid) != Players::Status::IN_ROOM_NOT_READY) {
-        logger->trace("Player:{0:d} is not in room with the status of not ready, can not choose the PlayerReady.", uid);
+        SPDLOG_TRACE("Player:{0:d} is not in room with the status of not ready, can not choose the PlayerReady.", uid);
         return false;
     }
 
@@ -155,7 +162,7 @@ bool Lobby::PlayerReady(UID uid) {
     assert(rid>0);
     AllRooms_[rid].Ready(uid);
 
-    logger->info("Player:{0:d} has been ready in the room:{1:d}", uid, rid);
+    SPDLOG_TRACE("Player:{0:d} has been ready in the room:{1:d}", uid, rid);
     //every time playerReady needs 
     CheckRoomDone(rid);
 

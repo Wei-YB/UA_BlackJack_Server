@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef _DEBUG
+#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
+#endif
+
 #include <grpcpp/grpcpp.h>
 #include "UA_BlackJack.grpc.pb.h"
 
@@ -60,7 +64,7 @@ private:
         const auto request_type = request.requesttype();
         call->response_reader   = stub->PrepareAsyncNotify(&call->context, request, &cq_);
         call->response_reader->StartCall();
-        spdlog::trace("rpc async call with request type: {0}", static_cast<int>(request_type));
+        SPDLOG_TRACE("rpc async call with request type: {0}", Request::RequestType_Name(request_type));
         call->response_reader->Finish(&call->reply, &call->status, call);
     }
 

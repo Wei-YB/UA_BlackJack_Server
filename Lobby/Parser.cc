@@ -86,22 +86,22 @@ bool LoginParser::Parse(const Request& request, Response* rpcResult, Response& r
         }
         password = request.args()[1];
         nickname = request.args()[0];
-        spdlog::trace("rpc call get uid with nickname {0}", nickname);
+        SPDLOG_TRACE("rpc call get uid with nickname {0}", nickname);
         stamp_ = client_.GetUid(nickname);
         
-        spdlog::trace("this call stamp is {0}", stamp_);
+        SPDLOG_TRACE("this call stamp is {0}", stamp_);
         state_ = RPC_State::GET_UID;
         return false;
     }
     if (state_ == RPC_State::GET_UID) {
-        spdlog::trace("try to get uid from rpc result");
+        SPDLOG_TRACE("try to get uid from rpc result");
         if(rpcResult->status() == -1) {
             spdlog::error("get bad response from database");
             response.set_uid(-1);
             return true;
         }
         const auto uid = rpcResult->uid();
-        spdlog::trace("rpc get_uid get response: {0}, which nickname is {1}", uid, nickname);
+        SPDLOG_TRACE("rpc get_uid get response: {0}, which nickname is {1}", uid, nickname);
         if (uid < 0) {
             return true;
         }
@@ -117,7 +117,7 @@ bool LoginParser::Parse(const Request& request, Response* rpcResult, Response& r
             return true;
         }
         const auto& real_pass = rpcResult->args(0);
-        spdlog::trace("rpc get_pass get response: {0}, which uid is {1}", real_pass, response.uid());
+        SPDLOG_TRACE("rpc get_pass get response: {0}, which uid is {1}", real_pass, response.uid());
         const auto ret = lobby_.Login(nickname, password, response.uid(), real_pass);
         if (ret >= 0) {
             response.set_uid(ret);
