@@ -161,7 +161,7 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request &request)
 // this callback directly forward the response to RpcServer
 void ProxyServer::OnClientResponse(Response &response)
 {
-    logger_ptr->info("In main thread: Get response from client (uid: {0})", response.uid());
+    logger_ptr->info("In main thread: Get response (stamp: {1}) from client (uid: {0})", response.uid(), response.stamp());
     if (clientResponseCallBack_)
         clientResponseCallBack_(response);
 }

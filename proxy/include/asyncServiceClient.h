@@ -69,7 +69,8 @@ private:
     {
         void *got_tag;
         bool ok = false;
-        std::cout << "enter " << serviceName_ << " thread" << std::endl;
+        // std::cout << "enter " << serviceName_ << " thread" << std::endl;
+        logger_ptr->info("In {0} thread: Thread started.", serviceName_);
         time_point deadline = std::chrono::system_clock::now() +
                                 std::chrono::milliseconds(500);
         grpc::CompletionQueue::NextStatus sta;
@@ -107,7 +108,7 @@ private:
             deadline = std::chrono::system_clock::now() +
                         std::chrono::milliseconds(500);
         }
-        std::cout << "In gRPC client {0} thread: leaving the thread" << std::endl;
+        logger_ptr->info("In {} thread: leaving the thread", serviceName_);
     }
 
 #else

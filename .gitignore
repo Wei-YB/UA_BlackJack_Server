@@ -1,0 +1,6 @@
+./proxy/build/
+./proxy/test/build/
+./proxy/protos/build/
+./proxy/log/
+*.a
+*.so

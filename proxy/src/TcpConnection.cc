@@ -120,13 +120,13 @@ int TcpConnection::OnOutput()
 {
     // check whether we can get some data from upper layer
     if (outputCallBack_ 
-        && writeBuffer_.size() + 2 * PACKAGE_HDR_LEN < writeBuffer_.capacity())
+        && (writeBuffer_.size() + 2 * PACKAGE_HDR_LEN < writeBuffer_.capacity()))
     {
         outputCallBack_();
     }
     if (writeBuffer_.empty())
-    {   logger_ptr->info("In main thread: connection (sockfd: {0}) has no data to send, unregister EV_IN event.", SockFd());
-        // std::cout << "TcpConnection::OnOutput: " << std::endl;
+    {   
+        logger_ptr->info("In main thread: connection (sockfd: {0}) has no data to send, unregister EV_IN event.", SockFd());
         eventsSource_->Update(Net::EV_IN | Net::EV_ET | Net::EV_ERR);
         return 0;
     }
@@ -148,9 +148,8 @@ int TcpConnection::Send(const std::string &pkgsData)
     put(writeBuffer_, pkgsData.c_str(), pkgsData.size());
     // try to write it immediately
     int bytesWritten = write(eventsSource_->fd(), writeBuffer_);
-    if (bytesWritten < 0 && errno != EWOULDBLOCK && errno != EAGAIN)
+    if (bytesWritten < 0)
     {   logger_ptr->info("In main thread: connection (sockfd: {0}) send with fatal error!", SockFd());
-        std::cout << "In main thread: send fail!" << std::endl;
         return -1;
     }
     // if there are data left

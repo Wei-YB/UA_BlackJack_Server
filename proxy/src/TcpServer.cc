@@ -40,9 +40,9 @@ TcpServer::TcpServer(const char *ip,
         : loop_(loop), connectionCallBack_(connCb), errorCallBack_(errCb)
 {
     eventsSource_ = std::make_shared<EventsSource>(socket(AF_INET, SOCK_STREAM, 0), loop, 
-                                        std::bind(&TcpServer::OnConnection, this),
-                                        nullptr,
-                                        std::bind(&TcpServer::OnError, this));
+                                                std::bind(&TcpServer::OnConnection, this),
+                                                nullptr,
+                                                std::bind(&TcpServer::OnError, this));
     addr_.sin_family = AF_INET;
     addr_.sin_port = htons(port);
     if (inet_pton(AF_INET, ip, &addr_.sin_addr) == 0)
