@@ -29,41 +29,41 @@ if(NOT TARGET spdlog)
                 PATHS /usr/local/lib64/cmake/spdlog)
 endif()
 
-# find_package(Protobuf)
-# message(STATUS "Using protobuf ${Protobuf_VERSION}")
-# set(_PROTOBUF_LIBPROTOBUF protobuf::libprotobuf)
-# set(_REFLECTION gRPC::grpc++_reflection)
-# set(_PROTOBUF_PROTOC $<TARGET_FILE:protobuf::protoc>)
-
-# find_package(gRPC)
-# message(STATUS "Using gRPC ${gRPC_VERSION}")
-# set(_GRPC_GRPCPP gRPC::grpc++)
-# set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:gRPC::grpc_cpp_plugin>)
-
-#
-set(protobuf_MODULE_COMPATIBLE TRUE)
-find_package(Protobuf CONFIG REQUIRED)
+find_package(Protobuf)
 message(STATUS "Using protobuf ${Protobuf_VERSION}")
-
 set(_PROTOBUF_LIBPROTOBUF protobuf::libprotobuf)
 set(_REFLECTION gRPC::grpc++_reflection)
-if(CMAKE_CROSSCOMPILING)
-  find_program(_PROTOBUF_PROTOC protoc)
-else()
-  set(_PROTOBUF_PROTOC $<TARGET_FILE:protobuf::protoc>)
-endif()
+set(_PROTOBUF_PROTOC $<TARGET_FILE:protobuf::protoc>)
 
-# Find gRPC installation
-# Looks for gRPCConfig.cmake file installed by gRPC's cmake installation.
-find_package(gRPC CONFIG REQUIRED)
+find_package(gRPC)
 message(STATUS "Using gRPC ${gRPC_VERSION}")
-
 set(_GRPC_GRPCPP gRPC::grpc++)
-if(CMAKE_CROSSCOMPILING)
-  find_program(_GRPC_CPP_PLUGIN_EXECUTABLE grpc_cpp_plugin)
-else()
-  set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:gRPC::grpc_cpp_plugin>)
-endif()
+set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:gRPC::grpc_cpp_plugin>)
+
+#
+# set(protobuf_MODULE_COMPATIBLE TRUE)
+# find_package(Protobuf CONFIG REQUIRED)
+# message(STATUS "Using protobuf ${Protobuf_VERSION}")
+
+# set(_PROTOBUF_LIBPROTOBUF protobuf::libprotobuf)
+# set(_REFLECTION gRPC::grpc++_reflection)
+# if(CMAKE_CROSSCOMPILING)
+#   find_program(_PROTOBUF_PROTOC protoc)
+# else()
+#   set(_PROTOBUF_PROTOC $<TARGET_FILE:protobuf::protoc>)
+# endif()
+
+# # Find gRPC installation
+# # Looks for gRPCConfig.cmake file installed by gRPC's cmake installation.
+# find_package(gRPC CONFIG REQUIRED)
+# message(STATUS "Using gRPC ${gRPC_VERSION}")
+
+# set(_GRPC_GRPCPP gRPC::grpc++)
+# if(CMAKE_CROSSCOMPILING)
+#   find_program(_GRPC_CPP_PLUGIN_EXECUTABLE grpc_cpp_plugin)
+# else()
+#   set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:gRPC::grpc_cpp_plugin>)
+# endif()
 
 # find_program(_GRPC_CPP_PLUGIN_EXECUTABLE grpc_cpp_plugin)
 

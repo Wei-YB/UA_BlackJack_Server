@@ -31,6 +31,7 @@ EventsSource::EventsSource(FileDesc fd, EventLoop *loop,
 
 int EventsSource::HandleEvents(Event events)
 {
+    int ret;
     if (events & EV_HUP || events & EV_ERR)
     {   // logger_ptr->warn("fatal error happens in event source (fd: {}), close it now.", fd_);
         if (closeEventCallBack_) 
@@ -55,13 +56,14 @@ int EventsSource::HandleEvents(Event events)
 
 int EventsSource::EnableWrite()
 {
+    int ret;
     if (events_ & EV_OUT)
     {
         logger_ptr->info("In main thread: On error event from fd: {}", fd_);
         ret = errEventCallBack_() == -1 ? -1 : ret; 
     }
     events_ |= EV_OUT | EV_ET;
-    return loop->mod(share_from_this());
+    return loop_->mod(share_from_this());
 }
 
 int EventsSource::EnableRead()
@@ -71,10 +73,11 @@ int EventsSource::EnableRead()
         return 0;
     }
     events_ |= EV_IN | EV_ET;
-    return loop->mod(share_from_this());
+    return loop_->mod(share_from_this());
 }
 
 int EventsSource::Close()
+{
     ::close(fd_);
     return loop_->del(share_from_this());
 }

@@ -23,6 +23,8 @@ project(Proxy C CXX)
 
 include(common.cmake)
 
+add_subdirectory(src bin)
+
 
 get_filename_component(bj_proto "${PROJECT_SOURCE_DIR}/protos/UA_BlackJack.proto" ABSOLUTE)
 get_filename_component(bj_proto_path "${bj_proto}" PATH)
