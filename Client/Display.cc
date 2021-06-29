@@ -1,5 +1,7 @@
 #include "Display.h"
 
+using namespace ua_blackjack::display;
+
 void Display::DisplayResponse(ua_blackjack::Response& response, const ua_blackjack::Request::RequestType& type) {
     switch (type) {
         case ua_blackjack::Request::SIGNUP:
@@ -77,6 +79,7 @@ void Display::DisplayResponseLogin(ua_blackjack::Response& response) {
     }
 
     PrintPrompt("Login Successful");
+    std::cout << "uid:" << response.uid() << std::endl;
 }
 void Display::DisplayResponseLogout(ua_blackjack::Response& response) {
     if (response.status() == -1) {
@@ -125,6 +128,8 @@ void Display::DisplayResponseQuickMatch(ua_blackjack::Response& response) {
     }
 
     PrintPrompt("QuickMatch Successful");
+
+    std::cout << "Room id: " << response.args()[0] << std::endl;
 }
 void Display::DisplayResponseReady(ua_blackjack::Response& response) {
     if (response.status() == -1) {
@@ -243,17 +248,37 @@ void Display::PrintPrompt(const std::string& prompt) {
     std::cout << star << std::endl;
 }
 
-void Display::DisplayCards(int idx_, std::unordered_map<int, int>& idx2uid_, std::vector<std::pair<int, int>>* cards_) {
+void Display::DisplayCards(int idx_, std::unordered_map<int, std::string>& idx2name_,
+                           std::unordered_map<std::string, int>& name2idx_, std::string& name_,
+                           std::vector<std::pair<int, int>>* cards_, bool dealer_) {
     PrintPrompt("Cards Update");
 
+    int dealer_idx = -1;
+    if (dealer_) {
+        dealer_idx = name2idx_[name_];
+    } else {
+        for (int i = 0; i < idx_; ++i) {
+            if (cards_[i][0].second == 0) dealer_idx = i;
+        }
+    }
+
+    if (dealer_idx >= 0 && cards_[dealer_idx].size() == 3) {
+        cards_[dealer_idx][0] = cards_[dealer_idx][2];
+        cards_[dealer_idx][2] = {-1, -1};
+    }
+
     for (int i = 0; i < idx_; ++i) {
-        std::cout << idx2uid_[i] << ": ";
+        std::cout << idx2name_[i] << ": ";
+
         for (int j = 0; j < cards_[i].size(); ++j) {
+            if (cards_[i][j].second < 0) continue;
+
             if (cards_[i][j].second == 0)
                 std::cout << "* ";
             else
                 std::cout << cards_[i][j].second << " ";
         }
+
         std::cout << std::endl;
     }
 }

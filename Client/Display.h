@@ -2,10 +2,13 @@
 #define DISPLAY_H
 
 #include <string>
+#include <unordered_set>
 #include <vector>
 
 #include "UA_BlackJack.pb.h"
 
+namespace ua_blackjack {
+namespace display {
 class Display {
 public:
     static Display& DisplayInstance() {
@@ -18,7 +21,9 @@ public:
 
     void DisplayResponse(ua_blackjack::Response& response, const ua_blackjack::Request::RequestType& type);
     void PrintPrompt(const std::string& prompt);
-    void DisplayCards(int idx_, std::unordered_map<int, int>& idx2uid_, std::vector<std::pair<int, int>>* cards_);
+    void DisplayCards(int idx_, std::unordered_map<int, std::string>& idx2name_,
+                      std::unordered_map<std::string, int>& name2idx_, std::string& name_,
+                      std::vector<std::pair<int, int>>* cards_, bool dealer_);
 
 private:
     Display() = default;
@@ -42,5 +47,7 @@ private:
     void DisplayResponseFriendList(ua_blackjack::Response& response);
     void DisplayResponseWaitingFriendList(ua_blackjack::Response& response);
 };
+}  // namespace display
+}  // namespace ua_blackjack
 
 #endif

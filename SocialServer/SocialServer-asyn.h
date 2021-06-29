@@ -25,6 +25,8 @@ using ua_blackjack::Response;
 using ua_blackjack::SocialService;
 /*************************/
 
+namespace ua_blackjack {
+namespace social_server {
 class ServerImpl final {
 public:
     ~ServerImpl() {
@@ -69,5 +71,7 @@ private:
     SocialService::AsyncService service_;
     std::unique_ptr<Server> server_;
 };
+}  // namespace social_server
+}  // namespace ua_blackjack
 
 #endif

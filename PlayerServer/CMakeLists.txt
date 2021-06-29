@@ -51,4 +51,5 @@ target_link_libraries(PlayerServer-asyn
   hw_grpc_proto
   ${_REFLECTION}
   ${_GRPC_GRPCPP}
-  ${_PROTOBUF_LIBPROTOBUF})
+  ${_PROTOBUF_LIBPROTOBUF}
+  spdlog)

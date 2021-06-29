@@ -27,6 +27,8 @@
 #define BUFFSIZE 8192
 #define MAX_PLAYER_NUM 6
 
+namespace ua_blackjack {
+namespace client {
 class Client {
 public:
     friend class Display;
@@ -68,7 +70,8 @@ public:
                      {INGAME_IDLE, "INGAME_IDLE"},
                      {INGAME_TURN, "INGAME_TURN"}},
           idx_(0),
-          request_type_(ua_blackjack::Request::INVAL) {}
+          request_type_(ua_blackjack::Request::INVAL),
+          dealer_(false) {}
 
     void Run(const char* ip, const char* port);
 
@@ -78,6 +81,8 @@ private:
     int rid_;   // room id
     int epfd_;  // epoll fd
     std::string name_;
+    std::string name_tmp_;
+    bool dealer_;
     std::unordered_map<std::string, std::pair<ua_blackjack::Request::RequestType, int>> cmd2req_;
     enum State { INVALID, OFFLINE, ONLINE, INROOM_UNREADY, INROOM_READY, INGAME_IDLE, INGAME_TURN } state_, next_state_;
     enum DataType { REQUEST = 1, RESPONSE = 2 };
@@ -89,8 +94,8 @@ private:
     static void* ListenProxy(void* arg);
     void GameEnd(ua_blackjack::Request& request);
 
-    void ProcessCommand(Rio& rio);
-    void ProcessSocket(Rio& rio);
+    void ProcessCommand(ua_blackjack::robust_io::Rio& rio);
+    void ProcessSocket(ua_blackjack::robust_io::Rio& rio);
 
     std::vector<std::string> GetCommandArgs();
     std::vector<std::string> Parse(const std::string& command);
@@ -118,10 +123,13 @@ private:
 
     int idx_;
     std::vector<std::pair<int, int>> cards_[MAX_PLAYER_NUM];
-    std::unordered_map<int, int> uid2idx_;
-    std::unordered_map<int, int> idx2uid_;
+    std::unordered_map<std::string, int> name2idx_;
+    std::unordered_map<int, std::string> idx2name_;
 
     ua_blackjack::Request::RequestType request_type_;
 };
+}  // namespace client
+
+}  // namespace ua_blackjack
 
 #endif

@@ -9,6 +9,8 @@
 #include <algorithm>
 #include <cstring>
 
+namespace ua_blackjack {
+namespace robust_io {
 class Rio {
 public:
     Rio(int fd) : fd_(fd), cnt_(0), bufptr_(buff_) {}
@@ -26,5 +28,7 @@ private:
 
     int RioBufferRead(char* usrbuf, int n);
 };
+}  // namespace robust_io
+}  // namespace ua_blackjack
 
 #endif

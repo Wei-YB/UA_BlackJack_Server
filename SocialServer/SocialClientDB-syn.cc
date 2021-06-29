@@ -18,7 +18,9 @@
 
 #include "SocialClientDB-syn.h"
 
-void Client::CheckStatus(const Status& status) {
+using namespace ua_blackjack::social_client;
+
+void SocialClient::CheckStatus(const Status& status) {
     // Act upon its status.
     if (status.ok()) {
         std::cout << "Got Reply" << std::endl;
@@ -27,7 +29,8 @@ void Client::CheckStatus(const Status& status) {
     }
 }
 
-int Client::Name2Uid(ClientContext& context, const std::string& name) {
+int SocialClient::Name2Uid(const std::string& name) {
+    ClientContext context;
     Response reply;
     Request request;
 
@@ -40,7 +43,8 @@ int Client::Name2Uid(ClientContext& context, const std::string& name) {
     return reply.uid();
 }
 
-std::string Client::Uid2Name(ClientContext& context, int uid) {
+std::string SocialClient::Uid2Name(int uid) {
+    ClientContext context;
     Response reply;
     Request request;
 
@@ -52,14 +56,14 @@ std::string Client::Uid2Name(ClientContext& context, int uid) {
     return reply.args()[0];
 }
 
-Response Client::RequestDB(Request& request) {
+Response SocialClient::RequestDB(Request& request) {
     Response reply;
 
     ClientContext context;
 
     int uid = request.uid();
     std::string friend_name = request.args()[0];
-    int friend_id = Name2Uid(context, friend_name);
+    int friend_id = Name2Uid(friend_name);
 
     Request request_fri;
     request_fri.set_uid(friend_id);
@@ -98,7 +102,7 @@ Response Client::RequestDB(Request& request) {
     int sz = reply.args().size();
     for (int i = 0; i < sz; ++i) {
         int uid = atoi(reply.args()[i].c_str());
-        std::string name = Uid2Name(context, uid);
+        std::string name = Uid2Name(uid);
         reply.set_args(i, name);
     }
 

@@ -18,7 +18,9 @@
 
 #include "PlayerClientDB-syn.h"
 
-void Client::CheckStatus(const Status& status) {
+using namespace ua_blackjack::player_client;
+
+void PlayerClient::CheckStatus(const Status& status) {
     // Act upon its status.
     if (status.ok()) {
         std::cout << "Got Reply" << std::endl;
@@ -27,7 +29,8 @@ void Client::CheckStatus(const Status& status) {
     }
 }
 
-int Client::Name2Uid(ClientContext& context, const std::string& name) {
+int PlayerClient::Name2Uid(const std::string& name) {
+    ClientContext context;
     Response reply;
     Request request;
 
@@ -36,11 +39,15 @@ int Client::Name2Uid(ClientContext& context, const std::string& name) {
     request.set_stamp(std::time(nullptr));
     request.add_args(name);
 
+    logger->info("Send GET_UID to Database Server");
     CheckStatus(stub_->Notify(&context, request, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+
     return reply.uid();
 }
 
-std::string Client::GetScore(ClientContext& context, int uid) {
+std::string PlayerClient::GetScore(int uid) {
+    ClientContext context;
     Response reply;
     Request request;
 
@@ -48,11 +55,15 @@ std::string Client::GetScore(ClientContext& context, int uid) {
     request.set_uid(uid);
     request.set_stamp(std::time(nullptr));
 
+    logger->info("Send GET_SCORE to Database Server");
     CheckStatus(stub_->Notify(&context, request, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+
     return reply.args()[0];
 }
 
-std::string Client::Uid2Name(ClientContext& context, int uid) {
+std::string PlayerClient::Uid2Name(int uid) {
+    ClientContext context;
     Response reply;
     Request request;
 
@@ -64,28 +75,35 @@ std::string Client::Uid2Name(ClientContext& context, int uid) {
     return reply.args()[0];
 }
 
-Response Client::RequestDB(Request& request) {
+Response PlayerClient::RequestDB(Request& request) {
+    logger->info("Received request, type: {0}, uid: {1}, stamp: {2}", request.requesttype(), request.uid(),
+                 request.stamp());
+
     Response reply;
 
     ClientContext context;
 
     int uid = request.uid();
 
+    logger->info("Send request to Database Server");
     // The actual RPC.
     CheckStatus(stub_->Notify(&context, request, &reply));
 
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+
     if (request.requesttype() == Request::RANK_ME) {
-        std::string score = GetScore(context, uid);
+        std::string score = GetScore(uid);
         reply.add_args(score);
     } else if (request.requesttype() == Request::RANK_TOP) {
         int sz = reply.args().size();
         for (int i = 0; i < sz; ++i) {
             int uid = atoi(reply.args()[i].c_str());
-            std::string name = Uid2Name(context, uid);
-            std::string score = GetScore(context, uid);
+            std::string name = Uid2Name(uid);
+            std::string score = GetScore(uid);
             reply.set_args(i, name + ": " + score);
         }
     }
 
+    logger->info("Returned reply to proxy");
     return reply;
 }

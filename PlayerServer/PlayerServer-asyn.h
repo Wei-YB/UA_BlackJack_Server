@@ -9,6 +9,7 @@
 #include <string>
 #include <thread>
 
+#include "PlayerClientDB-syn.h"
 #include "UA_BlackJack.grpc.pb.h"
 
 using grpc::Server;
@@ -25,6 +26,8 @@ using ua_blackjack::Request;
 using ua_blackjack::Response;
 /*************************/
 
+namespace ua_blackjack {
+namespace player_server {
 class ServerImpl final {
 public:
     ~ServerImpl() {
@@ -69,5 +72,7 @@ private:
     PlayerService::AsyncService service_;
     std::unique_ptr<Server> server_;
 };
+}  // namespace player_server
+}  // namespace ua_blackjack
 
 #endif

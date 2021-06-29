@@ -20,6 +20,8 @@
 #define PLAYER_CLIENT_DB_SYN_H
 
 #include <grpcpp/grpcpp.h>
+#include <spdlog/sinks/basic_file_sink.h>
+#include <spdlog/spdlog.h>
 
 #include <iostream>
 #include <memory>
@@ -42,21 +44,27 @@ using ua_blackjack::Request;
 using ua_blackjack::Response;
 /*************************/
 
-class Client {
+extern std::shared_ptr<spdlog::logger> logger;
+
+namespace ua_blackjack {
+namespace player_client {
+class PlayerClient {
 public:
-    Client(std::shared_ptr<Channel> channel) : stub_(DatabaseService::NewStub(channel)) {}
+    PlayerClient(std::shared_ptr<Channel> channel) : stub_(DatabaseService::NewStub(channel)) {}
 
     // Assembles the client's payload, sends it and presents the response back
     // from the server.
     Response RequestDB(Request& request);
 
     void CheckStatus(const Status& status);
-    int Name2Uid(ClientContext& context, const std::string& name);
-    std::string Uid2Name(ClientContext& context, int uid);
-    std::string GetScore(ClientContext& context, int uid);
+    int Name2Uid(const std::string& name);
+    std::string Uid2Name(int uid);
+    std::string GetScore(int uid);
 
 private:
     std::unique_ptr<DatabaseService::Stub> stub_;
 };
+}  // namespace player_client
+}  // namespace ua_blackjack
 
 #endif

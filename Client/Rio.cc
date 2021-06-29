@@ -1,5 +1,7 @@
 #include "Rio.h"
 
+using namespace ua_blackjack::robust_io;
+
 void Rio::RioReadInit(int fd) {
     fd_ = fd;
     cnt_ = 0;

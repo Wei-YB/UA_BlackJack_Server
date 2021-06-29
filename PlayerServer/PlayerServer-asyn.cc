@@ -9,7 +9,6 @@
 #include <string>
 #include <thread>
 
-#include "PlayerClientDB-syn.h"
 #include "UA_BlackJack.grpc.pb.h"
 
 using grpc::Server;
@@ -26,7 +25,11 @@ using ua_blackjack::Request;
 using ua_blackjack::Response;
 /*************************/
 
-Client* client = nullptr;
+using namespace ua_blackjack::player_client;
+using namespace ua_blackjack::player_server;
+
+PlayerClient* client = nullptr;
+std::shared_ptr<spdlog::logger> logger = nullptr;
 
 // There is no shutdown handling in this code.
 void ServerImpl::Run() {
@@ -78,7 +81,9 @@ void ServerImpl::HandleRpcs() {
 
 int main(int argc, char** argv) {
     std::string addr = "9.134.69.87:50051";
-    client = new Client(grpc::CreateChannel(addr, grpc::InsecureChannelCredentials()));
+    client = new PlayerClient(grpc::CreateChannel(addr, grpc::InsecureChannelCredentials()));
+
+    logger = spdlog::basic_logger_mt("basic_logger", "log.log");
 
     ServerImpl server;
     server.Run();

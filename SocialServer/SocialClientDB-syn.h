@@ -42,20 +42,24 @@ using ua_blackjack::Request;
 using ua_blackjack::Response;
 /*************************/
 
-class Client {
+namespace ua_blackjack {
+namespace social_client {
+class SocialClient {
 public:
-    Client(std::shared_ptr<Channel> channel) : stub_(DatabaseService::NewStub(channel)) {}
+    SocialClient(std::shared_ptr<Channel> channel) : stub_(DatabaseService::NewStub(channel)) {}
 
     // Assembles the client's payload, sends it and presents the response back
     // from the server.
     Response RequestDB(Request& request);
 
     void CheckStatus(const Status& status);
-    int Name2Uid(ClientContext& context, const std::string& name);
-    std::string Uid2Name(ClientContext& context, int uid);
+    int Name2Uid(const std::string& name);
+    std::string Uid2Name(int uid);
 
 private:
     std::unique_ptr<DatabaseService::Stub> stub_;
 };
+}  // namespace social_client
+}  // namespace ua_blackjack
 
 #endif
