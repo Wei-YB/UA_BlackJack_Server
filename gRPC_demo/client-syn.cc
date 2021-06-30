@@ -35,38 +35,80 @@ using grpc::Status;
 // Service dependent
 /*************************/
 using demo::GetNameService;
+<<<<<<< HEAD
+using demo::IDReply;
+using demo::IDRequest;
+/*************************/
+
+class Client
+{
+public:
+=======
 using demo::NameReply;
 using demo::NameRequest;
 /*************************/
 
 class Client {
  public:
+>>>>>>> de988bdddb4acfb3a9a210da2348bcff788ee20e
   Client(std::shared_ptr<Channel> channel)
       : stub_(GetNameService::NewStub(channel)) {}
 
   // Assembles the client's payload, sends it and presents the response back
   // from the server.
+<<<<<<< HEAD
+  std::string GetName(const int id)
+  {
+    IDRequest request;
+    request.set_id(id);
+
+    IDReply reply;
+=======
   std::string GetName(const int id) {
     NameRequest request;
     request.set_id(id);
 
     NameReply reply;
+>>>>>>> de988bdddb4acfb3a9a210da2348bcff788ee20e
 
     ClientContext context;
 
     // The actual RPC.
+<<<<<<< HEAD
+    Status status = stub_->GetID(&context, request, &reply);
+
+    // Act upon its status.
+    if (status.ok())
+    {
+      return reply.name();
+    }
+    else
+    {
+=======
     Status status = stub_->GetName(&context, request, &reply);
 
     // Act upon its status.
     if (status.ok()) {
       return reply.name();
     } else {
+>>>>>>> de988bdddb4acfb3a9a210da2348bcff788ee20e
       std::cout << status.error_code() << ": " << status.error_message()
                 << std::endl;
       return "RPC failed";
     }
   }
 
+<<<<<<< HEAD
+private:
+  std::unique_ptr<GetNameService::Stub> stub_;
+};
+
+int main(int argc, char **argv)
+{
+  std::string target_str = "localhost:50051";
+  Client client(
+      grpc::CreateChannel(target_str, grpc::InsecureChannelCredentials()));
+=======
  private:
   std::unique_ptr<GetNameService::Stub> stub_;
 };
@@ -76,6 +118,7 @@ int main(int argc, char** argv) {
   Client client(
       grpc::CreateChannel(target_str, grpc::InsecureChannelCredentials())
   );
+>>>>>>> de988bdddb4acfb3a9a210da2348bcff788ee20e
 
   int id = 1234;
   std::string reply = client.GetName(id);

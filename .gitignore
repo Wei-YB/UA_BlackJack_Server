@@ -4,3 +4,5 @@ grpc/
 spdlog/
 *.a
 *.so
+/build
+/.vscode
