@@ -42,4 +42,8 @@ foreach(_target
     ${_REFLECTION}
     ${_GRPC_GRPCPP}
     ${_PROTOBUF_LIBPROTOBUF})
+<<<<<<< HEAD
 endforeach()
+=======
+endforeach()
+>>>>>>> de988bdddb4acfb3a9a210da2348bcff788ee20e

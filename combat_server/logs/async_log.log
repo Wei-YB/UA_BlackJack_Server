@@ -1,43 +1,138 @@
-[11:27:14 +08:00] [async_file_logger] [---I---] [thread 32110] epoll wait
-[11:27:14 +08:00] [async_file_logger] [---I---] [thread 32103] Server listening on 0.0.0.0:50051
-[11:27:14 +08:00] [async_file_logger] [---I---] [thread 32103] grpc async begin...
-[11:28:07 +08:00] [async_file_logger] [---I---] [thread 32110] epoll wait
-[11:28:16 +08:00] [async_file_logger] [---I---] [thread 32110] accept suuccess
-[11:28:16 +08:00] [async_file_logger] [---I---] [thread 32110] get buffer 123
-[11:28:19 +08:00] [async_file_logger] [---I---] [thread 32110] get buffer 456
-[11:28:20 +08:00] [async_file_logger] [---I---] [thread 32110] get buffer 789
-[11:28:23 +08:00] [async_file_logger] [---I---] [thread 32110] epoll wait
-[11:28:23 +08:00] [async_file_logger] [---I---] [thread 32110] accept suuccess
-[11:28:23 +08:00] [async_file_logger] [---I---] [thread 32110] epoll wait
-[11:28:26 +08:00] [async_file_logger] [---I---] [thread 32110] epoll wait
-[11:28:29 +08:00] [async_file_logger] [---I---] [thread 32110] accept suuccess
-[11:28:29 +08:00] [async_file_logger] [---I---] [thread 32110] get buffer 132
-[11:28:30 +08:00] [async_file_logger] [---I---] [thread 32110] get buffer 45
-[11:28:31 +08:00] [async_file_logger] [---I---] [thread 32110] epoll wait
-[11:28:31 +08:00] [async_file_logger] [---I---] [thread 32110] accept suuccess
-[11:28:31 +08:00] [async_file_logger] [---I---] [thread 32110] epoll wait
-[11:28:32 +08:00] [async_file_logger] [---I---] [thread 32110] epoll wait
-[11:28:35 +08:00] [async_file_logger] [---I---] [thread 32110] accept suuccess
-[11:28:35 +08:00] [async_file_logger] [---I---] [thread 32110] get buffer restart
-[11:28:35 +08:00] [async_file_logger] [---I---] [thread 32110] restarting...
-[11:28:39 +08:00] [async_file_logger] [---I---] [thread 32110] epoll wait
-[11:28:39 +08:00] [async_file_logger] [---I---] [thread 32110] accept suuccess
-[11:28:39 +08:00] [async_file_logger] [---I---] [thread 32110] epoll wait
-[11:29:16 +08:00] [async_file_logger] [---I---] [thread 32667] Server listening on 0.0.0.0:50051
-[11:29:16 +08:00] [async_file_logger] [---I---] [thread 32667] grpc async begin...
-[11:29:26 +08:00] [async_file_logger] [---I---] [thread 32674] accept suuccess
-[11:29:26 +08:00] [async_file_logger] [---I---] [thread 32674] get buffer nihao
-[11:29:29 +08:00] [async_file_logger] [---I---] [thread 32674] get buffer meishile
-[11:29:30 +08:00] [async_file_logger] [---I---] [thread 32674] get buffer restart
-[11:29:30 +08:00] [async_file_logger] [---I---] [thread 32674] restarting...
-[11:29:35 +08:00] [async_file_logger] [---I---] [thread 32674] get buffer restart
-[11:29:35 +08:00] [async_file_logger] [---I---] [thread 32674] restarting...
-[11:29:41 +08:00] [async_file_logger] [---I---] [thread 32674] get buffer continue
-[11:29:43 +08:00] [async_file_logger] [---I---] [thread 32674] accept suuccess
-[11:30:33 +08:00] [async_file_logger] [---I---] [thread 572] Server listening on 0.0.0.0:50051
-[11:30:33 +08:00] [async_file_logger] [---I---] [thread 572] grpc async begin...
-[11:30:45 +08:00] [async_file_logger] [---I---] [thread 579] accept suuccess
-[11:30:45 +08:00] [async_file_logger] [---I---] [thread 579] get buffer heelo
-[11:30:47 +08:00] [async_file_logger] [---I---] [thread 579] get buffer hee
-[11:30:48 +08:00] [async_file_logger] [---I---] [thread 579] get buffer hello0
-[11:30:56 +08:00] [async_file_logger] [---I---] [thread 579] accept suuccess
+[16:45:16 +08:00] [async_file_logger] [---I---] [thread 25756] Server listening on 0.0.0.0:50051
+[16:45:16 +08:00] [async_file_logger] [---I---] [thread 25756] grpc async begin...
+[16:46:50 +08:00] [async_file_logger] [---I---] [thread 31822] ===========control port50050===========
+[16:46:50 +08:00] [async_file_logger] [---I---] [thread 31815] Server listening on 0.0.0.0:50051
+[16:46:50 +08:00] [async_file_logger] [---I---] [thread 31815] grpc async begin...
+[16:47:00 +08:00] [async_file_logger] [---I---] [thread 31822] accept suuccess
+[16:47:00 +08:00] [async_file_logger] [---I---] [thread 31822] get buffer quit
+[16:47:00 +08:00] [async_file_logger] [---I---] [thread 31822] quiting...
+[16:56:25 +08:00] [async_file_logger] [---I---] [thread 2570] ===========control port50050===========
+[16:56:25 +08:00] [async_file_logger] [---I---] [thread 2563] Server listening on 0.0.0.0:50051
+[16:56:25 +08:00] [async_file_logger] [---I---] [thread 2563] grpc async begin...
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2563] type = 33 uid = 0 stamp = 7
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2563] Create Room Ask come
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2563]  roomid = 1 uids = 2035 2033 2034 
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2563] GAME BEGIN
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2563] Start database nickname request
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2563] Start database nickname request
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2563] Start database nickname request
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2563] Start betting rpc request uid 2035
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2563] Start betting rpc request uid 2033
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2569] ClientForDatebase status = 0 uid = 2034 stamp = 123456 args = krist 
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2569] ClientForDatebase status = 0 uid = 2033 stamp = 123456 args = Owen 
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2569] ClientForDatebase status = 0 uid = 2035 stamp = 123456 args = Aaron 
+[16:59:41 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2035 stamp = 1 args = 
+[16:59:41 +08:00] [async_file_logger] [---W---] [thread 2568] uid 2035 dealer reply start game
+[16:59:46 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 1 args = Bet 100 
+[16:59:46 +08:00] [async_file_logger] [---I---] [thread 2563] uid 2033 set betting money
+[16:59:46 +08:00] [async_file_logger] [---I---] [thread 2563] Start betting rpc request uid 2034
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 1 args = Bet 10 
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2563] uid 2034 set betting money
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Aaron 3 4 3 8 uid 2035 index 1
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Owen 3 3 1 1 uid 2035 index 2
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args krist 2 1 4 4 uid 2035 index 3
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Aaron 0 0 3 8 uid 2033 index 1
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Owen 3 3 1 1 uid 2033 index 2
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args krist 2 1 4 4 uid 2033 index 3
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Aaron 0 0 3 8 uid 2034 index 1
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Owen 3 3 1 1 uid 2034 index 2
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args krist 2 1 4 4 uid 2034 index 3
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2563] Start ask hit uid 2033
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[16:59:49 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[16:59:56 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 2 args = Hit 
+[16:59:56 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Owen 4 2 uid 2035
+[16:59:56 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Owen 4 2 uid 2033
+[16:59:56 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Owen 4 2 uid 2034
+[16:59:56 +08:00] [async_file_logger] [---I---] [thread 2563] uid 2033 hit
+[16:59:56 +08:00] [async_file_logger] [---I---] [thread 2563] Start ask hit uid 2034
+[16:59:56 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[16:59:56 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[16:59:56 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[16:59:59 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 2 args = Hit 
+[16:59:59 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args krist 1 4 uid 2035
+[16:59:59 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args krist 1 4 uid 2033
+[16:59:59 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args krist 1 4 uid 2034
+[16:59:59 +08:00] [async_file_logger] [---I---] [thread 2563] uid 2034 hit
+[16:59:59 +08:00] [async_file_logger] [---I---] [thread 2563] Start ask hit uid 2033
+[16:59:59 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[16:59:59 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[16:59:59 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[17:00:04 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 2 args = Hit 
+[17:00:04 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Owen 1 13 uid 2035
+[17:00:04 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Owen 1 13 uid 2033
+[17:00:04 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Owen 1 13 uid 2034
+[17:00:04 +08:00] [async_file_logger] [---I---] [thread 2563] uid 2033 hit
+[17:00:04 +08:00] [async_file_logger] [---I---] [thread 2563] Start ask hit uid 2034
+[17:00:04 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[17:00:04 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[17:00:04 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[17:00:11 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 2 args = Hit 
+[17:00:11 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args krist 2 8 uid 2035
+[17:00:11 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args krist 2 8 uid 2033
+[17:00:11 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args krist 2 8 uid 2034
+[17:00:11 +08:00] [async_file_logger] [---I---] [thread 2563] uid 2034 hit
+[17:00:11 +08:00] [async_file_logger] [---I---] [thread 2563] Start ask hit uid 2033
+[17:00:11 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[17:00:11 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[17:00:11 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[17:00:20 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 2 args = Stand 
+[17:00:20 +08:00] [async_file_logger] [---I---] [thread 2563] uid 2033 stand
+[17:00:20 +08:00] [async_file_logger] [---I---] [thread 2563] Start ask hit uid 2034
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 2 args = Stand 
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] uid 2034 stand
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Aaron 3 4 uid 2035
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Aaron 3 4 uid 2033
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Aaron 3 4 uid 2034
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Aaron 1 9 uid 2035
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Aaron 1 9 uid 2033
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Start Update request args Aaron 1 9 uid 2034
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Player--uid-2035-bettingMoney-0-roomid-1-accumulate-21
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-29-poke-clubs4
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-33-poke-clubs8
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-8-poke-spades9
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] game over
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Player--uid-2035-bettingMoney-110-roomid-1-accumulate-21
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-29-poke-clubs4
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-33-poke-clubs8
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-8-poke-spades9
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Player--uid-2033-bettingMoney-100-roomid-1-accumulate-16
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-28-poke-clubs3
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-0-poke-spadesA
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-40-poke-diamonds2
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-12-poke-spadesK
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Player--uid-2034-bettingMoney-10-roomid-1-accumulate-17
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-13-poke-heartsA
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-42-poke-diamonds4
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-3-poke-spades4
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Poker-isHide-0-value-20-poke-hearts8
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] 2035 WIN 110
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] 2033 LOSE 100
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] 2034 LOSE 10
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Start database match end request
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Start lobby match end request
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Start End request uid 2035 iswin0
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Start End request uid 2033 iswin2
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] Start End request uid 2034 iswin2
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] start delete room 1
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2563] complete delete room 1
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2569] ClientForDatebase status = 0 uid = 0 stamp = 0 args = 
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[17:00:26 +08:00] [async_file_logger] [---W---] [thread 2568] unexpected reply uid 2034
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[17:00:26 +08:00] [async_file_logger] [---W---] [thread 2568] unexpected reply uid 2035
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[17:00:26 +08:00] [async_file_logger] [---W---] [thread 2568] unexpected reply uid 2033
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 3 args = update 
+[17:00:26 +08:00] [async_file_logger] [---W---] [thread 2568] unexpected reply uid 2033
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2035 stamp = 3 args = update 
+[17:00:26 +08:00] [async_file_logger] [---W---] [thread 2568] unexpected reply uid 2035
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2033 stamp = 4 args = end 
+[17:00:26 +08:00] [async_file_logger] [---W---] [thread 2568] unexpected reply uid 2033
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 3 args = update 
+[17:00:26 +08:00] [async_file_logger] [---W---] [thread 2568] unexpected reply uid 2034
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2034 stamp = 4 args = end 
+[17:00:26 +08:00] [async_file_logger] [---W---] [thread 2568] unexpected reply uid 2034
+[17:00:26 +08:00] [async_file_logger] [---I---] [thread 2568] ClientForTestUser status = 1 uid = 2035 stamp = 4 args = end 
+[17:00:26 +08:00] [async_file_logger] [---W---] [thread 2568] unexpected reply uid 2035

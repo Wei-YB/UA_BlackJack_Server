@@ -3,7 +3,6 @@
 #include <sstream>
 std::queue<BlackJackRoomID> unUsedstEnvRoomID;                      //结束了的游戏ID
 std::unordered_map<BlackJackRoomID, stEnv_t::ptr> roomEnvirHashMap; //roomid和句柄的hash映射
-std::unordered_map<BlackJackRoomID, bool> roomEnvirExistHashMap;    //roomid和句柄是否存在的hash映射
 stCoRoutine_t *receiveSignalFromRPC;
 stCoRoutine_t *recoverystCo;
 int conditionForWaitingRpc; //接受rpc的信号量
@@ -20,13 +19,12 @@ int createstEnv_t(BlackJackRoomID roomID, UidList &uids) //创建协程
     }
     spdlog::info(ss.str());
 
-    if (roomEnvirExistHashMap.count(roomID) > 0 && roomEnvirExistHashMap[roomID] == true) //原先已经有房间存在了
+    if (roomEnvirHashMap.count(roomID) > 0) //原先已经有房间存在了
     {
         spdlog::error("room has already existed");
         return -1; //无法再创建同一个房间号的ID
     }
 
-    roomEnvirExistHashMap[roomID] = true; //宣告房间存在
     auto ptr = std::make_shared<stEnv_t>(roomID, uids);
     roomEnvirHashMap[roomID] = ptr; //将房间加入hash表
     ptr->cond = createCondition(0); //创建信号量
@@ -199,8 +197,7 @@ void *recoveryUnusedCo(void *arg) //回收协程的协程
             unUsedstEnvRoomID.pop();
             free(roomEnvirHashMap[roomid]->arg);
             co_release(roomEnvirHashMap[roomid]->coRoutine); //释放协程资源
-            roomEnvirHashMap[roomid].reset();                //释放智能 指针
-            roomEnvirExistHashMap[roomid] = false;
+            roomEnvirHashMap.erase(roomid);
             spdlog::info("complete delete room {0:d}", roomid);
         }
     }

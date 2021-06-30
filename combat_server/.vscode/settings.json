@@ -55,7 +55,22 @@
         "unordered_set": "cpp",
         "map": "cpp",
         "set": "cpp",
-        "mutex": "cpp"
+        "mutex": "cpp",
+        "any": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "bitset": "cpp",
+        "cfenv": "cpp",
+        "codecvt": "cpp",
+        "csignal": "cpp",
+        "forward_list": "cpp",
+        "regex": "cpp",
+        "future": "cpp",
+        "iomanip": "cpp",
+        "scoped_allocator": "cpp",
+        "typeindex": "cpp",
+        "valarray": "cpp",
+        "variant": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

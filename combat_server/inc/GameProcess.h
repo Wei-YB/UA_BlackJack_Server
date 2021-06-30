@@ -22,7 +22,6 @@ struct stEnv_t
 };
 extern std::queue<BlackJackRoomID> unUsedstEnvRoomID;                      //结束了的游戏ID
 extern std::unordered_map<BlackJackRoomID, stEnv_t::ptr> roomEnvirHashMap; //roomid和句柄的hash映射
-extern std::unordered_map<BlackJackRoomID, bool> roomEnvirExistHashMap;    //roomid和句柄是否存在的hash映射
 extern stCoRoutine_t *receiveSignalFromRPC;
 extern stCoRoutine_t *recoverystCo;
 int createstEnv_t(BlackJackRoomID roomID, UidList &uids);

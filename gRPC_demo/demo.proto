@@ -17,6 +17,7 @@ syntax = "proto3";
 package demo;
 
 service GetNameService {
+<<<<<<< HEAD
   rpc GetID (IDRequest) returns (IDReply) {}
 }
 
@@ -25,5 +26,15 @@ message IDRequest {
 }
 
 message IDReply {
+=======
+  rpc GetName (NameRequest) returns (NameReply) {}
+}
+
+message NameRequest {
+  int32 id = 1;
+}
+
+message NameReply {
+>>>>>>> de988bdddb4acfb3a9a210da2348bcff788ee20e
   string name = 1;
 }

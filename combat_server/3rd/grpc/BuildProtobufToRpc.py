@@ -19,8 +19,11 @@ else:
     print("create ./grpc_h ")
     os.system("mkdir -p grpc_h")    
 
+if not os.path.exists("./grpc"):
+    os.system("git clone --recurse-submodules -b v1.38.0 https://github.com/grpc/grpc")
 os.chdir("./cmake/build")
-os.system("cmake -DCMAKE_PREFIX_PATH=$MY_INSTALL_DIR ../..")
+# os.system("cmake -DCMAKE_PREFIX_PATH=$MY_INSTALL_DIR ../..")
+os.system("cmake  -DGRPC_AS_SUBMODULE=ON ../..")
 os.system("make")
 
 os.system("mv ./UA_BlackJack.grpc.pb.cc ../../grpc_cpp")

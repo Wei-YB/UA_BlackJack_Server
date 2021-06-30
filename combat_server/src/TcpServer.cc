@@ -25,7 +25,7 @@ void ua_blackjack::Game::createServiece(void)
 
     ret = listen(listenfd, 5);
     assert(ret >= 0);
-
+    spdlog::info("===========control port{0}===========", port);
     int epollfd = epoll_create(5);
     epoll_event event;
     event.events = EPOLLIN | EPOLLET; //可读，EDGE TIRGGER
@@ -68,17 +68,11 @@ void ua_blackjack::Game::createServiece(void)
                     if (strcmp(buffer, "restart") == 0)
                     {
                         spdlog::info("restarting...");
-                        auto pid = fork();
-                        if (pid == 0) //子进程
-                        {
-                        }
-                        else if (pid > 0) //父进程
-                        {
-                        }
-                        else //出错了!!!!!!!!!
-                        {
-                            spdlog::error("restarting failure");
-                        }
+                    }
+                    else if (strcmp(buffer, "quit") == 0)
+                    {
+                        spdlog::info("quiting...");
+                        exit(0);
                     }
                 }
             }
