@@ -52,11 +52,20 @@ void Display::DisplayResponse(ua_blackjack::Response& response, const ua_blackja
         case ua_blackjack::Request::DELETE_FRIEND:
             DisplayResponseDeleteFriend(response);
             break;
+        case ua_blackjack::Request::DELETE_WAIT_FRIEND:
+            DisplayResponseDeleteWaitingFriend(response);
+            break;
         case ua_blackjack::Request::LIST_FRIEND:
             DisplayResponseFriendList(response);
             break;
         case ua_blackjack::Request::LIST_WAITTING:
             DisplayResponseWaitingFriendList(response);
+            break;
+        case ua_blackjack::Request::LIST_MATCH:
+            DisplayResponseMatchList(response);
+            break;
+        case ua_blackjack::Request::GET_MATCH_INFO:
+            DisplayResponseMatchInfo(response);
             break;
     }
 
@@ -101,6 +110,8 @@ void Display::DisplayResponseRoomList(ua_blackjack::Response& response) {
     for (int i = 0; i < sz; ++i) {
         std::cout << response.args()[i] << std::endl;
     }
+
+    if (sz == 0) std::cout << "No available room" << std::endl;
 }
 
 void Display::DisplayResponseJoinRoom(ua_blackjack::Response& response) {
@@ -119,7 +130,7 @@ void Display::DisplayResponseCreateRoom(ua_blackjack::Response& response) {
 
     PrintPrompt("CreateRoom Successful");
 
-    std::cout << response.args()[0] << std::endl;
+    std::cout << "Room id: " << response.args()[0] << std::endl;
 }
 void Display::DisplayResponseQuickMatch(ua_blackjack::Response& response) {
     if (response.status() == -1) {
@@ -187,7 +198,11 @@ void Display::DisplayResponseRankTop(ua_blackjack::Response& response) {
 }
 void Display::DisplayResponseAddFriend(ua_blackjack::Response& response) {
     if (response.status() == -1) {
-        std::cout << ":( AddFriend Failed" << std::endl;
+        if (response.args().size() > 0 && response.args()[0] == "none") {
+            std::cout << ":( Failed, Already in WaitingFriendList" << std::endl;
+        } else {
+            std::cout << ":( AddFriend Failed, user doesn't exist" << std::endl;
+        }
         return;
     }
     PrintPrompt("Send AddFriend Request Successful");
@@ -205,6 +220,13 @@ void Display::DisplayResponseDeleteFriend(ua_blackjack::Response& response) {
         return;
     }
     PrintPrompt("DeleteFriend Successful");
+}
+void Display::DisplayResponseDeleteWaitingFriend(ua_blackjack::Response& response) {
+    if (response.status() == -1) {
+        std::cout << ":( Failed, no such waiting friend" << std::endl;
+        return;
+    }
+    PrintPrompt("DeleteWaitingFriend Successful");
 }
 void Display::DisplayResponseFriendList(ua_blackjack::Response& response) {
     if (response.status() == -1) {
@@ -228,6 +250,35 @@ void Display::DisplayResponseWaitingFriendList(ua_blackjack::Response& response)
     int sz = response.args().size();
     for (int i = 0; i < sz; ++i) {
         std::cout << response.args()[i] << std::endl;
+    }
+}
+
+void Display::DisplayResponseMatchList(ua_blackjack::Response& response) {
+    if (response.status() == -1) {
+        std::cout << ":( MatchList Failed" << std::endl;
+        return;
+    }
+    PrintPrompt("MatchList Successful");
+
+    int sz = response.args().size();
+    for (int i = 0; i < sz; ++i) {
+        std::cout << response.args()[i] << std::endl;
+    }
+}
+
+void Display::DisplayResponseMatchInfo(ua_blackjack::Response& response) {
+    if (response.status() == -1) {
+        std::cout << ":( MatchInfo Failed" << std::endl;
+        return;
+    }
+    PrintPrompt("MatchInfo Successful");
+
+    int sz = response.args().size();
+    assert(sz >= 2);
+
+    std::cout << response.args()[0] << ": " << response.args()[1] << std::endl;
+    for (int i = 2; i < sz; i += 2) {
+        std::cout << response.args()[i] << ": " << response.args()[i + 1] << std::endl;
     }
 }
 

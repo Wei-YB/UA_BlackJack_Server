@@ -25,6 +25,8 @@
 #include <memory>
 #include <string>
 
+#include "global.h"
+
 #ifdef BAZEL_BUILD
 #include "examples/protos/helloworld.grpc.pb.h"
 #else
@@ -54,6 +56,12 @@ public:
 
     void CheckStatus(const Status& status);
     int Name2Uid(const std::string& name);
+    void AddFriend(Request& request_fri, Response& reply, int uid);
+    void AcceptFriend(Request& request_fri, Response& reply, Request& request, int uid);
+    void ListFriend(Request& request, Response& reply);
+    void ListWaitingFriend(Request& request, Response& reply);
+    void DeleteFriend(Request& request_fri, Response& reply, Request& request, int uid);
+    void DeleteWaitFriend(Request& request, Response& reply, int friend_id);
     std::string Uid2Name(int uid);
 
 private:

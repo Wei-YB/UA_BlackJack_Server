@@ -23,9 +23,9 @@ using namespace ua_blackjack::social_client;
 void SocialClient::CheckStatus(const Status& status) {
     // Act upon its status.
     if (status.ok()) {
-        std::cout << "Got Reply" << std::endl;
+        logger->info("gRpc Got Reply");
     } else {
-        std::cout << "Request Error " << status.error_code() << ": " << status.error_message() << std::endl;
+        logger->error("gRpc Request Error {0} : {1}", status.error_code(), status.error_message());
     }
 }
 
@@ -39,7 +39,11 @@ int SocialClient::Name2Uid(const std::string& name) {
     request.set_stamp(std::time(nullptr));
     request.add_args(name);
 
+    logger->info("Send GET_UID to Database Server");
     CheckStatus(stub_->Notify(&context, request, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}, args_size: {3}", reply.status(), reply.uid(),
+                 reply.stamp(), reply.args().size());
+
     return reply.uid();
 }
 
@@ -52,49 +56,134 @@ std::string SocialClient::Uid2Name(int uid) {
     request.set_uid(uid);
     request.set_stamp(std::time(nullptr));
 
+    logger->info("Send GET_NAME to Database Server");
     CheckStatus(stub_->Notify(&context, request, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+
     return reply.args()[0];
 }
 
-Response SocialClient::RequestDB(Request& request) {
-    Response reply;
-
+void SocialClient::AddFriend(Request& request_fri, Response& reply, int uid) {
     ClientContext context;
 
-    int uid = request.uid();
-    std::string friend_name = request.args()[0];
-    int friend_id = Name2Uid(friend_name);
+    request_fri.set_requesttype(Request::ADD_WAIT_FRIEND);
+    request_fri.add_args(std::to_string(uid));
 
+    logger->info("Send ADD_WAIT_FRIEND to Database Server");
+    CheckStatus(stub_->Notify(&context, request_fri, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+
+    reply.set_uid(uid);
+}
+
+void SocialClient::AcceptFriend(Request& request_fri, Response& reply, Request& request, int uid) {
+    // friend operation: AddFriend
+    ClientContext context1;
+    request_fri.set_requesttype(Request::ADD_FRIEND);
+    request_fri.add_args(std::to_string(uid));
+
+    logger->info("Send ADD_FRIEND to Database Server");
+    CheckStatus(stub_->Notify(&context1, request_fri, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+
+    // self operation: 1. DeleteWaitFriend 2. AddFriend
+    ClientContext context2;
+    request.set_requesttype(Request::DELETE_WAIT_FRIEND);
+    request.set_args(0, std::to_string(request_fri.uid()));
+    logger->info("Send DELETE_WAIT_FRIEND to Database Server");
+    CheckStatus(stub_->Notify(&context2, request, &reply));
+
+    ClientContext context3;
+    request.set_requesttype(Request::ADD_FRIEND);
+    logger->info("Send ADD_FRIEND to Database Server");
+    CheckStatus(stub_->Notify(&context3, request, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+}
+void SocialClient::ListFriend(Request& request, Response& reply) {
+    ClientContext context;
+
+    logger->info("Send LIST_FRIEND to Database Server");
+    CheckStatus(stub_->Notify(&context, request, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+}
+void SocialClient::ListWaitingFriend(Request& request, Response& reply) {
+    ClientContext context;
+
+    logger->info("Send LIST_WAITING_FRIEND to Database Server");
+    CheckStatus(stub_->Notify(&context, request, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+}
+void SocialClient::DeleteFriend(Request& request_fri, Response& reply, Request& request, int uid) {
+    // friend operation
+    ClientContext context1;
+    request_fri.set_requesttype(Request::DELETE_FRIEND);
+    request_fri.add_args(std::to_string(uid));
+    logger->info("Send DELETE_FRIEND to Database Server");
+    CheckStatus(stub_->Notify(&context1, request_fri, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+
+    // self operation
+    ClientContext context2;
+    request.set_args(0, std::to_string(request_fri.uid()));
+    logger->info("Send DELETE_FRIEND to Database Server");
+    CheckStatus(stub_->Notify(&context2, request, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+}
+void SocialClient::DeleteWaitFriend(Request& request, Response& reply, int friend_id) {
+    ClientContext context;
+    request.set_args(0, std::to_string(friend_id));
+    logger->info("Send DELETE_WAITING_FRIEND to Database Server");
+    CheckStatus(stub_->Notify(&context, request, &reply));
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+}
+
+Response SocialClient::RequestDB(Request& request) {
+    logger->info("Received request, type: {0}, uid: {1}, stamp: {2}", request.requesttype(), request.uid(),
+                 request.stamp());
+
+    Response reply;
+
+    int uid = request.uid();
+
+    std::string friend_name;
+    int friend_id;
     Request request_fri;
-    request_fri.set_uid(friend_id);
-    request_fri.set_stamp(request.stamp());
+
+    if (request.args().size() > 0) {
+        friend_name = request.args()[0];
+        friend_id = Name2Uid(friend_name);
+        if (friend_id <= 0) {
+            reply.set_status(-1);
+            reply.set_uid(uid);
+            reply.set_stamp(request.stamp());
+            reply.add_args("none");
+            return reply;
+        }
+
+        request_fri.set_uid(friend_id);
+        request_fri.set_stamp(request.stamp());
+    }
 
     // The actual RPC.
     switch (request.requesttype()) {
         case Request::ADD_FRIEND:
-            request_fri.set_requesttype(Request::ADD_WAIT_FRIEND);
-            request_fri.add_args(std::to_string(uid));
-            CheckStatus(stub_->Notify(&context, request_fri, &reply));
-            reply.set_uid(uid);
+            AddFriend(request_fri, reply, uid);
             break;
         case Request::ACCEPT_FRIEND:
-            request_fri.set_requesttype(Request::ADD_FRIEND);
-            request_fri.add_args(std::to_string(uid));
-            CheckStatus(stub_->Notify(&context, request_fri, &reply));
-            request.set_requesttype(Request::ADD_FRIEND);
-            CheckStatus(stub_->Notify(&context, request, &reply));
+            AcceptFriend(request_fri, reply, request, uid);
             break;
         case Request::LIST_FRIEND:
+            ListFriend(request, reply);
+            break;
         case Request::LIST_WAITTING:
-            CheckStatus(stub_->Notify(&context, request, &reply));
+            ListWaitingFriend(request, reply);
             break;
         case Request::DELETE_FRIEND:
-            request_fri.set_requesttype(Request::DELETE_FRIEND);
-            request_fri.add_args(std::to_string(uid));
-            CheckStatus(stub_->Notify(&context, request_fri, &reply));
-            CheckStatus(stub_->Notify(&context, request, &reply));
+            DeleteFriend(request_fri, reply, request, uid);
+            break;
         case Request::DELETE_WAIT_FRIEND:
-            CheckStatus(stub_->Notify(&context, request, &reply));
+            DeleteWaitFriend(request, reply, friend_id);
+            break;
         default:
             break;
     }

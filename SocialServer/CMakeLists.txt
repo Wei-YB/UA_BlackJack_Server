@@ -33,18 +33,11 @@ target_link_libraries(hw_grpc_proto
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF})
 
-add_executable(SocialServer-asyn SocialServer-asyn.cc SocialClientDB-syn.cc)
-target_link_libraries(SocialServer-asyn
+add_executable(SocialServer main.cc SocialServer-asyn.cc SocialClientDB-syn.cc)
+target_link_libraries(SocialServer
   hw_grpc_proto
   ${_REFLECTION}
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF}
+  spdlog
 )
-
-# add_executable(SocialServer-asyn-alpha SocialServer-asyn-alpha.cc SocialClientDB-syn.cc)
-# target_link_libraries(SocialServer-asyn-alpha
-#   hw_grpc_proto
-#   ${_REFLECTION}
-#   ${_GRPC_GRPCPP}
-#   ${_PROTOBUF_LIBPROTOBUF}
-# )

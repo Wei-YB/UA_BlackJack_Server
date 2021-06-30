@@ -28,11 +28,13 @@ using ua_blackjack::Response;
 using namespace ua_blackjack::player_client;
 using namespace ua_blackjack::player_server;
 
-PlayerClient* client = nullptr;
-std::shared_ptr<spdlog::logger> logger = nullptr;
+static std::shared_ptr<PlayerClient> client = nullptr;
 
 // There is no shutdown handling in this code.
 void ServerImpl::Run() {
+    std::string addr = "9.134.69.87:50051";
+    client.reset(new PlayerClient(grpc::CreateChannel(addr, grpc::InsecureChannelCredentials())));
+
     std::string server_address("0.0.0.0:50052");
 
     ServerBuilder builder;
@@ -77,16 +79,4 @@ void ServerImpl::HandleRpcs() {
         GPR_ASSERT(ok);
         static_cast<CallData*>(tag)->Proceed();
     }
-}
-
-int main(int argc, char** argv) {
-    std::string addr = "9.134.69.87:50051";
-    client = new PlayerClient(grpc::CreateChannel(addr, grpc::InsecureChannelCredentials()));
-
-    logger = spdlog::basic_logger_mt("basic_logger", "log.log");
-
-    ServerImpl server;
-    server.Run();
-
-    return 0;
 }

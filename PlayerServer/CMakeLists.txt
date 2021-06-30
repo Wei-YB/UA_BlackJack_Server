@@ -35,19 +35,8 @@ target_link_libraries(hw_grpc_proto
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF})
 
-# # cpp file dependent: change server and client to your own cpp file (withou .cc/.cpp suffix)
-# foreach(_target
-#   PlayerServer-asyn)
-#   add_executable(${_target} "${_target}.cc")
-#   target_link_libraries(${_target}
-#     hw_grpc_proto
-#     ${_REFLECTION}
-#     ${_GRPC_GRPCPP}
-#     ${_PROTOBUF_LIBPROTOBUF})
-# endforeach()
-
-add_executable(PlayerServer-asyn PlayerServer-asyn.cc PlayerClientDB-syn.cc)
-target_link_libraries(PlayerServer-asyn
+add_executable(PlayerServer main.cc PlayerServer-asyn.cc PlayerClientDB-syn.cc)
+target_link_libraries(PlayerServer
   hw_grpc_proto
   ${_REFLECTION}
   ${_GRPC_GRPCPP}

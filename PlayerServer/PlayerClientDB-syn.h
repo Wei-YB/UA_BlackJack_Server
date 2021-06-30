@@ -27,6 +27,8 @@
 #include <memory>
 #include <string>
 
+#include "global.h"
+
 #ifdef BAZEL_BUILD
 #include "examples/protos/helloworld.grpc.pb.h"
 #else
@@ -43,8 +45,6 @@ using ua_blackjack::DatabaseService;
 using ua_blackjack::Request;
 using ua_blackjack::Response;
 /*************************/
-
-extern std::shared_ptr<spdlog::logger> logger;
 
 namespace ua_blackjack {
 namespace player_client {

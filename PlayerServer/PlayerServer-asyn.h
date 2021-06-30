@@ -11,6 +11,7 @@
 
 #include "PlayerClientDB-syn.h"
 #include "UA_BlackJack.grpc.pb.h"
+#include "global.h"
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;

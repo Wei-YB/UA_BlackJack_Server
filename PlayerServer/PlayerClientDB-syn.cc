@@ -23,9 +23,9 @@ using namespace ua_blackjack::player_client;
 void PlayerClient::CheckStatus(const Status& status) {
     // Act upon its status.
     if (status.ok()) {
-        std::cout << "Got Reply" << std::endl;
+        logger->info("gRpc Got Reply");
     } else {
-        std::cout << "Request Error " << status.error_code() << ": " << status.error_message() << std::endl;
+        logger->error("gRpc Request Error {0} : {1}", status.error_code(), status.error_message());
     }
 }
 
@@ -101,6 +101,13 @@ Response PlayerClient::RequestDB(Request& request) {
             std::string name = Uid2Name(uid);
             std::string score = GetScore(uid);
             reply.set_args(i, name + ": " + score);
+        }
+    } else if (request.requesttype() == Request::GET_MATCH_INFO) {
+        int sz = reply.args().size();
+        for (int i = 2; i < sz; i += 2) {
+            int uid = atoi(reply.args()[i].c_str());
+            std::string name = Uid2Name(uid);
+            reply.set_args(i, name);
         }
     }
 

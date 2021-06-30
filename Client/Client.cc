@@ -246,8 +246,11 @@ Client::State Client::GetNextState(const std::string& cmd) {
         case ua_blackjack::Request::ADD_FRIEND:
         case ua_blackjack::Request::ACCEPT_FRIEND:
         case ua_blackjack::Request::DELETE_FRIEND:
+        case ua_blackjack::Request::DELETE_WAIT_FRIEND:
         case ua_blackjack::Request::LIST_FRIEND:
         case ua_blackjack::Request::LIST_WAITTING:
+        case ua_blackjack::Request::LIST_MATCH:
+        case ua_blackjack::Request::GET_MATCH_INFO:
             if (state_ == OFFLINE || state_ == INGAME_IDLE || state_ == INGAME_TURN) {
                 valid = false;
             }
@@ -530,6 +533,9 @@ void Client::ProcessCommand(Rio& rio) {
 
     logger->info("Get command from console");
     if (args[0] == "Login") name_tmp_ = args[1];
+    if (args[0] == "Quit") {
+        exit(EXIT_SUCCESS);
+    }
 
     next_state_ = GetNextState(args[0]);
     if (next_state_ == INVALID) {

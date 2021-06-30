@@ -29,10 +29,13 @@ using ua_blackjack::SocialService;
 using namespace ua_blackjack::social_client;
 using namespace ua_blackjack::social_server;
 
-SocialClient* client = nullptr;
+static std::shared_ptr<SocialClient> client = nullptr;
 
 // There is no shutdown handling in this code.
 void ServerImpl::Run() {
+    std::string addr = "9.134.69.87:50051";
+    client.reset(new SocialClient(grpc::CreateChannel(addr, grpc::InsecureChannelCredentials())));
+
     std::string server_address("0.0.0.0:50051");
 
     ServerBuilder builder;
@@ -77,14 +80,4 @@ void ServerImpl::HandleRpcs() {
         GPR_ASSERT(ok);
         static_cast<CallData*>(tag)->Proceed();
     }
-}
-
-int main(int argc, char** argv) {
-    std::string addr = "9.134.69.87:50051";
-    client = new SocialClient(grpc::CreateChannel(addr, grpc::InsecureChannelCredentials()));
-
-    ServerImpl server;
-    server.Run();
-
-    return 0;
 }

@@ -44,8 +44,11 @@ private:
     void DisplayResponseAddFriend(ua_blackjack::Response& response);
     void DisplayResponseAcceptFriend(ua_blackjack::Response& response);
     void DisplayResponseDeleteFriend(ua_blackjack::Response& response);
+    void DisplayResponseDeleteWaitingFriend(ua_blackjack::Response& response);
     void DisplayResponseFriendList(ua_blackjack::Response& response);
     void DisplayResponseWaitingFriendList(ua_blackjack::Response& response);
+    void DisplayResponseMatchList(ua_blackjack::Response& response);
+    void DisplayResponseMatchInfo(ua_blackjack::Response& response);
 };
 }  // namespace display
 }  // namespace ua_blackjack
