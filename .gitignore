@@ -1,8 +1,5 @@
+.vscode/
 build/
-log/
-grpc/
-spdlog/
-*.a
-*.so
-/build
-/.vscode
+*.clang-format
+alpha/
+gtest/
