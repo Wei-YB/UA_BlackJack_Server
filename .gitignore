@@ -1,6 +1,6 @@
-./proxy/build/
-./proxy/test/build/
-./proxy/protos/build/
-./proxy/log/
+build/
+log/
+grpc/
+spdlog/
 *.a
 *.so
