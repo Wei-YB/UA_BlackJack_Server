@@ -212,8 +212,8 @@ void ProxyServer::OnServiceResponse(const Response& response)
     }
     if (client = client_weak.lock())
     {   
-        // if this is a login response, set its uid and put into login client set
-        if (flag)
+        // if this is a login (and successful) response , set its uid and put into login client set
+        if (flag & response.status() == 0)
         {
             client->SetUid(uid);
             std::lock_guard<std::mutex> guard(uidToClientLock_);
@@ -230,6 +230,7 @@ void ProxyServer::OnServiceResponse(const Response& response)
 void ProxyServer::OnDisConnection(FileDesc fd)
 {
     std::shared_ptr<Client> client = fdToClient_[fd];
+    logger_ptr->info("In main thread: found the exiting client by fd: {}, deleting it...", fd);
     fdToClient_.erase(fd);
     {
         std::lock_guard<std::mutex> guard(uidToClientLock_);

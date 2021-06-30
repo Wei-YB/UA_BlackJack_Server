@@ -87,6 +87,6 @@ void Client::OnMessages(std::vector<Request> &requests, std::vector<Response> &r
     }
 }
 
-void Client::OnLeave() {errorCallBack_(conn_->SockFd());}
+void Client::OnLeave() {disconnectCallBack_(conn_->SockFd());}
 
-void Client::OnError() {disconnectCallBack_(conn_->SockFd());}
+void Client::OnError() {errorCallBack_(conn_->SockFd());}

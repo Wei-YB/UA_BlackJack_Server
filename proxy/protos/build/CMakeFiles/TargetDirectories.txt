@@ -1,3 +1,0 @@
-/root/ricki/UA_BlackJack_Server/proxy/protos/build/CMakeFiles/rebuild_cache.dir
-/root/ricki/UA_BlackJack_Server/proxy/protos/build/CMakeFiles/edit_cache.dir
-/root/ricki/UA_BlackJack_Server/proxy/protos/build/CMakeFiles/blackjack_grpc.dir

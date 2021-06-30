@@ -61,5 +61,6 @@
         "forward_list": "cpp",
         "cfenv": "cpp",
         "variant": "cpp"
-    }
+    },
+    "git.ignoreLimitWarning": true
 }
