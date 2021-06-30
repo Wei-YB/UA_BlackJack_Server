@@ -12,6 +12,7 @@ CallData::CallData(LobbyService::AsyncService* service,
     Proceed();
 }
 
+//Proceed里是个有限状态机
 void CallData::Proceed(Response* rpc_result) {
     if (status_ == CREATE) {
         ProceedCreate();
@@ -20,6 +21,7 @@ void CallData::Proceed(Response* rpc_result) {
         ProceedNewRequest();
     }
     else if (status_ == PROCESS) {
+        //真正的处理这个proxy的request
         new CallData(service_, cq_, request_list_);
         ProceedProcess(rpc_result);
     }
@@ -44,12 +46,14 @@ void CallData::ProceedCreate() {
     service_->RequestNotify(&ctx_, &request_, &responder_, cq_, cq_, this);
 }
 
-
+//当proxy的request到来时，把存放着此request的calldata对象放在阻塞队列里
 void CallData::ProceedNewRequest() {
     const auto request_type = request_.requesttype();
+    // in main thread: listen request from proxy.
     SPDLOG_INFO("new request come from {0}", ctx_.peer());
     const auto& arg = request_.args();
     SPDLOG_INFO("request type is {0}, uid is {1}", Request::RequestType_Name(request_type), request_.uid());
+    //
     parser_ = parser_factory_->NewParser(request_type);
     request_list_.PushBack(this);
     status_ = PROCESS;
@@ -57,6 +61,7 @@ void CallData::ProceedNewRequest() {
 
 void CallData::ProceedProcess(Response* rpc_result) {
     SPDLOG_TRACE("process the request ");
+    //Parser解析器去解析此request并完成此请求的处理
     const auto result = parser_->Parse(request_, rpc_result, reply_);
     if (result) {
         status_ = FINISH;

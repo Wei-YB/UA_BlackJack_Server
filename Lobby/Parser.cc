@@ -8,12 +8,14 @@ using namespace ua_blackjack::lobby;
 Parser::Parser(Lobby& lobby): stamp_(-1), lobby_(lobby) {
 }
 
+//基类里解析requestType，只由lobby类处理，无需rpc调用其他服务
 bool Parser::Parse(const Request& request, Response* rpc_result, Response& response) {
     response.set_uid(request.uid());
     response.set_status(request.stamp());
     response.set_status(0);
     const auto req_type = request.requesttype();
     const auto uid      = request.uid();
+
     if (req_type == ua_blackjack::Request_RequestType_JOIN_ROOM) {
         const auto room_id = std::stoi(request.args(0));
         if (!lobby_.JoinRoom(uid, room_id)) {
@@ -55,6 +57,7 @@ bool Parser::Parse(const Request& request, Response* rpc_result, Response& respo
         return true;
     }
     if (req_type == ua_blackjack::Request_RequestType_MATCH_END) {
+        //应检查request.args().size()
         const auto room_id = std::stoi(request.args()[0]);
         lobby_.MatchEnd(room_id);
         return true;
@@ -77,6 +80,7 @@ LoginParser::LoginParser(Lobby& lobby, RPCClient& client): Parser(lobby),
                                                            client_(client), state_(RPC_State::START), padding_{} {
 }
 
+//此派生类处理向DB发起的GetUid GetPassWord 的两个调用
 bool LoginParser::Parse(const Request& request, Response* rpcResult, Response& response) {
     response.set_stamp(request.stamp());
     response.set_status(-1);
@@ -194,6 +198,6 @@ std::shared_ptr<Parser> ParserFactory::NewParser(ua_blackjack::Request_RequestTy
 
     if (type == ua_blackjack::Request_RequestType_READY)
         return std::make_shared<ReadyParser>(lobby_, rpc_client_);
-        
+
     return std::make_shared<Parser>(lobby_);
 }

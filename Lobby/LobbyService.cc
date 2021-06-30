@@ -9,8 +9,8 @@ ua_blackjack::LobbyServer::LobbyServer(const std::string& game_server, const std
 
 void ua_blackjack::LobbyServer::Run() {
     std::thread work_thread([this]() { this->WorkThread(); });//创建新线程执行WorkThread()
-    std::thread response_listen_thread([this]() { this->rpc_client_.AsyncCompleteRpc(); });
-    server_.Run();
+    std::thread response_listen_thread([this]() { this->rpc_client_.AsyncCompleteRpc(); });//创建新线程：监听来自database的response
+    server_.Run();//主线程执行的任务：监听来自proxy的request
 }
 
 ua_blackjack::LobbyServer::ServerImpl::ServerImpl(BlockList<CallData*>& request_list): request_list_(request_list) {
@@ -43,6 +43,7 @@ std::shared_ptr<grpc::Channel> ua_blackjack::LobbyServer::NewChannel(const std::
     return CreateChannel(host, grpc::InsecureChannelCredentials());
 }
 
+//工作线程用于epoll的eventloop：监听两个事件。
 void ua_blackjack::LobbyServer::WorkThread() {
     SPDLOG_INFO("event loop start");
     auto epoll_fd = epoll_create(1);
@@ -70,6 +71,7 @@ void ua_blackjack::LobbyServer::WorkThread() {
         }
         else
             SPDLOG_TRACE("{0} event active", ret);
+
         for (int i = 0; i < ret; ++i) {
             handler_map[events[i].data.fd]();
         }
@@ -82,6 +84,7 @@ void ua_blackjack::LobbyServer::HandleRequest() {
     read(request_list_.fd(), &val, sizeof val);
 
     auto top = request_list_.PopFront();
+    //调用此request的Proceed方法
     top->Proceed();
     const auto stage = top->GetCallStatus();
     if (stage != CallData::FINISH) {

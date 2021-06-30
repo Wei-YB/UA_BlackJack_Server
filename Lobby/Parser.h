@@ -1,8 +1,9 @@
 #pragma once
 
-#ifdef _DEBUG
+#ifndef _DEBUG
 #define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
 #endif
+
 
 
 #include "Lobby.h"
@@ -15,7 +16,7 @@ namespace ua_blackjack::lobby {
 using ua_blackjack::Request;
 using ua_blackjack::Response;
 
-//基类Parser里只有Lobby类的引用，
+//基类Parser里只有Lobby类的引用，一部分功能迁移到lobby类里进行实现
 class Parser {
 public:
     Parser(Lobby& lobby);
@@ -48,6 +49,7 @@ public:
     ~LoginParser() override;
 
 private:
+    //保存一个自身的状态
     enum class RPC_State {
         START,
         GET_UID,
@@ -56,6 +58,7 @@ private:
 
     std::string password;
     std::string nickname;
+    //
     RPCClient&  client_;
     RPC_State   state_;
     char        padding_[4];

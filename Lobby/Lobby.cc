@@ -19,13 +19,9 @@ Lobby::Lobby(RPCClient& client):
 
 Lobby::UID Lobby::Login(std::string nickname, std::string password, int64_t uid, std::string real_pass) {
     if (real_pass == password) {
-        if (AllPlayers_.GetStatus(uid) == Players::Status::OFFLINE)
-        {
-            AllPlayers_.NewPlayer(uid);
-            logger->trace("Player:{0:d} has logged in the lobby", uid);
-        }else {
-            logger->trace("Player {0} already in lobby", nickname);
-        }
+        //don't judge the status of player whenever login.
+        AllPlayers_.NewPlayer(uid);
+        logger->trace("Player:{0:d} has logged in the lobby", uid);
         return uid;
     }
     else {
@@ -73,7 +69,7 @@ bool Lobby::JoinRoom(UID uid, RoomID rid) {
 
     //the players status is not in lobby
     if (AllPlayers_.GetStatus(uid) != Players::Status::IN_LOBBY) {
-        logger->warn("Player:{0:d} is not in lobby, can not join any room.", uid); //如何设置日志级别
+        logger->warn("Player:{0:d} is not in lobby, can not join any room.", uid); 
         return false;
     }
 
@@ -226,7 +222,17 @@ void Lobby::MatchEnd(RoomID rid) {
     logger->info("The match in the room:{0:d} has been finished", rid);
 }
 
-bool Lobby::MatchStart(RoomID rid, const std::vector<UID>& args) {
+bool Lobby::MatchStart(RoomID rid, std::vector<UID>& args) {
+
+    //add random rotating
+    std::uniform_int_distribution<unsigned> u(1, args.size()-1);
+    std::default_random_engine e;
+
+    auto randomIndex =u(e);
+    assert(randomIndex >= 1 && randomIndex < args.size());
+
+    std::swap(args[1], args[randomIndex]); 
+    
     client_.GameStart(args);
     return true;
 }
@@ -277,11 +283,12 @@ bool Lobby::CheckRoomDone(RoomID rid) {
 }
 
 std::vector<Lobby::RoomID> Lobby::GetAvailableRoomList() {
-
     std::vector<RoomID> ret;
     for (auto& rid : availableRooms_) {
         ret.push_back(rid);
     }
-    ret.push_back(curMaxRoomID);
+    for (auto& rid : emptyRooms_) {
+        ret.push_back(rid);
+    }
     return ret;
 }

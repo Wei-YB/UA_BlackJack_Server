@@ -49,11 +49,13 @@ private:
 
     void HandleResponse();
 
-
+    //two channel for two rpcclient call
     std::shared_ptr<Channel> database_channel_;
     std::shared_ptr<Channel> game_channel_;
 
+    //存放来自proxy的请求
     BlockList<CallData*>                   request_list_;
+    //存放来自DB的响应
     BlockList<Response>                    response_list_;
     std::unordered_map<int32_t, CallData*> rpc_info_;
 

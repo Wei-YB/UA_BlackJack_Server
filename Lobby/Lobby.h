@@ -10,6 +10,7 @@
 #include "RPCClient.h"
 #include "Players.h"
 #include "Room.h"
+#include <random>
 
 constexpr int maxRooms = 20000;
 
@@ -58,7 +59,7 @@ private:
     bool CheckRoomDone(RoomID rid);
     
     //RPC call, send data to match service
-    bool MatchStart(RoomID rid, const std::vector<UID>& args);
+    bool MatchStart(RoomID rid, std::vector<UID>& args);
 
 private:
     //the status of player is managed by Players.
@@ -74,7 +75,7 @@ private:
     RoomID curMaxRoomID;
     std::shared_ptr<spdlog::logger> logger;
 
-    //需要加上RPCClient的引用
+    //add a reference to RPCclient 
     RPCClient& client_;
 
 };
