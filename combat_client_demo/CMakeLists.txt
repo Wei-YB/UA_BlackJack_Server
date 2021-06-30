@@ -35,7 +35,7 @@ target_link_libraries(hw_grpc_proto
 
 # cpp file dependent: change server and client to your own cpp file (withou .cc/.cpp suffix)
 foreach(_target
-  client-syn client-asyn server-asyn testClinet)
+  testClinet restartClient)
   add_executable(${_target} "${_target}.cc")
   target_link_libraries(${_target}
     hw_grpc_proto

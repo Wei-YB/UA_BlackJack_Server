@@ -73,10 +73,8 @@ CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/restartClient.dir/all
 all: CMakeFiles/testClinet.dir/all
-all: CMakeFiles/server-asyn.dir/all
-all: CMakeFiles/client-asyn.dir/all
-all: CMakeFiles/client-syn.dir/all
 all: CMakeFiles/hw_grpc_proto.dir/all
 
 .PHONY : all
@@ -87,13 +85,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/restartClient.dir/clean
 clean: CMakeFiles/testClinet.dir/clean
-clean: CMakeFiles/server-asyn.dir/clean
-clean: CMakeFiles/client-asyn.dir/clean
-clean: CMakeFiles/client-syn.dir/clean
 clean: CMakeFiles/hw_grpc_proto.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/restartClient.dir
+
+# All Build rule for target.
+CMakeFiles/restartClient.dir/all: CMakeFiles/hw_grpc_proto.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/restartClient.dir/build.make CMakeFiles/restartClient.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/restartClient.dir/build.make CMakeFiles/restartClient.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles --progress-num=5,6 "Built target restartClient"
+.PHONY : CMakeFiles/restartClient.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/restartClient.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/restartClient.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles 0
+.PHONY : CMakeFiles/restartClient.dir/rule
+
+# Convenience name for target.
+restartClient: CMakeFiles/restartClient.dir/rule
+
+.PHONY : restartClient
+
+# clean rule for target.
+CMakeFiles/restartClient.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/restartClient.dir/build.make CMakeFiles/restartClient.dir/clean
+.PHONY : CMakeFiles/restartClient.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/testClinet.dir
@@ -102,7 +125,7 @@ clean: CMakeFiles/hw_grpc_proto.dir/clean
 CMakeFiles/testClinet.dir/all: CMakeFiles/hw_grpc_proto.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/testClinet.dir/build.make CMakeFiles/testClinet.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/testClinet.dir/build.make CMakeFiles/testClinet.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles --progress-num=11,12 "Built target testClinet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles --progress-num=7,8 "Built target testClinet"
 .PHONY : CMakeFiles/testClinet.dir/all
 
 # Build rule for subdir invocation for target.
@@ -123,94 +146,13 @@ CMakeFiles/testClinet.dir/clean:
 .PHONY : CMakeFiles/testClinet.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/server-asyn.dir
-
-# All Build rule for target.
-CMakeFiles/server-asyn.dir/all: CMakeFiles/hw_grpc_proto.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles --progress-num=9,10 "Built target server-asyn"
-.PHONY : CMakeFiles/server-asyn.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/server-asyn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/server-asyn.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles 0
-.PHONY : CMakeFiles/server-asyn.dir/rule
-
-# Convenience name for target.
-server-asyn: CMakeFiles/server-asyn.dir/rule
-
-.PHONY : server-asyn
-
-# clean rule for target.
-CMakeFiles/server-asyn.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/clean
-.PHONY : CMakeFiles/server-asyn.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/client-asyn.dir
-
-# All Build rule for target.
-CMakeFiles/client-asyn.dir/all: CMakeFiles/hw_grpc_proto.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-asyn.dir/build.make CMakeFiles/client-asyn.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-asyn.dir/build.make CMakeFiles/client-asyn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles --progress-num=1,2 "Built target client-asyn"
-.PHONY : CMakeFiles/client-asyn.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/client-asyn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/client-asyn.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles 0
-.PHONY : CMakeFiles/client-asyn.dir/rule
-
-# Convenience name for target.
-client-asyn: CMakeFiles/client-asyn.dir/rule
-
-.PHONY : client-asyn
-
-# clean rule for target.
-CMakeFiles/client-asyn.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-asyn.dir/build.make CMakeFiles/client-asyn.dir/clean
-.PHONY : CMakeFiles/client-asyn.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/client-syn.dir
-
-# All Build rule for target.
-CMakeFiles/client-syn.dir/all: CMakeFiles/hw_grpc_proto.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-syn.dir/build.make CMakeFiles/client-syn.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-syn.dir/build.make CMakeFiles/client-syn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles --progress-num=3,4 "Built target client-syn"
-.PHONY : CMakeFiles/client-syn.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/client-syn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/client-syn.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles 0
-.PHONY : CMakeFiles/client-syn.dir/rule
-
-# Convenience name for target.
-client-syn: CMakeFiles/client-syn.dir/rule
-
-.PHONY : client-syn
-
-# clean rule for target.
-CMakeFiles/client-syn.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-syn.dir/build.make CMakeFiles/client-syn.dir/clean
-.PHONY : CMakeFiles/client-syn.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/hw_grpc_proto.dir
 
 # All Build rule for target.
 CMakeFiles/hw_grpc_proto.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw_grpc_proto.dir/build.make CMakeFiles/hw_grpc_proto.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw_grpc_proto.dir/build.make CMakeFiles/hw_grpc_proto.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles --progress-num=5,6,7,8 "Built target hw_grpc_proto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build/CMakeFiles --progress-num=1,2,3,4 "Built target hw_grpc_proto"
 .PHONY : CMakeFiles/hw_grpc_proto.dir/all
 
 # Build rule for subdir invocation for target.

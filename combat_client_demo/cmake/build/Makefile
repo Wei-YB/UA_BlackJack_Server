@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/combat_client_demo/cmake/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake3 --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -97,6 +86,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake3 --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named restartClient
+
+# Build rule for target.
+restartClient: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 restartClient
+.PHONY : restartClient
+
+# fast build rule for target.
+restartClient/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/restartClient.dir/build.make CMakeFiles/restartClient.dir/build
+.PHONY : restartClient/fast
+
+#=============================================================================
 # Target rules for targets named testClinet
 
 # Build rule for target.
@@ -144,45 +157,6 @@ testClinet/fast:
 .PHONY : testClinet/fast
 
 #=============================================================================
-# Target rules for targets named server-asyn
-
-# Build rule for target.
-server-asyn: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server-asyn
-.PHONY : server-asyn
-
-# fast build rule for target.
-server-asyn/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/build
-.PHONY : server-asyn/fast
-
-#=============================================================================
-# Target rules for targets named client-asyn
-
-# Build rule for target.
-client-asyn: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client-asyn
-.PHONY : client-asyn
-
-# fast build rule for target.
-client-asyn/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-asyn.dir/build.make CMakeFiles/client-asyn.dir/build
-.PHONY : client-asyn/fast
-
-#=============================================================================
-# Target rules for targets named client-syn
-
-# Build rule for target.
-client-syn: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client-syn
-.PHONY : client-syn
-
-# fast build rule for target.
-client-syn/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-syn.dir/build.make CMakeFiles/client-syn.dir/build
-.PHONY : client-syn/fast
-
-#=============================================================================
 # Target rules for targets named hw_grpc_proto
 
 # Build rule for target.
@@ -194,60 +168,6 @@ hw_grpc_proto: cmake_check_build_system
 hw_grpc_proto/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw_grpc_proto.dir/build.make CMakeFiles/hw_grpc_proto.dir/build
 .PHONY : hw_grpc_proto/fast
-
-client-asyn.o: client-asyn.cc.o
-
-.PHONY : client-asyn.o
-
-# target to build an object file
-client-asyn.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-asyn.dir/build.make CMakeFiles/client-asyn.dir/client-asyn.cc.o
-.PHONY : client-asyn.cc.o
-
-client-asyn.i: client-asyn.cc.i
-
-.PHONY : client-asyn.i
-
-# target to preprocess a source file
-client-asyn.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-asyn.dir/build.make CMakeFiles/client-asyn.dir/client-asyn.cc.i
-.PHONY : client-asyn.cc.i
-
-client-asyn.s: client-asyn.cc.s
-
-.PHONY : client-asyn.s
-
-# target to generate assembly for a file
-client-asyn.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-asyn.dir/build.make CMakeFiles/client-asyn.dir/client-asyn.cc.s
-.PHONY : client-asyn.cc.s
-
-client-syn.o: client-syn.cc.o
-
-.PHONY : client-syn.o
-
-# target to build an object file
-client-syn.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-syn.dir/build.make CMakeFiles/client-syn.dir/client-syn.cc.o
-.PHONY : client-syn.cc.o
-
-client-syn.i: client-syn.cc.i
-
-.PHONY : client-syn.i
-
-# target to preprocess a source file
-client-syn.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-syn.dir/build.make CMakeFiles/client-syn.dir/client-syn.cc.i
-.PHONY : client-syn.cc.i
-
-client-syn.s: client-syn.cc.s
-
-.PHONY : client-syn.s
-
-# target to generate assembly for a file
-client-syn.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-syn.dir/build.make CMakeFiles/client-syn.dir/client-syn.cc.s
-.PHONY : client-syn.cc.s
 
 demo.grpc.pb.o: demo.grpc.pb.cc.o
 
@@ -303,32 +223,32 @@ demo.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw_grpc_proto.dir/build.make CMakeFiles/hw_grpc_proto.dir/demo.pb.cc.s
 .PHONY : demo.pb.cc.s
 
-server-asyn.o: server-asyn.cc.o
+restartClient.o: restartClient.cc.o
 
-.PHONY : server-asyn.o
+.PHONY : restartClient.o
 
 # target to build an object file
-server-asyn.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/server-asyn.cc.o
-.PHONY : server-asyn.cc.o
+restartClient.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/restartClient.dir/build.make CMakeFiles/restartClient.dir/restartClient.cc.o
+.PHONY : restartClient.cc.o
 
-server-asyn.i: server-asyn.cc.i
+restartClient.i: restartClient.cc.i
 
-.PHONY : server-asyn.i
+.PHONY : restartClient.i
 
 # target to preprocess a source file
-server-asyn.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/server-asyn.cc.i
-.PHONY : server-asyn.cc.i
+restartClient.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/restartClient.dir/build.make CMakeFiles/restartClient.dir/restartClient.cc.i
+.PHONY : restartClient.cc.i
 
-server-asyn.s: server-asyn.cc.s
+restartClient.s: restartClient.cc.s
 
-.PHONY : server-asyn.s
+.PHONY : restartClient.s
 
 # target to generate assembly for a file
-server-asyn.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server-asyn.dir/build.make CMakeFiles/server-asyn.dir/server-asyn.cc.s
-.PHONY : server-asyn.cc.s
+restartClient.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/restartClient.dir/build.make CMakeFiles/restartClient.dir/restartClient.cc.s
+.PHONY : restartClient.cc.s
 
 testClinet.o: testClinet.cc.o
 
@@ -365,26 +285,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... client-asyn"
-	@echo "... client-syn"
 	@echo "... hw_grpc_proto"
-	@echo "... server-asyn"
+	@echo "... restartClient"
 	@echo "... testClinet"
-	@echo "... client-asyn.o"
-	@echo "... client-asyn.i"
-	@echo "... client-asyn.s"
-	@echo "... client-syn.o"
-	@echo "... client-syn.i"
-	@echo "... client-syn.s"
 	@echo "... demo.grpc.pb.o"
 	@echo "... demo.grpc.pb.i"
 	@echo "... demo.grpc.pb.s"
 	@echo "... demo.pb.o"
 	@echo "... demo.pb.i"
 	@echo "... demo.pb.s"
-	@echo "... server-asyn.o"
-	@echo "... server-asyn.i"
-	@echo "... server-asyn.s"
+	@echo "... restartClient.o"
+	@echo "... restartClient.i"
+	@echo "... restartClient.s"
 	@echo "... testClinet.o"
 	@echo "... testClinet.i"
 	@echo "... testClinet.s"
