@@ -18,18 +18,28 @@
 
 using namespace Net;
 
-Net::EventsSource::EventsSource(FileDesc fd, EventLoop *loop,
+EventsSource::EventsSource(FileDesc fd, EventLoop *loop,
                         const std::function<int()> &inEventCallBack,
                         const std::function<int()> &outEventCallBack,
-                        const std::function<int()> &errEventCallBack)
+                        const std::function<int()> &errEventCallBack,
+                        const std::function<int()> &closeEventCallBack)
                         : fd_(fd), loop_(loop),
                         inEventCallBack_(inEventCallBack),
                         outEventCallBack_(outEventCallBack),
-                        errEventCallBack_(errEventCallBack) {}
+                        errEventCallBack_(errEventCallBack),
+                        closeEventCallBack_(closeEventCallBack) {}
 
-int Net::EventsSource::HandleEvents(Event events)
+int EventsSource::HandleEvents(Event events)
 {
-    int ret = 0;
+    int ret;
+    if (events & EV_HUP || events & EV_ERR)
+    {   // logger_ptr->warn("fatal error happens in event source (fd: {}), close it now.", fd_);
+        if (closeEventCallBack_) 
+        {
+            closeEventCallBack_();
+        }
+        return -1;
+    }
     if (events & EV_IN)
     {
         logger_ptr->info("In main thread: On input event from fd: {}", fd_);
@@ -40,43 +50,53 @@ int Net::EventsSource::HandleEvents(Event events)
         logger_ptr->info("In main thread: On onput event from fd: {}", fd_);
         ret = outEventCallBack_() == -1 ? -1 : ret; 
     }
-    if (events & EV_ERR)
+    
+    return 0;
+}
+
+int EventsSource::EnableWrite()
+{
+    int ret;
+    if (events_ & EV_OUT)
     {
         logger_ptr->info("In main thread: On error event from fd: {}", fd_);
         ret = errEventCallBack_() == -1 ? -1 : ret; 
     }
-    return ret;
+    events_ |= EV_OUT | EV_ET;
+    return loop_->mod(share_from_this());
 }
 
-int Net::EventsSource::Update(Event events)
+int EventsSource::EnableRead()
 {
-    if (events_ == events)
+    if (events_ & EV_IN)
     {
         return 0;
     }
-    events_ = events;
-    return loop_->mod(shared_from_this());
+    events_ |= EV_IN | EV_ET;
+    return loop_->mod(share_from_this());
 }
 
-int Net::EventsSource::Close()
+int EventsSource::Close()
 {
-    return loop_->del(shared_from_this());
+    ::close(fd_);
+    return loop_->del(share_from_this());
 }
 
-FileDesc Net::EventsSource::fd() const 
+FileDesc EventsSource::fd() const 
 {
     return fd_;
 }
 
-Net::EventLoop::EventLoop(int max_events) : maxEvents_(max_events)
+EventLoop::EventLoop(int max_events) : maxEvents_(max_events)
 {
     if ((epollfd_ = epoll_create(5)) < 0)
     {
-        throw "EventLoop: fail to create epoll.\n";
+        // logger_ptr->error("fail to create epollfd.");
     }
     if ((events_ = new struct epoll_event[maxEvents_]) == NULL)
     {
         close(epollfd_);
+        // logger_ptr->error("fail to assign epoll event array.");
         throw "EventLoop: fail to assign epoll event array.\n";        
     }
 }
