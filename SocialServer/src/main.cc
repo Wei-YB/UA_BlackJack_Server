@@ -18,7 +18,7 @@ void StartServer() {
     ofs << pid << std::endl;
     ofs.close();
 
-    logger = spdlog::basic_logger_mt("basic_logger", "log.log");
+    logger = spdlog::basic_logger_mt("basic_logger", "SocialLog.log");
     logger->flush_on(spdlog::level::trace);
 
     ua_blackjack::social_server::ServerImpl server;
