@@ -1,6 +1,6 @@
 #include "DBServerAsynImpl.h"
 
-using ua_black_jack_server::data_base_server::RequestParser;
+using ua_blackjack::data_base_server::RequestParser;
 
 ServerAsynImpl::ServerAsynImpl(const std::string& rpc_host,
                                const std::string& redis_host,
@@ -23,7 +23,7 @@ void ServerAsynImpl::Run() {
     cq_     = builder.AddCompletionQueue();
     server_ = builder.BuildAndStart();
 
-    std::cout << "Server listening on " << server_address << std::endl;
+    SPDLOG_INFO("Server listening on {}", server_address);
 
     HandleRpcs();
 }
@@ -62,14 +62,20 @@ CallData::CallData(DatabaseService::AsyncService* service,
 void CallData::Proceed() {
     if (status_ == CREATE) {
         status_ = PROCESS;
-        service_->RequestRequestDB(&ctx_, &request_, &responder_, cq_, cq_, this);
+        service_->RequestNotify(&ctx_, &request_, &responder_, cq_, cq_, this);
     }
     else if (status_ == PROCESS) {
         new CallData(service_, cq_, parser_);
-        spdlog::info("new request from {0}", ctx_.peer());
+        SPDLOG_INFO("new request from {0}: type = {1}, uid = {2}", ctx_.peer(),Request::RequestType_Name(request_.requesttype()),request_.uid() );
+        SPDLOG_TRACE("call response_.set_uid");
         response_.set_uid(request_.uid());
+        SPDLOG_TRACE("call response_.set_stamp");
         response_.set_stamp(request_.stamp());
-        parser_.Parse(request_, response_);
+        SPDLOG_TRACE("call parser_.Parse");
+        if(!parser_.Parse(request_, response_)){
+            response_.set_status(-1);
+        }
+        SPDLOG_INFO("reply to {0}: status:{1}, arg.size={2}", ctx_.peer(), response_.status(), response_.args_size());
         status_ = FINISH;
         responder_.Finish(response_, Status::OK, this);
     }

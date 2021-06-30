@@ -1,6 +1,5 @@
 #include "Database.h"
-
-using namespace ua_black_jack_server::data_base_server;
+using namespace ua_blackjack::data_base_server;
 
 int64_t Database::SignUp(const std::string& nickname, const std::string& password) {
     if (service_.NameExists(nickname.c_str()))
@@ -24,6 +23,10 @@ std::string Database::GetNickname(int64_t uid) {
 }
 
 int64_t Database::GetUid(const std::string& nickname) {
+    if(!service_.NameExists(nickname.c_str())){
+        SPDLOG_INFO("invalid nickname: {0}", nickname);
+        return -1;
+    }
     const std::string uid = service_.GetUid(nickname.c_str()).c_str();
     return std::stoll(uid);
 }
@@ -70,11 +73,11 @@ bool Database::DeleteFriend(int64_t uid, int64_t friendID) {
 }
 
 bool Database::AddWaitFriend(int64_t uid, int64_t friendID) {
-    return service_.InsertFriendList(uid, friendID);
+    return service_.InsertWaitingFriendList(uid, friendID);
 }
 
 bool Database::DeleteWaitingFriend(int64_t uid, int64_t friendID) {
-    return service_.RemoveFriendList(uid, friendID);
+    return service_.RemoveWaitingFriendList(uid, friendID);
 }
 
 bool Database::MatchFinish(const std::map<std::string, std::string>& match_info) {

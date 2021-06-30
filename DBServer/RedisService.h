@@ -1,12 +1,14 @@
 #pragma once
 #include "nameFormat.h"
-
+#include <spdlog/spdlog.h>
+#include "spdlog/async.h"
+#include "spdlog/sinks/basic_file_sink.h"
 #include <lib_acl.hpp>
 
 
 
 
-namespace ua_black_jack_server::data_base_server {
+namespace ua_blackjack::data_base_server {
 
 using name_format::GetKey;
 using name_format::FormatType;

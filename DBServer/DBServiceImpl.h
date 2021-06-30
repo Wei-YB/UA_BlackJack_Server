@@ -1,16 +1,16 @@
 #pragma once
 
-#include "Player.grpc.pb.h"
+#include "UA_BlackJack.grpc.pb.h"
 #include "RequestParser.h"
 
-class DBServiceImpl : public player::DatabaseService::Service {
+class DBServiceImpl : public ua_blackjack::DatabaseService::Service {
 
 public:
-    using RequestParser = ua_black_jack_server::data_base_server::RequestParser;
+    using RequestParser = ua_blackjack::data_base_server::RequestParser;
     using Status = grpc::Status;
     using ServerContext = grpc::ServerContext;
-    using Request = player::Request;
-    using Response = player::Response;
+    using Request = ua_blackjack::Request;
+    using Response = ua_blackjack::Response;
 
 
     DBServiceImpl(const std::string& redis_host, int init_score): parser_(redis_host, init_score) {

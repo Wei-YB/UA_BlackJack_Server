@@ -1,10 +1,10 @@
 #pragma once
 
-#include <spdlog/spdlog.h>
+
 #include <grpc/support/log.h>
 #include <grpcpp/grpcpp.h>
 
-#include "Player.grpc.pb.h"
+#include "UA_BlackJack.grpc.pb.h"
 #include "RequestParser.h"
 
 using grpc::Server;
@@ -14,9 +14,9 @@ using grpc::ServerCompletionQueue;
 using grpc::ServerContext;
 using grpc::Status;
 
-using player::Request;
-using player::Response;
-using player::DatabaseService;
+using ua_blackjack::Request;
+using ua_blackjack::Response;
+using ua_blackjack::DatabaseService;
 
 class ServerAsynImpl final {
 public:
@@ -39,7 +39,7 @@ public:
 private:
     std::string rpc_host_;
     std::string redis_host_;
-    ua_black_jack_server::data_base_server::RequestParser parser_;
+    ua_blackjack::data_base_server::RequestParser parser_;
     std::unique_ptr<ServerCompletionQueue>                       cq_;
     DatabaseService::AsyncService                                service_;
     std::unique_ptr<Server>                                      server_;

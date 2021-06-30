@@ -1,7 +1,9 @@
 #pragma once
+#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
+
 #include <cstdint>
 
-namespace ua_black_jack_server::data_base_server::name_format {
+namespace ua_blackjack::data_base_server::name_format {
 
 enum class FormatType {
     UID_TO_NICKNAME,

@@ -1,10 +1,8 @@
-#include <spdlog/spdlog.h>
-
 #include "DBServiceImpl.h"
 
 
-grpc::Status DBServiceImpl::RequestDB(grpc::ServerContext* context, const player::Request* request,
-                                      player::Response*    response) {
+grpc::Status DBServiceImpl::RequestDB(grpc::ServerContext* context, const ua_blackjack::Request* request,
+    ua_blackjack::Response*    response) {
 
     // fixed set log
     spdlog::debug("new request come from {0}", context->peer());
