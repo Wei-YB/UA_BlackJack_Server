@@ -3,31 +3,21 @@ cmake_minimum_required (VERSION 3.16)
 set(CMAKE_CXX_STANDARD 17)
 project(DBServer)
 
-# set(CXX_FLAGS -std=c++17)
+include(ExternalProject)
 
-# set(CMAKE_INCLUDE_PATH "/home/owen/code/grpc/include")
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/acl/lib_acl/)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/acl/lib_protocol/)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/acl/lib_acl_cpp/)
 
-# INCLUDE_DIRECTORIES(CMAKE_INCLUDE_PATH)
+include(${CMAKE_CURRENT_SOURCE_DIR}/../common.cmake)
 
-include(common.cmake)
 
 add_library(database RedisService.cc nameFormat.cc Database.cc )
 target_link_libraries(database PRIVATE spdlog)
 
-# add_executable(demo RedisTest.cc )
-# target_link_libraries(demo database _acl_cpp _protocol _acl pthread)
-
-macro(add_test_target TEST_TARGET)
-    add_executable("test_${TEST_TARGET}" "./test/test_${TEST_TARGET}.cc")
-    target_link_libraries("test_${TEST_TARGET}" database _acl_cpp _protocol _acl gtest gtest_main pthread spdlog )
-endmacro(add_test_target)
-
-add_test_target(nameFormat)
-add_test_target(RedisService)
-add_test_target(Database)
-
 add_executable(DataBaseService "DBService.cc"  "UA_BlackJack.grpc.pb.cc" "UA_BlackJack.pb.cc" "DBServiceAsynImpl.cc" "RequestParser.cc" )
-target_link_libraries(DataBaseService ${_REFLECTION} ${_GRPC_GRPCPP} ${_PROTOBUF_LIBPROTOBUF} database _acl_cpp _protocol _acl pthread spdlog)
 
-message(${CMAKE_CXX_FLAGS_RELEASE} )
-
+target_include_directories(DataBaseService PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/third-party/acl/lib_acl/include")
+target_include_directories(DataBaseService PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/third-party/acl/lib_acl_cpp/include")
+target_include_directories(DataBaseService PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/third-party/acl/lib_protocol/include")
+target_link_libraries(DataBaseService ${_REFLECTION} ${_GRPC_GRPCPP} ${_PROTOBUF_LIBPROTOBUF} acl_cpp_static protocol_static acl_static database  pthread spdlog)

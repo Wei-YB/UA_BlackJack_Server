@@ -1,6 +1,6 @@
 #pragma once
 
-#include <spdlog/spdlog.h>
+
 #include <grpc/support/log.h>
 #include <grpcpp/grpcpp.h>
 
@@ -39,7 +39,7 @@ public:
 private:
     std::string rpc_host_;
     std::string redis_host_;
-    ua_black_jack_server::data_base_server::RequestParser parser_;
+    ua_blackjack::data_base_server::RequestParser parser_;
     std::unique_ptr<ServerCompletionQueue>                       cq_;
     DatabaseService::AsyncService                                service_;
     std::unique_ptr<Server>                                      server_;

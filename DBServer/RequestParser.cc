@@ -1,6 +1,6 @@
 #include "RequestParser.h"
 
-namespace ua_black_jack_server::data_base_server {
+namespace ua_blackjack::data_base_server {
 
 
 template <typename T>
@@ -27,7 +27,12 @@ bool RequestParser::ParseSignUp(const RepeatedString& args, Response& response) 
 bool RequestParser::ParseGetUid(const RepeatedString& args, Response& response) {
     if (args.size() != 1)
         return false;
+    SPDLOG_TRACE("Parse GET UID, call database.getuid");
     const auto uid = database_.GetUid(args[0]);
+    if(uid < 0){
+        response.set_status(-1);
+        return false;
+    }
     response.set_uid(uid > 0 ? uid : -1);
     response.set_status(1);
     return true;
@@ -40,7 +45,7 @@ bool RequestParser::ParseGetPassword(int64_t uid, Response& response) {
 }
 
 bool RequestParser::ParseGetScore(int64_t uid, Response& response) {
-    response.add_args(database_.GetPassword(uid));
+    response.add_args( std::to_string(database_.GetScore(uid)));
     return true;
 }
 
@@ -67,6 +72,7 @@ bool RequestParser::ParseGetWaitingFriendList(int64_t uid, Response& response) {
 
 bool RequestParser::ParseGetMatchList(int64_t uid, Response& response) {
     auto matchList = database_.getMatchList(uid);
+    SPDLOG_TRACE("get match list for {0}, size is {1}", uid, matchList.size());
     for (auto& str : matchList) {
         response.add_args(std::move(str));
     }
@@ -108,6 +114,7 @@ bool RequestParser::ParseRankTop(const RepeatedString& args, Response& response)
 }
 
 bool RequestParser::ParseAddFriend(int64_t uid, const RepeatedString& args, Response& response) {
+    SPDLOG_TRACE("parse add friend");
     if (args.size() != 1)
         return false;
     auto friendId = std::stoi(args[0]);

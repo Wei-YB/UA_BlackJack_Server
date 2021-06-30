@@ -3,7 +3,7 @@
 
 #include <map>
 
-namespace ua_black_jack_server :: data_base_server {
+namespace ua_blackjack :: data_base_server {
 
 class Database {
 public:

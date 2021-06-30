@@ -5,7 +5,7 @@
 
 #include "Database.h"
 
-namespace ua_black_jack_server::data_base_server {
+namespace ua_blackjack::data_base_server {
 
 using ::ua_blackjack::Request;
 using ::ua_blackjack::Response;
@@ -20,6 +20,7 @@ public:
 
 public:
     bool Parse(const Request& req, Response& response) {
+        SPDLOG_DEBUG("try to parse current rquest");
         switch (req.requesttype()) {
         case ua_blackjack::Request_RequestType_SIGNUP:
             return ParseSignUp(req.args(), response);
@@ -49,7 +50,12 @@ public:
             return ParseGetMatchInfo(req.args(), response);
         case ua_blackjack::Request_RequestType_MATCH_END:
             return ParseMatchEnd(req.args(), response);
+        case ua_blackjack::Request_RequestType_ADD_WAIT_FRIEND:
+            return ParseAddWaitFriend(req.uid(), req.args(), response);
+        case ua_blackjack::Request_RequestType_DELETE_WAIT_FRIEND:
+            return ParseDeleteWaitFriend(req.uid(), req.args(), response);
         default:
+            SPDLOG_ERROR("bad request type");
             return false;
         }
     }

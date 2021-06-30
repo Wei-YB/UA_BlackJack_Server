@@ -1,12 +1,10 @@
-#include <spdlog/spdlog.h>
-
 #include "RedisService.h"
 
 #include <cstdlib>
 
 
 
-using namespace ua_black_jack_server::data_base_server;
+using namespace ua_blackjack::data_base_server;
 
 
 char buffer[64];
@@ -27,13 +25,12 @@ bool RedisService::Exists(const char* key) {
 
 acl::string RedisService::GetUid(const char* nickname) {
     // spdlog::logger;
-    
+    SPDLOG_TRACE("get uid called");
     const auto ret = conn_.get(GetKey(FormatType::NICKNAME_TO_UID, nickname));
     if (ret->get_type() == acl::REDIS_RESULT_NIL)
         return "";
     buffer_.clear();
     ret->argv_to_string(buffer_);
-    // spdlog::trace("return with uid: {0}", buffer_.c_str());
     return buffer_;
 }
 
@@ -169,11 +166,6 @@ RedisService::UID RedisService::NextUid() {
     spdlog::trace("call NextUid");
     conn_.incr("UID");
     spdlog::trace("Redis: INCR UID");
-    // buffer_.clear();
-    // spdlog::trace("clear buffer");
-    // conn_.get("UID")->argv_to_string(buffer_);
-    // spdlog::trace("got new uid: {0}", buffer_.c_str());
-    // return strtoll(buffer_.c_str(), nullptr, 10);
 
     static acl::string local_buffer;
     local_buffer.clear();

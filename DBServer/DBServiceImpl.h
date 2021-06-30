@@ -6,7 +6,7 @@
 class DBServiceImpl : public ua_blackjack::DatabaseService::Service {
 
 public:
-    using RequestParser = ua_black_jack_server::data_base_server::RequestParser;
+    using RequestParser = ua_blackjack::data_base_server::RequestParser;
     using Status = grpc::Status;
     using ServerContext = grpc::ServerContext;
     using Request = ua_blackjack::Request;
