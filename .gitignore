@@ -1,0 +1,6 @@
+build/
+log/
+grpc/
+spdlog/
+*.a
+*.so
