@@ -12,7 +12,7 @@
 #include <sstream>
 #include "spdlog/async.h"
 #include "spdlog/sinks/basic_file_sink.h"
-#include "TcpServer.h"
+#include "ControlTcpServer.h"
 
 std::string ProxyServiceAddr;
 std::string LobbyServiceAddr;
