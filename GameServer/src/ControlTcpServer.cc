@@ -19,6 +19,8 @@ void ua_blackjack::Game::createServiece(void)
     address.sin_port = htons(port);
 
     int listenfd = socket(AF_INET, SOCK_STREAM, 0);
+    int reuse = 1;
+    setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, (const void *)&reuse, sizeof(int)); //当服务端出现timewait状态的链接时，确保server能够重启成功。
     if (listenfd < 0)
     {
         spdlog::error("create socket error");
