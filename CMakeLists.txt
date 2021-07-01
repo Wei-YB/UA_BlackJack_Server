@@ -6,4 +6,11 @@ set(CMAKE_CXX_STANDARD 11)
 
 include(cmake/common.cmake)
 
-add_subdirectory(proxy "${CMAKE_CURRENT_BINARY_DIR}/proxy")
+add_subdirectory(ProxyServer "${CMAKE_CURRENT_BINARY_DIR}/proxy")
+add_subdirectory(LobbyServer "${CMAKE_CURRENT_BINARY_DIR}/proxy")
+add_subdirectory(SocialServer "${CMAKE_CURRENT_BINARY_DIR}/proxy")
+add_subdirectory(game "${CMAKE_CURRENT_BINARY_DIR}/proxy")
+add_subdirectory(player "${CMAKE_CURRENT_BINARY_DIR}/proxy")
+add_subdirectory(database "${CMAKE_CURRENT_BINARY_DIR}/proxy")
+add_subdirectory(client "${CMAKE_CURRENT_BINARY_DIR}/proxy")
+
