@@ -2,25 +2,20 @@
 代理在整个BlackJack Server中承担了转发和过滤客户端请求和响应的功能，以及转发后端服务向客户发送消息的功能。
 
 ## 编译与运行
-代理模块的编译需要用到protobuf、gRPC、spdlog三个库，通常只需要源码安装gRPC库，因为它包含了protobuf等库。gRPC库的安装可以参考<https://grpc.io/docs/languages/cpp/quickstart/>，spdlog库的安装可以参考<https://github.com/gabime/spdlog>。
-
-安装完上述依赖后就可以编译本单元了（切换到本模块的目录）：
+若要单独编译该模块，先切换到项目根目录
 ```bash
-cd protos/build
-cmake ..
-make -j
-cd ../../build
-cmake ..
+mkdir -p build
+cd build
+cmake -DPROXY=ON ..
 make -j
 ```
 若上面两步编译成功，就可以启动代理服务进程了：
 ```bash
-./proxy config_path start
+./proxy/proxy config_path start
 ```
-其中config_path是代理服务的配置文件路径，文件主要包含了监听客户端连接和请求的ip和端口、输出日志路径、代理对后端模块开放的gRPC服务地址，以及后端模块提供的gRPC服务的地址。config文件夹中提供了两个配置例子，proxy.config是我们调试整个后端时的一个配置，test.config是压测时的配置。最后一个参数除了可以填start外，还可以填stop，后者用于关闭该服务。
+其中config_path是代理服务的配置文件路径，文件主要包含了监听客户端连接和请求的ip和端口、输出日志路径、代理对后端模块开放的gRPC服务地址，以及后端模块提供的gRPC服务的地址。config文件夹中提供了两个配置例子，proxy.config是我们调试整个后端时的一个配置，里面的`lobbyAddress roomAddress socialAddress playerAddress`分别是大厅gRPC服务的地址、游戏对局gRPC服务地址、社交gRPC服务地址、玩家gRPC服务地址。`proxyAddress`是本模块向后端模块提供的gRPC服务地址。test.config是压测时的配置。最后一个参数除了可以填start外，还可以填stop，后者用于关闭该服务。
 
 此外在test目录下包含了本模块的单元测试源码client.cpp，它实现了简单的压力测试：在单线程中模拟n个（n可以自己在命令行参数中指定）客户端并发地往proxy发送一系列的请求，并记录每个请求收到响应所需的时间，最后计算出代理的QPS和平均响应时间。该测试中没有包含gRPC服务性能的测试，并且是在没有后端模块参与的情况下测试的，也就是说当代理收到用户请求、发给gRPC Client线程之后，gRPC Client线程并不会真发给后端服务模块，而是本地简单处理后直接发回给客户端。在测试代理模块之前，需要将include文件夹下的common.h文件中的`DEBUG_MODE`宏定义从0修改为1，然后重新编译代理模块。测试用例的编译和运行步骤如下：
-
 ```bash
 cd build
 make -j
