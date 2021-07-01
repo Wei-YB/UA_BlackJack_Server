@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/CMakeFiles/grpc_unsecure.dir/depend.make
@@ -79,3539 +79,3539 @@ include grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.o: ../thirdparty/grpc/src/core/ext/filters/census/grpc_context.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/census/grpc_context.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/census/grpc_context.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/census/grpc_context.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/census/grpc_context.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/census/grpc_context.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/census/grpc_context.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/census/grpc_context.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/backend_metric.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backend_metric.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backend_metric.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backend_metric.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backend_metric.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backend_metric.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backend_metric.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backend_metric.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/backup_poller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backup_poller.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backup_poller.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backup_poller.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backup_poller.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backup_poller.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/backup_poller.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/backup_poller.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/channel_connectivity.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/channel_connectivity.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/channel_connectivity.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/channel_connectivity.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/channel_connectivity.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/channel_connectivity.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/channel_connectivity.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/channel_connectivity.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/client_channel.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_channelz.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_channelz.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_channelz.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_channelz.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_channelz.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_channelz.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_channelz.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_channelz.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_factory.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_factory.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_factory.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_factory.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_factory.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_factory.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_factory.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_factory.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_plugin.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_plugin.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_plugin.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_plugin.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_plugin.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_plugin.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/client_channel_plugin.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/client_channel_plugin.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/config_selector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/config_selector.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/config_selector.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/config_selector.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/config_selector.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/config_selector.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/config_selector.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/config_selector.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/dynamic_filters.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/dynamic_filters.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/dynamic_filters.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/dynamic_filters.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/dynamic_filters.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/dynamic_filters.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/dynamic_filters.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/dynamic_filters.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/global_subchannel_pool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/global_subchannel_pool.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/global_subchannel_pool.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/global_subchannel_pool.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/global_subchannel_pool.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/global_subchannel_pool.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/global_subchannel_pool.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/global_subchannel_pool.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/health/health_check_client.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/health/health_check_client.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/health/health_check_client.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/health/health_check_client.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/health/health_check_client.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/health/health_check_client.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/health/health_check_client.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/health/health_check_client.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/http_connect_handshaker.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_connect_handshaker.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_connect_handshaker.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_connect_handshaker.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_connect_handshaker.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_connect_handshaker.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_connect_handshaker.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_connect_handshaker.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/http_proxy.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_proxy.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_proxy.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_proxy.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_proxy.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_proxy.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/http_proxy.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/http_proxy.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/address_filtering.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_balancer_addresses.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_channel.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/grpclb_client_stats.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/priority/priority.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/round_robin/round_robin.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy/weighted_target/weighted_target.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy_registry.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy_registry.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy_registry.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/lb_policy_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/lb_policy_registry.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/local_subchannel_pool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/local_subchannel_pool.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/local_subchannel_pool.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/local_subchannel_pool.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/local_subchannel_pool.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/local_subchannel_pool.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/local_subchannel_pool.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/local_subchannel_pool.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/proxy_mapper_registry.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/proxy_mapper_registry.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/proxy_mapper_registry.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/proxy_mapper_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/proxy_mapper_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/proxy_mapper_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/proxy_mapper_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/proxy_mapper_registry.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_libuv.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_libuv.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/dns/native/dns_resolver.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/fake/fake_resolver.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver/sockaddr/sockaddr_resolver.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver_registry.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_registry.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_registry.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_registry.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/resolver_result_parsing.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_result_parsing.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_result_parsing.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_result_parsing.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_result_parsing.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_result_parsing.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/resolver_result_parsing.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/resolver_result_parsing.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/retry_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/retry_service_config.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_service_config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_service_config.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_service_config.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_service_config.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_service_config.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_service_config.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_service_config.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/retry_throttle.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_throttle.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_throttle.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_throttle.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_throttle.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_throttle.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/retry_throttle.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/retry_throttle.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/server_address.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/server_address.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/server_address.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/server_address.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/server_address.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/server_address.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/server_address.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/server_address.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/service_config.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_channel_arg_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/service_config_parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_parser.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_parser.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_parser.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_parser.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/service_config_parser.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/service_config_parser.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/subchannel.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_channel/subchannel_pool_interface.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel_pool_interface.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel_pool_interface.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel_pool_interface.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel_pool_interface.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel_pool_interface.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_channel/subchannel_pool_interface.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_channel/subchannel_pool_interface.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/client_idle/client_idle_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_idle/client_idle_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_idle/client_idle_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_idle/client_idle_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_idle/client_idle_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_idle/client_idle_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/client_idle/client_idle_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/client_idle/client_idle_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/deadline/deadline_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/deadline/deadline_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/deadline/deadline_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/deadline/deadline_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/deadline/deadline_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/deadline/deadline_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/deadline/deadline_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/deadline/deadline_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/fault_injection/fault_injection_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/fault_injection_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/fault_injection_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/fault_injection_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/fault_injection_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/fault_injection_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/fault_injection_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/fault_injection_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.o: ../thirdparty/grpc/src/core/ext/filters/fault_injection/service_config_parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/service_config_parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/service_config_parser.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/service_config_parser.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/service_config_parser.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/service_config_parser.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/fault_injection/service_config_parser.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/fault_injection/service_config_parser.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/http/client/http_client_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client/http_client_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client/http_client_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client/http_client_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client/http_client_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client/http_client_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client/http_client_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client/http_client_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/http/client_authority_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client_authority_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client_authority_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client_authority_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client_authority_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client_authority_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/client_authority_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/client_authority_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.o: ../thirdparty/grpc/src/core/ext/filters/http/http_filters_plugin.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/http_filters_plugin.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/http_filters_plugin.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/http_filters_plugin.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/http_filters_plugin.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/http_filters_plugin.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/http_filters_plugin.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/http_filters_plugin.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/http/message_compress/message_compress_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_compress_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_compress_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_compress_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_compress_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_compress_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_compress_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_compress_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/message_compress/message_decompress_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/http/server/http_server_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/server/http_server_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/server/http_server_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/server/http_server_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/server/http_server_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/server/http_server_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/http/server/http_server_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/http/server/http_server_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/max_age/max_age_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/max_age/max_age_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/max_age/max_age_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/max_age/max_age_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/max_age/max_age_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/max_age/max_age_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/max_age/max_age_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/max_age/max_age_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/message_size/message_size_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/message_size/message_size_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/message_size/message_size_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/message_size/message_size_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/message_size/message_size_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/message_size/message_size_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/message_size/message_size_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/message_size/message_size_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.o: ../thirdparty/grpc/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_cronet_compression_filter.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.o: ../thirdparty/grpc/src/core/ext/filters/workarounds/workaround_utils.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_utils.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_utils.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_utils.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_utils.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_utils.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/filters/workarounds/workaround_utils.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/filters/workarounds/workaround_utils.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/alpn/alpn.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/alpn/alpn.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/alpn/alpn.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/alpn/alpn.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/alpn/alpn.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/alpn/alpn.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/alpn/alpn.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/alpn/alpn.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/client/authority.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/authority.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/authority.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/authority.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/authority.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/authority.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/authority.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/authority.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/chttp2_connector.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/client/insecure/channel_create_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/chttp2_server.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_decoder.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_decoder.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_decoder.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_decoder.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_decoder.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_decoder.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_decoder.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_decoder.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_encoder.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_encoder.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_encoder.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_encoder.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_encoder.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_encoder.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/bin_encoder.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/bin_encoder.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_plugin.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/chttp2_transport.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/context_list.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/context_list.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/context_list.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/context_list.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/context_list.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/context_list.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/context_list.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/context_list.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/flow_control.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/flow_control.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/flow_control.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/flow_control.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/flow_control.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/flow_control.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/flow_control.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/flow_control.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_data.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_data.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_data.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_data.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_data.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_data.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_data.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_data.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_goaway.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_goaway.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_goaway.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_goaway.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_goaway.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_goaway.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_goaway.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_goaway.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_ping.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_ping.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_ping.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_ping.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_ping.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_ping.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_ping.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_ping.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_rst_stream.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_settings.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_settings.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_settings.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_settings.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_settings.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_settings.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_settings.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_settings.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_window_update.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_window_update.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_window_update.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_window_update.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_window_update.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_window_update.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/frame_window_update.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/frame_window_update.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_encoder.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_encoder.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_encoder.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_encoder.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_encoder.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_encoder.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_encoder.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_encoder.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_parser.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_parser.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_parser.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_parser.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_parser.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_parser.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_table.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_table.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_table.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_table.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_table.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_table.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/hpack_table.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/hpack_table.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/http2_settings.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/http2_settings.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/http2_settings.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/http2_settings.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/http2_settings.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/http2_settings.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/http2_settings.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/http2_settings.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/huffsyms.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/huffsyms.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/huffsyms.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/huffsyms.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/huffsyms.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/huffsyms.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/huffsyms.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/huffsyms.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/incoming_metadata.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/incoming_metadata.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/incoming_metadata.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/incoming_metadata.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/incoming_metadata.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/incoming_metadata.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/incoming_metadata.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/incoming_metadata.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/parsing.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/parsing.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/parsing.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/parsing.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/parsing.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/parsing.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/parsing.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/parsing.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_lists.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_lists.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_lists.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_lists.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_lists.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_lists.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_lists.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_lists.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_map.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_map.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_map.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_map.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_map.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_map.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/stream_map.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/stream_map.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/varint.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/varint.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/varint.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/varint.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/varint.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/varint.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/varint.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/varint.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.o: ../thirdparty/grpc/src/core/ext/transport/chttp2/transport/writing.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/writing.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/writing.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/writing.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/writing.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/writing.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/chttp2/transport/writing.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/chttp2/transport/writing.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.o: ../thirdparty/grpc/src/core/ext/transport/inproc/inproc_plugin.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_plugin.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_plugin.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_plugin.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_plugin.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_plugin.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_plugin.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_plugin.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.o: ../thirdparty/grpc/src/core/ext/transport/inproc/inproc_transport.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_transport.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_transport.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_transport.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_transport.cc > CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_transport.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/transport/inproc/inproc_transport.cc -o CMakeFiles/grpc_unsecure.dir/src/core/ext/transport/inproc/inproc_transport.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.o: ../thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c > CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c > CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.o: ../thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c > CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c > CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/src/proto/grpc/lb/v1/load_balancer.upb.c.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.o: ../thirdparty/grpc/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c > CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c > CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/udpa/data/orca/v1/orca_load_report.upb.c.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.o: ../thirdparty/grpc/src/core/ext/upb-generated/validate/validate.upb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/validate/validate.upb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/validate/validate.upb.c
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/validate/validate.upb.c > CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/validate/validate.upb.c > CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/validate/validate.upb.c -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/validate/validate.upb.c -o CMakeFiles/grpc_unsecure.dir/src/core/ext/upb-generated/validate/validate.upb.c.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.o: ../thirdparty/grpc/src/core/lib/address_utils/parse_address.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/parse_address.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/parse_address.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/parse_address.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/parse_address.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/parse_address.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/parse_address.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/parse_address.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.o: ../thirdparty/grpc/src/core/lib/address_utils/sockaddr_utils.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/sockaddr_utils.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/sockaddr_utils.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/sockaddr_utils.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/sockaddr_utils.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/sockaddr_utils.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/address_utils/sockaddr_utils.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/address_utils/sockaddr_utils.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.o: ../thirdparty/grpc/src/core/lib/avl/avl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/avl/avl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/avl/avl.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/avl/avl.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/avl/avl.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/avl/avl.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/avl/avl.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/avl/avl.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.o: ../thirdparty/grpc/src/core/lib/backoff/backoff.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/backoff/backoff.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/backoff/backoff.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/backoff/backoff.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/backoff/backoff.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/backoff/backoff.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/backoff/backoff.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/backoff/backoff.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.o: ../thirdparty/grpc/src/core/lib/channel/channel_args.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_args.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_args.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_args.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_args.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_args.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_args.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_args.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.o: ../thirdparty/grpc/src/core/lib/channel/channel_stack.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.o: ../thirdparty/grpc/src/core/lib/channel/channel_stack_builder.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack_builder.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack_builder.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack_builder.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack_builder.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack_builder.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_stack_builder.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_stack_builder.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.o: ../thirdparty/grpc/src/core/lib/channel/channel_trace.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_trace.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_trace.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_trace.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_trace.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_trace.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channel_trace.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channel_trace.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.o: ../thirdparty/grpc/src/core/lib/channel/channelz.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.o: ../thirdparty/grpc/src/core/lib/channel/channelz_registry.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz_registry.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz_registry.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/channelz_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/channelz_registry.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.o: ../thirdparty/grpc/src/core/lib/channel/connected_channel.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/connected_channel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/connected_channel.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/connected_channel.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/connected_channel.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/connected_channel.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/connected_channel.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/connected_channel.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.o: ../thirdparty/grpc/src/core/lib/channel/handshaker.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.o: ../thirdparty/grpc/src/core/lib/channel/handshaker_registry.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker_registry.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker_registry.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/handshaker_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/handshaker_registry.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.o: ../thirdparty/grpc/src/core/lib/channel/status_util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/status_util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/status_util.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/status_util.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/status_util.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/status_util.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/channel/status_util.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/channel/status_util.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.o: ../thirdparty/grpc/src/core/lib/compression/compression.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.o: ../thirdparty/grpc/src/core/lib/compression/compression_args.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_args.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_args.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_args.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_args.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_args.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_args.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_args.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.o: ../thirdparty/grpc/src/core/lib/compression/compression_internal.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_internal.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_internal.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_internal.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_internal.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_internal.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/compression_internal.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/compression_internal.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.o: ../thirdparty/grpc/src/core/lib/compression/message_compress.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/message_compress.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/message_compress.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/message_compress.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/message_compress.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/message_compress.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/message_compress.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/message_compress.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.o: ../thirdparty/grpc/src/core/lib/compression/stream_compression.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.o: ../thirdparty/grpc/src/core/lib/compression/stream_compression_gzip.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_gzip.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_gzip.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_gzip.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_gzip.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_gzip.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_gzip.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_gzip.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.o: ../thirdparty/grpc/src/core/lib/compression/stream_compression_identity.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_identity.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_identity.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_identity.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_identity.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_identity.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/compression/stream_compression_identity.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/compression/stream_compression_identity.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.o: ../thirdparty/grpc/src/core/lib/debug/stats.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.o: ../thirdparty/grpc/src/core/lib/debug/stats_data.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats_data.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats_data.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats_data.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats_data.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats_data.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/stats_data.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/stats_data.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.o: ../thirdparty/grpc/src/core/lib/debug/trace.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/trace.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/trace.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/trace.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/trace.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/trace.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/debug/trace.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/debug/trace.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.o: ../thirdparty/grpc/src/core/lib/event_engine/slice_allocator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/slice_allocator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/slice_allocator.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/slice_allocator.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/slice_allocator.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/slice_allocator.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/slice_allocator.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/slice_allocator.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.o: ../thirdparty/grpc/src/core/lib/event_engine/sockaddr.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/sockaddr.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/sockaddr.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/sockaddr.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/sockaddr.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/sockaddr.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/event_engine/sockaddr.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/event_engine/sockaddr.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.o: ../thirdparty/grpc/src/core/lib/http/format_request.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/format_request.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/format_request.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/format_request.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/format_request.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/format_request.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/format_request.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/format_request.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.o: ../thirdparty/grpc/src/core/lib/http/httpcli.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/httpcli.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/httpcli.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/httpcli.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/httpcli.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/httpcli.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/httpcli.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/httpcli.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.o: ../thirdparty/grpc/src/core/lib/http/parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/parser.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/parser.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/parser.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/parser.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/http/parser.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/http/parser.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/buffer_list.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/buffer_list.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/buffer_list.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/buffer_list.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/buffer_list.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/buffer_list.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/buffer_list.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/buffer_list.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/call_combiner.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/call_combiner.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/call_combiner.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/call_combiner.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/call_combiner.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/call_combiner.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/call_combiner.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/call_combiner.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/cfstream_handle.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/cfstream_handle.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/cfstream_handle.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/cfstream_handle.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/cfstream_handle.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/cfstream_handle.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/cfstream_handle.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/cfstream_handle.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/combiner.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/combiner.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/combiner.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/combiner.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/combiner.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/combiner.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/combiner.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/combiner.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/dualstack_socket_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/dualstack_socket_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/dualstack_socket_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/dualstack_socket_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/dualstack_socket_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/dualstack_socket_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/dualstack_socket_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/dualstack_socket_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/endpoint.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/endpoint_cfstream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_cfstream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_cfstream.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_cfstream.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_cfstream.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_cfstream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_cfstream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_cfstream.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_uv.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_uv.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_uv.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_uv.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/endpoint_pair_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/endpoint_pair_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/error.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/error_cfstream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error_cfstream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error_cfstream.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error_cfstream.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error_cfstream.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error_cfstream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/error_cfstream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/error_cfstream.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/ev_apple.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_apple.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_apple.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_apple.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_apple.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_apple.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_apple.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_apple.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/ev_epoll1_linux.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epoll1_linux.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epoll1_linux.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epoll1_linux.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epoll1_linux.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epoll1_linux.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epoll1_linux.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epoll1_linux.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/ev_epollex_linux.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epollex_linux.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epollex_linux.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epollex_linux.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epollex_linux.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epollex_linux.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_epollex_linux.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_epollex_linux.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/ev_poll_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_poll_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_poll_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_poll_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_poll_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_poll_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_poll_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_poll_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/ev_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/ev_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/ev_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/ev_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/exec_ctx.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/exec_ctx.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/exec_ctx.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/exec_ctx.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/exec_ctx.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/exec_ctx.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/exec_ctx.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/exec_ctx.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/executor.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/executor/mpmcqueue.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/mpmcqueue.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/mpmcqueue.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/mpmcqueue.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/mpmcqueue.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/mpmcqueue.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/mpmcqueue.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/mpmcqueue.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/executor/threadpool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/threadpool.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/threadpool.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/threadpool.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/threadpool.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/threadpool.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/executor/threadpool.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/executor/threadpool.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/fork_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/fork_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/fork_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/fork_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/gethostname_fallback.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_fallback.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_fallback.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_fallback.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_fallback.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_fallback.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_fallback.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_fallback.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/gethostname_host_name_max.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_host_name_max.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_host_name_max.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_host_name_max.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_host_name_max.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_host_name_max.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_host_name_max.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_host_name_max.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/gethostname_sysconf.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_sysconf.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_sysconf.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_sysconf.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_sysconf.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_sysconf.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/gethostname_sysconf.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/gethostname_sysconf.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/grpc_if_nametoindex_unsupported.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/internal_errqueue.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/internal_errqueue.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/internal_errqueue.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/internal_errqueue.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/internal_errqueue.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/internal_errqueue.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/internal_errqueue.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/internal_errqueue.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/iocp_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iocp_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iocp_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iocp_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iocp_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iocp_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iocp_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iocp_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/iomgr.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/iomgr_custom.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_custom.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_custom.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_custom.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/iomgr_internal.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_internal.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_internal.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_internal.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_internal.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_internal.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_internal.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_internal.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/iomgr_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/iomgr_posix_cfstream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix_cfstream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix_cfstream.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix_cfstream.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix_cfstream.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix_cfstream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_posix_cfstream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_posix_cfstream.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/iomgr_uv.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_uv.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_uv.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_uv.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/iomgr_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/iomgr_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/iomgr_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/is_epollexclusive_available.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/is_epollexclusive_available.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/is_epollexclusive_available.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/is_epollexclusive_available.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/is_epollexclusive_available.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/is_epollexclusive_available.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/is_epollexclusive_available.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/is_epollexclusive_available.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/load_file.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/load_file.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/load_file.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/load_file.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/load_file.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/load_file.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/load_file.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/load_file.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/lockfree_event.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/lockfree_event.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/lockfree_event.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/lockfree_event.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/lockfree_event.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/lockfree_event.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/lockfree_event.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/lockfree_event.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/polling_entity.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/polling_entity.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/polling_entity.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/polling_entity.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/polling_entity.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/polling_entity.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/polling_entity.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/polling_entity.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/pollset.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/pollset_custom.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_custom.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_custom.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_custom.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/pollset_set.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/pollset_set_custom.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_custom.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_custom.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_custom.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/pollset_set_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_set_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_set_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/pollset_uv.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_uv.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_uv.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_uv.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/pollset_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/pollset_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/pollset_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/resolve_address.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/resolve_address_custom.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_custom.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_custom.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_custom.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/resolve_address_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/resolve_address_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resolve_address_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resolve_address_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/resource_quota.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resource_quota.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resource_quota.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resource_quota.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resource_quota.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resource_quota.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/resource_quota.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/resource_quota.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/socket_factory_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_factory_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_factory_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_factory_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_factory_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_factory_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_factory_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_factory_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/socket_mutator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_mutator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_mutator.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_mutator.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_mutator.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_mutator.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_mutator.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_mutator.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/socket_utils_common_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_common_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_common_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_common_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_common_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_common_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_common_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_common_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/socket_utils_linux.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_linux.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_linux.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_linux.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_linux.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_linux.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_linux.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_linux.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/socket_utils_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/socket_utils_uv.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_uv.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_uv.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_uv.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/socket_utils_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_utils_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_utils_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/socket_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/socket_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/socket_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_client.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_client_cfstream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_cfstream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_cfstream.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_cfstream.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_cfstream.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_cfstream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_cfstream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_cfstream.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_client_custom.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_custom.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_custom.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_custom.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_client_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_client_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_client_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_client_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_custom.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_custom.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_custom.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_custom.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_server.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_server_custom.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_custom.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_custom.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_custom.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_server_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_common.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_ifaddrs.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_utils_posix_noifaddrs.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_server_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_server_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_server_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_uv.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_uv.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_uv.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_uv.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/tcp_windows.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_windows.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_windows.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_windows.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/tcp_windows.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/tcp_windows.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/time_averaged_stats.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/time_averaged_stats.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/time_averaged_stats.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/time_averaged_stats.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/time_averaged_stats.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/time_averaged_stats.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/time_averaged_stats.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/time_averaged_stats.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/timer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/timer_custom.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_custom.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_custom.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_custom.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_custom.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_custom.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/timer_generic.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_generic.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_generic.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_generic.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_generic.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_generic.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_generic.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_generic.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/timer_heap.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_heap.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_heap.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_heap.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_heap.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_heap.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_heap.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_heap.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/timer_manager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_manager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_manager.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_manager.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_manager.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_manager.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_manager.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_manager.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/timer_uv.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_uv.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_uv.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_uv.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/timer_uv.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/timer_uv.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/udp_server.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/udp_server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/udp_server.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/udp_server.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/udp_server.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/udp_server.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/udp_server.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/udp_server.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix_noop.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix_noop.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix_noop.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix_noop.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix_noop.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix_noop.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/unix_sockets_posix_noop.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/unix_sockets_posix_noop.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_eventfd.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_eventfd.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_eventfd.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_eventfd.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_eventfd.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_eventfd.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_eventfd.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_eventfd.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_nospecial.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_nospecial.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_nospecial.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_nospecial.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_nospecial.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_nospecial.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_nospecial.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_nospecial.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_pipe.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_pipe.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_pipe.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_pipe.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_pipe.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_pipe.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_pipe.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_pipe.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_posix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_posix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_posix.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_posix.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/wakeup_fd_posix.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/wakeup_fd_posix.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.o: ../thirdparty/grpc/src/core/lib/iomgr/work_serializer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_227) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/work_serializer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_227) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/work_serializer.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/work_serializer.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/work_serializer.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/work_serializer.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/iomgr/work_serializer.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/iomgr/work_serializer.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.o: ../thirdparty/grpc/src/core/lib/json/json_reader.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_228) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_reader.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_228) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_reader.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_reader.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_reader.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_reader.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_reader.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_reader.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.o: ../thirdparty/grpc/src/core/lib/json/json_util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_229) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_229) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_util.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_util.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_util.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_util.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_util.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_util.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.o: ../thirdparty/grpc/src/core/lib/json/json_writer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_230) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_writer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_230) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_writer.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_writer.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_writer.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_writer.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/json/json_writer.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/json/json_writer.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.o: ../thirdparty/grpc/src/core/lib/slice/b64.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_231) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/b64.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_231) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/b64.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/b64.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/b64.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/b64.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/b64.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/b64.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.o: ../thirdparty/grpc/src/core/lib/slice/percent_encoding.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/percent_encoding.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/percent_encoding.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/percent_encoding.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/percent_encoding.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/percent_encoding.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/percent_encoding.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/percent_encoding.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.o: ../thirdparty/grpc/src/core/lib/slice/slice.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.o: ../thirdparty/grpc/src/core/lib/slice/slice_buffer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_buffer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_buffer.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_buffer.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_buffer.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_buffer.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_buffer.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_buffer.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.o: ../thirdparty/grpc/src/core/lib/slice/slice_intern.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_235) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_intern.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_235) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_intern.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_intern.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_intern.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_intern.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_intern.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_intern.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.o: ../thirdparty/grpc/src/core/lib/slice/slice_string_helpers.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_236) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_string_helpers.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_236) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_string_helpers.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_string_helpers.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_string_helpers.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_string_helpers.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/slice/slice_string_helpers.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/slice/slice_string_helpers.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.o: ../thirdparty/grpc/src/core/lib/surface/api_trace.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_237) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/api_trace.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_237) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/api_trace.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/api_trace.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/api_trace.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/api_trace.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/api_trace.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/api_trace.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.o: ../thirdparty/grpc/src/core/lib/surface/byte_buffer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_238) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_238) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.o: ../thirdparty/grpc/src/core/lib/surface/byte_buffer_reader.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_239) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer_reader.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_239) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer_reader.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer_reader.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer_reader.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer_reader.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/byte_buffer_reader.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/byte_buffer_reader.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.o: ../thirdparty/grpc/src/core/lib/surface/call.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_240) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_240) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.o: ../thirdparty/grpc/src/core/lib/surface/call_details.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_241) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_details.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_241) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_details.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_details.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_details.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_details.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_details.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_details.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.o: ../thirdparty/grpc/src/core/lib/surface/call_log_batch.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_242) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_log_batch.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_242) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_log_batch.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_log_batch.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_log_batch.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_log_batch.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/call_log_batch.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/call_log_batch.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.o: ../thirdparty/grpc/src/core/lib/surface/channel.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_243) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_243) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.o: ../thirdparty/grpc/src/core/lib/surface/channel_init.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_244) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_init.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_244) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_init.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_init.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_init.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_init.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_init.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_init.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.o: ../thirdparty/grpc/src/core/lib/surface/channel_ping.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_245) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_ping.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_245) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_ping.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_ping.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_ping.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_ping.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_ping.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_ping.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.o: ../thirdparty/grpc/src/core/lib/surface/channel_stack_type.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_246) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_stack_type.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_246) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_stack_type.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_stack_type.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_stack_type.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_stack_type.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/channel_stack_type.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/channel_stack_type.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.o: ../thirdparty/grpc/src/core/lib/surface/completion_queue.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_247) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_247) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.o: ../thirdparty/grpc/src/core/lib/surface/completion_queue_factory.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_248) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue_factory.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_248) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue_factory.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue_factory.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue_factory.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue_factory.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/completion_queue_factory.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/completion_queue_factory.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.o: ../thirdparty/grpc/src/core/lib/surface/event_string.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_249) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/event_string.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_249) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/event_string.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/event_string.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/event_string.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/event_string.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/event_string.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/event_string.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.o: ../thirdparty/grpc/src/core/lib/surface/init.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_250) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_250) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.o: ../thirdparty/grpc/src/core/lib/surface/init_unsecure.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_251) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init_unsecure.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_251) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init_unsecure.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init_unsecure.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init_unsecure.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init_unsecure.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/init_unsecure.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/init_unsecure.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.o: ../thirdparty/grpc/src/core/lib/surface/lame_client.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_252) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/lame_client.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_252) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/lame_client.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/lame_client.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/lame_client.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/lame_client.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/lame_client.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/lame_client.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.o: ../thirdparty/grpc/src/core/lib/surface/metadata_array.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_253) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/metadata_array.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_253) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/metadata_array.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/metadata_array.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/metadata_array.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/metadata_array.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/metadata_array.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/metadata_array.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.o: ../thirdparty/grpc/src/core/lib/surface/server.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_254) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_254) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/server.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/server.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/server.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/server.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/server.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/server.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.o: ../thirdparty/grpc/src/core/lib/surface/validate_metadata.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_255) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/validate_metadata.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_255) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/validate_metadata.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/validate_metadata.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/validate_metadata.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/validate_metadata.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/validate_metadata.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/validate_metadata.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.o: ../thirdparty/grpc/src/core/lib/surface/version.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_256) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/version.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_256) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/version.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/version.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/version.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/version.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/surface/version.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/surface/version.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.o: ../thirdparty/grpc/src/core/lib/transport/authority_override.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_257) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/authority_override.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_257) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/authority_override.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/authority_override.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/authority_override.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/authority_override.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/authority_override.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/authority_override.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.o: ../thirdparty/grpc/src/core/lib/transport/bdp_estimator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_258) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/bdp_estimator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_258) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/bdp_estimator.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/bdp_estimator.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/bdp_estimator.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/bdp_estimator.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/bdp_estimator.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/bdp_estimator.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.o: ../thirdparty/grpc/src/core/lib/transport/byte_stream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_259) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/byte_stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_259) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/byte_stream.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/byte_stream.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/byte_stream.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/byte_stream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/byte_stream.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/byte_stream.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.o: ../thirdparty/grpc/src/core/lib/transport/connectivity_state.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_260) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/connectivity_state.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_260) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/connectivity_state.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/connectivity_state.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/connectivity_state.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/connectivity_state.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/connectivity_state.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/connectivity_state.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.o: ../thirdparty/grpc/src/core/lib/transport/error_utils.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_261) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/error_utils.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_261) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/error_utils.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/error_utils.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/error_utils.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/error_utils.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/error_utils.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/error_utils.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.o: ../thirdparty/grpc/src/core/lib/transport/metadata.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_262) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_262) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.o: ../thirdparty/grpc/src/core/lib/transport/metadata_batch.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_263) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata_batch.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_263) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata_batch.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata_batch.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata_batch.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata_batch.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/metadata_batch.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/metadata_batch.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.o: ../thirdparty/grpc/src/core/lib/transport/pid_controller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_264) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/pid_controller.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_264) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/pid_controller.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/pid_controller.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/pid_controller.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/pid_controller.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/pid_controller.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/pid_controller.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.o: ../thirdparty/grpc/src/core/lib/transport/static_metadata.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_265) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/static_metadata.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_265) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/static_metadata.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/static_metadata.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/static_metadata.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/static_metadata.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/static_metadata.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/static_metadata.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.o: ../thirdparty/grpc/src/core/lib/transport/status_conversion.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_266) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_conversion.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_266) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_conversion.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_conversion.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_conversion.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_conversion.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_conversion.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_conversion.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.o: ../thirdparty/grpc/src/core/lib/transport/status_metadata.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_267) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_metadata.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_267) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_metadata.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_metadata.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_metadata.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_metadata.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/status_metadata.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/status_metadata.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.o: ../thirdparty/grpc/src/core/lib/transport/timeout_encoding.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_268) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/timeout_encoding.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_268) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/timeout_encoding.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/timeout_encoding.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/timeout_encoding.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/timeout_encoding.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/timeout_encoding.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/timeout_encoding.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.o: ../thirdparty/grpc/src/core/lib/transport/transport.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_269) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_269) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.o: ../thirdparty/grpc/src/core/lib/transport/transport_op_string.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_270) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport_op_string.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_270) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport_op_string.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport_op_string.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport_op_string.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport_op_string.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/transport/transport_op_string.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/transport/transport_op_string.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.o: ../thirdparty/grpc/src/core/lib/uri/uri_parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_271) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/uri/uri_parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_271) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/uri/uri_parser.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/uri/uri_parser.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/uri/uri_parser.cc > CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/uri/uri_parser.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/lib/uri/uri_parser.cc -o CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_parser.cc.s
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.o: grpc/CMakeFiles/grpc_unsecure.dir/flags.make
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.o: ../thirdparty/grpc/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_272) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_272) "Building CXX object grpc/CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc > CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.i
 
 grpc/CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc -o CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.s
 
 # Object files for target grpc_unsecure
 grpc_unsecure_OBJECTS = \
@@ -4165,9 +4165,9 @@ grpc/libgrpc_unsecure.a: grpc/CMakeFiles/grpc_unsecure.dir/src/core/lib/uri/uri_
 grpc/libgrpc_unsecure.a: grpc/CMakeFiles/grpc_unsecure.dir/src/core/plugin_registry/grpc_unsecure_plugin_registry.cc.o
 grpc/libgrpc_unsecure.a: grpc/CMakeFiles/grpc_unsecure.dir/build.make
 grpc/libgrpc_unsecure.a: grpc/CMakeFiles/grpc_unsecure.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_273) "Linking CXX static library libgrpc_unsecure.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc_unsecure.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grpc_unsecure.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_273) "Linking CXX static library libgrpc_unsecure.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc_unsecure.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grpc_unsecure.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/CMakeFiles/grpc_unsecure.dir/build: grpc/libgrpc_unsecure.a
@@ -4175,10 +4175,10 @@ grpc/CMakeFiles/grpc_unsecure.dir/build: grpc/libgrpc_unsecure.a
 .PHONY : grpc/CMakeFiles/grpc_unsecure.dir/build
 
 grpc/CMakeFiles/grpc_unsecure.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc_unsecure.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc_unsecure.dir/cmake_clean.cmake
 .PHONY : grpc/CMakeFiles/grpc_unsecure.dir/clean
 
 grpc/CMakeFiles/grpc_unsecure.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc /root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_unsecure.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc /home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_unsecure.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/CMakeFiles/grpc_unsecure.dir/depend
 

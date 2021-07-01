@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/numeric/int128.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/int128.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/numeric/int128.cc" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/int128.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

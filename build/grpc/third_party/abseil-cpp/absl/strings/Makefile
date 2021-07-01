@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ absl_strings: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.d
 
 # fast build rule for target.
 absl_strings/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build
 .PHONY : absl_strings/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/rule
 
 # Convenience name for target.
@@ -203,12 +203,12 @@ absl_strings_internal: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_
 
 # fast build rule for target.
 absl_strings_internal/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build
 .PHONY : absl_strings_internal/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/rule
 
 # Convenience name for target.
@@ -218,12 +218,12 @@ absl_str_format_internal: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/ab
 
 # fast build rule for target.
 absl_str_format_internal/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build
 .PHONY : absl_str_format_internal/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/rule
 
 # Convenience name for target.
@@ -233,7 +233,7 @@ absl_cord: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/rul
 
 # fast build rule for target.
 absl_cord/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build
 .PHONY : absl_cord/fast
 
 ascii.o: ascii.cc.o
@@ -242,7 +242,7 @@ ascii.o: ascii.cc.o
 
 # target to build an object file
 ascii.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/ascii.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/ascii.cc.o
 .PHONY : ascii.cc.o
 
 ascii.i: ascii.cc.i
@@ -251,7 +251,7 @@ ascii.i: ascii.cc.i
 
 # target to preprocess a source file
 ascii.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/ascii.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/ascii.cc.i
 .PHONY : ascii.cc.i
 
 ascii.s: ascii.cc.s
@@ -260,7 +260,7 @@ ascii.s: ascii.cc.s
 
 # target to generate assembly for a file
 ascii.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/ascii.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/ascii.cc.s
 .PHONY : ascii.cc.s
 
 charconv.o: charconv.cc.o
@@ -269,7 +269,7 @@ charconv.o: charconv.cc.o
 
 # target to build an object file
 charconv.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/charconv.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/charconv.cc.o
 .PHONY : charconv.cc.o
 
 charconv.i: charconv.cc.i
@@ -278,7 +278,7 @@ charconv.i: charconv.cc.i
 
 # target to preprocess a source file
 charconv.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/charconv.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/charconv.cc.i
 .PHONY : charconv.cc.i
 
 charconv.s: charconv.cc.s
@@ -287,7 +287,7 @@ charconv.s: charconv.cc.s
 
 # target to generate assembly for a file
 charconv.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/charconv.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/charconv.cc.s
 .PHONY : charconv.cc.s
 
 cord.o: cord.cc.o
@@ -296,7 +296,7 @@ cord.o: cord.cc.o
 
 # target to build an object file
 cord.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.o
 .PHONY : cord.cc.o
 
 cord.i: cord.cc.i
@@ -305,7 +305,7 @@ cord.i: cord.cc.i
 
 # target to preprocess a source file
 cord.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.i
 .PHONY : cord.cc.i
 
 cord.s: cord.cc.s
@@ -314,7 +314,7 @@ cord.s: cord.cc.s
 
 # target to generate assembly for a file
 cord.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.s
 .PHONY : cord.cc.s
 
 escaping.o: escaping.cc.o
@@ -323,7 +323,7 @@ escaping.o: escaping.cc.o
 
 # target to build an object file
 escaping.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/escaping.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/escaping.cc.o
 .PHONY : escaping.cc.o
 
 escaping.i: escaping.cc.i
@@ -332,7 +332,7 @@ escaping.i: escaping.cc.i
 
 # target to preprocess a source file
 escaping.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/escaping.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/escaping.cc.i
 .PHONY : escaping.cc.i
 
 escaping.s: escaping.cc.s
@@ -341,7 +341,7 @@ escaping.s: escaping.cc.s
 
 # target to generate assembly for a file
 escaping.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/escaping.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/escaping.cc.s
 .PHONY : escaping.cc.s
 
 internal/charconv_bigint.o: internal/charconv_bigint.cc.o
@@ -350,7 +350,7 @@ internal/charconv_bigint.o: internal/charconv_bigint.cc.o
 
 # target to build an object file
 internal/charconv_bigint.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_bigint.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_bigint.cc.o
 .PHONY : internal/charconv_bigint.cc.o
 
 internal/charconv_bigint.i: internal/charconv_bigint.cc.i
@@ -359,7 +359,7 @@ internal/charconv_bigint.i: internal/charconv_bigint.cc.i
 
 # target to preprocess a source file
 internal/charconv_bigint.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_bigint.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_bigint.cc.i
 .PHONY : internal/charconv_bigint.cc.i
 
 internal/charconv_bigint.s: internal/charconv_bigint.cc.s
@@ -368,7 +368,7 @@ internal/charconv_bigint.s: internal/charconv_bigint.cc.s
 
 # target to generate assembly for a file
 internal/charconv_bigint.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_bigint.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_bigint.cc.s
 .PHONY : internal/charconv_bigint.cc.s
 
 internal/charconv_parse.o: internal/charconv_parse.cc.o
@@ -377,7 +377,7 @@ internal/charconv_parse.o: internal/charconv_parse.cc.o
 
 # target to build an object file
 internal/charconv_parse.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_parse.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_parse.cc.o
 .PHONY : internal/charconv_parse.cc.o
 
 internal/charconv_parse.i: internal/charconv_parse.cc.i
@@ -386,7 +386,7 @@ internal/charconv_parse.i: internal/charconv_parse.cc.i
 
 # target to preprocess a source file
 internal/charconv_parse.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_parse.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_parse.cc.i
 .PHONY : internal/charconv_parse.cc.i
 
 internal/charconv_parse.s: internal/charconv_parse.cc.s
@@ -395,7 +395,7 @@ internal/charconv_parse.s: internal/charconv_parse.cc.s
 
 # target to generate assembly for a file
 internal/charconv_parse.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_parse.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/charconv_parse.cc.s
 .PHONY : internal/charconv_parse.cc.s
 
 internal/cord_internal.o: internal/cord_internal.cc.o
@@ -404,7 +404,7 @@ internal/cord_internal.o: internal/cord_internal.cc.o
 
 # target to build an object file
 internal/cord_internal.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.o
 .PHONY : internal/cord_internal.cc.o
 
 internal/cord_internal.i: internal/cord_internal.cc.i
@@ -413,7 +413,7 @@ internal/cord_internal.i: internal/cord_internal.cc.i
 
 # target to preprocess a source file
 internal/cord_internal.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.i
 .PHONY : internal/cord_internal.cc.i
 
 internal/cord_internal.s: internal/cord_internal.cc.s
@@ -422,7 +422,7 @@ internal/cord_internal.s: internal/cord_internal.cc.s
 
 # target to generate assembly for a file
 internal/cord_internal.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.s
 .PHONY : internal/cord_internal.cc.s
 
 internal/cord_rep_ring.o: internal/cord_rep_ring.cc.o
@@ -431,7 +431,7 @@ internal/cord_rep_ring.o: internal/cord_rep_ring.cc.o
 
 # target to build an object file
 internal/cord_rep_ring.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.o
 .PHONY : internal/cord_rep_ring.cc.o
 
 internal/cord_rep_ring.i: internal/cord_rep_ring.cc.i
@@ -440,7 +440,7 @@ internal/cord_rep_ring.i: internal/cord_rep_ring.cc.i
 
 # target to preprocess a source file
 internal/cord_rep_ring.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.i
 .PHONY : internal/cord_rep_ring.cc.i
 
 internal/cord_rep_ring.s: internal/cord_rep_ring.cc.s
@@ -449,7 +449,7 @@ internal/cord_rep_ring.s: internal/cord_rep_ring.cc.s
 
 # target to generate assembly for a file
 internal/cord_rep_ring.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.s
 .PHONY : internal/cord_rep_ring.cc.s
 
 internal/escaping.o: internal/escaping.cc.o
@@ -458,7 +458,7 @@ internal/escaping.o: internal/escaping.cc.o
 
 # target to build an object file
 internal/escaping.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/escaping.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/escaping.cc.o
 .PHONY : internal/escaping.cc.o
 
 internal/escaping.i: internal/escaping.cc.i
@@ -467,7 +467,7 @@ internal/escaping.i: internal/escaping.cc.i
 
 # target to preprocess a source file
 internal/escaping.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/escaping.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/escaping.cc.i
 .PHONY : internal/escaping.cc.i
 
 internal/escaping.s: internal/escaping.cc.s
@@ -476,7 +476,7 @@ internal/escaping.s: internal/escaping.cc.s
 
 # target to generate assembly for a file
 internal/escaping.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/escaping.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/escaping.cc.s
 .PHONY : internal/escaping.cc.s
 
 internal/memutil.o: internal/memutil.cc.o
@@ -485,7 +485,7 @@ internal/memutil.o: internal/memutil.cc.o
 
 # target to build an object file
 internal/memutil.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/memutil.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/memutil.cc.o
 .PHONY : internal/memutil.cc.o
 
 internal/memutil.i: internal/memutil.cc.i
@@ -494,7 +494,7 @@ internal/memutil.i: internal/memutil.cc.i
 
 # target to preprocess a source file
 internal/memutil.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/memutil.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/memutil.cc.i
 .PHONY : internal/memutil.cc.i
 
 internal/memutil.s: internal/memutil.cc.s
@@ -503,7 +503,7 @@ internal/memutil.s: internal/memutil.cc.s
 
 # target to generate assembly for a file
 internal/memutil.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/memutil.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/internal/memutil.cc.s
 .PHONY : internal/memutil.cc.s
 
 internal/ostringstream.o: internal/ostringstream.cc.o
@@ -512,7 +512,7 @@ internal/ostringstream.o: internal/ostringstream.cc.o
 
 # target to build an object file
 internal/ostringstream.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/ostringstream.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/ostringstream.cc.o
 .PHONY : internal/ostringstream.cc.o
 
 internal/ostringstream.i: internal/ostringstream.cc.i
@@ -521,7 +521,7 @@ internal/ostringstream.i: internal/ostringstream.cc.i
 
 # target to preprocess a source file
 internal/ostringstream.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/ostringstream.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/ostringstream.cc.i
 .PHONY : internal/ostringstream.cc.i
 
 internal/ostringstream.s: internal/ostringstream.cc.s
@@ -530,7 +530,7 @@ internal/ostringstream.s: internal/ostringstream.cc.s
 
 # target to generate assembly for a file
 internal/ostringstream.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/ostringstream.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/ostringstream.cc.s
 .PHONY : internal/ostringstream.cc.s
 
 internal/str_format/arg.o: internal/str_format/arg.cc.o
@@ -539,7 +539,7 @@ internal/str_format/arg.o: internal/str_format/arg.cc.o
 
 # target to build an object file
 internal/str_format/arg.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.o
 .PHONY : internal/str_format/arg.cc.o
 
 internal/str_format/arg.i: internal/str_format/arg.cc.i
@@ -548,7 +548,7 @@ internal/str_format/arg.i: internal/str_format/arg.cc.i
 
 # target to preprocess a source file
 internal/str_format/arg.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.i
 .PHONY : internal/str_format/arg.cc.i
 
 internal/str_format/arg.s: internal/str_format/arg.cc.s
@@ -557,7 +557,7 @@ internal/str_format/arg.s: internal/str_format/arg.cc.s
 
 # target to generate assembly for a file
 internal/str_format/arg.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.s
 .PHONY : internal/str_format/arg.cc.s
 
 internal/str_format/bind.o: internal/str_format/bind.cc.o
@@ -566,7 +566,7 @@ internal/str_format/bind.o: internal/str_format/bind.cc.o
 
 # target to build an object file
 internal/str_format/bind.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.o
 .PHONY : internal/str_format/bind.cc.o
 
 internal/str_format/bind.i: internal/str_format/bind.cc.i
@@ -575,7 +575,7 @@ internal/str_format/bind.i: internal/str_format/bind.cc.i
 
 # target to preprocess a source file
 internal/str_format/bind.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.i
 .PHONY : internal/str_format/bind.cc.i
 
 internal/str_format/bind.s: internal/str_format/bind.cc.s
@@ -584,7 +584,7 @@ internal/str_format/bind.s: internal/str_format/bind.cc.s
 
 # target to generate assembly for a file
 internal/str_format/bind.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.s
 .PHONY : internal/str_format/bind.cc.s
 
 internal/str_format/extension.o: internal/str_format/extension.cc.o
@@ -593,7 +593,7 @@ internal/str_format/extension.o: internal/str_format/extension.cc.o
 
 # target to build an object file
 internal/str_format/extension.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.o
 .PHONY : internal/str_format/extension.cc.o
 
 internal/str_format/extension.i: internal/str_format/extension.cc.i
@@ -602,7 +602,7 @@ internal/str_format/extension.i: internal/str_format/extension.cc.i
 
 # target to preprocess a source file
 internal/str_format/extension.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.i
 .PHONY : internal/str_format/extension.cc.i
 
 internal/str_format/extension.s: internal/str_format/extension.cc.s
@@ -611,7 +611,7 @@ internal/str_format/extension.s: internal/str_format/extension.cc.s
 
 # target to generate assembly for a file
 internal/str_format/extension.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.s
 .PHONY : internal/str_format/extension.cc.s
 
 internal/str_format/float_conversion.o: internal/str_format/float_conversion.cc.o
@@ -620,7 +620,7 @@ internal/str_format/float_conversion.o: internal/str_format/float_conversion.cc.
 
 # target to build an object file
 internal/str_format/float_conversion.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.o
 .PHONY : internal/str_format/float_conversion.cc.o
 
 internal/str_format/float_conversion.i: internal/str_format/float_conversion.cc.i
@@ -629,7 +629,7 @@ internal/str_format/float_conversion.i: internal/str_format/float_conversion.cc.
 
 # target to preprocess a source file
 internal/str_format/float_conversion.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.i
 .PHONY : internal/str_format/float_conversion.cc.i
 
 internal/str_format/float_conversion.s: internal/str_format/float_conversion.cc.s
@@ -638,7 +638,7 @@ internal/str_format/float_conversion.s: internal/str_format/float_conversion.cc.
 
 # target to generate assembly for a file
 internal/str_format/float_conversion.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.s
 .PHONY : internal/str_format/float_conversion.cc.s
 
 internal/str_format/output.o: internal/str_format/output.cc.o
@@ -647,7 +647,7 @@ internal/str_format/output.o: internal/str_format/output.cc.o
 
 # target to build an object file
 internal/str_format/output.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.o
 .PHONY : internal/str_format/output.cc.o
 
 internal/str_format/output.i: internal/str_format/output.cc.i
@@ -656,7 +656,7 @@ internal/str_format/output.i: internal/str_format/output.cc.i
 
 # target to preprocess a source file
 internal/str_format/output.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.i
 .PHONY : internal/str_format/output.cc.i
 
 internal/str_format/output.s: internal/str_format/output.cc.s
@@ -665,7 +665,7 @@ internal/str_format/output.s: internal/str_format/output.cc.s
 
 # target to generate assembly for a file
 internal/str_format/output.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.s
 .PHONY : internal/str_format/output.cc.s
 
 internal/str_format/parser.o: internal/str_format/parser.cc.o
@@ -674,7 +674,7 @@ internal/str_format/parser.o: internal/str_format/parser.cc.o
 
 # target to build an object file
 internal/str_format/parser.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.o
 .PHONY : internal/str_format/parser.cc.o
 
 internal/str_format/parser.i: internal/str_format/parser.cc.i
@@ -683,7 +683,7 @@ internal/str_format/parser.i: internal/str_format/parser.cc.i
 
 # target to preprocess a source file
 internal/str_format/parser.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.i
 .PHONY : internal/str_format/parser.cc.i
 
 internal/str_format/parser.s: internal/str_format/parser.cc.s
@@ -692,7 +692,7 @@ internal/str_format/parser.s: internal/str_format/parser.cc.s
 
 # target to generate assembly for a file
 internal/str_format/parser.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.s
 .PHONY : internal/str_format/parser.cc.s
 
 internal/utf8.o: internal/utf8.cc.o
@@ -701,7 +701,7 @@ internal/utf8.o: internal/utf8.cc.o
 
 # target to build an object file
 internal/utf8.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/utf8.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/utf8.cc.o
 .PHONY : internal/utf8.cc.o
 
 internal/utf8.i: internal/utf8.cc.i
@@ -710,7 +710,7 @@ internal/utf8.i: internal/utf8.cc.i
 
 # target to preprocess a source file
 internal/utf8.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/utf8.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/utf8.cc.i
 .PHONY : internal/utf8.cc.i
 
 internal/utf8.s: internal/utf8.cc.s
@@ -719,7 +719,7 @@ internal/utf8.s: internal/utf8.cc.s
 
 # target to generate assembly for a file
 internal/utf8.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/utf8.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/utf8.cc.s
 .PHONY : internal/utf8.cc.s
 
 match.o: match.cc.o
@@ -728,7 +728,7 @@ match.o: match.cc.o
 
 # target to build an object file
 match.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/match.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/match.cc.o
 .PHONY : match.cc.o
 
 match.i: match.cc.i
@@ -737,7 +737,7 @@ match.i: match.cc.i
 
 # target to preprocess a source file
 match.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/match.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/match.cc.i
 .PHONY : match.cc.i
 
 match.s: match.cc.s
@@ -746,7 +746,7 @@ match.s: match.cc.s
 
 # target to generate assembly for a file
 match.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/match.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/match.cc.s
 .PHONY : match.cc.s
 
 numbers.o: numbers.cc.o
@@ -755,7 +755,7 @@ numbers.o: numbers.cc.o
 
 # target to build an object file
 numbers.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/numbers.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/numbers.cc.o
 .PHONY : numbers.cc.o
 
 numbers.i: numbers.cc.i
@@ -764,7 +764,7 @@ numbers.i: numbers.cc.i
 
 # target to preprocess a source file
 numbers.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/numbers.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/numbers.cc.i
 .PHONY : numbers.cc.i
 
 numbers.s: numbers.cc.s
@@ -773,7 +773,7 @@ numbers.s: numbers.cc.s
 
 # target to generate assembly for a file
 numbers.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/numbers.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/numbers.cc.s
 .PHONY : numbers.cc.s
 
 str_cat.o: str_cat.cc.o
@@ -782,7 +782,7 @@ str_cat.o: str_cat.cc.o
 
 # target to build an object file
 str_cat.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_cat.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_cat.cc.o
 .PHONY : str_cat.cc.o
 
 str_cat.i: str_cat.cc.i
@@ -791,7 +791,7 @@ str_cat.i: str_cat.cc.i
 
 # target to preprocess a source file
 str_cat.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_cat.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_cat.cc.i
 .PHONY : str_cat.cc.i
 
 str_cat.s: str_cat.cc.s
@@ -800,7 +800,7 @@ str_cat.s: str_cat.cc.s
 
 # target to generate assembly for a file
 str_cat.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_cat.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_cat.cc.s
 .PHONY : str_cat.cc.s
 
 str_replace.o: str_replace.cc.o
@@ -809,7 +809,7 @@ str_replace.o: str_replace.cc.o
 
 # target to build an object file
 str_replace.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_replace.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_replace.cc.o
 .PHONY : str_replace.cc.o
 
 str_replace.i: str_replace.cc.i
@@ -818,7 +818,7 @@ str_replace.i: str_replace.cc.i
 
 # target to preprocess a source file
 str_replace.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_replace.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_replace.cc.i
 .PHONY : str_replace.cc.i
 
 str_replace.s: str_replace.cc.s
@@ -827,7 +827,7 @@ str_replace.s: str_replace.cc.s
 
 # target to generate assembly for a file
 str_replace.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_replace.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_replace.cc.s
 .PHONY : str_replace.cc.s
 
 str_split.o: str_split.cc.o
@@ -836,7 +836,7 @@ str_split.o: str_split.cc.o
 
 # target to build an object file
 str_split.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_split.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_split.cc.o
 .PHONY : str_split.cc.o
 
 str_split.i: str_split.cc.i
@@ -845,7 +845,7 @@ str_split.i: str_split.cc.i
 
 # target to preprocess a source file
 str_split.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_split.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_split.cc.i
 .PHONY : str_split.cc.i
 
 str_split.s: str_split.cc.s
@@ -854,7 +854,7 @@ str_split.s: str_split.cc.s
 
 # target to generate assembly for a file
 str_split.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_split.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/str_split.cc.s
 .PHONY : str_split.cc.s
 
 string_view.o: string_view.cc.o
@@ -863,7 +863,7 @@ string_view.o: string_view.cc.o
 
 # target to build an object file
 string_view.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/string_view.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/string_view.cc.o
 .PHONY : string_view.cc.o
 
 string_view.i: string_view.cc.i
@@ -872,7 +872,7 @@ string_view.i: string_view.cc.i
 
 # target to preprocess a source file
 string_view.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/string_view.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/string_view.cc.i
 .PHONY : string_view.cc.i
 
 string_view.s: string_view.cc.s
@@ -881,7 +881,7 @@ string_view.s: string_view.cc.s
 
 # target to generate assembly for a file
 string_view.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/string_view.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/string_view.cc.s
 .PHONY : string_view.cc.s
 
 substitute.o: substitute.cc.o
@@ -890,7 +890,7 @@ substitute.o: substitute.cc.o
 
 # target to build an object file
 substitute.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/substitute.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/substitute.cc.o
 .PHONY : substitute.cc.o
 
 substitute.i: substitute.cc.i
@@ -899,7 +899,7 @@ substitute.i: substitute.cc.i
 
 # target to preprocess a source file
 substitute.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/substitute.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/substitute.cc.i
 .PHONY : substitute.cc.i
 
 substitute.s: substitute.cc.s
@@ -908,7 +908,7 @@ substitute.s: substitute.cc.s
 
 # target to generate assembly for a file
 substitute.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/substitute.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/build.make grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_strings.dir/substitute.cc.s
 .PHONY : substitute.cc.s
 
 # Help Target
@@ -1013,6 +1013,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

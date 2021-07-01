@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/depend.make
@@ -79,211 +79,211 @@ include grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/args.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/args.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/args.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/args.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/args.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/args.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/args.cc > CMakeFiles/bssl.dir/src/tool/args.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/args.cc > CMakeFiles/bssl.dir/src/tool/args.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/args.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/args.cc -o CMakeFiles/bssl.dir/src/tool/args.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/args.cc -o CMakeFiles/bssl.dir/src/tool/args.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/ciphers.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/ciphers.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/ciphers.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/ciphers.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/ciphers.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/ciphers.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/ciphers.cc > CMakeFiles/bssl.dir/src/tool/ciphers.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/ciphers.cc > CMakeFiles/bssl.dir/src/tool/ciphers.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/ciphers.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/ciphers.cc -o CMakeFiles/bssl.dir/src/tool/ciphers.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/ciphers.cc -o CMakeFiles/bssl.dir/src/tool/ciphers.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/client.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/client.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/client.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/client.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/client.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/client.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/client.cc > CMakeFiles/bssl.dir/src/tool/client.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/client.cc > CMakeFiles/bssl.dir/src/tool/client.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/client.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/client.cc -o CMakeFiles/bssl.dir/src/tool/client.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/client.cc -o CMakeFiles/bssl.dir/src/tool/client.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/const.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/const.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/const.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/const.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/const.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/const.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/const.cc > CMakeFiles/bssl.dir/src/tool/const.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/const.cc > CMakeFiles/bssl.dir/src/tool/const.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/const.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/const.cc -o CMakeFiles/bssl.dir/src/tool/const.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/const.cc -o CMakeFiles/bssl.dir/src/tool/const.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/digest.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/digest.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/digest.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/digest.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/digest.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/digest.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/digest.cc > CMakeFiles/bssl.dir/src/tool/digest.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/digest.cc > CMakeFiles/bssl.dir/src/tool/digest.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/digest.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/digest.cc -o CMakeFiles/bssl.dir/src/tool/digest.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/digest.cc -o CMakeFiles/bssl.dir/src/tool/digest.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/fd.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/fd.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/fd.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/fd.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/fd.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/fd.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/fd.cc > CMakeFiles/bssl.dir/src/tool/fd.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/fd.cc > CMakeFiles/bssl.dir/src/tool/fd.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/fd.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/fd.cc -o CMakeFiles/bssl.dir/src/tool/fd.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/fd.cc -o CMakeFiles/bssl.dir/src/tool/fd.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/file.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/file.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/file.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/file.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/file.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/file.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/file.cc > CMakeFiles/bssl.dir/src/tool/file.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/file.cc > CMakeFiles/bssl.dir/src/tool/file.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/file.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/file.cc -o CMakeFiles/bssl.dir/src/tool/file.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/file.cc -o CMakeFiles/bssl.dir/src/tool/file.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/generate_ed25519.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/generate_ed25519.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/generate_ed25519.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/generate_ed25519.cc > CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/generate_ed25519.cc > CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/generate_ed25519.cc -o CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/generate_ed25519.cc -o CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/genrsa.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/genrsa.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/genrsa.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/genrsa.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/genrsa.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/genrsa.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/genrsa.cc > CMakeFiles/bssl.dir/src/tool/genrsa.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/genrsa.cc > CMakeFiles/bssl.dir/src/tool/genrsa.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/genrsa.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/genrsa.cc -o CMakeFiles/bssl.dir/src/tool/genrsa.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/genrsa.cc -o CMakeFiles/bssl.dir/src/tool/genrsa.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/pkcs12.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/pkcs12.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/pkcs12.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/pkcs12.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/pkcs12.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/pkcs12.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/pkcs12.cc > CMakeFiles/bssl.dir/src/tool/pkcs12.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/pkcs12.cc > CMakeFiles/bssl.dir/src/tool/pkcs12.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/pkcs12.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/pkcs12.cc -o CMakeFiles/bssl.dir/src/tool/pkcs12.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/pkcs12.cc -o CMakeFiles/bssl.dir/src/tool/pkcs12.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/rand.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/rand.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/rand.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/rand.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/rand.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/rand.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/rand.cc > CMakeFiles/bssl.dir/src/tool/rand.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/rand.cc > CMakeFiles/bssl.dir/src/tool/rand.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/rand.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/rand.cc -o CMakeFiles/bssl.dir/src/tool/rand.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/rand.cc -o CMakeFiles/bssl.dir/src/tool/rand.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/server.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/server.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/server.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/server.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/server.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/server.cc > CMakeFiles/bssl.dir/src/tool/server.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/server.cc > CMakeFiles/bssl.dir/src/tool/server.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/server.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/server.cc -o CMakeFiles/bssl.dir/src/tool/server.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/server.cc -o CMakeFiles/bssl.dir/src/tool/server.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/sign.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/sign.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/sign.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/sign.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/sign.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/sign.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/sign.cc > CMakeFiles/bssl.dir/src/tool/sign.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/sign.cc > CMakeFiles/bssl.dir/src/tool/sign.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/sign.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/sign.cc -o CMakeFiles/bssl.dir/src/tool/sign.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/sign.cc -o CMakeFiles/bssl.dir/src/tool/sign.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/speed.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/speed.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/speed.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/speed.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/speed.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/speed.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/speed.cc > CMakeFiles/bssl.dir/src/tool/speed.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/speed.cc > CMakeFiles/bssl.dir/src/tool/speed.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/speed.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/speed.cc -o CMakeFiles/bssl.dir/src/tool/speed.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/speed.cc -o CMakeFiles/bssl.dir/src/tool/speed.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/tool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/tool.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/tool.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/tool.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/tool.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/tool.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/tool.cc > CMakeFiles/bssl.dir/src/tool/tool.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/tool.cc > CMakeFiles/bssl.dir/src/tool/tool.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/tool.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/tool.cc -o CMakeFiles/bssl.dir/src/tool/tool.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/tool.cc -o CMakeFiles/bssl.dir/src/tool/tool.cc.s
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.o: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/flags.make
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.o: ../thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/transport_common.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/transport_common.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/transport_common.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bssl.dir/src/tool/transport_common.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/transport_common.cc
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bssl.dir/src/tool/transport_common.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/transport_common.cc > CMakeFiles/bssl.dir/src/tool/transport_common.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/transport_common.cc > CMakeFiles/bssl.dir/src/tool/transport_common.cc.i
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bssl.dir/src/tool/transport_common.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/transport_common.cc -o CMakeFiles/bssl.dir/src/tool/transport_common.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel/src/tool/transport_common.cc -o CMakeFiles/bssl.dir/src/tool/transport_common.cc.s
 
 # Object files for target bssl
 bssl_OBJECTS = \
@@ -327,8 +327,8 @@ grpc/third_party/boringssl-with-bazel/bssl: grpc/third_party/boringssl-with-baze
 grpc/third_party/boringssl-with-bazel/bssl: grpc/third_party/boringssl-with-bazel/libssl.a
 grpc/third_party/boringssl-with-bazel/bssl: grpc/third_party/boringssl-with-bazel/libcrypto.a
 grpc/third_party/boringssl-with-bazel/bssl: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable bssl"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bssl.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable bssl"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bssl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build: grpc/third_party/boringssl-with-bazel/bssl
@@ -336,10 +336,10 @@ grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build: grpc/third_part
 .PHONY : grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && $(CMAKE_COMMAND) -P CMakeFiles/bssl.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel && $(CMAKE_COMMAND) -P CMakeFiles/bssl.dir/cmake_clean.cmake
 .PHONY : grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/clean
 
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/depend
 

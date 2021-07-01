@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/third_party/cares/cares/CMakeFiles/adig.dir/depend.make
@@ -79,55 +79,55 @@ include grpc/third_party/cares/cares/CMakeFiles/adig.dir/flags.make
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.o: grpc/third_party/cares/cares/CMakeFiles/adig.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.o: ../thirdparty/grpc/third_party/cares/cares/adig.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adig.dir/adig.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/adig.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adig.dir/adig.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/adig.c
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/adig.dir/adig.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/adig.c > CMakeFiles/adig.dir/adig.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/adig.c > CMakeFiles/adig.dir/adig.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/adig.dir/adig.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/adig.c -o CMakeFiles/adig.dir/adig.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/adig.c -o CMakeFiles/adig.dir/adig.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.o: grpc/third_party/cares/cares/CMakeFiles/adig.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_getopt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adig.dir/ares_getopt.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getopt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adig.dir/ares_getopt.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getopt.c
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/adig.dir/ares_getopt.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getopt.c > CMakeFiles/adig.dir/ares_getopt.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getopt.c > CMakeFiles/adig.dir/ares_getopt.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/adig.dir/ares_getopt.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getopt.c -o CMakeFiles/adig.dir/ares_getopt.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getopt.c -o CMakeFiles/adig.dir/ares_getopt.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.o: grpc/third_party/cares/cares/CMakeFiles/adig.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_nowarn.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adig.dir/ares_nowarn.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adig.dir/ares_nowarn.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/adig.dir/ares_nowarn.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c > CMakeFiles/adig.dir/ares_nowarn.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c > CMakeFiles/adig.dir/ares_nowarn.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/adig.dir/ares_nowarn.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c -o CMakeFiles/adig.dir/ares_nowarn.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c -o CMakeFiles/adig.dir/ares_nowarn.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.o: grpc/third_party/cares/cares/CMakeFiles/adig.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adig.dir/ares_strcasecmp.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adig.dir/ares_strcasecmp.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/adig.dir/ares_strcasecmp.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c > CMakeFiles/adig.dir/ares_strcasecmp.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c > CMakeFiles/adig.dir/ares_strcasecmp.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/adig.dir/ares_strcasecmp.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c -o CMakeFiles/adig.dir/ares_strcasecmp.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c -o CMakeFiles/adig.dir/ares_strcasecmp.c.s
 
 # Object files for target adig
 adig_OBJECTS = \
@@ -146,8 +146,8 @@ grpc/third_party/cares/cares/bin/adig: grpc/third_party/cares/cares/CMakeFiles/a
 grpc/third_party/cares/cares/bin/adig: grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make
 grpc/third_party/cares/cares/bin/adig: grpc/third_party/cares/cares/lib/libcares.a
 grpc/third_party/cares/cares/bin/adig: grpc/third_party/cares/cares/CMakeFiles/adig.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable bin/adig"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/adig.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable bin/adig"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/adig.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/build: grpc/third_party/cares/cares/bin/adig
@@ -155,10 +155,10 @@ grpc/third_party/cares/cares/CMakeFiles/adig.dir/build: grpc/third_party/cares/c
 .PHONY : grpc/third_party/cares/cares/CMakeFiles/adig.dir/build
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && $(CMAKE_COMMAND) -P CMakeFiles/adig.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && $(CMAKE_COMMAND) -P CMakeFiles/adig.dir/cmake_clean.cmake
 .PHONY : grpc/third_party/cares/cares/CMakeFiles/adig.dir/clean
 
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/adig.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/adig.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/third_party/cares/cares/CMakeFiles/adig.dir/depend
 

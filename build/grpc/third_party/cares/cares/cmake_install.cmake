@@ -1,4 +1,4 @@
-# Install script for directory: /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares
+# Install script for directory: /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,16 +38,16 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/lib/libcares.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/lib/libcares.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares.h"
-    "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_version.h"
-    "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_dns.h"
-    "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/ares_build.h"
-    "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_rules.h"
+    "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares.h"
+    "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_version.h"
+    "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_dns.h"
+    "/home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/ares_build.h"
+    "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_rules.h"
     )
 endif()
 
@@ -55,7 +55,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/c-ares/c-ares-targets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/c-ares/c-ares-targets.cmake"
-         "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/Export/lib64/cmake/c-ares/c-ares-targets.cmake")
+         "/home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/Export/lib64/cmake/c-ares/c-ares-targets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/c-ares/c-ares-targets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -64,18 +64,18 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/c-ares" TYPE FILE FILES "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/Export/lib64/cmake/c-ares/c-ares-targets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/c-ares" TYPE FILE FILES "/home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/Export/lib64/cmake/c-ares/c-ares-targets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/c-ares" TYPE FILE FILES "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/Export/lib64/cmake/c-ares/c-ares-targets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/c-ares" TYPE FILE FILES "/home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/Export/lib64/cmake/c-ares/c-ares-targets-release.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/c-ares" TYPE FILE FILES "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/c-ares-config.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/c-ares" TYPE FILE FILES "/home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/c-ares-config.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/pkgconfig" TYPE FILE FILES "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/libcares.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/pkgconfig" TYPE FILE FILES "/home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/libcares.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -85,7 +85,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/ahost"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/bin/ahost")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/bin/ahost")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/ahost" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/ahost")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -101,7 +101,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/adig"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/bin/adig")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/bin/adig")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/adig" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/adig")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -117,7 +117,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/acountry"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/bin/acountry")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/bin/acountry")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/acountry" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/acountry")
     if(CMAKE_INSTALL_DO_STRIP)

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/cpp_plugin.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_cpp_plugin.dir/src/compiler/cpp_plugin.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/cpp_plugin.cc" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_cpp_plugin.dir/src/compiler/cpp_plugin.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -28,9 +28,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/protobuf/CMakeFiles/libprotoc.dir/DependInfo.cmake"
-  "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/protobuf/CMakeFiles/libprotobuf.dir/DependInfo.cmake"
-  "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/DependInfo.cmake"
+  "/home/tong/UA_BlackJack_Server/build/grpc/third_party/protobuf/CMakeFiles/libprotoc.dir/DependInfo.cmake"
+  "/home/tong/UA_BlackJack_Server/build/grpc/third_party/protobuf/CMakeFiles/libprotobuf.dir/DependInfo.cmake"
+  "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

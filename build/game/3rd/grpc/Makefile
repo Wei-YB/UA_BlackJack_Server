@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/3rd/grpc/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/game/3rd/grpc/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/3rd/grpc/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/3rd/grpc/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/3rd/grpc/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/3rd/grpc/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/3rd/grpc/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/3rd/grpc/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/3rd/grpc/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/rule
 .PHONY : game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/rule
 
 # Convenience name for target.
@@ -188,7 +188,7 @@ hw_grpc_proto: game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/rule
 
 # fast build rule for target.
 hw_grpc_proto/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build
 .PHONY : hw_grpc_proto/fast
 
 grpc_cpp/UA_BlackJack.grpc.pb.o: grpc_cpp/UA_BlackJack.grpc.pb.cc.o
@@ -197,7 +197,7 @@ grpc_cpp/UA_BlackJack.grpc.pb.o: grpc_cpp/UA_BlackJack.grpc.pb.cc.o
 
 # target to build an object file
 grpc_cpp/UA_BlackJack.grpc.pb.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.o
 .PHONY : grpc_cpp/UA_BlackJack.grpc.pb.cc.o
 
 grpc_cpp/UA_BlackJack.grpc.pb.i: grpc_cpp/UA_BlackJack.grpc.pb.cc.i
@@ -206,7 +206,7 @@ grpc_cpp/UA_BlackJack.grpc.pb.i: grpc_cpp/UA_BlackJack.grpc.pb.cc.i
 
 # target to preprocess a source file
 grpc_cpp/UA_BlackJack.grpc.pb.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.i
 .PHONY : grpc_cpp/UA_BlackJack.grpc.pb.cc.i
 
 grpc_cpp/UA_BlackJack.grpc.pb.s: grpc_cpp/UA_BlackJack.grpc.pb.cc.s
@@ -215,7 +215,7 @@ grpc_cpp/UA_BlackJack.grpc.pb.s: grpc_cpp/UA_BlackJack.grpc.pb.cc.s
 
 # target to generate assembly for a file
 grpc_cpp/UA_BlackJack.grpc.pb.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.s
 .PHONY : grpc_cpp/UA_BlackJack.grpc.pb.cc.s
 
 grpc_cpp/UA_BlackJack.pb.o: grpc_cpp/UA_BlackJack.pb.cc.o
@@ -224,7 +224,7 @@ grpc_cpp/UA_BlackJack.pb.o: grpc_cpp/UA_BlackJack.pb.cc.o
 
 # target to build an object file
 grpc_cpp/UA_BlackJack.pb.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.o
 .PHONY : grpc_cpp/UA_BlackJack.pb.cc.o
 
 grpc_cpp/UA_BlackJack.pb.i: grpc_cpp/UA_BlackJack.pb.cc.i
@@ -233,7 +233,7 @@ grpc_cpp/UA_BlackJack.pb.i: grpc_cpp/UA_BlackJack.pb.cc.i
 
 # target to preprocess a source file
 grpc_cpp/UA_BlackJack.pb.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.i
 .PHONY : grpc_cpp/UA_BlackJack.pb.cc.i
 
 grpc_cpp/UA_BlackJack.pb.s: grpc_cpp/UA_BlackJack.pb.cc.s
@@ -242,7 +242,7 @@ grpc_cpp/UA_BlackJack.pb.s: grpc_cpp/UA_BlackJack.pb.cc.s
 
 # target to generate assembly for a file
 grpc_cpp/UA_BlackJack.pb.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.s
 .PHONY : grpc_cpp/UA_BlackJack.pb.cc.s
 
 # Help Target
@@ -275,6 +275,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

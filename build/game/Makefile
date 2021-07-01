@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/game/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/game/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 game/CMakeFiles/Main.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/CMakeFiles/Main.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/CMakeFiles/Main.dir/rule
 .PHONY : game/CMakeFiles/Main.dir/rule
 
 # Convenience name for target.
@@ -188,7 +188,7 @@ Main: game/CMakeFiles/Main.dir/rule
 
 # fast build rule for target.
 Main/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/build
 .PHONY : Main/fast
 
 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.o: 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.o
@@ -197,7 +197,7 @@ Main/fast:
 
 # target to build an object file
 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.o
 .PHONY : 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.o
 
 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.i: 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.i
@@ -206,7 +206,7 @@ Main/fast:
 
 # target to preprocess a source file
 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.i
 .PHONY : 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.i
 
 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.s: 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.s
@@ -215,7 +215,7 @@ Main/fast:
 
 # target to generate assembly for a file
 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.s
 .PHONY : 3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc.s
 
 3rd/grpc/grpc_cpp/UA_BlackJack.pb.o: 3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.o
@@ -224,7 +224,7 @@ Main/fast:
 
 # target to build an object file
 3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.o
 .PHONY : 3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.o
 
 3rd/grpc/grpc_cpp/UA_BlackJack.pb.i: 3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.i
@@ -233,7 +233,7 @@ Main/fast:
 
 # target to preprocess a source file
 3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.i
 .PHONY : 3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.i
 
 3rd/grpc/grpc_cpp/UA_BlackJack.pb.s: 3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.s
@@ -242,7 +242,7 @@ Main/fast:
 
 # target to generate assembly for a file
 3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.s
 .PHONY : 3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc.s
 
 main.o: main.cc.o
@@ -251,7 +251,7 @@ main.o: main.cc.o
 
 # target to build an object file
 main.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/main.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/main.cc.o
 .PHONY : main.cc.o
 
 main.i: main.cc.i
@@ -260,7 +260,7 @@ main.i: main.cc.i
 
 # target to preprocess a source file
 main.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/main.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/main.cc.i
 .PHONY : main.cc.i
 
 main.s: main.cc.s
@@ -269,7 +269,7 @@ main.s: main.cc.s
 
 # target to generate assembly for a file
 main.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/main.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/main.cc.s
 .PHONY : main.cc.s
 
 src/ClientForDatebase.o: src/ClientForDatebase.cc.o
@@ -278,7 +278,7 @@ src/ClientForDatebase.o: src/ClientForDatebase.cc.o
 
 # target to build an object file
 src/ClientForDatebase.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForDatebase.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForDatebase.cc.o
 .PHONY : src/ClientForDatebase.cc.o
 
 src/ClientForDatebase.i: src/ClientForDatebase.cc.i
@@ -287,7 +287,7 @@ src/ClientForDatebase.i: src/ClientForDatebase.cc.i
 
 # target to preprocess a source file
 src/ClientForDatebase.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForDatebase.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForDatebase.cc.i
 .PHONY : src/ClientForDatebase.cc.i
 
 src/ClientForDatebase.s: src/ClientForDatebase.cc.s
@@ -296,7 +296,7 @@ src/ClientForDatebase.s: src/ClientForDatebase.cc.s
 
 # target to generate assembly for a file
 src/ClientForDatebase.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForDatebase.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForDatebase.cc.s
 .PHONY : src/ClientForDatebase.cc.s
 
 src/ClientForLobby.o: src/ClientForLobby.cc.o
@@ -305,7 +305,7 @@ src/ClientForLobby.o: src/ClientForLobby.cc.o
 
 # target to build an object file
 src/ClientForLobby.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForLobby.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForLobby.cc.o
 .PHONY : src/ClientForLobby.cc.o
 
 src/ClientForLobby.i: src/ClientForLobby.cc.i
@@ -314,7 +314,7 @@ src/ClientForLobby.i: src/ClientForLobby.cc.i
 
 # target to preprocess a source file
 src/ClientForLobby.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForLobby.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForLobby.cc.i
 .PHONY : src/ClientForLobby.cc.i
 
 src/ClientForLobby.s: src/ClientForLobby.cc.s
@@ -323,7 +323,7 @@ src/ClientForLobby.s: src/ClientForLobby.cc.s
 
 # target to generate assembly for a file
 src/ClientForLobby.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForLobby.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForLobby.cc.s
 .PHONY : src/ClientForLobby.cc.s
 
 src/ClientForTestUser.o: src/ClientForTestUser.cc.o
@@ -332,7 +332,7 @@ src/ClientForTestUser.o: src/ClientForTestUser.cc.o
 
 # target to build an object file
 src/ClientForTestUser.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForTestUser.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForTestUser.cc.o
 .PHONY : src/ClientForTestUser.cc.o
 
 src/ClientForTestUser.i: src/ClientForTestUser.cc.i
@@ -341,7 +341,7 @@ src/ClientForTestUser.i: src/ClientForTestUser.cc.i
 
 # target to preprocess a source file
 src/ClientForTestUser.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForTestUser.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForTestUser.cc.i
 .PHONY : src/ClientForTestUser.cc.i
 
 src/ClientForTestUser.s: src/ClientForTestUser.cc.s
@@ -350,7 +350,7 @@ src/ClientForTestUser.s: src/ClientForTestUser.cc.s
 
 # target to generate assembly for a file
 src/ClientForTestUser.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForTestUser.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ClientForTestUser.cc.s
 .PHONY : src/ClientForTestUser.cc.s
 
 src/GameProcess.o: src/GameProcess.cc.o
@@ -359,7 +359,7 @@ src/GameProcess.o: src/GameProcess.cc.o
 
 # target to build an object file
 src/GameProcess.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/GameProcess.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/GameProcess.cc.o
 .PHONY : src/GameProcess.cc.o
 
 src/GameProcess.i: src/GameProcess.cc.i
@@ -368,7 +368,7 @@ src/GameProcess.i: src/GameProcess.cc.i
 
 # target to preprocess a source file
 src/GameProcess.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/GameProcess.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/GameProcess.cc.i
 .PHONY : src/GameProcess.cc.i
 
 src/GameProcess.s: src/GameProcess.cc.s
@@ -377,7 +377,7 @@ src/GameProcess.s: src/GameProcess.cc.s
 
 # target to generate assembly for a file
 src/GameProcess.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/GameProcess.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/GameProcess.cc.s
 .PHONY : src/GameProcess.cc.s
 
 src/MycondintonCo.o: src/MycondintonCo.cc.o
@@ -386,7 +386,7 @@ src/MycondintonCo.o: src/MycondintonCo.cc.o
 
 # target to build an object file
 src/MycondintonCo.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/MycondintonCo.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/MycondintonCo.cc.o
 .PHONY : src/MycondintonCo.cc.o
 
 src/MycondintonCo.i: src/MycondintonCo.cc.i
@@ -395,7 +395,7 @@ src/MycondintonCo.i: src/MycondintonCo.cc.i
 
 # target to preprocess a source file
 src/MycondintonCo.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/MycondintonCo.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/MycondintonCo.cc.i
 .PHONY : src/MycondintonCo.cc.i
 
 src/MycondintonCo.s: src/MycondintonCo.cc.s
@@ -404,7 +404,7 @@ src/MycondintonCo.s: src/MycondintonCo.cc.s
 
 # target to generate assembly for a file
 src/MycondintonCo.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/MycondintonCo.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/MycondintonCo.cc.s
 .PHONY : src/MycondintonCo.cc.s
 
 src/Player.o: src/Player.cc.o
@@ -413,7 +413,7 @@ src/Player.o: src/Player.cc.o
 
 # target to build an object file
 src/Player.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Player.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Player.cc.o
 .PHONY : src/Player.cc.o
 
 src/Player.i: src/Player.cc.i
@@ -422,7 +422,7 @@ src/Player.i: src/Player.cc.i
 
 # target to preprocess a source file
 src/Player.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Player.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Player.cc.i
 .PHONY : src/Player.cc.i
 
 src/Player.s: src/Player.cc.s
@@ -431,7 +431,7 @@ src/Player.s: src/Player.cc.s
 
 # target to generate assembly for a file
 src/Player.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Player.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Player.cc.s
 .PHONY : src/Player.cc.s
 
 src/Poker.o: src/Poker.cc.o
@@ -440,7 +440,7 @@ src/Poker.o: src/Poker.cc.o
 
 # target to build an object file
 src/Poker.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Poker.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Poker.cc.o
 .PHONY : src/Poker.cc.o
 
 src/Poker.i: src/Poker.cc.i
@@ -449,7 +449,7 @@ src/Poker.i: src/Poker.cc.i
 
 # target to preprocess a source file
 src/Poker.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Poker.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Poker.cc.i
 .PHONY : src/Poker.cc.i
 
 src/Poker.s: src/Poker.cc.s
@@ -458,7 +458,7 @@ src/Poker.s: src/Poker.cc.s
 
 # target to generate assembly for a file
 src/Poker.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Poker.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Poker.cc.s
 .PHONY : src/Poker.cc.s
 
 src/Room.o: src/Room.cc.o
@@ -467,7 +467,7 @@ src/Room.o: src/Room.cc.o
 
 # target to build an object file
 src/Room.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Room.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Room.cc.o
 .PHONY : src/Room.cc.o
 
 src/Room.i: src/Room.cc.i
@@ -476,7 +476,7 @@ src/Room.i: src/Room.cc.i
 
 # target to preprocess a source file
 src/Room.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Room.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Room.cc.i
 .PHONY : src/Room.cc.i
 
 src/Room.s: src/Room.cc.s
@@ -485,7 +485,7 @@ src/Room.s: src/Room.cc.s
 
 # target to generate assembly for a file
 src/Room.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Room.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/Room.cc.s
 .PHONY : src/Room.cc.s
 
 src/ShuffledPokers.o: src/ShuffledPokers.cc.o
@@ -494,7 +494,7 @@ src/ShuffledPokers.o: src/ShuffledPokers.cc.o
 
 # target to build an object file
 src/ShuffledPokers.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ShuffledPokers.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ShuffledPokers.cc.o
 .PHONY : src/ShuffledPokers.cc.o
 
 src/ShuffledPokers.i: src/ShuffledPokers.cc.i
@@ -503,7 +503,7 @@ src/ShuffledPokers.i: src/ShuffledPokers.cc.i
 
 # target to preprocess a source file
 src/ShuffledPokers.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ShuffledPokers.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ShuffledPokers.cc.i
 .PHONY : src/ShuffledPokers.cc.i
 
 src/ShuffledPokers.s: src/ShuffledPokers.cc.s
@@ -512,7 +512,7 @@ src/ShuffledPokers.s: src/ShuffledPokers.cc.s
 
 # target to generate assembly for a file
 src/ShuffledPokers.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ShuffledPokers.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/ShuffledPokers.cc.s
 .PHONY : src/ShuffledPokers.cc.s
 
 src/TcpServer.o: src/TcpServer.cc.o
@@ -521,7 +521,7 @@ src/TcpServer.o: src/TcpServer.cc.o
 
 # target to build an object file
 src/TcpServer.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/TcpServer.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/TcpServer.cc.o
 .PHONY : src/TcpServer.cc.o
 
 src/TcpServer.i: src/TcpServer.cc.i
@@ -530,7 +530,7 @@ src/TcpServer.i: src/TcpServer.cc.i
 
 # target to preprocess a source file
 src/TcpServer.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/TcpServer.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/TcpServer.cc.i
 .PHONY : src/TcpServer.cc.i
 
 src/TcpServer.s: src/TcpServer.cc.s
@@ -539,7 +539,7 @@ src/TcpServer.s: src/TcpServer.cc.s
 
 # target to generate assembly for a file
 src/TcpServer.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/TcpServer.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/Main.dir/build.make game/CMakeFiles/Main.dir/src/TcpServer.cc.s
 .PHONY : src/TcpServer.cc.s
 
 # Help Target
@@ -605,6 +605,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/testing/exhaustive2_test.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/re2/testing/exhaustive2_test.cc.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/test.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/util/test.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/testing/exhaustive2_test.cc" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/re2/testing/exhaustive2_test.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/test.cc" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/util/test.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,8 +16,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/testing.dir/DependInfo.cmake"
-  "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/re2.dir/DependInfo.cmake"
+  "/home/tong/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/testing.dir/DependInfo.cmake"
+  "/home/tong/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/re2.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

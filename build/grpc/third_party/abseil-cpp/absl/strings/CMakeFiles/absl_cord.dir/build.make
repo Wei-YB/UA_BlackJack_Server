@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/depend.make
@@ -79,42 +79,42 @@ include grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/flags.
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.o: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/flags.make
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/strings/cord.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_cord.dir/cord.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/cord.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_cord.dir/cord.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/cord.cc
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_cord.dir/cord.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/cord.cc > CMakeFiles/absl_cord.dir/cord.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/cord.cc > CMakeFiles/absl_cord.dir/cord.cc.i
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/cord.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_cord.dir/cord.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/cord.cc -o CMakeFiles/absl_cord.dir/cord.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/cord.cc -o CMakeFiles/absl_cord.dir/cord.cc.s
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.o: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/flags.make
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_internal.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_cord.dir/internal/cord_internal.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_internal.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_cord.dir/internal/cord_internal.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_internal.cc
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_cord.dir/internal/cord_internal.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_internal.cc > CMakeFiles/absl_cord.dir/internal/cord_internal.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_internal.cc > CMakeFiles/absl_cord.dir/internal/cord_internal.cc.i
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_internal.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_cord.dir/internal/cord_internal.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_internal.cc -o CMakeFiles/absl_cord.dir/internal/cord_internal.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_internal.cc -o CMakeFiles/absl_cord.dir/internal/cord_internal.cc.s
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.o: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/flags.make
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_rep_ring.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_rep_ring.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_rep_ring.cc
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_rep_ring.cc > CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_rep_ring.cc > CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.i
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_rep_ring.cc -o CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/cord_rep_ring.cc -o CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.s
 
 # Object files for target absl_cord
 absl_cord_OBJECTS = \
@@ -130,9 +130,9 @@ grpc/third_party/abseil-cpp/absl/strings/libabsl_cord.a: grpc/third_party/abseil
 grpc/third_party/abseil-cpp/absl/strings/libabsl_cord.a: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/internal/cord_rep_ring.cc.o
 grpc/third_party/abseil-cpp/absl/strings/libabsl_cord.a: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build.make
 grpc/third_party/abseil-cpp/absl/strings/libabsl_cord.a: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libabsl_cord.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -P CMakeFiles/absl_cord.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/absl_cord.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libabsl_cord.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -P CMakeFiles/absl_cord.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/absl_cord.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build: grpc/third_party/abseil-cpp/absl/strings/libabsl_cord.a
@@ -140,10 +140,10 @@ grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build: grpc/th
 .PHONY : grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/build
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -P CMakeFiles/absl_cord.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -P CMakeFiles/absl_cord.dir/cmake_clean.cmake
 .PHONY : grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/clean
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_cord.dir/depend
 

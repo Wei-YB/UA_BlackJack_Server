@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Utility rule file for tools.
 
@@ -87,10 +87,10 @@ grpc/CMakeFiles/tools.dir/build: tools
 .PHONY : grpc/CMakeFiles/tools.dir/build
 
 grpc/CMakeFiles/tools.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/tools.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/tools.dir/cmake_clean.cmake
 .PHONY : grpc/CMakeFiles/tools.dir/clean
 
 grpc/CMakeFiles/tools.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc /root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/tools.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc /home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/tools.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/CMakeFiles/tools.dir/depend
 

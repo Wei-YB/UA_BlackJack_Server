@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/flags/internal/commandlineflag.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/flags/CMakeFiles/absl_flags_commandlineflag_internal.dir/internal/commandlineflag.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/flags/internal/commandlineflag.cc" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/flags/CMakeFiles/absl_flags_commandlineflag_internal.dir/internal/commandlineflag.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

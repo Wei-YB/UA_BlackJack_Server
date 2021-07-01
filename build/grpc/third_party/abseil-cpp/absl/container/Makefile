@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/container/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/container/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ absl_hashtablez_sampler: grpc/third_party/abseil-cpp/absl/container/CMakeFiles/a
 
 # fast build rule for target.
 absl_hashtablez_sampler/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build
 .PHONY : absl_hashtablez_sampler/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/rule
 
 # Convenience name for target.
@@ -203,7 +203,7 @@ absl_raw_hash_set: grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_ra
 
 # fast build rule for target.
 absl_raw_hash_set/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/build
 .PHONY : absl_raw_hash_set/fast
 
 internal/hashtablez_sampler.o: internal/hashtablez_sampler.cc.o
@@ -212,7 +212,7 @@ internal/hashtablez_sampler.o: internal/hashtablez_sampler.cc.o
 
 # target to build an object file
 internal/hashtablez_sampler.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler.cc.o
 .PHONY : internal/hashtablez_sampler.cc.o
 
 internal/hashtablez_sampler.i: internal/hashtablez_sampler.cc.i
@@ -221,7 +221,7 @@ internal/hashtablez_sampler.i: internal/hashtablez_sampler.cc.i
 
 # target to preprocess a source file
 internal/hashtablez_sampler.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler.cc.i
 .PHONY : internal/hashtablez_sampler.cc.i
 
 internal/hashtablez_sampler.s: internal/hashtablez_sampler.cc.s
@@ -230,7 +230,7 @@ internal/hashtablez_sampler.s: internal/hashtablez_sampler.cc.s
 
 # target to generate assembly for a file
 internal/hashtablez_sampler.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler.cc.s
 .PHONY : internal/hashtablez_sampler.cc.s
 
 internal/hashtablez_sampler_force_weak_definition.o: internal/hashtablez_sampler_force_weak_definition.cc.o
@@ -239,7 +239,7 @@ internal/hashtablez_sampler_force_weak_definition.o: internal/hashtablez_sampler
 
 # target to build an object file
 internal/hashtablez_sampler_force_weak_definition.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler_force_weak_definition.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler_force_weak_definition.cc.o
 .PHONY : internal/hashtablez_sampler_force_weak_definition.cc.o
 
 internal/hashtablez_sampler_force_weak_definition.i: internal/hashtablez_sampler_force_weak_definition.cc.i
@@ -248,7 +248,7 @@ internal/hashtablez_sampler_force_weak_definition.i: internal/hashtablez_sampler
 
 # target to preprocess a source file
 internal/hashtablez_sampler_force_weak_definition.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler_force_weak_definition.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler_force_weak_definition.cc.i
 .PHONY : internal/hashtablez_sampler_force_weak_definition.cc.i
 
 internal/hashtablez_sampler_force_weak_definition.s: internal/hashtablez_sampler_force_weak_definition.cc.s
@@ -257,7 +257,7 @@ internal/hashtablez_sampler_force_weak_definition.s: internal/hashtablez_sampler
 
 # target to generate assembly for a file
 internal/hashtablez_sampler_force_weak_definition.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler_force_weak_definition.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler_force_weak_definition.cc.s
 .PHONY : internal/hashtablez_sampler_force_weak_definition.cc.s
 
 internal/raw_hash_set.o: internal/raw_hash_set.cc.o
@@ -266,7 +266,7 @@ internal/raw_hash_set.o: internal/raw_hash_set.cc.o
 
 # target to build an object file
 internal/raw_hash_set.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/internal/raw_hash_set.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/internal/raw_hash_set.cc.o
 .PHONY : internal/raw_hash_set.cc.o
 
 internal/raw_hash_set.i: internal/raw_hash_set.cc.i
@@ -275,7 +275,7 @@ internal/raw_hash_set.i: internal/raw_hash_set.cc.i
 
 # target to preprocess a source file
 internal/raw_hash_set.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/internal/raw_hash_set.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/internal/raw_hash_set.cc.i
 .PHONY : internal/raw_hash_set.cc.i
 
 internal/raw_hash_set.s: internal/raw_hash_set.cc.s
@@ -284,7 +284,7 @@ internal/raw_hash_set.s: internal/raw_hash_set.cc.s
 
 # target to generate assembly for a file
 internal/raw_hash_set.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/internal/raw_hash_set.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/build.make grpc/third_party/abseil-cpp/absl/container/CMakeFiles/absl_raw_hash_set.dir/internal/raw_hash_set.cc.s
 .PHONY : internal/raw_hash_set.cc.s
 
 # Help Target
@@ -321,6 +321,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/CMakeFiles/upb.dir/depend.make
@@ -79,146 +79,146 @@ include grpc/CMakeFiles/upb.dir/flags.make
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.o: grpc/CMakeFiles/upb.dir/flags.make
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.o: ../thirdparty/grpc/third_party/upb/upb/decode_fast.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode_fast.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode_fast.c
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode_fast.c > CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode_fast.c > CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.i
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode_fast.c -o CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode_fast.c -o CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.s
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode.c.o: grpc/CMakeFiles/upb.dir/flags.make
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode.c.o: ../thirdparty/grpc/third_party/upb/upb/decode.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/decode.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/decode.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode.c
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/upb.dir/third_party/upb/upb/decode.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode.c > CMakeFiles/upb.dir/third_party/upb/upb/decode.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode.c > CMakeFiles/upb.dir/third_party/upb/upb/decode.c.i
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/upb.dir/third_party/upb/upb/decode.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode.c -o CMakeFiles/upb.dir/third_party/upb/upb/decode.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode.c -o CMakeFiles/upb.dir/third_party/upb/upb/decode.c.s
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/def.c.o: grpc/CMakeFiles/upb.dir/flags.make
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/def.c.o: ../thirdparty/grpc/third_party/upb/upb/def.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/def.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/def.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/def.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/def.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/def.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/def.c
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/def.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/upb.dir/third_party/upb/upb/def.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/def.c > CMakeFiles/upb.dir/third_party/upb/upb/def.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/def.c > CMakeFiles/upb.dir/third_party/upb/upb/def.c.i
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/def.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/upb.dir/third_party/upb/upb/def.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/def.c -o CMakeFiles/upb.dir/third_party/upb/upb/def.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/def.c -o CMakeFiles/upb.dir/third_party/upb/upb/def.c.s
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/encode.c.o: grpc/CMakeFiles/upb.dir/flags.make
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/encode.c.o: ../thirdparty/grpc/third_party/upb/upb/encode.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/encode.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/encode.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/encode.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/encode.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/encode.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/encode.c
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/encode.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/upb.dir/third_party/upb/upb/encode.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/encode.c > CMakeFiles/upb.dir/third_party/upb/upb/encode.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/encode.c > CMakeFiles/upb.dir/third_party/upb/upb/encode.c.i
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/encode.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/upb.dir/third_party/upb/upb/encode.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/encode.c -o CMakeFiles/upb.dir/third_party/upb/upb/encode.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/encode.c -o CMakeFiles/upb.dir/third_party/upb/upb/encode.c.s
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/msg.c.o: grpc/CMakeFiles/upb.dir/flags.make
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/msg.c.o: ../thirdparty/grpc/third_party/upb/upb/msg.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/msg.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/msg.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/msg.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/msg.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/msg.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/msg.c
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/msg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/upb.dir/third_party/upb/upb/msg.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/msg.c > CMakeFiles/upb.dir/third_party/upb/upb/msg.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/msg.c > CMakeFiles/upb.dir/third_party/upb/upb/msg.c.i
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/msg.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/upb.dir/third_party/upb/upb/msg.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/msg.c -o CMakeFiles/upb.dir/third_party/upb/upb/msg.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/msg.c -o CMakeFiles/upb.dir/third_party/upb/upb/msg.c.s
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.o: grpc/CMakeFiles/upb.dir/flags.make
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.o: ../thirdparty/grpc/third_party/upb/upb/reflection.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/reflection.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/reflection.c
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/reflection.c > CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/reflection.c > CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.i
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/reflection.c -o CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/reflection.c -o CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.s
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/table.c.o: grpc/CMakeFiles/upb.dir/flags.make
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/table.c.o: ../thirdparty/grpc/third_party/upb/upb/table.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/table.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/table.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/table.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/table.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/table.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/table.c
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/table.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/upb.dir/third_party/upb/upb/table.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/table.c > CMakeFiles/upb.dir/third_party/upb/upb/table.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/table.c > CMakeFiles/upb.dir/third_party/upb/upb/table.c.i
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/table.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/upb.dir/third_party/upb/upb/table.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/table.c -o CMakeFiles/upb.dir/third_party/upb/upb/table.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/table.c -o CMakeFiles/upb.dir/third_party/upb/upb/table.c.s
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.o: grpc/CMakeFiles/upb.dir/flags.make
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.o: ../thirdparty/grpc/third_party/upb/upb/text_encode.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/text_encode.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/text_encode.c
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/text_encode.c > CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/text_encode.c > CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.i
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/text_encode.c -o CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/text_encode.c -o CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.s
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/upb.c.o: grpc/CMakeFiles/upb.dir/flags.make
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/upb.c.o: ../thirdparty/grpc/third_party/upb/upb/upb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/upb.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/upb.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/upb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object grpc/CMakeFiles/upb.dir/third_party/upb/upb/upb.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/third_party/upb/upb/upb.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/upb.c
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/upb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/upb.dir/third_party/upb/upb/upb.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/upb.c > CMakeFiles/upb.dir/third_party/upb/upb/upb.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/upb.c > CMakeFiles/upb.dir/third_party/upb/upb/upb.c.i
 
 grpc/CMakeFiles/upb.dir/third_party/upb/upb/upb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/upb.dir/third_party/upb/upb/upb.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/upb.c -o CMakeFiles/upb.dir/third_party/upb/upb/upb.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/upb.c -o CMakeFiles/upb.dir/third_party/upb/upb/upb.c.s
 
 grpc/CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.o: grpc/CMakeFiles/upb.dir/flags.make
 grpc/CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.o: ../thirdparty/grpc/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object grpc/CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object grpc/CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c
 
 grpc/CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c > CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c > CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.i
 
 grpc/CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c -o CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c -o CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.s
 
 grpc/CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.o: grpc/CMakeFiles/upb.dir/flags.make
 grpc/CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.o: ../thirdparty/grpc/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object grpc/CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object grpc/CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c
 
 grpc/CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c > CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c > CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.i
 
 grpc/CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c -o CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c -o CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.s
 
 # Object files for target upb
 upb_OBJECTS = \
@@ -250,9 +250,9 @@ grpc/libupb.a: grpc/CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobu
 grpc/libupb.a: grpc/CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.o
 grpc/libupb.a: grpc/CMakeFiles/upb.dir/build.make
 grpc/libupb.a: grpc/CMakeFiles/upb.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C static library libupb.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/upb.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/upb.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C static library libupb.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/upb.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/upb.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/CMakeFiles/upb.dir/build: grpc/libupb.a
@@ -260,10 +260,10 @@ grpc/CMakeFiles/upb.dir/build: grpc/libupb.a
 .PHONY : grpc/CMakeFiles/upb.dir/build
 
 grpc/CMakeFiles/upb.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/upb.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/upb.dir/cmake_clean.cmake
 .PHONY : grpc/CMakeFiles/upb.dir/clean
 
 grpc/CMakeFiles/upb.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc /root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc /home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/CMakeFiles/upb.dir/depend
 

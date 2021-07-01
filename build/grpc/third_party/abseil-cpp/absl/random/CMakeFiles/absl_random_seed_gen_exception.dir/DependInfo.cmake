@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/random/seed_gen_exception.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_seed_gen_exception.dir/seed_gen_exception.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/random/seed_gen_exception.cc" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_seed_gen_exception.dir/seed_gen_exception.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

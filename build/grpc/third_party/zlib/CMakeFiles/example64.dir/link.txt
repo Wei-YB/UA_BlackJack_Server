@@ -1,1 +1,1 @@
-/usr/bin/cc   -O2 -DNDEBUG  -rdynamic CMakeFiles/example64.dir/test/example.o  -o example64  -Wl,-rpath,/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib libz.so.1.2.11 
+/usr/lib64/ccache/cc   -O2 -DNDEBUG  -rdynamic CMakeFiles/example64.dir/test/example.o  -o example64  -Wl,-rpath,/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib libz.so.1.2.11 

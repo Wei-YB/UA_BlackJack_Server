@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/depend.make
@@ -78,8 +78,8 @@ include game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/progress.make
 include game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/flags.make
 
 ../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc: ../GameServer/3rd/grpc/UA_BlackJack.proto
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../../../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc, ../../../../GameServer/3rd/grpc/grpc_h/UA_BlackJack.pb.h, ../../../../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc, ../../../../GameServer/3rd/grpc/grpc_h/UA_BlackJack.grpc.pb.h"
-	cd /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc && ../../../grpc/third_party/protobuf/protoc-3.15.8.0 --grpc_out /root/ricki/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp --cpp_out /root/ricki/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp -I /root/ricki/UA_BlackJack_Server/GameServer/3rd/grpc --plugin=protoc-gen-grpc="/root/ricki/UA_BlackJack_Server/build/grpc/grpc_cpp_plugin" /root/ricki/UA_BlackJack_Server/GameServer/3rd/grpc/UA_BlackJack.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../../../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc, ../../../../GameServer/3rd/grpc/grpc_h/UA_BlackJack.pb.h, ../../../../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc, ../../../../GameServer/3rd/grpc/grpc_h/UA_BlackJack.grpc.pb.h"
+	cd /home/tong/UA_BlackJack_Server/build/game/3rd/grpc && ../../../grpc/third_party/protobuf/protoc-3.15.8.0 --grpc_out /home/tong/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp --cpp_out /home/tong/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp -I /home/tong/UA_BlackJack_Server/GameServer/3rd/grpc --plugin=protoc-gen-grpc="/home/tong/UA_BlackJack_Server/build/grpc/grpc_cpp_plugin" /home/tong/UA_BlackJack_Server/GameServer/3rd/grpc/UA_BlackJack.proto
 
 ../GameServer/3rd/grpc/grpc_h/UA_BlackJack.pb.h: ../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate ../GameServer/3rd/grpc/grpc_h/UA_BlackJack.pb.h
@@ -92,29 +92,29 @@ include game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/flags.make
 
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.o: game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/flags.make
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.o: ../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.o -c /root/ricki/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/game/3rd/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.o -c /home/tong/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc
 
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc > CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/game/3rd/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc > CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.i
 
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc -o CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/game/3rd/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc -o CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.s
 
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.o: game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/flags.make
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.o: ../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.o -c /root/ricki/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/game/3rd/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.o -c /home/tong/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc
 
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc > CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/game/3rd/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc > CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.i
 
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc -o CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/game/3rd/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc -o CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.s
 
 # Object files for target hw_grpc_proto
 hw_grpc_proto_OBJECTS = \
@@ -128,9 +128,9 @@ hw_grpc_proto_EXTERNAL_OBJECTS =
 ../GameServer/3rd/grpc/libhw_grpc_proto.a: game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.o
 ../GameServer/3rd/grpc/libhw_grpc_proto.a: game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build.make
 ../GameServer/3rd/grpc/libhw_grpc_proto.a: game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library ../../../../GameServer/3rd/grpc/libhw_grpc_proto.a"
-	cd /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc && $(CMAKE_COMMAND) -P CMakeFiles/hw_grpc_proto.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hw_grpc_proto.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library ../../../../GameServer/3rd/grpc/libhw_grpc_proto.a"
+	cd /home/tong/UA_BlackJack_Server/build/game/3rd/grpc && $(CMAKE_COMMAND) -P CMakeFiles/hw_grpc_proto.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/game/3rd/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hw_grpc_proto.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build: ../GameServer/3rd/grpc/libhw_grpc_proto.a
@@ -138,13 +138,13 @@ game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build: ../GameServer/3rd/grpc/libhw_g
 .PHONY : game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/build
 
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc && $(CMAKE_COMMAND) -P CMakeFiles/hw_grpc_proto.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/game/3rd/grpc && $(CMAKE_COMMAND) -P CMakeFiles/hw_grpc_proto.dir/cmake_clean.cmake
 .PHONY : game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/clean
 
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/depend: ../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/depend: ../GameServer/3rd/grpc/grpc_h/UA_BlackJack.pb.h
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/depend: ../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.grpc.pb.cc
 game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/depend: ../GameServer/3rd/grpc/grpc_h/UA_BlackJack.grpc.pb.h
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/GameServer/3rd/grpc /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc /root/ricki/UA_BlackJack_Server/build/game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/GameServer/3rd/grpc /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/game/3rd/grpc /home/tong/UA_BlackJack_Server/build/game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : game/3rd/grpc/CMakeFiles/hw_grpc_proto.dir/depend
 

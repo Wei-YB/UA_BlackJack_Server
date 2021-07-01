@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base/internal/spinlock_wait.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_spinlock_wait.dir/internal/spinlock_wait.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base/internal/spinlock_wait.cc" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_spinlock_wait.dir/internal/spinlock_wait.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

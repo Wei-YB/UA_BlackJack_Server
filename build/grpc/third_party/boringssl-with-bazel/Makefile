@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/grpc/third_party/boringssl-with-bazel/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/rule
 .PHONY : grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ bssl: grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/rule
 
 # fast build rule for target.
 bssl/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build
 .PHONY : bssl/fast
 
 # Convenience name for target.
 grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/rule
 .PHONY : grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/rule
 
 # Convenience name for target.
@@ -203,12 +203,12 @@ ssl: grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/rule
 
 # fast build rule for target.
 ssl/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build
 .PHONY : ssl/fast
 
 # Convenience name for target.
 grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/rule
 .PHONY : grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/rule
 
 # Convenience name for target.
@@ -218,7 +218,7 @@ crypto: grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/rule
 
 # fast build rule for target.
 crypto/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build
 .PHONY : crypto/fast
 
 err_data.o: err_data.c.o
@@ -227,7 +227,7 @@ err_data.o: err_data.c.o
 
 # target to build an object file
 err_data.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/err_data.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/err_data.c.o
 .PHONY : err_data.c.o
 
 err_data.i: err_data.c.i
@@ -236,7 +236,7 @@ err_data.i: err_data.c.i
 
 # target to preprocess a source file
 err_data.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/err_data.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/err_data.c.i
 .PHONY : err_data.c.i
 
 err_data.s: err_data.c.s
@@ -245,7 +245,7 @@ err_data.s: err_data.c.s
 
 # target to generate assembly for a file
 err_data.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/err_data.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/err_data.c.s
 .PHONY : err_data.c.s
 
 linux-x86_64/crypto/chacha/chacha-x86_64.o: linux-x86_64/crypto/chacha/chacha-x86_64.S.o
@@ -254,7 +254,7 @@ linux-x86_64/crypto/chacha/chacha-x86_64.o: linux-x86_64/crypto/chacha/chacha-x8
 
 # target to build an object file
 linux-x86_64/crypto/chacha/chacha-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/chacha/chacha-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/chacha/chacha-x86_64.S.o
 .PHONY : linux-x86_64/crypto/chacha/chacha-x86_64.S.o
 
 linux-x86_64/crypto/cipher_extra/aes128gcmsiv-x86_64.o: linux-x86_64/crypto/cipher_extra/aes128gcmsiv-x86_64.S.o
@@ -263,7 +263,7 @@ linux-x86_64/crypto/cipher_extra/aes128gcmsiv-x86_64.o: linux-x86_64/crypto/ciph
 
 # target to build an object file
 linux-x86_64/crypto/cipher_extra/aes128gcmsiv-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/cipher_extra/aes128gcmsiv-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/cipher_extra/aes128gcmsiv-x86_64.S.o
 .PHONY : linux-x86_64/crypto/cipher_extra/aes128gcmsiv-x86_64.S.o
 
 linux-x86_64/crypto/cipher_extra/chacha20_poly1305_x86_64.o: linux-x86_64/crypto/cipher_extra/chacha20_poly1305_x86_64.S.o
@@ -272,7 +272,7 @@ linux-x86_64/crypto/cipher_extra/chacha20_poly1305_x86_64.o: linux-x86_64/crypto
 
 # target to build an object file
 linux-x86_64/crypto/cipher_extra/chacha20_poly1305_x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/cipher_extra/chacha20_poly1305_x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/cipher_extra/chacha20_poly1305_x86_64.S.o
 .PHONY : linux-x86_64/crypto/cipher_extra/chacha20_poly1305_x86_64.S.o
 
 linux-x86_64/crypto/fipsmodule/aesni-gcm-x86_64.o: linux-x86_64/crypto/fipsmodule/aesni-gcm-x86_64.S.o
@@ -281,7 +281,7 @@ linux-x86_64/crypto/fipsmodule/aesni-gcm-x86_64.o: linux-x86_64/crypto/fipsmodul
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/aesni-gcm-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/aesni-gcm-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/aesni-gcm-x86_64.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/aesni-gcm-x86_64.S.o
 
 linux-x86_64/crypto/fipsmodule/aesni-x86_64.o: linux-x86_64/crypto/fipsmodule/aesni-x86_64.S.o
@@ -290,7 +290,7 @@ linux-x86_64/crypto/fipsmodule/aesni-x86_64.o: linux-x86_64/crypto/fipsmodule/ae
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/aesni-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/aesni-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/aesni-x86_64.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/aesni-x86_64.S.o
 
 linux-x86_64/crypto/fipsmodule/ghash-ssse3-x86_64.o: linux-x86_64/crypto/fipsmodule/ghash-ssse3-x86_64.S.o
@@ -299,7 +299,7 @@ linux-x86_64/crypto/fipsmodule/ghash-ssse3-x86_64.o: linux-x86_64/crypto/fipsmod
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/ghash-ssse3-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/ghash-ssse3-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/ghash-ssse3-x86_64.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/ghash-ssse3-x86_64.S.o
 
 linux-x86_64/crypto/fipsmodule/ghash-x86_64.o: linux-x86_64/crypto/fipsmodule/ghash-x86_64.S.o
@@ -308,7 +308,7 @@ linux-x86_64/crypto/fipsmodule/ghash-x86_64.o: linux-x86_64/crypto/fipsmodule/gh
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/ghash-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/ghash-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/ghash-x86_64.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/ghash-x86_64.S.o
 
 linux-x86_64/crypto/fipsmodule/md5-x86_64.o: linux-x86_64/crypto/fipsmodule/md5-x86_64.S.o
@@ -317,7 +317,7 @@ linux-x86_64/crypto/fipsmodule/md5-x86_64.o: linux-x86_64/crypto/fipsmodule/md5-
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/md5-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/md5-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/md5-x86_64.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/md5-x86_64.S.o
 
 linux-x86_64/crypto/fipsmodule/p256-x86_64-asm.o: linux-x86_64/crypto/fipsmodule/p256-x86_64-asm.S.o
@@ -326,7 +326,7 @@ linux-x86_64/crypto/fipsmodule/p256-x86_64-asm.o: linux-x86_64/crypto/fipsmodule
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/p256-x86_64-asm.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/p256-x86_64-asm.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/p256-x86_64-asm.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/p256-x86_64-asm.S.o
 
 linux-x86_64/crypto/fipsmodule/p256_beeu-x86_64-asm.o: linux-x86_64/crypto/fipsmodule/p256_beeu-x86_64-asm.S.o
@@ -335,7 +335,7 @@ linux-x86_64/crypto/fipsmodule/p256_beeu-x86_64-asm.o: linux-x86_64/crypto/fipsm
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/p256_beeu-x86_64-asm.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/p256_beeu-x86_64-asm.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/p256_beeu-x86_64-asm.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/p256_beeu-x86_64-asm.S.o
 
 linux-x86_64/crypto/fipsmodule/rdrand-x86_64.o: linux-x86_64/crypto/fipsmodule/rdrand-x86_64.S.o
@@ -344,7 +344,7 @@ linux-x86_64/crypto/fipsmodule/rdrand-x86_64.o: linux-x86_64/crypto/fipsmodule/r
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/rdrand-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/rdrand-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/rdrand-x86_64.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/rdrand-x86_64.S.o
 
 linux-x86_64/crypto/fipsmodule/rsaz-avx2.o: linux-x86_64/crypto/fipsmodule/rsaz-avx2.S.o
@@ -353,7 +353,7 @@ linux-x86_64/crypto/fipsmodule/rsaz-avx2.o: linux-x86_64/crypto/fipsmodule/rsaz-
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/rsaz-avx2.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/rsaz-avx2.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/rsaz-avx2.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/rsaz-avx2.S.o
 
 linux-x86_64/crypto/fipsmodule/sha1-x86_64.o: linux-x86_64/crypto/fipsmodule/sha1-x86_64.S.o
@@ -362,7 +362,7 @@ linux-x86_64/crypto/fipsmodule/sha1-x86_64.o: linux-x86_64/crypto/fipsmodule/sha
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/sha1-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/sha1-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/sha1-x86_64.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/sha1-x86_64.S.o
 
 linux-x86_64/crypto/fipsmodule/sha256-x86_64.o: linux-x86_64/crypto/fipsmodule/sha256-x86_64.S.o
@@ -371,7 +371,7 @@ linux-x86_64/crypto/fipsmodule/sha256-x86_64.o: linux-x86_64/crypto/fipsmodule/s
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/sha256-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/sha256-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/sha256-x86_64.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/sha256-x86_64.S.o
 
 linux-x86_64/crypto/fipsmodule/sha512-x86_64.o: linux-x86_64/crypto/fipsmodule/sha512-x86_64.S.o
@@ -380,7 +380,7 @@ linux-x86_64/crypto/fipsmodule/sha512-x86_64.o: linux-x86_64/crypto/fipsmodule/s
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/sha512-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/sha512-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/sha512-x86_64.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/sha512-x86_64.S.o
 
 linux-x86_64/crypto/fipsmodule/vpaes-x86_64.o: linux-x86_64/crypto/fipsmodule/vpaes-x86_64.S.o
@@ -389,7 +389,7 @@ linux-x86_64/crypto/fipsmodule/vpaes-x86_64.o: linux-x86_64/crypto/fipsmodule/vp
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/vpaes-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/vpaes-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/vpaes-x86_64.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/vpaes-x86_64.S.o
 
 linux-x86_64/crypto/fipsmodule/x86_64-mont.o: linux-x86_64/crypto/fipsmodule/x86_64-mont.S.o
@@ -398,7 +398,7 @@ linux-x86_64/crypto/fipsmodule/x86_64-mont.o: linux-x86_64/crypto/fipsmodule/x86
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/x86_64-mont.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/x86_64-mont.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/x86_64-mont.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/x86_64-mont.S.o
 
 linux-x86_64/crypto/fipsmodule/x86_64-mont5.o: linux-x86_64/crypto/fipsmodule/x86_64-mont5.S.o
@@ -407,7 +407,7 @@ linux-x86_64/crypto/fipsmodule/x86_64-mont5.o: linux-x86_64/crypto/fipsmodule/x8
 
 # target to build an object file
 linux-x86_64/crypto/fipsmodule/x86_64-mont5.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/x86_64-mont5.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/fipsmodule/x86_64-mont5.S.o
 .PHONY : linux-x86_64/crypto/fipsmodule/x86_64-mont5.S.o
 
 linux-x86_64/crypto/test/trampoline-x86_64.o: linux-x86_64/crypto/test/trampoline-x86_64.S.o
@@ -416,7 +416,7 @@ linux-x86_64/crypto/test/trampoline-x86_64.o: linux-x86_64/crypto/test/trampolin
 
 # target to build an object file
 linux-x86_64/crypto/test/trampoline-x86_64.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/test/trampoline-x86_64.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/linux-x86_64/crypto/test/trampoline-x86_64.S.o
 .PHONY : linux-x86_64/crypto/test/trampoline-x86_64.S.o
 
 src/crypto/asn1/a_bitstr.o: src/crypto/asn1/a_bitstr.c.o
@@ -425,7 +425,7 @@ src/crypto/asn1/a_bitstr.o: src/crypto/asn1/a_bitstr.c.o
 
 # target to build an object file
 src/crypto/asn1/a_bitstr.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bitstr.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bitstr.c.o
 .PHONY : src/crypto/asn1/a_bitstr.c.o
 
 src/crypto/asn1/a_bitstr.i: src/crypto/asn1/a_bitstr.c.i
@@ -434,7 +434,7 @@ src/crypto/asn1/a_bitstr.i: src/crypto/asn1/a_bitstr.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_bitstr.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bitstr.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bitstr.c.i
 .PHONY : src/crypto/asn1/a_bitstr.c.i
 
 src/crypto/asn1/a_bitstr.s: src/crypto/asn1/a_bitstr.c.s
@@ -443,7 +443,7 @@ src/crypto/asn1/a_bitstr.s: src/crypto/asn1/a_bitstr.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_bitstr.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bitstr.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bitstr.c.s
 .PHONY : src/crypto/asn1/a_bitstr.c.s
 
 src/crypto/asn1/a_bool.o: src/crypto/asn1/a_bool.c.o
@@ -452,7 +452,7 @@ src/crypto/asn1/a_bool.o: src/crypto/asn1/a_bool.c.o
 
 # target to build an object file
 src/crypto/asn1/a_bool.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bool.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bool.c.o
 .PHONY : src/crypto/asn1/a_bool.c.o
 
 src/crypto/asn1/a_bool.i: src/crypto/asn1/a_bool.c.i
@@ -461,7 +461,7 @@ src/crypto/asn1/a_bool.i: src/crypto/asn1/a_bool.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_bool.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bool.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bool.c.i
 .PHONY : src/crypto/asn1/a_bool.c.i
 
 src/crypto/asn1/a_bool.s: src/crypto/asn1/a_bool.c.s
@@ -470,7 +470,7 @@ src/crypto/asn1/a_bool.s: src/crypto/asn1/a_bool.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_bool.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bool.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_bool.c.s
 .PHONY : src/crypto/asn1/a_bool.c.s
 
 src/crypto/asn1/a_d2i_fp.o: src/crypto/asn1/a_d2i_fp.c.o
@@ -479,7 +479,7 @@ src/crypto/asn1/a_d2i_fp.o: src/crypto/asn1/a_d2i_fp.c.o
 
 # target to build an object file
 src/crypto/asn1/a_d2i_fp.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_d2i_fp.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_d2i_fp.c.o
 .PHONY : src/crypto/asn1/a_d2i_fp.c.o
 
 src/crypto/asn1/a_d2i_fp.i: src/crypto/asn1/a_d2i_fp.c.i
@@ -488,7 +488,7 @@ src/crypto/asn1/a_d2i_fp.i: src/crypto/asn1/a_d2i_fp.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_d2i_fp.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_d2i_fp.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_d2i_fp.c.i
 .PHONY : src/crypto/asn1/a_d2i_fp.c.i
 
 src/crypto/asn1/a_d2i_fp.s: src/crypto/asn1/a_d2i_fp.c.s
@@ -497,7 +497,7 @@ src/crypto/asn1/a_d2i_fp.s: src/crypto/asn1/a_d2i_fp.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_d2i_fp.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_d2i_fp.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_d2i_fp.c.s
 .PHONY : src/crypto/asn1/a_d2i_fp.c.s
 
 src/crypto/asn1/a_dup.o: src/crypto/asn1/a_dup.c.o
@@ -506,7 +506,7 @@ src/crypto/asn1/a_dup.o: src/crypto/asn1/a_dup.c.o
 
 # target to build an object file
 src/crypto/asn1/a_dup.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_dup.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_dup.c.o
 .PHONY : src/crypto/asn1/a_dup.c.o
 
 src/crypto/asn1/a_dup.i: src/crypto/asn1/a_dup.c.i
@@ -515,7 +515,7 @@ src/crypto/asn1/a_dup.i: src/crypto/asn1/a_dup.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_dup.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_dup.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_dup.c.i
 .PHONY : src/crypto/asn1/a_dup.c.i
 
 src/crypto/asn1/a_dup.s: src/crypto/asn1/a_dup.c.s
@@ -524,7 +524,7 @@ src/crypto/asn1/a_dup.s: src/crypto/asn1/a_dup.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_dup.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_dup.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_dup.c.s
 .PHONY : src/crypto/asn1/a_dup.c.s
 
 src/crypto/asn1/a_enum.o: src/crypto/asn1/a_enum.c.o
@@ -533,7 +533,7 @@ src/crypto/asn1/a_enum.o: src/crypto/asn1/a_enum.c.o
 
 # target to build an object file
 src/crypto/asn1/a_enum.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_enum.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_enum.c.o
 .PHONY : src/crypto/asn1/a_enum.c.o
 
 src/crypto/asn1/a_enum.i: src/crypto/asn1/a_enum.c.i
@@ -542,7 +542,7 @@ src/crypto/asn1/a_enum.i: src/crypto/asn1/a_enum.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_enum.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_enum.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_enum.c.i
 .PHONY : src/crypto/asn1/a_enum.c.i
 
 src/crypto/asn1/a_enum.s: src/crypto/asn1/a_enum.c.s
@@ -551,7 +551,7 @@ src/crypto/asn1/a_enum.s: src/crypto/asn1/a_enum.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_enum.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_enum.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_enum.c.s
 .PHONY : src/crypto/asn1/a_enum.c.s
 
 src/crypto/asn1/a_gentm.o: src/crypto/asn1/a_gentm.c.o
@@ -560,7 +560,7 @@ src/crypto/asn1/a_gentm.o: src/crypto/asn1/a_gentm.c.o
 
 # target to build an object file
 src/crypto/asn1/a_gentm.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_gentm.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_gentm.c.o
 .PHONY : src/crypto/asn1/a_gentm.c.o
 
 src/crypto/asn1/a_gentm.i: src/crypto/asn1/a_gentm.c.i
@@ -569,7 +569,7 @@ src/crypto/asn1/a_gentm.i: src/crypto/asn1/a_gentm.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_gentm.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_gentm.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_gentm.c.i
 .PHONY : src/crypto/asn1/a_gentm.c.i
 
 src/crypto/asn1/a_gentm.s: src/crypto/asn1/a_gentm.c.s
@@ -578,7 +578,7 @@ src/crypto/asn1/a_gentm.s: src/crypto/asn1/a_gentm.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_gentm.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_gentm.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_gentm.c.s
 .PHONY : src/crypto/asn1/a_gentm.c.s
 
 src/crypto/asn1/a_i2d_fp.o: src/crypto/asn1/a_i2d_fp.c.o
@@ -587,7 +587,7 @@ src/crypto/asn1/a_i2d_fp.o: src/crypto/asn1/a_i2d_fp.c.o
 
 # target to build an object file
 src/crypto/asn1/a_i2d_fp.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_i2d_fp.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_i2d_fp.c.o
 .PHONY : src/crypto/asn1/a_i2d_fp.c.o
 
 src/crypto/asn1/a_i2d_fp.i: src/crypto/asn1/a_i2d_fp.c.i
@@ -596,7 +596,7 @@ src/crypto/asn1/a_i2d_fp.i: src/crypto/asn1/a_i2d_fp.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_i2d_fp.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_i2d_fp.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_i2d_fp.c.i
 .PHONY : src/crypto/asn1/a_i2d_fp.c.i
 
 src/crypto/asn1/a_i2d_fp.s: src/crypto/asn1/a_i2d_fp.c.s
@@ -605,7 +605,7 @@ src/crypto/asn1/a_i2d_fp.s: src/crypto/asn1/a_i2d_fp.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_i2d_fp.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_i2d_fp.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_i2d_fp.c.s
 .PHONY : src/crypto/asn1/a_i2d_fp.c.s
 
 src/crypto/asn1/a_int.o: src/crypto/asn1/a_int.c.o
@@ -614,7 +614,7 @@ src/crypto/asn1/a_int.o: src/crypto/asn1/a_int.c.o
 
 # target to build an object file
 src/crypto/asn1/a_int.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_int.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_int.c.o
 .PHONY : src/crypto/asn1/a_int.c.o
 
 src/crypto/asn1/a_int.i: src/crypto/asn1/a_int.c.i
@@ -623,7 +623,7 @@ src/crypto/asn1/a_int.i: src/crypto/asn1/a_int.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_int.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_int.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_int.c.i
 .PHONY : src/crypto/asn1/a_int.c.i
 
 src/crypto/asn1/a_int.s: src/crypto/asn1/a_int.c.s
@@ -632,7 +632,7 @@ src/crypto/asn1/a_int.s: src/crypto/asn1/a_int.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_int.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_int.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_int.c.s
 .PHONY : src/crypto/asn1/a_int.c.s
 
 src/crypto/asn1/a_mbstr.o: src/crypto/asn1/a_mbstr.c.o
@@ -641,7 +641,7 @@ src/crypto/asn1/a_mbstr.o: src/crypto/asn1/a_mbstr.c.o
 
 # target to build an object file
 src/crypto/asn1/a_mbstr.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_mbstr.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_mbstr.c.o
 .PHONY : src/crypto/asn1/a_mbstr.c.o
 
 src/crypto/asn1/a_mbstr.i: src/crypto/asn1/a_mbstr.c.i
@@ -650,7 +650,7 @@ src/crypto/asn1/a_mbstr.i: src/crypto/asn1/a_mbstr.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_mbstr.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_mbstr.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_mbstr.c.i
 .PHONY : src/crypto/asn1/a_mbstr.c.i
 
 src/crypto/asn1/a_mbstr.s: src/crypto/asn1/a_mbstr.c.s
@@ -659,7 +659,7 @@ src/crypto/asn1/a_mbstr.s: src/crypto/asn1/a_mbstr.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_mbstr.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_mbstr.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_mbstr.c.s
 .PHONY : src/crypto/asn1/a_mbstr.c.s
 
 src/crypto/asn1/a_object.o: src/crypto/asn1/a_object.c.o
@@ -668,7 +668,7 @@ src/crypto/asn1/a_object.o: src/crypto/asn1/a_object.c.o
 
 # target to build an object file
 src/crypto/asn1/a_object.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_object.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_object.c.o
 .PHONY : src/crypto/asn1/a_object.c.o
 
 src/crypto/asn1/a_object.i: src/crypto/asn1/a_object.c.i
@@ -677,7 +677,7 @@ src/crypto/asn1/a_object.i: src/crypto/asn1/a_object.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_object.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_object.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_object.c.i
 .PHONY : src/crypto/asn1/a_object.c.i
 
 src/crypto/asn1/a_object.s: src/crypto/asn1/a_object.c.s
@@ -686,7 +686,7 @@ src/crypto/asn1/a_object.s: src/crypto/asn1/a_object.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_object.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_object.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_object.c.s
 .PHONY : src/crypto/asn1/a_object.c.s
 
 src/crypto/asn1/a_octet.o: src/crypto/asn1/a_octet.c.o
@@ -695,7 +695,7 @@ src/crypto/asn1/a_octet.o: src/crypto/asn1/a_octet.c.o
 
 # target to build an object file
 src/crypto/asn1/a_octet.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_octet.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_octet.c.o
 .PHONY : src/crypto/asn1/a_octet.c.o
 
 src/crypto/asn1/a_octet.i: src/crypto/asn1/a_octet.c.i
@@ -704,7 +704,7 @@ src/crypto/asn1/a_octet.i: src/crypto/asn1/a_octet.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_octet.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_octet.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_octet.c.i
 .PHONY : src/crypto/asn1/a_octet.c.i
 
 src/crypto/asn1/a_octet.s: src/crypto/asn1/a_octet.c.s
@@ -713,7 +713,7 @@ src/crypto/asn1/a_octet.s: src/crypto/asn1/a_octet.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_octet.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_octet.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_octet.c.s
 .PHONY : src/crypto/asn1/a_octet.c.s
 
 src/crypto/asn1/a_print.o: src/crypto/asn1/a_print.c.o
@@ -722,7 +722,7 @@ src/crypto/asn1/a_print.o: src/crypto/asn1/a_print.c.o
 
 # target to build an object file
 src/crypto/asn1/a_print.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_print.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_print.c.o
 .PHONY : src/crypto/asn1/a_print.c.o
 
 src/crypto/asn1/a_print.i: src/crypto/asn1/a_print.c.i
@@ -731,7 +731,7 @@ src/crypto/asn1/a_print.i: src/crypto/asn1/a_print.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_print.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_print.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_print.c.i
 .PHONY : src/crypto/asn1/a_print.c.i
 
 src/crypto/asn1/a_print.s: src/crypto/asn1/a_print.c.s
@@ -740,7 +740,7 @@ src/crypto/asn1/a_print.s: src/crypto/asn1/a_print.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_print.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_print.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_print.c.s
 .PHONY : src/crypto/asn1/a_print.c.s
 
 src/crypto/asn1/a_strnid.o: src/crypto/asn1/a_strnid.c.o
@@ -749,7 +749,7 @@ src/crypto/asn1/a_strnid.o: src/crypto/asn1/a_strnid.c.o
 
 # target to build an object file
 src/crypto/asn1/a_strnid.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_strnid.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_strnid.c.o
 .PHONY : src/crypto/asn1/a_strnid.c.o
 
 src/crypto/asn1/a_strnid.i: src/crypto/asn1/a_strnid.c.i
@@ -758,7 +758,7 @@ src/crypto/asn1/a_strnid.i: src/crypto/asn1/a_strnid.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_strnid.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_strnid.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_strnid.c.i
 .PHONY : src/crypto/asn1/a_strnid.c.i
 
 src/crypto/asn1/a_strnid.s: src/crypto/asn1/a_strnid.c.s
@@ -767,7 +767,7 @@ src/crypto/asn1/a_strnid.s: src/crypto/asn1/a_strnid.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_strnid.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_strnid.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_strnid.c.s
 .PHONY : src/crypto/asn1/a_strnid.c.s
 
 src/crypto/asn1/a_time.o: src/crypto/asn1/a_time.c.o
@@ -776,7 +776,7 @@ src/crypto/asn1/a_time.o: src/crypto/asn1/a_time.c.o
 
 # target to build an object file
 src/crypto/asn1/a_time.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_time.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_time.c.o
 .PHONY : src/crypto/asn1/a_time.c.o
 
 src/crypto/asn1/a_time.i: src/crypto/asn1/a_time.c.i
@@ -785,7 +785,7 @@ src/crypto/asn1/a_time.i: src/crypto/asn1/a_time.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_time.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_time.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_time.c.i
 .PHONY : src/crypto/asn1/a_time.c.i
 
 src/crypto/asn1/a_time.s: src/crypto/asn1/a_time.c.s
@@ -794,7 +794,7 @@ src/crypto/asn1/a_time.s: src/crypto/asn1/a_time.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_time.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_time.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_time.c.s
 .PHONY : src/crypto/asn1/a_time.c.s
 
 src/crypto/asn1/a_type.o: src/crypto/asn1/a_type.c.o
@@ -803,7 +803,7 @@ src/crypto/asn1/a_type.o: src/crypto/asn1/a_type.c.o
 
 # target to build an object file
 src/crypto/asn1/a_type.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_type.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_type.c.o
 .PHONY : src/crypto/asn1/a_type.c.o
 
 src/crypto/asn1/a_type.i: src/crypto/asn1/a_type.c.i
@@ -812,7 +812,7 @@ src/crypto/asn1/a_type.i: src/crypto/asn1/a_type.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_type.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_type.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_type.c.i
 .PHONY : src/crypto/asn1/a_type.c.i
 
 src/crypto/asn1/a_type.s: src/crypto/asn1/a_type.c.s
@@ -821,7 +821,7 @@ src/crypto/asn1/a_type.s: src/crypto/asn1/a_type.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_type.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_type.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_type.c.s
 .PHONY : src/crypto/asn1/a_type.c.s
 
 src/crypto/asn1/a_utctm.o: src/crypto/asn1/a_utctm.c.o
@@ -830,7 +830,7 @@ src/crypto/asn1/a_utctm.o: src/crypto/asn1/a_utctm.c.o
 
 # target to build an object file
 src/crypto/asn1/a_utctm.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utctm.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utctm.c.o
 .PHONY : src/crypto/asn1/a_utctm.c.o
 
 src/crypto/asn1/a_utctm.i: src/crypto/asn1/a_utctm.c.i
@@ -839,7 +839,7 @@ src/crypto/asn1/a_utctm.i: src/crypto/asn1/a_utctm.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_utctm.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utctm.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utctm.c.i
 .PHONY : src/crypto/asn1/a_utctm.c.i
 
 src/crypto/asn1/a_utctm.s: src/crypto/asn1/a_utctm.c.s
@@ -848,7 +848,7 @@ src/crypto/asn1/a_utctm.s: src/crypto/asn1/a_utctm.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_utctm.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utctm.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utctm.c.s
 .PHONY : src/crypto/asn1/a_utctm.c.s
 
 src/crypto/asn1/a_utf8.o: src/crypto/asn1/a_utf8.c.o
@@ -857,7 +857,7 @@ src/crypto/asn1/a_utf8.o: src/crypto/asn1/a_utf8.c.o
 
 # target to build an object file
 src/crypto/asn1/a_utf8.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utf8.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utf8.c.o
 .PHONY : src/crypto/asn1/a_utf8.c.o
 
 src/crypto/asn1/a_utf8.i: src/crypto/asn1/a_utf8.c.i
@@ -866,7 +866,7 @@ src/crypto/asn1/a_utf8.i: src/crypto/asn1/a_utf8.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/a_utf8.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utf8.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utf8.c.i
 .PHONY : src/crypto/asn1/a_utf8.c.i
 
 src/crypto/asn1/a_utf8.s: src/crypto/asn1/a_utf8.c.s
@@ -875,7 +875,7 @@ src/crypto/asn1/a_utf8.s: src/crypto/asn1/a_utf8.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/a_utf8.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utf8.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/a_utf8.c.s
 .PHONY : src/crypto/asn1/a_utf8.c.s
 
 src/crypto/asn1/asn1_lib.o: src/crypto/asn1/asn1_lib.c.o
@@ -884,7 +884,7 @@ src/crypto/asn1/asn1_lib.o: src/crypto/asn1/asn1_lib.c.o
 
 # target to build an object file
 src/crypto/asn1/asn1_lib.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_lib.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_lib.c.o
 .PHONY : src/crypto/asn1/asn1_lib.c.o
 
 src/crypto/asn1/asn1_lib.i: src/crypto/asn1/asn1_lib.c.i
@@ -893,7 +893,7 @@ src/crypto/asn1/asn1_lib.i: src/crypto/asn1/asn1_lib.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/asn1_lib.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_lib.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_lib.c.i
 .PHONY : src/crypto/asn1/asn1_lib.c.i
 
 src/crypto/asn1/asn1_lib.s: src/crypto/asn1/asn1_lib.c.s
@@ -902,7 +902,7 @@ src/crypto/asn1/asn1_lib.s: src/crypto/asn1/asn1_lib.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/asn1_lib.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_lib.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_lib.c.s
 .PHONY : src/crypto/asn1/asn1_lib.c.s
 
 src/crypto/asn1/asn1_par.o: src/crypto/asn1/asn1_par.c.o
@@ -911,7 +911,7 @@ src/crypto/asn1/asn1_par.o: src/crypto/asn1/asn1_par.c.o
 
 # target to build an object file
 src/crypto/asn1/asn1_par.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_par.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_par.c.o
 .PHONY : src/crypto/asn1/asn1_par.c.o
 
 src/crypto/asn1/asn1_par.i: src/crypto/asn1/asn1_par.c.i
@@ -920,7 +920,7 @@ src/crypto/asn1/asn1_par.i: src/crypto/asn1/asn1_par.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/asn1_par.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_par.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_par.c.i
 .PHONY : src/crypto/asn1/asn1_par.c.i
 
 src/crypto/asn1/asn1_par.s: src/crypto/asn1/asn1_par.c.s
@@ -929,7 +929,7 @@ src/crypto/asn1/asn1_par.s: src/crypto/asn1/asn1_par.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/asn1_par.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_par.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn1_par.c.s
 .PHONY : src/crypto/asn1/asn1_par.c.s
 
 src/crypto/asn1/asn_pack.o: src/crypto/asn1/asn_pack.c.o
@@ -938,7 +938,7 @@ src/crypto/asn1/asn_pack.o: src/crypto/asn1/asn_pack.c.o
 
 # target to build an object file
 src/crypto/asn1/asn_pack.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn_pack.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn_pack.c.o
 .PHONY : src/crypto/asn1/asn_pack.c.o
 
 src/crypto/asn1/asn_pack.i: src/crypto/asn1/asn_pack.c.i
@@ -947,7 +947,7 @@ src/crypto/asn1/asn_pack.i: src/crypto/asn1/asn_pack.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/asn_pack.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn_pack.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn_pack.c.i
 .PHONY : src/crypto/asn1/asn_pack.c.i
 
 src/crypto/asn1/asn_pack.s: src/crypto/asn1/asn_pack.c.s
@@ -956,7 +956,7 @@ src/crypto/asn1/asn_pack.s: src/crypto/asn1/asn_pack.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/asn_pack.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn_pack.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/asn_pack.c.s
 .PHONY : src/crypto/asn1/asn_pack.c.s
 
 src/crypto/asn1/f_enum.o: src/crypto/asn1/f_enum.c.o
@@ -965,7 +965,7 @@ src/crypto/asn1/f_enum.o: src/crypto/asn1/f_enum.c.o
 
 # target to build an object file
 src/crypto/asn1/f_enum.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_enum.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_enum.c.o
 .PHONY : src/crypto/asn1/f_enum.c.o
 
 src/crypto/asn1/f_enum.i: src/crypto/asn1/f_enum.c.i
@@ -974,7 +974,7 @@ src/crypto/asn1/f_enum.i: src/crypto/asn1/f_enum.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/f_enum.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_enum.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_enum.c.i
 .PHONY : src/crypto/asn1/f_enum.c.i
 
 src/crypto/asn1/f_enum.s: src/crypto/asn1/f_enum.c.s
@@ -983,7 +983,7 @@ src/crypto/asn1/f_enum.s: src/crypto/asn1/f_enum.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/f_enum.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_enum.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_enum.c.s
 .PHONY : src/crypto/asn1/f_enum.c.s
 
 src/crypto/asn1/f_int.o: src/crypto/asn1/f_int.c.o
@@ -992,7 +992,7 @@ src/crypto/asn1/f_int.o: src/crypto/asn1/f_int.c.o
 
 # target to build an object file
 src/crypto/asn1/f_int.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_int.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_int.c.o
 .PHONY : src/crypto/asn1/f_int.c.o
 
 src/crypto/asn1/f_int.i: src/crypto/asn1/f_int.c.i
@@ -1001,7 +1001,7 @@ src/crypto/asn1/f_int.i: src/crypto/asn1/f_int.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/f_int.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_int.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_int.c.i
 .PHONY : src/crypto/asn1/f_int.c.i
 
 src/crypto/asn1/f_int.s: src/crypto/asn1/f_int.c.s
@@ -1010,7 +1010,7 @@ src/crypto/asn1/f_int.s: src/crypto/asn1/f_int.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/f_int.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_int.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_int.c.s
 .PHONY : src/crypto/asn1/f_int.c.s
 
 src/crypto/asn1/f_string.o: src/crypto/asn1/f_string.c.o
@@ -1019,7 +1019,7 @@ src/crypto/asn1/f_string.o: src/crypto/asn1/f_string.c.o
 
 # target to build an object file
 src/crypto/asn1/f_string.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_string.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_string.c.o
 .PHONY : src/crypto/asn1/f_string.c.o
 
 src/crypto/asn1/f_string.i: src/crypto/asn1/f_string.c.i
@@ -1028,7 +1028,7 @@ src/crypto/asn1/f_string.i: src/crypto/asn1/f_string.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/f_string.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_string.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_string.c.i
 .PHONY : src/crypto/asn1/f_string.c.i
 
 src/crypto/asn1/f_string.s: src/crypto/asn1/f_string.c.s
@@ -1037,7 +1037,7 @@ src/crypto/asn1/f_string.s: src/crypto/asn1/f_string.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/f_string.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_string.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/f_string.c.s
 .PHONY : src/crypto/asn1/f_string.c.s
 
 src/crypto/asn1/tasn_dec.o: src/crypto/asn1/tasn_dec.c.o
@@ -1046,7 +1046,7 @@ src/crypto/asn1/tasn_dec.o: src/crypto/asn1/tasn_dec.c.o
 
 # target to build an object file
 src/crypto/asn1/tasn_dec.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_dec.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_dec.c.o
 .PHONY : src/crypto/asn1/tasn_dec.c.o
 
 src/crypto/asn1/tasn_dec.i: src/crypto/asn1/tasn_dec.c.i
@@ -1055,7 +1055,7 @@ src/crypto/asn1/tasn_dec.i: src/crypto/asn1/tasn_dec.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/tasn_dec.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_dec.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_dec.c.i
 .PHONY : src/crypto/asn1/tasn_dec.c.i
 
 src/crypto/asn1/tasn_dec.s: src/crypto/asn1/tasn_dec.c.s
@@ -1064,7 +1064,7 @@ src/crypto/asn1/tasn_dec.s: src/crypto/asn1/tasn_dec.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/tasn_dec.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_dec.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_dec.c.s
 .PHONY : src/crypto/asn1/tasn_dec.c.s
 
 src/crypto/asn1/tasn_enc.o: src/crypto/asn1/tasn_enc.c.o
@@ -1073,7 +1073,7 @@ src/crypto/asn1/tasn_enc.o: src/crypto/asn1/tasn_enc.c.o
 
 # target to build an object file
 src/crypto/asn1/tasn_enc.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_enc.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_enc.c.o
 .PHONY : src/crypto/asn1/tasn_enc.c.o
 
 src/crypto/asn1/tasn_enc.i: src/crypto/asn1/tasn_enc.c.i
@@ -1082,7 +1082,7 @@ src/crypto/asn1/tasn_enc.i: src/crypto/asn1/tasn_enc.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/tasn_enc.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_enc.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_enc.c.i
 .PHONY : src/crypto/asn1/tasn_enc.c.i
 
 src/crypto/asn1/tasn_enc.s: src/crypto/asn1/tasn_enc.c.s
@@ -1091,7 +1091,7 @@ src/crypto/asn1/tasn_enc.s: src/crypto/asn1/tasn_enc.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/tasn_enc.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_enc.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_enc.c.s
 .PHONY : src/crypto/asn1/tasn_enc.c.s
 
 src/crypto/asn1/tasn_fre.o: src/crypto/asn1/tasn_fre.c.o
@@ -1100,7 +1100,7 @@ src/crypto/asn1/tasn_fre.o: src/crypto/asn1/tasn_fre.c.o
 
 # target to build an object file
 src/crypto/asn1/tasn_fre.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_fre.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_fre.c.o
 .PHONY : src/crypto/asn1/tasn_fre.c.o
 
 src/crypto/asn1/tasn_fre.i: src/crypto/asn1/tasn_fre.c.i
@@ -1109,7 +1109,7 @@ src/crypto/asn1/tasn_fre.i: src/crypto/asn1/tasn_fre.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/tasn_fre.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_fre.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_fre.c.i
 .PHONY : src/crypto/asn1/tasn_fre.c.i
 
 src/crypto/asn1/tasn_fre.s: src/crypto/asn1/tasn_fre.c.s
@@ -1118,7 +1118,7 @@ src/crypto/asn1/tasn_fre.s: src/crypto/asn1/tasn_fre.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/tasn_fre.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_fre.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_fre.c.s
 .PHONY : src/crypto/asn1/tasn_fre.c.s
 
 src/crypto/asn1/tasn_new.o: src/crypto/asn1/tasn_new.c.o
@@ -1127,7 +1127,7 @@ src/crypto/asn1/tasn_new.o: src/crypto/asn1/tasn_new.c.o
 
 # target to build an object file
 src/crypto/asn1/tasn_new.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_new.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_new.c.o
 .PHONY : src/crypto/asn1/tasn_new.c.o
 
 src/crypto/asn1/tasn_new.i: src/crypto/asn1/tasn_new.c.i
@@ -1136,7 +1136,7 @@ src/crypto/asn1/tasn_new.i: src/crypto/asn1/tasn_new.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/tasn_new.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_new.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_new.c.i
 .PHONY : src/crypto/asn1/tasn_new.c.i
 
 src/crypto/asn1/tasn_new.s: src/crypto/asn1/tasn_new.c.s
@@ -1145,7 +1145,7 @@ src/crypto/asn1/tasn_new.s: src/crypto/asn1/tasn_new.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/tasn_new.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_new.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_new.c.s
 .PHONY : src/crypto/asn1/tasn_new.c.s
 
 src/crypto/asn1/tasn_typ.o: src/crypto/asn1/tasn_typ.c.o
@@ -1154,7 +1154,7 @@ src/crypto/asn1/tasn_typ.o: src/crypto/asn1/tasn_typ.c.o
 
 # target to build an object file
 src/crypto/asn1/tasn_typ.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_typ.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_typ.c.o
 .PHONY : src/crypto/asn1/tasn_typ.c.o
 
 src/crypto/asn1/tasn_typ.i: src/crypto/asn1/tasn_typ.c.i
@@ -1163,7 +1163,7 @@ src/crypto/asn1/tasn_typ.i: src/crypto/asn1/tasn_typ.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/tasn_typ.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_typ.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_typ.c.i
 .PHONY : src/crypto/asn1/tasn_typ.c.i
 
 src/crypto/asn1/tasn_typ.s: src/crypto/asn1/tasn_typ.c.s
@@ -1172,7 +1172,7 @@ src/crypto/asn1/tasn_typ.s: src/crypto/asn1/tasn_typ.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/tasn_typ.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_typ.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_typ.c.s
 .PHONY : src/crypto/asn1/tasn_typ.c.s
 
 src/crypto/asn1/tasn_utl.o: src/crypto/asn1/tasn_utl.c.o
@@ -1181,7 +1181,7 @@ src/crypto/asn1/tasn_utl.o: src/crypto/asn1/tasn_utl.c.o
 
 # target to build an object file
 src/crypto/asn1/tasn_utl.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_utl.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_utl.c.o
 .PHONY : src/crypto/asn1/tasn_utl.c.o
 
 src/crypto/asn1/tasn_utl.i: src/crypto/asn1/tasn_utl.c.i
@@ -1190,7 +1190,7 @@ src/crypto/asn1/tasn_utl.i: src/crypto/asn1/tasn_utl.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/tasn_utl.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_utl.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_utl.c.i
 .PHONY : src/crypto/asn1/tasn_utl.c.i
 
 src/crypto/asn1/tasn_utl.s: src/crypto/asn1/tasn_utl.c.s
@@ -1199,7 +1199,7 @@ src/crypto/asn1/tasn_utl.s: src/crypto/asn1/tasn_utl.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/tasn_utl.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_utl.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/tasn_utl.c.s
 .PHONY : src/crypto/asn1/tasn_utl.c.s
 
 src/crypto/asn1/time_support.o: src/crypto/asn1/time_support.c.o
@@ -1208,7 +1208,7 @@ src/crypto/asn1/time_support.o: src/crypto/asn1/time_support.c.o
 
 # target to build an object file
 src/crypto/asn1/time_support.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/time_support.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/time_support.c.o
 .PHONY : src/crypto/asn1/time_support.c.o
 
 src/crypto/asn1/time_support.i: src/crypto/asn1/time_support.c.i
@@ -1217,7 +1217,7 @@ src/crypto/asn1/time_support.i: src/crypto/asn1/time_support.c.i
 
 # target to preprocess a source file
 src/crypto/asn1/time_support.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/time_support.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/time_support.c.i
 .PHONY : src/crypto/asn1/time_support.c.i
 
 src/crypto/asn1/time_support.s: src/crypto/asn1/time_support.c.s
@@ -1226,7 +1226,7 @@ src/crypto/asn1/time_support.s: src/crypto/asn1/time_support.c.s
 
 # target to generate assembly for a file
 src/crypto/asn1/time_support.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/time_support.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/asn1/time_support.c.s
 .PHONY : src/crypto/asn1/time_support.c.s
 
 src/crypto/base64/base64.o: src/crypto/base64/base64.c.o
@@ -1235,7 +1235,7 @@ src/crypto/base64/base64.o: src/crypto/base64/base64.c.o
 
 # target to build an object file
 src/crypto/base64/base64.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/base64/base64.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/base64/base64.c.o
 .PHONY : src/crypto/base64/base64.c.o
 
 src/crypto/base64/base64.i: src/crypto/base64/base64.c.i
@@ -1244,7 +1244,7 @@ src/crypto/base64/base64.i: src/crypto/base64/base64.c.i
 
 # target to preprocess a source file
 src/crypto/base64/base64.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/base64/base64.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/base64/base64.c.i
 .PHONY : src/crypto/base64/base64.c.i
 
 src/crypto/base64/base64.s: src/crypto/base64/base64.c.s
@@ -1253,7 +1253,7 @@ src/crypto/base64/base64.s: src/crypto/base64/base64.c.s
 
 # target to generate assembly for a file
 src/crypto/base64/base64.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/base64/base64.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/base64/base64.c.s
 .PHONY : src/crypto/base64/base64.c.s
 
 src/crypto/bio/bio.o: src/crypto/bio/bio.c.o
@@ -1262,7 +1262,7 @@ src/crypto/bio/bio.o: src/crypto/bio/bio.c.o
 
 # target to build an object file
 src/crypto/bio/bio.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio.c.o
 .PHONY : src/crypto/bio/bio.c.o
 
 src/crypto/bio/bio.i: src/crypto/bio/bio.c.i
@@ -1271,7 +1271,7 @@ src/crypto/bio/bio.i: src/crypto/bio/bio.c.i
 
 # target to preprocess a source file
 src/crypto/bio/bio.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio.c.i
 .PHONY : src/crypto/bio/bio.c.i
 
 src/crypto/bio/bio.s: src/crypto/bio/bio.c.s
@@ -1280,7 +1280,7 @@ src/crypto/bio/bio.s: src/crypto/bio/bio.c.s
 
 # target to generate assembly for a file
 src/crypto/bio/bio.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio.c.s
 .PHONY : src/crypto/bio/bio.c.s
 
 src/crypto/bio/bio_mem.o: src/crypto/bio/bio_mem.c.o
@@ -1289,7 +1289,7 @@ src/crypto/bio/bio_mem.o: src/crypto/bio/bio_mem.c.o
 
 # target to build an object file
 src/crypto/bio/bio_mem.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio_mem.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio_mem.c.o
 .PHONY : src/crypto/bio/bio_mem.c.o
 
 src/crypto/bio/bio_mem.i: src/crypto/bio/bio_mem.c.i
@@ -1298,7 +1298,7 @@ src/crypto/bio/bio_mem.i: src/crypto/bio/bio_mem.c.i
 
 # target to preprocess a source file
 src/crypto/bio/bio_mem.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio_mem.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio_mem.c.i
 .PHONY : src/crypto/bio/bio_mem.c.i
 
 src/crypto/bio/bio_mem.s: src/crypto/bio/bio_mem.c.s
@@ -1307,7 +1307,7 @@ src/crypto/bio/bio_mem.s: src/crypto/bio/bio_mem.c.s
 
 # target to generate assembly for a file
 src/crypto/bio/bio_mem.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio_mem.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/bio_mem.c.s
 .PHONY : src/crypto/bio/bio_mem.c.s
 
 src/crypto/bio/connect.o: src/crypto/bio/connect.c.o
@@ -1316,7 +1316,7 @@ src/crypto/bio/connect.o: src/crypto/bio/connect.c.o
 
 # target to build an object file
 src/crypto/bio/connect.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/connect.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/connect.c.o
 .PHONY : src/crypto/bio/connect.c.o
 
 src/crypto/bio/connect.i: src/crypto/bio/connect.c.i
@@ -1325,7 +1325,7 @@ src/crypto/bio/connect.i: src/crypto/bio/connect.c.i
 
 # target to preprocess a source file
 src/crypto/bio/connect.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/connect.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/connect.c.i
 .PHONY : src/crypto/bio/connect.c.i
 
 src/crypto/bio/connect.s: src/crypto/bio/connect.c.s
@@ -1334,7 +1334,7 @@ src/crypto/bio/connect.s: src/crypto/bio/connect.c.s
 
 # target to generate assembly for a file
 src/crypto/bio/connect.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/connect.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/connect.c.s
 .PHONY : src/crypto/bio/connect.c.s
 
 src/crypto/bio/fd.o: src/crypto/bio/fd.c.o
@@ -1343,7 +1343,7 @@ src/crypto/bio/fd.o: src/crypto/bio/fd.c.o
 
 # target to build an object file
 src/crypto/bio/fd.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/fd.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/fd.c.o
 .PHONY : src/crypto/bio/fd.c.o
 
 src/crypto/bio/fd.i: src/crypto/bio/fd.c.i
@@ -1352,7 +1352,7 @@ src/crypto/bio/fd.i: src/crypto/bio/fd.c.i
 
 # target to preprocess a source file
 src/crypto/bio/fd.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/fd.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/fd.c.i
 .PHONY : src/crypto/bio/fd.c.i
 
 src/crypto/bio/fd.s: src/crypto/bio/fd.c.s
@@ -1361,7 +1361,7 @@ src/crypto/bio/fd.s: src/crypto/bio/fd.c.s
 
 # target to generate assembly for a file
 src/crypto/bio/fd.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/fd.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/fd.c.s
 .PHONY : src/crypto/bio/fd.c.s
 
 src/crypto/bio/file.o: src/crypto/bio/file.c.o
@@ -1370,7 +1370,7 @@ src/crypto/bio/file.o: src/crypto/bio/file.c.o
 
 # target to build an object file
 src/crypto/bio/file.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/file.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/file.c.o
 .PHONY : src/crypto/bio/file.c.o
 
 src/crypto/bio/file.i: src/crypto/bio/file.c.i
@@ -1379,7 +1379,7 @@ src/crypto/bio/file.i: src/crypto/bio/file.c.i
 
 # target to preprocess a source file
 src/crypto/bio/file.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/file.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/file.c.i
 .PHONY : src/crypto/bio/file.c.i
 
 src/crypto/bio/file.s: src/crypto/bio/file.c.s
@@ -1388,7 +1388,7 @@ src/crypto/bio/file.s: src/crypto/bio/file.c.s
 
 # target to generate assembly for a file
 src/crypto/bio/file.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/file.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/file.c.s
 .PHONY : src/crypto/bio/file.c.s
 
 src/crypto/bio/hexdump.o: src/crypto/bio/hexdump.c.o
@@ -1397,7 +1397,7 @@ src/crypto/bio/hexdump.o: src/crypto/bio/hexdump.c.o
 
 # target to build an object file
 src/crypto/bio/hexdump.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/hexdump.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/hexdump.c.o
 .PHONY : src/crypto/bio/hexdump.c.o
 
 src/crypto/bio/hexdump.i: src/crypto/bio/hexdump.c.i
@@ -1406,7 +1406,7 @@ src/crypto/bio/hexdump.i: src/crypto/bio/hexdump.c.i
 
 # target to preprocess a source file
 src/crypto/bio/hexdump.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/hexdump.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/hexdump.c.i
 .PHONY : src/crypto/bio/hexdump.c.i
 
 src/crypto/bio/hexdump.s: src/crypto/bio/hexdump.c.s
@@ -1415,7 +1415,7 @@ src/crypto/bio/hexdump.s: src/crypto/bio/hexdump.c.s
 
 # target to generate assembly for a file
 src/crypto/bio/hexdump.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/hexdump.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/hexdump.c.s
 .PHONY : src/crypto/bio/hexdump.c.s
 
 src/crypto/bio/pair.o: src/crypto/bio/pair.c.o
@@ -1424,7 +1424,7 @@ src/crypto/bio/pair.o: src/crypto/bio/pair.c.o
 
 # target to build an object file
 src/crypto/bio/pair.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/pair.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/pair.c.o
 .PHONY : src/crypto/bio/pair.c.o
 
 src/crypto/bio/pair.i: src/crypto/bio/pair.c.i
@@ -1433,7 +1433,7 @@ src/crypto/bio/pair.i: src/crypto/bio/pair.c.i
 
 # target to preprocess a source file
 src/crypto/bio/pair.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/pair.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/pair.c.i
 .PHONY : src/crypto/bio/pair.c.i
 
 src/crypto/bio/pair.s: src/crypto/bio/pair.c.s
@@ -1442,7 +1442,7 @@ src/crypto/bio/pair.s: src/crypto/bio/pair.c.s
 
 # target to generate assembly for a file
 src/crypto/bio/pair.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/pair.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/pair.c.s
 .PHONY : src/crypto/bio/pair.c.s
 
 src/crypto/bio/printf.o: src/crypto/bio/printf.c.o
@@ -1451,7 +1451,7 @@ src/crypto/bio/printf.o: src/crypto/bio/printf.c.o
 
 # target to build an object file
 src/crypto/bio/printf.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/printf.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/printf.c.o
 .PHONY : src/crypto/bio/printf.c.o
 
 src/crypto/bio/printf.i: src/crypto/bio/printf.c.i
@@ -1460,7 +1460,7 @@ src/crypto/bio/printf.i: src/crypto/bio/printf.c.i
 
 # target to preprocess a source file
 src/crypto/bio/printf.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/printf.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/printf.c.i
 .PHONY : src/crypto/bio/printf.c.i
 
 src/crypto/bio/printf.s: src/crypto/bio/printf.c.s
@@ -1469,7 +1469,7 @@ src/crypto/bio/printf.s: src/crypto/bio/printf.c.s
 
 # target to generate assembly for a file
 src/crypto/bio/printf.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/printf.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/printf.c.s
 .PHONY : src/crypto/bio/printf.c.s
 
 src/crypto/bio/socket.o: src/crypto/bio/socket.c.o
@@ -1478,7 +1478,7 @@ src/crypto/bio/socket.o: src/crypto/bio/socket.c.o
 
 # target to build an object file
 src/crypto/bio/socket.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket.c.o
 .PHONY : src/crypto/bio/socket.c.o
 
 src/crypto/bio/socket.i: src/crypto/bio/socket.c.i
@@ -1487,7 +1487,7 @@ src/crypto/bio/socket.i: src/crypto/bio/socket.c.i
 
 # target to preprocess a source file
 src/crypto/bio/socket.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket.c.i
 .PHONY : src/crypto/bio/socket.c.i
 
 src/crypto/bio/socket.s: src/crypto/bio/socket.c.s
@@ -1496,7 +1496,7 @@ src/crypto/bio/socket.s: src/crypto/bio/socket.c.s
 
 # target to generate assembly for a file
 src/crypto/bio/socket.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket.c.s
 .PHONY : src/crypto/bio/socket.c.s
 
 src/crypto/bio/socket_helper.o: src/crypto/bio/socket_helper.c.o
@@ -1505,7 +1505,7 @@ src/crypto/bio/socket_helper.o: src/crypto/bio/socket_helper.c.o
 
 # target to build an object file
 src/crypto/bio/socket_helper.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket_helper.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket_helper.c.o
 .PHONY : src/crypto/bio/socket_helper.c.o
 
 src/crypto/bio/socket_helper.i: src/crypto/bio/socket_helper.c.i
@@ -1514,7 +1514,7 @@ src/crypto/bio/socket_helper.i: src/crypto/bio/socket_helper.c.i
 
 # target to preprocess a source file
 src/crypto/bio/socket_helper.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket_helper.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket_helper.c.i
 .PHONY : src/crypto/bio/socket_helper.c.i
 
 src/crypto/bio/socket_helper.s: src/crypto/bio/socket_helper.c.s
@@ -1523,7 +1523,7 @@ src/crypto/bio/socket_helper.s: src/crypto/bio/socket_helper.c.s
 
 # target to generate assembly for a file
 src/crypto/bio/socket_helper.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket_helper.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bio/socket_helper.c.s
 .PHONY : src/crypto/bio/socket_helper.c.s
 
 src/crypto/blake2/blake2.o: src/crypto/blake2/blake2.c.o
@@ -1532,7 +1532,7 @@ src/crypto/blake2/blake2.o: src/crypto/blake2/blake2.c.o
 
 # target to build an object file
 src/crypto/blake2/blake2.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/blake2/blake2.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/blake2/blake2.c.o
 .PHONY : src/crypto/blake2/blake2.c.o
 
 src/crypto/blake2/blake2.i: src/crypto/blake2/blake2.c.i
@@ -1541,7 +1541,7 @@ src/crypto/blake2/blake2.i: src/crypto/blake2/blake2.c.i
 
 # target to preprocess a source file
 src/crypto/blake2/blake2.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/blake2/blake2.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/blake2/blake2.c.i
 .PHONY : src/crypto/blake2/blake2.c.i
 
 src/crypto/blake2/blake2.s: src/crypto/blake2/blake2.c.s
@@ -1550,7 +1550,7 @@ src/crypto/blake2/blake2.s: src/crypto/blake2/blake2.c.s
 
 # target to generate assembly for a file
 src/crypto/blake2/blake2.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/blake2/blake2.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/blake2/blake2.c.s
 .PHONY : src/crypto/blake2/blake2.c.s
 
 src/crypto/bn_extra/bn_asn1.o: src/crypto/bn_extra/bn_asn1.c.o
@@ -1559,7 +1559,7 @@ src/crypto/bn_extra/bn_asn1.o: src/crypto/bn_extra/bn_asn1.c.o
 
 # target to build an object file
 src/crypto/bn_extra/bn_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/bn_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/bn_asn1.c.o
 .PHONY : src/crypto/bn_extra/bn_asn1.c.o
 
 src/crypto/bn_extra/bn_asn1.i: src/crypto/bn_extra/bn_asn1.c.i
@@ -1568,7 +1568,7 @@ src/crypto/bn_extra/bn_asn1.i: src/crypto/bn_extra/bn_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/bn_extra/bn_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/bn_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/bn_asn1.c.i
 .PHONY : src/crypto/bn_extra/bn_asn1.c.i
 
 src/crypto/bn_extra/bn_asn1.s: src/crypto/bn_extra/bn_asn1.c.s
@@ -1577,7 +1577,7 @@ src/crypto/bn_extra/bn_asn1.s: src/crypto/bn_extra/bn_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/bn_extra/bn_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/bn_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/bn_asn1.c.s
 .PHONY : src/crypto/bn_extra/bn_asn1.c.s
 
 src/crypto/bn_extra/convert.o: src/crypto/bn_extra/convert.c.o
@@ -1586,7 +1586,7 @@ src/crypto/bn_extra/convert.o: src/crypto/bn_extra/convert.c.o
 
 # target to build an object file
 src/crypto/bn_extra/convert.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/convert.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/convert.c.o
 .PHONY : src/crypto/bn_extra/convert.c.o
 
 src/crypto/bn_extra/convert.i: src/crypto/bn_extra/convert.c.i
@@ -1595,7 +1595,7 @@ src/crypto/bn_extra/convert.i: src/crypto/bn_extra/convert.c.i
 
 # target to preprocess a source file
 src/crypto/bn_extra/convert.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/convert.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/convert.c.i
 .PHONY : src/crypto/bn_extra/convert.c.i
 
 src/crypto/bn_extra/convert.s: src/crypto/bn_extra/convert.c.s
@@ -1604,7 +1604,7 @@ src/crypto/bn_extra/convert.s: src/crypto/bn_extra/convert.c.s
 
 # target to generate assembly for a file
 src/crypto/bn_extra/convert.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/convert.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bn_extra/convert.c.s
 .PHONY : src/crypto/bn_extra/convert.c.s
 
 src/crypto/buf/buf.o: src/crypto/buf/buf.c.o
@@ -1613,7 +1613,7 @@ src/crypto/buf/buf.o: src/crypto/buf/buf.c.o
 
 # target to build an object file
 src/crypto/buf/buf.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/buf/buf.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/buf/buf.c.o
 .PHONY : src/crypto/buf/buf.c.o
 
 src/crypto/buf/buf.i: src/crypto/buf/buf.c.i
@@ -1622,7 +1622,7 @@ src/crypto/buf/buf.i: src/crypto/buf/buf.c.i
 
 # target to preprocess a source file
 src/crypto/buf/buf.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/buf/buf.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/buf/buf.c.i
 .PHONY : src/crypto/buf/buf.c.i
 
 src/crypto/buf/buf.s: src/crypto/buf/buf.c.s
@@ -1631,7 +1631,7 @@ src/crypto/buf/buf.s: src/crypto/buf/buf.c.s
 
 # target to generate assembly for a file
 src/crypto/buf/buf.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/buf/buf.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/buf/buf.c.s
 .PHONY : src/crypto/buf/buf.c.s
 
 src/crypto/bytestring/asn1_compat.o: src/crypto/bytestring/asn1_compat.c.o
@@ -1640,7 +1640,7 @@ src/crypto/bytestring/asn1_compat.o: src/crypto/bytestring/asn1_compat.c.o
 
 # target to build an object file
 src/crypto/bytestring/asn1_compat.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/asn1_compat.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/asn1_compat.c.o
 .PHONY : src/crypto/bytestring/asn1_compat.c.o
 
 src/crypto/bytestring/asn1_compat.i: src/crypto/bytestring/asn1_compat.c.i
@@ -1649,7 +1649,7 @@ src/crypto/bytestring/asn1_compat.i: src/crypto/bytestring/asn1_compat.c.i
 
 # target to preprocess a source file
 src/crypto/bytestring/asn1_compat.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/asn1_compat.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/asn1_compat.c.i
 .PHONY : src/crypto/bytestring/asn1_compat.c.i
 
 src/crypto/bytestring/asn1_compat.s: src/crypto/bytestring/asn1_compat.c.s
@@ -1658,7 +1658,7 @@ src/crypto/bytestring/asn1_compat.s: src/crypto/bytestring/asn1_compat.c.s
 
 # target to generate assembly for a file
 src/crypto/bytestring/asn1_compat.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/asn1_compat.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/asn1_compat.c.s
 .PHONY : src/crypto/bytestring/asn1_compat.c.s
 
 src/crypto/bytestring/ber.o: src/crypto/bytestring/ber.c.o
@@ -1667,7 +1667,7 @@ src/crypto/bytestring/ber.o: src/crypto/bytestring/ber.c.o
 
 # target to build an object file
 src/crypto/bytestring/ber.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/ber.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/ber.c.o
 .PHONY : src/crypto/bytestring/ber.c.o
 
 src/crypto/bytestring/ber.i: src/crypto/bytestring/ber.c.i
@@ -1676,7 +1676,7 @@ src/crypto/bytestring/ber.i: src/crypto/bytestring/ber.c.i
 
 # target to preprocess a source file
 src/crypto/bytestring/ber.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/ber.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/ber.c.i
 .PHONY : src/crypto/bytestring/ber.c.i
 
 src/crypto/bytestring/ber.s: src/crypto/bytestring/ber.c.s
@@ -1685,7 +1685,7 @@ src/crypto/bytestring/ber.s: src/crypto/bytestring/ber.c.s
 
 # target to generate assembly for a file
 src/crypto/bytestring/ber.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/ber.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/ber.c.s
 .PHONY : src/crypto/bytestring/ber.c.s
 
 src/crypto/bytestring/cbb.o: src/crypto/bytestring/cbb.c.o
@@ -1694,7 +1694,7 @@ src/crypto/bytestring/cbb.o: src/crypto/bytestring/cbb.c.o
 
 # target to build an object file
 src/crypto/bytestring/cbb.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbb.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbb.c.o
 .PHONY : src/crypto/bytestring/cbb.c.o
 
 src/crypto/bytestring/cbb.i: src/crypto/bytestring/cbb.c.i
@@ -1703,7 +1703,7 @@ src/crypto/bytestring/cbb.i: src/crypto/bytestring/cbb.c.i
 
 # target to preprocess a source file
 src/crypto/bytestring/cbb.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbb.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbb.c.i
 .PHONY : src/crypto/bytestring/cbb.c.i
 
 src/crypto/bytestring/cbb.s: src/crypto/bytestring/cbb.c.s
@@ -1712,7 +1712,7 @@ src/crypto/bytestring/cbb.s: src/crypto/bytestring/cbb.c.s
 
 # target to generate assembly for a file
 src/crypto/bytestring/cbb.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbb.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbb.c.s
 .PHONY : src/crypto/bytestring/cbb.c.s
 
 src/crypto/bytestring/cbs.o: src/crypto/bytestring/cbs.c.o
@@ -1721,7 +1721,7 @@ src/crypto/bytestring/cbs.o: src/crypto/bytestring/cbs.c.o
 
 # target to build an object file
 src/crypto/bytestring/cbs.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbs.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbs.c.o
 .PHONY : src/crypto/bytestring/cbs.c.o
 
 src/crypto/bytestring/cbs.i: src/crypto/bytestring/cbs.c.i
@@ -1730,7 +1730,7 @@ src/crypto/bytestring/cbs.i: src/crypto/bytestring/cbs.c.i
 
 # target to preprocess a source file
 src/crypto/bytestring/cbs.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbs.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbs.c.i
 .PHONY : src/crypto/bytestring/cbs.c.i
 
 src/crypto/bytestring/cbs.s: src/crypto/bytestring/cbs.c.s
@@ -1739,7 +1739,7 @@ src/crypto/bytestring/cbs.s: src/crypto/bytestring/cbs.c.s
 
 # target to generate assembly for a file
 src/crypto/bytestring/cbs.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbs.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/cbs.c.s
 .PHONY : src/crypto/bytestring/cbs.c.s
 
 src/crypto/bytestring/unicode.o: src/crypto/bytestring/unicode.c.o
@@ -1748,7 +1748,7 @@ src/crypto/bytestring/unicode.o: src/crypto/bytestring/unicode.c.o
 
 # target to build an object file
 src/crypto/bytestring/unicode.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/unicode.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/unicode.c.o
 .PHONY : src/crypto/bytestring/unicode.c.o
 
 src/crypto/bytestring/unicode.i: src/crypto/bytestring/unicode.c.i
@@ -1757,7 +1757,7 @@ src/crypto/bytestring/unicode.i: src/crypto/bytestring/unicode.c.i
 
 # target to preprocess a source file
 src/crypto/bytestring/unicode.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/unicode.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/unicode.c.i
 .PHONY : src/crypto/bytestring/unicode.c.i
 
 src/crypto/bytestring/unicode.s: src/crypto/bytestring/unicode.c.s
@@ -1766,7 +1766,7 @@ src/crypto/bytestring/unicode.s: src/crypto/bytestring/unicode.c.s
 
 # target to generate assembly for a file
 src/crypto/bytestring/unicode.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/unicode.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/bytestring/unicode.c.s
 .PHONY : src/crypto/bytestring/unicode.c.s
 
 src/crypto/chacha/chacha.o: src/crypto/chacha/chacha.c.o
@@ -1775,7 +1775,7 @@ src/crypto/chacha/chacha.o: src/crypto/chacha/chacha.c.o
 
 # target to build an object file
 src/crypto/chacha/chacha.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/chacha/chacha.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/chacha/chacha.c.o
 .PHONY : src/crypto/chacha/chacha.c.o
 
 src/crypto/chacha/chacha.i: src/crypto/chacha/chacha.c.i
@@ -1784,7 +1784,7 @@ src/crypto/chacha/chacha.i: src/crypto/chacha/chacha.c.i
 
 # target to preprocess a source file
 src/crypto/chacha/chacha.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/chacha/chacha.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/chacha/chacha.c.i
 .PHONY : src/crypto/chacha/chacha.c.i
 
 src/crypto/chacha/chacha.s: src/crypto/chacha/chacha.c.s
@@ -1793,7 +1793,7 @@ src/crypto/chacha/chacha.s: src/crypto/chacha/chacha.c.s
 
 # target to generate assembly for a file
 src/crypto/chacha/chacha.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/chacha/chacha.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/chacha/chacha.c.s
 .PHONY : src/crypto/chacha/chacha.c.s
 
 src/crypto/cipher_extra/cipher_extra.o: src/crypto/cipher_extra/cipher_extra.c.o
@@ -1802,7 +1802,7 @@ src/crypto/cipher_extra/cipher_extra.o: src/crypto/cipher_extra/cipher_extra.c.o
 
 # target to build an object file
 src/crypto/cipher_extra/cipher_extra.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/cipher_extra.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/cipher_extra.c.o
 .PHONY : src/crypto/cipher_extra/cipher_extra.c.o
 
 src/crypto/cipher_extra/cipher_extra.i: src/crypto/cipher_extra/cipher_extra.c.i
@@ -1811,7 +1811,7 @@ src/crypto/cipher_extra/cipher_extra.i: src/crypto/cipher_extra/cipher_extra.c.i
 
 # target to preprocess a source file
 src/crypto/cipher_extra/cipher_extra.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/cipher_extra.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/cipher_extra.c.i
 .PHONY : src/crypto/cipher_extra/cipher_extra.c.i
 
 src/crypto/cipher_extra/cipher_extra.s: src/crypto/cipher_extra/cipher_extra.c.s
@@ -1820,7 +1820,7 @@ src/crypto/cipher_extra/cipher_extra.s: src/crypto/cipher_extra/cipher_extra.c.s
 
 # target to generate assembly for a file
 src/crypto/cipher_extra/cipher_extra.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/cipher_extra.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/cipher_extra.c.s
 .PHONY : src/crypto/cipher_extra/cipher_extra.c.s
 
 src/crypto/cipher_extra/derive_key.o: src/crypto/cipher_extra/derive_key.c.o
@@ -1829,7 +1829,7 @@ src/crypto/cipher_extra/derive_key.o: src/crypto/cipher_extra/derive_key.c.o
 
 # target to build an object file
 src/crypto/cipher_extra/derive_key.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/derive_key.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/derive_key.c.o
 .PHONY : src/crypto/cipher_extra/derive_key.c.o
 
 src/crypto/cipher_extra/derive_key.i: src/crypto/cipher_extra/derive_key.c.i
@@ -1838,7 +1838,7 @@ src/crypto/cipher_extra/derive_key.i: src/crypto/cipher_extra/derive_key.c.i
 
 # target to preprocess a source file
 src/crypto/cipher_extra/derive_key.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/derive_key.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/derive_key.c.i
 .PHONY : src/crypto/cipher_extra/derive_key.c.i
 
 src/crypto/cipher_extra/derive_key.s: src/crypto/cipher_extra/derive_key.c.s
@@ -1847,7 +1847,7 @@ src/crypto/cipher_extra/derive_key.s: src/crypto/cipher_extra/derive_key.c.s
 
 # target to generate assembly for a file
 src/crypto/cipher_extra/derive_key.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/derive_key.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/derive_key.c.s
 .PHONY : src/crypto/cipher_extra/derive_key.c.s
 
 src/crypto/cipher_extra/e_aesccm.o: src/crypto/cipher_extra/e_aesccm.c.o
@@ -1856,7 +1856,7 @@ src/crypto/cipher_extra/e_aesccm.o: src/crypto/cipher_extra/e_aesccm.c.o
 
 # target to build an object file
 src/crypto/cipher_extra/e_aesccm.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesccm.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesccm.c.o
 .PHONY : src/crypto/cipher_extra/e_aesccm.c.o
 
 src/crypto/cipher_extra/e_aesccm.i: src/crypto/cipher_extra/e_aesccm.c.i
@@ -1865,7 +1865,7 @@ src/crypto/cipher_extra/e_aesccm.i: src/crypto/cipher_extra/e_aesccm.c.i
 
 # target to preprocess a source file
 src/crypto/cipher_extra/e_aesccm.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesccm.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesccm.c.i
 .PHONY : src/crypto/cipher_extra/e_aesccm.c.i
 
 src/crypto/cipher_extra/e_aesccm.s: src/crypto/cipher_extra/e_aesccm.c.s
@@ -1874,7 +1874,7 @@ src/crypto/cipher_extra/e_aesccm.s: src/crypto/cipher_extra/e_aesccm.c.s
 
 # target to generate assembly for a file
 src/crypto/cipher_extra/e_aesccm.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesccm.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesccm.c.s
 .PHONY : src/crypto/cipher_extra/e_aesccm.c.s
 
 src/crypto/cipher_extra/e_aesctrhmac.o: src/crypto/cipher_extra/e_aesctrhmac.c.o
@@ -1883,7 +1883,7 @@ src/crypto/cipher_extra/e_aesctrhmac.o: src/crypto/cipher_extra/e_aesctrhmac.c.o
 
 # target to build an object file
 src/crypto/cipher_extra/e_aesctrhmac.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesctrhmac.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesctrhmac.c.o
 .PHONY : src/crypto/cipher_extra/e_aesctrhmac.c.o
 
 src/crypto/cipher_extra/e_aesctrhmac.i: src/crypto/cipher_extra/e_aesctrhmac.c.i
@@ -1892,7 +1892,7 @@ src/crypto/cipher_extra/e_aesctrhmac.i: src/crypto/cipher_extra/e_aesctrhmac.c.i
 
 # target to preprocess a source file
 src/crypto/cipher_extra/e_aesctrhmac.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesctrhmac.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesctrhmac.c.i
 .PHONY : src/crypto/cipher_extra/e_aesctrhmac.c.i
 
 src/crypto/cipher_extra/e_aesctrhmac.s: src/crypto/cipher_extra/e_aesctrhmac.c.s
@@ -1901,7 +1901,7 @@ src/crypto/cipher_extra/e_aesctrhmac.s: src/crypto/cipher_extra/e_aesctrhmac.c.s
 
 # target to generate assembly for a file
 src/crypto/cipher_extra/e_aesctrhmac.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesctrhmac.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesctrhmac.c.s
 .PHONY : src/crypto/cipher_extra/e_aesctrhmac.c.s
 
 src/crypto/cipher_extra/e_aesgcmsiv.o: src/crypto/cipher_extra/e_aesgcmsiv.c.o
@@ -1910,7 +1910,7 @@ src/crypto/cipher_extra/e_aesgcmsiv.o: src/crypto/cipher_extra/e_aesgcmsiv.c.o
 
 # target to build an object file
 src/crypto/cipher_extra/e_aesgcmsiv.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesgcmsiv.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesgcmsiv.c.o
 .PHONY : src/crypto/cipher_extra/e_aesgcmsiv.c.o
 
 src/crypto/cipher_extra/e_aesgcmsiv.i: src/crypto/cipher_extra/e_aesgcmsiv.c.i
@@ -1919,7 +1919,7 @@ src/crypto/cipher_extra/e_aesgcmsiv.i: src/crypto/cipher_extra/e_aesgcmsiv.c.i
 
 # target to preprocess a source file
 src/crypto/cipher_extra/e_aesgcmsiv.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesgcmsiv.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesgcmsiv.c.i
 .PHONY : src/crypto/cipher_extra/e_aesgcmsiv.c.i
 
 src/crypto/cipher_extra/e_aesgcmsiv.s: src/crypto/cipher_extra/e_aesgcmsiv.c.s
@@ -1928,7 +1928,7 @@ src/crypto/cipher_extra/e_aesgcmsiv.s: src/crypto/cipher_extra/e_aesgcmsiv.c.s
 
 # target to generate assembly for a file
 src/crypto/cipher_extra/e_aesgcmsiv.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesgcmsiv.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_aesgcmsiv.c.s
 .PHONY : src/crypto/cipher_extra/e_aesgcmsiv.c.s
 
 src/crypto/cipher_extra/e_chacha20poly1305.o: src/crypto/cipher_extra/e_chacha20poly1305.c.o
@@ -1937,7 +1937,7 @@ src/crypto/cipher_extra/e_chacha20poly1305.o: src/crypto/cipher_extra/e_chacha20
 
 # target to build an object file
 src/crypto/cipher_extra/e_chacha20poly1305.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_chacha20poly1305.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_chacha20poly1305.c.o
 .PHONY : src/crypto/cipher_extra/e_chacha20poly1305.c.o
 
 src/crypto/cipher_extra/e_chacha20poly1305.i: src/crypto/cipher_extra/e_chacha20poly1305.c.i
@@ -1946,7 +1946,7 @@ src/crypto/cipher_extra/e_chacha20poly1305.i: src/crypto/cipher_extra/e_chacha20
 
 # target to preprocess a source file
 src/crypto/cipher_extra/e_chacha20poly1305.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_chacha20poly1305.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_chacha20poly1305.c.i
 .PHONY : src/crypto/cipher_extra/e_chacha20poly1305.c.i
 
 src/crypto/cipher_extra/e_chacha20poly1305.s: src/crypto/cipher_extra/e_chacha20poly1305.c.s
@@ -1955,7 +1955,7 @@ src/crypto/cipher_extra/e_chacha20poly1305.s: src/crypto/cipher_extra/e_chacha20
 
 # target to generate assembly for a file
 src/crypto/cipher_extra/e_chacha20poly1305.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_chacha20poly1305.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_chacha20poly1305.c.s
 .PHONY : src/crypto/cipher_extra/e_chacha20poly1305.c.s
 
 src/crypto/cipher_extra/e_null.o: src/crypto/cipher_extra/e_null.c.o
@@ -1964,7 +1964,7 @@ src/crypto/cipher_extra/e_null.o: src/crypto/cipher_extra/e_null.c.o
 
 # target to build an object file
 src/crypto/cipher_extra/e_null.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_null.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_null.c.o
 .PHONY : src/crypto/cipher_extra/e_null.c.o
 
 src/crypto/cipher_extra/e_null.i: src/crypto/cipher_extra/e_null.c.i
@@ -1973,7 +1973,7 @@ src/crypto/cipher_extra/e_null.i: src/crypto/cipher_extra/e_null.c.i
 
 # target to preprocess a source file
 src/crypto/cipher_extra/e_null.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_null.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_null.c.i
 .PHONY : src/crypto/cipher_extra/e_null.c.i
 
 src/crypto/cipher_extra/e_null.s: src/crypto/cipher_extra/e_null.c.s
@@ -1982,7 +1982,7 @@ src/crypto/cipher_extra/e_null.s: src/crypto/cipher_extra/e_null.c.s
 
 # target to generate assembly for a file
 src/crypto/cipher_extra/e_null.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_null.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_null.c.s
 .PHONY : src/crypto/cipher_extra/e_null.c.s
 
 src/crypto/cipher_extra/e_rc2.o: src/crypto/cipher_extra/e_rc2.c.o
@@ -1991,7 +1991,7 @@ src/crypto/cipher_extra/e_rc2.o: src/crypto/cipher_extra/e_rc2.c.o
 
 # target to build an object file
 src/crypto/cipher_extra/e_rc2.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc2.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc2.c.o
 .PHONY : src/crypto/cipher_extra/e_rc2.c.o
 
 src/crypto/cipher_extra/e_rc2.i: src/crypto/cipher_extra/e_rc2.c.i
@@ -2000,7 +2000,7 @@ src/crypto/cipher_extra/e_rc2.i: src/crypto/cipher_extra/e_rc2.c.i
 
 # target to preprocess a source file
 src/crypto/cipher_extra/e_rc2.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc2.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc2.c.i
 .PHONY : src/crypto/cipher_extra/e_rc2.c.i
 
 src/crypto/cipher_extra/e_rc2.s: src/crypto/cipher_extra/e_rc2.c.s
@@ -2009,7 +2009,7 @@ src/crypto/cipher_extra/e_rc2.s: src/crypto/cipher_extra/e_rc2.c.s
 
 # target to generate assembly for a file
 src/crypto/cipher_extra/e_rc2.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc2.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc2.c.s
 .PHONY : src/crypto/cipher_extra/e_rc2.c.s
 
 src/crypto/cipher_extra/e_rc4.o: src/crypto/cipher_extra/e_rc4.c.o
@@ -2018,7 +2018,7 @@ src/crypto/cipher_extra/e_rc4.o: src/crypto/cipher_extra/e_rc4.c.o
 
 # target to build an object file
 src/crypto/cipher_extra/e_rc4.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc4.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc4.c.o
 .PHONY : src/crypto/cipher_extra/e_rc4.c.o
 
 src/crypto/cipher_extra/e_rc4.i: src/crypto/cipher_extra/e_rc4.c.i
@@ -2027,7 +2027,7 @@ src/crypto/cipher_extra/e_rc4.i: src/crypto/cipher_extra/e_rc4.c.i
 
 # target to preprocess a source file
 src/crypto/cipher_extra/e_rc4.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc4.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc4.c.i
 .PHONY : src/crypto/cipher_extra/e_rc4.c.i
 
 src/crypto/cipher_extra/e_rc4.s: src/crypto/cipher_extra/e_rc4.c.s
@@ -2036,7 +2036,7 @@ src/crypto/cipher_extra/e_rc4.s: src/crypto/cipher_extra/e_rc4.c.s
 
 # target to generate assembly for a file
 src/crypto/cipher_extra/e_rc4.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc4.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_rc4.c.s
 .PHONY : src/crypto/cipher_extra/e_rc4.c.s
 
 src/crypto/cipher_extra/e_tls.o: src/crypto/cipher_extra/e_tls.c.o
@@ -2045,7 +2045,7 @@ src/crypto/cipher_extra/e_tls.o: src/crypto/cipher_extra/e_tls.c.o
 
 # target to build an object file
 src/crypto/cipher_extra/e_tls.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_tls.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_tls.c.o
 .PHONY : src/crypto/cipher_extra/e_tls.c.o
 
 src/crypto/cipher_extra/e_tls.i: src/crypto/cipher_extra/e_tls.c.i
@@ -2054,7 +2054,7 @@ src/crypto/cipher_extra/e_tls.i: src/crypto/cipher_extra/e_tls.c.i
 
 # target to preprocess a source file
 src/crypto/cipher_extra/e_tls.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_tls.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_tls.c.i
 .PHONY : src/crypto/cipher_extra/e_tls.c.i
 
 src/crypto/cipher_extra/e_tls.s: src/crypto/cipher_extra/e_tls.c.s
@@ -2063,7 +2063,7 @@ src/crypto/cipher_extra/e_tls.s: src/crypto/cipher_extra/e_tls.c.s
 
 # target to generate assembly for a file
 src/crypto/cipher_extra/e_tls.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_tls.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/e_tls.c.s
 .PHONY : src/crypto/cipher_extra/e_tls.c.s
 
 src/crypto/cipher_extra/tls_cbc.o: src/crypto/cipher_extra/tls_cbc.c.o
@@ -2072,7 +2072,7 @@ src/crypto/cipher_extra/tls_cbc.o: src/crypto/cipher_extra/tls_cbc.c.o
 
 # target to build an object file
 src/crypto/cipher_extra/tls_cbc.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/tls_cbc.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/tls_cbc.c.o
 .PHONY : src/crypto/cipher_extra/tls_cbc.c.o
 
 src/crypto/cipher_extra/tls_cbc.i: src/crypto/cipher_extra/tls_cbc.c.i
@@ -2081,7 +2081,7 @@ src/crypto/cipher_extra/tls_cbc.i: src/crypto/cipher_extra/tls_cbc.c.i
 
 # target to preprocess a source file
 src/crypto/cipher_extra/tls_cbc.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/tls_cbc.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/tls_cbc.c.i
 .PHONY : src/crypto/cipher_extra/tls_cbc.c.i
 
 src/crypto/cipher_extra/tls_cbc.s: src/crypto/cipher_extra/tls_cbc.c.s
@@ -2090,7 +2090,7 @@ src/crypto/cipher_extra/tls_cbc.s: src/crypto/cipher_extra/tls_cbc.c.s
 
 # target to generate assembly for a file
 src/crypto/cipher_extra/tls_cbc.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/tls_cbc.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cipher_extra/tls_cbc.c.s
 .PHONY : src/crypto/cipher_extra/tls_cbc.c.s
 
 src/crypto/cmac/cmac.o: src/crypto/cmac/cmac.c.o
@@ -2099,7 +2099,7 @@ src/crypto/cmac/cmac.o: src/crypto/cmac/cmac.c.o
 
 # target to build an object file
 src/crypto/cmac/cmac.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cmac/cmac.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cmac/cmac.c.o
 .PHONY : src/crypto/cmac/cmac.c.o
 
 src/crypto/cmac/cmac.i: src/crypto/cmac/cmac.c.i
@@ -2108,7 +2108,7 @@ src/crypto/cmac/cmac.i: src/crypto/cmac/cmac.c.i
 
 # target to preprocess a source file
 src/crypto/cmac/cmac.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cmac/cmac.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cmac/cmac.c.i
 .PHONY : src/crypto/cmac/cmac.c.i
 
 src/crypto/cmac/cmac.s: src/crypto/cmac/cmac.c.s
@@ -2117,7 +2117,7 @@ src/crypto/cmac/cmac.s: src/crypto/cmac/cmac.c.s
 
 # target to generate assembly for a file
 src/crypto/cmac/cmac.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cmac/cmac.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cmac/cmac.c.s
 .PHONY : src/crypto/cmac/cmac.c.s
 
 src/crypto/conf/conf.o: src/crypto/conf/conf.c.o
@@ -2126,7 +2126,7 @@ src/crypto/conf/conf.o: src/crypto/conf/conf.c.o
 
 # target to build an object file
 src/crypto/conf/conf.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/conf/conf.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/conf/conf.c.o
 .PHONY : src/crypto/conf/conf.c.o
 
 src/crypto/conf/conf.i: src/crypto/conf/conf.c.i
@@ -2135,7 +2135,7 @@ src/crypto/conf/conf.i: src/crypto/conf/conf.c.i
 
 # target to preprocess a source file
 src/crypto/conf/conf.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/conf/conf.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/conf/conf.c.i
 .PHONY : src/crypto/conf/conf.c.i
 
 src/crypto/conf/conf.s: src/crypto/conf/conf.c.s
@@ -2144,7 +2144,7 @@ src/crypto/conf/conf.s: src/crypto/conf/conf.c.s
 
 # target to generate assembly for a file
 src/crypto/conf/conf.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/conf/conf.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/conf/conf.c.s
 .PHONY : src/crypto/conf/conf.c.s
 
 src/crypto/cpu-aarch64-fuchsia.o: src/crypto/cpu-aarch64-fuchsia.c.o
@@ -2153,7 +2153,7 @@ src/crypto/cpu-aarch64-fuchsia.o: src/crypto/cpu-aarch64-fuchsia.c.o
 
 # target to build an object file
 src/crypto/cpu-aarch64-fuchsia.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-fuchsia.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-fuchsia.c.o
 .PHONY : src/crypto/cpu-aarch64-fuchsia.c.o
 
 src/crypto/cpu-aarch64-fuchsia.i: src/crypto/cpu-aarch64-fuchsia.c.i
@@ -2162,7 +2162,7 @@ src/crypto/cpu-aarch64-fuchsia.i: src/crypto/cpu-aarch64-fuchsia.c.i
 
 # target to preprocess a source file
 src/crypto/cpu-aarch64-fuchsia.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-fuchsia.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-fuchsia.c.i
 .PHONY : src/crypto/cpu-aarch64-fuchsia.c.i
 
 src/crypto/cpu-aarch64-fuchsia.s: src/crypto/cpu-aarch64-fuchsia.c.s
@@ -2171,7 +2171,7 @@ src/crypto/cpu-aarch64-fuchsia.s: src/crypto/cpu-aarch64-fuchsia.c.s
 
 # target to generate assembly for a file
 src/crypto/cpu-aarch64-fuchsia.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-fuchsia.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-fuchsia.c.s
 .PHONY : src/crypto/cpu-aarch64-fuchsia.c.s
 
 src/crypto/cpu-aarch64-linux.o: src/crypto/cpu-aarch64-linux.c.o
@@ -2180,7 +2180,7 @@ src/crypto/cpu-aarch64-linux.o: src/crypto/cpu-aarch64-linux.c.o
 
 # target to build an object file
 src/crypto/cpu-aarch64-linux.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-linux.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-linux.c.o
 .PHONY : src/crypto/cpu-aarch64-linux.c.o
 
 src/crypto/cpu-aarch64-linux.i: src/crypto/cpu-aarch64-linux.c.i
@@ -2189,7 +2189,7 @@ src/crypto/cpu-aarch64-linux.i: src/crypto/cpu-aarch64-linux.c.i
 
 # target to preprocess a source file
 src/crypto/cpu-aarch64-linux.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-linux.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-linux.c.i
 .PHONY : src/crypto/cpu-aarch64-linux.c.i
 
 src/crypto/cpu-aarch64-linux.s: src/crypto/cpu-aarch64-linux.c.s
@@ -2198,7 +2198,7 @@ src/crypto/cpu-aarch64-linux.s: src/crypto/cpu-aarch64-linux.c.s
 
 # target to generate assembly for a file
 src/crypto/cpu-aarch64-linux.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-linux.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-linux.c.s
 .PHONY : src/crypto/cpu-aarch64-linux.c.s
 
 src/crypto/cpu-aarch64-win.o: src/crypto/cpu-aarch64-win.c.o
@@ -2207,7 +2207,7 @@ src/crypto/cpu-aarch64-win.o: src/crypto/cpu-aarch64-win.c.o
 
 # target to build an object file
 src/crypto/cpu-aarch64-win.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-win.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-win.c.o
 .PHONY : src/crypto/cpu-aarch64-win.c.o
 
 src/crypto/cpu-aarch64-win.i: src/crypto/cpu-aarch64-win.c.i
@@ -2216,7 +2216,7 @@ src/crypto/cpu-aarch64-win.i: src/crypto/cpu-aarch64-win.c.i
 
 # target to preprocess a source file
 src/crypto/cpu-aarch64-win.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-win.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-win.c.i
 .PHONY : src/crypto/cpu-aarch64-win.c.i
 
 src/crypto/cpu-aarch64-win.s: src/crypto/cpu-aarch64-win.c.s
@@ -2225,7 +2225,7 @@ src/crypto/cpu-aarch64-win.s: src/crypto/cpu-aarch64-win.c.s
 
 # target to generate assembly for a file
 src/crypto/cpu-aarch64-win.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-win.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-aarch64-win.c.s
 .PHONY : src/crypto/cpu-aarch64-win.c.s
 
 src/crypto/cpu-arm-linux.o: src/crypto/cpu-arm-linux.c.o
@@ -2234,7 +2234,7 @@ src/crypto/cpu-arm-linux.o: src/crypto/cpu-arm-linux.c.o
 
 # target to build an object file
 src/crypto/cpu-arm-linux.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm-linux.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm-linux.c.o
 .PHONY : src/crypto/cpu-arm-linux.c.o
 
 src/crypto/cpu-arm-linux.i: src/crypto/cpu-arm-linux.c.i
@@ -2243,7 +2243,7 @@ src/crypto/cpu-arm-linux.i: src/crypto/cpu-arm-linux.c.i
 
 # target to preprocess a source file
 src/crypto/cpu-arm-linux.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm-linux.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm-linux.c.i
 .PHONY : src/crypto/cpu-arm-linux.c.i
 
 src/crypto/cpu-arm-linux.s: src/crypto/cpu-arm-linux.c.s
@@ -2252,7 +2252,7 @@ src/crypto/cpu-arm-linux.s: src/crypto/cpu-arm-linux.c.s
 
 # target to generate assembly for a file
 src/crypto/cpu-arm-linux.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm-linux.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm-linux.c.s
 .PHONY : src/crypto/cpu-arm-linux.c.s
 
 src/crypto/cpu-arm.o: src/crypto/cpu-arm.c.o
@@ -2261,7 +2261,7 @@ src/crypto/cpu-arm.o: src/crypto/cpu-arm.c.o
 
 # target to build an object file
 src/crypto/cpu-arm.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm.c.o
 .PHONY : src/crypto/cpu-arm.c.o
 
 src/crypto/cpu-arm.i: src/crypto/cpu-arm.c.i
@@ -2270,7 +2270,7 @@ src/crypto/cpu-arm.i: src/crypto/cpu-arm.c.i
 
 # target to preprocess a source file
 src/crypto/cpu-arm.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm.c.i
 .PHONY : src/crypto/cpu-arm.c.i
 
 src/crypto/cpu-arm.s: src/crypto/cpu-arm.c.s
@@ -2279,7 +2279,7 @@ src/crypto/cpu-arm.s: src/crypto/cpu-arm.c.s
 
 # target to generate assembly for a file
 src/crypto/cpu-arm.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-arm.c.s
 .PHONY : src/crypto/cpu-arm.c.s
 
 src/crypto/cpu-intel.o: src/crypto/cpu-intel.c.o
@@ -2288,7 +2288,7 @@ src/crypto/cpu-intel.o: src/crypto/cpu-intel.c.o
 
 # target to build an object file
 src/crypto/cpu-intel.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-intel.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-intel.c.o
 .PHONY : src/crypto/cpu-intel.c.o
 
 src/crypto/cpu-intel.i: src/crypto/cpu-intel.c.i
@@ -2297,7 +2297,7 @@ src/crypto/cpu-intel.i: src/crypto/cpu-intel.c.i
 
 # target to preprocess a source file
 src/crypto/cpu-intel.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-intel.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-intel.c.i
 .PHONY : src/crypto/cpu-intel.c.i
 
 src/crypto/cpu-intel.s: src/crypto/cpu-intel.c.s
@@ -2306,7 +2306,7 @@ src/crypto/cpu-intel.s: src/crypto/cpu-intel.c.s
 
 # target to generate assembly for a file
 src/crypto/cpu-intel.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-intel.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-intel.c.s
 .PHONY : src/crypto/cpu-intel.c.s
 
 src/crypto/cpu-ppc64le.o: src/crypto/cpu-ppc64le.c.o
@@ -2315,7 +2315,7 @@ src/crypto/cpu-ppc64le.o: src/crypto/cpu-ppc64le.c.o
 
 # target to build an object file
 src/crypto/cpu-ppc64le.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-ppc64le.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-ppc64le.c.o
 .PHONY : src/crypto/cpu-ppc64le.c.o
 
 src/crypto/cpu-ppc64le.i: src/crypto/cpu-ppc64le.c.i
@@ -2324,7 +2324,7 @@ src/crypto/cpu-ppc64le.i: src/crypto/cpu-ppc64le.c.i
 
 # target to preprocess a source file
 src/crypto/cpu-ppc64le.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-ppc64le.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-ppc64le.c.i
 .PHONY : src/crypto/cpu-ppc64le.c.i
 
 src/crypto/cpu-ppc64le.s: src/crypto/cpu-ppc64le.c.s
@@ -2333,7 +2333,7 @@ src/crypto/cpu-ppc64le.s: src/crypto/cpu-ppc64le.c.s
 
 # target to generate assembly for a file
 src/crypto/cpu-ppc64le.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-ppc64le.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/cpu-ppc64le.c.s
 .PHONY : src/crypto/cpu-ppc64le.c.s
 
 src/crypto/crypto.o: src/crypto/crypto.c.o
@@ -2342,7 +2342,7 @@ src/crypto/crypto.o: src/crypto/crypto.c.o
 
 # target to build an object file
 src/crypto/crypto.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/crypto.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/crypto.c.o
 .PHONY : src/crypto/crypto.c.o
 
 src/crypto/crypto.i: src/crypto/crypto.c.i
@@ -2351,7 +2351,7 @@ src/crypto/crypto.i: src/crypto/crypto.c.i
 
 # target to preprocess a source file
 src/crypto/crypto.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/crypto.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/crypto.c.i
 .PHONY : src/crypto/crypto.c.i
 
 src/crypto/crypto.s: src/crypto/crypto.c.s
@@ -2360,7 +2360,7 @@ src/crypto/crypto.s: src/crypto/crypto.c.s
 
 # target to generate assembly for a file
 src/crypto/crypto.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/crypto.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/crypto.c.s
 .PHONY : src/crypto/crypto.c.s
 
 src/crypto/curve25519/curve25519.o: src/crypto/curve25519/curve25519.c.o
@@ -2369,7 +2369,7 @@ src/crypto/curve25519/curve25519.o: src/crypto/curve25519/curve25519.c.o
 
 # target to build an object file
 src/crypto/curve25519/curve25519.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/curve25519.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/curve25519.c.o
 .PHONY : src/crypto/curve25519/curve25519.c.o
 
 src/crypto/curve25519/curve25519.i: src/crypto/curve25519/curve25519.c.i
@@ -2378,7 +2378,7 @@ src/crypto/curve25519/curve25519.i: src/crypto/curve25519/curve25519.c.i
 
 # target to preprocess a source file
 src/crypto/curve25519/curve25519.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/curve25519.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/curve25519.c.i
 .PHONY : src/crypto/curve25519/curve25519.c.i
 
 src/crypto/curve25519/curve25519.s: src/crypto/curve25519/curve25519.c.s
@@ -2387,7 +2387,7 @@ src/crypto/curve25519/curve25519.s: src/crypto/curve25519/curve25519.c.s
 
 # target to generate assembly for a file
 src/crypto/curve25519/curve25519.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/curve25519.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/curve25519.c.s
 .PHONY : src/crypto/curve25519/curve25519.c.s
 
 src/crypto/curve25519/spake25519.o: src/crypto/curve25519/spake25519.c.o
@@ -2396,7 +2396,7 @@ src/crypto/curve25519/spake25519.o: src/crypto/curve25519/spake25519.c.o
 
 # target to build an object file
 src/crypto/curve25519/spake25519.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/spake25519.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/spake25519.c.o
 .PHONY : src/crypto/curve25519/spake25519.c.o
 
 src/crypto/curve25519/spake25519.i: src/crypto/curve25519/spake25519.c.i
@@ -2405,7 +2405,7 @@ src/crypto/curve25519/spake25519.i: src/crypto/curve25519/spake25519.c.i
 
 # target to preprocess a source file
 src/crypto/curve25519/spake25519.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/spake25519.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/spake25519.c.i
 .PHONY : src/crypto/curve25519/spake25519.c.i
 
 src/crypto/curve25519/spake25519.s: src/crypto/curve25519/spake25519.c.s
@@ -2414,7 +2414,7 @@ src/crypto/curve25519/spake25519.s: src/crypto/curve25519/spake25519.c.s
 
 # target to generate assembly for a file
 src/crypto/curve25519/spake25519.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/spake25519.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/curve25519/spake25519.c.s
 .PHONY : src/crypto/curve25519/spake25519.c.s
 
 src/crypto/dh_extra/dh_asn1.o: src/crypto/dh_extra/dh_asn1.c.o
@@ -2423,7 +2423,7 @@ src/crypto/dh_extra/dh_asn1.o: src/crypto/dh_extra/dh_asn1.c.o
 
 # target to build an object file
 src/crypto/dh_extra/dh_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/dh_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/dh_asn1.c.o
 .PHONY : src/crypto/dh_extra/dh_asn1.c.o
 
 src/crypto/dh_extra/dh_asn1.i: src/crypto/dh_extra/dh_asn1.c.i
@@ -2432,7 +2432,7 @@ src/crypto/dh_extra/dh_asn1.i: src/crypto/dh_extra/dh_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/dh_extra/dh_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/dh_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/dh_asn1.c.i
 .PHONY : src/crypto/dh_extra/dh_asn1.c.i
 
 src/crypto/dh_extra/dh_asn1.s: src/crypto/dh_extra/dh_asn1.c.s
@@ -2441,7 +2441,7 @@ src/crypto/dh_extra/dh_asn1.s: src/crypto/dh_extra/dh_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/dh_extra/dh_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/dh_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/dh_asn1.c.s
 .PHONY : src/crypto/dh_extra/dh_asn1.c.s
 
 src/crypto/dh_extra/params.o: src/crypto/dh_extra/params.c.o
@@ -2450,7 +2450,7 @@ src/crypto/dh_extra/params.o: src/crypto/dh_extra/params.c.o
 
 # target to build an object file
 src/crypto/dh_extra/params.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/params.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/params.c.o
 .PHONY : src/crypto/dh_extra/params.c.o
 
 src/crypto/dh_extra/params.i: src/crypto/dh_extra/params.c.i
@@ -2459,7 +2459,7 @@ src/crypto/dh_extra/params.i: src/crypto/dh_extra/params.c.i
 
 # target to preprocess a source file
 src/crypto/dh_extra/params.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/params.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/params.c.i
 .PHONY : src/crypto/dh_extra/params.c.i
 
 src/crypto/dh_extra/params.s: src/crypto/dh_extra/params.c.s
@@ -2468,7 +2468,7 @@ src/crypto/dh_extra/params.s: src/crypto/dh_extra/params.c.s
 
 # target to generate assembly for a file
 src/crypto/dh_extra/params.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/params.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dh_extra/params.c.s
 .PHONY : src/crypto/dh_extra/params.c.s
 
 src/crypto/digest_extra/digest_extra.o: src/crypto/digest_extra/digest_extra.c.o
@@ -2477,7 +2477,7 @@ src/crypto/digest_extra/digest_extra.o: src/crypto/digest_extra/digest_extra.c.o
 
 # target to build an object file
 src/crypto/digest_extra/digest_extra.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/digest_extra/digest_extra.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/digest_extra/digest_extra.c.o
 .PHONY : src/crypto/digest_extra/digest_extra.c.o
 
 src/crypto/digest_extra/digest_extra.i: src/crypto/digest_extra/digest_extra.c.i
@@ -2486,7 +2486,7 @@ src/crypto/digest_extra/digest_extra.i: src/crypto/digest_extra/digest_extra.c.i
 
 # target to preprocess a source file
 src/crypto/digest_extra/digest_extra.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/digest_extra/digest_extra.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/digest_extra/digest_extra.c.i
 .PHONY : src/crypto/digest_extra/digest_extra.c.i
 
 src/crypto/digest_extra/digest_extra.s: src/crypto/digest_extra/digest_extra.c.s
@@ -2495,7 +2495,7 @@ src/crypto/digest_extra/digest_extra.s: src/crypto/digest_extra/digest_extra.c.s
 
 # target to generate assembly for a file
 src/crypto/digest_extra/digest_extra.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/digest_extra/digest_extra.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/digest_extra/digest_extra.c.s
 .PHONY : src/crypto/digest_extra/digest_extra.c.s
 
 src/crypto/dsa/dsa.o: src/crypto/dsa/dsa.c.o
@@ -2504,7 +2504,7 @@ src/crypto/dsa/dsa.o: src/crypto/dsa/dsa.c.o
 
 # target to build an object file
 src/crypto/dsa/dsa.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa.c.o
 .PHONY : src/crypto/dsa/dsa.c.o
 
 src/crypto/dsa/dsa.i: src/crypto/dsa/dsa.c.i
@@ -2513,7 +2513,7 @@ src/crypto/dsa/dsa.i: src/crypto/dsa/dsa.c.i
 
 # target to preprocess a source file
 src/crypto/dsa/dsa.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa.c.i
 .PHONY : src/crypto/dsa/dsa.c.i
 
 src/crypto/dsa/dsa.s: src/crypto/dsa/dsa.c.s
@@ -2522,7 +2522,7 @@ src/crypto/dsa/dsa.s: src/crypto/dsa/dsa.c.s
 
 # target to generate assembly for a file
 src/crypto/dsa/dsa.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa.c.s
 .PHONY : src/crypto/dsa/dsa.c.s
 
 src/crypto/dsa/dsa_asn1.o: src/crypto/dsa/dsa_asn1.c.o
@@ -2531,7 +2531,7 @@ src/crypto/dsa/dsa_asn1.o: src/crypto/dsa/dsa_asn1.c.o
 
 # target to build an object file
 src/crypto/dsa/dsa_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa_asn1.c.o
 .PHONY : src/crypto/dsa/dsa_asn1.c.o
 
 src/crypto/dsa/dsa_asn1.i: src/crypto/dsa/dsa_asn1.c.i
@@ -2540,7 +2540,7 @@ src/crypto/dsa/dsa_asn1.i: src/crypto/dsa/dsa_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/dsa/dsa_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa_asn1.c.i
 .PHONY : src/crypto/dsa/dsa_asn1.c.i
 
 src/crypto/dsa/dsa_asn1.s: src/crypto/dsa/dsa_asn1.c.s
@@ -2549,7 +2549,7 @@ src/crypto/dsa/dsa_asn1.s: src/crypto/dsa/dsa_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/dsa/dsa_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/dsa/dsa_asn1.c.s
 .PHONY : src/crypto/dsa/dsa_asn1.c.s
 
 src/crypto/ec_extra/ec_asn1.o: src/crypto/ec_extra/ec_asn1.c.o
@@ -2558,7 +2558,7 @@ src/crypto/ec_extra/ec_asn1.o: src/crypto/ec_extra/ec_asn1.c.o
 
 # target to build an object file
 src/crypto/ec_extra/ec_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_asn1.c.o
 .PHONY : src/crypto/ec_extra/ec_asn1.c.o
 
 src/crypto/ec_extra/ec_asn1.i: src/crypto/ec_extra/ec_asn1.c.i
@@ -2567,7 +2567,7 @@ src/crypto/ec_extra/ec_asn1.i: src/crypto/ec_extra/ec_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/ec_extra/ec_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_asn1.c.i
 .PHONY : src/crypto/ec_extra/ec_asn1.c.i
 
 src/crypto/ec_extra/ec_asn1.s: src/crypto/ec_extra/ec_asn1.c.s
@@ -2576,7 +2576,7 @@ src/crypto/ec_extra/ec_asn1.s: src/crypto/ec_extra/ec_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/ec_extra/ec_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_asn1.c.s
 .PHONY : src/crypto/ec_extra/ec_asn1.c.s
 
 src/crypto/ec_extra/ec_derive.o: src/crypto/ec_extra/ec_derive.c.o
@@ -2585,7 +2585,7 @@ src/crypto/ec_extra/ec_derive.o: src/crypto/ec_extra/ec_derive.c.o
 
 # target to build an object file
 src/crypto/ec_extra/ec_derive.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_derive.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_derive.c.o
 .PHONY : src/crypto/ec_extra/ec_derive.c.o
 
 src/crypto/ec_extra/ec_derive.i: src/crypto/ec_extra/ec_derive.c.i
@@ -2594,7 +2594,7 @@ src/crypto/ec_extra/ec_derive.i: src/crypto/ec_extra/ec_derive.c.i
 
 # target to preprocess a source file
 src/crypto/ec_extra/ec_derive.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_derive.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_derive.c.i
 .PHONY : src/crypto/ec_extra/ec_derive.c.i
 
 src/crypto/ec_extra/ec_derive.s: src/crypto/ec_extra/ec_derive.c.s
@@ -2603,7 +2603,7 @@ src/crypto/ec_extra/ec_derive.s: src/crypto/ec_extra/ec_derive.c.s
 
 # target to generate assembly for a file
 src/crypto/ec_extra/ec_derive.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_derive.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/ec_derive.c.s
 .PHONY : src/crypto/ec_extra/ec_derive.c.s
 
 src/crypto/ec_extra/hash_to_curve.o: src/crypto/ec_extra/hash_to_curve.c.o
@@ -2612,7 +2612,7 @@ src/crypto/ec_extra/hash_to_curve.o: src/crypto/ec_extra/hash_to_curve.c.o
 
 # target to build an object file
 src/crypto/ec_extra/hash_to_curve.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/hash_to_curve.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/hash_to_curve.c.o
 .PHONY : src/crypto/ec_extra/hash_to_curve.c.o
 
 src/crypto/ec_extra/hash_to_curve.i: src/crypto/ec_extra/hash_to_curve.c.i
@@ -2621,7 +2621,7 @@ src/crypto/ec_extra/hash_to_curve.i: src/crypto/ec_extra/hash_to_curve.c.i
 
 # target to preprocess a source file
 src/crypto/ec_extra/hash_to_curve.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/hash_to_curve.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/hash_to_curve.c.i
 .PHONY : src/crypto/ec_extra/hash_to_curve.c.i
 
 src/crypto/ec_extra/hash_to_curve.s: src/crypto/ec_extra/hash_to_curve.c.s
@@ -2630,7 +2630,7 @@ src/crypto/ec_extra/hash_to_curve.s: src/crypto/ec_extra/hash_to_curve.c.s
 
 # target to generate assembly for a file
 src/crypto/ec_extra/hash_to_curve.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/hash_to_curve.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ec_extra/hash_to_curve.c.s
 .PHONY : src/crypto/ec_extra/hash_to_curve.c.s
 
 src/crypto/ecdh_extra/ecdh_extra.o: src/crypto/ecdh_extra/ecdh_extra.c.o
@@ -2639,7 +2639,7 @@ src/crypto/ecdh_extra/ecdh_extra.o: src/crypto/ecdh_extra/ecdh_extra.c.o
 
 # target to build an object file
 src/crypto/ecdh_extra/ecdh_extra.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdh_extra/ecdh_extra.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdh_extra/ecdh_extra.c.o
 .PHONY : src/crypto/ecdh_extra/ecdh_extra.c.o
 
 src/crypto/ecdh_extra/ecdh_extra.i: src/crypto/ecdh_extra/ecdh_extra.c.i
@@ -2648,7 +2648,7 @@ src/crypto/ecdh_extra/ecdh_extra.i: src/crypto/ecdh_extra/ecdh_extra.c.i
 
 # target to preprocess a source file
 src/crypto/ecdh_extra/ecdh_extra.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdh_extra/ecdh_extra.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdh_extra/ecdh_extra.c.i
 .PHONY : src/crypto/ecdh_extra/ecdh_extra.c.i
 
 src/crypto/ecdh_extra/ecdh_extra.s: src/crypto/ecdh_extra/ecdh_extra.c.s
@@ -2657,7 +2657,7 @@ src/crypto/ecdh_extra/ecdh_extra.s: src/crypto/ecdh_extra/ecdh_extra.c.s
 
 # target to generate assembly for a file
 src/crypto/ecdh_extra/ecdh_extra.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdh_extra/ecdh_extra.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdh_extra/ecdh_extra.c.s
 .PHONY : src/crypto/ecdh_extra/ecdh_extra.c.s
 
 src/crypto/ecdsa_extra/ecdsa_asn1.o: src/crypto/ecdsa_extra/ecdsa_asn1.c.o
@@ -2666,7 +2666,7 @@ src/crypto/ecdsa_extra/ecdsa_asn1.o: src/crypto/ecdsa_extra/ecdsa_asn1.c.o
 
 # target to build an object file
 src/crypto/ecdsa_extra/ecdsa_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdsa_extra/ecdsa_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdsa_extra/ecdsa_asn1.c.o
 .PHONY : src/crypto/ecdsa_extra/ecdsa_asn1.c.o
 
 src/crypto/ecdsa_extra/ecdsa_asn1.i: src/crypto/ecdsa_extra/ecdsa_asn1.c.i
@@ -2675,7 +2675,7 @@ src/crypto/ecdsa_extra/ecdsa_asn1.i: src/crypto/ecdsa_extra/ecdsa_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/ecdsa_extra/ecdsa_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdsa_extra/ecdsa_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdsa_extra/ecdsa_asn1.c.i
 .PHONY : src/crypto/ecdsa_extra/ecdsa_asn1.c.i
 
 src/crypto/ecdsa_extra/ecdsa_asn1.s: src/crypto/ecdsa_extra/ecdsa_asn1.c.s
@@ -2684,7 +2684,7 @@ src/crypto/ecdsa_extra/ecdsa_asn1.s: src/crypto/ecdsa_extra/ecdsa_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/ecdsa_extra/ecdsa_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdsa_extra/ecdsa_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ecdsa_extra/ecdsa_asn1.c.s
 .PHONY : src/crypto/ecdsa_extra/ecdsa_asn1.c.s
 
 src/crypto/engine/engine.o: src/crypto/engine/engine.c.o
@@ -2693,7 +2693,7 @@ src/crypto/engine/engine.o: src/crypto/engine/engine.c.o
 
 # target to build an object file
 src/crypto/engine/engine.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/engine/engine.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/engine/engine.c.o
 .PHONY : src/crypto/engine/engine.c.o
 
 src/crypto/engine/engine.i: src/crypto/engine/engine.c.i
@@ -2702,7 +2702,7 @@ src/crypto/engine/engine.i: src/crypto/engine/engine.c.i
 
 # target to preprocess a source file
 src/crypto/engine/engine.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/engine/engine.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/engine/engine.c.i
 .PHONY : src/crypto/engine/engine.c.i
 
 src/crypto/engine/engine.s: src/crypto/engine/engine.c.s
@@ -2711,7 +2711,7 @@ src/crypto/engine/engine.s: src/crypto/engine/engine.c.s
 
 # target to generate assembly for a file
 src/crypto/engine/engine.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/engine/engine.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/engine/engine.c.s
 .PHONY : src/crypto/engine/engine.c.s
 
 src/crypto/err/err.o: src/crypto/err/err.c.o
@@ -2720,7 +2720,7 @@ src/crypto/err/err.o: src/crypto/err/err.c.o
 
 # target to build an object file
 src/crypto/err/err.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/err/err.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/err/err.c.o
 .PHONY : src/crypto/err/err.c.o
 
 src/crypto/err/err.i: src/crypto/err/err.c.i
@@ -2729,7 +2729,7 @@ src/crypto/err/err.i: src/crypto/err/err.c.i
 
 # target to preprocess a source file
 src/crypto/err/err.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/err/err.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/err/err.c.i
 .PHONY : src/crypto/err/err.c.i
 
 src/crypto/err/err.s: src/crypto/err/err.c.s
@@ -2738,7 +2738,7 @@ src/crypto/err/err.s: src/crypto/err/err.c.s
 
 # target to generate assembly for a file
 src/crypto/err/err.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/err/err.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/err/err.c.s
 .PHONY : src/crypto/err/err.c.s
 
 src/crypto/evp/digestsign.o: src/crypto/evp/digestsign.c.o
@@ -2747,7 +2747,7 @@ src/crypto/evp/digestsign.o: src/crypto/evp/digestsign.c.o
 
 # target to build an object file
 src/crypto/evp/digestsign.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/digestsign.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/digestsign.c.o
 .PHONY : src/crypto/evp/digestsign.c.o
 
 src/crypto/evp/digestsign.i: src/crypto/evp/digestsign.c.i
@@ -2756,7 +2756,7 @@ src/crypto/evp/digestsign.i: src/crypto/evp/digestsign.c.i
 
 # target to preprocess a source file
 src/crypto/evp/digestsign.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/digestsign.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/digestsign.c.i
 .PHONY : src/crypto/evp/digestsign.c.i
 
 src/crypto/evp/digestsign.s: src/crypto/evp/digestsign.c.s
@@ -2765,7 +2765,7 @@ src/crypto/evp/digestsign.s: src/crypto/evp/digestsign.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/digestsign.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/digestsign.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/digestsign.c.s
 .PHONY : src/crypto/evp/digestsign.c.s
 
 src/crypto/evp/evp.o: src/crypto/evp/evp.c.o
@@ -2774,7 +2774,7 @@ src/crypto/evp/evp.o: src/crypto/evp/evp.c.o
 
 # target to build an object file
 src/crypto/evp/evp.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp.c.o
 .PHONY : src/crypto/evp/evp.c.o
 
 src/crypto/evp/evp.i: src/crypto/evp/evp.c.i
@@ -2783,7 +2783,7 @@ src/crypto/evp/evp.i: src/crypto/evp/evp.c.i
 
 # target to preprocess a source file
 src/crypto/evp/evp.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp.c.i
 .PHONY : src/crypto/evp/evp.c.i
 
 src/crypto/evp/evp.s: src/crypto/evp/evp.c.s
@@ -2792,7 +2792,7 @@ src/crypto/evp/evp.s: src/crypto/evp/evp.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/evp.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp.c.s
 .PHONY : src/crypto/evp/evp.c.s
 
 src/crypto/evp/evp_asn1.o: src/crypto/evp/evp_asn1.c.o
@@ -2801,7 +2801,7 @@ src/crypto/evp/evp_asn1.o: src/crypto/evp/evp_asn1.c.o
 
 # target to build an object file
 src/crypto/evp/evp_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_asn1.c.o
 .PHONY : src/crypto/evp/evp_asn1.c.o
 
 src/crypto/evp/evp_asn1.i: src/crypto/evp/evp_asn1.c.i
@@ -2810,7 +2810,7 @@ src/crypto/evp/evp_asn1.i: src/crypto/evp/evp_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/evp/evp_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_asn1.c.i
 .PHONY : src/crypto/evp/evp_asn1.c.i
 
 src/crypto/evp/evp_asn1.s: src/crypto/evp/evp_asn1.c.s
@@ -2819,7 +2819,7 @@ src/crypto/evp/evp_asn1.s: src/crypto/evp/evp_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/evp_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_asn1.c.s
 .PHONY : src/crypto/evp/evp_asn1.c.s
 
 src/crypto/evp/evp_ctx.o: src/crypto/evp/evp_ctx.c.o
@@ -2828,7 +2828,7 @@ src/crypto/evp/evp_ctx.o: src/crypto/evp/evp_ctx.c.o
 
 # target to build an object file
 src/crypto/evp/evp_ctx.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_ctx.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_ctx.c.o
 .PHONY : src/crypto/evp/evp_ctx.c.o
 
 src/crypto/evp/evp_ctx.i: src/crypto/evp/evp_ctx.c.i
@@ -2837,7 +2837,7 @@ src/crypto/evp/evp_ctx.i: src/crypto/evp/evp_ctx.c.i
 
 # target to preprocess a source file
 src/crypto/evp/evp_ctx.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_ctx.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_ctx.c.i
 .PHONY : src/crypto/evp/evp_ctx.c.i
 
 src/crypto/evp/evp_ctx.s: src/crypto/evp/evp_ctx.c.s
@@ -2846,7 +2846,7 @@ src/crypto/evp/evp_ctx.s: src/crypto/evp/evp_ctx.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/evp_ctx.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_ctx.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/evp_ctx.c.s
 .PHONY : src/crypto/evp/evp_ctx.c.s
 
 src/crypto/evp/p_dsa_asn1.o: src/crypto/evp/p_dsa_asn1.c.o
@@ -2855,7 +2855,7 @@ src/crypto/evp/p_dsa_asn1.o: src/crypto/evp/p_dsa_asn1.c.o
 
 # target to build an object file
 src/crypto/evp/p_dsa_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_dsa_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_dsa_asn1.c.o
 .PHONY : src/crypto/evp/p_dsa_asn1.c.o
 
 src/crypto/evp/p_dsa_asn1.i: src/crypto/evp/p_dsa_asn1.c.i
@@ -2864,7 +2864,7 @@ src/crypto/evp/p_dsa_asn1.i: src/crypto/evp/p_dsa_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/evp/p_dsa_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_dsa_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_dsa_asn1.c.i
 .PHONY : src/crypto/evp/p_dsa_asn1.c.i
 
 src/crypto/evp/p_dsa_asn1.s: src/crypto/evp/p_dsa_asn1.c.s
@@ -2873,7 +2873,7 @@ src/crypto/evp/p_dsa_asn1.s: src/crypto/evp/p_dsa_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/p_dsa_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_dsa_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_dsa_asn1.c.s
 .PHONY : src/crypto/evp/p_dsa_asn1.c.s
 
 src/crypto/evp/p_ec.o: src/crypto/evp/p_ec.c.o
@@ -2882,7 +2882,7 @@ src/crypto/evp/p_ec.o: src/crypto/evp/p_ec.c.o
 
 # target to build an object file
 src/crypto/evp/p_ec.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec.c.o
 .PHONY : src/crypto/evp/p_ec.c.o
 
 src/crypto/evp/p_ec.i: src/crypto/evp/p_ec.c.i
@@ -2891,7 +2891,7 @@ src/crypto/evp/p_ec.i: src/crypto/evp/p_ec.c.i
 
 # target to preprocess a source file
 src/crypto/evp/p_ec.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec.c.i
 .PHONY : src/crypto/evp/p_ec.c.i
 
 src/crypto/evp/p_ec.s: src/crypto/evp/p_ec.c.s
@@ -2900,7 +2900,7 @@ src/crypto/evp/p_ec.s: src/crypto/evp/p_ec.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/p_ec.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec.c.s
 .PHONY : src/crypto/evp/p_ec.c.s
 
 src/crypto/evp/p_ec_asn1.o: src/crypto/evp/p_ec_asn1.c.o
@@ -2909,7 +2909,7 @@ src/crypto/evp/p_ec_asn1.o: src/crypto/evp/p_ec_asn1.c.o
 
 # target to build an object file
 src/crypto/evp/p_ec_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec_asn1.c.o
 .PHONY : src/crypto/evp/p_ec_asn1.c.o
 
 src/crypto/evp/p_ec_asn1.i: src/crypto/evp/p_ec_asn1.c.i
@@ -2918,7 +2918,7 @@ src/crypto/evp/p_ec_asn1.i: src/crypto/evp/p_ec_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/evp/p_ec_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec_asn1.c.i
 .PHONY : src/crypto/evp/p_ec_asn1.c.i
 
 src/crypto/evp/p_ec_asn1.s: src/crypto/evp/p_ec_asn1.c.s
@@ -2927,7 +2927,7 @@ src/crypto/evp/p_ec_asn1.s: src/crypto/evp/p_ec_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/p_ec_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ec_asn1.c.s
 .PHONY : src/crypto/evp/p_ec_asn1.c.s
 
 src/crypto/evp/p_ed25519.o: src/crypto/evp/p_ed25519.c.o
@@ -2936,7 +2936,7 @@ src/crypto/evp/p_ed25519.o: src/crypto/evp/p_ed25519.c.o
 
 # target to build an object file
 src/crypto/evp/p_ed25519.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519.c.o
 .PHONY : src/crypto/evp/p_ed25519.c.o
 
 src/crypto/evp/p_ed25519.i: src/crypto/evp/p_ed25519.c.i
@@ -2945,7 +2945,7 @@ src/crypto/evp/p_ed25519.i: src/crypto/evp/p_ed25519.c.i
 
 # target to preprocess a source file
 src/crypto/evp/p_ed25519.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519.c.i
 .PHONY : src/crypto/evp/p_ed25519.c.i
 
 src/crypto/evp/p_ed25519.s: src/crypto/evp/p_ed25519.c.s
@@ -2954,7 +2954,7 @@ src/crypto/evp/p_ed25519.s: src/crypto/evp/p_ed25519.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/p_ed25519.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519.c.s
 .PHONY : src/crypto/evp/p_ed25519.c.s
 
 src/crypto/evp/p_ed25519_asn1.o: src/crypto/evp/p_ed25519_asn1.c.o
@@ -2963,7 +2963,7 @@ src/crypto/evp/p_ed25519_asn1.o: src/crypto/evp/p_ed25519_asn1.c.o
 
 # target to build an object file
 src/crypto/evp/p_ed25519_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519_asn1.c.o
 .PHONY : src/crypto/evp/p_ed25519_asn1.c.o
 
 src/crypto/evp/p_ed25519_asn1.i: src/crypto/evp/p_ed25519_asn1.c.i
@@ -2972,7 +2972,7 @@ src/crypto/evp/p_ed25519_asn1.i: src/crypto/evp/p_ed25519_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/evp/p_ed25519_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519_asn1.c.i
 .PHONY : src/crypto/evp/p_ed25519_asn1.c.i
 
 src/crypto/evp/p_ed25519_asn1.s: src/crypto/evp/p_ed25519_asn1.c.s
@@ -2981,7 +2981,7 @@ src/crypto/evp/p_ed25519_asn1.s: src/crypto/evp/p_ed25519_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/p_ed25519_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_ed25519_asn1.c.s
 .PHONY : src/crypto/evp/p_ed25519_asn1.c.s
 
 src/crypto/evp/p_rsa.o: src/crypto/evp/p_rsa.c.o
@@ -2990,7 +2990,7 @@ src/crypto/evp/p_rsa.o: src/crypto/evp/p_rsa.c.o
 
 # target to build an object file
 src/crypto/evp/p_rsa.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa.c.o
 .PHONY : src/crypto/evp/p_rsa.c.o
 
 src/crypto/evp/p_rsa.i: src/crypto/evp/p_rsa.c.i
@@ -2999,7 +2999,7 @@ src/crypto/evp/p_rsa.i: src/crypto/evp/p_rsa.c.i
 
 # target to preprocess a source file
 src/crypto/evp/p_rsa.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa.c.i
 .PHONY : src/crypto/evp/p_rsa.c.i
 
 src/crypto/evp/p_rsa.s: src/crypto/evp/p_rsa.c.s
@@ -3008,7 +3008,7 @@ src/crypto/evp/p_rsa.s: src/crypto/evp/p_rsa.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/p_rsa.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa.c.s
 .PHONY : src/crypto/evp/p_rsa.c.s
 
 src/crypto/evp/p_rsa_asn1.o: src/crypto/evp/p_rsa_asn1.c.o
@@ -3017,7 +3017,7 @@ src/crypto/evp/p_rsa_asn1.o: src/crypto/evp/p_rsa_asn1.c.o
 
 # target to build an object file
 src/crypto/evp/p_rsa_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa_asn1.c.o
 .PHONY : src/crypto/evp/p_rsa_asn1.c.o
 
 src/crypto/evp/p_rsa_asn1.i: src/crypto/evp/p_rsa_asn1.c.i
@@ -3026,7 +3026,7 @@ src/crypto/evp/p_rsa_asn1.i: src/crypto/evp/p_rsa_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/evp/p_rsa_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa_asn1.c.i
 .PHONY : src/crypto/evp/p_rsa_asn1.c.i
 
 src/crypto/evp/p_rsa_asn1.s: src/crypto/evp/p_rsa_asn1.c.s
@@ -3035,7 +3035,7 @@ src/crypto/evp/p_rsa_asn1.s: src/crypto/evp/p_rsa_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/p_rsa_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_rsa_asn1.c.s
 .PHONY : src/crypto/evp/p_rsa_asn1.c.s
 
 src/crypto/evp/p_x25519.o: src/crypto/evp/p_x25519.c.o
@@ -3044,7 +3044,7 @@ src/crypto/evp/p_x25519.o: src/crypto/evp/p_x25519.c.o
 
 # target to build an object file
 src/crypto/evp/p_x25519.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519.c.o
 .PHONY : src/crypto/evp/p_x25519.c.o
 
 src/crypto/evp/p_x25519.i: src/crypto/evp/p_x25519.c.i
@@ -3053,7 +3053,7 @@ src/crypto/evp/p_x25519.i: src/crypto/evp/p_x25519.c.i
 
 # target to preprocess a source file
 src/crypto/evp/p_x25519.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519.c.i
 .PHONY : src/crypto/evp/p_x25519.c.i
 
 src/crypto/evp/p_x25519.s: src/crypto/evp/p_x25519.c.s
@@ -3062,7 +3062,7 @@ src/crypto/evp/p_x25519.s: src/crypto/evp/p_x25519.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/p_x25519.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519.c.s
 .PHONY : src/crypto/evp/p_x25519.c.s
 
 src/crypto/evp/p_x25519_asn1.o: src/crypto/evp/p_x25519_asn1.c.o
@@ -3071,7 +3071,7 @@ src/crypto/evp/p_x25519_asn1.o: src/crypto/evp/p_x25519_asn1.c.o
 
 # target to build an object file
 src/crypto/evp/p_x25519_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519_asn1.c.o
 .PHONY : src/crypto/evp/p_x25519_asn1.c.o
 
 src/crypto/evp/p_x25519_asn1.i: src/crypto/evp/p_x25519_asn1.c.i
@@ -3080,7 +3080,7 @@ src/crypto/evp/p_x25519_asn1.i: src/crypto/evp/p_x25519_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/evp/p_x25519_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519_asn1.c.i
 .PHONY : src/crypto/evp/p_x25519_asn1.c.i
 
 src/crypto/evp/p_x25519_asn1.s: src/crypto/evp/p_x25519_asn1.c.s
@@ -3089,7 +3089,7 @@ src/crypto/evp/p_x25519_asn1.s: src/crypto/evp/p_x25519_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/p_x25519_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/p_x25519_asn1.c.s
 .PHONY : src/crypto/evp/p_x25519_asn1.c.s
 
 src/crypto/evp/pbkdf.o: src/crypto/evp/pbkdf.c.o
@@ -3098,7 +3098,7 @@ src/crypto/evp/pbkdf.o: src/crypto/evp/pbkdf.c.o
 
 # target to build an object file
 src/crypto/evp/pbkdf.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/pbkdf.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/pbkdf.c.o
 .PHONY : src/crypto/evp/pbkdf.c.o
 
 src/crypto/evp/pbkdf.i: src/crypto/evp/pbkdf.c.i
@@ -3107,7 +3107,7 @@ src/crypto/evp/pbkdf.i: src/crypto/evp/pbkdf.c.i
 
 # target to preprocess a source file
 src/crypto/evp/pbkdf.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/pbkdf.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/pbkdf.c.i
 .PHONY : src/crypto/evp/pbkdf.c.i
 
 src/crypto/evp/pbkdf.s: src/crypto/evp/pbkdf.c.s
@@ -3116,7 +3116,7 @@ src/crypto/evp/pbkdf.s: src/crypto/evp/pbkdf.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/pbkdf.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/pbkdf.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/pbkdf.c.s
 .PHONY : src/crypto/evp/pbkdf.c.s
 
 src/crypto/evp/print.o: src/crypto/evp/print.c.o
@@ -3125,7 +3125,7 @@ src/crypto/evp/print.o: src/crypto/evp/print.c.o
 
 # target to build an object file
 src/crypto/evp/print.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/print.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/print.c.o
 .PHONY : src/crypto/evp/print.c.o
 
 src/crypto/evp/print.i: src/crypto/evp/print.c.i
@@ -3134,7 +3134,7 @@ src/crypto/evp/print.i: src/crypto/evp/print.c.i
 
 # target to preprocess a source file
 src/crypto/evp/print.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/print.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/print.c.i
 .PHONY : src/crypto/evp/print.c.i
 
 src/crypto/evp/print.s: src/crypto/evp/print.c.s
@@ -3143,7 +3143,7 @@ src/crypto/evp/print.s: src/crypto/evp/print.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/print.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/print.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/print.c.s
 .PHONY : src/crypto/evp/print.c.s
 
 src/crypto/evp/scrypt.o: src/crypto/evp/scrypt.c.o
@@ -3152,7 +3152,7 @@ src/crypto/evp/scrypt.o: src/crypto/evp/scrypt.c.o
 
 # target to build an object file
 src/crypto/evp/scrypt.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/scrypt.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/scrypt.c.o
 .PHONY : src/crypto/evp/scrypt.c.o
 
 src/crypto/evp/scrypt.i: src/crypto/evp/scrypt.c.i
@@ -3161,7 +3161,7 @@ src/crypto/evp/scrypt.i: src/crypto/evp/scrypt.c.i
 
 # target to preprocess a source file
 src/crypto/evp/scrypt.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/scrypt.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/scrypt.c.i
 .PHONY : src/crypto/evp/scrypt.c.i
 
 src/crypto/evp/scrypt.s: src/crypto/evp/scrypt.c.s
@@ -3170,7 +3170,7 @@ src/crypto/evp/scrypt.s: src/crypto/evp/scrypt.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/scrypt.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/scrypt.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/scrypt.c.s
 .PHONY : src/crypto/evp/scrypt.c.s
 
 src/crypto/evp/sign.o: src/crypto/evp/sign.c.o
@@ -3179,7 +3179,7 @@ src/crypto/evp/sign.o: src/crypto/evp/sign.c.o
 
 # target to build an object file
 src/crypto/evp/sign.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/sign.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/sign.c.o
 .PHONY : src/crypto/evp/sign.c.o
 
 src/crypto/evp/sign.i: src/crypto/evp/sign.c.i
@@ -3188,7 +3188,7 @@ src/crypto/evp/sign.i: src/crypto/evp/sign.c.i
 
 # target to preprocess a source file
 src/crypto/evp/sign.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/sign.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/sign.c.i
 .PHONY : src/crypto/evp/sign.c.i
 
 src/crypto/evp/sign.s: src/crypto/evp/sign.c.s
@@ -3197,7 +3197,7 @@ src/crypto/evp/sign.s: src/crypto/evp/sign.c.s
 
 # target to generate assembly for a file
 src/crypto/evp/sign.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/sign.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/evp/sign.c.s
 .PHONY : src/crypto/evp/sign.c.s
 
 src/crypto/ex_data.o: src/crypto/ex_data.c.o
@@ -3206,7 +3206,7 @@ src/crypto/ex_data.o: src/crypto/ex_data.c.o
 
 # target to build an object file
 src/crypto/ex_data.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ex_data.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ex_data.c.o
 .PHONY : src/crypto/ex_data.c.o
 
 src/crypto/ex_data.i: src/crypto/ex_data.c.i
@@ -3215,7 +3215,7 @@ src/crypto/ex_data.i: src/crypto/ex_data.c.i
 
 # target to preprocess a source file
 src/crypto/ex_data.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ex_data.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ex_data.c.i
 .PHONY : src/crypto/ex_data.c.i
 
 src/crypto/ex_data.s: src/crypto/ex_data.c.s
@@ -3224,7 +3224,7 @@ src/crypto/ex_data.s: src/crypto/ex_data.c.s
 
 # target to generate assembly for a file
 src/crypto/ex_data.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ex_data.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/ex_data.c.s
 .PHONY : src/crypto/ex_data.c.s
 
 src/crypto/fipsmodule/bcm.o: src/crypto/fipsmodule/bcm.c.o
@@ -3233,7 +3233,7 @@ src/crypto/fipsmodule/bcm.o: src/crypto/fipsmodule/bcm.c.o
 
 # target to build an object file
 src/crypto/fipsmodule/bcm.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/bcm.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/bcm.c.o
 .PHONY : src/crypto/fipsmodule/bcm.c.o
 
 src/crypto/fipsmodule/bcm.i: src/crypto/fipsmodule/bcm.c.i
@@ -3242,7 +3242,7 @@ src/crypto/fipsmodule/bcm.i: src/crypto/fipsmodule/bcm.c.i
 
 # target to preprocess a source file
 src/crypto/fipsmodule/bcm.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/bcm.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/bcm.c.i
 .PHONY : src/crypto/fipsmodule/bcm.c.i
 
 src/crypto/fipsmodule/bcm.s: src/crypto/fipsmodule/bcm.c.s
@@ -3251,7 +3251,7 @@ src/crypto/fipsmodule/bcm.s: src/crypto/fipsmodule/bcm.c.s
 
 # target to generate assembly for a file
 src/crypto/fipsmodule/bcm.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/bcm.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/bcm.c.s
 .PHONY : src/crypto/fipsmodule/bcm.c.s
 
 src/crypto/fipsmodule/fips_shared_support.o: src/crypto/fipsmodule/fips_shared_support.c.o
@@ -3260,7 +3260,7 @@ src/crypto/fipsmodule/fips_shared_support.o: src/crypto/fipsmodule/fips_shared_s
 
 # target to build an object file
 src/crypto/fipsmodule/fips_shared_support.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/fips_shared_support.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/fips_shared_support.c.o
 .PHONY : src/crypto/fipsmodule/fips_shared_support.c.o
 
 src/crypto/fipsmodule/fips_shared_support.i: src/crypto/fipsmodule/fips_shared_support.c.i
@@ -3269,7 +3269,7 @@ src/crypto/fipsmodule/fips_shared_support.i: src/crypto/fipsmodule/fips_shared_s
 
 # target to preprocess a source file
 src/crypto/fipsmodule/fips_shared_support.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/fips_shared_support.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/fips_shared_support.c.i
 .PHONY : src/crypto/fipsmodule/fips_shared_support.c.i
 
 src/crypto/fipsmodule/fips_shared_support.s: src/crypto/fipsmodule/fips_shared_support.c.s
@@ -3278,7 +3278,7 @@ src/crypto/fipsmodule/fips_shared_support.s: src/crypto/fipsmodule/fips_shared_s
 
 # target to generate assembly for a file
 src/crypto/fipsmodule/fips_shared_support.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/fips_shared_support.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/fipsmodule/fips_shared_support.c.s
 .PHONY : src/crypto/fipsmodule/fips_shared_support.c.s
 
 src/crypto/hkdf/hkdf.o: src/crypto/hkdf/hkdf.c.o
@@ -3287,7 +3287,7 @@ src/crypto/hkdf/hkdf.o: src/crypto/hkdf/hkdf.c.o
 
 # target to build an object file
 src/crypto/hkdf/hkdf.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hkdf/hkdf.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hkdf/hkdf.c.o
 .PHONY : src/crypto/hkdf/hkdf.c.o
 
 src/crypto/hkdf/hkdf.i: src/crypto/hkdf/hkdf.c.i
@@ -3296,7 +3296,7 @@ src/crypto/hkdf/hkdf.i: src/crypto/hkdf/hkdf.c.i
 
 # target to preprocess a source file
 src/crypto/hkdf/hkdf.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hkdf/hkdf.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hkdf/hkdf.c.i
 .PHONY : src/crypto/hkdf/hkdf.c.i
 
 src/crypto/hkdf/hkdf.s: src/crypto/hkdf/hkdf.c.s
@@ -3305,7 +3305,7 @@ src/crypto/hkdf/hkdf.s: src/crypto/hkdf/hkdf.c.s
 
 # target to generate assembly for a file
 src/crypto/hkdf/hkdf.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hkdf/hkdf.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hkdf/hkdf.c.s
 .PHONY : src/crypto/hkdf/hkdf.c.s
 
 src/crypto/hpke/hpke.o: src/crypto/hpke/hpke.c.o
@@ -3314,7 +3314,7 @@ src/crypto/hpke/hpke.o: src/crypto/hpke/hpke.c.o
 
 # target to build an object file
 src/crypto/hpke/hpke.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hpke/hpke.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hpke/hpke.c.o
 .PHONY : src/crypto/hpke/hpke.c.o
 
 src/crypto/hpke/hpke.i: src/crypto/hpke/hpke.c.i
@@ -3323,7 +3323,7 @@ src/crypto/hpke/hpke.i: src/crypto/hpke/hpke.c.i
 
 # target to preprocess a source file
 src/crypto/hpke/hpke.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hpke/hpke.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hpke/hpke.c.i
 .PHONY : src/crypto/hpke/hpke.c.i
 
 src/crypto/hpke/hpke.s: src/crypto/hpke/hpke.c.s
@@ -3332,7 +3332,7 @@ src/crypto/hpke/hpke.s: src/crypto/hpke/hpke.c.s
 
 # target to generate assembly for a file
 src/crypto/hpke/hpke.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hpke/hpke.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hpke/hpke.c.s
 .PHONY : src/crypto/hpke/hpke.c.s
 
 src/crypto/hrss/asm/poly_rq_mul.o: src/crypto/hrss/asm/poly_rq_mul.S.o
@@ -3341,7 +3341,7 @@ src/crypto/hrss/asm/poly_rq_mul.o: src/crypto/hrss/asm/poly_rq_mul.S.o
 
 # target to build an object file
 src/crypto/hrss/asm/poly_rq_mul.S.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hrss/asm/poly_rq_mul.S.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hrss/asm/poly_rq_mul.S.o
 .PHONY : src/crypto/hrss/asm/poly_rq_mul.S.o
 
 src/crypto/hrss/hrss.o: src/crypto/hrss/hrss.c.o
@@ -3350,7 +3350,7 @@ src/crypto/hrss/hrss.o: src/crypto/hrss/hrss.c.o
 
 # target to build an object file
 src/crypto/hrss/hrss.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hrss/hrss.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hrss/hrss.c.o
 .PHONY : src/crypto/hrss/hrss.c.o
 
 src/crypto/hrss/hrss.i: src/crypto/hrss/hrss.c.i
@@ -3359,7 +3359,7 @@ src/crypto/hrss/hrss.i: src/crypto/hrss/hrss.c.i
 
 # target to preprocess a source file
 src/crypto/hrss/hrss.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hrss/hrss.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hrss/hrss.c.i
 .PHONY : src/crypto/hrss/hrss.c.i
 
 src/crypto/hrss/hrss.s: src/crypto/hrss/hrss.c.s
@@ -3368,7 +3368,7 @@ src/crypto/hrss/hrss.s: src/crypto/hrss/hrss.c.s
 
 # target to generate assembly for a file
 src/crypto/hrss/hrss.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hrss/hrss.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/hrss/hrss.c.s
 .PHONY : src/crypto/hrss/hrss.c.s
 
 src/crypto/lhash/lhash.o: src/crypto/lhash/lhash.c.o
@@ -3377,7 +3377,7 @@ src/crypto/lhash/lhash.o: src/crypto/lhash/lhash.c.o
 
 # target to build an object file
 src/crypto/lhash/lhash.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/lhash/lhash.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/lhash/lhash.c.o
 .PHONY : src/crypto/lhash/lhash.c.o
 
 src/crypto/lhash/lhash.i: src/crypto/lhash/lhash.c.i
@@ -3386,7 +3386,7 @@ src/crypto/lhash/lhash.i: src/crypto/lhash/lhash.c.i
 
 # target to preprocess a source file
 src/crypto/lhash/lhash.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/lhash/lhash.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/lhash/lhash.c.i
 .PHONY : src/crypto/lhash/lhash.c.i
 
 src/crypto/lhash/lhash.s: src/crypto/lhash/lhash.c.s
@@ -3395,7 +3395,7 @@ src/crypto/lhash/lhash.s: src/crypto/lhash/lhash.c.s
 
 # target to generate assembly for a file
 src/crypto/lhash/lhash.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/lhash/lhash.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/lhash/lhash.c.s
 .PHONY : src/crypto/lhash/lhash.c.s
 
 src/crypto/mem.o: src/crypto/mem.c.o
@@ -3404,7 +3404,7 @@ src/crypto/mem.o: src/crypto/mem.c.o
 
 # target to build an object file
 src/crypto/mem.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/mem.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/mem.c.o
 .PHONY : src/crypto/mem.c.o
 
 src/crypto/mem.i: src/crypto/mem.c.i
@@ -3413,7 +3413,7 @@ src/crypto/mem.i: src/crypto/mem.c.i
 
 # target to preprocess a source file
 src/crypto/mem.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/mem.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/mem.c.i
 .PHONY : src/crypto/mem.c.i
 
 src/crypto/mem.s: src/crypto/mem.c.s
@@ -3422,7 +3422,7 @@ src/crypto/mem.s: src/crypto/mem.c.s
 
 # target to generate assembly for a file
 src/crypto/mem.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/mem.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/mem.c.s
 .PHONY : src/crypto/mem.c.s
 
 src/crypto/obj/obj.o: src/crypto/obj/obj.c.o
@@ -3431,7 +3431,7 @@ src/crypto/obj/obj.o: src/crypto/obj/obj.c.o
 
 # target to build an object file
 src/crypto/obj/obj.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj.c.o
 .PHONY : src/crypto/obj/obj.c.o
 
 src/crypto/obj/obj.i: src/crypto/obj/obj.c.i
@@ -3440,7 +3440,7 @@ src/crypto/obj/obj.i: src/crypto/obj/obj.c.i
 
 # target to preprocess a source file
 src/crypto/obj/obj.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj.c.i
 .PHONY : src/crypto/obj/obj.c.i
 
 src/crypto/obj/obj.s: src/crypto/obj/obj.c.s
@@ -3449,7 +3449,7 @@ src/crypto/obj/obj.s: src/crypto/obj/obj.c.s
 
 # target to generate assembly for a file
 src/crypto/obj/obj.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj.c.s
 .PHONY : src/crypto/obj/obj.c.s
 
 src/crypto/obj/obj_xref.o: src/crypto/obj/obj_xref.c.o
@@ -3458,7 +3458,7 @@ src/crypto/obj/obj_xref.o: src/crypto/obj/obj_xref.c.o
 
 # target to build an object file
 src/crypto/obj/obj_xref.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj_xref.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj_xref.c.o
 .PHONY : src/crypto/obj/obj_xref.c.o
 
 src/crypto/obj/obj_xref.i: src/crypto/obj/obj_xref.c.i
@@ -3467,7 +3467,7 @@ src/crypto/obj/obj_xref.i: src/crypto/obj/obj_xref.c.i
 
 # target to preprocess a source file
 src/crypto/obj/obj_xref.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj_xref.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj_xref.c.i
 .PHONY : src/crypto/obj/obj_xref.c.i
 
 src/crypto/obj/obj_xref.s: src/crypto/obj/obj_xref.c.s
@@ -3476,7 +3476,7 @@ src/crypto/obj/obj_xref.s: src/crypto/obj/obj_xref.c.s
 
 # target to generate assembly for a file
 src/crypto/obj/obj_xref.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj_xref.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/obj/obj_xref.c.s
 .PHONY : src/crypto/obj/obj_xref.c.s
 
 src/crypto/pem/pem_all.o: src/crypto/pem/pem_all.c.o
@@ -3485,7 +3485,7 @@ src/crypto/pem/pem_all.o: src/crypto/pem/pem_all.c.o
 
 # target to build an object file
 src/crypto/pem/pem_all.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_all.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_all.c.o
 .PHONY : src/crypto/pem/pem_all.c.o
 
 src/crypto/pem/pem_all.i: src/crypto/pem/pem_all.c.i
@@ -3494,7 +3494,7 @@ src/crypto/pem/pem_all.i: src/crypto/pem/pem_all.c.i
 
 # target to preprocess a source file
 src/crypto/pem/pem_all.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_all.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_all.c.i
 .PHONY : src/crypto/pem/pem_all.c.i
 
 src/crypto/pem/pem_all.s: src/crypto/pem/pem_all.c.s
@@ -3503,7 +3503,7 @@ src/crypto/pem/pem_all.s: src/crypto/pem/pem_all.c.s
 
 # target to generate assembly for a file
 src/crypto/pem/pem_all.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_all.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_all.c.s
 .PHONY : src/crypto/pem/pem_all.c.s
 
 src/crypto/pem/pem_info.o: src/crypto/pem/pem_info.c.o
@@ -3512,7 +3512,7 @@ src/crypto/pem/pem_info.o: src/crypto/pem/pem_info.c.o
 
 # target to build an object file
 src/crypto/pem/pem_info.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_info.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_info.c.o
 .PHONY : src/crypto/pem/pem_info.c.o
 
 src/crypto/pem/pem_info.i: src/crypto/pem/pem_info.c.i
@@ -3521,7 +3521,7 @@ src/crypto/pem/pem_info.i: src/crypto/pem/pem_info.c.i
 
 # target to preprocess a source file
 src/crypto/pem/pem_info.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_info.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_info.c.i
 .PHONY : src/crypto/pem/pem_info.c.i
 
 src/crypto/pem/pem_info.s: src/crypto/pem/pem_info.c.s
@@ -3530,7 +3530,7 @@ src/crypto/pem/pem_info.s: src/crypto/pem/pem_info.c.s
 
 # target to generate assembly for a file
 src/crypto/pem/pem_info.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_info.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_info.c.s
 .PHONY : src/crypto/pem/pem_info.c.s
 
 src/crypto/pem/pem_lib.o: src/crypto/pem/pem_lib.c.o
@@ -3539,7 +3539,7 @@ src/crypto/pem/pem_lib.o: src/crypto/pem/pem_lib.c.o
 
 # target to build an object file
 src/crypto/pem/pem_lib.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_lib.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_lib.c.o
 .PHONY : src/crypto/pem/pem_lib.c.o
 
 src/crypto/pem/pem_lib.i: src/crypto/pem/pem_lib.c.i
@@ -3548,7 +3548,7 @@ src/crypto/pem/pem_lib.i: src/crypto/pem/pem_lib.c.i
 
 # target to preprocess a source file
 src/crypto/pem/pem_lib.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_lib.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_lib.c.i
 .PHONY : src/crypto/pem/pem_lib.c.i
 
 src/crypto/pem/pem_lib.s: src/crypto/pem/pem_lib.c.s
@@ -3557,7 +3557,7 @@ src/crypto/pem/pem_lib.s: src/crypto/pem/pem_lib.c.s
 
 # target to generate assembly for a file
 src/crypto/pem/pem_lib.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_lib.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_lib.c.s
 .PHONY : src/crypto/pem/pem_lib.c.s
 
 src/crypto/pem/pem_oth.o: src/crypto/pem/pem_oth.c.o
@@ -3566,7 +3566,7 @@ src/crypto/pem/pem_oth.o: src/crypto/pem/pem_oth.c.o
 
 # target to build an object file
 src/crypto/pem/pem_oth.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_oth.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_oth.c.o
 .PHONY : src/crypto/pem/pem_oth.c.o
 
 src/crypto/pem/pem_oth.i: src/crypto/pem/pem_oth.c.i
@@ -3575,7 +3575,7 @@ src/crypto/pem/pem_oth.i: src/crypto/pem/pem_oth.c.i
 
 # target to preprocess a source file
 src/crypto/pem/pem_oth.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_oth.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_oth.c.i
 .PHONY : src/crypto/pem/pem_oth.c.i
 
 src/crypto/pem/pem_oth.s: src/crypto/pem/pem_oth.c.s
@@ -3584,7 +3584,7 @@ src/crypto/pem/pem_oth.s: src/crypto/pem/pem_oth.c.s
 
 # target to generate assembly for a file
 src/crypto/pem/pem_oth.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_oth.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_oth.c.s
 .PHONY : src/crypto/pem/pem_oth.c.s
 
 src/crypto/pem/pem_pk8.o: src/crypto/pem/pem_pk8.c.o
@@ -3593,7 +3593,7 @@ src/crypto/pem/pem_pk8.o: src/crypto/pem/pem_pk8.c.o
 
 # target to build an object file
 src/crypto/pem/pem_pk8.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pk8.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pk8.c.o
 .PHONY : src/crypto/pem/pem_pk8.c.o
 
 src/crypto/pem/pem_pk8.i: src/crypto/pem/pem_pk8.c.i
@@ -3602,7 +3602,7 @@ src/crypto/pem/pem_pk8.i: src/crypto/pem/pem_pk8.c.i
 
 # target to preprocess a source file
 src/crypto/pem/pem_pk8.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pk8.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pk8.c.i
 .PHONY : src/crypto/pem/pem_pk8.c.i
 
 src/crypto/pem/pem_pk8.s: src/crypto/pem/pem_pk8.c.s
@@ -3611,7 +3611,7 @@ src/crypto/pem/pem_pk8.s: src/crypto/pem/pem_pk8.c.s
 
 # target to generate assembly for a file
 src/crypto/pem/pem_pk8.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pk8.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pk8.c.s
 .PHONY : src/crypto/pem/pem_pk8.c.s
 
 src/crypto/pem/pem_pkey.o: src/crypto/pem/pem_pkey.c.o
@@ -3620,7 +3620,7 @@ src/crypto/pem/pem_pkey.o: src/crypto/pem/pem_pkey.c.o
 
 # target to build an object file
 src/crypto/pem/pem_pkey.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pkey.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pkey.c.o
 .PHONY : src/crypto/pem/pem_pkey.c.o
 
 src/crypto/pem/pem_pkey.i: src/crypto/pem/pem_pkey.c.i
@@ -3629,7 +3629,7 @@ src/crypto/pem/pem_pkey.i: src/crypto/pem/pem_pkey.c.i
 
 # target to preprocess a source file
 src/crypto/pem/pem_pkey.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pkey.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pkey.c.i
 .PHONY : src/crypto/pem/pem_pkey.c.i
 
 src/crypto/pem/pem_pkey.s: src/crypto/pem/pem_pkey.c.s
@@ -3638,7 +3638,7 @@ src/crypto/pem/pem_pkey.s: src/crypto/pem/pem_pkey.c.s
 
 # target to generate assembly for a file
 src/crypto/pem/pem_pkey.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pkey.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_pkey.c.s
 .PHONY : src/crypto/pem/pem_pkey.c.s
 
 src/crypto/pem/pem_x509.o: src/crypto/pem/pem_x509.c.o
@@ -3647,7 +3647,7 @@ src/crypto/pem/pem_x509.o: src/crypto/pem/pem_x509.c.o
 
 # target to build an object file
 src/crypto/pem/pem_x509.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_x509.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_x509.c.o
 .PHONY : src/crypto/pem/pem_x509.c.o
 
 src/crypto/pem/pem_x509.i: src/crypto/pem/pem_x509.c.i
@@ -3656,7 +3656,7 @@ src/crypto/pem/pem_x509.i: src/crypto/pem/pem_x509.c.i
 
 # target to preprocess a source file
 src/crypto/pem/pem_x509.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_x509.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_x509.c.i
 .PHONY : src/crypto/pem/pem_x509.c.i
 
 src/crypto/pem/pem_x509.s: src/crypto/pem/pem_x509.c.s
@@ -3665,7 +3665,7 @@ src/crypto/pem/pem_x509.s: src/crypto/pem/pem_x509.c.s
 
 # target to generate assembly for a file
 src/crypto/pem/pem_x509.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_x509.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_x509.c.s
 .PHONY : src/crypto/pem/pem_x509.c.s
 
 src/crypto/pem/pem_xaux.o: src/crypto/pem/pem_xaux.c.o
@@ -3674,7 +3674,7 @@ src/crypto/pem/pem_xaux.o: src/crypto/pem/pem_xaux.c.o
 
 # target to build an object file
 src/crypto/pem/pem_xaux.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_xaux.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_xaux.c.o
 .PHONY : src/crypto/pem/pem_xaux.c.o
 
 src/crypto/pem/pem_xaux.i: src/crypto/pem/pem_xaux.c.i
@@ -3683,7 +3683,7 @@ src/crypto/pem/pem_xaux.i: src/crypto/pem/pem_xaux.c.i
 
 # target to preprocess a source file
 src/crypto/pem/pem_xaux.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_xaux.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_xaux.c.i
 .PHONY : src/crypto/pem/pem_xaux.c.i
 
 src/crypto/pem/pem_xaux.s: src/crypto/pem/pem_xaux.c.s
@@ -3692,7 +3692,7 @@ src/crypto/pem/pem_xaux.s: src/crypto/pem/pem_xaux.c.s
 
 # target to generate assembly for a file
 src/crypto/pem/pem_xaux.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_xaux.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pem/pem_xaux.c.s
 .PHONY : src/crypto/pem/pem_xaux.c.s
 
 src/crypto/pkcs7/pkcs7.o: src/crypto/pkcs7/pkcs7.c.o
@@ -3701,7 +3701,7 @@ src/crypto/pkcs7/pkcs7.o: src/crypto/pkcs7/pkcs7.c.o
 
 # target to build an object file
 src/crypto/pkcs7/pkcs7.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7.c.o
 .PHONY : src/crypto/pkcs7/pkcs7.c.o
 
 src/crypto/pkcs7/pkcs7.i: src/crypto/pkcs7/pkcs7.c.i
@@ -3710,7 +3710,7 @@ src/crypto/pkcs7/pkcs7.i: src/crypto/pkcs7/pkcs7.c.i
 
 # target to preprocess a source file
 src/crypto/pkcs7/pkcs7.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7.c.i
 .PHONY : src/crypto/pkcs7/pkcs7.c.i
 
 src/crypto/pkcs7/pkcs7.s: src/crypto/pkcs7/pkcs7.c.s
@@ -3719,7 +3719,7 @@ src/crypto/pkcs7/pkcs7.s: src/crypto/pkcs7/pkcs7.c.s
 
 # target to generate assembly for a file
 src/crypto/pkcs7/pkcs7.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7.c.s
 .PHONY : src/crypto/pkcs7/pkcs7.c.s
 
 src/crypto/pkcs7/pkcs7_x509.o: src/crypto/pkcs7/pkcs7_x509.c.o
@@ -3728,7 +3728,7 @@ src/crypto/pkcs7/pkcs7_x509.o: src/crypto/pkcs7/pkcs7_x509.c.o
 
 # target to build an object file
 src/crypto/pkcs7/pkcs7_x509.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7_x509.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7_x509.c.o
 .PHONY : src/crypto/pkcs7/pkcs7_x509.c.o
 
 src/crypto/pkcs7/pkcs7_x509.i: src/crypto/pkcs7/pkcs7_x509.c.i
@@ -3737,7 +3737,7 @@ src/crypto/pkcs7/pkcs7_x509.i: src/crypto/pkcs7/pkcs7_x509.c.i
 
 # target to preprocess a source file
 src/crypto/pkcs7/pkcs7_x509.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7_x509.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7_x509.c.i
 .PHONY : src/crypto/pkcs7/pkcs7_x509.c.i
 
 src/crypto/pkcs7/pkcs7_x509.s: src/crypto/pkcs7/pkcs7_x509.c.s
@@ -3746,7 +3746,7 @@ src/crypto/pkcs7/pkcs7_x509.s: src/crypto/pkcs7/pkcs7_x509.c.s
 
 # target to generate assembly for a file
 src/crypto/pkcs7/pkcs7_x509.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7_x509.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs7/pkcs7_x509.c.s
 .PHONY : src/crypto/pkcs7/pkcs7_x509.c.s
 
 src/crypto/pkcs8/p5_pbev2.o: src/crypto/pkcs8/p5_pbev2.c.o
@@ -3755,7 +3755,7 @@ src/crypto/pkcs8/p5_pbev2.o: src/crypto/pkcs8/p5_pbev2.c.o
 
 # target to build an object file
 src/crypto/pkcs8/p5_pbev2.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/p5_pbev2.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/p5_pbev2.c.o
 .PHONY : src/crypto/pkcs8/p5_pbev2.c.o
 
 src/crypto/pkcs8/p5_pbev2.i: src/crypto/pkcs8/p5_pbev2.c.i
@@ -3764,7 +3764,7 @@ src/crypto/pkcs8/p5_pbev2.i: src/crypto/pkcs8/p5_pbev2.c.i
 
 # target to preprocess a source file
 src/crypto/pkcs8/p5_pbev2.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/p5_pbev2.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/p5_pbev2.c.i
 .PHONY : src/crypto/pkcs8/p5_pbev2.c.i
 
 src/crypto/pkcs8/p5_pbev2.s: src/crypto/pkcs8/p5_pbev2.c.s
@@ -3773,7 +3773,7 @@ src/crypto/pkcs8/p5_pbev2.s: src/crypto/pkcs8/p5_pbev2.c.s
 
 # target to generate assembly for a file
 src/crypto/pkcs8/p5_pbev2.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/p5_pbev2.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/p5_pbev2.c.s
 .PHONY : src/crypto/pkcs8/p5_pbev2.c.s
 
 src/crypto/pkcs8/pkcs8.o: src/crypto/pkcs8/pkcs8.c.o
@@ -3782,7 +3782,7 @@ src/crypto/pkcs8/pkcs8.o: src/crypto/pkcs8/pkcs8.c.o
 
 # target to build an object file
 src/crypto/pkcs8/pkcs8.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8.c.o
 .PHONY : src/crypto/pkcs8/pkcs8.c.o
 
 src/crypto/pkcs8/pkcs8.i: src/crypto/pkcs8/pkcs8.c.i
@@ -3791,7 +3791,7 @@ src/crypto/pkcs8/pkcs8.i: src/crypto/pkcs8/pkcs8.c.i
 
 # target to preprocess a source file
 src/crypto/pkcs8/pkcs8.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8.c.i
 .PHONY : src/crypto/pkcs8/pkcs8.c.i
 
 src/crypto/pkcs8/pkcs8.s: src/crypto/pkcs8/pkcs8.c.s
@@ -3800,7 +3800,7 @@ src/crypto/pkcs8/pkcs8.s: src/crypto/pkcs8/pkcs8.c.s
 
 # target to generate assembly for a file
 src/crypto/pkcs8/pkcs8.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8.c.s
 .PHONY : src/crypto/pkcs8/pkcs8.c.s
 
 src/crypto/pkcs8/pkcs8_x509.o: src/crypto/pkcs8/pkcs8_x509.c.o
@@ -3809,7 +3809,7 @@ src/crypto/pkcs8/pkcs8_x509.o: src/crypto/pkcs8/pkcs8_x509.c.o
 
 # target to build an object file
 src/crypto/pkcs8/pkcs8_x509.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8_x509.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8_x509.c.o
 .PHONY : src/crypto/pkcs8/pkcs8_x509.c.o
 
 src/crypto/pkcs8/pkcs8_x509.i: src/crypto/pkcs8/pkcs8_x509.c.i
@@ -3818,7 +3818,7 @@ src/crypto/pkcs8/pkcs8_x509.i: src/crypto/pkcs8/pkcs8_x509.c.i
 
 # target to preprocess a source file
 src/crypto/pkcs8/pkcs8_x509.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8_x509.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8_x509.c.i
 .PHONY : src/crypto/pkcs8/pkcs8_x509.c.i
 
 src/crypto/pkcs8/pkcs8_x509.s: src/crypto/pkcs8/pkcs8_x509.c.s
@@ -3827,7 +3827,7 @@ src/crypto/pkcs8/pkcs8_x509.s: src/crypto/pkcs8/pkcs8_x509.c.s
 
 # target to generate assembly for a file
 src/crypto/pkcs8/pkcs8_x509.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8_x509.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pkcs8/pkcs8_x509.c.s
 .PHONY : src/crypto/pkcs8/pkcs8_x509.c.s
 
 src/crypto/poly1305/poly1305.o: src/crypto/poly1305/poly1305.c.o
@@ -3836,7 +3836,7 @@ src/crypto/poly1305/poly1305.o: src/crypto/poly1305/poly1305.c.o
 
 # target to build an object file
 src/crypto/poly1305/poly1305.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305.c.o
 .PHONY : src/crypto/poly1305/poly1305.c.o
 
 src/crypto/poly1305/poly1305.i: src/crypto/poly1305/poly1305.c.i
@@ -3845,7 +3845,7 @@ src/crypto/poly1305/poly1305.i: src/crypto/poly1305/poly1305.c.i
 
 # target to preprocess a source file
 src/crypto/poly1305/poly1305.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305.c.i
 .PHONY : src/crypto/poly1305/poly1305.c.i
 
 src/crypto/poly1305/poly1305.s: src/crypto/poly1305/poly1305.c.s
@@ -3854,7 +3854,7 @@ src/crypto/poly1305/poly1305.s: src/crypto/poly1305/poly1305.c.s
 
 # target to generate assembly for a file
 src/crypto/poly1305/poly1305.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305.c.s
 .PHONY : src/crypto/poly1305/poly1305.c.s
 
 src/crypto/poly1305/poly1305_arm.o: src/crypto/poly1305/poly1305_arm.c.o
@@ -3863,7 +3863,7 @@ src/crypto/poly1305/poly1305_arm.o: src/crypto/poly1305/poly1305_arm.c.o
 
 # target to build an object file
 src/crypto/poly1305/poly1305_arm.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_arm.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_arm.c.o
 .PHONY : src/crypto/poly1305/poly1305_arm.c.o
 
 src/crypto/poly1305/poly1305_arm.i: src/crypto/poly1305/poly1305_arm.c.i
@@ -3872,7 +3872,7 @@ src/crypto/poly1305/poly1305_arm.i: src/crypto/poly1305/poly1305_arm.c.i
 
 # target to preprocess a source file
 src/crypto/poly1305/poly1305_arm.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_arm.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_arm.c.i
 .PHONY : src/crypto/poly1305/poly1305_arm.c.i
 
 src/crypto/poly1305/poly1305_arm.s: src/crypto/poly1305/poly1305_arm.c.s
@@ -3881,7 +3881,7 @@ src/crypto/poly1305/poly1305_arm.s: src/crypto/poly1305/poly1305_arm.c.s
 
 # target to generate assembly for a file
 src/crypto/poly1305/poly1305_arm.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_arm.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_arm.c.s
 .PHONY : src/crypto/poly1305/poly1305_arm.c.s
 
 src/crypto/poly1305/poly1305_vec.o: src/crypto/poly1305/poly1305_vec.c.o
@@ -3890,7 +3890,7 @@ src/crypto/poly1305/poly1305_vec.o: src/crypto/poly1305/poly1305_vec.c.o
 
 # target to build an object file
 src/crypto/poly1305/poly1305_vec.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_vec.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_vec.c.o
 .PHONY : src/crypto/poly1305/poly1305_vec.c.o
 
 src/crypto/poly1305/poly1305_vec.i: src/crypto/poly1305/poly1305_vec.c.i
@@ -3899,7 +3899,7 @@ src/crypto/poly1305/poly1305_vec.i: src/crypto/poly1305/poly1305_vec.c.i
 
 # target to preprocess a source file
 src/crypto/poly1305/poly1305_vec.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_vec.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_vec.c.i
 .PHONY : src/crypto/poly1305/poly1305_vec.c.i
 
 src/crypto/poly1305/poly1305_vec.s: src/crypto/poly1305/poly1305_vec.c.s
@@ -3908,7 +3908,7 @@ src/crypto/poly1305/poly1305_vec.s: src/crypto/poly1305/poly1305_vec.c.s
 
 # target to generate assembly for a file
 src/crypto/poly1305/poly1305_vec.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_vec.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/poly1305/poly1305_vec.c.s
 .PHONY : src/crypto/poly1305/poly1305_vec.c.s
 
 src/crypto/pool/pool.o: src/crypto/pool/pool.c.o
@@ -3917,7 +3917,7 @@ src/crypto/pool/pool.o: src/crypto/pool/pool.c.o
 
 # target to build an object file
 src/crypto/pool/pool.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pool/pool.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pool/pool.c.o
 .PHONY : src/crypto/pool/pool.c.o
 
 src/crypto/pool/pool.i: src/crypto/pool/pool.c.i
@@ -3926,7 +3926,7 @@ src/crypto/pool/pool.i: src/crypto/pool/pool.c.i
 
 # target to preprocess a source file
 src/crypto/pool/pool.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pool/pool.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pool/pool.c.i
 .PHONY : src/crypto/pool/pool.c.i
 
 src/crypto/pool/pool.s: src/crypto/pool/pool.c.s
@@ -3935,7 +3935,7 @@ src/crypto/pool/pool.s: src/crypto/pool/pool.c.s
 
 # target to generate assembly for a file
 src/crypto/pool/pool.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pool/pool.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/pool/pool.c.s
 .PHONY : src/crypto/pool/pool.c.s
 
 src/crypto/rand_extra/deterministic.o: src/crypto/rand_extra/deterministic.c.o
@@ -3944,7 +3944,7 @@ src/crypto/rand_extra/deterministic.o: src/crypto/rand_extra/deterministic.c.o
 
 # target to build an object file
 src/crypto/rand_extra/deterministic.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/deterministic.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/deterministic.c.o
 .PHONY : src/crypto/rand_extra/deterministic.c.o
 
 src/crypto/rand_extra/deterministic.i: src/crypto/rand_extra/deterministic.c.i
@@ -3953,7 +3953,7 @@ src/crypto/rand_extra/deterministic.i: src/crypto/rand_extra/deterministic.c.i
 
 # target to preprocess a source file
 src/crypto/rand_extra/deterministic.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/deterministic.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/deterministic.c.i
 .PHONY : src/crypto/rand_extra/deterministic.c.i
 
 src/crypto/rand_extra/deterministic.s: src/crypto/rand_extra/deterministic.c.s
@@ -3962,7 +3962,7 @@ src/crypto/rand_extra/deterministic.s: src/crypto/rand_extra/deterministic.c.s
 
 # target to generate assembly for a file
 src/crypto/rand_extra/deterministic.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/deterministic.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/deterministic.c.s
 .PHONY : src/crypto/rand_extra/deterministic.c.s
 
 src/crypto/rand_extra/forkunsafe.o: src/crypto/rand_extra/forkunsafe.c.o
@@ -3971,7 +3971,7 @@ src/crypto/rand_extra/forkunsafe.o: src/crypto/rand_extra/forkunsafe.c.o
 
 # target to build an object file
 src/crypto/rand_extra/forkunsafe.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/forkunsafe.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/forkunsafe.c.o
 .PHONY : src/crypto/rand_extra/forkunsafe.c.o
 
 src/crypto/rand_extra/forkunsafe.i: src/crypto/rand_extra/forkunsafe.c.i
@@ -3980,7 +3980,7 @@ src/crypto/rand_extra/forkunsafe.i: src/crypto/rand_extra/forkunsafe.c.i
 
 # target to preprocess a source file
 src/crypto/rand_extra/forkunsafe.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/forkunsafe.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/forkunsafe.c.i
 .PHONY : src/crypto/rand_extra/forkunsafe.c.i
 
 src/crypto/rand_extra/forkunsafe.s: src/crypto/rand_extra/forkunsafe.c.s
@@ -3989,7 +3989,7 @@ src/crypto/rand_extra/forkunsafe.s: src/crypto/rand_extra/forkunsafe.c.s
 
 # target to generate assembly for a file
 src/crypto/rand_extra/forkunsafe.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/forkunsafe.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/forkunsafe.c.s
 .PHONY : src/crypto/rand_extra/forkunsafe.c.s
 
 src/crypto/rand_extra/fuchsia.o: src/crypto/rand_extra/fuchsia.c.o
@@ -3998,7 +3998,7 @@ src/crypto/rand_extra/fuchsia.o: src/crypto/rand_extra/fuchsia.c.o
 
 # target to build an object file
 src/crypto/rand_extra/fuchsia.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/fuchsia.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/fuchsia.c.o
 .PHONY : src/crypto/rand_extra/fuchsia.c.o
 
 src/crypto/rand_extra/fuchsia.i: src/crypto/rand_extra/fuchsia.c.i
@@ -4007,7 +4007,7 @@ src/crypto/rand_extra/fuchsia.i: src/crypto/rand_extra/fuchsia.c.i
 
 # target to preprocess a source file
 src/crypto/rand_extra/fuchsia.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/fuchsia.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/fuchsia.c.i
 .PHONY : src/crypto/rand_extra/fuchsia.c.i
 
 src/crypto/rand_extra/fuchsia.s: src/crypto/rand_extra/fuchsia.c.s
@@ -4016,7 +4016,7 @@ src/crypto/rand_extra/fuchsia.s: src/crypto/rand_extra/fuchsia.c.s
 
 # target to generate assembly for a file
 src/crypto/rand_extra/fuchsia.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/fuchsia.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/fuchsia.c.s
 .PHONY : src/crypto/rand_extra/fuchsia.c.s
 
 src/crypto/rand_extra/passive.o: src/crypto/rand_extra/passive.c.o
@@ -4025,7 +4025,7 @@ src/crypto/rand_extra/passive.o: src/crypto/rand_extra/passive.c.o
 
 # target to build an object file
 src/crypto/rand_extra/passive.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/passive.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/passive.c.o
 .PHONY : src/crypto/rand_extra/passive.c.o
 
 src/crypto/rand_extra/passive.i: src/crypto/rand_extra/passive.c.i
@@ -4034,7 +4034,7 @@ src/crypto/rand_extra/passive.i: src/crypto/rand_extra/passive.c.i
 
 # target to preprocess a source file
 src/crypto/rand_extra/passive.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/passive.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/passive.c.i
 .PHONY : src/crypto/rand_extra/passive.c.i
 
 src/crypto/rand_extra/passive.s: src/crypto/rand_extra/passive.c.s
@@ -4043,7 +4043,7 @@ src/crypto/rand_extra/passive.s: src/crypto/rand_extra/passive.c.s
 
 # target to generate assembly for a file
 src/crypto/rand_extra/passive.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/passive.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/passive.c.s
 .PHONY : src/crypto/rand_extra/passive.c.s
 
 src/crypto/rand_extra/rand_extra.o: src/crypto/rand_extra/rand_extra.c.o
@@ -4052,7 +4052,7 @@ src/crypto/rand_extra/rand_extra.o: src/crypto/rand_extra/rand_extra.c.o
 
 # target to build an object file
 src/crypto/rand_extra/rand_extra.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/rand_extra.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/rand_extra.c.o
 .PHONY : src/crypto/rand_extra/rand_extra.c.o
 
 src/crypto/rand_extra/rand_extra.i: src/crypto/rand_extra/rand_extra.c.i
@@ -4061,7 +4061,7 @@ src/crypto/rand_extra/rand_extra.i: src/crypto/rand_extra/rand_extra.c.i
 
 # target to preprocess a source file
 src/crypto/rand_extra/rand_extra.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/rand_extra.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/rand_extra.c.i
 .PHONY : src/crypto/rand_extra/rand_extra.c.i
 
 src/crypto/rand_extra/rand_extra.s: src/crypto/rand_extra/rand_extra.c.s
@@ -4070,7 +4070,7 @@ src/crypto/rand_extra/rand_extra.s: src/crypto/rand_extra/rand_extra.c.s
 
 # target to generate assembly for a file
 src/crypto/rand_extra/rand_extra.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/rand_extra.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/rand_extra.c.s
 .PHONY : src/crypto/rand_extra/rand_extra.c.s
 
 src/crypto/rand_extra/windows.o: src/crypto/rand_extra/windows.c.o
@@ -4079,7 +4079,7 @@ src/crypto/rand_extra/windows.o: src/crypto/rand_extra/windows.c.o
 
 # target to build an object file
 src/crypto/rand_extra/windows.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/windows.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/windows.c.o
 .PHONY : src/crypto/rand_extra/windows.c.o
 
 src/crypto/rand_extra/windows.i: src/crypto/rand_extra/windows.c.i
@@ -4088,7 +4088,7 @@ src/crypto/rand_extra/windows.i: src/crypto/rand_extra/windows.c.i
 
 # target to preprocess a source file
 src/crypto/rand_extra/windows.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/windows.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/windows.c.i
 .PHONY : src/crypto/rand_extra/windows.c.i
 
 src/crypto/rand_extra/windows.s: src/crypto/rand_extra/windows.c.s
@@ -4097,7 +4097,7 @@ src/crypto/rand_extra/windows.s: src/crypto/rand_extra/windows.c.s
 
 # target to generate assembly for a file
 src/crypto/rand_extra/windows.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/windows.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rand_extra/windows.c.s
 .PHONY : src/crypto/rand_extra/windows.c.s
 
 src/crypto/rc4/rc4.o: src/crypto/rc4/rc4.c.o
@@ -4106,7 +4106,7 @@ src/crypto/rc4/rc4.o: src/crypto/rc4/rc4.c.o
 
 # target to build an object file
 src/crypto/rc4/rc4.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rc4/rc4.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rc4/rc4.c.o
 .PHONY : src/crypto/rc4/rc4.c.o
 
 src/crypto/rc4/rc4.i: src/crypto/rc4/rc4.c.i
@@ -4115,7 +4115,7 @@ src/crypto/rc4/rc4.i: src/crypto/rc4/rc4.c.i
 
 # target to preprocess a source file
 src/crypto/rc4/rc4.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rc4/rc4.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rc4/rc4.c.i
 .PHONY : src/crypto/rc4/rc4.c.i
 
 src/crypto/rc4/rc4.s: src/crypto/rc4/rc4.c.s
@@ -4124,7 +4124,7 @@ src/crypto/rc4/rc4.s: src/crypto/rc4/rc4.c.s
 
 # target to generate assembly for a file
 src/crypto/rc4/rc4.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rc4/rc4.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rc4/rc4.c.s
 .PHONY : src/crypto/rc4/rc4.c.s
 
 src/crypto/refcount_c11.o: src/crypto/refcount_c11.c.o
@@ -4133,7 +4133,7 @@ src/crypto/refcount_c11.o: src/crypto/refcount_c11.c.o
 
 # target to build an object file
 src/crypto/refcount_c11.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_c11.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_c11.c.o
 .PHONY : src/crypto/refcount_c11.c.o
 
 src/crypto/refcount_c11.i: src/crypto/refcount_c11.c.i
@@ -4142,7 +4142,7 @@ src/crypto/refcount_c11.i: src/crypto/refcount_c11.c.i
 
 # target to preprocess a source file
 src/crypto/refcount_c11.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_c11.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_c11.c.i
 .PHONY : src/crypto/refcount_c11.c.i
 
 src/crypto/refcount_c11.s: src/crypto/refcount_c11.c.s
@@ -4151,7 +4151,7 @@ src/crypto/refcount_c11.s: src/crypto/refcount_c11.c.s
 
 # target to generate assembly for a file
 src/crypto/refcount_c11.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_c11.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_c11.c.s
 .PHONY : src/crypto/refcount_c11.c.s
 
 src/crypto/refcount_lock.o: src/crypto/refcount_lock.c.o
@@ -4160,7 +4160,7 @@ src/crypto/refcount_lock.o: src/crypto/refcount_lock.c.o
 
 # target to build an object file
 src/crypto/refcount_lock.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_lock.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_lock.c.o
 .PHONY : src/crypto/refcount_lock.c.o
 
 src/crypto/refcount_lock.i: src/crypto/refcount_lock.c.i
@@ -4169,7 +4169,7 @@ src/crypto/refcount_lock.i: src/crypto/refcount_lock.c.i
 
 # target to preprocess a source file
 src/crypto/refcount_lock.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_lock.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_lock.c.i
 .PHONY : src/crypto/refcount_lock.c.i
 
 src/crypto/refcount_lock.s: src/crypto/refcount_lock.c.s
@@ -4178,7 +4178,7 @@ src/crypto/refcount_lock.s: src/crypto/refcount_lock.c.s
 
 # target to generate assembly for a file
 src/crypto/refcount_lock.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_lock.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/refcount_lock.c.s
 .PHONY : src/crypto/refcount_lock.c.s
 
 src/crypto/rsa_extra/rsa_asn1.o: src/crypto/rsa_extra/rsa_asn1.c.o
@@ -4187,7 +4187,7 @@ src/crypto/rsa_extra/rsa_asn1.o: src/crypto/rsa_extra/rsa_asn1.c.o
 
 # target to build an object file
 src/crypto/rsa_extra/rsa_asn1.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_asn1.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_asn1.c.o
 .PHONY : src/crypto/rsa_extra/rsa_asn1.c.o
 
 src/crypto/rsa_extra/rsa_asn1.i: src/crypto/rsa_extra/rsa_asn1.c.i
@@ -4196,7 +4196,7 @@ src/crypto/rsa_extra/rsa_asn1.i: src/crypto/rsa_extra/rsa_asn1.c.i
 
 # target to preprocess a source file
 src/crypto/rsa_extra/rsa_asn1.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_asn1.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_asn1.c.i
 .PHONY : src/crypto/rsa_extra/rsa_asn1.c.i
 
 src/crypto/rsa_extra/rsa_asn1.s: src/crypto/rsa_extra/rsa_asn1.c.s
@@ -4205,7 +4205,7 @@ src/crypto/rsa_extra/rsa_asn1.s: src/crypto/rsa_extra/rsa_asn1.c.s
 
 # target to generate assembly for a file
 src/crypto/rsa_extra/rsa_asn1.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_asn1.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_asn1.c.s
 .PHONY : src/crypto/rsa_extra/rsa_asn1.c.s
 
 src/crypto/rsa_extra/rsa_print.o: src/crypto/rsa_extra/rsa_print.c.o
@@ -4214,7 +4214,7 @@ src/crypto/rsa_extra/rsa_print.o: src/crypto/rsa_extra/rsa_print.c.o
 
 # target to build an object file
 src/crypto/rsa_extra/rsa_print.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_print.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_print.c.o
 .PHONY : src/crypto/rsa_extra/rsa_print.c.o
 
 src/crypto/rsa_extra/rsa_print.i: src/crypto/rsa_extra/rsa_print.c.i
@@ -4223,7 +4223,7 @@ src/crypto/rsa_extra/rsa_print.i: src/crypto/rsa_extra/rsa_print.c.i
 
 # target to preprocess a source file
 src/crypto/rsa_extra/rsa_print.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_print.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_print.c.i
 .PHONY : src/crypto/rsa_extra/rsa_print.c.i
 
 src/crypto/rsa_extra/rsa_print.s: src/crypto/rsa_extra/rsa_print.c.s
@@ -4232,7 +4232,7 @@ src/crypto/rsa_extra/rsa_print.s: src/crypto/rsa_extra/rsa_print.c.s
 
 # target to generate assembly for a file
 src/crypto/rsa_extra/rsa_print.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_print.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/rsa_extra/rsa_print.c.s
 .PHONY : src/crypto/rsa_extra/rsa_print.c.s
 
 src/crypto/siphash/siphash.o: src/crypto/siphash/siphash.c.o
@@ -4241,7 +4241,7 @@ src/crypto/siphash/siphash.o: src/crypto/siphash/siphash.c.o
 
 # target to build an object file
 src/crypto/siphash/siphash.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/siphash/siphash.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/siphash/siphash.c.o
 .PHONY : src/crypto/siphash/siphash.c.o
 
 src/crypto/siphash/siphash.i: src/crypto/siphash/siphash.c.i
@@ -4250,7 +4250,7 @@ src/crypto/siphash/siphash.i: src/crypto/siphash/siphash.c.i
 
 # target to preprocess a source file
 src/crypto/siphash/siphash.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/siphash/siphash.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/siphash/siphash.c.i
 .PHONY : src/crypto/siphash/siphash.c.i
 
 src/crypto/siphash/siphash.s: src/crypto/siphash/siphash.c.s
@@ -4259,7 +4259,7 @@ src/crypto/siphash/siphash.s: src/crypto/siphash/siphash.c.s
 
 # target to generate assembly for a file
 src/crypto/siphash/siphash.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/siphash/siphash.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/siphash/siphash.c.s
 .PHONY : src/crypto/siphash/siphash.c.s
 
 src/crypto/stack/stack.o: src/crypto/stack/stack.c.o
@@ -4268,7 +4268,7 @@ src/crypto/stack/stack.o: src/crypto/stack/stack.c.o
 
 # target to build an object file
 src/crypto/stack/stack.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/stack/stack.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/stack/stack.c.o
 .PHONY : src/crypto/stack/stack.c.o
 
 src/crypto/stack/stack.i: src/crypto/stack/stack.c.i
@@ -4277,7 +4277,7 @@ src/crypto/stack/stack.i: src/crypto/stack/stack.c.i
 
 # target to preprocess a source file
 src/crypto/stack/stack.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/stack/stack.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/stack/stack.c.i
 .PHONY : src/crypto/stack/stack.c.i
 
 src/crypto/stack/stack.s: src/crypto/stack/stack.c.s
@@ -4286,7 +4286,7 @@ src/crypto/stack/stack.s: src/crypto/stack/stack.c.s
 
 # target to generate assembly for a file
 src/crypto/stack/stack.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/stack/stack.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/stack/stack.c.s
 .PHONY : src/crypto/stack/stack.c.s
 
 src/crypto/thread.o: src/crypto/thread.c.o
@@ -4295,7 +4295,7 @@ src/crypto/thread.o: src/crypto/thread.c.o
 
 # target to build an object file
 src/crypto/thread.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread.c.o
 .PHONY : src/crypto/thread.c.o
 
 src/crypto/thread.i: src/crypto/thread.c.i
@@ -4304,7 +4304,7 @@ src/crypto/thread.i: src/crypto/thread.c.i
 
 # target to preprocess a source file
 src/crypto/thread.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread.c.i
 .PHONY : src/crypto/thread.c.i
 
 src/crypto/thread.s: src/crypto/thread.c.s
@@ -4313,7 +4313,7 @@ src/crypto/thread.s: src/crypto/thread.c.s
 
 # target to generate assembly for a file
 src/crypto/thread.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread.c.s
 .PHONY : src/crypto/thread.c.s
 
 src/crypto/thread_none.o: src/crypto/thread_none.c.o
@@ -4322,7 +4322,7 @@ src/crypto/thread_none.o: src/crypto/thread_none.c.o
 
 # target to build an object file
 src/crypto/thread_none.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_none.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_none.c.o
 .PHONY : src/crypto/thread_none.c.o
 
 src/crypto/thread_none.i: src/crypto/thread_none.c.i
@@ -4331,7 +4331,7 @@ src/crypto/thread_none.i: src/crypto/thread_none.c.i
 
 # target to preprocess a source file
 src/crypto/thread_none.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_none.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_none.c.i
 .PHONY : src/crypto/thread_none.c.i
 
 src/crypto/thread_none.s: src/crypto/thread_none.c.s
@@ -4340,7 +4340,7 @@ src/crypto/thread_none.s: src/crypto/thread_none.c.s
 
 # target to generate assembly for a file
 src/crypto/thread_none.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_none.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_none.c.s
 .PHONY : src/crypto/thread_none.c.s
 
 src/crypto/thread_pthread.o: src/crypto/thread_pthread.c.o
@@ -4349,7 +4349,7 @@ src/crypto/thread_pthread.o: src/crypto/thread_pthread.c.o
 
 # target to build an object file
 src/crypto/thread_pthread.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_pthread.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_pthread.c.o
 .PHONY : src/crypto/thread_pthread.c.o
 
 src/crypto/thread_pthread.i: src/crypto/thread_pthread.c.i
@@ -4358,7 +4358,7 @@ src/crypto/thread_pthread.i: src/crypto/thread_pthread.c.i
 
 # target to preprocess a source file
 src/crypto/thread_pthread.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_pthread.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_pthread.c.i
 .PHONY : src/crypto/thread_pthread.c.i
 
 src/crypto/thread_pthread.s: src/crypto/thread_pthread.c.s
@@ -4367,7 +4367,7 @@ src/crypto/thread_pthread.s: src/crypto/thread_pthread.c.s
 
 # target to generate assembly for a file
 src/crypto/thread_pthread.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_pthread.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_pthread.c.s
 .PHONY : src/crypto/thread_pthread.c.s
 
 src/crypto/thread_win.o: src/crypto/thread_win.c.o
@@ -4376,7 +4376,7 @@ src/crypto/thread_win.o: src/crypto/thread_win.c.o
 
 # target to build an object file
 src/crypto/thread_win.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_win.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_win.c.o
 .PHONY : src/crypto/thread_win.c.o
 
 src/crypto/thread_win.i: src/crypto/thread_win.c.i
@@ -4385,7 +4385,7 @@ src/crypto/thread_win.i: src/crypto/thread_win.c.i
 
 # target to preprocess a source file
 src/crypto/thread_win.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_win.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_win.c.i
 .PHONY : src/crypto/thread_win.c.i
 
 src/crypto/thread_win.s: src/crypto/thread_win.c.s
@@ -4394,7 +4394,7 @@ src/crypto/thread_win.s: src/crypto/thread_win.c.s
 
 # target to generate assembly for a file
 src/crypto/thread_win.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_win.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/thread_win.c.s
 .PHONY : src/crypto/thread_win.c.s
 
 src/crypto/trust_token/pmbtoken.o: src/crypto/trust_token/pmbtoken.c.o
@@ -4403,7 +4403,7 @@ src/crypto/trust_token/pmbtoken.o: src/crypto/trust_token/pmbtoken.c.o
 
 # target to build an object file
 src/crypto/trust_token/pmbtoken.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/pmbtoken.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/pmbtoken.c.o
 .PHONY : src/crypto/trust_token/pmbtoken.c.o
 
 src/crypto/trust_token/pmbtoken.i: src/crypto/trust_token/pmbtoken.c.i
@@ -4412,7 +4412,7 @@ src/crypto/trust_token/pmbtoken.i: src/crypto/trust_token/pmbtoken.c.i
 
 # target to preprocess a source file
 src/crypto/trust_token/pmbtoken.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/pmbtoken.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/pmbtoken.c.i
 .PHONY : src/crypto/trust_token/pmbtoken.c.i
 
 src/crypto/trust_token/pmbtoken.s: src/crypto/trust_token/pmbtoken.c.s
@@ -4421,7 +4421,7 @@ src/crypto/trust_token/pmbtoken.s: src/crypto/trust_token/pmbtoken.c.s
 
 # target to generate assembly for a file
 src/crypto/trust_token/pmbtoken.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/pmbtoken.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/pmbtoken.c.s
 .PHONY : src/crypto/trust_token/pmbtoken.c.s
 
 src/crypto/trust_token/trust_token.o: src/crypto/trust_token/trust_token.c.o
@@ -4430,7 +4430,7 @@ src/crypto/trust_token/trust_token.o: src/crypto/trust_token/trust_token.c.o
 
 # target to build an object file
 src/crypto/trust_token/trust_token.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/trust_token.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/trust_token.c.o
 .PHONY : src/crypto/trust_token/trust_token.c.o
 
 src/crypto/trust_token/trust_token.i: src/crypto/trust_token/trust_token.c.i
@@ -4439,7 +4439,7 @@ src/crypto/trust_token/trust_token.i: src/crypto/trust_token/trust_token.c.i
 
 # target to preprocess a source file
 src/crypto/trust_token/trust_token.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/trust_token.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/trust_token.c.i
 .PHONY : src/crypto/trust_token/trust_token.c.i
 
 src/crypto/trust_token/trust_token.s: src/crypto/trust_token/trust_token.c.s
@@ -4448,7 +4448,7 @@ src/crypto/trust_token/trust_token.s: src/crypto/trust_token/trust_token.c.s
 
 # target to generate assembly for a file
 src/crypto/trust_token/trust_token.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/trust_token.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/trust_token.c.s
 .PHONY : src/crypto/trust_token/trust_token.c.s
 
 src/crypto/trust_token/voprf.o: src/crypto/trust_token/voprf.c.o
@@ -4457,7 +4457,7 @@ src/crypto/trust_token/voprf.o: src/crypto/trust_token/voprf.c.o
 
 # target to build an object file
 src/crypto/trust_token/voprf.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/voprf.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/voprf.c.o
 .PHONY : src/crypto/trust_token/voprf.c.o
 
 src/crypto/trust_token/voprf.i: src/crypto/trust_token/voprf.c.i
@@ -4466,7 +4466,7 @@ src/crypto/trust_token/voprf.i: src/crypto/trust_token/voprf.c.i
 
 # target to preprocess a source file
 src/crypto/trust_token/voprf.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/voprf.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/voprf.c.i
 .PHONY : src/crypto/trust_token/voprf.c.i
 
 src/crypto/trust_token/voprf.s: src/crypto/trust_token/voprf.c.s
@@ -4475,7 +4475,7 @@ src/crypto/trust_token/voprf.s: src/crypto/trust_token/voprf.c.s
 
 # target to generate assembly for a file
 src/crypto/trust_token/voprf.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/voprf.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/trust_token/voprf.c.s
 .PHONY : src/crypto/trust_token/voprf.c.s
 
 src/crypto/x509/a_digest.o: src/crypto/x509/a_digest.c.o
@@ -4484,7 +4484,7 @@ src/crypto/x509/a_digest.o: src/crypto/x509/a_digest.c.o
 
 # target to build an object file
 src/crypto/x509/a_digest.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_digest.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_digest.c.o
 .PHONY : src/crypto/x509/a_digest.c.o
 
 src/crypto/x509/a_digest.i: src/crypto/x509/a_digest.c.i
@@ -4493,7 +4493,7 @@ src/crypto/x509/a_digest.i: src/crypto/x509/a_digest.c.i
 
 # target to preprocess a source file
 src/crypto/x509/a_digest.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_digest.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_digest.c.i
 .PHONY : src/crypto/x509/a_digest.c.i
 
 src/crypto/x509/a_digest.s: src/crypto/x509/a_digest.c.s
@@ -4502,7 +4502,7 @@ src/crypto/x509/a_digest.s: src/crypto/x509/a_digest.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/a_digest.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_digest.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_digest.c.s
 .PHONY : src/crypto/x509/a_digest.c.s
 
 src/crypto/x509/a_sign.o: src/crypto/x509/a_sign.c.o
@@ -4511,7 +4511,7 @@ src/crypto/x509/a_sign.o: src/crypto/x509/a_sign.c.o
 
 # target to build an object file
 src/crypto/x509/a_sign.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_sign.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_sign.c.o
 .PHONY : src/crypto/x509/a_sign.c.o
 
 src/crypto/x509/a_sign.i: src/crypto/x509/a_sign.c.i
@@ -4520,7 +4520,7 @@ src/crypto/x509/a_sign.i: src/crypto/x509/a_sign.c.i
 
 # target to preprocess a source file
 src/crypto/x509/a_sign.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_sign.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_sign.c.i
 .PHONY : src/crypto/x509/a_sign.c.i
 
 src/crypto/x509/a_sign.s: src/crypto/x509/a_sign.c.s
@@ -4529,7 +4529,7 @@ src/crypto/x509/a_sign.s: src/crypto/x509/a_sign.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/a_sign.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_sign.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_sign.c.s
 .PHONY : src/crypto/x509/a_sign.c.s
 
 src/crypto/x509/a_strex.o: src/crypto/x509/a_strex.c.o
@@ -4538,7 +4538,7 @@ src/crypto/x509/a_strex.o: src/crypto/x509/a_strex.c.o
 
 # target to build an object file
 src/crypto/x509/a_strex.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_strex.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_strex.c.o
 .PHONY : src/crypto/x509/a_strex.c.o
 
 src/crypto/x509/a_strex.i: src/crypto/x509/a_strex.c.i
@@ -4547,7 +4547,7 @@ src/crypto/x509/a_strex.i: src/crypto/x509/a_strex.c.i
 
 # target to preprocess a source file
 src/crypto/x509/a_strex.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_strex.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_strex.c.i
 .PHONY : src/crypto/x509/a_strex.c.i
 
 src/crypto/x509/a_strex.s: src/crypto/x509/a_strex.c.s
@@ -4556,7 +4556,7 @@ src/crypto/x509/a_strex.s: src/crypto/x509/a_strex.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/a_strex.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_strex.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_strex.c.s
 .PHONY : src/crypto/x509/a_strex.c.s
 
 src/crypto/x509/a_verify.o: src/crypto/x509/a_verify.c.o
@@ -4565,7 +4565,7 @@ src/crypto/x509/a_verify.o: src/crypto/x509/a_verify.c.o
 
 # target to build an object file
 src/crypto/x509/a_verify.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_verify.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_verify.c.o
 .PHONY : src/crypto/x509/a_verify.c.o
 
 src/crypto/x509/a_verify.i: src/crypto/x509/a_verify.c.i
@@ -4574,7 +4574,7 @@ src/crypto/x509/a_verify.i: src/crypto/x509/a_verify.c.i
 
 # target to preprocess a source file
 src/crypto/x509/a_verify.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_verify.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_verify.c.i
 .PHONY : src/crypto/x509/a_verify.c.i
 
 src/crypto/x509/a_verify.s: src/crypto/x509/a_verify.c.s
@@ -4583,7 +4583,7 @@ src/crypto/x509/a_verify.s: src/crypto/x509/a_verify.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/a_verify.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_verify.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/a_verify.c.s
 .PHONY : src/crypto/x509/a_verify.c.s
 
 src/crypto/x509/algorithm.o: src/crypto/x509/algorithm.c.o
@@ -4592,7 +4592,7 @@ src/crypto/x509/algorithm.o: src/crypto/x509/algorithm.c.o
 
 # target to build an object file
 src/crypto/x509/algorithm.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/algorithm.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/algorithm.c.o
 .PHONY : src/crypto/x509/algorithm.c.o
 
 src/crypto/x509/algorithm.i: src/crypto/x509/algorithm.c.i
@@ -4601,7 +4601,7 @@ src/crypto/x509/algorithm.i: src/crypto/x509/algorithm.c.i
 
 # target to preprocess a source file
 src/crypto/x509/algorithm.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/algorithm.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/algorithm.c.i
 .PHONY : src/crypto/x509/algorithm.c.i
 
 src/crypto/x509/algorithm.s: src/crypto/x509/algorithm.c.s
@@ -4610,7 +4610,7 @@ src/crypto/x509/algorithm.s: src/crypto/x509/algorithm.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/algorithm.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/algorithm.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/algorithm.c.s
 .PHONY : src/crypto/x509/algorithm.c.s
 
 src/crypto/x509/asn1_gen.o: src/crypto/x509/asn1_gen.c.o
@@ -4619,7 +4619,7 @@ src/crypto/x509/asn1_gen.o: src/crypto/x509/asn1_gen.c.o
 
 # target to build an object file
 src/crypto/x509/asn1_gen.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/asn1_gen.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/asn1_gen.c.o
 .PHONY : src/crypto/x509/asn1_gen.c.o
 
 src/crypto/x509/asn1_gen.i: src/crypto/x509/asn1_gen.c.i
@@ -4628,7 +4628,7 @@ src/crypto/x509/asn1_gen.i: src/crypto/x509/asn1_gen.c.i
 
 # target to preprocess a source file
 src/crypto/x509/asn1_gen.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/asn1_gen.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/asn1_gen.c.i
 .PHONY : src/crypto/x509/asn1_gen.c.i
 
 src/crypto/x509/asn1_gen.s: src/crypto/x509/asn1_gen.c.s
@@ -4637,7 +4637,7 @@ src/crypto/x509/asn1_gen.s: src/crypto/x509/asn1_gen.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/asn1_gen.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/asn1_gen.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/asn1_gen.c.s
 .PHONY : src/crypto/x509/asn1_gen.c.s
 
 src/crypto/x509/by_dir.o: src/crypto/x509/by_dir.c.o
@@ -4646,7 +4646,7 @@ src/crypto/x509/by_dir.o: src/crypto/x509/by_dir.c.o
 
 # target to build an object file
 src/crypto/x509/by_dir.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_dir.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_dir.c.o
 .PHONY : src/crypto/x509/by_dir.c.o
 
 src/crypto/x509/by_dir.i: src/crypto/x509/by_dir.c.i
@@ -4655,7 +4655,7 @@ src/crypto/x509/by_dir.i: src/crypto/x509/by_dir.c.i
 
 # target to preprocess a source file
 src/crypto/x509/by_dir.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_dir.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_dir.c.i
 .PHONY : src/crypto/x509/by_dir.c.i
 
 src/crypto/x509/by_dir.s: src/crypto/x509/by_dir.c.s
@@ -4664,7 +4664,7 @@ src/crypto/x509/by_dir.s: src/crypto/x509/by_dir.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/by_dir.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_dir.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_dir.c.s
 .PHONY : src/crypto/x509/by_dir.c.s
 
 src/crypto/x509/by_file.o: src/crypto/x509/by_file.c.o
@@ -4673,7 +4673,7 @@ src/crypto/x509/by_file.o: src/crypto/x509/by_file.c.o
 
 # target to build an object file
 src/crypto/x509/by_file.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_file.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_file.c.o
 .PHONY : src/crypto/x509/by_file.c.o
 
 src/crypto/x509/by_file.i: src/crypto/x509/by_file.c.i
@@ -4682,7 +4682,7 @@ src/crypto/x509/by_file.i: src/crypto/x509/by_file.c.i
 
 # target to preprocess a source file
 src/crypto/x509/by_file.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_file.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_file.c.i
 .PHONY : src/crypto/x509/by_file.c.i
 
 src/crypto/x509/by_file.s: src/crypto/x509/by_file.c.s
@@ -4691,7 +4691,7 @@ src/crypto/x509/by_file.s: src/crypto/x509/by_file.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/by_file.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_file.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/by_file.c.s
 .PHONY : src/crypto/x509/by_file.c.s
 
 src/crypto/x509/i2d_pr.o: src/crypto/x509/i2d_pr.c.o
@@ -4700,7 +4700,7 @@ src/crypto/x509/i2d_pr.o: src/crypto/x509/i2d_pr.c.o
 
 # target to build an object file
 src/crypto/x509/i2d_pr.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/i2d_pr.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/i2d_pr.c.o
 .PHONY : src/crypto/x509/i2d_pr.c.o
 
 src/crypto/x509/i2d_pr.i: src/crypto/x509/i2d_pr.c.i
@@ -4709,7 +4709,7 @@ src/crypto/x509/i2d_pr.i: src/crypto/x509/i2d_pr.c.i
 
 # target to preprocess a source file
 src/crypto/x509/i2d_pr.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/i2d_pr.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/i2d_pr.c.i
 .PHONY : src/crypto/x509/i2d_pr.c.i
 
 src/crypto/x509/i2d_pr.s: src/crypto/x509/i2d_pr.c.s
@@ -4718,7 +4718,7 @@ src/crypto/x509/i2d_pr.s: src/crypto/x509/i2d_pr.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/i2d_pr.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/i2d_pr.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/i2d_pr.c.s
 .PHONY : src/crypto/x509/i2d_pr.c.s
 
 src/crypto/x509/rsa_pss.o: src/crypto/x509/rsa_pss.c.o
@@ -4727,7 +4727,7 @@ src/crypto/x509/rsa_pss.o: src/crypto/x509/rsa_pss.c.o
 
 # target to build an object file
 src/crypto/x509/rsa_pss.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/rsa_pss.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/rsa_pss.c.o
 .PHONY : src/crypto/x509/rsa_pss.c.o
 
 src/crypto/x509/rsa_pss.i: src/crypto/x509/rsa_pss.c.i
@@ -4736,7 +4736,7 @@ src/crypto/x509/rsa_pss.i: src/crypto/x509/rsa_pss.c.i
 
 # target to preprocess a source file
 src/crypto/x509/rsa_pss.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/rsa_pss.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/rsa_pss.c.i
 .PHONY : src/crypto/x509/rsa_pss.c.i
 
 src/crypto/x509/rsa_pss.s: src/crypto/x509/rsa_pss.c.s
@@ -4745,7 +4745,7 @@ src/crypto/x509/rsa_pss.s: src/crypto/x509/rsa_pss.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/rsa_pss.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/rsa_pss.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/rsa_pss.c.s
 .PHONY : src/crypto/x509/rsa_pss.c.s
 
 src/crypto/x509/t_crl.o: src/crypto/x509/t_crl.c.o
@@ -4754,7 +4754,7 @@ src/crypto/x509/t_crl.o: src/crypto/x509/t_crl.c.o
 
 # target to build an object file
 src/crypto/x509/t_crl.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_crl.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_crl.c.o
 .PHONY : src/crypto/x509/t_crl.c.o
 
 src/crypto/x509/t_crl.i: src/crypto/x509/t_crl.c.i
@@ -4763,7 +4763,7 @@ src/crypto/x509/t_crl.i: src/crypto/x509/t_crl.c.i
 
 # target to preprocess a source file
 src/crypto/x509/t_crl.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_crl.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_crl.c.i
 .PHONY : src/crypto/x509/t_crl.c.i
 
 src/crypto/x509/t_crl.s: src/crypto/x509/t_crl.c.s
@@ -4772,7 +4772,7 @@ src/crypto/x509/t_crl.s: src/crypto/x509/t_crl.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/t_crl.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_crl.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_crl.c.s
 .PHONY : src/crypto/x509/t_crl.c.s
 
 src/crypto/x509/t_req.o: src/crypto/x509/t_req.c.o
@@ -4781,7 +4781,7 @@ src/crypto/x509/t_req.o: src/crypto/x509/t_req.c.o
 
 # target to build an object file
 src/crypto/x509/t_req.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_req.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_req.c.o
 .PHONY : src/crypto/x509/t_req.c.o
 
 src/crypto/x509/t_req.i: src/crypto/x509/t_req.c.i
@@ -4790,7 +4790,7 @@ src/crypto/x509/t_req.i: src/crypto/x509/t_req.c.i
 
 # target to preprocess a source file
 src/crypto/x509/t_req.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_req.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_req.c.i
 .PHONY : src/crypto/x509/t_req.c.i
 
 src/crypto/x509/t_req.s: src/crypto/x509/t_req.c.s
@@ -4799,7 +4799,7 @@ src/crypto/x509/t_req.s: src/crypto/x509/t_req.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/t_req.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_req.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_req.c.s
 .PHONY : src/crypto/x509/t_req.c.s
 
 src/crypto/x509/t_x509.o: src/crypto/x509/t_x509.c.o
@@ -4808,7 +4808,7 @@ src/crypto/x509/t_x509.o: src/crypto/x509/t_x509.c.o
 
 # target to build an object file
 src/crypto/x509/t_x509.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509.c.o
 .PHONY : src/crypto/x509/t_x509.c.o
 
 src/crypto/x509/t_x509.i: src/crypto/x509/t_x509.c.i
@@ -4817,7 +4817,7 @@ src/crypto/x509/t_x509.i: src/crypto/x509/t_x509.c.i
 
 # target to preprocess a source file
 src/crypto/x509/t_x509.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509.c.i
 .PHONY : src/crypto/x509/t_x509.c.i
 
 src/crypto/x509/t_x509.s: src/crypto/x509/t_x509.c.s
@@ -4826,7 +4826,7 @@ src/crypto/x509/t_x509.s: src/crypto/x509/t_x509.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/t_x509.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509.c.s
 .PHONY : src/crypto/x509/t_x509.c.s
 
 src/crypto/x509/t_x509a.o: src/crypto/x509/t_x509a.c.o
@@ -4835,7 +4835,7 @@ src/crypto/x509/t_x509a.o: src/crypto/x509/t_x509a.c.o
 
 # target to build an object file
 src/crypto/x509/t_x509a.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509a.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509a.c.o
 .PHONY : src/crypto/x509/t_x509a.c.o
 
 src/crypto/x509/t_x509a.i: src/crypto/x509/t_x509a.c.i
@@ -4844,7 +4844,7 @@ src/crypto/x509/t_x509a.i: src/crypto/x509/t_x509a.c.i
 
 # target to preprocess a source file
 src/crypto/x509/t_x509a.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509a.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509a.c.i
 .PHONY : src/crypto/x509/t_x509a.c.i
 
 src/crypto/x509/t_x509a.s: src/crypto/x509/t_x509a.c.s
@@ -4853,7 +4853,7 @@ src/crypto/x509/t_x509a.s: src/crypto/x509/t_x509a.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/t_x509a.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509a.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/t_x509a.c.s
 .PHONY : src/crypto/x509/t_x509a.c.s
 
 src/crypto/x509/x509.o: src/crypto/x509/x509.c.o
@@ -4862,7 +4862,7 @@ src/crypto/x509/x509.o: src/crypto/x509/x509.c.o
 
 # target to build an object file
 src/crypto/x509/x509.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509.c.o
 .PHONY : src/crypto/x509/x509.c.o
 
 src/crypto/x509/x509.i: src/crypto/x509/x509.c.i
@@ -4871,7 +4871,7 @@ src/crypto/x509/x509.i: src/crypto/x509/x509.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509.c.i
 .PHONY : src/crypto/x509/x509.c.i
 
 src/crypto/x509/x509.s: src/crypto/x509/x509.c.s
@@ -4880,7 +4880,7 @@ src/crypto/x509/x509.s: src/crypto/x509/x509.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509.c.s
 .PHONY : src/crypto/x509/x509.c.s
 
 src/crypto/x509/x509_att.o: src/crypto/x509/x509_att.c.o
@@ -4889,7 +4889,7 @@ src/crypto/x509/x509_att.o: src/crypto/x509/x509_att.c.o
 
 # target to build an object file
 src/crypto/x509/x509_att.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_att.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_att.c.o
 .PHONY : src/crypto/x509/x509_att.c.o
 
 src/crypto/x509/x509_att.i: src/crypto/x509/x509_att.c.i
@@ -4898,7 +4898,7 @@ src/crypto/x509/x509_att.i: src/crypto/x509/x509_att.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_att.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_att.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_att.c.i
 .PHONY : src/crypto/x509/x509_att.c.i
 
 src/crypto/x509/x509_att.s: src/crypto/x509/x509_att.c.s
@@ -4907,7 +4907,7 @@ src/crypto/x509/x509_att.s: src/crypto/x509/x509_att.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_att.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_att.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_att.c.s
 .PHONY : src/crypto/x509/x509_att.c.s
 
 src/crypto/x509/x509_cmp.o: src/crypto/x509/x509_cmp.c.o
@@ -4916,7 +4916,7 @@ src/crypto/x509/x509_cmp.o: src/crypto/x509/x509_cmp.c.o
 
 # target to build an object file
 src/crypto/x509/x509_cmp.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_cmp.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_cmp.c.o
 .PHONY : src/crypto/x509/x509_cmp.c.o
 
 src/crypto/x509/x509_cmp.i: src/crypto/x509/x509_cmp.c.i
@@ -4925,7 +4925,7 @@ src/crypto/x509/x509_cmp.i: src/crypto/x509/x509_cmp.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_cmp.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_cmp.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_cmp.c.i
 .PHONY : src/crypto/x509/x509_cmp.c.i
 
 src/crypto/x509/x509_cmp.s: src/crypto/x509/x509_cmp.c.s
@@ -4934,7 +4934,7 @@ src/crypto/x509/x509_cmp.s: src/crypto/x509/x509_cmp.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_cmp.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_cmp.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_cmp.c.s
 .PHONY : src/crypto/x509/x509_cmp.c.s
 
 src/crypto/x509/x509_d2.o: src/crypto/x509/x509_d2.c.o
@@ -4943,7 +4943,7 @@ src/crypto/x509/x509_d2.o: src/crypto/x509/x509_d2.c.o
 
 # target to build an object file
 src/crypto/x509/x509_d2.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_d2.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_d2.c.o
 .PHONY : src/crypto/x509/x509_d2.c.o
 
 src/crypto/x509/x509_d2.i: src/crypto/x509/x509_d2.c.i
@@ -4952,7 +4952,7 @@ src/crypto/x509/x509_d2.i: src/crypto/x509/x509_d2.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_d2.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_d2.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_d2.c.i
 .PHONY : src/crypto/x509/x509_d2.c.i
 
 src/crypto/x509/x509_d2.s: src/crypto/x509/x509_d2.c.s
@@ -4961,7 +4961,7 @@ src/crypto/x509/x509_d2.s: src/crypto/x509/x509_d2.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_d2.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_d2.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_d2.c.s
 .PHONY : src/crypto/x509/x509_d2.c.s
 
 src/crypto/x509/x509_def.o: src/crypto/x509/x509_def.c.o
@@ -4970,7 +4970,7 @@ src/crypto/x509/x509_def.o: src/crypto/x509/x509_def.c.o
 
 # target to build an object file
 src/crypto/x509/x509_def.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_def.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_def.c.o
 .PHONY : src/crypto/x509/x509_def.c.o
 
 src/crypto/x509/x509_def.i: src/crypto/x509/x509_def.c.i
@@ -4979,7 +4979,7 @@ src/crypto/x509/x509_def.i: src/crypto/x509/x509_def.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_def.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_def.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_def.c.i
 .PHONY : src/crypto/x509/x509_def.c.i
 
 src/crypto/x509/x509_def.s: src/crypto/x509/x509_def.c.s
@@ -4988,7 +4988,7 @@ src/crypto/x509/x509_def.s: src/crypto/x509/x509_def.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_def.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_def.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_def.c.s
 .PHONY : src/crypto/x509/x509_def.c.s
 
 src/crypto/x509/x509_ext.o: src/crypto/x509/x509_ext.c.o
@@ -4997,7 +4997,7 @@ src/crypto/x509/x509_ext.o: src/crypto/x509/x509_ext.c.o
 
 # target to build an object file
 src/crypto/x509/x509_ext.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_ext.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_ext.c.o
 .PHONY : src/crypto/x509/x509_ext.c.o
 
 src/crypto/x509/x509_ext.i: src/crypto/x509/x509_ext.c.i
@@ -5006,7 +5006,7 @@ src/crypto/x509/x509_ext.i: src/crypto/x509/x509_ext.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_ext.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_ext.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_ext.c.i
 .PHONY : src/crypto/x509/x509_ext.c.i
 
 src/crypto/x509/x509_ext.s: src/crypto/x509/x509_ext.c.s
@@ -5015,7 +5015,7 @@ src/crypto/x509/x509_ext.s: src/crypto/x509/x509_ext.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_ext.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_ext.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_ext.c.s
 .PHONY : src/crypto/x509/x509_ext.c.s
 
 src/crypto/x509/x509_lu.o: src/crypto/x509/x509_lu.c.o
@@ -5024,7 +5024,7 @@ src/crypto/x509/x509_lu.o: src/crypto/x509/x509_lu.c.o
 
 # target to build an object file
 src/crypto/x509/x509_lu.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_lu.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_lu.c.o
 .PHONY : src/crypto/x509/x509_lu.c.o
 
 src/crypto/x509/x509_lu.i: src/crypto/x509/x509_lu.c.i
@@ -5033,7 +5033,7 @@ src/crypto/x509/x509_lu.i: src/crypto/x509/x509_lu.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_lu.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_lu.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_lu.c.i
 .PHONY : src/crypto/x509/x509_lu.c.i
 
 src/crypto/x509/x509_lu.s: src/crypto/x509/x509_lu.c.s
@@ -5042,7 +5042,7 @@ src/crypto/x509/x509_lu.s: src/crypto/x509/x509_lu.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_lu.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_lu.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_lu.c.s
 .PHONY : src/crypto/x509/x509_lu.c.s
 
 src/crypto/x509/x509_obj.o: src/crypto/x509/x509_obj.c.o
@@ -5051,7 +5051,7 @@ src/crypto/x509/x509_obj.o: src/crypto/x509/x509_obj.c.o
 
 # target to build an object file
 src/crypto/x509/x509_obj.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_obj.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_obj.c.o
 .PHONY : src/crypto/x509/x509_obj.c.o
 
 src/crypto/x509/x509_obj.i: src/crypto/x509/x509_obj.c.i
@@ -5060,7 +5060,7 @@ src/crypto/x509/x509_obj.i: src/crypto/x509/x509_obj.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_obj.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_obj.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_obj.c.i
 .PHONY : src/crypto/x509/x509_obj.c.i
 
 src/crypto/x509/x509_obj.s: src/crypto/x509/x509_obj.c.s
@@ -5069,7 +5069,7 @@ src/crypto/x509/x509_obj.s: src/crypto/x509/x509_obj.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_obj.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_obj.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_obj.c.s
 .PHONY : src/crypto/x509/x509_obj.c.s
 
 src/crypto/x509/x509_req.o: src/crypto/x509/x509_req.c.o
@@ -5078,7 +5078,7 @@ src/crypto/x509/x509_req.o: src/crypto/x509/x509_req.c.o
 
 # target to build an object file
 src/crypto/x509/x509_req.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_req.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_req.c.o
 .PHONY : src/crypto/x509/x509_req.c.o
 
 src/crypto/x509/x509_req.i: src/crypto/x509/x509_req.c.i
@@ -5087,7 +5087,7 @@ src/crypto/x509/x509_req.i: src/crypto/x509/x509_req.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_req.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_req.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_req.c.i
 .PHONY : src/crypto/x509/x509_req.c.i
 
 src/crypto/x509/x509_req.s: src/crypto/x509/x509_req.c.s
@@ -5096,7 +5096,7 @@ src/crypto/x509/x509_req.s: src/crypto/x509/x509_req.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_req.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_req.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_req.c.s
 .PHONY : src/crypto/x509/x509_req.c.s
 
 src/crypto/x509/x509_set.o: src/crypto/x509/x509_set.c.o
@@ -5105,7 +5105,7 @@ src/crypto/x509/x509_set.o: src/crypto/x509/x509_set.c.o
 
 # target to build an object file
 src/crypto/x509/x509_set.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_set.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_set.c.o
 .PHONY : src/crypto/x509/x509_set.c.o
 
 src/crypto/x509/x509_set.i: src/crypto/x509/x509_set.c.i
@@ -5114,7 +5114,7 @@ src/crypto/x509/x509_set.i: src/crypto/x509/x509_set.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_set.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_set.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_set.c.i
 .PHONY : src/crypto/x509/x509_set.c.i
 
 src/crypto/x509/x509_set.s: src/crypto/x509/x509_set.c.s
@@ -5123,7 +5123,7 @@ src/crypto/x509/x509_set.s: src/crypto/x509/x509_set.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_set.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_set.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_set.c.s
 .PHONY : src/crypto/x509/x509_set.c.s
 
 src/crypto/x509/x509_trs.o: src/crypto/x509/x509_trs.c.o
@@ -5132,7 +5132,7 @@ src/crypto/x509/x509_trs.o: src/crypto/x509/x509_trs.c.o
 
 # target to build an object file
 src/crypto/x509/x509_trs.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_trs.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_trs.c.o
 .PHONY : src/crypto/x509/x509_trs.c.o
 
 src/crypto/x509/x509_trs.i: src/crypto/x509/x509_trs.c.i
@@ -5141,7 +5141,7 @@ src/crypto/x509/x509_trs.i: src/crypto/x509/x509_trs.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_trs.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_trs.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_trs.c.i
 .PHONY : src/crypto/x509/x509_trs.c.i
 
 src/crypto/x509/x509_trs.s: src/crypto/x509/x509_trs.c.s
@@ -5150,7 +5150,7 @@ src/crypto/x509/x509_trs.s: src/crypto/x509/x509_trs.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_trs.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_trs.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_trs.c.s
 .PHONY : src/crypto/x509/x509_trs.c.s
 
 src/crypto/x509/x509_txt.o: src/crypto/x509/x509_txt.c.o
@@ -5159,7 +5159,7 @@ src/crypto/x509/x509_txt.o: src/crypto/x509/x509_txt.c.o
 
 # target to build an object file
 src/crypto/x509/x509_txt.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_txt.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_txt.c.o
 .PHONY : src/crypto/x509/x509_txt.c.o
 
 src/crypto/x509/x509_txt.i: src/crypto/x509/x509_txt.c.i
@@ -5168,7 +5168,7 @@ src/crypto/x509/x509_txt.i: src/crypto/x509/x509_txt.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_txt.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_txt.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_txt.c.i
 .PHONY : src/crypto/x509/x509_txt.c.i
 
 src/crypto/x509/x509_txt.s: src/crypto/x509/x509_txt.c.s
@@ -5177,7 +5177,7 @@ src/crypto/x509/x509_txt.s: src/crypto/x509/x509_txt.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_txt.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_txt.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_txt.c.s
 .PHONY : src/crypto/x509/x509_txt.c.s
 
 src/crypto/x509/x509_v3.o: src/crypto/x509/x509_v3.c.o
@@ -5186,7 +5186,7 @@ src/crypto/x509/x509_v3.o: src/crypto/x509/x509_v3.c.o
 
 # target to build an object file
 src/crypto/x509/x509_v3.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_v3.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_v3.c.o
 .PHONY : src/crypto/x509/x509_v3.c.o
 
 src/crypto/x509/x509_v3.i: src/crypto/x509/x509_v3.c.i
@@ -5195,7 +5195,7 @@ src/crypto/x509/x509_v3.i: src/crypto/x509/x509_v3.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_v3.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_v3.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_v3.c.i
 .PHONY : src/crypto/x509/x509_v3.c.i
 
 src/crypto/x509/x509_v3.s: src/crypto/x509/x509_v3.c.s
@@ -5204,7 +5204,7 @@ src/crypto/x509/x509_v3.s: src/crypto/x509/x509_v3.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_v3.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_v3.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_v3.c.s
 .PHONY : src/crypto/x509/x509_v3.c.s
 
 src/crypto/x509/x509_vfy.o: src/crypto/x509/x509_vfy.c.o
@@ -5213,7 +5213,7 @@ src/crypto/x509/x509_vfy.o: src/crypto/x509/x509_vfy.c.o
 
 # target to build an object file
 src/crypto/x509/x509_vfy.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vfy.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vfy.c.o
 .PHONY : src/crypto/x509/x509_vfy.c.o
 
 src/crypto/x509/x509_vfy.i: src/crypto/x509/x509_vfy.c.i
@@ -5222,7 +5222,7 @@ src/crypto/x509/x509_vfy.i: src/crypto/x509/x509_vfy.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_vfy.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vfy.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vfy.c.i
 .PHONY : src/crypto/x509/x509_vfy.c.i
 
 src/crypto/x509/x509_vfy.s: src/crypto/x509/x509_vfy.c.s
@@ -5231,7 +5231,7 @@ src/crypto/x509/x509_vfy.s: src/crypto/x509/x509_vfy.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_vfy.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vfy.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vfy.c.s
 .PHONY : src/crypto/x509/x509_vfy.c.s
 
 src/crypto/x509/x509_vpm.o: src/crypto/x509/x509_vpm.c.o
@@ -5240,7 +5240,7 @@ src/crypto/x509/x509_vpm.o: src/crypto/x509/x509_vpm.c.o
 
 # target to build an object file
 src/crypto/x509/x509_vpm.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vpm.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vpm.c.o
 .PHONY : src/crypto/x509/x509_vpm.c.o
 
 src/crypto/x509/x509_vpm.i: src/crypto/x509/x509_vpm.c.i
@@ -5249,7 +5249,7 @@ src/crypto/x509/x509_vpm.i: src/crypto/x509/x509_vpm.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509_vpm.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vpm.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vpm.c.i
 .PHONY : src/crypto/x509/x509_vpm.c.i
 
 src/crypto/x509/x509_vpm.s: src/crypto/x509/x509_vpm.c.s
@@ -5258,7 +5258,7 @@ src/crypto/x509/x509_vpm.s: src/crypto/x509/x509_vpm.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509_vpm.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vpm.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509_vpm.c.s
 .PHONY : src/crypto/x509/x509_vpm.c.s
 
 src/crypto/x509/x509cset.o: src/crypto/x509/x509cset.c.o
@@ -5267,7 +5267,7 @@ src/crypto/x509/x509cset.o: src/crypto/x509/x509cset.c.o
 
 # target to build an object file
 src/crypto/x509/x509cset.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509cset.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509cset.c.o
 .PHONY : src/crypto/x509/x509cset.c.o
 
 src/crypto/x509/x509cset.i: src/crypto/x509/x509cset.c.i
@@ -5276,7 +5276,7 @@ src/crypto/x509/x509cset.i: src/crypto/x509/x509cset.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509cset.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509cset.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509cset.c.i
 .PHONY : src/crypto/x509/x509cset.c.i
 
 src/crypto/x509/x509cset.s: src/crypto/x509/x509cset.c.s
@@ -5285,7 +5285,7 @@ src/crypto/x509/x509cset.s: src/crypto/x509/x509cset.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509cset.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509cset.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509cset.c.s
 .PHONY : src/crypto/x509/x509cset.c.s
 
 src/crypto/x509/x509name.o: src/crypto/x509/x509name.c.o
@@ -5294,7 +5294,7 @@ src/crypto/x509/x509name.o: src/crypto/x509/x509name.c.o
 
 # target to build an object file
 src/crypto/x509/x509name.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509name.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509name.c.o
 .PHONY : src/crypto/x509/x509name.c.o
 
 src/crypto/x509/x509name.i: src/crypto/x509/x509name.c.i
@@ -5303,7 +5303,7 @@ src/crypto/x509/x509name.i: src/crypto/x509/x509name.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509name.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509name.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509name.c.i
 .PHONY : src/crypto/x509/x509name.c.i
 
 src/crypto/x509/x509name.s: src/crypto/x509/x509name.c.s
@@ -5312,7 +5312,7 @@ src/crypto/x509/x509name.s: src/crypto/x509/x509name.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509name.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509name.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509name.c.s
 .PHONY : src/crypto/x509/x509name.c.s
 
 src/crypto/x509/x509rset.o: src/crypto/x509/x509rset.c.o
@@ -5321,7 +5321,7 @@ src/crypto/x509/x509rset.o: src/crypto/x509/x509rset.c.o
 
 # target to build an object file
 src/crypto/x509/x509rset.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509rset.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509rset.c.o
 .PHONY : src/crypto/x509/x509rset.c.o
 
 src/crypto/x509/x509rset.i: src/crypto/x509/x509rset.c.i
@@ -5330,7 +5330,7 @@ src/crypto/x509/x509rset.i: src/crypto/x509/x509rset.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509rset.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509rset.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509rset.c.i
 .PHONY : src/crypto/x509/x509rset.c.i
 
 src/crypto/x509/x509rset.s: src/crypto/x509/x509rset.c.s
@@ -5339,7 +5339,7 @@ src/crypto/x509/x509rset.s: src/crypto/x509/x509rset.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509rset.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509rset.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509rset.c.s
 .PHONY : src/crypto/x509/x509rset.c.s
 
 src/crypto/x509/x509spki.o: src/crypto/x509/x509spki.c.o
@@ -5348,7 +5348,7 @@ src/crypto/x509/x509spki.o: src/crypto/x509/x509spki.c.o
 
 # target to build an object file
 src/crypto/x509/x509spki.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509spki.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509spki.c.o
 .PHONY : src/crypto/x509/x509spki.c.o
 
 src/crypto/x509/x509spki.i: src/crypto/x509/x509spki.c.i
@@ -5357,7 +5357,7 @@ src/crypto/x509/x509spki.i: src/crypto/x509/x509spki.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x509spki.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509spki.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509spki.c.i
 .PHONY : src/crypto/x509/x509spki.c.i
 
 src/crypto/x509/x509spki.s: src/crypto/x509/x509spki.c.s
@@ -5366,7 +5366,7 @@ src/crypto/x509/x509spki.s: src/crypto/x509/x509spki.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x509spki.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509spki.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x509spki.c.s
 .PHONY : src/crypto/x509/x509spki.c.s
 
 src/crypto/x509/x_algor.o: src/crypto/x509/x_algor.c.o
@@ -5375,7 +5375,7 @@ src/crypto/x509/x_algor.o: src/crypto/x509/x_algor.c.o
 
 # target to build an object file
 src/crypto/x509/x_algor.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_algor.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_algor.c.o
 .PHONY : src/crypto/x509/x_algor.c.o
 
 src/crypto/x509/x_algor.i: src/crypto/x509/x_algor.c.i
@@ -5384,7 +5384,7 @@ src/crypto/x509/x_algor.i: src/crypto/x509/x_algor.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_algor.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_algor.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_algor.c.i
 .PHONY : src/crypto/x509/x_algor.c.i
 
 src/crypto/x509/x_algor.s: src/crypto/x509/x_algor.c.s
@@ -5393,7 +5393,7 @@ src/crypto/x509/x_algor.s: src/crypto/x509/x_algor.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_algor.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_algor.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_algor.c.s
 .PHONY : src/crypto/x509/x_algor.c.s
 
 src/crypto/x509/x_all.o: src/crypto/x509/x_all.c.o
@@ -5402,7 +5402,7 @@ src/crypto/x509/x_all.o: src/crypto/x509/x_all.c.o
 
 # target to build an object file
 src/crypto/x509/x_all.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_all.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_all.c.o
 .PHONY : src/crypto/x509/x_all.c.o
 
 src/crypto/x509/x_all.i: src/crypto/x509/x_all.c.i
@@ -5411,7 +5411,7 @@ src/crypto/x509/x_all.i: src/crypto/x509/x_all.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_all.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_all.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_all.c.i
 .PHONY : src/crypto/x509/x_all.c.i
 
 src/crypto/x509/x_all.s: src/crypto/x509/x_all.c.s
@@ -5420,7 +5420,7 @@ src/crypto/x509/x_all.s: src/crypto/x509/x_all.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_all.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_all.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_all.c.s
 .PHONY : src/crypto/x509/x_all.c.s
 
 src/crypto/x509/x_attrib.o: src/crypto/x509/x_attrib.c.o
@@ -5429,7 +5429,7 @@ src/crypto/x509/x_attrib.o: src/crypto/x509/x_attrib.c.o
 
 # target to build an object file
 src/crypto/x509/x_attrib.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_attrib.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_attrib.c.o
 .PHONY : src/crypto/x509/x_attrib.c.o
 
 src/crypto/x509/x_attrib.i: src/crypto/x509/x_attrib.c.i
@@ -5438,7 +5438,7 @@ src/crypto/x509/x_attrib.i: src/crypto/x509/x_attrib.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_attrib.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_attrib.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_attrib.c.i
 .PHONY : src/crypto/x509/x_attrib.c.i
 
 src/crypto/x509/x_attrib.s: src/crypto/x509/x_attrib.c.s
@@ -5447,7 +5447,7 @@ src/crypto/x509/x_attrib.s: src/crypto/x509/x_attrib.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_attrib.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_attrib.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_attrib.c.s
 .PHONY : src/crypto/x509/x_attrib.c.s
 
 src/crypto/x509/x_crl.o: src/crypto/x509/x_crl.c.o
@@ -5456,7 +5456,7 @@ src/crypto/x509/x_crl.o: src/crypto/x509/x_crl.c.o
 
 # target to build an object file
 src/crypto/x509/x_crl.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_crl.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_crl.c.o
 .PHONY : src/crypto/x509/x_crl.c.o
 
 src/crypto/x509/x_crl.i: src/crypto/x509/x_crl.c.i
@@ -5465,7 +5465,7 @@ src/crypto/x509/x_crl.i: src/crypto/x509/x_crl.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_crl.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_crl.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_crl.c.i
 .PHONY : src/crypto/x509/x_crl.c.i
 
 src/crypto/x509/x_crl.s: src/crypto/x509/x_crl.c.s
@@ -5474,7 +5474,7 @@ src/crypto/x509/x_crl.s: src/crypto/x509/x_crl.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_crl.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_crl.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_crl.c.s
 .PHONY : src/crypto/x509/x_crl.c.s
 
 src/crypto/x509/x_exten.o: src/crypto/x509/x_exten.c.o
@@ -5483,7 +5483,7 @@ src/crypto/x509/x_exten.o: src/crypto/x509/x_exten.c.o
 
 # target to build an object file
 src/crypto/x509/x_exten.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_exten.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_exten.c.o
 .PHONY : src/crypto/x509/x_exten.c.o
 
 src/crypto/x509/x_exten.i: src/crypto/x509/x_exten.c.i
@@ -5492,7 +5492,7 @@ src/crypto/x509/x_exten.i: src/crypto/x509/x_exten.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_exten.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_exten.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_exten.c.i
 .PHONY : src/crypto/x509/x_exten.c.i
 
 src/crypto/x509/x_exten.s: src/crypto/x509/x_exten.c.s
@@ -5501,7 +5501,7 @@ src/crypto/x509/x_exten.s: src/crypto/x509/x_exten.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_exten.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_exten.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_exten.c.s
 .PHONY : src/crypto/x509/x_exten.c.s
 
 src/crypto/x509/x_info.o: src/crypto/x509/x_info.c.o
@@ -5510,7 +5510,7 @@ src/crypto/x509/x_info.o: src/crypto/x509/x_info.c.o
 
 # target to build an object file
 src/crypto/x509/x_info.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_info.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_info.c.o
 .PHONY : src/crypto/x509/x_info.c.o
 
 src/crypto/x509/x_info.i: src/crypto/x509/x_info.c.i
@@ -5519,7 +5519,7 @@ src/crypto/x509/x_info.i: src/crypto/x509/x_info.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_info.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_info.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_info.c.i
 .PHONY : src/crypto/x509/x_info.c.i
 
 src/crypto/x509/x_info.s: src/crypto/x509/x_info.c.s
@@ -5528,7 +5528,7 @@ src/crypto/x509/x_info.s: src/crypto/x509/x_info.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_info.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_info.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_info.c.s
 .PHONY : src/crypto/x509/x_info.c.s
 
 src/crypto/x509/x_name.o: src/crypto/x509/x_name.c.o
@@ -5537,7 +5537,7 @@ src/crypto/x509/x_name.o: src/crypto/x509/x_name.c.o
 
 # target to build an object file
 src/crypto/x509/x_name.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_name.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_name.c.o
 .PHONY : src/crypto/x509/x_name.c.o
 
 src/crypto/x509/x_name.i: src/crypto/x509/x_name.c.i
@@ -5546,7 +5546,7 @@ src/crypto/x509/x_name.i: src/crypto/x509/x_name.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_name.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_name.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_name.c.i
 .PHONY : src/crypto/x509/x_name.c.i
 
 src/crypto/x509/x_name.s: src/crypto/x509/x_name.c.s
@@ -5555,7 +5555,7 @@ src/crypto/x509/x_name.s: src/crypto/x509/x_name.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_name.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_name.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_name.c.s
 .PHONY : src/crypto/x509/x_name.c.s
 
 src/crypto/x509/x_pkey.o: src/crypto/x509/x_pkey.c.o
@@ -5564,7 +5564,7 @@ src/crypto/x509/x_pkey.o: src/crypto/x509/x_pkey.c.o
 
 # target to build an object file
 src/crypto/x509/x_pkey.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pkey.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pkey.c.o
 .PHONY : src/crypto/x509/x_pkey.c.o
 
 src/crypto/x509/x_pkey.i: src/crypto/x509/x_pkey.c.i
@@ -5573,7 +5573,7 @@ src/crypto/x509/x_pkey.i: src/crypto/x509/x_pkey.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_pkey.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pkey.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pkey.c.i
 .PHONY : src/crypto/x509/x_pkey.c.i
 
 src/crypto/x509/x_pkey.s: src/crypto/x509/x_pkey.c.s
@@ -5582,7 +5582,7 @@ src/crypto/x509/x_pkey.s: src/crypto/x509/x_pkey.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_pkey.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pkey.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pkey.c.s
 .PHONY : src/crypto/x509/x_pkey.c.s
 
 src/crypto/x509/x_pubkey.o: src/crypto/x509/x_pubkey.c.o
@@ -5591,7 +5591,7 @@ src/crypto/x509/x_pubkey.o: src/crypto/x509/x_pubkey.c.o
 
 # target to build an object file
 src/crypto/x509/x_pubkey.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pubkey.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pubkey.c.o
 .PHONY : src/crypto/x509/x_pubkey.c.o
 
 src/crypto/x509/x_pubkey.i: src/crypto/x509/x_pubkey.c.i
@@ -5600,7 +5600,7 @@ src/crypto/x509/x_pubkey.i: src/crypto/x509/x_pubkey.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_pubkey.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pubkey.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pubkey.c.i
 .PHONY : src/crypto/x509/x_pubkey.c.i
 
 src/crypto/x509/x_pubkey.s: src/crypto/x509/x_pubkey.c.s
@@ -5609,7 +5609,7 @@ src/crypto/x509/x_pubkey.s: src/crypto/x509/x_pubkey.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_pubkey.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pubkey.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_pubkey.c.s
 .PHONY : src/crypto/x509/x_pubkey.c.s
 
 src/crypto/x509/x_req.o: src/crypto/x509/x_req.c.o
@@ -5618,7 +5618,7 @@ src/crypto/x509/x_req.o: src/crypto/x509/x_req.c.o
 
 # target to build an object file
 src/crypto/x509/x_req.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_req.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_req.c.o
 .PHONY : src/crypto/x509/x_req.c.o
 
 src/crypto/x509/x_req.i: src/crypto/x509/x_req.c.i
@@ -5627,7 +5627,7 @@ src/crypto/x509/x_req.i: src/crypto/x509/x_req.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_req.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_req.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_req.c.i
 .PHONY : src/crypto/x509/x_req.c.i
 
 src/crypto/x509/x_req.s: src/crypto/x509/x_req.c.s
@@ -5636,7 +5636,7 @@ src/crypto/x509/x_req.s: src/crypto/x509/x_req.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_req.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_req.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_req.c.s
 .PHONY : src/crypto/x509/x_req.c.s
 
 src/crypto/x509/x_sig.o: src/crypto/x509/x_sig.c.o
@@ -5645,7 +5645,7 @@ src/crypto/x509/x_sig.o: src/crypto/x509/x_sig.c.o
 
 # target to build an object file
 src/crypto/x509/x_sig.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_sig.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_sig.c.o
 .PHONY : src/crypto/x509/x_sig.c.o
 
 src/crypto/x509/x_sig.i: src/crypto/x509/x_sig.c.i
@@ -5654,7 +5654,7 @@ src/crypto/x509/x_sig.i: src/crypto/x509/x_sig.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_sig.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_sig.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_sig.c.i
 .PHONY : src/crypto/x509/x_sig.c.i
 
 src/crypto/x509/x_sig.s: src/crypto/x509/x_sig.c.s
@@ -5663,7 +5663,7 @@ src/crypto/x509/x_sig.s: src/crypto/x509/x_sig.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_sig.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_sig.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_sig.c.s
 .PHONY : src/crypto/x509/x_sig.c.s
 
 src/crypto/x509/x_spki.o: src/crypto/x509/x_spki.c.o
@@ -5672,7 +5672,7 @@ src/crypto/x509/x_spki.o: src/crypto/x509/x_spki.c.o
 
 # target to build an object file
 src/crypto/x509/x_spki.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_spki.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_spki.c.o
 .PHONY : src/crypto/x509/x_spki.c.o
 
 src/crypto/x509/x_spki.i: src/crypto/x509/x_spki.c.i
@@ -5681,7 +5681,7 @@ src/crypto/x509/x_spki.i: src/crypto/x509/x_spki.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_spki.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_spki.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_spki.c.i
 .PHONY : src/crypto/x509/x_spki.c.i
 
 src/crypto/x509/x_spki.s: src/crypto/x509/x_spki.c.s
@@ -5690,7 +5690,7 @@ src/crypto/x509/x_spki.s: src/crypto/x509/x_spki.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_spki.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_spki.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_spki.c.s
 .PHONY : src/crypto/x509/x_spki.c.s
 
 src/crypto/x509/x_val.o: src/crypto/x509/x_val.c.o
@@ -5699,7 +5699,7 @@ src/crypto/x509/x_val.o: src/crypto/x509/x_val.c.o
 
 # target to build an object file
 src/crypto/x509/x_val.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_val.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_val.c.o
 .PHONY : src/crypto/x509/x_val.c.o
 
 src/crypto/x509/x_val.i: src/crypto/x509/x_val.c.i
@@ -5708,7 +5708,7 @@ src/crypto/x509/x_val.i: src/crypto/x509/x_val.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_val.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_val.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_val.c.i
 .PHONY : src/crypto/x509/x_val.c.i
 
 src/crypto/x509/x_val.s: src/crypto/x509/x_val.c.s
@@ -5717,7 +5717,7 @@ src/crypto/x509/x_val.s: src/crypto/x509/x_val.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_val.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_val.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_val.c.s
 .PHONY : src/crypto/x509/x_val.c.s
 
 src/crypto/x509/x_x509.o: src/crypto/x509/x_x509.c.o
@@ -5726,7 +5726,7 @@ src/crypto/x509/x_x509.o: src/crypto/x509/x_x509.c.o
 
 # target to build an object file
 src/crypto/x509/x_x509.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509.c.o
 .PHONY : src/crypto/x509/x_x509.c.o
 
 src/crypto/x509/x_x509.i: src/crypto/x509/x_x509.c.i
@@ -5735,7 +5735,7 @@ src/crypto/x509/x_x509.i: src/crypto/x509/x_x509.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_x509.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509.c.i
 .PHONY : src/crypto/x509/x_x509.c.i
 
 src/crypto/x509/x_x509.s: src/crypto/x509/x_x509.c.s
@@ -5744,7 +5744,7 @@ src/crypto/x509/x_x509.s: src/crypto/x509/x_x509.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_x509.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509.c.s
 .PHONY : src/crypto/x509/x_x509.c.s
 
 src/crypto/x509/x_x509a.o: src/crypto/x509/x_x509a.c.o
@@ -5753,7 +5753,7 @@ src/crypto/x509/x_x509a.o: src/crypto/x509/x_x509a.c.o
 
 # target to build an object file
 src/crypto/x509/x_x509a.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509a.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509a.c.o
 .PHONY : src/crypto/x509/x_x509a.c.o
 
 src/crypto/x509/x_x509a.i: src/crypto/x509/x_x509a.c.i
@@ -5762,7 +5762,7 @@ src/crypto/x509/x_x509a.i: src/crypto/x509/x_x509a.c.i
 
 # target to preprocess a source file
 src/crypto/x509/x_x509a.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509a.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509a.c.i
 .PHONY : src/crypto/x509/x_x509a.c.i
 
 src/crypto/x509/x_x509a.s: src/crypto/x509/x_x509a.c.s
@@ -5771,7 +5771,7 @@ src/crypto/x509/x_x509a.s: src/crypto/x509/x_x509a.c.s
 
 # target to generate assembly for a file
 src/crypto/x509/x_x509a.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509a.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509/x_x509a.c.s
 .PHONY : src/crypto/x509/x_x509a.c.s
 
 src/crypto/x509v3/pcy_cache.o: src/crypto/x509v3/pcy_cache.c.o
@@ -5780,7 +5780,7 @@ src/crypto/x509v3/pcy_cache.o: src/crypto/x509v3/pcy_cache.c.o
 
 # target to build an object file
 src/crypto/x509v3/pcy_cache.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_cache.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_cache.c.o
 .PHONY : src/crypto/x509v3/pcy_cache.c.o
 
 src/crypto/x509v3/pcy_cache.i: src/crypto/x509v3/pcy_cache.c.i
@@ -5789,7 +5789,7 @@ src/crypto/x509v3/pcy_cache.i: src/crypto/x509v3/pcy_cache.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/pcy_cache.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_cache.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_cache.c.i
 .PHONY : src/crypto/x509v3/pcy_cache.c.i
 
 src/crypto/x509v3/pcy_cache.s: src/crypto/x509v3/pcy_cache.c.s
@@ -5798,7 +5798,7 @@ src/crypto/x509v3/pcy_cache.s: src/crypto/x509v3/pcy_cache.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/pcy_cache.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_cache.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_cache.c.s
 .PHONY : src/crypto/x509v3/pcy_cache.c.s
 
 src/crypto/x509v3/pcy_data.o: src/crypto/x509v3/pcy_data.c.o
@@ -5807,7 +5807,7 @@ src/crypto/x509v3/pcy_data.o: src/crypto/x509v3/pcy_data.c.o
 
 # target to build an object file
 src/crypto/x509v3/pcy_data.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_data.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_data.c.o
 .PHONY : src/crypto/x509v3/pcy_data.c.o
 
 src/crypto/x509v3/pcy_data.i: src/crypto/x509v3/pcy_data.c.i
@@ -5816,7 +5816,7 @@ src/crypto/x509v3/pcy_data.i: src/crypto/x509v3/pcy_data.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/pcy_data.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_data.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_data.c.i
 .PHONY : src/crypto/x509v3/pcy_data.c.i
 
 src/crypto/x509v3/pcy_data.s: src/crypto/x509v3/pcy_data.c.s
@@ -5825,7 +5825,7 @@ src/crypto/x509v3/pcy_data.s: src/crypto/x509v3/pcy_data.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/pcy_data.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_data.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_data.c.s
 .PHONY : src/crypto/x509v3/pcy_data.c.s
 
 src/crypto/x509v3/pcy_lib.o: src/crypto/x509v3/pcy_lib.c.o
@@ -5834,7 +5834,7 @@ src/crypto/x509v3/pcy_lib.o: src/crypto/x509v3/pcy_lib.c.o
 
 # target to build an object file
 src/crypto/x509v3/pcy_lib.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_lib.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_lib.c.o
 .PHONY : src/crypto/x509v3/pcy_lib.c.o
 
 src/crypto/x509v3/pcy_lib.i: src/crypto/x509v3/pcy_lib.c.i
@@ -5843,7 +5843,7 @@ src/crypto/x509v3/pcy_lib.i: src/crypto/x509v3/pcy_lib.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/pcy_lib.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_lib.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_lib.c.i
 .PHONY : src/crypto/x509v3/pcy_lib.c.i
 
 src/crypto/x509v3/pcy_lib.s: src/crypto/x509v3/pcy_lib.c.s
@@ -5852,7 +5852,7 @@ src/crypto/x509v3/pcy_lib.s: src/crypto/x509v3/pcy_lib.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/pcy_lib.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_lib.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_lib.c.s
 .PHONY : src/crypto/x509v3/pcy_lib.c.s
 
 src/crypto/x509v3/pcy_map.o: src/crypto/x509v3/pcy_map.c.o
@@ -5861,7 +5861,7 @@ src/crypto/x509v3/pcy_map.o: src/crypto/x509v3/pcy_map.c.o
 
 # target to build an object file
 src/crypto/x509v3/pcy_map.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_map.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_map.c.o
 .PHONY : src/crypto/x509v3/pcy_map.c.o
 
 src/crypto/x509v3/pcy_map.i: src/crypto/x509v3/pcy_map.c.i
@@ -5870,7 +5870,7 @@ src/crypto/x509v3/pcy_map.i: src/crypto/x509v3/pcy_map.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/pcy_map.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_map.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_map.c.i
 .PHONY : src/crypto/x509v3/pcy_map.c.i
 
 src/crypto/x509v3/pcy_map.s: src/crypto/x509v3/pcy_map.c.s
@@ -5879,7 +5879,7 @@ src/crypto/x509v3/pcy_map.s: src/crypto/x509v3/pcy_map.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/pcy_map.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_map.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_map.c.s
 .PHONY : src/crypto/x509v3/pcy_map.c.s
 
 src/crypto/x509v3/pcy_node.o: src/crypto/x509v3/pcy_node.c.o
@@ -5888,7 +5888,7 @@ src/crypto/x509v3/pcy_node.o: src/crypto/x509v3/pcy_node.c.o
 
 # target to build an object file
 src/crypto/x509v3/pcy_node.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_node.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_node.c.o
 .PHONY : src/crypto/x509v3/pcy_node.c.o
 
 src/crypto/x509v3/pcy_node.i: src/crypto/x509v3/pcy_node.c.i
@@ -5897,7 +5897,7 @@ src/crypto/x509v3/pcy_node.i: src/crypto/x509v3/pcy_node.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/pcy_node.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_node.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_node.c.i
 .PHONY : src/crypto/x509v3/pcy_node.c.i
 
 src/crypto/x509v3/pcy_node.s: src/crypto/x509v3/pcy_node.c.s
@@ -5906,7 +5906,7 @@ src/crypto/x509v3/pcy_node.s: src/crypto/x509v3/pcy_node.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/pcy_node.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_node.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_node.c.s
 .PHONY : src/crypto/x509v3/pcy_node.c.s
 
 src/crypto/x509v3/pcy_tree.o: src/crypto/x509v3/pcy_tree.c.o
@@ -5915,7 +5915,7 @@ src/crypto/x509v3/pcy_tree.o: src/crypto/x509v3/pcy_tree.c.o
 
 # target to build an object file
 src/crypto/x509v3/pcy_tree.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_tree.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_tree.c.o
 .PHONY : src/crypto/x509v3/pcy_tree.c.o
 
 src/crypto/x509v3/pcy_tree.i: src/crypto/x509v3/pcy_tree.c.i
@@ -5924,7 +5924,7 @@ src/crypto/x509v3/pcy_tree.i: src/crypto/x509v3/pcy_tree.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/pcy_tree.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_tree.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_tree.c.i
 .PHONY : src/crypto/x509v3/pcy_tree.c.i
 
 src/crypto/x509v3/pcy_tree.s: src/crypto/x509v3/pcy_tree.c.s
@@ -5933,7 +5933,7 @@ src/crypto/x509v3/pcy_tree.s: src/crypto/x509v3/pcy_tree.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/pcy_tree.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_tree.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/pcy_tree.c.s
 .PHONY : src/crypto/x509v3/pcy_tree.c.s
 
 src/crypto/x509v3/v3_akey.o: src/crypto/x509v3/v3_akey.c.o
@@ -5942,7 +5942,7 @@ src/crypto/x509v3/v3_akey.o: src/crypto/x509v3/v3_akey.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_akey.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akey.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akey.c.o
 .PHONY : src/crypto/x509v3/v3_akey.c.o
 
 src/crypto/x509v3/v3_akey.i: src/crypto/x509v3/v3_akey.c.i
@@ -5951,7 +5951,7 @@ src/crypto/x509v3/v3_akey.i: src/crypto/x509v3/v3_akey.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_akey.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akey.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akey.c.i
 .PHONY : src/crypto/x509v3/v3_akey.c.i
 
 src/crypto/x509v3/v3_akey.s: src/crypto/x509v3/v3_akey.c.s
@@ -5960,7 +5960,7 @@ src/crypto/x509v3/v3_akey.s: src/crypto/x509v3/v3_akey.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_akey.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akey.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akey.c.s
 .PHONY : src/crypto/x509v3/v3_akey.c.s
 
 src/crypto/x509v3/v3_akeya.o: src/crypto/x509v3/v3_akeya.c.o
@@ -5969,7 +5969,7 @@ src/crypto/x509v3/v3_akeya.o: src/crypto/x509v3/v3_akeya.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_akeya.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akeya.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akeya.c.o
 .PHONY : src/crypto/x509v3/v3_akeya.c.o
 
 src/crypto/x509v3/v3_akeya.i: src/crypto/x509v3/v3_akeya.c.i
@@ -5978,7 +5978,7 @@ src/crypto/x509v3/v3_akeya.i: src/crypto/x509v3/v3_akeya.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_akeya.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akeya.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akeya.c.i
 .PHONY : src/crypto/x509v3/v3_akeya.c.i
 
 src/crypto/x509v3/v3_akeya.s: src/crypto/x509v3/v3_akeya.c.s
@@ -5987,7 +5987,7 @@ src/crypto/x509v3/v3_akeya.s: src/crypto/x509v3/v3_akeya.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_akeya.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akeya.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_akeya.c.s
 .PHONY : src/crypto/x509v3/v3_akeya.c.s
 
 src/crypto/x509v3/v3_alt.o: src/crypto/x509v3/v3_alt.c.o
@@ -5996,7 +5996,7 @@ src/crypto/x509v3/v3_alt.o: src/crypto/x509v3/v3_alt.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_alt.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_alt.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_alt.c.o
 .PHONY : src/crypto/x509v3/v3_alt.c.o
 
 src/crypto/x509v3/v3_alt.i: src/crypto/x509v3/v3_alt.c.i
@@ -6005,7 +6005,7 @@ src/crypto/x509v3/v3_alt.i: src/crypto/x509v3/v3_alt.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_alt.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_alt.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_alt.c.i
 .PHONY : src/crypto/x509v3/v3_alt.c.i
 
 src/crypto/x509v3/v3_alt.s: src/crypto/x509v3/v3_alt.c.s
@@ -6014,7 +6014,7 @@ src/crypto/x509v3/v3_alt.s: src/crypto/x509v3/v3_alt.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_alt.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_alt.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_alt.c.s
 .PHONY : src/crypto/x509v3/v3_alt.c.s
 
 src/crypto/x509v3/v3_bcons.o: src/crypto/x509v3/v3_bcons.c.o
@@ -6023,7 +6023,7 @@ src/crypto/x509v3/v3_bcons.o: src/crypto/x509v3/v3_bcons.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_bcons.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bcons.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bcons.c.o
 .PHONY : src/crypto/x509v3/v3_bcons.c.o
 
 src/crypto/x509v3/v3_bcons.i: src/crypto/x509v3/v3_bcons.c.i
@@ -6032,7 +6032,7 @@ src/crypto/x509v3/v3_bcons.i: src/crypto/x509v3/v3_bcons.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_bcons.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bcons.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bcons.c.i
 .PHONY : src/crypto/x509v3/v3_bcons.c.i
 
 src/crypto/x509v3/v3_bcons.s: src/crypto/x509v3/v3_bcons.c.s
@@ -6041,7 +6041,7 @@ src/crypto/x509v3/v3_bcons.s: src/crypto/x509v3/v3_bcons.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_bcons.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bcons.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bcons.c.s
 .PHONY : src/crypto/x509v3/v3_bcons.c.s
 
 src/crypto/x509v3/v3_bitst.o: src/crypto/x509v3/v3_bitst.c.o
@@ -6050,7 +6050,7 @@ src/crypto/x509v3/v3_bitst.o: src/crypto/x509v3/v3_bitst.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_bitst.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bitst.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bitst.c.o
 .PHONY : src/crypto/x509v3/v3_bitst.c.o
 
 src/crypto/x509v3/v3_bitst.i: src/crypto/x509v3/v3_bitst.c.i
@@ -6059,7 +6059,7 @@ src/crypto/x509v3/v3_bitst.i: src/crypto/x509v3/v3_bitst.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_bitst.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bitst.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bitst.c.i
 .PHONY : src/crypto/x509v3/v3_bitst.c.i
 
 src/crypto/x509v3/v3_bitst.s: src/crypto/x509v3/v3_bitst.c.s
@@ -6068,7 +6068,7 @@ src/crypto/x509v3/v3_bitst.s: src/crypto/x509v3/v3_bitst.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_bitst.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bitst.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_bitst.c.s
 .PHONY : src/crypto/x509v3/v3_bitst.c.s
 
 src/crypto/x509v3/v3_conf.o: src/crypto/x509v3/v3_conf.c.o
@@ -6077,7 +6077,7 @@ src/crypto/x509v3/v3_conf.o: src/crypto/x509v3/v3_conf.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_conf.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_conf.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_conf.c.o
 .PHONY : src/crypto/x509v3/v3_conf.c.o
 
 src/crypto/x509v3/v3_conf.i: src/crypto/x509v3/v3_conf.c.i
@@ -6086,7 +6086,7 @@ src/crypto/x509v3/v3_conf.i: src/crypto/x509v3/v3_conf.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_conf.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_conf.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_conf.c.i
 .PHONY : src/crypto/x509v3/v3_conf.c.i
 
 src/crypto/x509v3/v3_conf.s: src/crypto/x509v3/v3_conf.c.s
@@ -6095,7 +6095,7 @@ src/crypto/x509v3/v3_conf.s: src/crypto/x509v3/v3_conf.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_conf.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_conf.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_conf.c.s
 .PHONY : src/crypto/x509v3/v3_conf.c.s
 
 src/crypto/x509v3/v3_cpols.o: src/crypto/x509v3/v3_cpols.c.o
@@ -6104,7 +6104,7 @@ src/crypto/x509v3/v3_cpols.o: src/crypto/x509v3/v3_cpols.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_cpols.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_cpols.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_cpols.c.o
 .PHONY : src/crypto/x509v3/v3_cpols.c.o
 
 src/crypto/x509v3/v3_cpols.i: src/crypto/x509v3/v3_cpols.c.i
@@ -6113,7 +6113,7 @@ src/crypto/x509v3/v3_cpols.i: src/crypto/x509v3/v3_cpols.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_cpols.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_cpols.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_cpols.c.i
 .PHONY : src/crypto/x509v3/v3_cpols.c.i
 
 src/crypto/x509v3/v3_cpols.s: src/crypto/x509v3/v3_cpols.c.s
@@ -6122,7 +6122,7 @@ src/crypto/x509v3/v3_cpols.s: src/crypto/x509v3/v3_cpols.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_cpols.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_cpols.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_cpols.c.s
 .PHONY : src/crypto/x509v3/v3_cpols.c.s
 
 src/crypto/x509v3/v3_crld.o: src/crypto/x509v3/v3_crld.c.o
@@ -6131,7 +6131,7 @@ src/crypto/x509v3/v3_crld.o: src/crypto/x509v3/v3_crld.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_crld.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_crld.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_crld.c.o
 .PHONY : src/crypto/x509v3/v3_crld.c.o
 
 src/crypto/x509v3/v3_crld.i: src/crypto/x509v3/v3_crld.c.i
@@ -6140,7 +6140,7 @@ src/crypto/x509v3/v3_crld.i: src/crypto/x509v3/v3_crld.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_crld.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_crld.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_crld.c.i
 .PHONY : src/crypto/x509v3/v3_crld.c.i
 
 src/crypto/x509v3/v3_crld.s: src/crypto/x509v3/v3_crld.c.s
@@ -6149,7 +6149,7 @@ src/crypto/x509v3/v3_crld.s: src/crypto/x509v3/v3_crld.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_crld.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_crld.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_crld.c.s
 .PHONY : src/crypto/x509v3/v3_crld.c.s
 
 src/crypto/x509v3/v3_enum.o: src/crypto/x509v3/v3_enum.c.o
@@ -6158,7 +6158,7 @@ src/crypto/x509v3/v3_enum.o: src/crypto/x509v3/v3_enum.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_enum.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_enum.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_enum.c.o
 .PHONY : src/crypto/x509v3/v3_enum.c.o
 
 src/crypto/x509v3/v3_enum.i: src/crypto/x509v3/v3_enum.c.i
@@ -6167,7 +6167,7 @@ src/crypto/x509v3/v3_enum.i: src/crypto/x509v3/v3_enum.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_enum.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_enum.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_enum.c.i
 .PHONY : src/crypto/x509v3/v3_enum.c.i
 
 src/crypto/x509v3/v3_enum.s: src/crypto/x509v3/v3_enum.c.s
@@ -6176,7 +6176,7 @@ src/crypto/x509v3/v3_enum.s: src/crypto/x509v3/v3_enum.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_enum.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_enum.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_enum.c.s
 .PHONY : src/crypto/x509v3/v3_enum.c.s
 
 src/crypto/x509v3/v3_extku.o: src/crypto/x509v3/v3_extku.c.o
@@ -6185,7 +6185,7 @@ src/crypto/x509v3/v3_extku.o: src/crypto/x509v3/v3_extku.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_extku.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_extku.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_extku.c.o
 .PHONY : src/crypto/x509v3/v3_extku.c.o
 
 src/crypto/x509v3/v3_extku.i: src/crypto/x509v3/v3_extku.c.i
@@ -6194,7 +6194,7 @@ src/crypto/x509v3/v3_extku.i: src/crypto/x509v3/v3_extku.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_extku.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_extku.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_extku.c.i
 .PHONY : src/crypto/x509v3/v3_extku.c.i
 
 src/crypto/x509v3/v3_extku.s: src/crypto/x509v3/v3_extku.c.s
@@ -6203,7 +6203,7 @@ src/crypto/x509v3/v3_extku.s: src/crypto/x509v3/v3_extku.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_extku.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_extku.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_extku.c.s
 .PHONY : src/crypto/x509v3/v3_extku.c.s
 
 src/crypto/x509v3/v3_genn.o: src/crypto/x509v3/v3_genn.c.o
@@ -6212,7 +6212,7 @@ src/crypto/x509v3/v3_genn.o: src/crypto/x509v3/v3_genn.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_genn.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_genn.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_genn.c.o
 .PHONY : src/crypto/x509v3/v3_genn.c.o
 
 src/crypto/x509v3/v3_genn.i: src/crypto/x509v3/v3_genn.c.i
@@ -6221,7 +6221,7 @@ src/crypto/x509v3/v3_genn.i: src/crypto/x509v3/v3_genn.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_genn.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_genn.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_genn.c.i
 .PHONY : src/crypto/x509v3/v3_genn.c.i
 
 src/crypto/x509v3/v3_genn.s: src/crypto/x509v3/v3_genn.c.s
@@ -6230,7 +6230,7 @@ src/crypto/x509v3/v3_genn.s: src/crypto/x509v3/v3_genn.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_genn.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_genn.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_genn.c.s
 .PHONY : src/crypto/x509v3/v3_genn.c.s
 
 src/crypto/x509v3/v3_ia5.o: src/crypto/x509v3/v3_ia5.c.o
@@ -6239,7 +6239,7 @@ src/crypto/x509v3/v3_ia5.o: src/crypto/x509v3/v3_ia5.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_ia5.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ia5.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ia5.c.o
 .PHONY : src/crypto/x509v3/v3_ia5.c.o
 
 src/crypto/x509v3/v3_ia5.i: src/crypto/x509v3/v3_ia5.c.i
@@ -6248,7 +6248,7 @@ src/crypto/x509v3/v3_ia5.i: src/crypto/x509v3/v3_ia5.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_ia5.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ia5.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ia5.c.i
 .PHONY : src/crypto/x509v3/v3_ia5.c.i
 
 src/crypto/x509v3/v3_ia5.s: src/crypto/x509v3/v3_ia5.c.s
@@ -6257,7 +6257,7 @@ src/crypto/x509v3/v3_ia5.s: src/crypto/x509v3/v3_ia5.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_ia5.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ia5.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ia5.c.s
 .PHONY : src/crypto/x509v3/v3_ia5.c.s
 
 src/crypto/x509v3/v3_info.o: src/crypto/x509v3/v3_info.c.o
@@ -6266,7 +6266,7 @@ src/crypto/x509v3/v3_info.o: src/crypto/x509v3/v3_info.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_info.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_info.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_info.c.o
 .PHONY : src/crypto/x509v3/v3_info.c.o
 
 src/crypto/x509v3/v3_info.i: src/crypto/x509v3/v3_info.c.i
@@ -6275,7 +6275,7 @@ src/crypto/x509v3/v3_info.i: src/crypto/x509v3/v3_info.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_info.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_info.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_info.c.i
 .PHONY : src/crypto/x509v3/v3_info.c.i
 
 src/crypto/x509v3/v3_info.s: src/crypto/x509v3/v3_info.c.s
@@ -6284,7 +6284,7 @@ src/crypto/x509v3/v3_info.s: src/crypto/x509v3/v3_info.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_info.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_info.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_info.c.s
 .PHONY : src/crypto/x509v3/v3_info.c.s
 
 src/crypto/x509v3/v3_int.o: src/crypto/x509v3/v3_int.c.o
@@ -6293,7 +6293,7 @@ src/crypto/x509v3/v3_int.o: src/crypto/x509v3/v3_int.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_int.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_int.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_int.c.o
 .PHONY : src/crypto/x509v3/v3_int.c.o
 
 src/crypto/x509v3/v3_int.i: src/crypto/x509v3/v3_int.c.i
@@ -6302,7 +6302,7 @@ src/crypto/x509v3/v3_int.i: src/crypto/x509v3/v3_int.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_int.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_int.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_int.c.i
 .PHONY : src/crypto/x509v3/v3_int.c.i
 
 src/crypto/x509v3/v3_int.s: src/crypto/x509v3/v3_int.c.s
@@ -6311,7 +6311,7 @@ src/crypto/x509v3/v3_int.s: src/crypto/x509v3/v3_int.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_int.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_int.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_int.c.s
 .PHONY : src/crypto/x509v3/v3_int.c.s
 
 src/crypto/x509v3/v3_lib.o: src/crypto/x509v3/v3_lib.c.o
@@ -6320,7 +6320,7 @@ src/crypto/x509v3/v3_lib.o: src/crypto/x509v3/v3_lib.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_lib.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_lib.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_lib.c.o
 .PHONY : src/crypto/x509v3/v3_lib.c.o
 
 src/crypto/x509v3/v3_lib.i: src/crypto/x509v3/v3_lib.c.i
@@ -6329,7 +6329,7 @@ src/crypto/x509v3/v3_lib.i: src/crypto/x509v3/v3_lib.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_lib.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_lib.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_lib.c.i
 .PHONY : src/crypto/x509v3/v3_lib.c.i
 
 src/crypto/x509v3/v3_lib.s: src/crypto/x509v3/v3_lib.c.s
@@ -6338,7 +6338,7 @@ src/crypto/x509v3/v3_lib.s: src/crypto/x509v3/v3_lib.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_lib.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_lib.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_lib.c.s
 .PHONY : src/crypto/x509v3/v3_lib.c.s
 
 src/crypto/x509v3/v3_ncons.o: src/crypto/x509v3/v3_ncons.c.o
@@ -6347,7 +6347,7 @@ src/crypto/x509v3/v3_ncons.o: src/crypto/x509v3/v3_ncons.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_ncons.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ncons.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ncons.c.o
 .PHONY : src/crypto/x509v3/v3_ncons.c.o
 
 src/crypto/x509v3/v3_ncons.i: src/crypto/x509v3/v3_ncons.c.i
@@ -6356,7 +6356,7 @@ src/crypto/x509v3/v3_ncons.i: src/crypto/x509v3/v3_ncons.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_ncons.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ncons.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ncons.c.i
 .PHONY : src/crypto/x509v3/v3_ncons.c.i
 
 src/crypto/x509v3/v3_ncons.s: src/crypto/x509v3/v3_ncons.c.s
@@ -6365,7 +6365,7 @@ src/crypto/x509v3/v3_ncons.s: src/crypto/x509v3/v3_ncons.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_ncons.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ncons.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ncons.c.s
 .PHONY : src/crypto/x509v3/v3_ncons.c.s
 
 src/crypto/x509v3/v3_ocsp.o: src/crypto/x509v3/v3_ocsp.c.o
@@ -6374,7 +6374,7 @@ src/crypto/x509v3/v3_ocsp.o: src/crypto/x509v3/v3_ocsp.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_ocsp.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ocsp.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ocsp.c.o
 .PHONY : src/crypto/x509v3/v3_ocsp.c.o
 
 src/crypto/x509v3/v3_ocsp.i: src/crypto/x509v3/v3_ocsp.c.i
@@ -6383,7 +6383,7 @@ src/crypto/x509v3/v3_ocsp.i: src/crypto/x509v3/v3_ocsp.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_ocsp.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ocsp.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ocsp.c.i
 .PHONY : src/crypto/x509v3/v3_ocsp.c.i
 
 src/crypto/x509v3/v3_ocsp.s: src/crypto/x509v3/v3_ocsp.c.s
@@ -6392,7 +6392,7 @@ src/crypto/x509v3/v3_ocsp.s: src/crypto/x509v3/v3_ocsp.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_ocsp.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ocsp.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_ocsp.c.s
 .PHONY : src/crypto/x509v3/v3_ocsp.c.s
 
 src/crypto/x509v3/v3_pci.o: src/crypto/x509v3/v3_pci.c.o
@@ -6401,7 +6401,7 @@ src/crypto/x509v3/v3_pci.o: src/crypto/x509v3/v3_pci.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_pci.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pci.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pci.c.o
 .PHONY : src/crypto/x509v3/v3_pci.c.o
 
 src/crypto/x509v3/v3_pci.i: src/crypto/x509v3/v3_pci.c.i
@@ -6410,7 +6410,7 @@ src/crypto/x509v3/v3_pci.i: src/crypto/x509v3/v3_pci.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_pci.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pci.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pci.c.i
 .PHONY : src/crypto/x509v3/v3_pci.c.i
 
 src/crypto/x509v3/v3_pci.s: src/crypto/x509v3/v3_pci.c.s
@@ -6419,7 +6419,7 @@ src/crypto/x509v3/v3_pci.s: src/crypto/x509v3/v3_pci.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_pci.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pci.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pci.c.s
 .PHONY : src/crypto/x509v3/v3_pci.c.s
 
 src/crypto/x509v3/v3_pcia.o: src/crypto/x509v3/v3_pcia.c.o
@@ -6428,7 +6428,7 @@ src/crypto/x509v3/v3_pcia.o: src/crypto/x509v3/v3_pcia.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_pcia.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcia.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcia.c.o
 .PHONY : src/crypto/x509v3/v3_pcia.c.o
 
 src/crypto/x509v3/v3_pcia.i: src/crypto/x509v3/v3_pcia.c.i
@@ -6437,7 +6437,7 @@ src/crypto/x509v3/v3_pcia.i: src/crypto/x509v3/v3_pcia.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_pcia.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcia.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcia.c.i
 .PHONY : src/crypto/x509v3/v3_pcia.c.i
 
 src/crypto/x509v3/v3_pcia.s: src/crypto/x509v3/v3_pcia.c.s
@@ -6446,7 +6446,7 @@ src/crypto/x509v3/v3_pcia.s: src/crypto/x509v3/v3_pcia.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_pcia.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcia.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcia.c.s
 .PHONY : src/crypto/x509v3/v3_pcia.c.s
 
 src/crypto/x509v3/v3_pcons.o: src/crypto/x509v3/v3_pcons.c.o
@@ -6455,7 +6455,7 @@ src/crypto/x509v3/v3_pcons.o: src/crypto/x509v3/v3_pcons.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_pcons.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcons.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcons.c.o
 .PHONY : src/crypto/x509v3/v3_pcons.c.o
 
 src/crypto/x509v3/v3_pcons.i: src/crypto/x509v3/v3_pcons.c.i
@@ -6464,7 +6464,7 @@ src/crypto/x509v3/v3_pcons.i: src/crypto/x509v3/v3_pcons.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_pcons.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcons.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcons.c.i
 .PHONY : src/crypto/x509v3/v3_pcons.c.i
 
 src/crypto/x509v3/v3_pcons.s: src/crypto/x509v3/v3_pcons.c.s
@@ -6473,7 +6473,7 @@ src/crypto/x509v3/v3_pcons.s: src/crypto/x509v3/v3_pcons.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_pcons.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcons.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pcons.c.s
 .PHONY : src/crypto/x509v3/v3_pcons.c.s
 
 src/crypto/x509v3/v3_pmaps.o: src/crypto/x509v3/v3_pmaps.c.o
@@ -6482,7 +6482,7 @@ src/crypto/x509v3/v3_pmaps.o: src/crypto/x509v3/v3_pmaps.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_pmaps.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pmaps.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pmaps.c.o
 .PHONY : src/crypto/x509v3/v3_pmaps.c.o
 
 src/crypto/x509v3/v3_pmaps.i: src/crypto/x509v3/v3_pmaps.c.i
@@ -6491,7 +6491,7 @@ src/crypto/x509v3/v3_pmaps.i: src/crypto/x509v3/v3_pmaps.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_pmaps.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pmaps.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pmaps.c.i
 .PHONY : src/crypto/x509v3/v3_pmaps.c.i
 
 src/crypto/x509v3/v3_pmaps.s: src/crypto/x509v3/v3_pmaps.c.s
@@ -6500,7 +6500,7 @@ src/crypto/x509v3/v3_pmaps.s: src/crypto/x509v3/v3_pmaps.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_pmaps.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pmaps.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_pmaps.c.s
 .PHONY : src/crypto/x509v3/v3_pmaps.c.s
 
 src/crypto/x509v3/v3_prn.o: src/crypto/x509v3/v3_prn.c.o
@@ -6509,7 +6509,7 @@ src/crypto/x509v3/v3_prn.o: src/crypto/x509v3/v3_prn.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_prn.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_prn.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_prn.c.o
 .PHONY : src/crypto/x509v3/v3_prn.c.o
 
 src/crypto/x509v3/v3_prn.i: src/crypto/x509v3/v3_prn.c.i
@@ -6518,7 +6518,7 @@ src/crypto/x509v3/v3_prn.i: src/crypto/x509v3/v3_prn.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_prn.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_prn.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_prn.c.i
 .PHONY : src/crypto/x509v3/v3_prn.c.i
 
 src/crypto/x509v3/v3_prn.s: src/crypto/x509v3/v3_prn.c.s
@@ -6527,7 +6527,7 @@ src/crypto/x509v3/v3_prn.s: src/crypto/x509v3/v3_prn.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_prn.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_prn.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_prn.c.s
 .PHONY : src/crypto/x509v3/v3_prn.c.s
 
 src/crypto/x509v3/v3_purp.o: src/crypto/x509v3/v3_purp.c.o
@@ -6536,7 +6536,7 @@ src/crypto/x509v3/v3_purp.o: src/crypto/x509v3/v3_purp.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_purp.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_purp.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_purp.c.o
 .PHONY : src/crypto/x509v3/v3_purp.c.o
 
 src/crypto/x509v3/v3_purp.i: src/crypto/x509v3/v3_purp.c.i
@@ -6545,7 +6545,7 @@ src/crypto/x509v3/v3_purp.i: src/crypto/x509v3/v3_purp.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_purp.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_purp.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_purp.c.i
 .PHONY : src/crypto/x509v3/v3_purp.c.i
 
 src/crypto/x509v3/v3_purp.s: src/crypto/x509v3/v3_purp.c.s
@@ -6554,7 +6554,7 @@ src/crypto/x509v3/v3_purp.s: src/crypto/x509v3/v3_purp.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_purp.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_purp.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_purp.c.s
 .PHONY : src/crypto/x509v3/v3_purp.c.s
 
 src/crypto/x509v3/v3_skey.o: src/crypto/x509v3/v3_skey.c.o
@@ -6563,7 +6563,7 @@ src/crypto/x509v3/v3_skey.o: src/crypto/x509v3/v3_skey.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_skey.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_skey.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_skey.c.o
 .PHONY : src/crypto/x509v3/v3_skey.c.o
 
 src/crypto/x509v3/v3_skey.i: src/crypto/x509v3/v3_skey.c.i
@@ -6572,7 +6572,7 @@ src/crypto/x509v3/v3_skey.i: src/crypto/x509v3/v3_skey.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_skey.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_skey.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_skey.c.i
 .PHONY : src/crypto/x509v3/v3_skey.c.i
 
 src/crypto/x509v3/v3_skey.s: src/crypto/x509v3/v3_skey.c.s
@@ -6581,7 +6581,7 @@ src/crypto/x509v3/v3_skey.s: src/crypto/x509v3/v3_skey.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_skey.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_skey.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_skey.c.s
 .PHONY : src/crypto/x509v3/v3_skey.c.s
 
 src/crypto/x509v3/v3_utl.o: src/crypto/x509v3/v3_utl.c.o
@@ -6590,7 +6590,7 @@ src/crypto/x509v3/v3_utl.o: src/crypto/x509v3/v3_utl.c.o
 
 # target to build an object file
 src/crypto/x509v3/v3_utl.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_utl.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_utl.c.o
 .PHONY : src/crypto/x509v3/v3_utl.c.o
 
 src/crypto/x509v3/v3_utl.i: src/crypto/x509v3/v3_utl.c.i
@@ -6599,7 +6599,7 @@ src/crypto/x509v3/v3_utl.i: src/crypto/x509v3/v3_utl.c.i
 
 # target to preprocess a source file
 src/crypto/x509v3/v3_utl.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_utl.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_utl.c.i
 .PHONY : src/crypto/x509v3/v3_utl.c.i
 
 src/crypto/x509v3/v3_utl.s: src/crypto/x509v3/v3_utl.c.s
@@ -6608,7 +6608,7 @@ src/crypto/x509v3/v3_utl.s: src/crypto/x509v3/v3_utl.c.s
 
 # target to generate assembly for a file
 src/crypto/x509v3/v3_utl.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_utl.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/crypto.dir/src/crypto/x509v3/v3_utl.c.s
 .PHONY : src/crypto/x509v3/v3_utl.c.s
 
 src/ssl/bio_ssl.o: src/ssl/bio_ssl.cc.o
@@ -6617,7 +6617,7 @@ src/ssl/bio_ssl.o: src/ssl/bio_ssl.cc.o
 
 # target to build an object file
 src/ssl/bio_ssl.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/bio_ssl.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/bio_ssl.cc.o
 .PHONY : src/ssl/bio_ssl.cc.o
 
 src/ssl/bio_ssl.i: src/ssl/bio_ssl.cc.i
@@ -6626,7 +6626,7 @@ src/ssl/bio_ssl.i: src/ssl/bio_ssl.cc.i
 
 # target to preprocess a source file
 src/ssl/bio_ssl.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/bio_ssl.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/bio_ssl.cc.i
 .PHONY : src/ssl/bio_ssl.cc.i
 
 src/ssl/bio_ssl.s: src/ssl/bio_ssl.cc.s
@@ -6635,7 +6635,7 @@ src/ssl/bio_ssl.s: src/ssl/bio_ssl.cc.s
 
 # target to generate assembly for a file
 src/ssl/bio_ssl.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/bio_ssl.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/bio_ssl.cc.s
 .PHONY : src/ssl/bio_ssl.cc.s
 
 src/ssl/d1_both.o: src/ssl/d1_both.cc.o
@@ -6644,7 +6644,7 @@ src/ssl/d1_both.o: src/ssl/d1_both.cc.o
 
 # target to build an object file
 src/ssl/d1_both.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_both.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_both.cc.o
 .PHONY : src/ssl/d1_both.cc.o
 
 src/ssl/d1_both.i: src/ssl/d1_both.cc.i
@@ -6653,7 +6653,7 @@ src/ssl/d1_both.i: src/ssl/d1_both.cc.i
 
 # target to preprocess a source file
 src/ssl/d1_both.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_both.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_both.cc.i
 .PHONY : src/ssl/d1_both.cc.i
 
 src/ssl/d1_both.s: src/ssl/d1_both.cc.s
@@ -6662,7 +6662,7 @@ src/ssl/d1_both.s: src/ssl/d1_both.cc.s
 
 # target to generate assembly for a file
 src/ssl/d1_both.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_both.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_both.cc.s
 .PHONY : src/ssl/d1_both.cc.s
 
 src/ssl/d1_lib.o: src/ssl/d1_lib.cc.o
@@ -6671,7 +6671,7 @@ src/ssl/d1_lib.o: src/ssl/d1_lib.cc.o
 
 # target to build an object file
 src/ssl/d1_lib.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_lib.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_lib.cc.o
 .PHONY : src/ssl/d1_lib.cc.o
 
 src/ssl/d1_lib.i: src/ssl/d1_lib.cc.i
@@ -6680,7 +6680,7 @@ src/ssl/d1_lib.i: src/ssl/d1_lib.cc.i
 
 # target to preprocess a source file
 src/ssl/d1_lib.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_lib.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_lib.cc.i
 .PHONY : src/ssl/d1_lib.cc.i
 
 src/ssl/d1_lib.s: src/ssl/d1_lib.cc.s
@@ -6689,7 +6689,7 @@ src/ssl/d1_lib.s: src/ssl/d1_lib.cc.s
 
 # target to generate assembly for a file
 src/ssl/d1_lib.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_lib.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_lib.cc.s
 .PHONY : src/ssl/d1_lib.cc.s
 
 src/ssl/d1_pkt.o: src/ssl/d1_pkt.cc.o
@@ -6698,7 +6698,7 @@ src/ssl/d1_pkt.o: src/ssl/d1_pkt.cc.o
 
 # target to build an object file
 src/ssl/d1_pkt.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_pkt.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_pkt.cc.o
 .PHONY : src/ssl/d1_pkt.cc.o
 
 src/ssl/d1_pkt.i: src/ssl/d1_pkt.cc.i
@@ -6707,7 +6707,7 @@ src/ssl/d1_pkt.i: src/ssl/d1_pkt.cc.i
 
 # target to preprocess a source file
 src/ssl/d1_pkt.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_pkt.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_pkt.cc.i
 .PHONY : src/ssl/d1_pkt.cc.i
 
 src/ssl/d1_pkt.s: src/ssl/d1_pkt.cc.s
@@ -6716,7 +6716,7 @@ src/ssl/d1_pkt.s: src/ssl/d1_pkt.cc.s
 
 # target to generate assembly for a file
 src/ssl/d1_pkt.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_pkt.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_pkt.cc.s
 .PHONY : src/ssl/d1_pkt.cc.s
 
 src/ssl/d1_srtp.o: src/ssl/d1_srtp.cc.o
@@ -6725,7 +6725,7 @@ src/ssl/d1_srtp.o: src/ssl/d1_srtp.cc.o
 
 # target to build an object file
 src/ssl/d1_srtp.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_srtp.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_srtp.cc.o
 .PHONY : src/ssl/d1_srtp.cc.o
 
 src/ssl/d1_srtp.i: src/ssl/d1_srtp.cc.i
@@ -6734,7 +6734,7 @@ src/ssl/d1_srtp.i: src/ssl/d1_srtp.cc.i
 
 # target to preprocess a source file
 src/ssl/d1_srtp.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_srtp.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_srtp.cc.i
 .PHONY : src/ssl/d1_srtp.cc.i
 
 src/ssl/d1_srtp.s: src/ssl/d1_srtp.cc.s
@@ -6743,7 +6743,7 @@ src/ssl/d1_srtp.s: src/ssl/d1_srtp.cc.s
 
 # target to generate assembly for a file
 src/ssl/d1_srtp.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_srtp.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/d1_srtp.cc.s
 .PHONY : src/ssl/d1_srtp.cc.s
 
 src/ssl/dtls_method.o: src/ssl/dtls_method.cc.o
@@ -6752,7 +6752,7 @@ src/ssl/dtls_method.o: src/ssl/dtls_method.cc.o
 
 # target to build an object file
 src/ssl/dtls_method.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_method.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_method.cc.o
 .PHONY : src/ssl/dtls_method.cc.o
 
 src/ssl/dtls_method.i: src/ssl/dtls_method.cc.i
@@ -6761,7 +6761,7 @@ src/ssl/dtls_method.i: src/ssl/dtls_method.cc.i
 
 # target to preprocess a source file
 src/ssl/dtls_method.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_method.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_method.cc.i
 .PHONY : src/ssl/dtls_method.cc.i
 
 src/ssl/dtls_method.s: src/ssl/dtls_method.cc.s
@@ -6770,7 +6770,7 @@ src/ssl/dtls_method.s: src/ssl/dtls_method.cc.s
 
 # target to generate assembly for a file
 src/ssl/dtls_method.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_method.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_method.cc.s
 .PHONY : src/ssl/dtls_method.cc.s
 
 src/ssl/dtls_record.o: src/ssl/dtls_record.cc.o
@@ -6779,7 +6779,7 @@ src/ssl/dtls_record.o: src/ssl/dtls_record.cc.o
 
 # target to build an object file
 src/ssl/dtls_record.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_record.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_record.cc.o
 .PHONY : src/ssl/dtls_record.cc.o
 
 src/ssl/dtls_record.i: src/ssl/dtls_record.cc.i
@@ -6788,7 +6788,7 @@ src/ssl/dtls_record.i: src/ssl/dtls_record.cc.i
 
 # target to preprocess a source file
 src/ssl/dtls_record.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_record.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_record.cc.i
 .PHONY : src/ssl/dtls_record.cc.i
 
 src/ssl/dtls_record.s: src/ssl/dtls_record.cc.s
@@ -6797,7 +6797,7 @@ src/ssl/dtls_record.s: src/ssl/dtls_record.cc.s
 
 # target to generate assembly for a file
 src/ssl/dtls_record.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_record.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/dtls_record.cc.s
 .PHONY : src/ssl/dtls_record.cc.s
 
 src/ssl/encrypted_client_hello.o: src/ssl/encrypted_client_hello.cc.o
@@ -6806,7 +6806,7 @@ src/ssl/encrypted_client_hello.o: src/ssl/encrypted_client_hello.cc.o
 
 # target to build an object file
 src/ssl/encrypted_client_hello.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/encrypted_client_hello.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/encrypted_client_hello.cc.o
 .PHONY : src/ssl/encrypted_client_hello.cc.o
 
 src/ssl/encrypted_client_hello.i: src/ssl/encrypted_client_hello.cc.i
@@ -6815,7 +6815,7 @@ src/ssl/encrypted_client_hello.i: src/ssl/encrypted_client_hello.cc.i
 
 # target to preprocess a source file
 src/ssl/encrypted_client_hello.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/encrypted_client_hello.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/encrypted_client_hello.cc.i
 .PHONY : src/ssl/encrypted_client_hello.cc.i
 
 src/ssl/encrypted_client_hello.s: src/ssl/encrypted_client_hello.cc.s
@@ -6824,7 +6824,7 @@ src/ssl/encrypted_client_hello.s: src/ssl/encrypted_client_hello.cc.s
 
 # target to generate assembly for a file
 src/ssl/encrypted_client_hello.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/encrypted_client_hello.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/encrypted_client_hello.cc.s
 .PHONY : src/ssl/encrypted_client_hello.cc.s
 
 src/ssl/handoff.o: src/ssl/handoff.cc.o
@@ -6833,7 +6833,7 @@ src/ssl/handoff.o: src/ssl/handoff.cc.o
 
 # target to build an object file
 src/ssl/handoff.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handoff.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handoff.cc.o
 .PHONY : src/ssl/handoff.cc.o
 
 src/ssl/handoff.i: src/ssl/handoff.cc.i
@@ -6842,7 +6842,7 @@ src/ssl/handoff.i: src/ssl/handoff.cc.i
 
 # target to preprocess a source file
 src/ssl/handoff.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handoff.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handoff.cc.i
 .PHONY : src/ssl/handoff.cc.i
 
 src/ssl/handoff.s: src/ssl/handoff.cc.s
@@ -6851,7 +6851,7 @@ src/ssl/handoff.s: src/ssl/handoff.cc.s
 
 # target to generate assembly for a file
 src/ssl/handoff.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handoff.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handoff.cc.s
 .PHONY : src/ssl/handoff.cc.s
 
 src/ssl/handshake.o: src/ssl/handshake.cc.o
@@ -6860,7 +6860,7 @@ src/ssl/handshake.o: src/ssl/handshake.cc.o
 
 # target to build an object file
 src/ssl/handshake.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake.cc.o
 .PHONY : src/ssl/handshake.cc.o
 
 src/ssl/handshake.i: src/ssl/handshake.cc.i
@@ -6869,7 +6869,7 @@ src/ssl/handshake.i: src/ssl/handshake.cc.i
 
 # target to preprocess a source file
 src/ssl/handshake.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake.cc.i
 .PHONY : src/ssl/handshake.cc.i
 
 src/ssl/handshake.s: src/ssl/handshake.cc.s
@@ -6878,7 +6878,7 @@ src/ssl/handshake.s: src/ssl/handshake.cc.s
 
 # target to generate assembly for a file
 src/ssl/handshake.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake.cc.s
 .PHONY : src/ssl/handshake.cc.s
 
 src/ssl/handshake_client.o: src/ssl/handshake_client.cc.o
@@ -6887,7 +6887,7 @@ src/ssl/handshake_client.o: src/ssl/handshake_client.cc.o
 
 # target to build an object file
 src/ssl/handshake_client.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_client.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_client.cc.o
 .PHONY : src/ssl/handshake_client.cc.o
 
 src/ssl/handshake_client.i: src/ssl/handshake_client.cc.i
@@ -6896,7 +6896,7 @@ src/ssl/handshake_client.i: src/ssl/handshake_client.cc.i
 
 # target to preprocess a source file
 src/ssl/handshake_client.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_client.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_client.cc.i
 .PHONY : src/ssl/handshake_client.cc.i
 
 src/ssl/handshake_client.s: src/ssl/handshake_client.cc.s
@@ -6905,7 +6905,7 @@ src/ssl/handshake_client.s: src/ssl/handshake_client.cc.s
 
 # target to generate assembly for a file
 src/ssl/handshake_client.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_client.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_client.cc.s
 .PHONY : src/ssl/handshake_client.cc.s
 
 src/ssl/handshake_server.o: src/ssl/handshake_server.cc.o
@@ -6914,7 +6914,7 @@ src/ssl/handshake_server.o: src/ssl/handshake_server.cc.o
 
 # target to build an object file
 src/ssl/handshake_server.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_server.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_server.cc.o
 .PHONY : src/ssl/handshake_server.cc.o
 
 src/ssl/handshake_server.i: src/ssl/handshake_server.cc.i
@@ -6923,7 +6923,7 @@ src/ssl/handshake_server.i: src/ssl/handshake_server.cc.i
 
 # target to preprocess a source file
 src/ssl/handshake_server.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_server.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_server.cc.i
 .PHONY : src/ssl/handshake_server.cc.i
 
 src/ssl/handshake_server.s: src/ssl/handshake_server.cc.s
@@ -6932,7 +6932,7 @@ src/ssl/handshake_server.s: src/ssl/handshake_server.cc.s
 
 # target to generate assembly for a file
 src/ssl/handshake_server.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_server.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/handshake_server.cc.s
 .PHONY : src/ssl/handshake_server.cc.s
 
 src/ssl/s3_both.o: src/ssl/s3_both.cc.o
@@ -6941,7 +6941,7 @@ src/ssl/s3_both.o: src/ssl/s3_both.cc.o
 
 # target to build an object file
 src/ssl/s3_both.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_both.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_both.cc.o
 .PHONY : src/ssl/s3_both.cc.o
 
 src/ssl/s3_both.i: src/ssl/s3_both.cc.i
@@ -6950,7 +6950,7 @@ src/ssl/s3_both.i: src/ssl/s3_both.cc.i
 
 # target to preprocess a source file
 src/ssl/s3_both.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_both.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_both.cc.i
 .PHONY : src/ssl/s3_both.cc.i
 
 src/ssl/s3_both.s: src/ssl/s3_both.cc.s
@@ -6959,7 +6959,7 @@ src/ssl/s3_both.s: src/ssl/s3_both.cc.s
 
 # target to generate assembly for a file
 src/ssl/s3_both.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_both.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_both.cc.s
 .PHONY : src/ssl/s3_both.cc.s
 
 src/ssl/s3_lib.o: src/ssl/s3_lib.cc.o
@@ -6968,7 +6968,7 @@ src/ssl/s3_lib.o: src/ssl/s3_lib.cc.o
 
 # target to build an object file
 src/ssl/s3_lib.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_lib.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_lib.cc.o
 .PHONY : src/ssl/s3_lib.cc.o
 
 src/ssl/s3_lib.i: src/ssl/s3_lib.cc.i
@@ -6977,7 +6977,7 @@ src/ssl/s3_lib.i: src/ssl/s3_lib.cc.i
 
 # target to preprocess a source file
 src/ssl/s3_lib.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_lib.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_lib.cc.i
 .PHONY : src/ssl/s3_lib.cc.i
 
 src/ssl/s3_lib.s: src/ssl/s3_lib.cc.s
@@ -6986,7 +6986,7 @@ src/ssl/s3_lib.s: src/ssl/s3_lib.cc.s
 
 # target to generate assembly for a file
 src/ssl/s3_lib.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_lib.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_lib.cc.s
 .PHONY : src/ssl/s3_lib.cc.s
 
 src/ssl/s3_pkt.o: src/ssl/s3_pkt.cc.o
@@ -6995,7 +6995,7 @@ src/ssl/s3_pkt.o: src/ssl/s3_pkt.cc.o
 
 # target to build an object file
 src/ssl/s3_pkt.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_pkt.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_pkt.cc.o
 .PHONY : src/ssl/s3_pkt.cc.o
 
 src/ssl/s3_pkt.i: src/ssl/s3_pkt.cc.i
@@ -7004,7 +7004,7 @@ src/ssl/s3_pkt.i: src/ssl/s3_pkt.cc.i
 
 # target to preprocess a source file
 src/ssl/s3_pkt.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_pkt.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_pkt.cc.i
 .PHONY : src/ssl/s3_pkt.cc.i
 
 src/ssl/s3_pkt.s: src/ssl/s3_pkt.cc.s
@@ -7013,7 +7013,7 @@ src/ssl/s3_pkt.s: src/ssl/s3_pkt.cc.s
 
 # target to generate assembly for a file
 src/ssl/s3_pkt.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_pkt.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/s3_pkt.cc.s
 .PHONY : src/ssl/s3_pkt.cc.s
 
 src/ssl/ssl_aead_ctx.o: src/ssl/ssl_aead_ctx.cc.o
@@ -7022,7 +7022,7 @@ src/ssl/ssl_aead_ctx.o: src/ssl/ssl_aead_ctx.cc.o
 
 # target to build an object file
 src/ssl/ssl_aead_ctx.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_aead_ctx.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_aead_ctx.cc.o
 .PHONY : src/ssl/ssl_aead_ctx.cc.o
 
 src/ssl/ssl_aead_ctx.i: src/ssl/ssl_aead_ctx.cc.i
@@ -7031,7 +7031,7 @@ src/ssl/ssl_aead_ctx.i: src/ssl/ssl_aead_ctx.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_aead_ctx.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_aead_ctx.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_aead_ctx.cc.i
 .PHONY : src/ssl/ssl_aead_ctx.cc.i
 
 src/ssl/ssl_aead_ctx.s: src/ssl/ssl_aead_ctx.cc.s
@@ -7040,7 +7040,7 @@ src/ssl/ssl_aead_ctx.s: src/ssl/ssl_aead_ctx.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_aead_ctx.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_aead_ctx.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_aead_ctx.cc.s
 .PHONY : src/ssl/ssl_aead_ctx.cc.s
 
 src/ssl/ssl_asn1.o: src/ssl/ssl_asn1.cc.o
@@ -7049,7 +7049,7 @@ src/ssl/ssl_asn1.o: src/ssl/ssl_asn1.cc.o
 
 # target to build an object file
 src/ssl/ssl_asn1.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_asn1.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_asn1.cc.o
 .PHONY : src/ssl/ssl_asn1.cc.o
 
 src/ssl/ssl_asn1.i: src/ssl/ssl_asn1.cc.i
@@ -7058,7 +7058,7 @@ src/ssl/ssl_asn1.i: src/ssl/ssl_asn1.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_asn1.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_asn1.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_asn1.cc.i
 .PHONY : src/ssl/ssl_asn1.cc.i
 
 src/ssl/ssl_asn1.s: src/ssl/ssl_asn1.cc.s
@@ -7067,7 +7067,7 @@ src/ssl/ssl_asn1.s: src/ssl/ssl_asn1.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_asn1.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_asn1.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_asn1.cc.s
 .PHONY : src/ssl/ssl_asn1.cc.s
 
 src/ssl/ssl_buffer.o: src/ssl/ssl_buffer.cc.o
@@ -7076,7 +7076,7 @@ src/ssl/ssl_buffer.o: src/ssl/ssl_buffer.cc.o
 
 # target to build an object file
 src/ssl/ssl_buffer.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_buffer.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_buffer.cc.o
 .PHONY : src/ssl/ssl_buffer.cc.o
 
 src/ssl/ssl_buffer.i: src/ssl/ssl_buffer.cc.i
@@ -7085,7 +7085,7 @@ src/ssl/ssl_buffer.i: src/ssl/ssl_buffer.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_buffer.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_buffer.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_buffer.cc.i
 .PHONY : src/ssl/ssl_buffer.cc.i
 
 src/ssl/ssl_buffer.s: src/ssl/ssl_buffer.cc.s
@@ -7094,7 +7094,7 @@ src/ssl/ssl_buffer.s: src/ssl/ssl_buffer.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_buffer.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_buffer.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_buffer.cc.s
 .PHONY : src/ssl/ssl_buffer.cc.s
 
 src/ssl/ssl_cert.o: src/ssl/ssl_cert.cc.o
@@ -7103,7 +7103,7 @@ src/ssl/ssl_cert.o: src/ssl/ssl_cert.cc.o
 
 # target to build an object file
 src/ssl/ssl_cert.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cert.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cert.cc.o
 .PHONY : src/ssl/ssl_cert.cc.o
 
 src/ssl/ssl_cert.i: src/ssl/ssl_cert.cc.i
@@ -7112,7 +7112,7 @@ src/ssl/ssl_cert.i: src/ssl/ssl_cert.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_cert.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cert.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cert.cc.i
 .PHONY : src/ssl/ssl_cert.cc.i
 
 src/ssl/ssl_cert.s: src/ssl/ssl_cert.cc.s
@@ -7121,7 +7121,7 @@ src/ssl/ssl_cert.s: src/ssl/ssl_cert.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_cert.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cert.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cert.cc.s
 .PHONY : src/ssl/ssl_cert.cc.s
 
 src/ssl/ssl_cipher.o: src/ssl/ssl_cipher.cc.o
@@ -7130,7 +7130,7 @@ src/ssl/ssl_cipher.o: src/ssl/ssl_cipher.cc.o
 
 # target to build an object file
 src/ssl/ssl_cipher.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cipher.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cipher.cc.o
 .PHONY : src/ssl/ssl_cipher.cc.o
 
 src/ssl/ssl_cipher.i: src/ssl/ssl_cipher.cc.i
@@ -7139,7 +7139,7 @@ src/ssl/ssl_cipher.i: src/ssl/ssl_cipher.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_cipher.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cipher.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cipher.cc.i
 .PHONY : src/ssl/ssl_cipher.cc.i
 
 src/ssl/ssl_cipher.s: src/ssl/ssl_cipher.cc.s
@@ -7148,7 +7148,7 @@ src/ssl/ssl_cipher.s: src/ssl/ssl_cipher.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_cipher.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cipher.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_cipher.cc.s
 .PHONY : src/ssl/ssl_cipher.cc.s
 
 src/ssl/ssl_file.o: src/ssl/ssl_file.cc.o
@@ -7157,7 +7157,7 @@ src/ssl/ssl_file.o: src/ssl/ssl_file.cc.o
 
 # target to build an object file
 src/ssl/ssl_file.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_file.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_file.cc.o
 .PHONY : src/ssl/ssl_file.cc.o
 
 src/ssl/ssl_file.i: src/ssl/ssl_file.cc.i
@@ -7166,7 +7166,7 @@ src/ssl/ssl_file.i: src/ssl/ssl_file.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_file.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_file.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_file.cc.i
 .PHONY : src/ssl/ssl_file.cc.i
 
 src/ssl/ssl_file.s: src/ssl/ssl_file.cc.s
@@ -7175,7 +7175,7 @@ src/ssl/ssl_file.s: src/ssl/ssl_file.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_file.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_file.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_file.cc.s
 .PHONY : src/ssl/ssl_file.cc.s
 
 src/ssl/ssl_key_share.o: src/ssl/ssl_key_share.cc.o
@@ -7184,7 +7184,7 @@ src/ssl/ssl_key_share.o: src/ssl/ssl_key_share.cc.o
 
 # target to build an object file
 src/ssl/ssl_key_share.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_key_share.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_key_share.cc.o
 .PHONY : src/ssl/ssl_key_share.cc.o
 
 src/ssl/ssl_key_share.i: src/ssl/ssl_key_share.cc.i
@@ -7193,7 +7193,7 @@ src/ssl/ssl_key_share.i: src/ssl/ssl_key_share.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_key_share.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_key_share.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_key_share.cc.i
 .PHONY : src/ssl/ssl_key_share.cc.i
 
 src/ssl/ssl_key_share.s: src/ssl/ssl_key_share.cc.s
@@ -7202,7 +7202,7 @@ src/ssl/ssl_key_share.s: src/ssl/ssl_key_share.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_key_share.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_key_share.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_key_share.cc.s
 .PHONY : src/ssl/ssl_key_share.cc.s
 
 src/ssl/ssl_lib.o: src/ssl/ssl_lib.cc.o
@@ -7211,7 +7211,7 @@ src/ssl/ssl_lib.o: src/ssl/ssl_lib.cc.o
 
 # target to build an object file
 src/ssl/ssl_lib.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_lib.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_lib.cc.o
 .PHONY : src/ssl/ssl_lib.cc.o
 
 src/ssl/ssl_lib.i: src/ssl/ssl_lib.cc.i
@@ -7220,7 +7220,7 @@ src/ssl/ssl_lib.i: src/ssl/ssl_lib.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_lib.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_lib.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_lib.cc.i
 .PHONY : src/ssl/ssl_lib.cc.i
 
 src/ssl/ssl_lib.s: src/ssl/ssl_lib.cc.s
@@ -7229,7 +7229,7 @@ src/ssl/ssl_lib.s: src/ssl/ssl_lib.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_lib.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_lib.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_lib.cc.s
 .PHONY : src/ssl/ssl_lib.cc.s
 
 src/ssl/ssl_privkey.o: src/ssl/ssl_privkey.cc.o
@@ -7238,7 +7238,7 @@ src/ssl/ssl_privkey.o: src/ssl/ssl_privkey.cc.o
 
 # target to build an object file
 src/ssl/ssl_privkey.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_privkey.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_privkey.cc.o
 .PHONY : src/ssl/ssl_privkey.cc.o
 
 src/ssl/ssl_privkey.i: src/ssl/ssl_privkey.cc.i
@@ -7247,7 +7247,7 @@ src/ssl/ssl_privkey.i: src/ssl/ssl_privkey.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_privkey.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_privkey.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_privkey.cc.i
 .PHONY : src/ssl/ssl_privkey.cc.i
 
 src/ssl/ssl_privkey.s: src/ssl/ssl_privkey.cc.s
@@ -7256,7 +7256,7 @@ src/ssl/ssl_privkey.s: src/ssl/ssl_privkey.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_privkey.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_privkey.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_privkey.cc.s
 .PHONY : src/ssl/ssl_privkey.cc.s
 
 src/ssl/ssl_session.o: src/ssl/ssl_session.cc.o
@@ -7265,7 +7265,7 @@ src/ssl/ssl_session.o: src/ssl/ssl_session.cc.o
 
 # target to build an object file
 src/ssl/ssl_session.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_session.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_session.cc.o
 .PHONY : src/ssl/ssl_session.cc.o
 
 src/ssl/ssl_session.i: src/ssl/ssl_session.cc.i
@@ -7274,7 +7274,7 @@ src/ssl/ssl_session.i: src/ssl/ssl_session.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_session.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_session.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_session.cc.i
 .PHONY : src/ssl/ssl_session.cc.i
 
 src/ssl/ssl_session.s: src/ssl/ssl_session.cc.s
@@ -7283,7 +7283,7 @@ src/ssl/ssl_session.s: src/ssl/ssl_session.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_session.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_session.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_session.cc.s
 .PHONY : src/ssl/ssl_session.cc.s
 
 src/ssl/ssl_stat.o: src/ssl/ssl_stat.cc.o
@@ -7292,7 +7292,7 @@ src/ssl/ssl_stat.o: src/ssl/ssl_stat.cc.o
 
 # target to build an object file
 src/ssl/ssl_stat.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_stat.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_stat.cc.o
 .PHONY : src/ssl/ssl_stat.cc.o
 
 src/ssl/ssl_stat.i: src/ssl/ssl_stat.cc.i
@@ -7301,7 +7301,7 @@ src/ssl/ssl_stat.i: src/ssl/ssl_stat.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_stat.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_stat.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_stat.cc.i
 .PHONY : src/ssl/ssl_stat.cc.i
 
 src/ssl/ssl_stat.s: src/ssl/ssl_stat.cc.s
@@ -7310,7 +7310,7 @@ src/ssl/ssl_stat.s: src/ssl/ssl_stat.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_stat.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_stat.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_stat.cc.s
 .PHONY : src/ssl/ssl_stat.cc.s
 
 src/ssl/ssl_transcript.o: src/ssl/ssl_transcript.cc.o
@@ -7319,7 +7319,7 @@ src/ssl/ssl_transcript.o: src/ssl/ssl_transcript.cc.o
 
 # target to build an object file
 src/ssl/ssl_transcript.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_transcript.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_transcript.cc.o
 .PHONY : src/ssl/ssl_transcript.cc.o
 
 src/ssl/ssl_transcript.i: src/ssl/ssl_transcript.cc.i
@@ -7328,7 +7328,7 @@ src/ssl/ssl_transcript.i: src/ssl/ssl_transcript.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_transcript.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_transcript.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_transcript.cc.i
 .PHONY : src/ssl/ssl_transcript.cc.i
 
 src/ssl/ssl_transcript.s: src/ssl/ssl_transcript.cc.s
@@ -7337,7 +7337,7 @@ src/ssl/ssl_transcript.s: src/ssl/ssl_transcript.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_transcript.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_transcript.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_transcript.cc.s
 .PHONY : src/ssl/ssl_transcript.cc.s
 
 src/ssl/ssl_versions.o: src/ssl/ssl_versions.cc.o
@@ -7346,7 +7346,7 @@ src/ssl/ssl_versions.o: src/ssl/ssl_versions.cc.o
 
 # target to build an object file
 src/ssl/ssl_versions.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_versions.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_versions.cc.o
 .PHONY : src/ssl/ssl_versions.cc.o
 
 src/ssl/ssl_versions.i: src/ssl/ssl_versions.cc.i
@@ -7355,7 +7355,7 @@ src/ssl/ssl_versions.i: src/ssl/ssl_versions.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_versions.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_versions.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_versions.cc.i
 .PHONY : src/ssl/ssl_versions.cc.i
 
 src/ssl/ssl_versions.s: src/ssl/ssl_versions.cc.s
@@ -7364,7 +7364,7 @@ src/ssl/ssl_versions.s: src/ssl/ssl_versions.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_versions.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_versions.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_versions.cc.s
 .PHONY : src/ssl/ssl_versions.cc.s
 
 src/ssl/ssl_x509.o: src/ssl/ssl_x509.cc.o
@@ -7373,7 +7373,7 @@ src/ssl/ssl_x509.o: src/ssl/ssl_x509.cc.o
 
 # target to build an object file
 src/ssl/ssl_x509.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_x509.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_x509.cc.o
 .PHONY : src/ssl/ssl_x509.cc.o
 
 src/ssl/ssl_x509.i: src/ssl/ssl_x509.cc.i
@@ -7382,7 +7382,7 @@ src/ssl/ssl_x509.i: src/ssl/ssl_x509.cc.i
 
 # target to preprocess a source file
 src/ssl/ssl_x509.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_x509.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_x509.cc.i
 .PHONY : src/ssl/ssl_x509.cc.i
 
 src/ssl/ssl_x509.s: src/ssl/ssl_x509.cc.s
@@ -7391,7 +7391,7 @@ src/ssl/ssl_x509.s: src/ssl/ssl_x509.cc.s
 
 # target to generate assembly for a file
 src/ssl/ssl_x509.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_x509.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/ssl_x509.cc.s
 .PHONY : src/ssl/ssl_x509.cc.s
 
 src/ssl/t1_enc.o: src/ssl/t1_enc.cc.o
@@ -7400,7 +7400,7 @@ src/ssl/t1_enc.o: src/ssl/t1_enc.cc.o
 
 # target to build an object file
 src/ssl/t1_enc.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_enc.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_enc.cc.o
 .PHONY : src/ssl/t1_enc.cc.o
 
 src/ssl/t1_enc.i: src/ssl/t1_enc.cc.i
@@ -7409,7 +7409,7 @@ src/ssl/t1_enc.i: src/ssl/t1_enc.cc.i
 
 # target to preprocess a source file
 src/ssl/t1_enc.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_enc.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_enc.cc.i
 .PHONY : src/ssl/t1_enc.cc.i
 
 src/ssl/t1_enc.s: src/ssl/t1_enc.cc.s
@@ -7418,7 +7418,7 @@ src/ssl/t1_enc.s: src/ssl/t1_enc.cc.s
 
 # target to generate assembly for a file
 src/ssl/t1_enc.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_enc.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_enc.cc.s
 .PHONY : src/ssl/t1_enc.cc.s
 
 src/ssl/t1_lib.o: src/ssl/t1_lib.cc.o
@@ -7427,7 +7427,7 @@ src/ssl/t1_lib.o: src/ssl/t1_lib.cc.o
 
 # target to build an object file
 src/ssl/t1_lib.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_lib.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_lib.cc.o
 .PHONY : src/ssl/t1_lib.cc.o
 
 src/ssl/t1_lib.i: src/ssl/t1_lib.cc.i
@@ -7436,7 +7436,7 @@ src/ssl/t1_lib.i: src/ssl/t1_lib.cc.i
 
 # target to preprocess a source file
 src/ssl/t1_lib.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_lib.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_lib.cc.i
 .PHONY : src/ssl/t1_lib.cc.i
 
 src/ssl/t1_lib.s: src/ssl/t1_lib.cc.s
@@ -7445,7 +7445,7 @@ src/ssl/t1_lib.s: src/ssl/t1_lib.cc.s
 
 # target to generate assembly for a file
 src/ssl/t1_lib.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_lib.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/t1_lib.cc.s
 .PHONY : src/ssl/t1_lib.cc.s
 
 src/ssl/tls13_both.o: src/ssl/tls13_both.cc.o
@@ -7454,7 +7454,7 @@ src/ssl/tls13_both.o: src/ssl/tls13_both.cc.o
 
 # target to build an object file
 src/ssl/tls13_both.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_both.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_both.cc.o
 .PHONY : src/ssl/tls13_both.cc.o
 
 src/ssl/tls13_both.i: src/ssl/tls13_both.cc.i
@@ -7463,7 +7463,7 @@ src/ssl/tls13_both.i: src/ssl/tls13_both.cc.i
 
 # target to preprocess a source file
 src/ssl/tls13_both.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_both.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_both.cc.i
 .PHONY : src/ssl/tls13_both.cc.i
 
 src/ssl/tls13_both.s: src/ssl/tls13_both.cc.s
@@ -7472,7 +7472,7 @@ src/ssl/tls13_both.s: src/ssl/tls13_both.cc.s
 
 # target to generate assembly for a file
 src/ssl/tls13_both.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_both.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_both.cc.s
 .PHONY : src/ssl/tls13_both.cc.s
 
 src/ssl/tls13_client.o: src/ssl/tls13_client.cc.o
@@ -7481,7 +7481,7 @@ src/ssl/tls13_client.o: src/ssl/tls13_client.cc.o
 
 # target to build an object file
 src/ssl/tls13_client.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_client.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_client.cc.o
 .PHONY : src/ssl/tls13_client.cc.o
 
 src/ssl/tls13_client.i: src/ssl/tls13_client.cc.i
@@ -7490,7 +7490,7 @@ src/ssl/tls13_client.i: src/ssl/tls13_client.cc.i
 
 # target to preprocess a source file
 src/ssl/tls13_client.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_client.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_client.cc.i
 .PHONY : src/ssl/tls13_client.cc.i
 
 src/ssl/tls13_client.s: src/ssl/tls13_client.cc.s
@@ -7499,7 +7499,7 @@ src/ssl/tls13_client.s: src/ssl/tls13_client.cc.s
 
 # target to generate assembly for a file
 src/ssl/tls13_client.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_client.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_client.cc.s
 .PHONY : src/ssl/tls13_client.cc.s
 
 src/ssl/tls13_enc.o: src/ssl/tls13_enc.cc.o
@@ -7508,7 +7508,7 @@ src/ssl/tls13_enc.o: src/ssl/tls13_enc.cc.o
 
 # target to build an object file
 src/ssl/tls13_enc.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_enc.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_enc.cc.o
 .PHONY : src/ssl/tls13_enc.cc.o
 
 src/ssl/tls13_enc.i: src/ssl/tls13_enc.cc.i
@@ -7517,7 +7517,7 @@ src/ssl/tls13_enc.i: src/ssl/tls13_enc.cc.i
 
 # target to preprocess a source file
 src/ssl/tls13_enc.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_enc.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_enc.cc.i
 .PHONY : src/ssl/tls13_enc.cc.i
 
 src/ssl/tls13_enc.s: src/ssl/tls13_enc.cc.s
@@ -7526,7 +7526,7 @@ src/ssl/tls13_enc.s: src/ssl/tls13_enc.cc.s
 
 # target to generate assembly for a file
 src/ssl/tls13_enc.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_enc.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_enc.cc.s
 .PHONY : src/ssl/tls13_enc.cc.s
 
 src/ssl/tls13_server.o: src/ssl/tls13_server.cc.o
@@ -7535,7 +7535,7 @@ src/ssl/tls13_server.o: src/ssl/tls13_server.cc.o
 
 # target to build an object file
 src/ssl/tls13_server.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_server.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_server.cc.o
 .PHONY : src/ssl/tls13_server.cc.o
 
 src/ssl/tls13_server.i: src/ssl/tls13_server.cc.i
@@ -7544,7 +7544,7 @@ src/ssl/tls13_server.i: src/ssl/tls13_server.cc.i
 
 # target to preprocess a source file
 src/ssl/tls13_server.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_server.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_server.cc.i
 .PHONY : src/ssl/tls13_server.cc.i
 
 src/ssl/tls13_server.s: src/ssl/tls13_server.cc.s
@@ -7553,7 +7553,7 @@ src/ssl/tls13_server.s: src/ssl/tls13_server.cc.s
 
 # target to generate assembly for a file
 src/ssl/tls13_server.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_server.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls13_server.cc.s
 .PHONY : src/ssl/tls13_server.cc.s
 
 src/ssl/tls_method.o: src/ssl/tls_method.cc.o
@@ -7562,7 +7562,7 @@ src/ssl/tls_method.o: src/ssl/tls_method.cc.o
 
 # target to build an object file
 src/ssl/tls_method.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_method.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_method.cc.o
 .PHONY : src/ssl/tls_method.cc.o
 
 src/ssl/tls_method.i: src/ssl/tls_method.cc.i
@@ -7571,7 +7571,7 @@ src/ssl/tls_method.i: src/ssl/tls_method.cc.i
 
 # target to preprocess a source file
 src/ssl/tls_method.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_method.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_method.cc.i
 .PHONY : src/ssl/tls_method.cc.i
 
 src/ssl/tls_method.s: src/ssl/tls_method.cc.s
@@ -7580,7 +7580,7 @@ src/ssl/tls_method.s: src/ssl/tls_method.cc.s
 
 # target to generate assembly for a file
 src/ssl/tls_method.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_method.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_method.cc.s
 .PHONY : src/ssl/tls_method.cc.s
 
 src/ssl/tls_record.o: src/ssl/tls_record.cc.o
@@ -7589,7 +7589,7 @@ src/ssl/tls_record.o: src/ssl/tls_record.cc.o
 
 # target to build an object file
 src/ssl/tls_record.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_record.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_record.cc.o
 .PHONY : src/ssl/tls_record.cc.o
 
 src/ssl/tls_record.i: src/ssl/tls_record.cc.i
@@ -7598,7 +7598,7 @@ src/ssl/tls_record.i: src/ssl/tls_record.cc.i
 
 # target to preprocess a source file
 src/ssl/tls_record.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_record.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_record.cc.i
 .PHONY : src/ssl/tls_record.cc.i
 
 src/ssl/tls_record.s: src/ssl/tls_record.cc.s
@@ -7607,7 +7607,7 @@ src/ssl/tls_record.s: src/ssl/tls_record.cc.s
 
 # target to generate assembly for a file
 src/ssl/tls_record.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_record.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/ssl.dir/src/ssl/tls_record.cc.s
 .PHONY : src/ssl/tls_record.cc.s
 
 src/tool/args.o: src/tool/args.cc.o
@@ -7616,7 +7616,7 @@ src/tool/args.o: src/tool/args.cc.o
 
 # target to build an object file
 src/tool/args.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.o
 .PHONY : src/tool/args.cc.o
 
 src/tool/args.i: src/tool/args.cc.i
@@ -7625,7 +7625,7 @@ src/tool/args.i: src/tool/args.cc.i
 
 # target to preprocess a source file
 src/tool/args.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.i
 .PHONY : src/tool/args.cc.i
 
 src/tool/args.s: src/tool/args.cc.s
@@ -7634,7 +7634,7 @@ src/tool/args.s: src/tool/args.cc.s
 
 # target to generate assembly for a file
 src/tool/args.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/args.cc.s
 .PHONY : src/tool/args.cc.s
 
 src/tool/ciphers.o: src/tool/ciphers.cc.o
@@ -7643,7 +7643,7 @@ src/tool/ciphers.o: src/tool/ciphers.cc.o
 
 # target to build an object file
 src/tool/ciphers.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.o
 .PHONY : src/tool/ciphers.cc.o
 
 src/tool/ciphers.i: src/tool/ciphers.cc.i
@@ -7652,7 +7652,7 @@ src/tool/ciphers.i: src/tool/ciphers.cc.i
 
 # target to preprocess a source file
 src/tool/ciphers.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.i
 .PHONY : src/tool/ciphers.cc.i
 
 src/tool/ciphers.s: src/tool/ciphers.cc.s
@@ -7661,7 +7661,7 @@ src/tool/ciphers.s: src/tool/ciphers.cc.s
 
 # target to generate assembly for a file
 src/tool/ciphers.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/ciphers.cc.s
 .PHONY : src/tool/ciphers.cc.s
 
 src/tool/client.o: src/tool/client.cc.o
@@ -7670,7 +7670,7 @@ src/tool/client.o: src/tool/client.cc.o
 
 # target to build an object file
 src/tool/client.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.o
 .PHONY : src/tool/client.cc.o
 
 src/tool/client.i: src/tool/client.cc.i
@@ -7679,7 +7679,7 @@ src/tool/client.i: src/tool/client.cc.i
 
 # target to preprocess a source file
 src/tool/client.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.i
 .PHONY : src/tool/client.cc.i
 
 src/tool/client.s: src/tool/client.cc.s
@@ -7688,7 +7688,7 @@ src/tool/client.s: src/tool/client.cc.s
 
 # target to generate assembly for a file
 src/tool/client.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/client.cc.s
 .PHONY : src/tool/client.cc.s
 
 src/tool/const.o: src/tool/const.cc.o
@@ -7697,7 +7697,7 @@ src/tool/const.o: src/tool/const.cc.o
 
 # target to build an object file
 src/tool/const.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.o
 .PHONY : src/tool/const.cc.o
 
 src/tool/const.i: src/tool/const.cc.i
@@ -7706,7 +7706,7 @@ src/tool/const.i: src/tool/const.cc.i
 
 # target to preprocess a source file
 src/tool/const.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.i
 .PHONY : src/tool/const.cc.i
 
 src/tool/const.s: src/tool/const.cc.s
@@ -7715,7 +7715,7 @@ src/tool/const.s: src/tool/const.cc.s
 
 # target to generate assembly for a file
 src/tool/const.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/const.cc.s
 .PHONY : src/tool/const.cc.s
 
 src/tool/digest.o: src/tool/digest.cc.o
@@ -7724,7 +7724,7 @@ src/tool/digest.o: src/tool/digest.cc.o
 
 # target to build an object file
 src/tool/digest.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.o
 .PHONY : src/tool/digest.cc.o
 
 src/tool/digest.i: src/tool/digest.cc.i
@@ -7733,7 +7733,7 @@ src/tool/digest.i: src/tool/digest.cc.i
 
 # target to preprocess a source file
 src/tool/digest.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.i
 .PHONY : src/tool/digest.cc.i
 
 src/tool/digest.s: src/tool/digest.cc.s
@@ -7742,7 +7742,7 @@ src/tool/digest.s: src/tool/digest.cc.s
 
 # target to generate assembly for a file
 src/tool/digest.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/digest.cc.s
 .PHONY : src/tool/digest.cc.s
 
 src/tool/fd.o: src/tool/fd.cc.o
@@ -7751,7 +7751,7 @@ src/tool/fd.o: src/tool/fd.cc.o
 
 # target to build an object file
 src/tool/fd.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.o
 .PHONY : src/tool/fd.cc.o
 
 src/tool/fd.i: src/tool/fd.cc.i
@@ -7760,7 +7760,7 @@ src/tool/fd.i: src/tool/fd.cc.i
 
 # target to preprocess a source file
 src/tool/fd.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.i
 .PHONY : src/tool/fd.cc.i
 
 src/tool/fd.s: src/tool/fd.cc.s
@@ -7769,7 +7769,7 @@ src/tool/fd.s: src/tool/fd.cc.s
 
 # target to generate assembly for a file
 src/tool/fd.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/fd.cc.s
 .PHONY : src/tool/fd.cc.s
 
 src/tool/file.o: src/tool/file.cc.o
@@ -7778,7 +7778,7 @@ src/tool/file.o: src/tool/file.cc.o
 
 # target to build an object file
 src/tool/file.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.o
 .PHONY : src/tool/file.cc.o
 
 src/tool/file.i: src/tool/file.cc.i
@@ -7787,7 +7787,7 @@ src/tool/file.i: src/tool/file.cc.i
 
 # target to preprocess a source file
 src/tool/file.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.i
 .PHONY : src/tool/file.cc.i
 
 src/tool/file.s: src/tool/file.cc.s
@@ -7796,7 +7796,7 @@ src/tool/file.s: src/tool/file.cc.s
 
 # target to generate assembly for a file
 src/tool/file.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/file.cc.s
 .PHONY : src/tool/file.cc.s
 
 src/tool/generate_ed25519.o: src/tool/generate_ed25519.cc.o
@@ -7805,7 +7805,7 @@ src/tool/generate_ed25519.o: src/tool/generate_ed25519.cc.o
 
 # target to build an object file
 src/tool/generate_ed25519.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.o
 .PHONY : src/tool/generate_ed25519.cc.o
 
 src/tool/generate_ed25519.i: src/tool/generate_ed25519.cc.i
@@ -7814,7 +7814,7 @@ src/tool/generate_ed25519.i: src/tool/generate_ed25519.cc.i
 
 # target to preprocess a source file
 src/tool/generate_ed25519.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.i
 .PHONY : src/tool/generate_ed25519.cc.i
 
 src/tool/generate_ed25519.s: src/tool/generate_ed25519.cc.s
@@ -7823,7 +7823,7 @@ src/tool/generate_ed25519.s: src/tool/generate_ed25519.cc.s
 
 # target to generate assembly for a file
 src/tool/generate_ed25519.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/generate_ed25519.cc.s
 .PHONY : src/tool/generate_ed25519.cc.s
 
 src/tool/genrsa.o: src/tool/genrsa.cc.o
@@ -7832,7 +7832,7 @@ src/tool/genrsa.o: src/tool/genrsa.cc.o
 
 # target to build an object file
 src/tool/genrsa.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.o
 .PHONY : src/tool/genrsa.cc.o
 
 src/tool/genrsa.i: src/tool/genrsa.cc.i
@@ -7841,7 +7841,7 @@ src/tool/genrsa.i: src/tool/genrsa.cc.i
 
 # target to preprocess a source file
 src/tool/genrsa.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.i
 .PHONY : src/tool/genrsa.cc.i
 
 src/tool/genrsa.s: src/tool/genrsa.cc.s
@@ -7850,7 +7850,7 @@ src/tool/genrsa.s: src/tool/genrsa.cc.s
 
 # target to generate assembly for a file
 src/tool/genrsa.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/genrsa.cc.s
 .PHONY : src/tool/genrsa.cc.s
 
 src/tool/pkcs12.o: src/tool/pkcs12.cc.o
@@ -7859,7 +7859,7 @@ src/tool/pkcs12.o: src/tool/pkcs12.cc.o
 
 # target to build an object file
 src/tool/pkcs12.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.o
 .PHONY : src/tool/pkcs12.cc.o
 
 src/tool/pkcs12.i: src/tool/pkcs12.cc.i
@@ -7868,7 +7868,7 @@ src/tool/pkcs12.i: src/tool/pkcs12.cc.i
 
 # target to preprocess a source file
 src/tool/pkcs12.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.i
 .PHONY : src/tool/pkcs12.cc.i
 
 src/tool/pkcs12.s: src/tool/pkcs12.cc.s
@@ -7877,7 +7877,7 @@ src/tool/pkcs12.s: src/tool/pkcs12.cc.s
 
 # target to generate assembly for a file
 src/tool/pkcs12.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/pkcs12.cc.s
 .PHONY : src/tool/pkcs12.cc.s
 
 src/tool/rand.o: src/tool/rand.cc.o
@@ -7886,7 +7886,7 @@ src/tool/rand.o: src/tool/rand.cc.o
 
 # target to build an object file
 src/tool/rand.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.o
 .PHONY : src/tool/rand.cc.o
 
 src/tool/rand.i: src/tool/rand.cc.i
@@ -7895,7 +7895,7 @@ src/tool/rand.i: src/tool/rand.cc.i
 
 # target to preprocess a source file
 src/tool/rand.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.i
 .PHONY : src/tool/rand.cc.i
 
 src/tool/rand.s: src/tool/rand.cc.s
@@ -7904,7 +7904,7 @@ src/tool/rand.s: src/tool/rand.cc.s
 
 # target to generate assembly for a file
 src/tool/rand.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/rand.cc.s
 .PHONY : src/tool/rand.cc.s
 
 src/tool/server.o: src/tool/server.cc.o
@@ -7913,7 +7913,7 @@ src/tool/server.o: src/tool/server.cc.o
 
 # target to build an object file
 src/tool/server.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.o
 .PHONY : src/tool/server.cc.o
 
 src/tool/server.i: src/tool/server.cc.i
@@ -7922,7 +7922,7 @@ src/tool/server.i: src/tool/server.cc.i
 
 # target to preprocess a source file
 src/tool/server.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.i
 .PHONY : src/tool/server.cc.i
 
 src/tool/server.s: src/tool/server.cc.s
@@ -7931,7 +7931,7 @@ src/tool/server.s: src/tool/server.cc.s
 
 # target to generate assembly for a file
 src/tool/server.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/server.cc.s
 .PHONY : src/tool/server.cc.s
 
 src/tool/sign.o: src/tool/sign.cc.o
@@ -7940,7 +7940,7 @@ src/tool/sign.o: src/tool/sign.cc.o
 
 # target to build an object file
 src/tool/sign.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.o
 .PHONY : src/tool/sign.cc.o
 
 src/tool/sign.i: src/tool/sign.cc.i
@@ -7949,7 +7949,7 @@ src/tool/sign.i: src/tool/sign.cc.i
 
 # target to preprocess a source file
 src/tool/sign.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.i
 .PHONY : src/tool/sign.cc.i
 
 src/tool/sign.s: src/tool/sign.cc.s
@@ -7958,7 +7958,7 @@ src/tool/sign.s: src/tool/sign.cc.s
 
 # target to generate assembly for a file
 src/tool/sign.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/sign.cc.s
 .PHONY : src/tool/sign.cc.s
 
 src/tool/speed.o: src/tool/speed.cc.o
@@ -7967,7 +7967,7 @@ src/tool/speed.o: src/tool/speed.cc.o
 
 # target to build an object file
 src/tool/speed.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.o
 .PHONY : src/tool/speed.cc.o
 
 src/tool/speed.i: src/tool/speed.cc.i
@@ -7976,7 +7976,7 @@ src/tool/speed.i: src/tool/speed.cc.i
 
 # target to preprocess a source file
 src/tool/speed.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.i
 .PHONY : src/tool/speed.cc.i
 
 src/tool/speed.s: src/tool/speed.cc.s
@@ -7985,7 +7985,7 @@ src/tool/speed.s: src/tool/speed.cc.s
 
 # target to generate assembly for a file
 src/tool/speed.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/speed.cc.s
 .PHONY : src/tool/speed.cc.s
 
 src/tool/tool.o: src/tool/tool.cc.o
@@ -7994,7 +7994,7 @@ src/tool/tool.o: src/tool/tool.cc.o
 
 # target to build an object file
 src/tool/tool.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.o
 .PHONY : src/tool/tool.cc.o
 
 src/tool/tool.i: src/tool/tool.cc.i
@@ -8003,7 +8003,7 @@ src/tool/tool.i: src/tool/tool.cc.i
 
 # target to preprocess a source file
 src/tool/tool.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.i
 .PHONY : src/tool/tool.cc.i
 
 src/tool/tool.s: src/tool/tool.cc.s
@@ -8012,7 +8012,7 @@ src/tool/tool.s: src/tool/tool.cc.s
 
 # target to generate assembly for a file
 src/tool/tool.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/tool.cc.s
 .PHONY : src/tool/tool.cc.s
 
 src/tool/transport_common.o: src/tool/transport_common.cc.o
@@ -8021,7 +8021,7 @@ src/tool/transport_common.o: src/tool/transport_common.cc.o
 
 # target to build an object file
 src/tool/transport_common.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.o
 .PHONY : src/tool/transport_common.cc.o
 
 src/tool/transport_common.i: src/tool/transport_common.cc.i
@@ -8030,7 +8030,7 @@ src/tool/transport_common.i: src/tool/transport_common.cc.i
 
 # target to preprocess a source file
 src/tool/transport_common.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.i
 .PHONY : src/tool/transport_common.cc.i
 
 src/tool/transport_common.s: src/tool/transport_common.cc.s
@@ -8039,7 +8039,7 @@ src/tool/transport_common.s: src/tool/transport_common.cc.s
 
 # target to generate assembly for a file
 src/tool/transport_common.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/build.make grpc/third_party/boringssl-with-bazel/CMakeFiles/bssl.dir/src/tool/transport_common.cc.s
 .PHONY : src/tool/transport_common.cc.s
 
 # Help Target
@@ -8937,6 +8937,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

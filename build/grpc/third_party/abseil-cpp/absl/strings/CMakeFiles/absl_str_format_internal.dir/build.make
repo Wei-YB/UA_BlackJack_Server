@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/depend.make
@@ -79,81 +79,81 @@ include grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_inte
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.o: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/flags.make
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/arg.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/arg.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/arg.cc
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/arg.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/arg.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.i
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/arg.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/arg.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/arg.cc.s
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.o: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/flags.make
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/bind.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/bind.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/bind.cc
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/bind.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/bind.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.i
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/bind.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/bind.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/bind.cc.s
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.o: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/flags.make
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/extension.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/extension.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/extension.cc
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/extension.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/extension.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.i
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/extension.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/extension.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/extension.cc.s
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.o: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/flags.make
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/float_conversion.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/float_conversion.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/float_conversion.cc
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/float_conversion.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/float_conversion.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.i
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/float_conversion.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/float_conversion.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/float_conversion.cc.s
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.o: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/flags.make
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/output.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/output.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/output.cc
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/output.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/output.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.i
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/output.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/output.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/output.cc.s
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.o: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/flags.make
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/parser.cc
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/parser.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/parser.cc > CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.i
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/parser.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings/internal/str_format/parser.cc -o CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.s
 
 # Object files for target absl_str_format_internal
 absl_str_format_internal_OBJECTS = \
@@ -175,9 +175,9 @@ grpc/third_party/abseil-cpp/absl/strings/libabsl_str_format_internal.a: grpc/thi
 grpc/third_party/abseil-cpp/absl/strings/libabsl_str_format_internal.a: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/internal/str_format/parser.cc.o
 grpc/third_party/abseil-cpp/absl/strings/libabsl_str_format_internal.a: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build.make
 grpc/third_party/abseil-cpp/absl/strings/libabsl_str_format_internal.a: grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libabsl_str_format_internal.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -P CMakeFiles/absl_str_format_internal.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/absl_str_format_internal.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libabsl_str_format_internal.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -P CMakeFiles/absl_str_format_internal.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/absl_str_format_internal.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build: grpc/third_party/abseil-cpp/absl/strings/libabsl_str_format_internal.a
@@ -185,10 +185,10 @@ grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir
 .PHONY : grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/build
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -P CMakeFiles/absl_str_format_internal.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings && $(CMAKE_COMMAND) -P CMakeFiles/absl_str_format_internal.dir/cmake_clean.cmake
 .PHONY : grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/clean
 
 grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/strings /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/third_party/abseil-cpp/absl/strings/CMakeFiles/absl_str_format_internal.dir/depend
 

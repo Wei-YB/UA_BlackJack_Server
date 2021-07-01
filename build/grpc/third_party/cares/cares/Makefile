@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 grpc/third_party/cares/cares/CMakeFiles/acountry.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/CMakeFiles/acountry.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/CMakeFiles/acountry.dir/rule
 .PHONY : grpc/third_party/cares/cares/CMakeFiles/acountry.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ acountry: grpc/third_party/cares/cares/CMakeFiles/acountry.dir/rule
 
 # fast build rule for target.
 acountry/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build
 .PHONY : acountry/fast
 
 # Convenience name for target.
 grpc/third_party/cares/cares/CMakeFiles/adig.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/CMakeFiles/adig.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/CMakeFiles/adig.dir/rule
 .PHONY : grpc/third_party/cares/cares/CMakeFiles/adig.dir/rule
 
 # Convenience name for target.
@@ -203,12 +203,12 @@ adig: grpc/third_party/cares/cares/CMakeFiles/adig.dir/rule
 
 # fast build rule for target.
 adig/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/build
 .PHONY : adig/fast
 
 # Convenience name for target.
 grpc/third_party/cares/cares/CMakeFiles/ahost.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/CMakeFiles/ahost.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/CMakeFiles/ahost.dir/rule
 .PHONY : grpc/third_party/cares/cares/CMakeFiles/ahost.dir/rule
 
 # Convenience name for target.
@@ -218,12 +218,12 @@ ahost: grpc/third_party/cares/cares/CMakeFiles/ahost.dir/rule
 
 # fast build rule for target.
 ahost/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build
 .PHONY : ahost/fast
 
 # Convenience name for target.
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/rule
 .PHONY : grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/rule
 
 # Convenience name for target.
@@ -233,7 +233,7 @@ c-ares: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/rule
 
 # fast build rule for target.
 c-ares/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build
 .PHONY : c-ares/fast
 
 acountry.o: acountry.c.o
@@ -242,7 +242,7 @@ acountry.o: acountry.c.o
 
 # target to build an object file
 acountry.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/acountry.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/acountry.c.o
 .PHONY : acountry.c.o
 
 acountry.i: acountry.c.i
@@ -251,7 +251,7 @@ acountry.i: acountry.c.i
 
 # target to preprocess a source file
 acountry.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/acountry.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/acountry.c.i
 .PHONY : acountry.c.i
 
 acountry.s: acountry.c.s
@@ -260,7 +260,7 @@ acountry.s: acountry.c.s
 
 # target to generate assembly for a file
 acountry.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/acountry.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/acountry.c.s
 .PHONY : acountry.c.s
 
 adig.o: adig.c.o
@@ -269,7 +269,7 @@ adig.o: adig.c.o
 
 # target to build an object file
 adig.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.o
 .PHONY : adig.c.o
 
 adig.i: adig.c.i
@@ -278,7 +278,7 @@ adig.i: adig.c.i
 
 # target to preprocess a source file
 adig.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.i
 .PHONY : adig.c.i
 
 adig.s: adig.c.s
@@ -287,7 +287,7 @@ adig.s: adig.c.s
 
 # target to generate assembly for a file
 adig.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/adig.c.s
 .PHONY : adig.c.s
 
 ahost.o: ahost.c.o
@@ -296,7 +296,7 @@ ahost.o: ahost.c.o
 
 # target to build an object file
 ahost.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ahost.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ahost.c.o
 .PHONY : ahost.c.o
 
 ahost.i: ahost.c.i
@@ -305,7 +305,7 @@ ahost.i: ahost.c.i
 
 # target to preprocess a source file
 ahost.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ahost.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ahost.c.i
 .PHONY : ahost.c.i
 
 ahost.s: ahost.c.s
@@ -314,7 +314,7 @@ ahost.s: ahost.c.s
 
 # target to generate assembly for a file
 ahost.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ahost.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ahost.c.s
 .PHONY : ahost.c.s
 
 ares__close_sockets.o: ares__close_sockets.c.o
@@ -323,7 +323,7 @@ ares__close_sockets.o: ares__close_sockets.c.o
 
 # target to build an object file
 ares__close_sockets.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.o
 .PHONY : ares__close_sockets.c.o
 
 ares__close_sockets.i: ares__close_sockets.c.i
@@ -332,7 +332,7 @@ ares__close_sockets.i: ares__close_sockets.c.i
 
 # target to preprocess a source file
 ares__close_sockets.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.i
 .PHONY : ares__close_sockets.c.i
 
 ares__close_sockets.s: ares__close_sockets.c.s
@@ -341,7 +341,7 @@ ares__close_sockets.s: ares__close_sockets.c.s
 
 # target to generate assembly for a file
 ares__close_sockets.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.s
 .PHONY : ares__close_sockets.c.s
 
 ares__get_hostent.o: ares__get_hostent.c.o
@@ -350,7 +350,7 @@ ares__get_hostent.o: ares__get_hostent.c.o
 
 # target to build an object file
 ares__get_hostent.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.o
 .PHONY : ares__get_hostent.c.o
 
 ares__get_hostent.i: ares__get_hostent.c.i
@@ -359,7 +359,7 @@ ares__get_hostent.i: ares__get_hostent.c.i
 
 # target to preprocess a source file
 ares__get_hostent.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.i
 .PHONY : ares__get_hostent.c.i
 
 ares__get_hostent.s: ares__get_hostent.c.s
@@ -368,7 +368,7 @@ ares__get_hostent.s: ares__get_hostent.c.s
 
 # target to generate assembly for a file
 ares__get_hostent.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.s
 .PHONY : ares__get_hostent.c.s
 
 ares__read_line.o: ares__read_line.c.o
@@ -377,7 +377,7 @@ ares__read_line.o: ares__read_line.c.o
 
 # target to build an object file
 ares__read_line.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.o
 .PHONY : ares__read_line.c.o
 
 ares__read_line.i: ares__read_line.c.i
@@ -386,7 +386,7 @@ ares__read_line.i: ares__read_line.c.i
 
 # target to preprocess a source file
 ares__read_line.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.i
 .PHONY : ares__read_line.c.i
 
 ares__read_line.s: ares__read_line.c.s
@@ -395,7 +395,7 @@ ares__read_line.s: ares__read_line.c.s
 
 # target to generate assembly for a file
 ares__read_line.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.s
 .PHONY : ares__read_line.c.s
 
 ares__timeval.o: ares__timeval.c.o
@@ -404,7 +404,7 @@ ares__timeval.o: ares__timeval.c.o
 
 # target to build an object file
 ares__timeval.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.o
 .PHONY : ares__timeval.c.o
 
 ares__timeval.i: ares__timeval.c.i
@@ -413,7 +413,7 @@ ares__timeval.i: ares__timeval.c.i
 
 # target to preprocess a source file
 ares__timeval.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.i
 .PHONY : ares__timeval.c.i
 
 ares__timeval.s: ares__timeval.c.s
@@ -422,7 +422,7 @@ ares__timeval.s: ares__timeval.c.s
 
 # target to generate assembly for a file
 ares__timeval.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.s
 .PHONY : ares__timeval.c.s
 
 ares_android.o: ares_android.c.o
@@ -431,7 +431,7 @@ ares_android.o: ares_android.c.o
 
 # target to build an object file
 ares_android.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.o
 .PHONY : ares_android.c.o
 
 ares_android.i: ares_android.c.i
@@ -440,7 +440,7 @@ ares_android.i: ares_android.c.i
 
 # target to preprocess a source file
 ares_android.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.i
 .PHONY : ares_android.c.i
 
 ares_android.s: ares_android.c.s
@@ -449,7 +449,7 @@ ares_android.s: ares_android.c.s
 
 # target to generate assembly for a file
 ares_android.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.s
 .PHONY : ares_android.c.s
 
 ares_cancel.o: ares_cancel.c.o
@@ -458,7 +458,7 @@ ares_cancel.o: ares_cancel.c.o
 
 # target to build an object file
 ares_cancel.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.o
 .PHONY : ares_cancel.c.o
 
 ares_cancel.i: ares_cancel.c.i
@@ -467,7 +467,7 @@ ares_cancel.i: ares_cancel.c.i
 
 # target to preprocess a source file
 ares_cancel.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.i
 .PHONY : ares_cancel.c.i
 
 ares_cancel.s: ares_cancel.c.s
@@ -476,7 +476,7 @@ ares_cancel.s: ares_cancel.c.s
 
 # target to generate assembly for a file
 ares_cancel.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.s
 .PHONY : ares_cancel.c.s
 
 ares_create_query.o: ares_create_query.c.o
@@ -485,7 +485,7 @@ ares_create_query.o: ares_create_query.c.o
 
 # target to build an object file
 ares_create_query.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.o
 .PHONY : ares_create_query.c.o
 
 ares_create_query.i: ares_create_query.c.i
@@ -494,7 +494,7 @@ ares_create_query.i: ares_create_query.c.i
 
 # target to preprocess a source file
 ares_create_query.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.i
 .PHONY : ares_create_query.c.i
 
 ares_create_query.s: ares_create_query.c.s
@@ -503,7 +503,7 @@ ares_create_query.s: ares_create_query.c.s
 
 # target to generate assembly for a file
 ares_create_query.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.s
 .PHONY : ares_create_query.c.s
 
 ares_data.o: ares_data.c.o
@@ -512,7 +512,7 @@ ares_data.o: ares_data.c.o
 
 # target to build an object file
 ares_data.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.o
 .PHONY : ares_data.c.o
 
 ares_data.i: ares_data.c.i
@@ -521,7 +521,7 @@ ares_data.i: ares_data.c.i
 
 # target to preprocess a source file
 ares_data.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.i
 .PHONY : ares_data.c.i
 
 ares_data.s: ares_data.c.s
@@ -530,7 +530,7 @@ ares_data.s: ares_data.c.s
 
 # target to generate assembly for a file
 ares_data.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.s
 .PHONY : ares_data.c.s
 
 ares_destroy.o: ares_destroy.c.o
@@ -539,7 +539,7 @@ ares_destroy.o: ares_destroy.c.o
 
 # target to build an object file
 ares_destroy.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.o
 .PHONY : ares_destroy.c.o
 
 ares_destroy.i: ares_destroy.c.i
@@ -548,7 +548,7 @@ ares_destroy.i: ares_destroy.c.i
 
 # target to preprocess a source file
 ares_destroy.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.i
 .PHONY : ares_destroy.c.i
 
 ares_destroy.s: ares_destroy.c.s
@@ -557,7 +557,7 @@ ares_destroy.s: ares_destroy.c.s
 
 # target to generate assembly for a file
 ares_destroy.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.s
 .PHONY : ares_destroy.c.s
 
 ares_expand_name.o: ares_expand_name.c.o
@@ -566,7 +566,7 @@ ares_expand_name.o: ares_expand_name.c.o
 
 # target to build an object file
 ares_expand_name.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.o
 .PHONY : ares_expand_name.c.o
 
 ares_expand_name.i: ares_expand_name.c.i
@@ -575,7 +575,7 @@ ares_expand_name.i: ares_expand_name.c.i
 
 # target to preprocess a source file
 ares_expand_name.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.i
 .PHONY : ares_expand_name.c.i
 
 ares_expand_name.s: ares_expand_name.c.s
@@ -584,7 +584,7 @@ ares_expand_name.s: ares_expand_name.c.s
 
 # target to generate assembly for a file
 ares_expand_name.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.s
 .PHONY : ares_expand_name.c.s
 
 ares_expand_string.o: ares_expand_string.c.o
@@ -593,7 +593,7 @@ ares_expand_string.o: ares_expand_string.c.o
 
 # target to build an object file
 ares_expand_string.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.o
 .PHONY : ares_expand_string.c.o
 
 ares_expand_string.i: ares_expand_string.c.i
@@ -602,7 +602,7 @@ ares_expand_string.i: ares_expand_string.c.i
 
 # target to preprocess a source file
 ares_expand_string.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.i
 .PHONY : ares_expand_string.c.i
 
 ares_expand_string.s: ares_expand_string.c.s
@@ -611,7 +611,7 @@ ares_expand_string.s: ares_expand_string.c.s
 
 # target to generate assembly for a file
 ares_expand_string.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.s
 .PHONY : ares_expand_string.c.s
 
 ares_fds.o: ares_fds.c.o
@@ -620,7 +620,7 @@ ares_fds.o: ares_fds.c.o
 
 # target to build an object file
 ares_fds.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.o
 .PHONY : ares_fds.c.o
 
 ares_fds.i: ares_fds.c.i
@@ -629,7 +629,7 @@ ares_fds.i: ares_fds.c.i
 
 # target to preprocess a source file
 ares_fds.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.i
 .PHONY : ares_fds.c.i
 
 ares_fds.s: ares_fds.c.s
@@ -638,7 +638,7 @@ ares_fds.s: ares_fds.c.s
 
 # target to generate assembly for a file
 ares_fds.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.s
 .PHONY : ares_fds.c.s
 
 ares_free_hostent.o: ares_free_hostent.c.o
@@ -647,7 +647,7 @@ ares_free_hostent.o: ares_free_hostent.c.o
 
 # target to build an object file
 ares_free_hostent.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.o
 .PHONY : ares_free_hostent.c.o
 
 ares_free_hostent.i: ares_free_hostent.c.i
@@ -656,7 +656,7 @@ ares_free_hostent.i: ares_free_hostent.c.i
 
 # target to preprocess a source file
 ares_free_hostent.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.i
 .PHONY : ares_free_hostent.c.i
 
 ares_free_hostent.s: ares_free_hostent.c.s
@@ -665,7 +665,7 @@ ares_free_hostent.s: ares_free_hostent.c.s
 
 # target to generate assembly for a file
 ares_free_hostent.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.s
 .PHONY : ares_free_hostent.c.s
 
 ares_free_string.o: ares_free_string.c.o
@@ -674,7 +674,7 @@ ares_free_string.o: ares_free_string.c.o
 
 # target to build an object file
 ares_free_string.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.o
 .PHONY : ares_free_string.c.o
 
 ares_free_string.i: ares_free_string.c.i
@@ -683,7 +683,7 @@ ares_free_string.i: ares_free_string.c.i
 
 # target to preprocess a source file
 ares_free_string.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.i
 .PHONY : ares_free_string.c.i
 
 ares_free_string.s: ares_free_string.c.s
@@ -692,7 +692,7 @@ ares_free_string.s: ares_free_string.c.s
 
 # target to generate assembly for a file
 ares_free_string.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.s
 .PHONY : ares_free_string.c.s
 
 ares_getenv.o: ares_getenv.c.o
@@ -701,7 +701,7 @@ ares_getenv.o: ares_getenv.c.o
 
 # target to build an object file
 ares_getenv.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.o
 .PHONY : ares_getenv.c.o
 
 ares_getenv.i: ares_getenv.c.i
@@ -710,7 +710,7 @@ ares_getenv.i: ares_getenv.c.i
 
 # target to preprocess a source file
 ares_getenv.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.i
 .PHONY : ares_getenv.c.i
 
 ares_getenv.s: ares_getenv.c.s
@@ -719,7 +719,7 @@ ares_getenv.s: ares_getenv.c.s
 
 # target to generate assembly for a file
 ares_getenv.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.s
 .PHONY : ares_getenv.c.s
 
 ares_gethostbyaddr.o: ares_gethostbyaddr.c.o
@@ -728,7 +728,7 @@ ares_gethostbyaddr.o: ares_gethostbyaddr.c.o
 
 # target to build an object file
 ares_gethostbyaddr.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.o
 .PHONY : ares_gethostbyaddr.c.o
 
 ares_gethostbyaddr.i: ares_gethostbyaddr.c.i
@@ -737,7 +737,7 @@ ares_gethostbyaddr.i: ares_gethostbyaddr.c.i
 
 # target to preprocess a source file
 ares_gethostbyaddr.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.i
 .PHONY : ares_gethostbyaddr.c.i
 
 ares_gethostbyaddr.s: ares_gethostbyaddr.c.s
@@ -746,7 +746,7 @@ ares_gethostbyaddr.s: ares_gethostbyaddr.c.s
 
 # target to generate assembly for a file
 ares_gethostbyaddr.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.s
 .PHONY : ares_gethostbyaddr.c.s
 
 ares_gethostbyname.o: ares_gethostbyname.c.o
@@ -755,7 +755,7 @@ ares_gethostbyname.o: ares_gethostbyname.c.o
 
 # target to build an object file
 ares_gethostbyname.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.o
 .PHONY : ares_gethostbyname.c.o
 
 ares_gethostbyname.i: ares_gethostbyname.c.i
@@ -764,7 +764,7 @@ ares_gethostbyname.i: ares_gethostbyname.c.i
 
 # target to preprocess a source file
 ares_gethostbyname.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.i
 .PHONY : ares_gethostbyname.c.i
 
 ares_gethostbyname.s: ares_gethostbyname.c.s
@@ -773,7 +773,7 @@ ares_gethostbyname.s: ares_gethostbyname.c.s
 
 # target to generate assembly for a file
 ares_gethostbyname.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.s
 .PHONY : ares_gethostbyname.c.s
 
 ares_getnameinfo.o: ares_getnameinfo.c.o
@@ -782,7 +782,7 @@ ares_getnameinfo.o: ares_getnameinfo.c.o
 
 # target to build an object file
 ares_getnameinfo.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.o
 .PHONY : ares_getnameinfo.c.o
 
 ares_getnameinfo.i: ares_getnameinfo.c.i
@@ -791,7 +791,7 @@ ares_getnameinfo.i: ares_getnameinfo.c.i
 
 # target to preprocess a source file
 ares_getnameinfo.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.i
 .PHONY : ares_getnameinfo.c.i
 
 ares_getnameinfo.s: ares_getnameinfo.c.s
@@ -800,7 +800,7 @@ ares_getnameinfo.s: ares_getnameinfo.c.s
 
 # target to generate assembly for a file
 ares_getnameinfo.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.s
 .PHONY : ares_getnameinfo.c.s
 
 ares_getopt.o: ares_getopt.c.o
@@ -809,9 +809,9 @@ ares_getopt.o: ares_getopt.c.o
 
 # target to build an object file
 ares_getopt.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_getopt.c.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_getopt.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_getopt.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_getopt.c.o
 .PHONY : ares_getopt.c.o
 
 ares_getopt.i: ares_getopt.c.i
@@ -820,9 +820,9 @@ ares_getopt.i: ares_getopt.c.i
 
 # target to preprocess a source file
 ares_getopt.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_getopt.c.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_getopt.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_getopt.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_getopt.c.i
 .PHONY : ares_getopt.c.i
 
 ares_getopt.s: ares_getopt.c.s
@@ -831,9 +831,9 @@ ares_getopt.s: ares_getopt.c.s
 
 # target to generate assembly for a file
 ares_getopt.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_getopt.c.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_getopt.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_getopt.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_getopt.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_getopt.c.s
 .PHONY : ares_getopt.c.s
 
 ares_getsock.o: ares_getsock.c.o
@@ -842,7 +842,7 @@ ares_getsock.o: ares_getsock.c.o
 
 # target to build an object file
 ares_getsock.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.o
 .PHONY : ares_getsock.c.o
 
 ares_getsock.i: ares_getsock.c.i
@@ -851,7 +851,7 @@ ares_getsock.i: ares_getsock.c.i
 
 # target to preprocess a source file
 ares_getsock.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.i
 .PHONY : ares_getsock.c.i
 
 ares_getsock.s: ares_getsock.c.s
@@ -860,7 +860,7 @@ ares_getsock.s: ares_getsock.c.s
 
 # target to generate assembly for a file
 ares_getsock.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.s
 .PHONY : ares_getsock.c.s
 
 ares_init.o: ares_init.c.o
@@ -869,7 +869,7 @@ ares_init.o: ares_init.c.o
 
 # target to build an object file
 ares_init.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.o
 .PHONY : ares_init.c.o
 
 ares_init.i: ares_init.c.i
@@ -878,7 +878,7 @@ ares_init.i: ares_init.c.i
 
 # target to preprocess a source file
 ares_init.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.i
 .PHONY : ares_init.c.i
 
 ares_init.s: ares_init.c.s
@@ -887,7 +887,7 @@ ares_init.s: ares_init.c.s
 
 # target to generate assembly for a file
 ares_init.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.s
 .PHONY : ares_init.c.s
 
 ares_library_init.o: ares_library_init.c.o
@@ -896,7 +896,7 @@ ares_library_init.o: ares_library_init.c.o
 
 # target to build an object file
 ares_library_init.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.o
 .PHONY : ares_library_init.c.o
 
 ares_library_init.i: ares_library_init.c.i
@@ -905,7 +905,7 @@ ares_library_init.i: ares_library_init.c.i
 
 # target to preprocess a source file
 ares_library_init.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.i
 .PHONY : ares_library_init.c.i
 
 ares_library_init.s: ares_library_init.c.s
@@ -914,7 +914,7 @@ ares_library_init.s: ares_library_init.c.s
 
 # target to generate assembly for a file
 ares_library_init.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.s
 .PHONY : ares_library_init.c.s
 
 ares_llist.o: ares_llist.c.o
@@ -923,7 +923,7 @@ ares_llist.o: ares_llist.c.o
 
 # target to build an object file
 ares_llist.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.o
 .PHONY : ares_llist.c.o
 
 ares_llist.i: ares_llist.c.i
@@ -932,7 +932,7 @@ ares_llist.i: ares_llist.c.i
 
 # target to preprocess a source file
 ares_llist.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.i
 .PHONY : ares_llist.c.i
 
 ares_llist.s: ares_llist.c.s
@@ -941,7 +941,7 @@ ares_llist.s: ares_llist.c.s
 
 # target to generate assembly for a file
 ares_llist.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.s
 .PHONY : ares_llist.c.s
 
 ares_mkquery.o: ares_mkquery.c.o
@@ -950,7 +950,7 @@ ares_mkquery.o: ares_mkquery.c.o
 
 # target to build an object file
 ares_mkquery.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.o
 .PHONY : ares_mkquery.c.o
 
 ares_mkquery.i: ares_mkquery.c.i
@@ -959,7 +959,7 @@ ares_mkquery.i: ares_mkquery.c.i
 
 # target to preprocess a source file
 ares_mkquery.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.i
 .PHONY : ares_mkquery.c.i
 
 ares_mkquery.s: ares_mkquery.c.s
@@ -968,7 +968,7 @@ ares_mkquery.s: ares_mkquery.c.s
 
 # target to generate assembly for a file
 ares_mkquery.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.s
 .PHONY : ares_mkquery.c.s
 
 ares_nowarn.o: ares_nowarn.c.o
@@ -977,10 +977,10 @@ ares_nowarn.o: ares_nowarn.c.o
 
 # target to build an object file
 ares_nowarn.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_nowarn.c.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_nowarn.c.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_nowarn.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_nowarn.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.o
 .PHONY : ares_nowarn.c.o
 
 ares_nowarn.i: ares_nowarn.c.i
@@ -989,10 +989,10 @@ ares_nowarn.i: ares_nowarn.c.i
 
 # target to preprocess a source file
 ares_nowarn.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_nowarn.c.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_nowarn.c.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_nowarn.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_nowarn.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.i
 .PHONY : ares_nowarn.c.i
 
 ares_nowarn.s: ares_nowarn.c.s
@@ -1001,10 +1001,10 @@ ares_nowarn.s: ares_nowarn.c.s
 
 # target to generate assembly for a file
 ares_nowarn.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_nowarn.c.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_nowarn.c.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_nowarn.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_nowarn.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_nowarn.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.s
 .PHONY : ares_nowarn.c.s
 
 ares_options.o: ares_options.c.o
@@ -1013,7 +1013,7 @@ ares_options.o: ares_options.c.o
 
 # target to build an object file
 ares_options.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.o
 .PHONY : ares_options.c.o
 
 ares_options.i: ares_options.c.i
@@ -1022,7 +1022,7 @@ ares_options.i: ares_options.c.i
 
 # target to preprocess a source file
 ares_options.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.i
 .PHONY : ares_options.c.i
 
 ares_options.s: ares_options.c.s
@@ -1031,7 +1031,7 @@ ares_options.s: ares_options.c.s
 
 # target to generate assembly for a file
 ares_options.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.s
 .PHONY : ares_options.c.s
 
 ares_parse_a_reply.o: ares_parse_a_reply.c.o
@@ -1040,7 +1040,7 @@ ares_parse_a_reply.o: ares_parse_a_reply.c.o
 
 # target to build an object file
 ares_parse_a_reply.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.o
 .PHONY : ares_parse_a_reply.c.o
 
 ares_parse_a_reply.i: ares_parse_a_reply.c.i
@@ -1049,7 +1049,7 @@ ares_parse_a_reply.i: ares_parse_a_reply.c.i
 
 # target to preprocess a source file
 ares_parse_a_reply.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.i
 .PHONY : ares_parse_a_reply.c.i
 
 ares_parse_a_reply.s: ares_parse_a_reply.c.s
@@ -1058,7 +1058,7 @@ ares_parse_a_reply.s: ares_parse_a_reply.c.s
 
 # target to generate assembly for a file
 ares_parse_a_reply.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.s
 .PHONY : ares_parse_a_reply.c.s
 
 ares_parse_aaaa_reply.o: ares_parse_aaaa_reply.c.o
@@ -1067,7 +1067,7 @@ ares_parse_aaaa_reply.o: ares_parse_aaaa_reply.c.o
 
 # target to build an object file
 ares_parse_aaaa_reply.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.o
 .PHONY : ares_parse_aaaa_reply.c.o
 
 ares_parse_aaaa_reply.i: ares_parse_aaaa_reply.c.i
@@ -1076,7 +1076,7 @@ ares_parse_aaaa_reply.i: ares_parse_aaaa_reply.c.i
 
 # target to preprocess a source file
 ares_parse_aaaa_reply.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.i
 .PHONY : ares_parse_aaaa_reply.c.i
 
 ares_parse_aaaa_reply.s: ares_parse_aaaa_reply.c.s
@@ -1085,7 +1085,7 @@ ares_parse_aaaa_reply.s: ares_parse_aaaa_reply.c.s
 
 # target to generate assembly for a file
 ares_parse_aaaa_reply.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.s
 .PHONY : ares_parse_aaaa_reply.c.s
 
 ares_parse_mx_reply.o: ares_parse_mx_reply.c.o
@@ -1094,7 +1094,7 @@ ares_parse_mx_reply.o: ares_parse_mx_reply.c.o
 
 # target to build an object file
 ares_parse_mx_reply.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.o
 .PHONY : ares_parse_mx_reply.c.o
 
 ares_parse_mx_reply.i: ares_parse_mx_reply.c.i
@@ -1103,7 +1103,7 @@ ares_parse_mx_reply.i: ares_parse_mx_reply.c.i
 
 # target to preprocess a source file
 ares_parse_mx_reply.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.i
 .PHONY : ares_parse_mx_reply.c.i
 
 ares_parse_mx_reply.s: ares_parse_mx_reply.c.s
@@ -1112,7 +1112,7 @@ ares_parse_mx_reply.s: ares_parse_mx_reply.c.s
 
 # target to generate assembly for a file
 ares_parse_mx_reply.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.s
 .PHONY : ares_parse_mx_reply.c.s
 
 ares_parse_naptr_reply.o: ares_parse_naptr_reply.c.o
@@ -1121,7 +1121,7 @@ ares_parse_naptr_reply.o: ares_parse_naptr_reply.c.o
 
 # target to build an object file
 ares_parse_naptr_reply.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.o
 .PHONY : ares_parse_naptr_reply.c.o
 
 ares_parse_naptr_reply.i: ares_parse_naptr_reply.c.i
@@ -1130,7 +1130,7 @@ ares_parse_naptr_reply.i: ares_parse_naptr_reply.c.i
 
 # target to preprocess a source file
 ares_parse_naptr_reply.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.i
 .PHONY : ares_parse_naptr_reply.c.i
 
 ares_parse_naptr_reply.s: ares_parse_naptr_reply.c.s
@@ -1139,7 +1139,7 @@ ares_parse_naptr_reply.s: ares_parse_naptr_reply.c.s
 
 # target to generate assembly for a file
 ares_parse_naptr_reply.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.s
 .PHONY : ares_parse_naptr_reply.c.s
 
 ares_parse_ns_reply.o: ares_parse_ns_reply.c.o
@@ -1148,7 +1148,7 @@ ares_parse_ns_reply.o: ares_parse_ns_reply.c.o
 
 # target to build an object file
 ares_parse_ns_reply.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.o
 .PHONY : ares_parse_ns_reply.c.o
 
 ares_parse_ns_reply.i: ares_parse_ns_reply.c.i
@@ -1157,7 +1157,7 @@ ares_parse_ns_reply.i: ares_parse_ns_reply.c.i
 
 # target to preprocess a source file
 ares_parse_ns_reply.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.i
 .PHONY : ares_parse_ns_reply.c.i
 
 ares_parse_ns_reply.s: ares_parse_ns_reply.c.s
@@ -1166,7 +1166,7 @@ ares_parse_ns_reply.s: ares_parse_ns_reply.c.s
 
 # target to generate assembly for a file
 ares_parse_ns_reply.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.s
 .PHONY : ares_parse_ns_reply.c.s
 
 ares_parse_ptr_reply.o: ares_parse_ptr_reply.c.o
@@ -1175,7 +1175,7 @@ ares_parse_ptr_reply.o: ares_parse_ptr_reply.c.o
 
 # target to build an object file
 ares_parse_ptr_reply.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.o
 .PHONY : ares_parse_ptr_reply.c.o
 
 ares_parse_ptr_reply.i: ares_parse_ptr_reply.c.i
@@ -1184,7 +1184,7 @@ ares_parse_ptr_reply.i: ares_parse_ptr_reply.c.i
 
 # target to preprocess a source file
 ares_parse_ptr_reply.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.i
 .PHONY : ares_parse_ptr_reply.c.i
 
 ares_parse_ptr_reply.s: ares_parse_ptr_reply.c.s
@@ -1193,7 +1193,7 @@ ares_parse_ptr_reply.s: ares_parse_ptr_reply.c.s
 
 # target to generate assembly for a file
 ares_parse_ptr_reply.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.s
 .PHONY : ares_parse_ptr_reply.c.s
 
 ares_parse_soa_reply.o: ares_parse_soa_reply.c.o
@@ -1202,7 +1202,7 @@ ares_parse_soa_reply.o: ares_parse_soa_reply.c.o
 
 # target to build an object file
 ares_parse_soa_reply.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.o
 .PHONY : ares_parse_soa_reply.c.o
 
 ares_parse_soa_reply.i: ares_parse_soa_reply.c.i
@@ -1211,7 +1211,7 @@ ares_parse_soa_reply.i: ares_parse_soa_reply.c.i
 
 # target to preprocess a source file
 ares_parse_soa_reply.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.i
 .PHONY : ares_parse_soa_reply.c.i
 
 ares_parse_soa_reply.s: ares_parse_soa_reply.c.s
@@ -1220,7 +1220,7 @@ ares_parse_soa_reply.s: ares_parse_soa_reply.c.s
 
 # target to generate assembly for a file
 ares_parse_soa_reply.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.s
 .PHONY : ares_parse_soa_reply.c.s
 
 ares_parse_srv_reply.o: ares_parse_srv_reply.c.o
@@ -1229,7 +1229,7 @@ ares_parse_srv_reply.o: ares_parse_srv_reply.c.o
 
 # target to build an object file
 ares_parse_srv_reply.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.o
 .PHONY : ares_parse_srv_reply.c.o
 
 ares_parse_srv_reply.i: ares_parse_srv_reply.c.i
@@ -1238,7 +1238,7 @@ ares_parse_srv_reply.i: ares_parse_srv_reply.c.i
 
 # target to preprocess a source file
 ares_parse_srv_reply.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.i
 .PHONY : ares_parse_srv_reply.c.i
 
 ares_parse_srv_reply.s: ares_parse_srv_reply.c.s
@@ -1247,7 +1247,7 @@ ares_parse_srv_reply.s: ares_parse_srv_reply.c.s
 
 # target to generate assembly for a file
 ares_parse_srv_reply.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.s
 .PHONY : ares_parse_srv_reply.c.s
 
 ares_parse_txt_reply.o: ares_parse_txt_reply.c.o
@@ -1256,7 +1256,7 @@ ares_parse_txt_reply.o: ares_parse_txt_reply.c.o
 
 # target to build an object file
 ares_parse_txt_reply.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.o
 .PHONY : ares_parse_txt_reply.c.o
 
 ares_parse_txt_reply.i: ares_parse_txt_reply.c.i
@@ -1265,7 +1265,7 @@ ares_parse_txt_reply.i: ares_parse_txt_reply.c.i
 
 # target to preprocess a source file
 ares_parse_txt_reply.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.i
 .PHONY : ares_parse_txt_reply.c.i
 
 ares_parse_txt_reply.s: ares_parse_txt_reply.c.s
@@ -1274,7 +1274,7 @@ ares_parse_txt_reply.s: ares_parse_txt_reply.c.s
 
 # target to generate assembly for a file
 ares_parse_txt_reply.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.s
 .PHONY : ares_parse_txt_reply.c.s
 
 ares_platform.o: ares_platform.c.o
@@ -1283,7 +1283,7 @@ ares_platform.o: ares_platform.c.o
 
 # target to build an object file
 ares_platform.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.o
 .PHONY : ares_platform.c.o
 
 ares_platform.i: ares_platform.c.i
@@ -1292,7 +1292,7 @@ ares_platform.i: ares_platform.c.i
 
 # target to preprocess a source file
 ares_platform.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.i
 .PHONY : ares_platform.c.i
 
 ares_platform.s: ares_platform.c.s
@@ -1301,7 +1301,7 @@ ares_platform.s: ares_platform.c.s
 
 # target to generate assembly for a file
 ares_platform.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.s
 .PHONY : ares_platform.c.s
 
 ares_process.o: ares_process.c.o
@@ -1310,7 +1310,7 @@ ares_process.o: ares_process.c.o
 
 # target to build an object file
 ares_process.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.o
 .PHONY : ares_process.c.o
 
 ares_process.i: ares_process.c.i
@@ -1319,7 +1319,7 @@ ares_process.i: ares_process.c.i
 
 # target to preprocess a source file
 ares_process.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.i
 .PHONY : ares_process.c.i
 
 ares_process.s: ares_process.c.s
@@ -1328,7 +1328,7 @@ ares_process.s: ares_process.c.s
 
 # target to generate assembly for a file
 ares_process.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.s
 .PHONY : ares_process.c.s
 
 ares_query.o: ares_query.c.o
@@ -1337,7 +1337,7 @@ ares_query.o: ares_query.c.o
 
 # target to build an object file
 ares_query.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.o
 .PHONY : ares_query.c.o
 
 ares_query.i: ares_query.c.i
@@ -1346,7 +1346,7 @@ ares_query.i: ares_query.c.i
 
 # target to preprocess a source file
 ares_query.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.i
 .PHONY : ares_query.c.i
 
 ares_query.s: ares_query.c.s
@@ -1355,7 +1355,7 @@ ares_query.s: ares_query.c.s
 
 # target to generate assembly for a file
 ares_query.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.s
 .PHONY : ares_query.c.s
 
 ares_search.o: ares_search.c.o
@@ -1364,7 +1364,7 @@ ares_search.o: ares_search.c.o
 
 # target to build an object file
 ares_search.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.o
 .PHONY : ares_search.c.o
 
 ares_search.i: ares_search.c.i
@@ -1373,7 +1373,7 @@ ares_search.i: ares_search.c.i
 
 # target to preprocess a source file
 ares_search.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.i
 .PHONY : ares_search.c.i
 
 ares_search.s: ares_search.c.s
@@ -1382,7 +1382,7 @@ ares_search.s: ares_search.c.s
 
 # target to generate assembly for a file
 ares_search.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.s
 .PHONY : ares_search.c.s
 
 ares_send.o: ares_send.c.o
@@ -1391,7 +1391,7 @@ ares_send.o: ares_send.c.o
 
 # target to build an object file
 ares_send.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.o
 .PHONY : ares_send.c.o
 
 ares_send.i: ares_send.c.i
@@ -1400,7 +1400,7 @@ ares_send.i: ares_send.c.i
 
 # target to preprocess a source file
 ares_send.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.i
 .PHONY : ares_send.c.i
 
 ares_send.s: ares_send.c.s
@@ -1409,7 +1409,7 @@ ares_send.s: ares_send.c.s
 
 # target to generate assembly for a file
 ares_send.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.s
 .PHONY : ares_send.c.s
 
 ares_strcasecmp.o: ares_strcasecmp.c.o
@@ -1418,10 +1418,10 @@ ares_strcasecmp.o: ares_strcasecmp.c.o
 
 # target to build an object file
 ares_strcasecmp.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_strcasecmp.c.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_strcasecmp.c.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_strcasecmp.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_strcasecmp.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.o
 .PHONY : ares_strcasecmp.c.o
 
 ares_strcasecmp.i: ares_strcasecmp.c.i
@@ -1430,10 +1430,10 @@ ares_strcasecmp.i: ares_strcasecmp.c.i
 
 # target to preprocess a source file
 ares_strcasecmp.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_strcasecmp.c.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_strcasecmp.c.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_strcasecmp.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_strcasecmp.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.i
 .PHONY : ares_strcasecmp.c.i
 
 ares_strcasecmp.s: ares_strcasecmp.c.s
@@ -1442,10 +1442,10 @@ ares_strcasecmp.s: ares_strcasecmp.c.s
 
 # target to generate assembly for a file
 ares_strcasecmp.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_strcasecmp.c.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_strcasecmp.c.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/acountry.dir/build.make grpc/third_party/cares/cares/CMakeFiles/acountry.dir/ares_strcasecmp.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/adig.dir/build.make grpc/third_party/cares/cares/CMakeFiles/adig.dir/ares_strcasecmp.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/ahost.dir/build.make grpc/third_party/cares/cares/CMakeFiles/ahost.dir/ares_strcasecmp.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.s
 .PHONY : ares_strcasecmp.c.s
 
 ares_strdup.o: ares_strdup.c.o
@@ -1454,7 +1454,7 @@ ares_strdup.o: ares_strdup.c.o
 
 # target to build an object file
 ares_strdup.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.o
 .PHONY : ares_strdup.c.o
 
 ares_strdup.i: ares_strdup.c.i
@@ -1463,7 +1463,7 @@ ares_strdup.i: ares_strdup.c.i
 
 # target to preprocess a source file
 ares_strdup.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.i
 .PHONY : ares_strdup.c.i
 
 ares_strdup.s: ares_strdup.c.s
@@ -1472,7 +1472,7 @@ ares_strdup.s: ares_strdup.c.s
 
 # target to generate assembly for a file
 ares_strdup.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.s
 .PHONY : ares_strdup.c.s
 
 ares_strerror.o: ares_strerror.c.o
@@ -1481,7 +1481,7 @@ ares_strerror.o: ares_strerror.c.o
 
 # target to build an object file
 ares_strerror.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.o
 .PHONY : ares_strerror.c.o
 
 ares_strerror.i: ares_strerror.c.i
@@ -1490,7 +1490,7 @@ ares_strerror.i: ares_strerror.c.i
 
 # target to preprocess a source file
 ares_strerror.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.i
 .PHONY : ares_strerror.c.i
 
 ares_strerror.s: ares_strerror.c.s
@@ -1499,7 +1499,7 @@ ares_strerror.s: ares_strerror.c.s
 
 # target to generate assembly for a file
 ares_strerror.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.s
 .PHONY : ares_strerror.c.s
 
 ares_strsplit.o: ares_strsplit.c.o
@@ -1508,7 +1508,7 @@ ares_strsplit.o: ares_strsplit.c.o
 
 # target to build an object file
 ares_strsplit.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.o
 .PHONY : ares_strsplit.c.o
 
 ares_strsplit.i: ares_strsplit.c.i
@@ -1517,7 +1517,7 @@ ares_strsplit.i: ares_strsplit.c.i
 
 # target to preprocess a source file
 ares_strsplit.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.i
 .PHONY : ares_strsplit.c.i
 
 ares_strsplit.s: ares_strsplit.c.s
@@ -1526,7 +1526,7 @@ ares_strsplit.s: ares_strsplit.c.s
 
 # target to generate assembly for a file
 ares_strsplit.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.s
 .PHONY : ares_strsplit.c.s
 
 ares_timeout.o: ares_timeout.c.o
@@ -1535,7 +1535,7 @@ ares_timeout.o: ares_timeout.c.o
 
 # target to build an object file
 ares_timeout.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.o
 .PHONY : ares_timeout.c.o
 
 ares_timeout.i: ares_timeout.c.i
@@ -1544,7 +1544,7 @@ ares_timeout.i: ares_timeout.c.i
 
 # target to preprocess a source file
 ares_timeout.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.i
 .PHONY : ares_timeout.c.i
 
 ares_timeout.s: ares_timeout.c.s
@@ -1553,7 +1553,7 @@ ares_timeout.s: ares_timeout.c.s
 
 # target to generate assembly for a file
 ares_timeout.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.s
 .PHONY : ares_timeout.c.s
 
 ares_version.o: ares_version.c.o
@@ -1562,7 +1562,7 @@ ares_version.o: ares_version.c.o
 
 # target to build an object file
 ares_version.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.o
 .PHONY : ares_version.c.o
 
 ares_version.i: ares_version.c.i
@@ -1571,7 +1571,7 @@ ares_version.i: ares_version.c.i
 
 # target to preprocess a source file
 ares_version.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.i
 .PHONY : ares_version.c.i
 
 ares_version.s: ares_version.c.s
@@ -1580,7 +1580,7 @@ ares_version.s: ares_version.c.s
 
 # target to generate assembly for a file
 ares_version.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.s
 .PHONY : ares_version.c.s
 
 ares_writev.o: ares_writev.c.o
@@ -1589,7 +1589,7 @@ ares_writev.o: ares_writev.c.o
 
 # target to build an object file
 ares_writev.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.o
 .PHONY : ares_writev.c.o
 
 ares_writev.i: ares_writev.c.i
@@ -1598,7 +1598,7 @@ ares_writev.i: ares_writev.c.i
 
 # target to preprocess a source file
 ares_writev.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.i
 .PHONY : ares_writev.c.i
 
 ares_writev.s: ares_writev.c.s
@@ -1607,7 +1607,7 @@ ares_writev.s: ares_writev.c.s
 
 # target to generate assembly for a file
 ares_writev.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.s
 .PHONY : ares_writev.c.s
 
 bitncmp.o: bitncmp.c.o
@@ -1616,7 +1616,7 @@ bitncmp.o: bitncmp.c.o
 
 # target to build an object file
 bitncmp.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.o
 .PHONY : bitncmp.c.o
 
 bitncmp.i: bitncmp.c.i
@@ -1625,7 +1625,7 @@ bitncmp.i: bitncmp.c.i
 
 # target to preprocess a source file
 bitncmp.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.i
 .PHONY : bitncmp.c.i
 
 bitncmp.s: bitncmp.c.s
@@ -1634,7 +1634,7 @@ bitncmp.s: bitncmp.c.s
 
 # target to generate assembly for a file
 bitncmp.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.s
 .PHONY : bitncmp.c.s
 
 inet_net_pton.o: inet_net_pton.c.o
@@ -1643,7 +1643,7 @@ inet_net_pton.o: inet_net_pton.c.o
 
 # target to build an object file
 inet_net_pton.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.o
 .PHONY : inet_net_pton.c.o
 
 inet_net_pton.i: inet_net_pton.c.i
@@ -1652,7 +1652,7 @@ inet_net_pton.i: inet_net_pton.c.i
 
 # target to preprocess a source file
 inet_net_pton.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.i
 .PHONY : inet_net_pton.c.i
 
 inet_net_pton.s: inet_net_pton.c.s
@@ -1661,7 +1661,7 @@ inet_net_pton.s: inet_net_pton.c.s
 
 # target to generate assembly for a file
 inet_net_pton.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.s
 .PHONY : inet_net_pton.c.s
 
 inet_ntop.o: inet_ntop.c.o
@@ -1670,7 +1670,7 @@ inet_ntop.o: inet_ntop.c.o
 
 # target to build an object file
 inet_ntop.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.o
 .PHONY : inet_ntop.c.o
 
 inet_ntop.i: inet_ntop.c.i
@@ -1679,7 +1679,7 @@ inet_ntop.i: inet_ntop.c.i
 
 # target to preprocess a source file
 inet_ntop.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.i
 .PHONY : inet_ntop.c.i
 
 inet_ntop.s: inet_ntop.c.s
@@ -1688,7 +1688,7 @@ inet_ntop.s: inet_ntop.c.s
 
 # target to generate assembly for a file
 inet_ntop.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.s
 .PHONY : inet_ntop.c.s
 
 windows_port.o: windows_port.c.o
@@ -1697,7 +1697,7 @@ windows_port.o: windows_port.c.o
 
 # target to build an object file
 windows_port.c.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.o
 .PHONY : windows_port.c.o
 
 windows_port.i: windows_port.c.i
@@ -1706,7 +1706,7 @@ windows_port.i: windows_port.c.i
 
 # target to preprocess a source file
 windows_port.c.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.i
 .PHONY : windows_port.c.i
 
 windows_port.s: windows_port.c.s
@@ -1715,7 +1715,7 @@ windows_port.s: windows_port.c.s
 
 # target to generate assembly for a file
 windows_port.c.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.s
 .PHONY : windows_port.c.s
 
 # Help Target
@@ -1907,6 +1907,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

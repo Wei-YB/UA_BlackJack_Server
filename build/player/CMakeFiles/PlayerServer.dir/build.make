@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include player/CMakeFiles/PlayerServer.dir/depend.make
@@ -78,8 +78,8 @@ include player/CMakeFiles/PlayerServer.dir/progress.make
 include player/CMakeFiles/PlayerServer.dir/flags.make
 
 ../PlayerServer/grpc/UA_BlackJack.pb.cc: ../protos/UA_BlackJack.proto
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../PlayerServer/grpc/UA_BlackJack.pb.cc, ../../PlayerServer/grpc/UA_BlackJack.pb.h, ../../PlayerServer/grpc/UA_BlackJack.grpc.pb.cc, ../../PlayerServer/grpc/UA_BlackJack.grpc.pb.h"
-	cd /root/ricki/UA_BlackJack_Server/build/player && ../grpc/third_party/protobuf/protoc-3.15.8.0 --grpc_out /root/ricki/UA_BlackJack_Server/PlayerServer/grpc --cpp_out /root/ricki/UA_BlackJack_Server/PlayerServer/grpc -I /root/ricki/UA_BlackJack_Server/protos --plugin=protoc-gen-grpc="/root/ricki/UA_BlackJack_Server/build/grpc/grpc_cpp_plugin" /root/ricki/UA_BlackJack_Server/protos/UA_BlackJack.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../PlayerServer/grpc/UA_BlackJack.pb.cc, ../../PlayerServer/grpc/UA_BlackJack.pb.h, ../../PlayerServer/grpc/UA_BlackJack.grpc.pb.cc, ../../PlayerServer/grpc/UA_BlackJack.grpc.pb.h"
+	cd /home/tong/UA_BlackJack_Server/build/player && ../grpc/third_party/protobuf/protoc-3.15.8.0 --grpc_out /home/tong/UA_BlackJack_Server/PlayerServer/grpc --cpp_out /home/tong/UA_BlackJack_Server/PlayerServer/grpc -I /home/tong/UA_BlackJack_Server/protos --plugin=protoc-gen-grpc="/home/tong/UA_BlackJack_Server/build/grpc/grpc_cpp_plugin" /home/tong/UA_BlackJack_Server/protos/UA_BlackJack.proto
 
 ../PlayerServer/grpc/UA_BlackJack.pb.h: ../PlayerServer/grpc/UA_BlackJack.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate ../PlayerServer/grpc/UA_BlackJack.pb.h
@@ -92,68 +92,68 @@ include player/CMakeFiles/PlayerServer.dir/flags.make
 
 player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.o: player/CMakeFiles/PlayerServer.dir/flags.make
 player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.o: ../PlayerServer/grpc/UA_BlackJack.grpc.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.o -c /root/ricki/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.grpc.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.o -c /home/tong/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.grpc.pb.cc
 
 player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.grpc.pb.cc > CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.grpc.pb.cc > CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.i
 
 player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.grpc.pb.cc -o CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.grpc.pb.cc -o CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.grpc.pb.cc.s
 
 player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.o: player/CMakeFiles/PlayerServer.dir/flags.make
 player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.o: ../PlayerServer/grpc/UA_BlackJack.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.o -c /root/ricki/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.o -c /home/tong/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.pb.cc
 
 player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.pb.cc > CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.pb.cc > CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.i
 
 player/CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.pb.cc -o CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/PlayerServer/grpc/UA_BlackJack.pb.cc -o CMakeFiles/PlayerServer.dir/grpc/UA_BlackJack.pb.cc.s
 
 player/CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.o: player/CMakeFiles/PlayerServer.dir/flags.make
 player/CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.o: ../PlayerServer/src/PlayerClientDB-syn.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object player/CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.o -c /root/ricki/UA_BlackJack_Server/PlayerServer/src/PlayerClientDB-syn.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object player/CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.o -c /home/tong/UA_BlackJack_Server/PlayerServer/src/PlayerClientDB-syn.cc
 
 player/CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/PlayerServer/src/PlayerClientDB-syn.cc > CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/PlayerServer/src/PlayerClientDB-syn.cc > CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.i
 
 player/CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/PlayerServer/src/PlayerClientDB-syn.cc -o CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/PlayerServer/src/PlayerClientDB-syn.cc -o CMakeFiles/PlayerServer.dir/src/PlayerClientDB-syn.cc.s
 
 player/CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.o: player/CMakeFiles/PlayerServer.dir/flags.make
 player/CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.o: ../PlayerServer/src/PlayerServer-asyn.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object player/CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.o -c /root/ricki/UA_BlackJack_Server/PlayerServer/src/PlayerServer-asyn.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object player/CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.o -c /home/tong/UA_BlackJack_Server/PlayerServer/src/PlayerServer-asyn.cc
 
 player/CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/PlayerServer/src/PlayerServer-asyn.cc > CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/PlayerServer/src/PlayerServer-asyn.cc > CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.i
 
 player/CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/PlayerServer/src/PlayerServer-asyn.cc -o CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/PlayerServer/src/PlayerServer-asyn.cc -o CMakeFiles/PlayerServer.dir/src/PlayerServer-asyn.cc.s
 
 player/CMakeFiles/PlayerServer.dir/src/main.cc.o: player/CMakeFiles/PlayerServer.dir/flags.make
 player/CMakeFiles/PlayerServer.dir/src/main.cc.o: ../PlayerServer/src/main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object player/CMakeFiles/PlayerServer.dir/src/main.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerServer.dir/src/main.cc.o -c /root/ricki/UA_BlackJack_Server/PlayerServer/src/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object player/CMakeFiles/PlayerServer.dir/src/main.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlayerServer.dir/src/main.cc.o -c /home/tong/UA_BlackJack_Server/PlayerServer/src/main.cc
 
 player/CMakeFiles/PlayerServer.dir/src/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlayerServer.dir/src/main.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/PlayerServer/src/main.cc > CMakeFiles/PlayerServer.dir/src/main.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/PlayerServer/src/main.cc > CMakeFiles/PlayerServer.dir/src/main.cc.i
 
 player/CMakeFiles/PlayerServer.dir/src/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayerServer.dir/src/main.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/player && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/PlayerServer/src/main.cc -o CMakeFiles/PlayerServer.dir/src/main.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/player && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/PlayerServer/src/main.cc -o CMakeFiles/PlayerServer.dir/src/main.cc.s
 
 # Object files for target PlayerServer
 PlayerServer_OBJECTS = \
@@ -216,8 +216,8 @@ player/PlayerServer: grpc/third_party/abseil-cpp/absl/base/libabsl_log_severity.
 player/PlayerServer: grpc/third_party/boringssl-with-bazel/libssl.a
 player/PlayerServer: grpc/third_party/boringssl-with-bazel/libcrypto.a
 player/PlayerServer: player/CMakeFiles/PlayerServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable PlayerServer"
-	cd /root/ricki/UA_BlackJack_Server/build/player && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PlayerServer.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable PlayerServer"
+	cd /home/tong/UA_BlackJack_Server/build/player && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PlayerServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 player/CMakeFiles/PlayerServer.dir/build: player/PlayerServer
@@ -225,13 +225,13 @@ player/CMakeFiles/PlayerServer.dir/build: player/PlayerServer
 .PHONY : player/CMakeFiles/PlayerServer.dir/build
 
 player/CMakeFiles/PlayerServer.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/player && $(CMAKE_COMMAND) -P CMakeFiles/PlayerServer.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/player && $(CMAKE_COMMAND) -P CMakeFiles/PlayerServer.dir/cmake_clean.cmake
 .PHONY : player/CMakeFiles/PlayerServer.dir/clean
 
 player/CMakeFiles/PlayerServer.dir/depend: ../PlayerServer/grpc/UA_BlackJack.pb.cc
 player/CMakeFiles/PlayerServer.dir/depend: ../PlayerServer/grpc/UA_BlackJack.pb.h
 player/CMakeFiles/PlayerServer.dir/depend: ../PlayerServer/grpc/UA_BlackJack.grpc.pb.cc
 player/CMakeFiles/PlayerServer.dir/depend: ../PlayerServer/grpc/UA_BlackJack.grpc.pb.h
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/PlayerServer /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/player /root/ricki/UA_BlackJack_Server/build/player/CMakeFiles/PlayerServer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/PlayerServer /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/player /home/tong/UA_BlackJack_Server/build/player/CMakeFiles/PlayerServer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : player/CMakeFiles/PlayerServer.dir/depend
 

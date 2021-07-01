@@ -5,11 +5,12 @@
 #include <sys/epoll.h>
 #include <iostream>
 #include <unistd.h>
+#include "combat_typedef.h"
 
 void ua_blackjack::Game::createServiece(void)
 {
     const char *ip = "0.0.0.0";
-    int port = 50050;
+    int port = atoi(controlTcpPort.c_str());
 
     struct sockaddr_in address;
     bzero(&address, sizeof address);
@@ -72,6 +73,8 @@ void ua_blackjack::Game::createServiece(void)
                     else if (strcmp(buffer, "quit") == 0)
                     {
                         spdlog::info("quiting...");
+                        close(fd);
+                        close(listenfd);
                         exit(0);
                     }
                 }

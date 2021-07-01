@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/status/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/status/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ absl_statusor: grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.
 
 # fast build rule for target.
 absl_statusor/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/build
 .PHONY : absl_statusor/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/rule
 
 # Convenience name for target.
@@ -203,7 +203,7 @@ absl_status: grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/
 
 # fast build rule for target.
 absl_status/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build
 .PHONY : absl_status/fast
 
 status.o: status.cc.o
@@ -212,7 +212,7 @@ status.o: status.cc.o
 
 # target to build an object file
 status.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status.cc.o
 .PHONY : status.cc.o
 
 status.i: status.cc.i
@@ -221,7 +221,7 @@ status.i: status.cc.i
 
 # target to preprocess a source file
 status.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status.cc.i
 .PHONY : status.cc.i
 
 status.s: status.cc.s
@@ -230,7 +230,7 @@ status.s: status.cc.s
 
 # target to generate assembly for a file
 status.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status.cc.s
 .PHONY : status.cc.s
 
 status_payload_printer.o: status_payload_printer.cc.o
@@ -239,7 +239,7 @@ status_payload_printer.o: status_payload_printer.cc.o
 
 # target to build an object file
 status_payload_printer.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status_payload_printer.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status_payload_printer.cc.o
 .PHONY : status_payload_printer.cc.o
 
 status_payload_printer.i: status_payload_printer.cc.i
@@ -248,7 +248,7 @@ status_payload_printer.i: status_payload_printer.cc.i
 
 # target to preprocess a source file
 status_payload_printer.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status_payload_printer.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status_payload_printer.cc.i
 .PHONY : status_payload_printer.cc.i
 
 status_payload_printer.s: status_payload_printer.cc.s
@@ -257,7 +257,7 @@ status_payload_printer.s: status_payload_printer.cc.s
 
 # target to generate assembly for a file
 status_payload_printer.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status_payload_printer.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status_payload_printer.cc.s
 .PHONY : status_payload_printer.cc.s
 
 statusor.o: statusor.cc.o
@@ -266,7 +266,7 @@ statusor.o: statusor.cc.o
 
 # target to build an object file
 statusor.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/statusor.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/statusor.cc.o
 .PHONY : statusor.cc.o
 
 statusor.i: statusor.cc.i
@@ -275,7 +275,7 @@ statusor.i: statusor.cc.i
 
 # target to preprocess a source file
 statusor.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/statusor.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/statusor.cc.i
 .PHONY : statusor.cc.i
 
 statusor.s: statusor.cc.s
@@ -284,7 +284,7 @@ statusor.s: statusor.cc.s
 
 # target to generate assembly for a file
 statusor.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/statusor.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/build.make grpc/third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/statusor.cc.s
 .PHONY : statusor.cc.s
 
 # Help Target
@@ -321,6 +321,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

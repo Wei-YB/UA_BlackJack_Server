@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/numeric/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/numeric/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/numeric/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/numeric/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/numeric/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/numeric/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/numeric/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/numeric/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/rule
 
 # Convenience name for target.
@@ -188,7 +188,7 @@ absl_int128: grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir
 
 # fast build rule for target.
 absl_int128/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/build.make grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/build.make grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/build
 .PHONY : absl_int128/fast
 
 int128.o: int128.cc.o
@@ -197,7 +197,7 @@ int128.o: int128.cc.o
 
 # target to build an object file
 int128.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/build.make grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/int128.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/build.make grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/int128.cc.o
 .PHONY : int128.cc.o
 
 int128.i: int128.cc.i
@@ -206,7 +206,7 @@ int128.i: int128.cc.i
 
 # target to preprocess a source file
 int128.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/build.make grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/int128.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/build.make grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/int128.cc.i
 .PHONY : int128.cc.i
 
 int128.s: int128.cc.s
@@ -215,7 +215,7 @@ int128.s: int128.cc.s
 
 # target to generate assembly for a file
 int128.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/build.make grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/int128.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/build.make grpc/third_party/abseil-cpp/absl/numeric/CMakeFiles/absl_int128.dir/int128.cc.s
 .PHONY : int128.cc.s
 
 # Help Target
@@ -245,6 +245,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

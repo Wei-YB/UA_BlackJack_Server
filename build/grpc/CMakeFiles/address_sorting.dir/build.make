@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/CMakeFiles/address_sorting.dir/depend.make
@@ -79,42 +79,42 @@ include grpc/CMakeFiles/address_sorting.dir/flags.make
 
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.o: grpc/CMakeFiles/address_sorting.dir/flags.make
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.o: ../thirdparty/grpc/third_party/address_sorting/address_sorting.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting.c
 
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting.c > CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting.c > CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.i
 
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting.c -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting.c -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.s
 
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.o: grpc/CMakeFiles/address_sorting.dir/flags.make
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.o: ../thirdparty/grpc/third_party/address_sorting/address_sorting_posix.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_posix.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_posix.c
 
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_posix.c > CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_posix.c > CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.i
 
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_posix.c -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_posix.c -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.s
 
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.o: grpc/CMakeFiles/address_sorting.dir/flags.make
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.o: ../thirdparty/grpc/third_party/address_sorting/address_sorting_windows.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_windows.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_windows.c
 
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_windows.c > CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_windows.c > CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.i
 
 grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_windows.c -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_windows.c -o CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.s
 
 # Object files for target address_sorting
 address_sorting_OBJECTS = \
@@ -130,9 +130,9 @@ grpc/libaddress_sorting.a: grpc/CMakeFiles/address_sorting.dir/third_party/addre
 grpc/libaddress_sorting.a: grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.o
 grpc/libaddress_sorting.a: grpc/CMakeFiles/address_sorting.dir/build.make
 grpc/libaddress_sorting.a: grpc/CMakeFiles/address_sorting.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libaddress_sorting.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/address_sorting.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/address_sorting.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libaddress_sorting.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/address_sorting.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/address_sorting.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/CMakeFiles/address_sorting.dir/build: grpc/libaddress_sorting.a
@@ -140,10 +140,10 @@ grpc/CMakeFiles/address_sorting.dir/build: grpc/libaddress_sorting.a
 .PHONY : grpc/CMakeFiles/address_sorting.dir/build
 
 grpc/CMakeFiles/address_sorting.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/address_sorting.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/address_sorting.dir/cmake_clean.cmake
 .PHONY : grpc/CMakeFiles/address_sorting.dir/clean
 
 grpc/CMakeFiles/address_sorting.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc /root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/address_sorting.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc /home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/address_sorting.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/CMakeFiles/address_sorting.dir/depend
 

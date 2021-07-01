@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/types/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/types/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ absl_bad_any_cast_impl: grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_b
 
 # fast build rule for target.
 absl_bad_any_cast_impl/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/build
 .PHONY : absl_bad_any_cast_impl/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/rule
 
 # Convenience name for target.
@@ -203,12 +203,12 @@ absl_bad_optional_access: grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl
 
 # fast build rule for target.
 absl_bad_optional_access/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/build
 .PHONY : absl_bad_optional_access/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/rule
 
 # Convenience name for target.
@@ -218,7 +218,7 @@ absl_bad_variant_access: grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_
 
 # fast build rule for target.
 absl_bad_variant_access/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/build
 .PHONY : absl_bad_variant_access/fast
 
 bad_any_cast.o: bad_any_cast.cc.o
@@ -227,7 +227,7 @@ bad_any_cast.o: bad_any_cast.cc.o
 
 # target to build an object file
 bad_any_cast.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/bad_any_cast.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/bad_any_cast.cc.o
 .PHONY : bad_any_cast.cc.o
 
 bad_any_cast.i: bad_any_cast.cc.i
@@ -236,7 +236,7 @@ bad_any_cast.i: bad_any_cast.cc.i
 
 # target to preprocess a source file
 bad_any_cast.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/bad_any_cast.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/bad_any_cast.cc.i
 .PHONY : bad_any_cast.cc.i
 
 bad_any_cast.s: bad_any_cast.cc.s
@@ -245,7 +245,7 @@ bad_any_cast.s: bad_any_cast.cc.s
 
 # target to generate assembly for a file
 bad_any_cast.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/bad_any_cast.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_any_cast_impl.dir/bad_any_cast.cc.s
 .PHONY : bad_any_cast.cc.s
 
 bad_optional_access.o: bad_optional_access.cc.o
@@ -254,7 +254,7 @@ bad_optional_access.o: bad_optional_access.cc.o
 
 # target to build an object file
 bad_optional_access.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/bad_optional_access.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/bad_optional_access.cc.o
 .PHONY : bad_optional_access.cc.o
 
 bad_optional_access.i: bad_optional_access.cc.i
@@ -263,7 +263,7 @@ bad_optional_access.i: bad_optional_access.cc.i
 
 # target to preprocess a source file
 bad_optional_access.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/bad_optional_access.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/bad_optional_access.cc.i
 .PHONY : bad_optional_access.cc.i
 
 bad_optional_access.s: bad_optional_access.cc.s
@@ -272,7 +272,7 @@ bad_optional_access.s: bad_optional_access.cc.s
 
 # target to generate assembly for a file
 bad_optional_access.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/bad_optional_access.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/bad_optional_access.cc.s
 .PHONY : bad_optional_access.cc.s
 
 bad_variant_access.o: bad_variant_access.cc.o
@@ -281,7 +281,7 @@ bad_variant_access.o: bad_variant_access.cc.o
 
 # target to build an object file
 bad_variant_access.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/bad_variant_access.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/bad_variant_access.cc.o
 .PHONY : bad_variant_access.cc.o
 
 bad_variant_access.i: bad_variant_access.cc.i
@@ -290,7 +290,7 @@ bad_variant_access.i: bad_variant_access.cc.i
 
 # target to preprocess a source file
 bad_variant_access.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/bad_variant_access.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/bad_variant_access.cc.i
 .PHONY : bad_variant_access.cc.i
 
 bad_variant_access.s: bad_variant_access.cc.s
@@ -299,7 +299,7 @@ bad_variant_access.s: bad_variant_access.cc.s
 
 # target to generate assembly for a file
 bad_variant_access.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/bad_variant_access.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/build.make grpc/third_party/abseil-cpp/absl/types/CMakeFiles/absl_bad_variant_access.dir/bad_variant_access.cc.s
 .PHONY : bad_variant_access.cc.s
 
 # Help Target
@@ -337,6 +337,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

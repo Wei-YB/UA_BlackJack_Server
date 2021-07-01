@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/depend.make
@@ -79,16 +79,16 @@ include grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir
 
 grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.o: grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/flags.make
 grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/base/internal/scoped_set_env.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base/internal/scoped_set_env.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base/internal/scoped_set_env.cc
 
 grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base/internal/scoped_set_env.cc > CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base/internal/scoped_set_env.cc > CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.i
 
 grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base/internal/scoped_set_env.cc -o CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base/internal/scoped_set_env.cc -o CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.s
 
 # Object files for target absl_scoped_set_env
 absl_scoped_set_env_OBJECTS = \
@@ -100,9 +100,9 @@ absl_scoped_set_env_EXTERNAL_OBJECTS =
 grpc/third_party/abseil-cpp/absl/base/libabsl_scoped_set_env.a: grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/internal/scoped_set_env.cc.o
 grpc/third_party/abseil-cpp/absl/base/libabsl_scoped_set_env.a: grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/build.make
 grpc/third_party/abseil-cpp/absl/base/libabsl_scoped_set_env.a: grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libabsl_scoped_set_env.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && $(CMAKE_COMMAND) -P CMakeFiles/absl_scoped_set_env.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/absl_scoped_set_env.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libabsl_scoped_set_env.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && $(CMAKE_COMMAND) -P CMakeFiles/absl_scoped_set_env.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/absl_scoped_set_env.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/build: grpc/third_party/abseil-cpp/absl/base/libabsl_scoped_set_env.a
@@ -110,10 +110,10 @@ grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/build: 
 .PHONY : grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/build
 
 grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && $(CMAKE_COMMAND) -P CMakeFiles/absl_scoped_set_env.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base && $(CMAKE_COMMAND) -P CMakeFiles/absl_scoped_set_env.dir/cmake_clean.cmake
 .PHONY : grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/clean
 
 grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_scoped_set_env.dir/depend
 

@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/CMakeFiles/grpc_csharp_ext.dir/depend.make
@@ -79,16 +79,16 @@ include grpc/CMakeFiles/grpc_csharp_ext.dir/flags.make
 
 grpc/CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.o: grpc/CMakeFiles/grpc_csharp_ext.dir/flags.make
 grpc/CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.o: ../thirdparty/grpc/src/csharp/ext/grpc_csharp_ext.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/csharp/ext/grpc_csharp_ext.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/csharp/ext/grpc_csharp_ext.c
 
 grpc/CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/csharp/ext/grpc_csharp_ext.c > CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/csharp/ext/grpc_csharp_ext.c > CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.i
 
 grpc/CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/csharp/ext/grpc_csharp_ext.c -o CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/csharp/ext/grpc_csharp_ext.c -o CMakeFiles/grpc_csharp_ext.dir/src/csharp/ext/grpc_csharp_ext.c.s
 
 # Object files for target grpc_csharp_ext
 grpc_csharp_ext_OBJECTS = \
@@ -139,9 +139,9 @@ grpc/libgrpc_csharp_ext.so.16.0.0: grpc/third_party/abseil-cpp/absl/base/libabsl
 grpc/libgrpc_csharp_ext.so.16.0.0: grpc/third_party/boringssl-with-bazel/libssl.a
 grpc/libgrpc_csharp_ext.so.16.0.0: grpc/third_party/boringssl-with-bazel/libcrypto.a
 grpc/libgrpc_csharp_ext.so.16.0.0: grpc/CMakeFiles/grpc_csharp_ext.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libgrpc_csharp_ext.so"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grpc_csharp_ext.dir/link.txt --verbose=$(VERBOSE)
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_symlink_library libgrpc_csharp_ext.so.16.0.0 libgrpc_csharp_ext.so.16 libgrpc_csharp_ext.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libgrpc_csharp_ext.so"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grpc_csharp_ext.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_symlink_library libgrpc_csharp_ext.so.16.0.0 libgrpc_csharp_ext.so.16 libgrpc_csharp_ext.so
 
 grpc/libgrpc_csharp_ext.so.16: grpc/libgrpc_csharp_ext.so.16.0.0
 	@$(CMAKE_COMMAND) -E touch_nocreate grpc/libgrpc_csharp_ext.so.16
@@ -155,10 +155,10 @@ grpc/CMakeFiles/grpc_csharp_ext.dir/build: grpc/libgrpc_csharp_ext.so
 .PHONY : grpc/CMakeFiles/grpc_csharp_ext.dir/build
 
 grpc/CMakeFiles/grpc_csharp_ext.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc_csharp_ext.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc_csharp_ext.dir/cmake_clean.cmake
 .PHONY : grpc/CMakeFiles/grpc_csharp_ext.dir/clean
 
 grpc/CMakeFiles/grpc_csharp_ext.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc /root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_csharp_ext.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc /home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_csharp_ext.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/CMakeFiles/grpc_csharp_ext.dir/depend
 

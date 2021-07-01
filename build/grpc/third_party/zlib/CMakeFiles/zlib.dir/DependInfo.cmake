@@ -4,21 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/adler32.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/adler32.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/compress.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/compress.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/crc32.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/crc32.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/deflate.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/deflate.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzclose.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/gzclose.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzlib.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/gzlib.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzread.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/gzread.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzwrite.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/gzwrite.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/infback.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/infback.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inffast.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/inffast.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inflate.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/inflate.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inftrees.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/inftrees.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/trees.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/trees.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/uncompr.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/uncompr.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/zutil.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/zutil.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/adler32.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/adler32.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/compress.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/compress.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/crc32.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/crc32.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/deflate.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/deflate.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzclose.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/gzclose.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzlib.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/gzlib.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzread.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/gzread.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzwrite.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/gzwrite.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/infback.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/infback.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inffast.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/inffast.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inflate.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/inflate.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inftrees.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/inftrees.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/trees.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/trees.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/uncompr.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/uncompr.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/zutil.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/zutil.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -38,8 +38,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Pairs of files generated by the same build rule.
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
-  "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/libz.so" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/libz.so.1.2.11"
-  "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/libz.so.1" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/libz.so.1.2.11"
+  "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/libz.so" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/libz.so.1.2.11"
+  "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/libz.so.1" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/libz.so.1.2.11"
   )
 
 

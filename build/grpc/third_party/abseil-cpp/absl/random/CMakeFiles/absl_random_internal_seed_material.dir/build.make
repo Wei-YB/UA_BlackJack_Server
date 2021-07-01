@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/depend.make
@@ -79,16 +79,16 @@ include grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_
 
 grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.o: grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/flags.make
 grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/random/internal/seed_material.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/random/internal/seed_material.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/random/internal/seed_material.cc
 
 grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/random/internal/seed_material.cc > CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/random/internal/seed_material.cc > CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.i
 
 grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/random/internal/seed_material.cc -o CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/random/internal/seed_material.cc -o CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.s
 
 # Object files for target absl_random_internal_seed_material
 absl_random_internal_seed_material_OBJECTS = \
@@ -100,9 +100,9 @@ absl_random_internal_seed_material_EXTERNAL_OBJECTS =
 grpc/third_party/abseil-cpp/absl/random/libabsl_random_internal_seed_material.a: grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/internal/seed_material.cc.o
 grpc/third_party/abseil-cpp/absl/random/libabsl_random_internal_seed_material.a: grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/build.make
 grpc/third_party/abseil-cpp/absl/random/libabsl_random_internal_seed_material.a: grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libabsl_random_internal_seed_material.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && $(CMAKE_COMMAND) -P CMakeFiles/absl_random_internal_seed_material.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/absl_random_internal_seed_material.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libabsl_random_internal_seed_material.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && $(CMAKE_COMMAND) -P CMakeFiles/absl_random_internal_seed_material.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/absl_random_internal_seed_material.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/build: grpc/third_party/abseil-cpp/absl/random/libabsl_random_internal_seed_material.a
@@ -110,10 +110,10 @@ grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_mat
 .PHONY : grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/build
 
 grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && $(CMAKE_COMMAND) -P CMakeFiles/absl_random_internal_seed_material.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random && $(CMAKE_COMMAND) -P CMakeFiles/absl_random_internal_seed_material.dir/cmake_clean.cmake
 .PHONY : grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/clean
 
 grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/random /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/random /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/third_party/abseil-cpp/absl/random/CMakeFiles/absl_random_internal_seed_material.dir/depend
 

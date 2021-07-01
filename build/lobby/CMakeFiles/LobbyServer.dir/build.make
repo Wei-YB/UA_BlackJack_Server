@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include lobby/CMakeFiles/LobbyServer.dir/depend.make
@@ -79,133 +79,133 @@ include lobby/CMakeFiles/LobbyServer.dir/flags.make
 
 lobby/CMakeFiles/LobbyServer.dir/CallData.cc.o: lobby/CMakeFiles/LobbyServer.dir/flags.make
 lobby/CMakeFiles/LobbyServer.dir/CallData.cc.o: ../LobbyServer/CallData.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/CallData.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/CallData.cc.o -c /root/ricki/UA_BlackJack_Server/LobbyServer/CallData.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/CallData.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/CallData.cc.o -c /home/tong/UA_BlackJack_Server/LobbyServer/CallData.cc
 
 lobby/CMakeFiles/LobbyServer.dir/CallData.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LobbyServer.dir/CallData.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/LobbyServer/CallData.cc > CMakeFiles/LobbyServer.dir/CallData.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/LobbyServer/CallData.cc > CMakeFiles/LobbyServer.dir/CallData.cc.i
 
 lobby/CMakeFiles/LobbyServer.dir/CallData.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LobbyServer.dir/CallData.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/LobbyServer/CallData.cc -o CMakeFiles/LobbyServer.dir/CallData.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/LobbyServer/CallData.cc -o CMakeFiles/LobbyServer.dir/CallData.cc.s
 
 lobby/CMakeFiles/LobbyServer.dir/Lobby.cc.o: lobby/CMakeFiles/LobbyServer.dir/flags.make
 lobby/CMakeFiles/LobbyServer.dir/Lobby.cc.o: ../LobbyServer/Lobby.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/Lobby.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/Lobby.cc.o -c /root/ricki/UA_BlackJack_Server/LobbyServer/Lobby.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/Lobby.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/Lobby.cc.o -c /home/tong/UA_BlackJack_Server/LobbyServer/Lobby.cc
 
 lobby/CMakeFiles/LobbyServer.dir/Lobby.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LobbyServer.dir/Lobby.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/LobbyServer/Lobby.cc > CMakeFiles/LobbyServer.dir/Lobby.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/LobbyServer/Lobby.cc > CMakeFiles/LobbyServer.dir/Lobby.cc.i
 
 lobby/CMakeFiles/LobbyServer.dir/Lobby.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LobbyServer.dir/Lobby.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/LobbyServer/Lobby.cc -o CMakeFiles/LobbyServer.dir/Lobby.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/LobbyServer/Lobby.cc -o CMakeFiles/LobbyServer.dir/Lobby.cc.s
 
 lobby/CMakeFiles/LobbyServer.dir/LobbyService.cc.o: lobby/CMakeFiles/LobbyServer.dir/flags.make
 lobby/CMakeFiles/LobbyServer.dir/LobbyService.cc.o: ../LobbyServer/LobbyService.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/LobbyService.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/LobbyService.cc.o -c /root/ricki/UA_BlackJack_Server/LobbyServer/LobbyService.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/LobbyService.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/LobbyService.cc.o -c /home/tong/UA_BlackJack_Server/LobbyServer/LobbyService.cc
 
 lobby/CMakeFiles/LobbyServer.dir/LobbyService.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LobbyServer.dir/LobbyService.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/LobbyServer/LobbyService.cc > CMakeFiles/LobbyServer.dir/LobbyService.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/LobbyServer/LobbyService.cc > CMakeFiles/LobbyServer.dir/LobbyService.cc.i
 
 lobby/CMakeFiles/LobbyServer.dir/LobbyService.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LobbyServer.dir/LobbyService.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/LobbyServer/LobbyService.cc -o CMakeFiles/LobbyServer.dir/LobbyService.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/LobbyServer/LobbyService.cc -o CMakeFiles/LobbyServer.dir/LobbyService.cc.s
 
 lobby/CMakeFiles/LobbyServer.dir/Parser.cc.o: lobby/CMakeFiles/LobbyServer.dir/flags.make
 lobby/CMakeFiles/LobbyServer.dir/Parser.cc.o: ../LobbyServer/Parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/Parser.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/Parser.cc.o -c /root/ricki/UA_BlackJack_Server/LobbyServer/Parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/Parser.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/Parser.cc.o -c /home/tong/UA_BlackJack_Server/LobbyServer/Parser.cc
 
 lobby/CMakeFiles/LobbyServer.dir/Parser.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LobbyServer.dir/Parser.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/LobbyServer/Parser.cc > CMakeFiles/LobbyServer.dir/Parser.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/LobbyServer/Parser.cc > CMakeFiles/LobbyServer.dir/Parser.cc.i
 
 lobby/CMakeFiles/LobbyServer.dir/Parser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LobbyServer.dir/Parser.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/LobbyServer/Parser.cc -o CMakeFiles/LobbyServer.dir/Parser.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/LobbyServer/Parser.cc -o CMakeFiles/LobbyServer.dir/Parser.cc.s
 
 lobby/CMakeFiles/LobbyServer.dir/Players.cc.o: lobby/CMakeFiles/LobbyServer.dir/flags.make
 lobby/CMakeFiles/LobbyServer.dir/Players.cc.o: ../LobbyServer/Players.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/Players.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/Players.cc.o -c /root/ricki/UA_BlackJack_Server/LobbyServer/Players.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/Players.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/Players.cc.o -c /home/tong/UA_BlackJack_Server/LobbyServer/Players.cc
 
 lobby/CMakeFiles/LobbyServer.dir/Players.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LobbyServer.dir/Players.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/LobbyServer/Players.cc > CMakeFiles/LobbyServer.dir/Players.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/LobbyServer/Players.cc > CMakeFiles/LobbyServer.dir/Players.cc.i
 
 lobby/CMakeFiles/LobbyServer.dir/Players.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LobbyServer.dir/Players.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/LobbyServer/Players.cc -o CMakeFiles/LobbyServer.dir/Players.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/LobbyServer/Players.cc -o CMakeFiles/LobbyServer.dir/Players.cc.s
 
 lobby/CMakeFiles/LobbyServer.dir/RPCClient.cc.o: lobby/CMakeFiles/LobbyServer.dir/flags.make
 lobby/CMakeFiles/LobbyServer.dir/RPCClient.cc.o: ../LobbyServer/RPCClient.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/RPCClient.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/RPCClient.cc.o -c /root/ricki/UA_BlackJack_Server/LobbyServer/RPCClient.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/RPCClient.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/RPCClient.cc.o -c /home/tong/UA_BlackJack_Server/LobbyServer/RPCClient.cc
 
 lobby/CMakeFiles/LobbyServer.dir/RPCClient.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LobbyServer.dir/RPCClient.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/LobbyServer/RPCClient.cc > CMakeFiles/LobbyServer.dir/RPCClient.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/LobbyServer/RPCClient.cc > CMakeFiles/LobbyServer.dir/RPCClient.cc.i
 
 lobby/CMakeFiles/LobbyServer.dir/RPCClient.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LobbyServer.dir/RPCClient.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/LobbyServer/RPCClient.cc -o CMakeFiles/LobbyServer.dir/RPCClient.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/LobbyServer/RPCClient.cc -o CMakeFiles/LobbyServer.dir/RPCClient.cc.s
 
 lobby/CMakeFiles/LobbyServer.dir/Room.cc.o: lobby/CMakeFiles/LobbyServer.dir/flags.make
 lobby/CMakeFiles/LobbyServer.dir/Room.cc.o: ../LobbyServer/Room.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/Room.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/Room.cc.o -c /root/ricki/UA_BlackJack_Server/LobbyServer/Room.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/Room.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/Room.cc.o -c /home/tong/UA_BlackJack_Server/LobbyServer/Room.cc
 
 lobby/CMakeFiles/LobbyServer.dir/Room.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LobbyServer.dir/Room.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/LobbyServer/Room.cc > CMakeFiles/LobbyServer.dir/Room.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/LobbyServer/Room.cc > CMakeFiles/LobbyServer.dir/Room.cc.i
 
 lobby/CMakeFiles/LobbyServer.dir/Room.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LobbyServer.dir/Room.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/LobbyServer/Room.cc -o CMakeFiles/LobbyServer.dir/Room.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/LobbyServer/Room.cc -o CMakeFiles/LobbyServer.dir/Room.cc.s
 
 lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.o: lobby/CMakeFiles/LobbyServer.dir/flags.make
 lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.o: ../LobbyServer/UA_BlackJack.grpc.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.o -c /root/ricki/UA_BlackJack_Server/LobbyServer/UA_BlackJack.grpc.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.o -c /home/tong/UA_BlackJack_Server/LobbyServer/UA_BlackJack.grpc.pb.cc
 
 lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/LobbyServer/UA_BlackJack.grpc.pb.cc > CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/LobbyServer/UA_BlackJack.grpc.pb.cc > CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.i
 
 lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/LobbyServer/UA_BlackJack.grpc.pb.cc -o CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/LobbyServer/UA_BlackJack.grpc.pb.cc -o CMakeFiles/LobbyServer.dir/UA_BlackJack.grpc.pb.cc.s
 
 lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.o: lobby/CMakeFiles/LobbyServer.dir/flags.make
 lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.o: ../LobbyServer/UA_BlackJack.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.o -c /root/ricki/UA_BlackJack_Server/LobbyServer/UA_BlackJack.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.o -c /home/tong/UA_BlackJack_Server/LobbyServer/UA_BlackJack.pb.cc
 
 lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/LobbyServer/UA_BlackJack.pb.cc > CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/LobbyServer/UA_BlackJack.pb.cc > CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.i
 
 lobby/CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/LobbyServer/UA_BlackJack.pb.cc -o CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/LobbyServer/UA_BlackJack.pb.cc -o CMakeFiles/LobbyServer.dir/UA_BlackJack.pb.cc.s
 
 lobby/CMakeFiles/LobbyServer.dir/main.cc.o: lobby/CMakeFiles/LobbyServer.dir/flags.make
 lobby/CMakeFiles/LobbyServer.dir/main.cc.o: ../LobbyServer/main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/main.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/main.cc.o -c /root/ricki/UA_BlackJack_Server/LobbyServer/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object lobby/CMakeFiles/LobbyServer.dir/main.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LobbyServer.dir/main.cc.o -c /home/tong/UA_BlackJack_Server/LobbyServer/main.cc
 
 lobby/CMakeFiles/LobbyServer.dir/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LobbyServer.dir/main.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/LobbyServer/main.cc > CMakeFiles/LobbyServer.dir/main.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/LobbyServer/main.cc > CMakeFiles/LobbyServer.dir/main.cc.i
 
 lobby/CMakeFiles/LobbyServer.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LobbyServer.dir/main.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/LobbyServer/main.cc -o CMakeFiles/LobbyServer.dir/main.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/lobby && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/LobbyServer/main.cc -o CMakeFiles/LobbyServer.dir/main.cc.s
 
 # Object files for target LobbyServer
 LobbyServer_OBJECTS = \
@@ -278,8 +278,8 @@ lobby/LobbyServer: grpc/third_party/abseil-cpp/absl/base/libabsl_log_severity.a
 lobby/LobbyServer: grpc/third_party/boringssl-with-bazel/libssl.a
 lobby/LobbyServer: grpc/third_party/boringssl-with-bazel/libcrypto.a
 lobby/LobbyServer: lobby/CMakeFiles/LobbyServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable LobbyServer"
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LobbyServer.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable LobbyServer"
+	cd /home/tong/UA_BlackJack_Server/build/lobby && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LobbyServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lobby/CMakeFiles/LobbyServer.dir/build: lobby/LobbyServer
@@ -287,10 +287,10 @@ lobby/CMakeFiles/LobbyServer.dir/build: lobby/LobbyServer
 .PHONY : lobby/CMakeFiles/LobbyServer.dir/build
 
 lobby/CMakeFiles/LobbyServer.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/lobby && $(CMAKE_COMMAND) -P CMakeFiles/LobbyServer.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/lobby && $(CMAKE_COMMAND) -P CMakeFiles/LobbyServer.dir/cmake_clean.cmake
 .PHONY : lobby/CMakeFiles/LobbyServer.dir/clean
 
 lobby/CMakeFiles/LobbyServer.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/LobbyServer /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/lobby /root/ricki/UA_BlackJack_Server/build/lobby/CMakeFiles/LobbyServer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/LobbyServer /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/lobby /home/tong/UA_BlackJack_Server/build/lobby/CMakeFiles/LobbyServer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lobby/CMakeFiles/LobbyServer.dir/depend
 

@@ -4,17 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode_fast.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/def.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/def.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/encode.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/encode.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/msg.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/msg.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/reflection.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/table.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/table.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/text_encode.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/upb.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/upb.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/src/core/ext/upb-generated/google/protobuf/descriptor.upb.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/src/core/ext/upbdefs-generated/google/protobuf/descriptor.upbdefs.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/decode_fast.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/decode_fast.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/def.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/def.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/encode.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/encode.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/msg.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/msg.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/reflection.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/reflection.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/table.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/table.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/text_encode.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/text_encode.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/upb/upb/upb.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/upb.dir/third_party/upb/upb/upb.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

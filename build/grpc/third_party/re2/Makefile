@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ regexp_benchmark: grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/rule
 
 # fast build rule for target.
 regexp_benchmark/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build
 .PHONY : regexp_benchmark/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/rule
 
 # Convenience name for target.
@@ -203,12 +203,12 @@ re2_arg_test: grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/rule
 
 # fast build rule for target.
 re2_arg_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build
 .PHONY : re2_arg_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/re2.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/re2.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/re2.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/re2.dir/rule
 
 # Convenience name for target.
@@ -218,12 +218,12 @@ re2: grpc/third_party/re2/CMakeFiles/re2.dir/rule
 
 # fast build rule for target.
 re2/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/build
 .PHONY : re2/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/parse_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/parse_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/parse_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/parse_test.dir/rule
 
 # Convenience name for target.
@@ -233,12 +233,12 @@ parse_test: grpc/third_party/re2/CMakeFiles/parse_test.dir/rule
 
 # fast build rule for target.
 parse_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/build
 .PHONY : parse_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/rule
 
 # Convenience name for target.
@@ -248,12 +248,12 @@ exhaustive1_test: grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/rule
 
 # fast build rule for target.
 exhaustive1_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build
 .PHONY : exhaustive1_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/rule
 
 # Convenience name for target.
@@ -263,12 +263,12 @@ filtered_re2_test: grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/rule
 
 # fast build rule for target.
 filtered_re2_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build
 .PHONY : filtered_re2_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/rule
 
 # Convenience name for target.
@@ -278,12 +278,12 @@ required_prefix_test: grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/r
 
 # fast build rule for target.
 required_prefix_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build
 .PHONY : required_prefix_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/search_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/search_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/search_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/search_test.dir/rule
 
 # Convenience name for target.
@@ -293,12 +293,12 @@ search_test: grpc/third_party/re2/CMakeFiles/search_test.dir/rule
 
 # fast build rule for target.
 search_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/build
 .PHONY : search_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/possible_match_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/possible_match_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/possible_match_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/possible_match_test.dir/rule
 
 # Convenience name for target.
@@ -308,12 +308,12 @@ possible_match_test: grpc/third_party/re2/CMakeFiles/possible_match_test.dir/rul
 
 # fast build rule for target.
 possible_match_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build
 .PHONY : possible_match_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/testing.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/testing.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/testing.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/testing.dir/rule
 
 # Convenience name for target.
@@ -323,12 +323,12 @@ testing: grpc/third_party/re2/CMakeFiles/testing.dir/rule
 
 # fast build rule for target.
 testing/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/build
 .PHONY : testing/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/simplify_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/simplify_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/simplify_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/simplify_test.dir/rule
 
 # Convenience name for target.
@@ -338,12 +338,12 @@ simplify_test: grpc/third_party/re2/CMakeFiles/simplify_test.dir/rule
 
 # fast build rule for target.
 simplify_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/build
 .PHONY : simplify_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/charclass_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/charclass_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/charclass_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/charclass_test.dir/rule
 
 # Convenience name for target.
@@ -353,12 +353,12 @@ charclass_test: grpc/third_party/re2/CMakeFiles/charclass_test.dir/rule
 
 # fast build rule for target.
 charclass_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/build
 .PHONY : charclass_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/re2_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/re2_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/re2_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/re2_test.dir/rule
 
 # Convenience name for target.
@@ -368,12 +368,12 @@ re2_test: grpc/third_party/re2/CMakeFiles/re2_test.dir/rule
 
 # fast build rule for target.
 re2_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/build
 .PHONY : re2_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/regexp_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/regexp_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/regexp_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/regexp_test.dir/rule
 
 # Convenience name for target.
@@ -383,12 +383,12 @@ regexp_test: grpc/third_party/re2/CMakeFiles/regexp_test.dir/rule
 
 # fast build rule for target.
 regexp_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/build
 .PHONY : regexp_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/dfa_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/dfa_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/dfa_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/dfa_test.dir/rule
 
 # Convenience name for target.
@@ -398,12 +398,12 @@ dfa_test: grpc/third_party/re2/CMakeFiles/dfa_test.dir/rule
 
 # fast build rule for target.
 dfa_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/build
 .PHONY : dfa_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/random_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/random_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/random_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/random_test.dir/rule
 
 # Convenience name for target.
@@ -413,12 +413,12 @@ random_test: grpc/third_party/re2/CMakeFiles/random_test.dir/rule
 
 # fast build rule for target.
 random_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/build
 .PHONY : random_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/string_generator_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/string_generator_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/string_generator_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/string_generator_test.dir/rule
 
 # Convenience name for target.
@@ -428,12 +428,12 @@ string_generator_test: grpc/third_party/re2/CMakeFiles/string_generator_test.dir
 
 # fast build rule for target.
 string_generator_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build
 .PHONY : string_generator_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/rule
 
 # Convenience name for target.
@@ -443,12 +443,12 @@ mimics_pcre_test: grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/rule
 
 # fast build rule for target.
 mimics_pcre_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build
 .PHONY : mimics_pcre_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/compile_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/compile_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/compile_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/compile_test.dir/rule
 
 # Convenience name for target.
@@ -458,12 +458,12 @@ compile_test: grpc/third_party/re2/CMakeFiles/compile_test.dir/rule
 
 # fast build rule for target.
 compile_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/build
 .PHONY : compile_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/set_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/set_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/set_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/set_test.dir/rule
 
 # Convenience name for target.
@@ -473,12 +473,12 @@ set_test: grpc/third_party/re2/CMakeFiles/set_test.dir/rule
 
 # fast build rule for target.
 set_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/build
 .PHONY : set_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/rule
 
 # Convenience name for target.
@@ -488,12 +488,12 @@ exhaustive2_test: grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/rule
 
 # fast build rule for target.
 exhaustive2_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build
 .PHONY : exhaustive2_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/rule
 
 # Convenience name for target.
@@ -503,12 +503,12 @@ exhaustive_test: grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/rule
 
 # fast build rule for target.
 exhaustive_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build
 .PHONY : exhaustive_test/fast
 
 # Convenience name for target.
 grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/rule
 .PHONY : grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/rule
 
 # Convenience name for target.
@@ -518,7 +518,7 @@ exhaustive3_test: grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/rule
 
 # fast build rule for target.
 exhaustive3_test/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build
 .PHONY : exhaustive3_test/fast
 
 re2/bitstate.o: re2/bitstate.cc.o
@@ -527,7 +527,7 @@ re2/bitstate.o: re2/bitstate.cc.o
 
 # target to build an object file
 re2/bitstate.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.o
 .PHONY : re2/bitstate.cc.o
 
 re2/bitstate.i: re2/bitstate.cc.i
@@ -536,7 +536,7 @@ re2/bitstate.i: re2/bitstate.cc.i
 
 # target to preprocess a source file
 re2/bitstate.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.i
 .PHONY : re2/bitstate.cc.i
 
 re2/bitstate.s: re2/bitstate.cc.s
@@ -545,7 +545,7 @@ re2/bitstate.s: re2/bitstate.cc.s
 
 # target to generate assembly for a file
 re2/bitstate.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.s
 .PHONY : re2/bitstate.cc.s
 
 re2/compile.o: re2/compile.cc.o
@@ -554,7 +554,7 @@ re2/compile.o: re2/compile.cc.o
 
 # target to build an object file
 re2/compile.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.o
 .PHONY : re2/compile.cc.o
 
 re2/compile.i: re2/compile.cc.i
@@ -563,7 +563,7 @@ re2/compile.i: re2/compile.cc.i
 
 # target to preprocess a source file
 re2/compile.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.i
 .PHONY : re2/compile.cc.i
 
 re2/compile.s: re2/compile.cc.s
@@ -572,7 +572,7 @@ re2/compile.s: re2/compile.cc.s
 
 # target to generate assembly for a file
 re2/compile.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.s
 .PHONY : re2/compile.cc.s
 
 re2/dfa.o: re2/dfa.cc.o
@@ -581,7 +581,7 @@ re2/dfa.o: re2/dfa.cc.o
 
 # target to build an object file
 re2/dfa.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.o
 .PHONY : re2/dfa.cc.o
 
 re2/dfa.i: re2/dfa.cc.i
@@ -590,7 +590,7 @@ re2/dfa.i: re2/dfa.cc.i
 
 # target to preprocess a source file
 re2/dfa.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.i
 .PHONY : re2/dfa.cc.i
 
 re2/dfa.s: re2/dfa.cc.s
@@ -599,7 +599,7 @@ re2/dfa.s: re2/dfa.cc.s
 
 # target to generate assembly for a file
 re2/dfa.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.s
 .PHONY : re2/dfa.cc.s
 
 re2/filtered_re2.o: re2/filtered_re2.cc.o
@@ -608,7 +608,7 @@ re2/filtered_re2.o: re2/filtered_re2.cc.o
 
 # target to build an object file
 re2/filtered_re2.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.o
 .PHONY : re2/filtered_re2.cc.o
 
 re2/filtered_re2.i: re2/filtered_re2.cc.i
@@ -617,7 +617,7 @@ re2/filtered_re2.i: re2/filtered_re2.cc.i
 
 # target to preprocess a source file
 re2/filtered_re2.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.i
 .PHONY : re2/filtered_re2.cc.i
 
 re2/filtered_re2.s: re2/filtered_re2.cc.s
@@ -626,7 +626,7 @@ re2/filtered_re2.s: re2/filtered_re2.cc.s
 
 # target to generate assembly for a file
 re2/filtered_re2.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.s
 .PHONY : re2/filtered_re2.cc.s
 
 re2/mimics_pcre.o: re2/mimics_pcre.cc.o
@@ -635,7 +635,7 @@ re2/mimics_pcre.o: re2/mimics_pcre.cc.o
 
 # target to build an object file
 re2/mimics_pcre.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.o
 .PHONY : re2/mimics_pcre.cc.o
 
 re2/mimics_pcre.i: re2/mimics_pcre.cc.i
@@ -644,7 +644,7 @@ re2/mimics_pcre.i: re2/mimics_pcre.cc.i
 
 # target to preprocess a source file
 re2/mimics_pcre.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.i
 .PHONY : re2/mimics_pcre.cc.i
 
 re2/mimics_pcre.s: re2/mimics_pcre.cc.s
@@ -653,7 +653,7 @@ re2/mimics_pcre.s: re2/mimics_pcre.cc.s
 
 # target to generate assembly for a file
 re2/mimics_pcre.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.s
 .PHONY : re2/mimics_pcre.cc.s
 
 re2/nfa.o: re2/nfa.cc.o
@@ -662,7 +662,7 @@ re2/nfa.o: re2/nfa.cc.o
 
 # target to build an object file
 re2/nfa.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.o
 .PHONY : re2/nfa.cc.o
 
 re2/nfa.i: re2/nfa.cc.i
@@ -671,7 +671,7 @@ re2/nfa.i: re2/nfa.cc.i
 
 # target to preprocess a source file
 re2/nfa.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.i
 .PHONY : re2/nfa.cc.i
 
 re2/nfa.s: re2/nfa.cc.s
@@ -680,7 +680,7 @@ re2/nfa.s: re2/nfa.cc.s
 
 # target to generate assembly for a file
 re2/nfa.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.s
 .PHONY : re2/nfa.cc.s
 
 re2/onepass.o: re2/onepass.cc.o
@@ -689,7 +689,7 @@ re2/onepass.o: re2/onepass.cc.o
 
 # target to build an object file
 re2/onepass.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.o
 .PHONY : re2/onepass.cc.o
 
 re2/onepass.i: re2/onepass.cc.i
@@ -698,7 +698,7 @@ re2/onepass.i: re2/onepass.cc.i
 
 # target to preprocess a source file
 re2/onepass.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.i
 .PHONY : re2/onepass.cc.i
 
 re2/onepass.s: re2/onepass.cc.s
@@ -707,7 +707,7 @@ re2/onepass.s: re2/onepass.cc.s
 
 # target to generate assembly for a file
 re2/onepass.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.s
 .PHONY : re2/onepass.cc.s
 
 re2/parse.o: re2/parse.cc.o
@@ -716,7 +716,7 @@ re2/parse.o: re2/parse.cc.o
 
 # target to build an object file
 re2/parse.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.o
 .PHONY : re2/parse.cc.o
 
 re2/parse.i: re2/parse.cc.i
@@ -725,7 +725,7 @@ re2/parse.i: re2/parse.cc.i
 
 # target to preprocess a source file
 re2/parse.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.i
 .PHONY : re2/parse.cc.i
 
 re2/parse.s: re2/parse.cc.s
@@ -734,7 +734,7 @@ re2/parse.s: re2/parse.cc.s
 
 # target to generate assembly for a file
 re2/parse.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.s
 .PHONY : re2/parse.cc.s
 
 re2/perl_groups.o: re2/perl_groups.cc.o
@@ -743,7 +743,7 @@ re2/perl_groups.o: re2/perl_groups.cc.o
 
 # target to build an object file
 re2/perl_groups.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.o
 .PHONY : re2/perl_groups.cc.o
 
 re2/perl_groups.i: re2/perl_groups.cc.i
@@ -752,7 +752,7 @@ re2/perl_groups.i: re2/perl_groups.cc.i
 
 # target to preprocess a source file
 re2/perl_groups.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.i
 .PHONY : re2/perl_groups.cc.i
 
 re2/perl_groups.s: re2/perl_groups.cc.s
@@ -761,7 +761,7 @@ re2/perl_groups.s: re2/perl_groups.cc.s
 
 # target to generate assembly for a file
 re2/perl_groups.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.s
 .PHONY : re2/perl_groups.cc.s
 
 re2/prefilter.o: re2/prefilter.cc.o
@@ -770,7 +770,7 @@ re2/prefilter.o: re2/prefilter.cc.o
 
 # target to build an object file
 re2/prefilter.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.o
 .PHONY : re2/prefilter.cc.o
 
 re2/prefilter.i: re2/prefilter.cc.i
@@ -779,7 +779,7 @@ re2/prefilter.i: re2/prefilter.cc.i
 
 # target to preprocess a source file
 re2/prefilter.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.i
 .PHONY : re2/prefilter.cc.i
 
 re2/prefilter.s: re2/prefilter.cc.s
@@ -788,7 +788,7 @@ re2/prefilter.s: re2/prefilter.cc.s
 
 # target to generate assembly for a file
 re2/prefilter.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.s
 .PHONY : re2/prefilter.cc.s
 
 re2/prefilter_tree.o: re2/prefilter_tree.cc.o
@@ -797,7 +797,7 @@ re2/prefilter_tree.o: re2/prefilter_tree.cc.o
 
 # target to build an object file
 re2/prefilter_tree.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.o
 .PHONY : re2/prefilter_tree.cc.o
 
 re2/prefilter_tree.i: re2/prefilter_tree.cc.i
@@ -806,7 +806,7 @@ re2/prefilter_tree.i: re2/prefilter_tree.cc.i
 
 # target to preprocess a source file
 re2/prefilter_tree.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.i
 .PHONY : re2/prefilter_tree.cc.i
 
 re2/prefilter_tree.s: re2/prefilter_tree.cc.s
@@ -815,7 +815,7 @@ re2/prefilter_tree.s: re2/prefilter_tree.cc.s
 
 # target to generate assembly for a file
 re2/prefilter_tree.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.s
 .PHONY : re2/prefilter_tree.cc.s
 
 re2/prog.o: re2/prog.cc.o
@@ -824,7 +824,7 @@ re2/prog.o: re2/prog.cc.o
 
 # target to build an object file
 re2/prog.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.o
 .PHONY : re2/prog.cc.o
 
 re2/prog.i: re2/prog.cc.i
@@ -833,7 +833,7 @@ re2/prog.i: re2/prog.cc.i
 
 # target to preprocess a source file
 re2/prog.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.i
 .PHONY : re2/prog.cc.i
 
 re2/prog.s: re2/prog.cc.s
@@ -842,7 +842,7 @@ re2/prog.s: re2/prog.cc.s
 
 # target to generate assembly for a file
 re2/prog.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.s
 .PHONY : re2/prog.cc.s
 
 re2/re2.o: re2/re2.cc.o
@@ -851,7 +851,7 @@ re2/re2.o: re2/re2.cc.o
 
 # target to build an object file
 re2/re2.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.o
 .PHONY : re2/re2.cc.o
 
 re2/re2.i: re2/re2.cc.i
@@ -860,7 +860,7 @@ re2/re2.i: re2/re2.cc.i
 
 # target to preprocess a source file
 re2/re2.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.i
 .PHONY : re2/re2.cc.i
 
 re2/re2.s: re2/re2.cc.s
@@ -869,7 +869,7 @@ re2/re2.s: re2/re2.cc.s
 
 # target to generate assembly for a file
 re2/re2.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.s
 .PHONY : re2/re2.cc.s
 
 re2/regexp.o: re2/regexp.cc.o
@@ -878,7 +878,7 @@ re2/regexp.o: re2/regexp.cc.o
 
 # target to build an object file
 re2/regexp.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.o
 .PHONY : re2/regexp.cc.o
 
 re2/regexp.i: re2/regexp.cc.i
@@ -887,7 +887,7 @@ re2/regexp.i: re2/regexp.cc.i
 
 # target to preprocess a source file
 re2/regexp.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.i
 .PHONY : re2/regexp.cc.i
 
 re2/regexp.s: re2/regexp.cc.s
@@ -896,7 +896,7 @@ re2/regexp.s: re2/regexp.cc.s
 
 # target to generate assembly for a file
 re2/regexp.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.s
 .PHONY : re2/regexp.cc.s
 
 re2/set.o: re2/set.cc.o
@@ -905,7 +905,7 @@ re2/set.o: re2/set.cc.o
 
 # target to build an object file
 re2/set.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.o
 .PHONY : re2/set.cc.o
 
 re2/set.i: re2/set.cc.i
@@ -914,7 +914,7 @@ re2/set.i: re2/set.cc.i
 
 # target to preprocess a source file
 re2/set.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.i
 .PHONY : re2/set.cc.i
 
 re2/set.s: re2/set.cc.s
@@ -923,7 +923,7 @@ re2/set.s: re2/set.cc.s
 
 # target to generate assembly for a file
 re2/set.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.s
 .PHONY : re2/set.cc.s
 
 re2/simplify.o: re2/simplify.cc.o
@@ -932,7 +932,7 @@ re2/simplify.o: re2/simplify.cc.o
 
 # target to build an object file
 re2/simplify.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.o
 .PHONY : re2/simplify.cc.o
 
 re2/simplify.i: re2/simplify.cc.i
@@ -941,7 +941,7 @@ re2/simplify.i: re2/simplify.cc.i
 
 # target to preprocess a source file
 re2/simplify.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.i
 .PHONY : re2/simplify.cc.i
 
 re2/simplify.s: re2/simplify.cc.s
@@ -950,7 +950,7 @@ re2/simplify.s: re2/simplify.cc.s
 
 # target to generate assembly for a file
 re2/simplify.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.s
 .PHONY : re2/simplify.cc.s
 
 re2/stringpiece.o: re2/stringpiece.cc.o
@@ -959,7 +959,7 @@ re2/stringpiece.o: re2/stringpiece.cc.o
 
 # target to build an object file
 re2/stringpiece.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.o
 .PHONY : re2/stringpiece.cc.o
 
 re2/stringpiece.i: re2/stringpiece.cc.i
@@ -968,7 +968,7 @@ re2/stringpiece.i: re2/stringpiece.cc.i
 
 # target to preprocess a source file
 re2/stringpiece.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.i
 .PHONY : re2/stringpiece.cc.i
 
 re2/stringpiece.s: re2/stringpiece.cc.s
@@ -977,7 +977,7 @@ re2/stringpiece.s: re2/stringpiece.cc.s
 
 # target to generate assembly for a file
 re2/stringpiece.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.s
 .PHONY : re2/stringpiece.cc.s
 
 re2/testing/backtrack.o: re2/testing/backtrack.cc.o
@@ -986,7 +986,7 @@ re2/testing/backtrack.o: re2/testing/backtrack.cc.o
 
 # target to build an object file
 re2/testing/backtrack.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/backtrack.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/backtrack.cc.o
 .PHONY : re2/testing/backtrack.cc.o
 
 re2/testing/backtrack.i: re2/testing/backtrack.cc.i
@@ -995,7 +995,7 @@ re2/testing/backtrack.i: re2/testing/backtrack.cc.i
 
 # target to preprocess a source file
 re2/testing/backtrack.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/backtrack.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/backtrack.cc.i
 .PHONY : re2/testing/backtrack.cc.i
 
 re2/testing/backtrack.s: re2/testing/backtrack.cc.s
@@ -1004,7 +1004,7 @@ re2/testing/backtrack.s: re2/testing/backtrack.cc.s
 
 # target to generate assembly for a file
 re2/testing/backtrack.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/backtrack.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/backtrack.cc.s
 .PHONY : re2/testing/backtrack.cc.s
 
 re2/testing/charclass_test.o: re2/testing/charclass_test.cc.o
@@ -1013,7 +1013,7 @@ re2/testing/charclass_test.o: re2/testing/charclass_test.cc.o
 
 # target to build an object file
 re2/testing/charclass_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/re2/testing/charclass_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/re2/testing/charclass_test.cc.o
 .PHONY : re2/testing/charclass_test.cc.o
 
 re2/testing/charclass_test.i: re2/testing/charclass_test.cc.i
@@ -1022,7 +1022,7 @@ re2/testing/charclass_test.i: re2/testing/charclass_test.cc.i
 
 # target to preprocess a source file
 re2/testing/charclass_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/re2/testing/charclass_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/re2/testing/charclass_test.cc.i
 .PHONY : re2/testing/charclass_test.cc.i
 
 re2/testing/charclass_test.s: re2/testing/charclass_test.cc.s
@@ -1031,7 +1031,7 @@ re2/testing/charclass_test.s: re2/testing/charclass_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/charclass_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/re2/testing/charclass_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/re2/testing/charclass_test.cc.s
 .PHONY : re2/testing/charclass_test.cc.s
 
 re2/testing/compile_test.o: re2/testing/compile_test.cc.o
@@ -1040,7 +1040,7 @@ re2/testing/compile_test.o: re2/testing/compile_test.cc.o
 
 # target to build an object file
 re2/testing/compile_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/re2/testing/compile_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/re2/testing/compile_test.cc.o
 .PHONY : re2/testing/compile_test.cc.o
 
 re2/testing/compile_test.i: re2/testing/compile_test.cc.i
@@ -1049,7 +1049,7 @@ re2/testing/compile_test.i: re2/testing/compile_test.cc.i
 
 # target to preprocess a source file
 re2/testing/compile_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/re2/testing/compile_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/re2/testing/compile_test.cc.i
 .PHONY : re2/testing/compile_test.cc.i
 
 re2/testing/compile_test.s: re2/testing/compile_test.cc.s
@@ -1058,7 +1058,7 @@ re2/testing/compile_test.s: re2/testing/compile_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/compile_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/re2/testing/compile_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/re2/testing/compile_test.cc.s
 .PHONY : re2/testing/compile_test.cc.s
 
 re2/testing/dfa_test.o: re2/testing/dfa_test.cc.o
@@ -1067,7 +1067,7 @@ re2/testing/dfa_test.o: re2/testing/dfa_test.cc.o
 
 # target to build an object file
 re2/testing/dfa_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/re2/testing/dfa_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/re2/testing/dfa_test.cc.o
 .PHONY : re2/testing/dfa_test.cc.o
 
 re2/testing/dfa_test.i: re2/testing/dfa_test.cc.i
@@ -1076,7 +1076,7 @@ re2/testing/dfa_test.i: re2/testing/dfa_test.cc.i
 
 # target to preprocess a source file
 re2/testing/dfa_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/re2/testing/dfa_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/re2/testing/dfa_test.cc.i
 .PHONY : re2/testing/dfa_test.cc.i
 
 re2/testing/dfa_test.s: re2/testing/dfa_test.cc.s
@@ -1085,7 +1085,7 @@ re2/testing/dfa_test.s: re2/testing/dfa_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/dfa_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/re2/testing/dfa_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/re2/testing/dfa_test.cc.s
 .PHONY : re2/testing/dfa_test.cc.s
 
 re2/testing/dump.o: re2/testing/dump.cc.o
@@ -1094,7 +1094,7 @@ re2/testing/dump.o: re2/testing/dump.cc.o
 
 # target to build an object file
 re2/testing/dump.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/dump.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/dump.cc.o
 .PHONY : re2/testing/dump.cc.o
 
 re2/testing/dump.i: re2/testing/dump.cc.i
@@ -1103,7 +1103,7 @@ re2/testing/dump.i: re2/testing/dump.cc.i
 
 # target to preprocess a source file
 re2/testing/dump.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/dump.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/dump.cc.i
 .PHONY : re2/testing/dump.cc.i
 
 re2/testing/dump.s: re2/testing/dump.cc.s
@@ -1112,7 +1112,7 @@ re2/testing/dump.s: re2/testing/dump.cc.s
 
 # target to generate assembly for a file
 re2/testing/dump.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/dump.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/dump.cc.s
 .PHONY : re2/testing/dump.cc.s
 
 re2/testing/exhaustive1_test.o: re2/testing/exhaustive1_test.cc.o
@@ -1121,7 +1121,7 @@ re2/testing/exhaustive1_test.o: re2/testing/exhaustive1_test.cc.o
 
 # target to build an object file
 re2/testing/exhaustive1_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/re2/testing/exhaustive1_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/re2/testing/exhaustive1_test.cc.o
 .PHONY : re2/testing/exhaustive1_test.cc.o
 
 re2/testing/exhaustive1_test.i: re2/testing/exhaustive1_test.cc.i
@@ -1130,7 +1130,7 @@ re2/testing/exhaustive1_test.i: re2/testing/exhaustive1_test.cc.i
 
 # target to preprocess a source file
 re2/testing/exhaustive1_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/re2/testing/exhaustive1_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/re2/testing/exhaustive1_test.cc.i
 .PHONY : re2/testing/exhaustive1_test.cc.i
 
 re2/testing/exhaustive1_test.s: re2/testing/exhaustive1_test.cc.s
@@ -1139,7 +1139,7 @@ re2/testing/exhaustive1_test.s: re2/testing/exhaustive1_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/exhaustive1_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/re2/testing/exhaustive1_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/re2/testing/exhaustive1_test.cc.s
 .PHONY : re2/testing/exhaustive1_test.cc.s
 
 re2/testing/exhaustive2_test.o: re2/testing/exhaustive2_test.cc.o
@@ -1148,7 +1148,7 @@ re2/testing/exhaustive2_test.o: re2/testing/exhaustive2_test.cc.o
 
 # target to build an object file
 re2/testing/exhaustive2_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/re2/testing/exhaustive2_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/re2/testing/exhaustive2_test.cc.o
 .PHONY : re2/testing/exhaustive2_test.cc.o
 
 re2/testing/exhaustive2_test.i: re2/testing/exhaustive2_test.cc.i
@@ -1157,7 +1157,7 @@ re2/testing/exhaustive2_test.i: re2/testing/exhaustive2_test.cc.i
 
 # target to preprocess a source file
 re2/testing/exhaustive2_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/re2/testing/exhaustive2_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/re2/testing/exhaustive2_test.cc.i
 .PHONY : re2/testing/exhaustive2_test.cc.i
 
 re2/testing/exhaustive2_test.s: re2/testing/exhaustive2_test.cc.s
@@ -1166,7 +1166,7 @@ re2/testing/exhaustive2_test.s: re2/testing/exhaustive2_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/exhaustive2_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/re2/testing/exhaustive2_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/re2/testing/exhaustive2_test.cc.s
 .PHONY : re2/testing/exhaustive2_test.cc.s
 
 re2/testing/exhaustive3_test.o: re2/testing/exhaustive3_test.cc.o
@@ -1175,7 +1175,7 @@ re2/testing/exhaustive3_test.o: re2/testing/exhaustive3_test.cc.o
 
 # target to build an object file
 re2/testing/exhaustive3_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/re2/testing/exhaustive3_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/re2/testing/exhaustive3_test.cc.o
 .PHONY : re2/testing/exhaustive3_test.cc.o
 
 re2/testing/exhaustive3_test.i: re2/testing/exhaustive3_test.cc.i
@@ -1184,7 +1184,7 @@ re2/testing/exhaustive3_test.i: re2/testing/exhaustive3_test.cc.i
 
 # target to preprocess a source file
 re2/testing/exhaustive3_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/re2/testing/exhaustive3_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/re2/testing/exhaustive3_test.cc.i
 .PHONY : re2/testing/exhaustive3_test.cc.i
 
 re2/testing/exhaustive3_test.s: re2/testing/exhaustive3_test.cc.s
@@ -1193,7 +1193,7 @@ re2/testing/exhaustive3_test.s: re2/testing/exhaustive3_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/exhaustive3_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/re2/testing/exhaustive3_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/re2/testing/exhaustive3_test.cc.s
 .PHONY : re2/testing/exhaustive3_test.cc.s
 
 re2/testing/exhaustive_test.o: re2/testing/exhaustive_test.cc.o
@@ -1202,7 +1202,7 @@ re2/testing/exhaustive_test.o: re2/testing/exhaustive_test.cc.o
 
 # target to build an object file
 re2/testing/exhaustive_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/re2/testing/exhaustive_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/re2/testing/exhaustive_test.cc.o
 .PHONY : re2/testing/exhaustive_test.cc.o
 
 re2/testing/exhaustive_test.i: re2/testing/exhaustive_test.cc.i
@@ -1211,7 +1211,7 @@ re2/testing/exhaustive_test.i: re2/testing/exhaustive_test.cc.i
 
 # target to preprocess a source file
 re2/testing/exhaustive_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/re2/testing/exhaustive_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/re2/testing/exhaustive_test.cc.i
 .PHONY : re2/testing/exhaustive_test.cc.i
 
 re2/testing/exhaustive_test.s: re2/testing/exhaustive_test.cc.s
@@ -1220,7 +1220,7 @@ re2/testing/exhaustive_test.s: re2/testing/exhaustive_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/exhaustive_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/re2/testing/exhaustive_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/re2/testing/exhaustive_test.cc.s
 .PHONY : re2/testing/exhaustive_test.cc.s
 
 re2/testing/exhaustive_tester.o: re2/testing/exhaustive_tester.cc.o
@@ -1229,7 +1229,7 @@ re2/testing/exhaustive_tester.o: re2/testing/exhaustive_tester.cc.o
 
 # target to build an object file
 re2/testing/exhaustive_tester.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/exhaustive_tester.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/exhaustive_tester.cc.o
 .PHONY : re2/testing/exhaustive_tester.cc.o
 
 re2/testing/exhaustive_tester.i: re2/testing/exhaustive_tester.cc.i
@@ -1238,7 +1238,7 @@ re2/testing/exhaustive_tester.i: re2/testing/exhaustive_tester.cc.i
 
 # target to preprocess a source file
 re2/testing/exhaustive_tester.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/exhaustive_tester.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/exhaustive_tester.cc.i
 .PHONY : re2/testing/exhaustive_tester.cc.i
 
 re2/testing/exhaustive_tester.s: re2/testing/exhaustive_tester.cc.s
@@ -1247,7 +1247,7 @@ re2/testing/exhaustive_tester.s: re2/testing/exhaustive_tester.cc.s
 
 # target to generate assembly for a file
 re2/testing/exhaustive_tester.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/exhaustive_tester.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/exhaustive_tester.cc.s
 .PHONY : re2/testing/exhaustive_tester.cc.s
 
 re2/testing/filtered_re2_test.o: re2/testing/filtered_re2_test.cc.o
@@ -1256,7 +1256,7 @@ re2/testing/filtered_re2_test.o: re2/testing/filtered_re2_test.cc.o
 
 # target to build an object file
 re2/testing/filtered_re2_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/re2/testing/filtered_re2_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/re2/testing/filtered_re2_test.cc.o
 .PHONY : re2/testing/filtered_re2_test.cc.o
 
 re2/testing/filtered_re2_test.i: re2/testing/filtered_re2_test.cc.i
@@ -1265,7 +1265,7 @@ re2/testing/filtered_re2_test.i: re2/testing/filtered_re2_test.cc.i
 
 # target to preprocess a source file
 re2/testing/filtered_re2_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/re2/testing/filtered_re2_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/re2/testing/filtered_re2_test.cc.i
 .PHONY : re2/testing/filtered_re2_test.cc.i
 
 re2/testing/filtered_re2_test.s: re2/testing/filtered_re2_test.cc.s
@@ -1274,7 +1274,7 @@ re2/testing/filtered_re2_test.s: re2/testing/filtered_re2_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/filtered_re2_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/re2/testing/filtered_re2_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/re2/testing/filtered_re2_test.cc.s
 .PHONY : re2/testing/filtered_re2_test.cc.s
 
 re2/testing/mimics_pcre_test.o: re2/testing/mimics_pcre_test.cc.o
@@ -1283,7 +1283,7 @@ re2/testing/mimics_pcre_test.o: re2/testing/mimics_pcre_test.cc.o
 
 # target to build an object file
 re2/testing/mimics_pcre_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/re2/testing/mimics_pcre_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/re2/testing/mimics_pcre_test.cc.o
 .PHONY : re2/testing/mimics_pcre_test.cc.o
 
 re2/testing/mimics_pcre_test.i: re2/testing/mimics_pcre_test.cc.i
@@ -1292,7 +1292,7 @@ re2/testing/mimics_pcre_test.i: re2/testing/mimics_pcre_test.cc.i
 
 # target to preprocess a source file
 re2/testing/mimics_pcre_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/re2/testing/mimics_pcre_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/re2/testing/mimics_pcre_test.cc.i
 .PHONY : re2/testing/mimics_pcre_test.cc.i
 
 re2/testing/mimics_pcre_test.s: re2/testing/mimics_pcre_test.cc.s
@@ -1301,7 +1301,7 @@ re2/testing/mimics_pcre_test.s: re2/testing/mimics_pcre_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/mimics_pcre_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/re2/testing/mimics_pcre_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/re2/testing/mimics_pcre_test.cc.s
 .PHONY : re2/testing/mimics_pcre_test.cc.s
 
 re2/testing/null_walker.o: re2/testing/null_walker.cc.o
@@ -1310,7 +1310,7 @@ re2/testing/null_walker.o: re2/testing/null_walker.cc.o
 
 # target to build an object file
 re2/testing/null_walker.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/null_walker.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/null_walker.cc.o
 .PHONY : re2/testing/null_walker.cc.o
 
 re2/testing/null_walker.i: re2/testing/null_walker.cc.i
@@ -1319,7 +1319,7 @@ re2/testing/null_walker.i: re2/testing/null_walker.cc.i
 
 # target to preprocess a source file
 re2/testing/null_walker.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/null_walker.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/null_walker.cc.i
 .PHONY : re2/testing/null_walker.cc.i
 
 re2/testing/null_walker.s: re2/testing/null_walker.cc.s
@@ -1328,7 +1328,7 @@ re2/testing/null_walker.s: re2/testing/null_walker.cc.s
 
 # target to generate assembly for a file
 re2/testing/null_walker.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/null_walker.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/null_walker.cc.s
 .PHONY : re2/testing/null_walker.cc.s
 
 re2/testing/parse_test.o: re2/testing/parse_test.cc.o
@@ -1337,7 +1337,7 @@ re2/testing/parse_test.o: re2/testing/parse_test.cc.o
 
 # target to build an object file
 re2/testing/parse_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/re2/testing/parse_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/re2/testing/parse_test.cc.o
 .PHONY : re2/testing/parse_test.cc.o
 
 re2/testing/parse_test.i: re2/testing/parse_test.cc.i
@@ -1346,7 +1346,7 @@ re2/testing/parse_test.i: re2/testing/parse_test.cc.i
 
 # target to preprocess a source file
 re2/testing/parse_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/re2/testing/parse_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/re2/testing/parse_test.cc.i
 .PHONY : re2/testing/parse_test.cc.i
 
 re2/testing/parse_test.s: re2/testing/parse_test.cc.s
@@ -1355,7 +1355,7 @@ re2/testing/parse_test.s: re2/testing/parse_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/parse_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/re2/testing/parse_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/re2/testing/parse_test.cc.s
 .PHONY : re2/testing/parse_test.cc.s
 
 re2/testing/possible_match_test.o: re2/testing/possible_match_test.cc.o
@@ -1364,7 +1364,7 @@ re2/testing/possible_match_test.o: re2/testing/possible_match_test.cc.o
 
 # target to build an object file
 re2/testing/possible_match_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/re2/testing/possible_match_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/re2/testing/possible_match_test.cc.o
 .PHONY : re2/testing/possible_match_test.cc.o
 
 re2/testing/possible_match_test.i: re2/testing/possible_match_test.cc.i
@@ -1373,7 +1373,7 @@ re2/testing/possible_match_test.i: re2/testing/possible_match_test.cc.i
 
 # target to preprocess a source file
 re2/testing/possible_match_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/re2/testing/possible_match_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/re2/testing/possible_match_test.cc.i
 .PHONY : re2/testing/possible_match_test.cc.i
 
 re2/testing/possible_match_test.s: re2/testing/possible_match_test.cc.s
@@ -1382,7 +1382,7 @@ re2/testing/possible_match_test.s: re2/testing/possible_match_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/possible_match_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/re2/testing/possible_match_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/re2/testing/possible_match_test.cc.s
 .PHONY : re2/testing/possible_match_test.cc.s
 
 re2/testing/random_test.o: re2/testing/random_test.cc.o
@@ -1391,7 +1391,7 @@ re2/testing/random_test.o: re2/testing/random_test.cc.o
 
 # target to build an object file
 re2/testing/random_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/re2/testing/random_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/re2/testing/random_test.cc.o
 .PHONY : re2/testing/random_test.cc.o
 
 re2/testing/random_test.i: re2/testing/random_test.cc.i
@@ -1400,7 +1400,7 @@ re2/testing/random_test.i: re2/testing/random_test.cc.i
 
 # target to preprocess a source file
 re2/testing/random_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/re2/testing/random_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/re2/testing/random_test.cc.i
 .PHONY : re2/testing/random_test.cc.i
 
 re2/testing/random_test.s: re2/testing/random_test.cc.s
@@ -1409,7 +1409,7 @@ re2/testing/random_test.s: re2/testing/random_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/random_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/re2/testing/random_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/re2/testing/random_test.cc.s
 .PHONY : re2/testing/random_test.cc.s
 
 re2/testing/re2_arg_test.o: re2/testing/re2_arg_test.cc.o
@@ -1418,7 +1418,7 @@ re2/testing/re2_arg_test.o: re2/testing/re2_arg_test.cc.o
 
 # target to build an object file
 re2/testing/re2_arg_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/re2/testing/re2_arg_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/re2/testing/re2_arg_test.cc.o
 .PHONY : re2/testing/re2_arg_test.cc.o
 
 re2/testing/re2_arg_test.i: re2/testing/re2_arg_test.cc.i
@@ -1427,7 +1427,7 @@ re2/testing/re2_arg_test.i: re2/testing/re2_arg_test.cc.i
 
 # target to preprocess a source file
 re2/testing/re2_arg_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/re2/testing/re2_arg_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/re2/testing/re2_arg_test.cc.i
 .PHONY : re2/testing/re2_arg_test.cc.i
 
 re2/testing/re2_arg_test.s: re2/testing/re2_arg_test.cc.s
@@ -1436,7 +1436,7 @@ re2/testing/re2_arg_test.s: re2/testing/re2_arg_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/re2_arg_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/re2/testing/re2_arg_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/re2/testing/re2_arg_test.cc.s
 .PHONY : re2/testing/re2_arg_test.cc.s
 
 re2/testing/re2_test.o: re2/testing/re2_test.cc.o
@@ -1445,7 +1445,7 @@ re2/testing/re2_test.o: re2/testing/re2_test.cc.o
 
 # target to build an object file
 re2/testing/re2_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/re2/testing/re2_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/re2/testing/re2_test.cc.o
 .PHONY : re2/testing/re2_test.cc.o
 
 re2/testing/re2_test.i: re2/testing/re2_test.cc.i
@@ -1454,7 +1454,7 @@ re2/testing/re2_test.i: re2/testing/re2_test.cc.i
 
 # target to preprocess a source file
 re2/testing/re2_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/re2/testing/re2_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/re2/testing/re2_test.cc.i
 .PHONY : re2/testing/re2_test.cc.i
 
 re2/testing/re2_test.s: re2/testing/re2_test.cc.s
@@ -1463,7 +1463,7 @@ re2/testing/re2_test.s: re2/testing/re2_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/re2_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/re2/testing/re2_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/re2/testing/re2_test.cc.s
 .PHONY : re2/testing/re2_test.cc.s
 
 re2/testing/regexp_benchmark.o: re2/testing/regexp_benchmark.cc.o
@@ -1472,7 +1472,7 @@ re2/testing/regexp_benchmark.o: re2/testing/regexp_benchmark.cc.o
 
 # target to build an object file
 re2/testing/regexp_benchmark.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/re2/testing/regexp_benchmark.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/re2/testing/regexp_benchmark.cc.o
 .PHONY : re2/testing/regexp_benchmark.cc.o
 
 re2/testing/regexp_benchmark.i: re2/testing/regexp_benchmark.cc.i
@@ -1481,7 +1481,7 @@ re2/testing/regexp_benchmark.i: re2/testing/regexp_benchmark.cc.i
 
 # target to preprocess a source file
 re2/testing/regexp_benchmark.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/re2/testing/regexp_benchmark.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/re2/testing/regexp_benchmark.cc.i
 .PHONY : re2/testing/regexp_benchmark.cc.i
 
 re2/testing/regexp_benchmark.s: re2/testing/regexp_benchmark.cc.s
@@ -1490,7 +1490,7 @@ re2/testing/regexp_benchmark.s: re2/testing/regexp_benchmark.cc.s
 
 # target to generate assembly for a file
 re2/testing/regexp_benchmark.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/re2/testing/regexp_benchmark.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/re2/testing/regexp_benchmark.cc.s
 .PHONY : re2/testing/regexp_benchmark.cc.s
 
 re2/testing/regexp_generator.o: re2/testing/regexp_generator.cc.o
@@ -1499,7 +1499,7 @@ re2/testing/regexp_generator.o: re2/testing/regexp_generator.cc.o
 
 # target to build an object file
 re2/testing/regexp_generator.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/regexp_generator.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/regexp_generator.cc.o
 .PHONY : re2/testing/regexp_generator.cc.o
 
 re2/testing/regexp_generator.i: re2/testing/regexp_generator.cc.i
@@ -1508,7 +1508,7 @@ re2/testing/regexp_generator.i: re2/testing/regexp_generator.cc.i
 
 # target to preprocess a source file
 re2/testing/regexp_generator.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/regexp_generator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/regexp_generator.cc.i
 .PHONY : re2/testing/regexp_generator.cc.i
 
 re2/testing/regexp_generator.s: re2/testing/regexp_generator.cc.s
@@ -1517,7 +1517,7 @@ re2/testing/regexp_generator.s: re2/testing/regexp_generator.cc.s
 
 # target to generate assembly for a file
 re2/testing/regexp_generator.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/regexp_generator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/regexp_generator.cc.s
 .PHONY : re2/testing/regexp_generator.cc.s
 
 re2/testing/regexp_test.o: re2/testing/regexp_test.cc.o
@@ -1526,7 +1526,7 @@ re2/testing/regexp_test.o: re2/testing/regexp_test.cc.o
 
 # target to build an object file
 re2/testing/regexp_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/re2/testing/regexp_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/re2/testing/regexp_test.cc.o
 .PHONY : re2/testing/regexp_test.cc.o
 
 re2/testing/regexp_test.i: re2/testing/regexp_test.cc.i
@@ -1535,7 +1535,7 @@ re2/testing/regexp_test.i: re2/testing/regexp_test.cc.i
 
 # target to preprocess a source file
 re2/testing/regexp_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/re2/testing/regexp_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/re2/testing/regexp_test.cc.i
 .PHONY : re2/testing/regexp_test.cc.i
 
 re2/testing/regexp_test.s: re2/testing/regexp_test.cc.s
@@ -1544,7 +1544,7 @@ re2/testing/regexp_test.s: re2/testing/regexp_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/regexp_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/re2/testing/regexp_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/re2/testing/regexp_test.cc.s
 .PHONY : re2/testing/regexp_test.cc.s
 
 re2/testing/required_prefix_test.o: re2/testing/required_prefix_test.cc.o
@@ -1553,7 +1553,7 @@ re2/testing/required_prefix_test.o: re2/testing/required_prefix_test.cc.o
 
 # target to build an object file
 re2/testing/required_prefix_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/re2/testing/required_prefix_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/re2/testing/required_prefix_test.cc.o
 .PHONY : re2/testing/required_prefix_test.cc.o
 
 re2/testing/required_prefix_test.i: re2/testing/required_prefix_test.cc.i
@@ -1562,7 +1562,7 @@ re2/testing/required_prefix_test.i: re2/testing/required_prefix_test.cc.i
 
 # target to preprocess a source file
 re2/testing/required_prefix_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/re2/testing/required_prefix_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/re2/testing/required_prefix_test.cc.i
 .PHONY : re2/testing/required_prefix_test.cc.i
 
 re2/testing/required_prefix_test.s: re2/testing/required_prefix_test.cc.s
@@ -1571,7 +1571,7 @@ re2/testing/required_prefix_test.s: re2/testing/required_prefix_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/required_prefix_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/re2/testing/required_prefix_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/re2/testing/required_prefix_test.cc.s
 .PHONY : re2/testing/required_prefix_test.cc.s
 
 re2/testing/search_test.o: re2/testing/search_test.cc.o
@@ -1580,7 +1580,7 @@ re2/testing/search_test.o: re2/testing/search_test.cc.o
 
 # target to build an object file
 re2/testing/search_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/re2/testing/search_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/re2/testing/search_test.cc.o
 .PHONY : re2/testing/search_test.cc.o
 
 re2/testing/search_test.i: re2/testing/search_test.cc.i
@@ -1589,7 +1589,7 @@ re2/testing/search_test.i: re2/testing/search_test.cc.i
 
 # target to preprocess a source file
 re2/testing/search_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/re2/testing/search_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/re2/testing/search_test.cc.i
 .PHONY : re2/testing/search_test.cc.i
 
 re2/testing/search_test.s: re2/testing/search_test.cc.s
@@ -1598,7 +1598,7 @@ re2/testing/search_test.s: re2/testing/search_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/search_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/re2/testing/search_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/re2/testing/search_test.cc.s
 .PHONY : re2/testing/search_test.cc.s
 
 re2/testing/set_test.o: re2/testing/set_test.cc.o
@@ -1607,7 +1607,7 @@ re2/testing/set_test.o: re2/testing/set_test.cc.o
 
 # target to build an object file
 re2/testing/set_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/re2/testing/set_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/re2/testing/set_test.cc.o
 .PHONY : re2/testing/set_test.cc.o
 
 re2/testing/set_test.i: re2/testing/set_test.cc.i
@@ -1616,7 +1616,7 @@ re2/testing/set_test.i: re2/testing/set_test.cc.i
 
 # target to preprocess a source file
 re2/testing/set_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/re2/testing/set_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/re2/testing/set_test.cc.i
 .PHONY : re2/testing/set_test.cc.i
 
 re2/testing/set_test.s: re2/testing/set_test.cc.s
@@ -1625,7 +1625,7 @@ re2/testing/set_test.s: re2/testing/set_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/set_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/re2/testing/set_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/re2/testing/set_test.cc.s
 .PHONY : re2/testing/set_test.cc.s
 
 re2/testing/simplify_test.o: re2/testing/simplify_test.cc.o
@@ -1634,7 +1634,7 @@ re2/testing/simplify_test.o: re2/testing/simplify_test.cc.o
 
 # target to build an object file
 re2/testing/simplify_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/re2/testing/simplify_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/re2/testing/simplify_test.cc.o
 .PHONY : re2/testing/simplify_test.cc.o
 
 re2/testing/simplify_test.i: re2/testing/simplify_test.cc.i
@@ -1643,7 +1643,7 @@ re2/testing/simplify_test.i: re2/testing/simplify_test.cc.i
 
 # target to preprocess a source file
 re2/testing/simplify_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/re2/testing/simplify_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/re2/testing/simplify_test.cc.i
 .PHONY : re2/testing/simplify_test.cc.i
 
 re2/testing/simplify_test.s: re2/testing/simplify_test.cc.s
@@ -1652,7 +1652,7 @@ re2/testing/simplify_test.s: re2/testing/simplify_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/simplify_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/re2/testing/simplify_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/re2/testing/simplify_test.cc.s
 .PHONY : re2/testing/simplify_test.cc.s
 
 re2/testing/string_generator.o: re2/testing/string_generator.cc.o
@@ -1661,7 +1661,7 @@ re2/testing/string_generator.o: re2/testing/string_generator.cc.o
 
 # target to build an object file
 re2/testing/string_generator.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/string_generator.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/string_generator.cc.o
 .PHONY : re2/testing/string_generator.cc.o
 
 re2/testing/string_generator.i: re2/testing/string_generator.cc.i
@@ -1670,7 +1670,7 @@ re2/testing/string_generator.i: re2/testing/string_generator.cc.i
 
 # target to preprocess a source file
 re2/testing/string_generator.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/string_generator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/string_generator.cc.i
 .PHONY : re2/testing/string_generator.cc.i
 
 re2/testing/string_generator.s: re2/testing/string_generator.cc.s
@@ -1679,7 +1679,7 @@ re2/testing/string_generator.s: re2/testing/string_generator.cc.s
 
 # target to generate assembly for a file
 re2/testing/string_generator.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/string_generator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/string_generator.cc.s
 .PHONY : re2/testing/string_generator.cc.s
 
 re2/testing/string_generator_test.o: re2/testing/string_generator_test.cc.o
@@ -1688,7 +1688,7 @@ re2/testing/string_generator_test.o: re2/testing/string_generator_test.cc.o
 
 # target to build an object file
 re2/testing/string_generator_test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/re2/testing/string_generator_test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/re2/testing/string_generator_test.cc.o
 .PHONY : re2/testing/string_generator_test.cc.o
 
 re2/testing/string_generator_test.i: re2/testing/string_generator_test.cc.i
@@ -1697,7 +1697,7 @@ re2/testing/string_generator_test.i: re2/testing/string_generator_test.cc.i
 
 # target to preprocess a source file
 re2/testing/string_generator_test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/re2/testing/string_generator_test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/re2/testing/string_generator_test.cc.i
 .PHONY : re2/testing/string_generator_test.cc.i
 
 re2/testing/string_generator_test.s: re2/testing/string_generator_test.cc.s
@@ -1706,7 +1706,7 @@ re2/testing/string_generator_test.s: re2/testing/string_generator_test.cc.s
 
 # target to generate assembly for a file
 re2/testing/string_generator_test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/re2/testing/string_generator_test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/re2/testing/string_generator_test.cc.s
 .PHONY : re2/testing/string_generator_test.cc.s
 
 re2/testing/tester.o: re2/testing/tester.cc.o
@@ -1715,7 +1715,7 @@ re2/testing/tester.o: re2/testing/tester.cc.o
 
 # target to build an object file
 re2/testing/tester.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/tester.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/tester.cc.o
 .PHONY : re2/testing/tester.cc.o
 
 re2/testing/tester.i: re2/testing/tester.cc.i
@@ -1724,7 +1724,7 @@ re2/testing/tester.i: re2/testing/tester.cc.i
 
 # target to preprocess a source file
 re2/testing/tester.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/tester.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/tester.cc.i
 .PHONY : re2/testing/tester.cc.i
 
 re2/testing/tester.s: re2/testing/tester.cc.s
@@ -1733,7 +1733,7 @@ re2/testing/tester.s: re2/testing/tester.cc.s
 
 # target to generate assembly for a file
 re2/testing/tester.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/tester.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/re2/testing/tester.cc.s
 .PHONY : re2/testing/tester.cc.s
 
 re2/tostring.o: re2/tostring.cc.o
@@ -1742,7 +1742,7 @@ re2/tostring.o: re2/tostring.cc.o
 
 # target to build an object file
 re2/tostring.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.o
 .PHONY : re2/tostring.cc.o
 
 re2/tostring.i: re2/tostring.cc.i
@@ -1751,7 +1751,7 @@ re2/tostring.i: re2/tostring.cc.i
 
 # target to preprocess a source file
 re2/tostring.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.i
 .PHONY : re2/tostring.cc.i
 
 re2/tostring.s: re2/tostring.cc.s
@@ -1760,7 +1760,7 @@ re2/tostring.s: re2/tostring.cc.s
 
 # target to generate assembly for a file
 re2/tostring.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.s
 .PHONY : re2/tostring.cc.s
 
 re2/unicode_casefold.o: re2/unicode_casefold.cc.o
@@ -1769,7 +1769,7 @@ re2/unicode_casefold.o: re2/unicode_casefold.cc.o
 
 # target to build an object file
 re2/unicode_casefold.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.o
 .PHONY : re2/unicode_casefold.cc.o
 
 re2/unicode_casefold.i: re2/unicode_casefold.cc.i
@@ -1778,7 +1778,7 @@ re2/unicode_casefold.i: re2/unicode_casefold.cc.i
 
 # target to preprocess a source file
 re2/unicode_casefold.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.i
 .PHONY : re2/unicode_casefold.cc.i
 
 re2/unicode_casefold.s: re2/unicode_casefold.cc.s
@@ -1787,7 +1787,7 @@ re2/unicode_casefold.s: re2/unicode_casefold.cc.s
 
 # target to generate assembly for a file
 re2/unicode_casefold.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.s
 .PHONY : re2/unicode_casefold.cc.s
 
 re2/unicode_groups.o: re2/unicode_groups.cc.o
@@ -1796,7 +1796,7 @@ re2/unicode_groups.o: re2/unicode_groups.cc.o
 
 # target to build an object file
 re2/unicode_groups.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.o
 .PHONY : re2/unicode_groups.cc.o
 
 re2/unicode_groups.i: re2/unicode_groups.cc.i
@@ -1805,7 +1805,7 @@ re2/unicode_groups.i: re2/unicode_groups.cc.i
 
 # target to preprocess a source file
 re2/unicode_groups.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.i
 .PHONY : re2/unicode_groups.cc.i
 
 re2/unicode_groups.s: re2/unicode_groups.cc.s
@@ -1814,7 +1814,7 @@ re2/unicode_groups.s: re2/unicode_groups.cc.s
 
 # target to generate assembly for a file
 re2/unicode_groups.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.s
 .PHONY : re2/unicode_groups.cc.s
 
 util/benchmark.o: util/benchmark.cc.o
@@ -1823,7 +1823,7 @@ util/benchmark.o: util/benchmark.cc.o
 
 # target to build an object file
 util/benchmark.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/util/benchmark.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/util/benchmark.cc.o
 .PHONY : util/benchmark.cc.o
 
 util/benchmark.i: util/benchmark.cc.i
@@ -1832,7 +1832,7 @@ util/benchmark.i: util/benchmark.cc.i
 
 # target to preprocess a source file
 util/benchmark.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/util/benchmark.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/util/benchmark.cc.i
 .PHONY : util/benchmark.cc.i
 
 util/benchmark.s: util/benchmark.cc.s
@@ -1841,7 +1841,7 @@ util/benchmark.s: util/benchmark.cc.s
 
 # target to generate assembly for a file
 util/benchmark.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/util/benchmark.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_benchmark.dir/util/benchmark.cc.s
 .PHONY : util/benchmark.cc.s
 
 util/pcre.o: util/pcre.cc.o
@@ -1850,7 +1850,7 @@ util/pcre.o: util/pcre.cc.o
 
 # target to build an object file
 util/pcre.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/util/pcre.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/util/pcre.cc.o
 .PHONY : util/pcre.cc.o
 
 util/pcre.i: util/pcre.cc.i
@@ -1859,7 +1859,7 @@ util/pcre.i: util/pcre.cc.i
 
 # target to preprocess a source file
 util/pcre.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/util/pcre.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/util/pcre.cc.i
 .PHONY : util/pcre.cc.i
 
 util/pcre.s: util/pcre.cc.s
@@ -1868,7 +1868,7 @@ util/pcre.s: util/pcre.cc.s
 
 # target to generate assembly for a file
 util/pcre.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/util/pcre.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/testing.dir/build.make grpc/third_party/re2/CMakeFiles/testing.dir/util/pcre.cc.s
 .PHONY : util/pcre.cc.s
 
 util/rune.o: util/rune.cc.o
@@ -1877,7 +1877,7 @@ util/rune.o: util/rune.cc.o
 
 # target to build an object file
 util/rune.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.o
 .PHONY : util/rune.cc.o
 
 util/rune.i: util/rune.cc.i
@@ -1886,7 +1886,7 @@ util/rune.i: util/rune.cc.i
 
 # target to preprocess a source file
 util/rune.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.i
 .PHONY : util/rune.cc.i
 
 util/rune.s: util/rune.cc.s
@@ -1895,7 +1895,7 @@ util/rune.s: util/rune.cc.s
 
 # target to generate assembly for a file
 util/rune.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.s
 .PHONY : util/rune.cc.s
 
 util/strutil.o: util/strutil.cc.o
@@ -1904,7 +1904,7 @@ util/strutil.o: util/strutil.cc.o
 
 # target to build an object file
 util/strutil.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.o
 .PHONY : util/strutil.cc.o
 
 util/strutil.i: util/strutil.cc.i
@@ -1913,7 +1913,7 @@ util/strutil.i: util/strutil.cc.i
 
 # target to preprocess a source file
 util/strutil.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.i
 .PHONY : util/strutil.cc.i
 
 util/strutil.s: util/strutil.cc.s
@@ -1922,7 +1922,7 @@ util/strutil.s: util/strutil.cc.s
 
 # target to generate assembly for a file
 util/strutil.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2.dir/build.make grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.s
 .PHONY : util/strutil.cc.s
 
 util/test.o: util/test.cc.o
@@ -1931,26 +1931,26 @@ util/test.o: util/test.cc.o
 
 # target to build an object file
 util/test.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/util/test.cc.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/util/test.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/util/test.cc.o
 .PHONY : util/test.cc.o
 
 util/test.i: util/test.cc.i
@@ -1959,26 +1959,26 @@ util/test.i: util/test.cc.i
 
 # target to preprocess a source file
 util/test.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/util/test.cc.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/util/test.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/util/test.cc.i
 .PHONY : util/test.cc.i
 
 util/test.s: util/test.cc.s
@@ -1987,26 +1987,26 @@ util/test.s: util/test.cc.s
 
 # target to generate assembly for a file
 util/test.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/util/test.cc.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_arg_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/parse_test.dir/build.make grpc/third_party/re2/CMakeFiles/parse_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive1_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/filtered_re2_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/build.make grpc/third_party/re2/CMakeFiles/required_prefix_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/search_test.dir/build.make grpc/third_party/re2/CMakeFiles/search_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/possible_match_test.dir/build.make grpc/third_party/re2/CMakeFiles/possible_match_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/simplify_test.dir/build.make grpc/third_party/re2/CMakeFiles/simplify_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/charclass_test.dir/build.make grpc/third_party/re2/CMakeFiles/charclass_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/re2_test.dir/build.make grpc/third_party/re2/CMakeFiles/re2_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/regexp_test.dir/build.make grpc/third_party/re2/CMakeFiles/regexp_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/dfa_test.dir/build.make grpc/third_party/re2/CMakeFiles/dfa_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/random_test.dir/build.make grpc/third_party/re2/CMakeFiles/random_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/string_generator_test.dir/build.make grpc/third_party/re2/CMakeFiles/string_generator_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/build.make grpc/third_party/re2/CMakeFiles/mimics_pcre_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/compile_test.dir/build.make grpc/third_party/re2/CMakeFiles/compile_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/set_test.dir/build.make grpc/third_party/re2/CMakeFiles/set_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive2_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive_test.dir/util/test.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/build.make grpc/third_party/re2/CMakeFiles/exhaustive3_test.dir/util/test.cc.s
 .PHONY : util/test.cc.s
 
 # Help Target
@@ -2214,6 +2214,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

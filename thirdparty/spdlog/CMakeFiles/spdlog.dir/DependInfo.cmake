@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/async.cpp" "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/cfg.cpp" "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/color_sinks.cpp" "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/file_sinks.cpp" "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/fmt.cpp" "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/fmt.cpp.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/spdlog.cpp" "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/stdout_sinks.cpp" "/root/ricki/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/async.cpp" "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/cfg.cpp" "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/color_sinks.cpp" "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/file_sinks.cpp" "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/fmt.cpp" "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/fmt.cpp.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/spdlog.cpp" "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/stdout_sinks.cpp" "/home/tong/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

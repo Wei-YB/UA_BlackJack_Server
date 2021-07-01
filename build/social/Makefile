@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/social/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 social/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/social/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 social/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 social/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 social/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 social/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 social/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 social/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 social/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 social/CMakeFiles/SocialServer.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 social/CMakeFiles/SocialServer.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 social/CMakeFiles/SocialServer.dir/rule
 .PHONY : social/CMakeFiles/SocialServer.dir/rule
 
 # Convenience name for target.
@@ -188,7 +188,7 @@ SocialServer: social/CMakeFiles/SocialServer.dir/rule
 
 # fast build rule for target.
 SocialServer/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/build
 .PHONY : SocialServer/fast
 
 grpc/UA_BlackJack.grpc.pb.o: grpc/UA_BlackJack.grpc.pb.cc.o
@@ -197,7 +197,7 @@ grpc/UA_BlackJack.grpc.pb.o: grpc/UA_BlackJack.grpc.pb.cc.o
 
 # target to build an object file
 grpc/UA_BlackJack.grpc.pb.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.grpc.pb.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.grpc.pb.cc.o
 .PHONY : grpc/UA_BlackJack.grpc.pb.cc.o
 
 grpc/UA_BlackJack.grpc.pb.i: grpc/UA_BlackJack.grpc.pb.cc.i
@@ -206,7 +206,7 @@ grpc/UA_BlackJack.grpc.pb.i: grpc/UA_BlackJack.grpc.pb.cc.i
 
 # target to preprocess a source file
 grpc/UA_BlackJack.grpc.pb.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.grpc.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.grpc.pb.cc.i
 .PHONY : grpc/UA_BlackJack.grpc.pb.cc.i
 
 grpc/UA_BlackJack.grpc.pb.s: grpc/UA_BlackJack.grpc.pb.cc.s
@@ -215,7 +215,7 @@ grpc/UA_BlackJack.grpc.pb.s: grpc/UA_BlackJack.grpc.pb.cc.s
 
 # target to generate assembly for a file
 grpc/UA_BlackJack.grpc.pb.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.grpc.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.grpc.pb.cc.s
 .PHONY : grpc/UA_BlackJack.grpc.pb.cc.s
 
 grpc/UA_BlackJack.pb.o: grpc/UA_BlackJack.pb.cc.o
@@ -224,7 +224,7 @@ grpc/UA_BlackJack.pb.o: grpc/UA_BlackJack.pb.cc.o
 
 # target to build an object file
 grpc/UA_BlackJack.pb.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.pb.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.pb.cc.o
 .PHONY : grpc/UA_BlackJack.pb.cc.o
 
 grpc/UA_BlackJack.pb.i: grpc/UA_BlackJack.pb.cc.i
@@ -233,7 +233,7 @@ grpc/UA_BlackJack.pb.i: grpc/UA_BlackJack.pb.cc.i
 
 # target to preprocess a source file
 grpc/UA_BlackJack.pb.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.pb.cc.i
 .PHONY : grpc/UA_BlackJack.pb.cc.i
 
 grpc/UA_BlackJack.pb.s: grpc/UA_BlackJack.pb.cc.s
@@ -242,7 +242,7 @@ grpc/UA_BlackJack.pb.s: grpc/UA_BlackJack.pb.cc.s
 
 # target to generate assembly for a file
 grpc/UA_BlackJack.pb.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/grpc/UA_BlackJack.pb.cc.s
 .PHONY : grpc/UA_BlackJack.pb.cc.s
 
 src/SocialClientDB-syn.o: src/SocialClientDB-syn.cc.o
@@ -251,7 +251,7 @@ src/SocialClientDB-syn.o: src/SocialClientDB-syn.cc.o
 
 # target to build an object file
 src/SocialClientDB-syn.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialClientDB-syn.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialClientDB-syn.cc.o
 .PHONY : src/SocialClientDB-syn.cc.o
 
 src/SocialClientDB-syn.i: src/SocialClientDB-syn.cc.i
@@ -260,7 +260,7 @@ src/SocialClientDB-syn.i: src/SocialClientDB-syn.cc.i
 
 # target to preprocess a source file
 src/SocialClientDB-syn.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialClientDB-syn.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialClientDB-syn.cc.i
 .PHONY : src/SocialClientDB-syn.cc.i
 
 src/SocialClientDB-syn.s: src/SocialClientDB-syn.cc.s
@@ -269,7 +269,7 @@ src/SocialClientDB-syn.s: src/SocialClientDB-syn.cc.s
 
 # target to generate assembly for a file
 src/SocialClientDB-syn.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialClientDB-syn.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialClientDB-syn.cc.s
 .PHONY : src/SocialClientDB-syn.cc.s
 
 src/SocialServer-asyn.o: src/SocialServer-asyn.cc.o
@@ -278,7 +278,7 @@ src/SocialServer-asyn.o: src/SocialServer-asyn.cc.o
 
 # target to build an object file
 src/SocialServer-asyn.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialServer-asyn.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialServer-asyn.cc.o
 .PHONY : src/SocialServer-asyn.cc.o
 
 src/SocialServer-asyn.i: src/SocialServer-asyn.cc.i
@@ -287,7 +287,7 @@ src/SocialServer-asyn.i: src/SocialServer-asyn.cc.i
 
 # target to preprocess a source file
 src/SocialServer-asyn.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialServer-asyn.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialServer-asyn.cc.i
 .PHONY : src/SocialServer-asyn.cc.i
 
 src/SocialServer-asyn.s: src/SocialServer-asyn.cc.s
@@ -296,7 +296,7 @@ src/SocialServer-asyn.s: src/SocialServer-asyn.cc.s
 
 # target to generate assembly for a file
 src/SocialServer-asyn.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialServer-asyn.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/SocialServer-asyn.cc.s
 .PHONY : src/SocialServer-asyn.cc.s
 
 src/main.o: src/main.cc.o
@@ -305,7 +305,7 @@ src/main.o: src/main.cc.o
 
 # target to build an object file
 src/main.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/main.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/main.cc.o
 .PHONY : src/main.cc.o
 
 src/main.i: src/main.cc.i
@@ -314,7 +314,7 @@ src/main.i: src/main.cc.i
 
 # target to preprocess a source file
 src/main.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/main.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/main.cc.i
 .PHONY : src/main.cc.i
 
 src/main.s: src/main.cc.s
@@ -323,7 +323,7 @@ src/main.s: src/main.cc.s
 
 # target to generate assembly for a file
 src/main.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/main.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f social/CMakeFiles/SocialServer.dir/build.make social/CMakeFiles/SocialServer.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
 # Help Target
@@ -365,6 +365,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

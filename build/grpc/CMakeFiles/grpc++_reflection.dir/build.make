@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/CMakeFiles/grpc++_reflection.dir/depend.make
@@ -80,8 +80,8 @@ include grpc/CMakeFiles/grpc++_reflection.dir/flags.make
 gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc: ../thirdparty/grpc/src/proto/grpc/reflection/v1alpha/reflection.proto
 gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc: grpc/third_party/protobuf/protoc-3.15.8.0
 gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc: grpc/grpc_cpp_plugin
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running gRPC C++ protocol buffer compiler on src/proto/grpc/reflection/v1alpha/reflection.proto"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/grpc && /root/ricki/UA_BlackJack_Server/build/grpc/third_party/protobuf/protoc-3.15.8.0 --grpc_out=generate_mock_code=true:/root/ricki/UA_BlackJack_Server/build/gens --cpp_out=/root/ricki/UA_BlackJack_Server/build/gens --plugin=protoc-gen-grpc=/root/ricki/UA_BlackJack_Server/build/grpc/grpc_cpp_plugin -I . -I /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/protobuf/src src/proto/grpc/reflection/v1alpha/reflection.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running gRPC C++ protocol buffer compiler on src/proto/grpc/reflection/v1alpha/reflection.proto"
+	cd /home/tong/UA_BlackJack_Server/thirdparty/grpc && /home/tong/UA_BlackJack_Server/build/grpc/third_party/protobuf/protoc-3.15.8.0 --grpc_out=generate_mock_code=true:/home/tong/UA_BlackJack_Server/build/gens --cpp_out=/home/tong/UA_BlackJack_Server/build/gens --plugin=protoc-gen-grpc=/home/tong/UA_BlackJack_Server/build/grpc/grpc_cpp_plugin -I . -I /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/protobuf/src src/proto/grpc/reflection/v1alpha/reflection.proto
 
 gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.h: gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.h
@@ -97,55 +97,55 @@ gens/src/proto/grpc/reflection/v1alpha/reflection.pb.h: gens/src/proto/grpc/refl
 
 grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.o: grpc/CMakeFiles/grpc++_reflection.dir/flags.make
 grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.o: gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.o -c /root/ricki/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.o -c /home/tong/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc
 
 grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc > CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc > CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.i
 
 grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc -o CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc -o CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc.s
 
 grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.o: grpc/CMakeFiles/grpc++_reflection.dir/flags.make
 grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.o: gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.o -c /root/ricki/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.o -c /home/tong/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc
 
 grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc > CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc > CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.i
 
 grpc/CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc -o CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/build/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc -o CMakeFiles/grpc++_reflection.dir/__/gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc.s
 
 grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.o: grpc/CMakeFiles/grpc++_reflection.dir/flags.make
 grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.o: ../thirdparty/grpc/src/cpp/ext/proto_server_reflection.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection.cc
 
 grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection.cc > CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection.cc > CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.i
 
 grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection.cc -o CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection.cc -o CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection.cc.s
 
 grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.o: grpc/CMakeFiles/grpc++_reflection.dir/flags.make
 grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.o: ../thirdparty/grpc/src/cpp/ext/proto_server_reflection_plugin.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection_plugin.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection_plugin.cc
 
 grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection_plugin.cc > CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection_plugin.cc > CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.i
 
 grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection_plugin.cc -o CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/ext/proto_server_reflection_plugin.cc -o CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.s
 
 # Object files for target grpc++_reflection
 grpc_______reflection_OBJECTS = \
@@ -163,9 +163,9 @@ grpc/libgrpc++_reflection.a: grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/p
 grpc/libgrpc++_reflection.a: grpc/CMakeFiles/grpc++_reflection.dir/src/cpp/ext/proto_server_reflection_plugin.cc.o
 grpc/libgrpc++_reflection.a: grpc/CMakeFiles/grpc++_reflection.dir/build.make
 grpc/libgrpc++_reflection.a: grpc/CMakeFiles/grpc++_reflection.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libgrpc++_reflection.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc++_reflection.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grpc++_reflection.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libgrpc++_reflection.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc++_reflection.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grpc++_reflection.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/CMakeFiles/grpc++_reflection.dir/build: grpc/libgrpc++_reflection.a
@@ -173,7 +173,7 @@ grpc/CMakeFiles/grpc++_reflection.dir/build: grpc/libgrpc++_reflection.a
 .PHONY : grpc/CMakeFiles/grpc++_reflection.dir/build
 
 grpc/CMakeFiles/grpc++_reflection.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc++_reflection.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc++_reflection.dir/cmake_clean.cmake
 .PHONY : grpc/CMakeFiles/grpc++_reflection.dir/clean
 
 grpc/CMakeFiles/grpc++_reflection.dir/depend: gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc
@@ -181,6 +181,6 @@ grpc/CMakeFiles/grpc++_reflection.dir/depend: gens/src/proto/grpc/reflection/v1a
 grpc/CMakeFiles/grpc++_reflection.dir/depend: gens/src/proto/grpc/reflection/v1alpha/reflection_mock.grpc.pb.h
 grpc/CMakeFiles/grpc++_reflection.dir/depend: gens/src/proto/grpc/reflection/v1alpha/reflection.pb.cc
 grpc/CMakeFiles/grpc++_reflection.dir/depend: gens/src/proto/grpc/reflection/v1alpha/reflection.pb.h
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc /root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc++_reflection.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc /home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc++_reflection.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/CMakeFiles/grpc++_reflection.dir/depend
 

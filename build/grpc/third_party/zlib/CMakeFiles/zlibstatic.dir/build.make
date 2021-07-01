@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/depend.make
@@ -79,198 +79,198 @@ include grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.o: ../thirdparty/grpc/third_party/zlib/adler32.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/adler32.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/adler32.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/adler32.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/adler32.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/adler32.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/adler32.c > CMakeFiles/zlibstatic.dir/adler32.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/adler32.c > CMakeFiles/zlibstatic.dir/adler32.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/adler32.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/adler32.c -o CMakeFiles/zlibstatic.dir/adler32.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/adler32.c -o CMakeFiles/zlibstatic.dir/adler32.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.o: ../thirdparty/grpc/third_party/zlib/compress.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/compress.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/compress.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/compress.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/compress.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/compress.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/compress.c > CMakeFiles/zlibstatic.dir/compress.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/compress.c > CMakeFiles/zlibstatic.dir/compress.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/compress.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/compress.c -o CMakeFiles/zlibstatic.dir/compress.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/compress.c -o CMakeFiles/zlibstatic.dir/compress.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.o: ../thirdparty/grpc/third_party/zlib/crc32.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/crc32.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/crc32.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/crc32.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/crc32.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/crc32.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/crc32.c > CMakeFiles/zlibstatic.dir/crc32.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/crc32.c > CMakeFiles/zlibstatic.dir/crc32.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/crc32.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/crc32.c -o CMakeFiles/zlibstatic.dir/crc32.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/crc32.c -o CMakeFiles/zlibstatic.dir/crc32.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.o: ../thirdparty/grpc/third_party/zlib/deflate.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/deflate.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/deflate.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/deflate.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/deflate.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/deflate.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/deflate.c > CMakeFiles/zlibstatic.dir/deflate.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/deflate.c > CMakeFiles/zlibstatic.dir/deflate.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/deflate.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/deflate.c -o CMakeFiles/zlibstatic.dir/deflate.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/deflate.c -o CMakeFiles/zlibstatic.dir/deflate.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.o: ../thirdparty/grpc/third_party/zlib/gzclose.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/gzclose.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzclose.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/gzclose.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzclose.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/gzclose.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzclose.c > CMakeFiles/zlibstatic.dir/gzclose.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzclose.c > CMakeFiles/zlibstatic.dir/gzclose.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/gzclose.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzclose.c -o CMakeFiles/zlibstatic.dir/gzclose.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzclose.c -o CMakeFiles/zlibstatic.dir/gzclose.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.o: ../thirdparty/grpc/third_party/zlib/gzlib.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/gzlib.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzlib.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/gzlib.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzlib.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/gzlib.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzlib.c > CMakeFiles/zlibstatic.dir/gzlib.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzlib.c > CMakeFiles/zlibstatic.dir/gzlib.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/gzlib.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzlib.c -o CMakeFiles/zlibstatic.dir/gzlib.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzlib.c -o CMakeFiles/zlibstatic.dir/gzlib.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.o: ../thirdparty/grpc/third_party/zlib/gzread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/gzread.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzread.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/gzread.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzread.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/gzread.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzread.c > CMakeFiles/zlibstatic.dir/gzread.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzread.c > CMakeFiles/zlibstatic.dir/gzread.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/gzread.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzread.c -o CMakeFiles/zlibstatic.dir/gzread.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzread.c -o CMakeFiles/zlibstatic.dir/gzread.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.o: ../thirdparty/grpc/third_party/zlib/gzwrite.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/gzwrite.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzwrite.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/gzwrite.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzwrite.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/gzwrite.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzwrite.c > CMakeFiles/zlibstatic.dir/gzwrite.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzwrite.c > CMakeFiles/zlibstatic.dir/gzwrite.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/gzwrite.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzwrite.c -o CMakeFiles/zlibstatic.dir/gzwrite.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/gzwrite.c -o CMakeFiles/zlibstatic.dir/gzwrite.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.o: ../thirdparty/grpc/third_party/zlib/inflate.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/inflate.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inflate.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/inflate.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inflate.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/inflate.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inflate.c > CMakeFiles/zlibstatic.dir/inflate.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inflate.c > CMakeFiles/zlibstatic.dir/inflate.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/inflate.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inflate.c -o CMakeFiles/zlibstatic.dir/inflate.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inflate.c -o CMakeFiles/zlibstatic.dir/inflate.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.o: ../thirdparty/grpc/third_party/zlib/infback.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/infback.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/infback.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/infback.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/infback.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/infback.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/infback.c > CMakeFiles/zlibstatic.dir/infback.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/infback.c > CMakeFiles/zlibstatic.dir/infback.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/infback.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/infback.c -o CMakeFiles/zlibstatic.dir/infback.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/infback.c -o CMakeFiles/zlibstatic.dir/infback.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.o: ../thirdparty/grpc/third_party/zlib/inftrees.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/inftrees.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inftrees.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/inftrees.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inftrees.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/inftrees.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inftrees.c > CMakeFiles/zlibstatic.dir/inftrees.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inftrees.c > CMakeFiles/zlibstatic.dir/inftrees.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/inftrees.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inftrees.c -o CMakeFiles/zlibstatic.dir/inftrees.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inftrees.c -o CMakeFiles/zlibstatic.dir/inftrees.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.o: ../thirdparty/grpc/third_party/zlib/inffast.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/inffast.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inffast.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/inffast.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inffast.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/inffast.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inffast.c > CMakeFiles/zlibstatic.dir/inffast.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inffast.c > CMakeFiles/zlibstatic.dir/inffast.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/inffast.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inffast.c -o CMakeFiles/zlibstatic.dir/inffast.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/inffast.c -o CMakeFiles/zlibstatic.dir/inffast.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.o: ../thirdparty/grpc/third_party/zlib/trees.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/trees.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/trees.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/trees.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/trees.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/trees.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/trees.c > CMakeFiles/zlibstatic.dir/trees.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/trees.c > CMakeFiles/zlibstatic.dir/trees.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/trees.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/trees.c -o CMakeFiles/zlibstatic.dir/trees.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/trees.c -o CMakeFiles/zlibstatic.dir/trees.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.o: ../thirdparty/grpc/third_party/zlib/uncompr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/uncompr.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/uncompr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/uncompr.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/uncompr.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/uncompr.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/uncompr.c > CMakeFiles/zlibstatic.dir/uncompr.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/uncompr.c > CMakeFiles/zlibstatic.dir/uncompr.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/uncompr.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/uncompr.c -o CMakeFiles/zlibstatic.dir/uncompr.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/uncompr.c -o CMakeFiles/zlibstatic.dir/uncompr.s
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.o: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/flags.make
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.o: ../thirdparty/grpc/third_party/zlib/zutil.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/zutil.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/zutil.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlibstatic.dir/zutil.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/zutil.c
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlibstatic.dir/zutil.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/zutil.c > CMakeFiles/zlibstatic.dir/zutil.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/zutil.c > CMakeFiles/zlibstatic.dir/zutil.i
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlibstatic.dir/zutil.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/zutil.c -o CMakeFiles/zlibstatic.dir/zutil.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/zutil.c -o CMakeFiles/zlibstatic.dir/zutil.s
 
 # Object files for target zlibstatic
 zlibstatic_OBJECTS = \
@@ -310,9 +310,9 @@ grpc/third_party/zlib/libz.a: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/un
 grpc/third_party/zlib/libz.a: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.o
 grpc/third_party/zlib/libz.a: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make
 grpc/third_party/zlib/libz.a: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C static library libz.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && $(CMAKE_COMMAND) -P CMakeFiles/zlibstatic.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zlibstatic.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C static library libz.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && $(CMAKE_COMMAND) -P CMakeFiles/zlibstatic.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zlibstatic.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build: grpc/third_party/zlib/libz.a
@@ -320,10 +320,10 @@ grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build: grpc/third_party/zlib/lib
 .PHONY : grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib && $(CMAKE_COMMAND) -P CMakeFiles/zlibstatic.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib && $(CMAKE_COMMAND) -P CMakeFiles/zlibstatic.dir/cmake_clean.cmake
 .PHONY : grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/clean
 
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/depend
 

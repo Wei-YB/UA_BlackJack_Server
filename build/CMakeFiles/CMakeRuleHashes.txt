@@ -1,12 +1,12 @@
 # Hashes of file build rules.
-229cdafd3fdcdeb706a9efb0561c2dfd ../Client/grpc/UA_BlackJack.pb.cc
-fd45cd1662bdf3ef224142390a027e64 ../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc
-10e8928c87353a70c8eb727b50aa0b09 ../PlayerServer/grpc/UA_BlackJack.pb.cc
-caf0db0c458b53814f014154c7022912 ../ProxyServer/include/grpc/UA_BlackJack.pb.cc
-222ed1425750ef31e638cb20ae00e6e8 ../SocialServer/grpc/UA_BlackJack.pb.cc
-dea20154b5ae6a35721df44dc4831f4b gens/src/proto/grpc/channelz/channelz.grpc.pb.cc
-84c5e821251b5ad80794662567fa539e gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc
-0bf0dab36e4c36bdad7bac43c2affc11 grpc/CMakeFiles/plugins
-0bf0dab36e4c36bdad7bac43c2affc11 grpc/CMakeFiles/tools
-0bf0dab36e4c36bdad7bac43c2affc11 grpc/CMakeFiles/tools_c
-0bf0dab36e4c36bdad7bac43c2affc11 grpc/CMakeFiles/tools_cxx
+a52bf0ae0171b05895d5bdd59dfcefcc ../Client/grpc/UA_BlackJack.pb.cc
+649e679b0093fc5f0cda7a59b30fee47 ../GameServer/3rd/grpc/grpc_cpp/UA_BlackJack.pb.cc
+e10040edfd6b0466c042ebc1e724bb47 ../PlayerServer/grpc/UA_BlackJack.pb.cc
+5bbd85c5a8349e87b726cd3ca6d22ae0 ../ProxyServer/include/grpc/UA_BlackJack.pb.cc
+e23c7aba2a924bb91e3f9605248a71b6 ../SocialServer/grpc/UA_BlackJack.pb.cc
+39590c31c230d8e5396dc60e69707e97 gens/src/proto/grpc/channelz/channelz.grpc.pb.cc
+750687f57709d7cf368f0eb6cee856a5 gens/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.cc
+03aa48ce1cbb7ef0a0a83fc999b5cf66 grpc/CMakeFiles/plugins
+03aa48ce1cbb7ef0a0a83fc999b5cf66 grpc/CMakeFiles/tools
+03aa48ce1cbb7ef0a0a83fc999b5cf66 grpc/CMakeFiles/tools_c
+03aa48ce1cbb7ef0a0a83fc999b5cf66 grpc/CMakeFiles/tools_cxx

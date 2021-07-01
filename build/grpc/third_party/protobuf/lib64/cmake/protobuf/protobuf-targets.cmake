@@ -45,7 +45,7 @@ unset(_expectedTargets)
 add_library(protobuf::libprotobuf-lite STATIC IMPORTED)
 
 set_target_properties(protobuf::libprotobuf-lite PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/protobuf/src"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/protobuf/src"
   INTERFACE_LINK_LIBRARIES "-lpthread"
 )
 
@@ -53,7 +53,7 @@ set_target_properties(protobuf::libprotobuf-lite PROPERTIES
 add_library(protobuf::libprotobuf STATIC IMPORTED)
 
 set_target_properties(protobuf::libprotobuf PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/protobuf/src"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/protobuf/src"
   INTERFACE_LINK_LIBRARIES "-lpthread"
 )
 
@@ -61,7 +61,7 @@ set_target_properties(protobuf::libprotobuf PROPERTIES
 add_library(protobuf::libprotoc STATIC IMPORTED)
 
 set_target_properties(protobuf::libprotoc PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/protobuf/src"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/protobuf/src"
   INTERFACE_LINK_LIBRARIES "protobuf::libprotobuf"
 )
 
@@ -72,27 +72,27 @@ add_executable(protobuf::protoc IMPORTED)
 set_property(TARGET protobuf::libprotobuf-lite APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(protobuf::libprotobuf-lite PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/protobuf/libprotobuf-lite.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/tong/UA_BlackJack_Server/build/grpc/third_party/protobuf/libprotobuf-lite.a"
   )
 
 # Import target "protobuf::libprotobuf" for configuration ""
 set_property(TARGET protobuf::libprotobuf APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(protobuf::libprotobuf PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/protobuf/libprotobuf.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/tong/UA_BlackJack_Server/build/grpc/third_party/protobuf/libprotobuf.a"
   )
 
 # Import target "protobuf::libprotoc" for configuration ""
 set_property(TARGET protobuf::libprotoc APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(protobuf::libprotoc PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/protobuf/libprotoc.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/tong/UA_BlackJack_Server/build/grpc/third_party/protobuf/libprotoc.a"
   )
 
 # Import target "protobuf::protoc" for configuration ""
 set_property(TARGET protobuf::protoc APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(protobuf::protoc PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/protobuf/protoc-3.15.8.0"
+  IMPORTED_LOCATION_NOCONFIG "/home/tong/UA_BlackJack_Server/build/grpc/third_party/protobuf/protoc-3.15.8.0"
   )
 
 # This file does not depend on other imported targets which have

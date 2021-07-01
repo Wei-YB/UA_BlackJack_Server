@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/CMakeFiles/grpc_plugin_support.dir/depend.make
@@ -79,94 +79,94 @@ include grpc/CMakeFiles/grpc_plugin_support.dir/flags.make
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.o: grpc/CMakeFiles/grpc_plugin_support.dir/flags.make
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.o: ../thirdparty/grpc/src/compiler/cpp_generator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/cpp_generator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/cpp_generator.cc
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/cpp_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/cpp_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.i
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/cpp_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/cpp_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.s
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.o: grpc/CMakeFiles/grpc_plugin_support.dir/flags.make
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.o: ../thirdparty/grpc/src/compiler/csharp_generator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/csharp_generator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/csharp_generator.cc
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/csharp_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/csharp_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.i
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/csharp_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/csharp_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.s
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.o: grpc/CMakeFiles/grpc_plugin_support.dir/flags.make
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.o: ../thirdparty/grpc/src/compiler/node_generator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/node_generator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/node_generator.cc
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/node_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/node_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.i
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/node_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/node_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.s
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.o: grpc/CMakeFiles/grpc_plugin_support.dir/flags.make
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.o: ../thirdparty/grpc/src/compiler/objective_c_generator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/objective_c_generator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/objective_c_generator.cc
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/objective_c_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/objective_c_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.i
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/objective_c_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/objective_c_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.s
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.o: grpc/CMakeFiles/grpc_plugin_support.dir/flags.make
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.o: ../thirdparty/grpc/src/compiler/php_generator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/php_generator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/php_generator.cc
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/php_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/php_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.i
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/php_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/php_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.s
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.o: grpc/CMakeFiles/grpc_plugin_support.dir/flags.make
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.o: ../thirdparty/grpc/src/compiler/python_generator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/python_generator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/python_generator.cc
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/python_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/python_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.i
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/python_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/python_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.s
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.o: grpc/CMakeFiles/grpc_plugin_support.dir/flags.make
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.o: ../thirdparty/grpc/src/compiler/ruby_generator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/ruby_generator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/ruby_generator.cc
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/ruby_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/ruby_generator.cc > CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.i
 
 grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/ruby_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/ruby_generator.cc -o CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.s
 
 # Object files for target grpc_plugin_support
 grpc_plugin_support_OBJECTS = \
@@ -190,9 +190,9 @@ grpc/libgrpc_plugin_support.a: grpc/CMakeFiles/grpc_plugin_support.dir/src/compi
 grpc/libgrpc_plugin_support.a: grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.o
 grpc/libgrpc_plugin_support.a: grpc/CMakeFiles/grpc_plugin_support.dir/build.make
 grpc/libgrpc_plugin_support.a: grpc/CMakeFiles/grpc_plugin_support.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libgrpc_plugin_support.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc_plugin_support.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grpc_plugin_support.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libgrpc_plugin_support.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc_plugin_support.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grpc_plugin_support.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/CMakeFiles/grpc_plugin_support.dir/build: grpc/libgrpc_plugin_support.a
@@ -200,10 +200,10 @@ grpc/CMakeFiles/grpc_plugin_support.dir/build: grpc/libgrpc_plugin_support.a
 .PHONY : grpc/CMakeFiles/grpc_plugin_support.dir/build
 
 grpc/CMakeFiles/grpc_plugin_support.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc_plugin_support.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc_plugin_support.dir/cmake_clean.cmake
 .PHONY : grpc/CMakeFiles/grpc_plugin_support.dir/clean
 
 grpc/CMakeFiles/grpc_plugin_support.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc /root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc /home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/CMakeFiles/grpc_plugin_support.dir/depend
 

@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 grpc/third_party/zlib/CMakeFiles/zlib.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/zlib.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/zlib.dir/rule
 .PHONY : grpc/third_party/zlib/CMakeFiles/zlib.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ zlib: grpc/third_party/zlib/CMakeFiles/zlib.dir/rule
 
 # fast build rule for target.
 zlib/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/build
 .PHONY : zlib/fast
 
 # Convenience name for target.
 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/rule
 .PHONY : grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/rule
 
 # Convenience name for target.
@@ -203,12 +203,12 @@ zlibstatic: grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/rule
 
 # fast build rule for target.
 zlibstatic/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build
 .PHONY : zlibstatic/fast
 
 # Convenience name for target.
 grpc/third_party/zlib/CMakeFiles/example.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/example.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/example.dir/rule
 .PHONY : grpc/third_party/zlib/CMakeFiles/example.dir/rule
 
 # Convenience name for target.
@@ -218,12 +218,12 @@ example: grpc/third_party/zlib/CMakeFiles/example.dir/rule
 
 # fast build rule for target.
 example/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example.dir/build.make grpc/third_party/zlib/CMakeFiles/example.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example.dir/build.make grpc/third_party/zlib/CMakeFiles/example.dir/build
 .PHONY : example/fast
 
 # Convenience name for target.
 grpc/third_party/zlib/CMakeFiles/minigzip.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/minigzip.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/minigzip.dir/rule
 .PHONY : grpc/third_party/zlib/CMakeFiles/minigzip.dir/rule
 
 # Convenience name for target.
@@ -233,12 +233,12 @@ minigzip: grpc/third_party/zlib/CMakeFiles/minigzip.dir/rule
 
 # fast build rule for target.
 minigzip/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip.dir/build
 .PHONY : minigzip/fast
 
 # Convenience name for target.
 grpc/third_party/zlib/CMakeFiles/example64.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/example64.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/example64.dir/rule
 .PHONY : grpc/third_party/zlib/CMakeFiles/example64.dir/rule
 
 # Convenience name for target.
@@ -248,12 +248,12 @@ example64: grpc/third_party/zlib/CMakeFiles/example64.dir/rule
 
 # fast build rule for target.
 example64/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example64.dir/build.make grpc/third_party/zlib/CMakeFiles/example64.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example64.dir/build.make grpc/third_party/zlib/CMakeFiles/example64.dir/build
 .PHONY : example64/fast
 
 # Convenience name for target.
 grpc/third_party/zlib/CMakeFiles/minigzip64.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/minigzip64.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/zlib/CMakeFiles/minigzip64.dir/rule
 .PHONY : grpc/third_party/zlib/CMakeFiles/minigzip64.dir/rule
 
 # Convenience name for target.
@@ -263,313 +263,313 @@ minigzip64: grpc/third_party/zlib/CMakeFiles/minigzip64.dir/rule
 
 # fast build rule for target.
 minigzip64/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip64.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip64.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip64.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip64.dir/build
 .PHONY : minigzip64/fast
 
 # target to build an object file
 adler32.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/adler32.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/adler32.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.o
 .PHONY : adler32.o
 
 # target to preprocess a source file
 adler32.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/adler32.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/adler32.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.i
 .PHONY : adler32.i
 
 # target to generate assembly for a file
 adler32.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/adler32.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/adler32.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/adler32.s
 .PHONY : adler32.s
 
 # target to build an object file
 compress.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/compress.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/compress.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.o
 .PHONY : compress.o
 
 # target to preprocess a source file
 compress.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/compress.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/compress.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.i
 .PHONY : compress.i
 
 # target to generate assembly for a file
 compress.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/compress.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/compress.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/compress.s
 .PHONY : compress.s
 
 # target to build an object file
 crc32.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/crc32.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/crc32.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.o
 .PHONY : crc32.o
 
 # target to preprocess a source file
 crc32.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/crc32.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/crc32.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.i
 .PHONY : crc32.i
 
 # target to generate assembly for a file
 crc32.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/crc32.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/crc32.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/crc32.s
 .PHONY : crc32.s
 
 # target to build an object file
 deflate.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/deflate.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/deflate.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.o
 .PHONY : deflate.o
 
 # target to preprocess a source file
 deflate.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/deflate.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/deflate.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.i
 .PHONY : deflate.i
 
 # target to generate assembly for a file
 deflate.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/deflate.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/deflate.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/deflate.s
 .PHONY : deflate.s
 
 # target to build an object file
 gzclose.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzclose.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzclose.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.o
 .PHONY : gzclose.o
 
 # target to preprocess a source file
 gzclose.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzclose.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzclose.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.i
 .PHONY : gzclose.i
 
 # target to generate assembly for a file
 gzclose.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzclose.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzclose.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzclose.s
 .PHONY : gzclose.s
 
 # target to build an object file
 gzlib.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzlib.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzlib.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.o
 .PHONY : gzlib.o
 
 # target to preprocess a source file
 gzlib.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzlib.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzlib.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.i
 .PHONY : gzlib.i
 
 # target to generate assembly for a file
 gzlib.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzlib.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzlib.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzlib.s
 .PHONY : gzlib.s
 
 # target to build an object file
 gzread.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzread.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzread.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.o
 .PHONY : gzread.o
 
 # target to preprocess a source file
 gzread.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzread.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzread.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.i
 .PHONY : gzread.i
 
 # target to generate assembly for a file
 gzread.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzread.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzread.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzread.s
 .PHONY : gzread.s
 
 # target to build an object file
 gzwrite.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzwrite.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzwrite.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.o
 .PHONY : gzwrite.o
 
 # target to preprocess a source file
 gzwrite.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzwrite.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzwrite.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.i
 .PHONY : gzwrite.i
 
 # target to generate assembly for a file
 gzwrite.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzwrite.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/gzwrite.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/gzwrite.s
 .PHONY : gzwrite.s
 
 # target to build an object file
 infback.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/infback.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/infback.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.o
 .PHONY : infback.o
 
 # target to preprocess a source file
 infback.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/infback.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/infback.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.i
 .PHONY : infback.i
 
 # target to generate assembly for a file
 infback.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/infback.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/infback.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/infback.s
 .PHONY : infback.s
 
 # target to build an object file
 inffast.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inffast.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inffast.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.o
 .PHONY : inffast.o
 
 # target to preprocess a source file
 inffast.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inffast.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inffast.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.i
 .PHONY : inffast.i
 
 # target to generate assembly for a file
 inffast.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inffast.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inffast.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inffast.s
 .PHONY : inffast.s
 
 # target to build an object file
 inflate.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inflate.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inflate.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.o
 .PHONY : inflate.o
 
 # target to preprocess a source file
 inflate.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inflate.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inflate.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.i
 .PHONY : inflate.i
 
 # target to generate assembly for a file
 inflate.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inflate.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inflate.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inflate.s
 .PHONY : inflate.s
 
 # target to build an object file
 inftrees.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inftrees.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inftrees.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.o
 .PHONY : inftrees.o
 
 # target to preprocess a source file
 inftrees.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inftrees.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inftrees.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.i
 .PHONY : inftrees.i
 
 # target to generate assembly for a file
 inftrees.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inftrees.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/inftrees.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/inftrees.s
 .PHONY : inftrees.s
 
 # target to build an object file
 test/example.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example.dir/build.make grpc/third_party/zlib/CMakeFiles/example.dir/test/example.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example64.dir/build.make grpc/third_party/zlib/CMakeFiles/example64.dir/test/example.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example.dir/build.make grpc/third_party/zlib/CMakeFiles/example.dir/test/example.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example64.dir/build.make grpc/third_party/zlib/CMakeFiles/example64.dir/test/example.o
 .PHONY : test/example.o
 
 # target to preprocess a source file
 test/example.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example.dir/build.make grpc/third_party/zlib/CMakeFiles/example.dir/test/example.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example64.dir/build.make grpc/third_party/zlib/CMakeFiles/example64.dir/test/example.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example.dir/build.make grpc/third_party/zlib/CMakeFiles/example.dir/test/example.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example64.dir/build.make grpc/third_party/zlib/CMakeFiles/example64.dir/test/example.i
 .PHONY : test/example.i
 
 # target to generate assembly for a file
 test/example.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example.dir/build.make grpc/third_party/zlib/CMakeFiles/example.dir/test/example.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example64.dir/build.make grpc/third_party/zlib/CMakeFiles/example64.dir/test/example.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example.dir/build.make grpc/third_party/zlib/CMakeFiles/example.dir/test/example.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/example64.dir/build.make grpc/third_party/zlib/CMakeFiles/example64.dir/test/example.s
 .PHONY : test/example.s
 
 # target to build an object file
 test/minigzip.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip.dir/test/minigzip.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip64.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip64.dir/test/minigzip.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip.dir/test/minigzip.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip64.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip64.dir/test/minigzip.o
 .PHONY : test/minigzip.o
 
 # target to preprocess a source file
 test/minigzip.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip.dir/test/minigzip.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip64.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip64.dir/test/minigzip.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip.dir/test/minigzip.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip64.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip64.dir/test/minigzip.i
 .PHONY : test/minigzip.i
 
 # target to generate assembly for a file
 test/minigzip.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip.dir/test/minigzip.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip64.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip64.dir/test/minigzip.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip.dir/test/minigzip.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/minigzip64.dir/build.make grpc/third_party/zlib/CMakeFiles/minigzip64.dir/test/minigzip.s
 .PHONY : test/minigzip.s
 
 # target to build an object file
 trees.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/trees.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/trees.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.o
 .PHONY : trees.o
 
 # target to preprocess a source file
 trees.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/trees.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/trees.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.i
 .PHONY : trees.i
 
 # target to generate assembly for a file
 trees.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/trees.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/trees.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/trees.s
 .PHONY : trees.s
 
 # target to build an object file
 uncompr.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/uncompr.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/uncompr.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.o
 .PHONY : uncompr.o
 
 # target to preprocess a source file
 uncompr.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/uncompr.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/uncompr.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.i
 .PHONY : uncompr.i
 
 # target to generate assembly for a file
 uncompr.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/uncompr.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/uncompr.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/uncompr.s
 .PHONY : uncompr.s
 
 # target to build an object file
 zutil.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/zutil.o
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/zutil.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.o
 .PHONY : zutil.o
 
 # target to preprocess a source file
 zutil.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/zutil.i
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/zutil.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.i
 .PHONY : zutil.i
 
 # target to generate assembly for a file
 zutil.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/zutil.s
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlib.dir/build.make grpc/third_party/zlib/CMakeFiles/zlib.dir/zutil.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/build.make grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/zutil.s
 .PHONY : zutil.s
 
 # Help Target
@@ -652,6 +652,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

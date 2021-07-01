@@ -1,4 +1,4 @@
-# Install script for directory: /root/ricki/UA_BlackJack_Server
+# Install script for directory: /home/tong/UA_BlackJack_Server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/root/ricki/UA_BlackJack_Server/build/proxy/cmake_install.cmake")
-  include("/root/ricki/UA_BlackJack_Server/build/lobby/cmake_install.cmake")
-  include("/root/ricki/UA_BlackJack_Server/build/social/cmake_install.cmake")
-  include("/root/ricki/UA_BlackJack_Server/build/game/cmake_install.cmake")
-  include("/root/ricki/UA_BlackJack_Server/build/player/cmake_install.cmake")
-  include("/root/ricki/UA_BlackJack_Server/build/client/cmake_install.cmake")
+  include("/home/tong/UA_BlackJack_Server/build/proxy/cmake_install.cmake")
+  include("/home/tong/UA_BlackJack_Server/build/lobby/cmake_install.cmake")
+  include("/home/tong/UA_BlackJack_Server/build/social/cmake_install.cmake")
+  include("/home/tong/UA_BlackJack_Server/build/game/cmake_install.cmake")
+  include("/home/tong/UA_BlackJack_Server/build/player/cmake_install.cmake")
+  include("/home/tong/UA_BlackJack_Server/build/client/cmake_install.cmake")
 
 endif()
 
@@ -56,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/root/ricki/UA_BlackJack_Server/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/tong/UA_BlackJack_Server/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

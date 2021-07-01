@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/debugging/leak_check_disable.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/debugging/leak_check_disable.cc" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

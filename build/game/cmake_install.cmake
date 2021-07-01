@@ -1,4 +1,4 @@
-# Install script for directory: /root/ricki/UA_BlackJack_Server/GameServer
+# Install script for directory: /home/tong/UA_BlackJack_Server/GameServer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/root/ricki/UA_BlackJack_Server/build/game/3rd/grpc/cmake_install.cmake")
+  include("/home/tong/UA_BlackJack_Server/build/game/3rd/grpc/cmake_install.cmake")
 
 endif()
 

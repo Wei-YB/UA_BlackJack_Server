@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include ../thirdparty/spdlog/CMakeFiles/spdlog.dir/depend.make
@@ -79,94 +79,94 @@ include ../thirdparty/spdlog/CMakeFiles/spdlog.dir/flags.make
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.o: ../thirdparty/spdlog/CMakeFiles/spdlog.dir/flags.make
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.o: ../thirdparty/spdlog/src/spdlog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.o"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/spdlog.cpp.o -c /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/spdlog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.o"
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/spdlog.cpp.o -c /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/spdlog.cpp
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spdlog.dir/src/spdlog.cpp.i"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/spdlog.cpp > CMakeFiles/spdlog.dir/src/spdlog.cpp.i
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/spdlog.cpp > CMakeFiles/spdlog.dir/src/spdlog.cpp.i
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spdlog.dir/src/spdlog.cpp.s"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/spdlog.cpp -o CMakeFiles/spdlog.dir/src/spdlog.cpp.s
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/spdlog.cpp -o CMakeFiles/spdlog.dir/src/spdlog.cpp.s
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o: ../thirdparty/spdlog/CMakeFiles/spdlog.dir/flags.make
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o: ../thirdparty/spdlog/src/stdout_sinks.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o -c /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/stdout_sinks.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o"
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o -c /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/stdout_sinks.cpp
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.i"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/stdout_sinks.cpp > CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.i
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/stdout_sinks.cpp > CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.i
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.s"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/stdout_sinks.cpp -o CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.s
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/stdout_sinks.cpp -o CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.s
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o: ../thirdparty/spdlog/CMakeFiles/spdlog.dir/flags.make
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o: ../thirdparty/spdlog/src/color_sinks.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/color_sinks.cpp.o -c /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/color_sinks.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o"
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/color_sinks.cpp.o -c /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/color_sinks.cpp
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spdlog.dir/src/color_sinks.cpp.i"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/color_sinks.cpp > CMakeFiles/spdlog.dir/src/color_sinks.cpp.i
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/color_sinks.cpp > CMakeFiles/spdlog.dir/src/color_sinks.cpp.i
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spdlog.dir/src/color_sinks.cpp.s"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/color_sinks.cpp -o CMakeFiles/spdlog.dir/src/color_sinks.cpp.s
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/color_sinks.cpp -o CMakeFiles/spdlog.dir/src/color_sinks.cpp.s
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o: ../thirdparty/spdlog/CMakeFiles/spdlog.dir/flags.make
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o: ../thirdparty/spdlog/src/file_sinks.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/file_sinks.cpp.o -c /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/file_sinks.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o"
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/file_sinks.cpp.o -c /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/file_sinks.cpp
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spdlog.dir/src/file_sinks.cpp.i"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/file_sinks.cpp > CMakeFiles/spdlog.dir/src/file_sinks.cpp.i
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/file_sinks.cpp > CMakeFiles/spdlog.dir/src/file_sinks.cpp.i
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spdlog.dir/src/file_sinks.cpp.s"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/file_sinks.cpp -o CMakeFiles/spdlog.dir/src/file_sinks.cpp.s
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/file_sinks.cpp -o CMakeFiles/spdlog.dir/src/file_sinks.cpp.s
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.o: ../thirdparty/spdlog/CMakeFiles/spdlog.dir/flags.make
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.o: ../thirdparty/spdlog/src/async.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.o"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/async.cpp.o -c /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/async.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.o"
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/async.cpp.o -c /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/async.cpp
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spdlog.dir/src/async.cpp.i"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/async.cpp > CMakeFiles/spdlog.dir/src/async.cpp.i
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/async.cpp > CMakeFiles/spdlog.dir/src/async.cpp.i
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spdlog.dir/src/async.cpp.s"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/async.cpp -o CMakeFiles/spdlog.dir/src/async.cpp.s
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/async.cpp -o CMakeFiles/spdlog.dir/src/async.cpp.s
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.o: ../thirdparty/spdlog/CMakeFiles/spdlog.dir/flags.make
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.o: ../thirdparty/spdlog/src/cfg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.o"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/cfg.cpp.o -c /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/cfg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.o"
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/cfg.cpp.o -c /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/cfg.cpp
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spdlog.dir/src/cfg.cpp.i"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/cfg.cpp > CMakeFiles/spdlog.dir/src/cfg.cpp.i
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/cfg.cpp > CMakeFiles/spdlog.dir/src/cfg.cpp.i
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spdlog.dir/src/cfg.cpp.s"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/cfg.cpp -o CMakeFiles/spdlog.dir/src/cfg.cpp.s
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/cfg.cpp -o CMakeFiles/spdlog.dir/src/cfg.cpp.s
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/fmt.cpp.o: ../thirdparty/spdlog/CMakeFiles/spdlog.dir/flags.make
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/fmt.cpp.o: ../thirdparty/spdlog/src/fmt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/fmt.cpp.o"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/fmt.cpp.o -c /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/fmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/fmt.cpp.o"
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spdlog.dir/src/fmt.cpp.o -c /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/fmt.cpp
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/fmt.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spdlog.dir/src/fmt.cpp.i"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/fmt.cpp > CMakeFiles/spdlog.dir/src/fmt.cpp.i
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/fmt.cpp > CMakeFiles/spdlog.dir/src/fmt.cpp.i
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/fmt.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spdlog.dir/src/fmt.cpp.s"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/src/fmt.cpp -o CMakeFiles/spdlog.dir/src/fmt.cpp.s
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/spdlog/src/fmt.cpp -o CMakeFiles/spdlog.dir/src/fmt.cpp.s
 
 # Object files for target spdlog
 spdlog_OBJECTS = \
@@ -190,9 +190,9 @@ spdlog_EXTERNAL_OBJECTS =
 ../thirdparty/spdlog/libspdlog.a: ../thirdparty/spdlog/CMakeFiles/spdlog.dir/src/fmt.cpp.o
 ../thirdparty/spdlog/libspdlog.a: ../thirdparty/spdlog/CMakeFiles/spdlog.dir/build.make
 ../thirdparty/spdlog/libspdlog.a: ../thirdparty/spdlog/CMakeFiles/spdlog.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libspdlog.a"
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && $(CMAKE_COMMAND) -P CMakeFiles/spdlog.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/spdlog.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libspdlog.a"
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && $(CMAKE_COMMAND) -P CMakeFiles/spdlog.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/spdlog.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/build: ../thirdparty/spdlog/libspdlog.a
@@ -200,10 +200,10 @@ spdlog_EXTERNAL_OBJECTS =
 .PHONY : ../thirdparty/spdlog/CMakeFiles/spdlog.dir/build
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/thirdparty/spdlog && $(CMAKE_COMMAND) -P CMakeFiles/spdlog.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/thirdparty/spdlog && $(CMAKE_COMMAND) -P CMakeFiles/spdlog.dir/cmake_clean.cmake
 .PHONY : ../thirdparty/spdlog/CMakeFiles/spdlog.dir/clean
 
 ../thirdparty/spdlog/CMakeFiles/spdlog.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/spdlog /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/thirdparty/spdlog /root/ricki/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/spdlog /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/thirdparty/spdlog /home/tong/UA_BlackJack_Server/thirdparty/spdlog/CMakeFiles/spdlog.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ../thirdparty/spdlog/CMakeFiles/spdlog.dir/depend
 

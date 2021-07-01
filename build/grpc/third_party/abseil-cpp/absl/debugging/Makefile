@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ absl_stacktrace: grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stac
 
 # fast build rule for target.
 absl_stacktrace/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/build
 .PHONY : absl_stacktrace/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/rule
 
 # Convenience name for target.
@@ -203,12 +203,12 @@ absl_examine_stack: grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_e
 
 # fast build rule for target.
 absl_examine_stack/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/build
 .PHONY : absl_examine_stack/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/rule
 
 # Convenience name for target.
@@ -218,12 +218,12 @@ absl_leak_check_disable: grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/a
 
 # fast build rule for target.
 absl_leak_check_disable/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build
 .PHONY : absl_leak_check_disable/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/rule
 
 # Convenience name for target.
@@ -233,12 +233,12 @@ absl_symbolize: grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbo
 
 # fast build rule for target.
 absl_symbolize/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/build
 .PHONY : absl_symbolize/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/rule
 
 # Convenience name for target.
@@ -248,12 +248,12 @@ absl_debugging_internal: grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/a
 
 # fast build rule for target.
 absl_debugging_internal/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build
 .PHONY : absl_debugging_internal/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/rule
 
 # Convenience name for target.
@@ -263,12 +263,12 @@ absl_demangle_internal: grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/ab
 
 # fast build rule for target.
 absl_demangle_internal/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/build
 .PHONY : absl_demangle_internal/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/rule
 
 # Convenience name for target.
@@ -278,12 +278,12 @@ absl_failure_signal_handler: grpc/third_party/abseil-cpp/absl/debugging/CMakeFil
 
 # fast build rule for target.
 absl_failure_signal_handler/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/build
 .PHONY : absl_failure_signal_handler/fast
 
 # Convenience name for target.
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/rule
 .PHONY : grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/rule
 
 # Convenience name for target.
@@ -293,7 +293,7 @@ absl_leak_check: grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak
 
 # fast build rule for target.
 absl_leak_check/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/build
 .PHONY : absl_leak_check/fast
 
 failure_signal_handler.o: failure_signal_handler.cc.o
@@ -302,7 +302,7 @@ failure_signal_handler.o: failure_signal_handler.cc.o
 
 # target to build an object file
 failure_signal_handler.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/failure_signal_handler.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/failure_signal_handler.cc.o
 .PHONY : failure_signal_handler.cc.o
 
 failure_signal_handler.i: failure_signal_handler.cc.i
@@ -311,7 +311,7 @@ failure_signal_handler.i: failure_signal_handler.cc.i
 
 # target to preprocess a source file
 failure_signal_handler.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/failure_signal_handler.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/failure_signal_handler.cc.i
 .PHONY : failure_signal_handler.cc.i
 
 failure_signal_handler.s: failure_signal_handler.cc.s
@@ -320,7 +320,7 @@ failure_signal_handler.s: failure_signal_handler.cc.s
 
 # target to generate assembly for a file
 failure_signal_handler.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/failure_signal_handler.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_failure_signal_handler.dir/failure_signal_handler.cc.s
 .PHONY : failure_signal_handler.cc.s
 
 internal/address_is_readable.o: internal/address_is_readable.cc.o
@@ -329,7 +329,7 @@ internal/address_is_readable.o: internal/address_is_readable.cc.o
 
 # target to build an object file
 internal/address_is_readable.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/address_is_readable.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/address_is_readable.cc.o
 .PHONY : internal/address_is_readable.cc.o
 
 internal/address_is_readable.i: internal/address_is_readable.cc.i
@@ -338,7 +338,7 @@ internal/address_is_readable.i: internal/address_is_readable.cc.i
 
 # target to preprocess a source file
 internal/address_is_readable.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/address_is_readable.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/address_is_readable.cc.i
 .PHONY : internal/address_is_readable.cc.i
 
 internal/address_is_readable.s: internal/address_is_readable.cc.s
@@ -347,7 +347,7 @@ internal/address_is_readable.s: internal/address_is_readable.cc.s
 
 # target to generate assembly for a file
 internal/address_is_readable.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/address_is_readable.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/address_is_readable.cc.s
 .PHONY : internal/address_is_readable.cc.s
 
 internal/demangle.o: internal/demangle.cc.o
@@ -356,7 +356,7 @@ internal/demangle.o: internal/demangle.cc.o
 
 # target to build an object file
 internal/demangle.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/internal/demangle.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/internal/demangle.cc.o
 .PHONY : internal/demangle.cc.o
 
 internal/demangle.i: internal/demangle.cc.i
@@ -365,7 +365,7 @@ internal/demangle.i: internal/demangle.cc.i
 
 # target to preprocess a source file
 internal/demangle.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/internal/demangle.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/internal/demangle.cc.i
 .PHONY : internal/demangle.cc.i
 
 internal/demangle.s: internal/demangle.cc.s
@@ -374,7 +374,7 @@ internal/demangle.s: internal/demangle.cc.s
 
 # target to generate assembly for a file
 internal/demangle.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/internal/demangle.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_demangle_internal.dir/internal/demangle.cc.s
 .PHONY : internal/demangle.cc.s
 
 internal/elf_mem_image.o: internal/elf_mem_image.cc.o
@@ -383,7 +383,7 @@ internal/elf_mem_image.o: internal/elf_mem_image.cc.o
 
 # target to build an object file
 internal/elf_mem_image.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/elf_mem_image.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/elf_mem_image.cc.o
 .PHONY : internal/elf_mem_image.cc.o
 
 internal/elf_mem_image.i: internal/elf_mem_image.cc.i
@@ -392,7 +392,7 @@ internal/elf_mem_image.i: internal/elf_mem_image.cc.i
 
 # target to preprocess a source file
 internal/elf_mem_image.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/elf_mem_image.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/elf_mem_image.cc.i
 .PHONY : internal/elf_mem_image.cc.i
 
 internal/elf_mem_image.s: internal/elf_mem_image.cc.s
@@ -401,7 +401,7 @@ internal/elf_mem_image.s: internal/elf_mem_image.cc.s
 
 # target to generate assembly for a file
 internal/elf_mem_image.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/elf_mem_image.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/elf_mem_image.cc.s
 .PHONY : internal/elf_mem_image.cc.s
 
 internal/examine_stack.o: internal/examine_stack.cc.o
@@ -410,7 +410,7 @@ internal/examine_stack.o: internal/examine_stack.cc.o
 
 # target to build an object file
 internal/examine_stack.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/internal/examine_stack.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/internal/examine_stack.cc.o
 .PHONY : internal/examine_stack.cc.o
 
 internal/examine_stack.i: internal/examine_stack.cc.i
@@ -419,7 +419,7 @@ internal/examine_stack.i: internal/examine_stack.cc.i
 
 # target to preprocess a source file
 internal/examine_stack.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/internal/examine_stack.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/internal/examine_stack.cc.i
 .PHONY : internal/examine_stack.cc.i
 
 internal/examine_stack.s: internal/examine_stack.cc.s
@@ -428,7 +428,7 @@ internal/examine_stack.s: internal/examine_stack.cc.s
 
 # target to generate assembly for a file
 internal/examine_stack.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/internal/examine_stack.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_examine_stack.dir/internal/examine_stack.cc.s
 .PHONY : internal/examine_stack.cc.s
 
 internal/vdso_support.o: internal/vdso_support.cc.o
@@ -437,7 +437,7 @@ internal/vdso_support.o: internal/vdso_support.cc.o
 
 # target to build an object file
 internal/vdso_support.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/vdso_support.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/vdso_support.cc.o
 .PHONY : internal/vdso_support.cc.o
 
 internal/vdso_support.i: internal/vdso_support.cc.i
@@ -446,7 +446,7 @@ internal/vdso_support.i: internal/vdso_support.cc.i
 
 # target to preprocess a source file
 internal/vdso_support.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/vdso_support.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/vdso_support.cc.i
 .PHONY : internal/vdso_support.cc.i
 
 internal/vdso_support.s: internal/vdso_support.cc.s
@@ -455,7 +455,7 @@ internal/vdso_support.s: internal/vdso_support.cc.s
 
 # target to generate assembly for a file
 internal/vdso_support.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/vdso_support.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_debugging_internal.dir/internal/vdso_support.cc.s
 .PHONY : internal/vdso_support.cc.s
 
 leak_check.o: leak_check.cc.o
@@ -464,7 +464,7 @@ leak_check.o: leak_check.cc.o
 
 # target to build an object file
 leak_check.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/leak_check.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/leak_check.cc.o
 .PHONY : leak_check.cc.o
 
 leak_check.i: leak_check.cc.i
@@ -473,7 +473,7 @@ leak_check.i: leak_check.cc.i
 
 # target to preprocess a source file
 leak_check.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/leak_check.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/leak_check.cc.i
 .PHONY : leak_check.cc.i
 
 leak_check.s: leak_check.cc.s
@@ -482,7 +482,7 @@ leak_check.s: leak_check.cc.s
 
 # target to generate assembly for a file
 leak_check.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/leak_check.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check.dir/leak_check.cc.s
 .PHONY : leak_check.cc.s
 
 leak_check_disable.o: leak_check_disable.cc.o
@@ -491,7 +491,7 @@ leak_check_disable.o: leak_check_disable.cc.o
 
 # target to build an object file
 leak_check_disable.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.o
 .PHONY : leak_check_disable.cc.o
 
 leak_check_disable.i: leak_check_disable.cc.i
@@ -500,7 +500,7 @@ leak_check_disable.i: leak_check_disable.cc.i
 
 # target to preprocess a source file
 leak_check_disable.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.i
 .PHONY : leak_check_disable.cc.i
 
 leak_check_disable.s: leak_check_disable.cc.s
@@ -509,7 +509,7 @@ leak_check_disable.s: leak_check_disable.cc.s
 
 # target to generate assembly for a file
 leak_check_disable.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.s
 .PHONY : leak_check_disable.cc.s
 
 stacktrace.o: stacktrace.cc.o
@@ -518,7 +518,7 @@ stacktrace.o: stacktrace.cc.o
 
 # target to build an object file
 stacktrace.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/stacktrace.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/stacktrace.cc.o
 .PHONY : stacktrace.cc.o
 
 stacktrace.i: stacktrace.cc.i
@@ -527,7 +527,7 @@ stacktrace.i: stacktrace.cc.i
 
 # target to preprocess a source file
 stacktrace.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/stacktrace.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/stacktrace.cc.i
 .PHONY : stacktrace.cc.i
 
 stacktrace.s: stacktrace.cc.s
@@ -536,7 +536,7 @@ stacktrace.s: stacktrace.cc.s
 
 # target to generate assembly for a file
 stacktrace.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/stacktrace.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_stacktrace.dir/stacktrace.cc.s
 .PHONY : stacktrace.cc.s
 
 symbolize.o: symbolize.cc.o
@@ -545,7 +545,7 @@ symbolize.o: symbolize.cc.o
 
 # target to build an object file
 symbolize.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/symbolize.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/symbolize.cc.o
 .PHONY : symbolize.cc.o
 
 symbolize.i: symbolize.cc.i
@@ -554,7 +554,7 @@ symbolize.i: symbolize.cc.i
 
 # target to preprocess a source file
 symbolize.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/symbolize.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/symbolize.cc.i
 .PHONY : symbolize.cc.i
 
 symbolize.s: symbolize.cc.s
@@ -563,7 +563,7 @@ symbolize.s: symbolize.cc.s
 
 # target to generate assembly for a file
 symbolize.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/symbolize.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/build.make grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_symbolize.dir/symbolize.cc.s
 .PHONY : symbolize.cc.s
 
 # Help Target
@@ -627,6 +627,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

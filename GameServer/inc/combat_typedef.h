@@ -44,3 +44,5 @@ struct BetMoneyArgument
 extern std::string ProxyServiceAddr;
 extern std::string LobbyServiceAddr;
 extern std::string DatabaseServiceAddr;
+extern std::string controlTcpPort;
+extern std::string gameRpcAddr;

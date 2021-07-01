@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/CMakeFiles/grpc++_alts.dir/depend.make
@@ -79,29 +79,29 @@ include grpc/CMakeFiles/grpc++_alts.dir/flags.make
 
 grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.o: grpc/CMakeFiles/grpc++_alts.dir/flags.make
 grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.o: ../thirdparty/grpc/src/cpp/common/alts_context.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_context.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_context.cc
 
 grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_context.cc > CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_context.cc > CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.i
 
 grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_context.cc -o CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_context.cc -o CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_context.cc.s
 
 grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.o: grpc/CMakeFiles/grpc++_alts.dir/flags.make
 grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.o: ../thirdparty/grpc/src/cpp/common/alts_util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_util.cc
 
 grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_util.cc > CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_util.cc > CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.i
 
 grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_util.cc -o CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/src/cpp/common/alts_util.cc -o CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.s
 
 # Object files for target grpc++_alts
 grpc_______alts_OBJECTS = \
@@ -115,9 +115,9 @@ grpc/libgrpc++_alts.a: grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_conte
 grpc/libgrpc++_alts.a: grpc/CMakeFiles/grpc++_alts.dir/src/cpp/common/alts_util.cc.o
 grpc/libgrpc++_alts.a: grpc/CMakeFiles/grpc++_alts.dir/build.make
 grpc/libgrpc++_alts.a: grpc/CMakeFiles/grpc++_alts.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libgrpc++_alts.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc++_alts.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grpc++_alts.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libgrpc++_alts.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc++_alts.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grpc++_alts.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/CMakeFiles/grpc++_alts.dir/build: grpc/libgrpc++_alts.a
@@ -125,10 +125,10 @@ grpc/CMakeFiles/grpc++_alts.dir/build: grpc/libgrpc++_alts.a
 .PHONY : grpc/CMakeFiles/grpc++_alts.dir/build
 
 grpc/CMakeFiles/grpc++_alts.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc++_alts.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc && $(CMAKE_COMMAND) -P CMakeFiles/grpc++_alts.dir/cmake_clean.cmake
 .PHONY : grpc/CMakeFiles/grpc++_alts.dir/clean
 
 grpc/CMakeFiles/grpc++_alts.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc /root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc++_alts.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc /home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc++_alts.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/CMakeFiles/grpc++_alts.dir/depend
 

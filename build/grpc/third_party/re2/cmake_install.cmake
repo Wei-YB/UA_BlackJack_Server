@@ -1,4 +1,4 @@
-# Install script for directory: /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2
+# Install script for directory: /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,22 +39,22 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/re2" TYPE FILE FILES
-    "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/filtered_re2.h"
-    "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/re2.h"
-    "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/set.h"
-    "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/stringpiece.h"
+    "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/filtered_re2.h"
+    "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/re2.h"
+    "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/set.h"
+    "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/stringpiece.h"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2/libre2.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/tong/UA_BlackJack_Server/build/grpc/third_party/re2/libre2.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/re2/re2Config.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/re2/re2Config.cmake"
-         "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/Export/lib64/cmake/re2/re2Config.cmake")
+         "/home/tong/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/Export/lib64/cmake/re2/re2Config.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/re2/re2Config-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -63,9 +63,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/re2" TYPE FILE FILES "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/Export/lib64/cmake/re2/re2Config.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/re2" TYPE FILE FILES "/home/tong/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/Export/lib64/cmake/re2/re2Config.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/re2" TYPE FILE FILES "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/Export/lib64/cmake/re2/re2Config-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/re2" TYPE FILE FILES "/home/tong/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/Export/lib64/cmake/re2/re2Config-release.cmake")
   endif()
 endif()
 

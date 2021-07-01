@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/third_party/re2/CMakeFiles/re2.dir/depend.make
@@ -79,289 +79,289 @@ include grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.o: ../thirdparty/grpc/third_party/re2/re2/bitstate.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/bitstate.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/bitstate.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/bitstate.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/bitstate.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/bitstate.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/bitstate.cc > CMakeFiles/re2.dir/re2/bitstate.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/bitstate.cc > CMakeFiles/re2.dir/re2/bitstate.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/bitstate.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/bitstate.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/bitstate.cc -o CMakeFiles/re2.dir/re2/bitstate.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/bitstate.cc -o CMakeFiles/re2.dir/re2/bitstate.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.o: ../thirdparty/grpc/third_party/re2/re2/compile.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/compile.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/compile.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/compile.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/compile.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/compile.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/compile.cc > CMakeFiles/re2.dir/re2/compile.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/compile.cc > CMakeFiles/re2.dir/re2/compile.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/compile.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/compile.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/compile.cc -o CMakeFiles/re2.dir/re2/compile.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/compile.cc -o CMakeFiles/re2.dir/re2/compile.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.o: ../thirdparty/grpc/third_party/re2/re2/dfa.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/dfa.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/dfa.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/dfa.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/dfa.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/dfa.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/dfa.cc > CMakeFiles/re2.dir/re2/dfa.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/dfa.cc > CMakeFiles/re2.dir/re2/dfa.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/dfa.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/dfa.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/dfa.cc -o CMakeFiles/re2.dir/re2/dfa.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/dfa.cc -o CMakeFiles/re2.dir/re2/dfa.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.o: ../thirdparty/grpc/third_party/re2/re2/filtered_re2.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/filtered_re2.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/filtered_re2.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/filtered_re2.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/filtered_re2.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/filtered_re2.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/filtered_re2.cc > CMakeFiles/re2.dir/re2/filtered_re2.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/filtered_re2.cc > CMakeFiles/re2.dir/re2/filtered_re2.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/filtered_re2.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/filtered_re2.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/filtered_re2.cc -o CMakeFiles/re2.dir/re2/filtered_re2.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/filtered_re2.cc -o CMakeFiles/re2.dir/re2/filtered_re2.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.o: ../thirdparty/grpc/third_party/re2/re2/mimics_pcre.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/mimics_pcre.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/mimics_pcre.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/mimics_pcre.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/mimics_pcre.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/mimics_pcre.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/mimics_pcre.cc > CMakeFiles/re2.dir/re2/mimics_pcre.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/mimics_pcre.cc > CMakeFiles/re2.dir/re2/mimics_pcre.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/mimics_pcre.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/mimics_pcre.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/mimics_pcre.cc -o CMakeFiles/re2.dir/re2/mimics_pcre.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/mimics_pcre.cc -o CMakeFiles/re2.dir/re2/mimics_pcre.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.o: ../thirdparty/grpc/third_party/re2/re2/nfa.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/nfa.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/nfa.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/nfa.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/nfa.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/nfa.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/nfa.cc > CMakeFiles/re2.dir/re2/nfa.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/nfa.cc > CMakeFiles/re2.dir/re2/nfa.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/nfa.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/nfa.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/nfa.cc -o CMakeFiles/re2.dir/re2/nfa.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/nfa.cc -o CMakeFiles/re2.dir/re2/nfa.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.o: ../thirdparty/grpc/third_party/re2/re2/onepass.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/onepass.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/onepass.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/onepass.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/onepass.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/onepass.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/onepass.cc > CMakeFiles/re2.dir/re2/onepass.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/onepass.cc > CMakeFiles/re2.dir/re2/onepass.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/onepass.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/onepass.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/onepass.cc -o CMakeFiles/re2.dir/re2/onepass.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/onepass.cc -o CMakeFiles/re2.dir/re2/onepass.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.o: ../thirdparty/grpc/third_party/re2/re2/parse.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/parse.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/parse.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/parse.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/parse.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/parse.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/parse.cc > CMakeFiles/re2.dir/re2/parse.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/parse.cc > CMakeFiles/re2.dir/re2/parse.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/parse.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/parse.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/parse.cc -o CMakeFiles/re2.dir/re2/parse.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/parse.cc -o CMakeFiles/re2.dir/re2/parse.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.o: ../thirdparty/grpc/third_party/re2/re2/perl_groups.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/perl_groups.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/perl_groups.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/perl_groups.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/perl_groups.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/perl_groups.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/perl_groups.cc > CMakeFiles/re2.dir/re2/perl_groups.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/perl_groups.cc > CMakeFiles/re2.dir/re2/perl_groups.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/perl_groups.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/perl_groups.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/perl_groups.cc -o CMakeFiles/re2.dir/re2/perl_groups.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/perl_groups.cc -o CMakeFiles/re2.dir/re2/perl_groups.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.o: ../thirdparty/grpc/third_party/re2/re2/prefilter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/prefilter.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/prefilter.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/prefilter.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter.cc > CMakeFiles/re2.dir/re2/prefilter.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter.cc > CMakeFiles/re2.dir/re2/prefilter.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/prefilter.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter.cc -o CMakeFiles/re2.dir/re2/prefilter.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter.cc -o CMakeFiles/re2.dir/re2/prefilter.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.o: ../thirdparty/grpc/third_party/re2/re2/prefilter_tree.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/prefilter_tree.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter_tree.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/prefilter_tree.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter_tree.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/prefilter_tree.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter_tree.cc > CMakeFiles/re2.dir/re2/prefilter_tree.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter_tree.cc > CMakeFiles/re2.dir/re2/prefilter_tree.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prefilter_tree.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/prefilter_tree.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter_tree.cc -o CMakeFiles/re2.dir/re2/prefilter_tree.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prefilter_tree.cc -o CMakeFiles/re2.dir/re2/prefilter_tree.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.o: ../thirdparty/grpc/third_party/re2/re2/prog.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/prog.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prog.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/prog.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prog.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/prog.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prog.cc > CMakeFiles/re2.dir/re2/prog.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prog.cc > CMakeFiles/re2.dir/re2/prog.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/prog.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/prog.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prog.cc -o CMakeFiles/re2.dir/re2/prog.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/prog.cc -o CMakeFiles/re2.dir/re2/prog.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.o: ../thirdparty/grpc/third_party/re2/re2/re2.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/re2.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/re2.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/re2.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/re2.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/re2.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/re2.cc > CMakeFiles/re2.dir/re2/re2.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/re2.cc > CMakeFiles/re2.dir/re2/re2.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/re2.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/re2.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/re2.cc -o CMakeFiles/re2.dir/re2/re2.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/re2.cc -o CMakeFiles/re2.dir/re2/re2.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.o: ../thirdparty/grpc/third_party/re2/re2/regexp.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/regexp.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/regexp.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/regexp.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/regexp.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/regexp.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/regexp.cc > CMakeFiles/re2.dir/re2/regexp.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/regexp.cc > CMakeFiles/re2.dir/re2/regexp.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/regexp.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/regexp.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/regexp.cc -o CMakeFiles/re2.dir/re2/regexp.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/regexp.cc -o CMakeFiles/re2.dir/re2/regexp.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.o: ../thirdparty/grpc/third_party/re2/re2/set.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/set.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/set.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/set.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/set.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/set.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/set.cc > CMakeFiles/re2.dir/re2/set.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/set.cc > CMakeFiles/re2.dir/re2/set.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/set.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/set.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/set.cc -o CMakeFiles/re2.dir/re2/set.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/set.cc -o CMakeFiles/re2.dir/re2/set.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.o: ../thirdparty/grpc/third_party/re2/re2/simplify.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/simplify.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/simplify.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/simplify.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/simplify.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/simplify.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/simplify.cc > CMakeFiles/re2.dir/re2/simplify.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/simplify.cc > CMakeFiles/re2.dir/re2/simplify.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/simplify.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/simplify.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/simplify.cc -o CMakeFiles/re2.dir/re2/simplify.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/simplify.cc -o CMakeFiles/re2.dir/re2/simplify.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.o: ../thirdparty/grpc/third_party/re2/re2/stringpiece.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/stringpiece.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/stringpiece.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/stringpiece.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/stringpiece.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/stringpiece.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/stringpiece.cc > CMakeFiles/re2.dir/re2/stringpiece.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/stringpiece.cc > CMakeFiles/re2.dir/re2/stringpiece.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/stringpiece.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/stringpiece.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/stringpiece.cc -o CMakeFiles/re2.dir/re2/stringpiece.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/stringpiece.cc -o CMakeFiles/re2.dir/re2/stringpiece.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.o: ../thirdparty/grpc/third_party/re2/re2/tostring.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/tostring.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/tostring.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/tostring.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/tostring.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/tostring.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/tostring.cc > CMakeFiles/re2.dir/re2/tostring.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/tostring.cc > CMakeFiles/re2.dir/re2/tostring.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/tostring.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/tostring.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/tostring.cc -o CMakeFiles/re2.dir/re2/tostring.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/tostring.cc -o CMakeFiles/re2.dir/re2/tostring.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.o: ../thirdparty/grpc/third_party/re2/re2/unicode_casefold.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/unicode_casefold.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_casefold.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/unicode_casefold.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_casefold.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/unicode_casefold.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_casefold.cc > CMakeFiles/re2.dir/re2/unicode_casefold.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_casefold.cc > CMakeFiles/re2.dir/re2/unicode_casefold.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_casefold.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/unicode_casefold.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_casefold.cc -o CMakeFiles/re2.dir/re2/unicode_casefold.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_casefold.cc -o CMakeFiles/re2.dir/re2/unicode_casefold.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.o: ../thirdparty/grpc/third_party/re2/re2/unicode_groups.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/unicode_groups.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_groups.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/re2/unicode_groups.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_groups.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/re2/unicode_groups.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_groups.cc > CMakeFiles/re2.dir/re2/unicode_groups.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_groups.cc > CMakeFiles/re2.dir/re2/unicode_groups.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/re2/unicode_groups.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/re2/unicode_groups.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_groups.cc -o CMakeFiles/re2.dir/re2/unicode_groups.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/re2/unicode_groups.cc -o CMakeFiles/re2.dir/re2/unicode_groups.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.o: ../thirdparty/grpc/third_party/re2/util/rune.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/util/rune.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/rune.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/util/rune.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/rune.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/util/rune.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/rune.cc > CMakeFiles/re2.dir/util/rune.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/rune.cc > CMakeFiles/re2.dir/util/rune.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/util/rune.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/util/rune.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/rune.cc -o CMakeFiles/re2.dir/util/rune.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/rune.cc -o CMakeFiles/re2.dir/util/rune.cc.s
 
 grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.o: grpc/third_party/re2/CMakeFiles/re2.dir/flags.make
 grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.o: ../thirdparty/grpc/third_party/re2/util/strutil.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/util/strutil.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/strutil.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/re2.dir/util/strutil.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/strutil.cc
 
 grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/re2.dir/util/strutil.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/strutil.cc > CMakeFiles/re2.dir/util/strutil.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/strutil.cc > CMakeFiles/re2.dir/util/strutil.cc.i
 
 grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/re2.dir/util/strutil.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/strutil.cc -o CMakeFiles/re2.dir/util/strutil.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2/util/strutil.cc -o CMakeFiles/re2.dir/util/strutil.cc.s
 
 # Object files for target re2
 re2_OBJECTS = \
@@ -415,9 +415,9 @@ grpc/third_party/re2/libre2.a: grpc/third_party/re2/CMakeFiles/re2.dir/util/rune
 grpc/third_party/re2/libre2.a: grpc/third_party/re2/CMakeFiles/re2.dir/util/strutil.cc.o
 grpc/third_party/re2/libre2.a: grpc/third_party/re2/CMakeFiles/re2.dir/build.make
 grpc/third_party/re2/libre2.a: grpc/third_party/re2/CMakeFiles/re2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX static library libre2.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && $(CMAKE_COMMAND) -P CMakeFiles/re2.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/re2.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX static library libre2.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && $(CMAKE_COMMAND) -P CMakeFiles/re2.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/re2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/third_party/re2/CMakeFiles/re2.dir/build: grpc/third_party/re2/libre2.a
@@ -425,10 +425,10 @@ grpc/third_party/re2/CMakeFiles/re2.dir/build: grpc/third_party/re2/libre2.a
 .PHONY : grpc/third_party/re2/CMakeFiles/re2.dir/build
 
 grpc/third_party/re2/CMakeFiles/re2.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 && $(CMAKE_COMMAND) -P CMakeFiles/re2.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 && $(CMAKE_COMMAND) -P CMakeFiles/re2.dir/cmake_clean.cmake
 .PHONY : grpc/third_party/re2/CMakeFiles/re2.dir/clean
 
 grpc/third_party/re2/CMakeFiles/re2.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/re2 /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2 /root/ricki/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/re2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/re2 /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2 /home/tong/UA_BlackJack_Server/build/grpc/third_party/re2/CMakeFiles/re2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/third_party/re2/CMakeFiles/re2.dir/depend
 

@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/depend.make
@@ -79,653 +79,653 @@ include grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.o: ../thirdparty/grpc/third_party/cares/cares/ares__close_sockets.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares__close_sockets.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__close_sockets.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares__close_sockets.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__close_sockets.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares__close_sockets.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__close_sockets.c > CMakeFiles/c-ares.dir/ares__close_sockets.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__close_sockets.c > CMakeFiles/c-ares.dir/ares__close_sockets.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__close_sockets.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares__close_sockets.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__close_sockets.c -o CMakeFiles/c-ares.dir/ares__close_sockets.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__close_sockets.c -o CMakeFiles/c-ares.dir/ares__close_sockets.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.o: ../thirdparty/grpc/third_party/cares/cares/ares__get_hostent.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares__get_hostent.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__get_hostent.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares__get_hostent.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__get_hostent.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares__get_hostent.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__get_hostent.c > CMakeFiles/c-ares.dir/ares__get_hostent.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__get_hostent.c > CMakeFiles/c-ares.dir/ares__get_hostent.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__get_hostent.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares__get_hostent.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__get_hostent.c -o CMakeFiles/c-ares.dir/ares__get_hostent.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__get_hostent.c -o CMakeFiles/c-ares.dir/ares__get_hostent.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.o: ../thirdparty/grpc/third_party/cares/cares/ares__read_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares__read_line.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__read_line.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares__read_line.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__read_line.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares__read_line.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__read_line.c > CMakeFiles/c-ares.dir/ares__read_line.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__read_line.c > CMakeFiles/c-ares.dir/ares__read_line.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__read_line.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares__read_line.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__read_line.c -o CMakeFiles/c-ares.dir/ares__read_line.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__read_line.c -o CMakeFiles/c-ares.dir/ares__read_line.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.o: ../thirdparty/grpc/third_party/cares/cares/ares__timeval.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares__timeval.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__timeval.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares__timeval.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__timeval.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares__timeval.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__timeval.c > CMakeFiles/c-ares.dir/ares__timeval.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__timeval.c > CMakeFiles/c-ares.dir/ares__timeval.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares__timeval.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares__timeval.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__timeval.c -o CMakeFiles/c-ares.dir/ares__timeval.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares__timeval.c -o CMakeFiles/c-ares.dir/ares__timeval.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_android.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_android.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_android.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_android.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_android.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_android.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_android.c > CMakeFiles/c-ares.dir/ares_android.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_android.c > CMakeFiles/c-ares.dir/ares_android.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_android.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_android.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_android.c -o CMakeFiles/c-ares.dir/ares_android.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_android.c -o CMakeFiles/c-ares.dir/ares_android.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_cancel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_cancel.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_cancel.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_cancel.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_cancel.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_cancel.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_cancel.c > CMakeFiles/c-ares.dir/ares_cancel.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_cancel.c > CMakeFiles/c-ares.dir/ares_cancel.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_cancel.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_cancel.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_cancel.c -o CMakeFiles/c-ares.dir/ares_cancel.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_cancel.c -o CMakeFiles/c-ares.dir/ares_cancel.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_data.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_data.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_data.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_data.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_data.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_data.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_data.c > CMakeFiles/c-ares.dir/ares_data.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_data.c > CMakeFiles/c-ares.dir/ares_data.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_data.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_data.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_data.c -o CMakeFiles/c-ares.dir/ares_data.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_data.c -o CMakeFiles/c-ares.dir/ares_data.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_destroy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_destroy.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_destroy.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_destroy.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_destroy.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_destroy.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_destroy.c > CMakeFiles/c-ares.dir/ares_destroy.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_destroy.c > CMakeFiles/c-ares.dir/ares_destroy.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_destroy.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_destroy.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_destroy.c -o CMakeFiles/c-ares.dir/ares_destroy.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_destroy.c -o CMakeFiles/c-ares.dir/ares_destroy.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_expand_name.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_expand_name.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_name.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_expand_name.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_name.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_expand_name.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_name.c > CMakeFiles/c-ares.dir/ares_expand_name.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_name.c > CMakeFiles/c-ares.dir/ares_expand_name.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_name.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_expand_name.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_name.c -o CMakeFiles/c-ares.dir/ares_expand_name.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_name.c -o CMakeFiles/c-ares.dir/ares_expand_name.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_expand_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_expand_string.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_expand_string.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_string.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_expand_string.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_string.c > CMakeFiles/c-ares.dir/ares_expand_string.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_string.c > CMakeFiles/c-ares.dir/ares_expand_string.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_expand_string.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_expand_string.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_string.c -o CMakeFiles/c-ares.dir/ares_expand_string.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_expand_string.c -o CMakeFiles/c-ares.dir/ares_expand_string.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_fds.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_fds.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_fds.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_fds.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_fds.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_fds.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_fds.c > CMakeFiles/c-ares.dir/ares_fds.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_fds.c > CMakeFiles/c-ares.dir/ares_fds.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_fds.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_fds.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_fds.c -o CMakeFiles/c-ares.dir/ares_fds.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_fds.c -o CMakeFiles/c-ares.dir/ares_fds.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_free_hostent.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_free_hostent.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_hostent.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_free_hostent.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_hostent.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_free_hostent.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_hostent.c > CMakeFiles/c-ares.dir/ares_free_hostent.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_hostent.c > CMakeFiles/c-ares.dir/ares_free_hostent.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_hostent.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_free_hostent.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_hostent.c -o CMakeFiles/c-ares.dir/ares_free_hostent.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_hostent.c -o CMakeFiles/c-ares.dir/ares_free_hostent.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_free_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_free_string.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_free_string.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_string.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_free_string.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_string.c > CMakeFiles/c-ares.dir/ares_free_string.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_string.c > CMakeFiles/c-ares.dir/ares_free_string.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_free_string.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_free_string.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_string.c -o CMakeFiles/c-ares.dir/ares_free_string.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_free_string.c -o CMakeFiles/c-ares.dir/ares_free_string.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_getenv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_getenv.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getenv.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_getenv.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getenv.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_getenv.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getenv.c > CMakeFiles/c-ares.dir/ares_getenv.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getenv.c > CMakeFiles/c-ares.dir/ares_getenv.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getenv.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_getenv.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getenv.c -o CMakeFiles/c-ares.dir/ares_getenv.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getenv.c -o CMakeFiles/c-ares.dir/ares_getenv.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_gethostbyaddr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyaddr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyaddr.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyaddr.c > CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyaddr.c > CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyaddr.c -o CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyaddr.c -o CMakeFiles/c-ares.dir/ares_gethostbyaddr.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_gethostbyname.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_gethostbyname.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyname.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_gethostbyname.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyname.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_gethostbyname.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyname.c > CMakeFiles/c-ares.dir/ares_gethostbyname.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyname.c > CMakeFiles/c-ares.dir/ares_gethostbyname.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_gethostbyname.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_gethostbyname.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyname.c -o CMakeFiles/c-ares.dir/ares_gethostbyname.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_gethostbyname.c -o CMakeFiles/c-ares.dir/ares_gethostbyname.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_getnameinfo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_getnameinfo.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getnameinfo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_getnameinfo.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getnameinfo.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_getnameinfo.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getnameinfo.c > CMakeFiles/c-ares.dir/ares_getnameinfo.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getnameinfo.c > CMakeFiles/c-ares.dir/ares_getnameinfo.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getnameinfo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_getnameinfo.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getnameinfo.c -o CMakeFiles/c-ares.dir/ares_getnameinfo.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getnameinfo.c -o CMakeFiles/c-ares.dir/ares_getnameinfo.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_getsock.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_getsock.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getsock.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_getsock.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getsock.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_getsock.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getsock.c > CMakeFiles/c-ares.dir/ares_getsock.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getsock.c > CMakeFiles/c-ares.dir/ares_getsock.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_getsock.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_getsock.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getsock.c -o CMakeFiles/c-ares.dir/ares_getsock.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_getsock.c -o CMakeFiles/c-ares.dir/ares_getsock.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_init.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_init.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_init.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_init.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_init.c > CMakeFiles/c-ares.dir/ares_init.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_init.c > CMakeFiles/c-ares.dir/ares_init.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_init.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_init.c -o CMakeFiles/c-ares.dir/ares_init.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_init.c -o CMakeFiles/c-ares.dir/ares_init.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_library_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_library_init.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_library_init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_library_init.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_library_init.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_library_init.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_library_init.c > CMakeFiles/c-ares.dir/ares_library_init.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_library_init.c > CMakeFiles/c-ares.dir/ares_library_init.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_library_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_library_init.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_library_init.c -o CMakeFiles/c-ares.dir/ares_library_init.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_library_init.c -o CMakeFiles/c-ares.dir/ares_library_init.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_llist.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_llist.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_llist.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_llist.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_llist.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_llist.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_llist.c > CMakeFiles/c-ares.dir/ares_llist.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_llist.c > CMakeFiles/c-ares.dir/ares_llist.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_llist.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_llist.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_llist.c -o CMakeFiles/c-ares.dir/ares_llist.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_llist.c -o CMakeFiles/c-ares.dir/ares_llist.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_mkquery.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_mkquery.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_mkquery.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_mkquery.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_mkquery.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_mkquery.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_mkquery.c > CMakeFiles/c-ares.dir/ares_mkquery.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_mkquery.c > CMakeFiles/c-ares.dir/ares_mkquery.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_mkquery.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_mkquery.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_mkquery.c -o CMakeFiles/c-ares.dir/ares_mkquery.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_mkquery.c -o CMakeFiles/c-ares.dir/ares_mkquery.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_create_query.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_create_query.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_create_query.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_create_query.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_create_query.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_create_query.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_create_query.c > CMakeFiles/c-ares.dir/ares_create_query.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_create_query.c > CMakeFiles/c-ares.dir/ares_create_query.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_create_query.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_create_query.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_create_query.c -o CMakeFiles/c-ares.dir/ares_create_query.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_create_query.c -o CMakeFiles/c-ares.dir/ares_create_query.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_nowarn.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_nowarn.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_nowarn.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_nowarn.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c > CMakeFiles/c-ares.dir/ares_nowarn.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c > CMakeFiles/c-ares.dir/ares_nowarn.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_nowarn.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_nowarn.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c -o CMakeFiles/c-ares.dir/ares_nowarn.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_nowarn.c -o CMakeFiles/c-ares.dir/ares_nowarn.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_options.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_options.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_options.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_options.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_options.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_options.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_options.c > CMakeFiles/c-ares.dir/ares_options.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_options.c > CMakeFiles/c-ares.dir/ares_options.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_options.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_options.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_options.c -o CMakeFiles/c-ares.dir/ares_options.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_options.c -o CMakeFiles/c-ares.dir/ares_options.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_parse_a_reply.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_a_reply.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_a_reply.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_a_reply.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_a_reply.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_parse_a_reply.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_a_reply.c > CMakeFiles/c-ares.dir/ares_parse_a_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_a_reply.c > CMakeFiles/c-ares.dir/ares_parse_a_reply.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_a_reply.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_parse_a_reply.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_a_reply.c -o CMakeFiles/c-ares.dir/ares_parse_a_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_a_reply.c -o CMakeFiles/c-ares.dir/ares_parse_a_reply.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_parse_aaaa_reply.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_aaaa_reply.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_aaaa_reply.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_aaaa_reply.c > CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_aaaa_reply.c > CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_aaaa_reply.c -o CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_aaaa_reply.c -o CMakeFiles/c-ares.dir/ares_parse_aaaa_reply.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_parse_mx_reply.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_mx_reply.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_mx_reply.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_mx_reply.c > CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_mx_reply.c > CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_mx_reply.c -o CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_mx_reply.c -o CMakeFiles/c-ares.dir/ares_parse_mx_reply.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_parse_naptr_reply.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_naptr_reply.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_naptr_reply.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_naptr_reply.c > CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_naptr_reply.c > CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_naptr_reply.c -o CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_naptr_reply.c -o CMakeFiles/c-ares.dir/ares_parse_naptr_reply.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_parse_ns_reply.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ns_reply.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ns_reply.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ns_reply.c > CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ns_reply.c > CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ns_reply.c -o CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ns_reply.c -o CMakeFiles/c-ares.dir/ares_parse_ns_reply.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_parse_ptr_reply.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ptr_reply.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ptr_reply.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ptr_reply.c > CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ptr_reply.c > CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ptr_reply.c -o CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_ptr_reply.c -o CMakeFiles/c-ares.dir/ares_parse_ptr_reply.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_parse_soa_reply.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_soa_reply.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_soa_reply.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_soa_reply.c > CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_soa_reply.c > CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_soa_reply.c -o CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_soa_reply.c -o CMakeFiles/c-ares.dir/ares_parse_soa_reply.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_parse_srv_reply.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_srv_reply.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_srv_reply.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_srv_reply.c > CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_srv_reply.c > CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_srv_reply.c -o CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_srv_reply.c -o CMakeFiles/c-ares.dir/ares_parse_srv_reply.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_parse_txt_reply.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_txt_reply.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_txt_reply.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_txt_reply.c > CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_txt_reply.c > CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_txt_reply.c -o CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_parse_txt_reply.c -o CMakeFiles/c-ares.dir/ares_parse_txt_reply.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_platform.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_platform.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_platform.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_platform.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_platform.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_platform.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_platform.c > CMakeFiles/c-ares.dir/ares_platform.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_platform.c > CMakeFiles/c-ares.dir/ares_platform.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_platform.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_platform.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_platform.c -o CMakeFiles/c-ares.dir/ares_platform.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_platform.c -o CMakeFiles/c-ares.dir/ares_platform.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_process.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_process.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_process.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_process.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_process.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_process.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_process.c > CMakeFiles/c-ares.dir/ares_process.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_process.c > CMakeFiles/c-ares.dir/ares_process.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_process.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_process.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_process.c -o CMakeFiles/c-ares.dir/ares_process.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_process.c -o CMakeFiles/c-ares.dir/ares_process.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_query.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_query.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_query.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_query.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_query.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_query.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_query.c > CMakeFiles/c-ares.dir/ares_query.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_query.c > CMakeFiles/c-ares.dir/ares_query.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_query.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_query.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_query.c -o CMakeFiles/c-ares.dir/ares_query.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_query.c -o CMakeFiles/c-ares.dir/ares_query.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_search.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_search.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_search.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_search.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_search.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_search.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_search.c > CMakeFiles/c-ares.dir/ares_search.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_search.c > CMakeFiles/c-ares.dir/ares_search.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_search.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_search.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_search.c -o CMakeFiles/c-ares.dir/ares_search.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_search.c -o CMakeFiles/c-ares.dir/ares_search.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_send.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_send.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_send.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_send.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_send.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_send.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_send.c > CMakeFiles/c-ares.dir/ares_send.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_send.c > CMakeFiles/c-ares.dir/ares_send.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_send.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_send.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_send.c -o CMakeFiles/c-ares.dir/ares_send.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_send.c -o CMakeFiles/c-ares.dir/ares_send.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_strcasecmp.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_strcasecmp.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_strcasecmp.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c > CMakeFiles/c-ares.dir/ares_strcasecmp.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c > CMakeFiles/c-ares.dir/ares_strcasecmp.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strcasecmp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_strcasecmp.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c -o CMakeFiles/c-ares.dir/ares_strcasecmp.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strcasecmp.c -o CMakeFiles/c-ares.dir/ares_strcasecmp.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_strdup.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strdup.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_strdup.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strdup.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_strdup.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strdup.c > CMakeFiles/c-ares.dir/ares_strdup.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strdup.c > CMakeFiles/c-ares.dir/ares_strdup.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strdup.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_strdup.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strdup.c -o CMakeFiles/c-ares.dir/ares_strdup.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strdup.c -o CMakeFiles/c-ares.dir/ares_strdup.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_strerror.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_strerror.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strerror.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_strerror.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strerror.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_strerror.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strerror.c > CMakeFiles/c-ares.dir/ares_strerror.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strerror.c > CMakeFiles/c-ares.dir/ares_strerror.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strerror.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_strerror.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strerror.c -o CMakeFiles/c-ares.dir/ares_strerror.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strerror.c -o CMakeFiles/c-ares.dir/ares_strerror.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_strsplit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_strsplit.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strsplit.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_strsplit.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strsplit.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_strsplit.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strsplit.c > CMakeFiles/c-ares.dir/ares_strsplit.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strsplit.c > CMakeFiles/c-ares.dir/ares_strsplit.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_strsplit.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_strsplit.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strsplit.c -o CMakeFiles/c-ares.dir/ares_strsplit.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_strsplit.c -o CMakeFiles/c-ares.dir/ares_strsplit.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_timeout.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_timeout.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_timeout.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_timeout.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_timeout.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_timeout.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_timeout.c > CMakeFiles/c-ares.dir/ares_timeout.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_timeout.c > CMakeFiles/c-ares.dir/ares_timeout.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_timeout.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_timeout.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_timeout.c -o CMakeFiles/c-ares.dir/ares_timeout.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_timeout.c -o CMakeFiles/c-ares.dir/ares_timeout.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_version.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_version.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_version.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_version.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_version.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_version.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_version.c > CMakeFiles/c-ares.dir/ares_version.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_version.c > CMakeFiles/c-ares.dir/ares_version.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_version.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_version.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_version.c -o CMakeFiles/c-ares.dir/ares_version.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_version.c -o CMakeFiles/c-ares.dir/ares_version.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.o: ../thirdparty/grpc/third_party/cares/cares/ares_writev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_writev.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_writev.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/ares_writev.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_writev.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/ares_writev.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_writev.c > CMakeFiles/c-ares.dir/ares_writev.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_writev.c > CMakeFiles/c-ares.dir/ares_writev.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/ares_writev.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/ares_writev.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_writev.c -o CMakeFiles/c-ares.dir/ares_writev.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/ares_writev.c -o CMakeFiles/c-ares.dir/ares_writev.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.o: ../thirdparty/grpc/third_party/cares/cares/bitncmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/bitncmp.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/bitncmp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/bitncmp.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/bitncmp.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/bitncmp.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/bitncmp.c > CMakeFiles/c-ares.dir/bitncmp.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/bitncmp.c > CMakeFiles/c-ares.dir/bitncmp.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/bitncmp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/bitncmp.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/bitncmp.c -o CMakeFiles/c-ares.dir/bitncmp.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/bitncmp.c -o CMakeFiles/c-ares.dir/bitncmp.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.o: ../thirdparty/grpc/third_party/cares/cares/inet_net_pton.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/inet_net_pton.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_net_pton.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/inet_net_pton.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_net_pton.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/inet_net_pton.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_net_pton.c > CMakeFiles/c-ares.dir/inet_net_pton.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_net_pton.c > CMakeFiles/c-ares.dir/inet_net_pton.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_net_pton.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/inet_net_pton.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_net_pton.c -o CMakeFiles/c-ares.dir/inet_net_pton.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_net_pton.c -o CMakeFiles/c-ares.dir/inet_net_pton.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.o: ../thirdparty/grpc/third_party/cares/cares/inet_ntop.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/inet_ntop.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_ntop.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/inet_ntop.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_ntop.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/inet_ntop.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_ntop.c > CMakeFiles/c-ares.dir/inet_ntop.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_ntop.c > CMakeFiles/c-ares.dir/inet_ntop.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/inet_ntop.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/inet_ntop.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_ntop.c -o CMakeFiles/c-ares.dir/inet_ntop.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/inet_ntop.c -o CMakeFiles/c-ares.dir/inet_ntop.c.s
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.o: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/flags.make
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.o: ../thirdparty/grpc/third_party/cares/cares/windows_port.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/windows_port.c.o   -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/windows_port.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c-ares.dir/windows_port.c.o   -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/windows_port.c
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c-ares.dir/windows_port.c.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/windows_port.c > CMakeFiles/c-ares.dir/windows_port.c.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/windows_port.c > CMakeFiles/c-ares.dir/windows_port.c.i
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c-ares.dir/windows_port.c.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/windows_port.c -o CMakeFiles/c-ares.dir/windows_port.c.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && /usr/lib64/ccache/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares/windows_port.c -o CMakeFiles/c-ares.dir/windows_port.c.s
 
 # Object files for target c-ares
 c__ares_OBJECTS = \
@@ -835,9 +835,9 @@ grpc/third_party/cares/cares/lib/libcares.a: grpc/third_party/cares/cares/CMakeF
 grpc/third_party/cares/cares/lib/libcares.a: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/windows_port.c.o
 grpc/third_party/cares/cares/lib/libcares.a: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build.make
 grpc/third_party/cares/cares/lib/libcares.a: grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Linking C static library lib/libcares.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && $(CMAKE_COMMAND) -P CMakeFiles/c-ares.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/c-ares.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Linking C static library lib/libcares.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && $(CMAKE_COMMAND) -P CMakeFiles/c-ares.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/c-ares.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build: grpc/third_party/cares/cares/lib/libcares.a
@@ -845,10 +845,10 @@ grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build: grpc/third_party/cares
 .PHONY : grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/build
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares && $(CMAKE_COMMAND) -P CMakeFiles/c-ares.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares && $(CMAKE_COMMAND) -P CMakeFiles/c-ares.dir/cmake_clean.cmake
 .PHONY : grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/clean
 
 grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares /root/ricki/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/cares/cares /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares /home/tong/UA_BlackJack_Server/build/grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/depend
 

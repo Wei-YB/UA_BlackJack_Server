@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 # Include any dependencies generated for this target.
 include grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/depend.make
@@ -79,16 +79,16 @@ include grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_di
 
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.o: grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/flags.make
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.o: ../thirdparty/grpc/third_party/abseil-cpp/absl/debugging/leak_check_disable.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.o"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.o -c /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/debugging/leak_check_disable.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.o"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && /usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.o -c /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/debugging/leak_check_disable.cc
 
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.i"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/debugging/leak_check_disable.cc > CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.i
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/debugging/leak_check_disable.cc > CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.i
 
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.s"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/debugging/leak_check_disable.cc -o CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.s
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && /usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/debugging/leak_check_disable.cc -o CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.s
 
 # Object files for target absl_leak_check_disable
 absl_leak_check_disable_OBJECTS = \
@@ -100,9 +100,9 @@ absl_leak_check_disable_EXTERNAL_OBJECTS =
 grpc/third_party/abseil-cpp/absl/debugging/libabsl_leak_check_disable.a: grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/leak_check_disable.cc.o
 grpc/third_party/abseil-cpp/absl/debugging/libabsl_leak_check_disable.a: grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build.make
 grpc/third_party/abseil-cpp/absl/debugging/libabsl_leak_check_disable.a: grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/ricki/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libabsl_leak_check_disable.a"
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && $(CMAKE_COMMAND) -P CMakeFiles/absl_leak_check_disable.dir/cmake_clean_target.cmake
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/absl_leak_check_disable.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tong/UA_BlackJack_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libabsl_leak_check_disable.a"
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && $(CMAKE_COMMAND) -P CMakeFiles/absl_leak_check_disable.dir/cmake_clean_target.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/absl_leak_check_disable.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build: grpc/third_party/abseil-cpp/absl/debugging/libabsl_leak_check_disable.a
@@ -110,10 +110,10 @@ grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.di
 .PHONY : grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/build
 
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/clean:
-	cd /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && $(CMAKE_COMMAND) -P CMakeFiles/absl_leak_check_disable.dir/cmake_clean.cmake
+	cd /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging && $(CMAKE_COMMAND) -P CMakeFiles/absl_leak_check_disable.dir/cmake_clean.cmake
 .PHONY : grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/clean
 
 grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/ricki/UA_BlackJack_Server /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/debugging /root/ricki/UA_BlackJack_Server/build /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging /root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tong/UA_BlackJack_Server /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/debugging /home/tong/UA_BlackJack_Server/build /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging /home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc/third_party/abseil-cpp/absl/debugging/CMakeFiles/absl_leak_check_disable.dir/depend
 

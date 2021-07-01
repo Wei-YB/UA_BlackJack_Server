@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base/internal/exponential_biased.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_exponential_biased.dir/internal/exponential_biased.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/abseil-cpp/absl/base/internal/exponential_biased.cc" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/abseil-cpp/absl/base/CMakeFiles/absl_exponential_biased.dir/internal/exponential_biased.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

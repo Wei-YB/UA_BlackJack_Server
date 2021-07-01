@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/test/minigzip.c" "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/minigzip64.dir/test/minigzip.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/zlib/test/minigzip.c" "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/minigzip64.dir/test/minigzip.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -23,7 +23,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/DependInfo.cmake"
+  "/home/tong/UA_BlackJack_Server/build/grpc/third_party/zlib/CMakeFiles/zlib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

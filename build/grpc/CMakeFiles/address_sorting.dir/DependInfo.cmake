@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_posix.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_windows.c" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_posix.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_posix.c.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/address_sorting/address_sorting_windows.c" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/address_sorting.dir/third_party/address_sorting/address_sorting_windows.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

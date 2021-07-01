@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/cpp_generator.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/csharp_generator.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/node_generator.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/objective_c_generator.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/php_generator.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/python_generator.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.o"
-  "/root/ricki/UA_BlackJack_Server/thirdparty/grpc/src/compiler/ruby_generator.cc" "/root/ricki/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/cpp_generator.cc" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/cpp_generator.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/csharp_generator.cc" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/csharp_generator.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/node_generator.cc" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/node_generator.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/objective_c_generator.cc" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/objective_c_generator.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/php_generator.cc" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/php_generator.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/python_generator.cc" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/python_generator.cc.o"
+  "/home/tong/UA_BlackJack_Server/thirdparty/grpc/src/compiler/ruby_generator.cc" "/home/tong/UA_BlackJack_Server/build/grpc/CMakeFiles/grpc_plugin_support.dir/src/compiler/ruby_generator.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -34,8 +34,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/protobuf/CMakeFiles/libprotoc.dir/DependInfo.cmake"
-  "/root/ricki/UA_BlackJack_Server/build/grpc/third_party/protobuf/CMakeFiles/libprotobuf.dir/DependInfo.cmake"
+  "/home/tong/UA_BlackJack_Server/build/grpc/third_party/protobuf/CMakeFiles/libprotoc.dir/DependInfo.cmake"
+  "/home/tong/UA_BlackJack_Server/build/grpc/third_party/protobuf/CMakeFiles/libprotobuf.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

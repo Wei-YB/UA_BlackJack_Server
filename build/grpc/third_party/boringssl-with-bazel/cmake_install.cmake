@@ -1,4 +1,4 @@
-# Install script for directory: /root/ricki/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel
+# Install script for directory: /home/tong/UA_BlackJack_Server/thirdparty/grpc/third_party/boringssl-with-bazel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

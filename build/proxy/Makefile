@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/ricki/UA_BlackJack_Server
+CMAKE_SOURCE_DIR = /home/tong/UA_BlackJack_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/ricki/UA_BlackJack_Server/build
+CMAKE_BINARY_DIR = /home/tong/UA_BlackJack_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles /root/ricki/UA_BlackJack_Server/build/proxy/CMakeFiles/progress.marks
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/ricki/UA_BlackJack_Server/build/CMakeFiles 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles /home/tong/UA_BlackJack_Server/build/proxy/CMakeFiles/progress.marks
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/UA_BlackJack_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/clean
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/preinstall
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 proxy/CMakeFiles/proxy.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/CMakeFiles/proxy.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/CMakeFiles/proxy.dir/rule
 .PHONY : proxy/CMakeFiles/proxy.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ proxy: proxy/CMakeFiles/proxy.dir/rule
 
 # fast build rule for target.
 proxy/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/build
 .PHONY : proxy/fast
 
 # Convenience name for target.
 proxy/CMakeFiles/blackjack_grpc.dir/rule:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/CMakeFiles/blackjack_grpc.dir/rule
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy/CMakeFiles/blackjack_grpc.dir/rule
 .PHONY : proxy/CMakeFiles/blackjack_grpc.dir/rule
 
 # Convenience name for target.
@@ -203,7 +203,7 @@ blackjack_grpc: proxy/CMakeFiles/blackjack_grpc.dir/rule
 
 # fast build rule for target.
 blackjack_grpc/fast:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/build
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/build
 .PHONY : blackjack_grpc/fast
 
 include/grpc/UA_BlackJack.grpc.pb.o: include/grpc/UA_BlackJack.grpc.pb.cc.o
@@ -212,7 +212,7 @@ include/grpc/UA_BlackJack.grpc.pb.o: include/grpc/UA_BlackJack.grpc.pb.cc.o
 
 # target to build an object file
 include/grpc/UA_BlackJack.grpc.pb.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.grpc.pb.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.grpc.pb.cc.o
 .PHONY : include/grpc/UA_BlackJack.grpc.pb.cc.o
 
 include/grpc/UA_BlackJack.grpc.pb.i: include/grpc/UA_BlackJack.grpc.pb.cc.i
@@ -221,7 +221,7 @@ include/grpc/UA_BlackJack.grpc.pb.i: include/grpc/UA_BlackJack.grpc.pb.cc.i
 
 # target to preprocess a source file
 include/grpc/UA_BlackJack.grpc.pb.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.grpc.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.grpc.pb.cc.i
 .PHONY : include/grpc/UA_BlackJack.grpc.pb.cc.i
 
 include/grpc/UA_BlackJack.grpc.pb.s: include/grpc/UA_BlackJack.grpc.pb.cc.s
@@ -230,7 +230,7 @@ include/grpc/UA_BlackJack.grpc.pb.s: include/grpc/UA_BlackJack.grpc.pb.cc.s
 
 # target to generate assembly for a file
 include/grpc/UA_BlackJack.grpc.pb.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.grpc.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.grpc.pb.cc.s
 .PHONY : include/grpc/UA_BlackJack.grpc.pb.cc.s
 
 include/grpc/UA_BlackJack.pb.o: include/grpc/UA_BlackJack.pb.cc.o
@@ -239,7 +239,7 @@ include/grpc/UA_BlackJack.pb.o: include/grpc/UA_BlackJack.pb.cc.o
 
 # target to build an object file
 include/grpc/UA_BlackJack.pb.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.pb.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.pb.cc.o
 .PHONY : include/grpc/UA_BlackJack.pb.cc.o
 
 include/grpc/UA_BlackJack.pb.i: include/grpc/UA_BlackJack.pb.cc.i
@@ -248,7 +248,7 @@ include/grpc/UA_BlackJack.pb.i: include/grpc/UA_BlackJack.pb.cc.i
 
 # target to preprocess a source file
 include/grpc/UA_BlackJack.pb.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.pb.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.pb.cc.i
 .PHONY : include/grpc/UA_BlackJack.pb.cc.i
 
 include/grpc/UA_BlackJack.pb.s: include/grpc/UA_BlackJack.pb.cc.s
@@ -257,7 +257,7 @@ include/grpc/UA_BlackJack.pb.s: include/grpc/UA_BlackJack.pb.cc.s
 
 # target to generate assembly for a file
 include/grpc/UA_BlackJack.pb.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.pb.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/blackjack_grpc.dir/build.make proxy/CMakeFiles/blackjack_grpc.dir/include/grpc/UA_BlackJack.pb.cc.s
 .PHONY : include/grpc/UA_BlackJack.pb.cc.s
 
 src/CircularBuffer.o: src/CircularBuffer.cc.o
@@ -266,7 +266,7 @@ src/CircularBuffer.o: src/CircularBuffer.cc.o
 
 # target to build an object file
 src/CircularBuffer.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/CircularBuffer.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/CircularBuffer.cc.o
 .PHONY : src/CircularBuffer.cc.o
 
 src/CircularBuffer.i: src/CircularBuffer.cc.i
@@ -275,7 +275,7 @@ src/CircularBuffer.i: src/CircularBuffer.cc.i
 
 # target to preprocess a source file
 src/CircularBuffer.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/CircularBuffer.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/CircularBuffer.cc.i
 .PHONY : src/CircularBuffer.cc.i
 
 src/CircularBuffer.s: src/CircularBuffer.cc.s
@@ -284,7 +284,7 @@ src/CircularBuffer.s: src/CircularBuffer.cc.s
 
 # target to generate assembly for a file
 src/CircularBuffer.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/CircularBuffer.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/CircularBuffer.cc.s
 .PHONY : src/CircularBuffer.cc.s
 
 src/Client.o: src/Client.cc.o
@@ -293,7 +293,7 @@ src/Client.o: src/Client.cc.o
 
 # target to build an object file
 src/Client.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/Client.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/Client.cc.o
 .PHONY : src/Client.cc.o
 
 src/Client.i: src/Client.cc.i
@@ -302,7 +302,7 @@ src/Client.i: src/Client.cc.i
 
 # target to preprocess a source file
 src/Client.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/Client.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/Client.cc.i
 .PHONY : src/Client.cc.i
 
 src/Client.s: src/Client.cc.s
@@ -311,7 +311,7 @@ src/Client.s: src/Client.cc.s
 
 # target to generate assembly for a file
 src/Client.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/Client.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/Client.cc.s
 .PHONY : src/Client.cc.s
 
 src/ClientProxyProtocol.o: src/ClientProxyProtocol.cc.o
@@ -320,7 +320,7 @@ src/ClientProxyProtocol.o: src/ClientProxyProtocol.cc.o
 
 # target to build an object file
 src/ClientProxyProtocol.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ClientProxyProtocol.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ClientProxyProtocol.cc.o
 .PHONY : src/ClientProxyProtocol.cc.o
 
 src/ClientProxyProtocol.i: src/ClientProxyProtocol.cc.i
@@ -329,7 +329,7 @@ src/ClientProxyProtocol.i: src/ClientProxyProtocol.cc.i
 
 # target to preprocess a source file
 src/ClientProxyProtocol.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ClientProxyProtocol.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ClientProxyProtocol.cc.i
 .PHONY : src/ClientProxyProtocol.cc.i
 
 src/ClientProxyProtocol.s: src/ClientProxyProtocol.cc.s
@@ -338,7 +338,7 @@ src/ClientProxyProtocol.s: src/ClientProxyProtocol.cc.s
 
 # target to generate assembly for a file
 src/ClientProxyProtocol.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ClientProxyProtocol.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ClientProxyProtocol.cc.s
 .PHONY : src/ClientProxyProtocol.cc.s
 
 src/EventLoop.o: src/EventLoop.cc.o
@@ -347,7 +347,7 @@ src/EventLoop.o: src/EventLoop.cc.o
 
 # target to build an object file
 src/EventLoop.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/EventLoop.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/EventLoop.cc.o
 .PHONY : src/EventLoop.cc.o
 
 src/EventLoop.i: src/EventLoop.cc.i
@@ -356,7 +356,7 @@ src/EventLoop.i: src/EventLoop.cc.i
 
 # target to preprocess a source file
 src/EventLoop.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/EventLoop.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/EventLoop.cc.i
 .PHONY : src/EventLoop.cc.i
 
 src/EventLoop.s: src/EventLoop.cc.s
@@ -365,7 +365,7 @@ src/EventLoop.s: src/EventLoop.cc.s
 
 # target to generate assembly for a file
 src/EventLoop.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/EventLoop.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/EventLoop.cc.s
 .PHONY : src/EventLoop.cc.s
 
 src/ProxyServer.o: src/ProxyServer.cc.o
@@ -374,7 +374,7 @@ src/ProxyServer.o: src/ProxyServer.cc.o
 
 # target to build an object file
 src/ProxyServer.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ProxyServer.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ProxyServer.cc.o
 .PHONY : src/ProxyServer.cc.o
 
 src/ProxyServer.i: src/ProxyServer.cc.i
@@ -383,7 +383,7 @@ src/ProxyServer.i: src/ProxyServer.cc.i
 
 # target to preprocess a source file
 src/ProxyServer.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ProxyServer.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ProxyServer.cc.i
 .PHONY : src/ProxyServer.cc.i
 
 src/ProxyServer.s: src/ProxyServer.cc.s
@@ -392,7 +392,7 @@ src/ProxyServer.s: src/ProxyServer.cc.s
 
 # target to generate assembly for a file
 src/ProxyServer.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ProxyServer.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/ProxyServer.cc.s
 .PHONY : src/ProxyServer.cc.s
 
 src/TcpConnection.o: src/TcpConnection.cc.o
@@ -401,7 +401,7 @@ src/TcpConnection.o: src/TcpConnection.cc.o
 
 # target to build an object file
 src/TcpConnection.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpConnection.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpConnection.cc.o
 .PHONY : src/TcpConnection.cc.o
 
 src/TcpConnection.i: src/TcpConnection.cc.i
@@ -410,7 +410,7 @@ src/TcpConnection.i: src/TcpConnection.cc.i
 
 # target to preprocess a source file
 src/TcpConnection.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpConnection.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpConnection.cc.i
 .PHONY : src/TcpConnection.cc.i
 
 src/TcpConnection.s: src/TcpConnection.cc.s
@@ -419,7 +419,7 @@ src/TcpConnection.s: src/TcpConnection.cc.s
 
 # target to generate assembly for a file
 src/TcpConnection.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpConnection.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpConnection.cc.s
 .PHONY : src/TcpConnection.cc.s
 
 src/TcpServer.o: src/TcpServer.cc.o
@@ -428,7 +428,7 @@ src/TcpServer.o: src/TcpServer.cc.o
 
 # target to build an object file
 src/TcpServer.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpServer.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpServer.cc.o
 .PHONY : src/TcpServer.cc.o
 
 src/TcpServer.i: src/TcpServer.cc.i
@@ -437,7 +437,7 @@ src/TcpServer.i: src/TcpServer.cc.i
 
 # target to preprocess a source file
 src/TcpServer.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpServer.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpServer.cc.i
 .PHONY : src/TcpServer.cc.i
 
 src/TcpServer.s: src/TcpServer.cc.s
@@ -446,7 +446,7 @@ src/TcpServer.s: src/TcpServer.cc.s
 
 # target to generate assembly for a file
 src/TcpServer.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpServer.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/TcpServer.cc.s
 .PHONY : src/TcpServer.cc.s
 
 src/log.o: src/log.cc.o
@@ -455,7 +455,7 @@ src/log.o: src/log.cc.o
 
 # target to build an object file
 src/log.cc.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/log.cc.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/log.cc.o
 .PHONY : src/log.cc.o
 
 src/log.i: src/log.cc.i
@@ -464,7 +464,7 @@ src/log.i: src/log.cc.i
 
 # target to preprocess a source file
 src/log.cc.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/log.cc.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/log.cc.i
 .PHONY : src/log.cc.i
 
 src/log.s: src/log.cc.s
@@ -473,7 +473,7 @@ src/log.s: src/log.cc.s
 
 # target to generate assembly for a file
 src/log.cc.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/log.cc.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/log.cc.s
 .PHONY : src/log.cc.s
 
 src/main.o: src/main.cpp.o
@@ -482,7 +482,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/main.cpp.o
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -491,7 +491,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/main.cpp.i
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -500,7 +500,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	cd /root/ricki/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/main.cpp.s
+	cd /home/tong/UA_BlackJack_Server/build && $(MAKE) $(MAKESILENT) -f proxy/CMakeFiles/proxy.dir/build.make proxy/CMakeFiles/proxy.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -561,6 +561,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/ricki/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tong/UA_BlackJack_Server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
