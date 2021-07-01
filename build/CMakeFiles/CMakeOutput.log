@@ -28,13 +28,13 @@ The CXX compiler identification is GNU, found in "/home/tong/UA_BlackJack_Server
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_0274d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0274d.dir/build.make CMakeFiles/cmTC_0274d.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_2528b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2528b.dir/build.make CMakeFiles/cmTC_2528b.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0274d.dir/testCCompiler.c.o
-/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_0274d.dir/testCCompiler.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_0274d
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_0274d.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc      CMakeFiles/cmTC_0274d.dir/testCCompiler.c.o  -o cmTC_0274d 
+Building C object CMakeFiles/cmTC_2528b.dir/testCCompiler.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_2528b.dir/testCCompiler.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_2528b
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_2528b.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      CMakeFiles/cmTC_2528b.dir/testCCompiler.c.o  -o cmTC_2528b 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -42,10 +42,10 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_190b4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_190b4.dir/build.make CMakeFiles/cmTC_190b4.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_9bf77/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9bf77.dir/build.make CMakeFiles/cmTC_9bf77.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_190b4.dir/CMakeCCompilerABI.c.o
-/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_190b4.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake3/Modules/CMakeCCompilerABI.c
+Building C object CMakeFiles/cmTC_9bf77.dir/CMakeCCompilerABI.c.o
+/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_9bf77.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake3/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 OFFLOAD_TARGET_NAMES=nvptx-none
@@ -79,9 +79,9 @@ GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
 COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_276f7.dir/CMakeCCompilerABI.c.o' '-mtune=generic' '-march=x86-64'
-Linking C executable cmTC_190b4
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_190b4.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_190b4.dir/CMakeCCompilerABI.c.o  -o cmTC_190b4 
+Linking C executable cmTC_9bf77
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_9bf77.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_9bf77.dir/CMakeCCompilerABI.c.o  -o cmTC_9bf77 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper
@@ -93,9 +93,9 @@ Thread model: posix
 gcc version 7.3.1 20180303 (Red Hat 7.3.1-6) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_190b4' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cclZCOyd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_190b4 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_190b4.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_190b4' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9bf77' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOkM7pK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9bf77 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_9bf77.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9bf77' '-mtune=generic' '-march=x86-64'
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -117,10 +117,10 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_190b4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_190b4.dir/build.make CMakeFiles/cmTC_190b4.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_9bf77/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9bf77.dir/build.make CMakeFiles/cmTC_9bf77.dir/build]
   ignore line: [gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_190b4.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_190b4.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake3/Modules/CMakeCCompilerABI.c]
+  ignore line: [Building C object CMakeFiles/cmTC_9bf77.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_9bf77.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake3/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -154,9 +154,9 @@ Parsed C implicit link information from above output:
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
   ignore line: [COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_276f7.dir/CMakeCCompilerABI.c.o' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking C executable cmTC_190b4]
-  ignore line: [/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_190b4.dir/link.txt --verbose=1]
-  ignore line: [/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_190b4.dir/CMakeCCompilerABI.c.o  -o cmTC_190b4 ]
+  ignore line: [Linking C executable cmTC_9bf77]
+  ignore line: [/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_9bf77.dir/link.txt --verbose=1]
+  ignore line: [/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_9bf77.dir/CMakeCCompilerABI.c.o  -o cmTC_9bf77 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper]
@@ -168,13 +168,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-6) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_190b4' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cclZCOyd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_190b4 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_190b4.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9bf77' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOkM7pK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9bf77 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_9bf77.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o]
     arg [/usr/libexec/gcc/x86_64-redhat-linux/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cclZCOyd.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccOkM7pK.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -189,7 +189,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_190b4] ==> ignore
+    arg [cmTC_9bf77] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o] ==> ignore
@@ -198,7 +198,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/7/../../..]
-    arg [CMakeFiles/cmTC_190b4.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_9bf77.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -223,13 +223,13 @@ Parsed C implicit link information from above output:
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_19435/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_19435.dir/build.make CMakeFiles/cmTC_19435.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_07e64/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_07e64.dir/build.make CMakeFiles/cmTC_07e64.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_19435.dir/testCXXCompiler.cxx.o
-/usr/lib64/ccache/c++     -o CMakeFiles/cmTC_19435.dir/testCXXCompiler.cxx.o -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_19435
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_19435.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++       CMakeFiles/cmTC_19435.dir/testCXXCompiler.cxx.o  -o cmTC_19435 
+Building CXX object CMakeFiles/cmTC_07e64.dir/testCXXCompiler.cxx.o
+/usr/lib64/ccache/c++     -o CMakeFiles/cmTC_07e64.dir/testCXXCompiler.cxx.o -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_07e64
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_07e64.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       CMakeFiles/cmTC_07e64.dir/testCXXCompiler.cxx.o  -o cmTC_07e64 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -237,10 +237,10 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_8044f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8044f.dir/build.make CMakeFiles/cmTC_8044f.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_44560/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_44560.dir/build.make CMakeFiles/cmTC_44560.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8044f.dir/CMakeCXXCompilerABI.cpp.o
-/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_8044f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake3/Modules/CMakeCXXCompilerABI.cpp
+Building CXX object CMakeFiles/cmTC_44560.dir/CMakeCXXCompilerABI.cpp.o
+/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_44560.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake3/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 OFFLOAD_TARGET_NAMES=nvptx-none
@@ -277,9 +277,9 @@ GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
 COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_0437b.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-Linking CXX executable cmTC_8044f
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_8044f.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_8044f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_8044f 
+Linking CXX executable cmTC_44560
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_44560.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_44560.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_44560 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper
@@ -291,9 +291,9 @@ Thread model: posix
 gcc version 7.3.1 20180303 (Red Hat 7.3.1-6) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8044f' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc74E31j.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8044f /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_8044f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8044f' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_44560' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUAJ4wV.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_44560 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_44560.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_44560' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -321,10 +321,10 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_8044f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8044f.dir/build.make CMakeFiles/cmTC_8044f.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_44560/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_44560.dir/build.make CMakeFiles/cmTC_44560.dir/build]
   ignore line: [gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_8044f.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_8044f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake3/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Building CXX object CMakeFiles/cmTC_44560.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_44560.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake3/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -361,9 +361,9 @@ Parsed CXX implicit link information from above output:
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
   ignore line: [COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_0437b.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking CXX executable cmTC_8044f]
-  ignore line: [/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_8044f.dir/link.txt --verbose=1]
-  ignore line: [/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_8044f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_8044f ]
+  ignore line: [Linking CXX executable cmTC_44560]
+  ignore line: [/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_44560.dir/link.txt --verbose=1]
+  ignore line: [/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_44560.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_44560 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper]
@@ -375,13 +375,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-6) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/7/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8044f' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc74E31j.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8044f /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_8044f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_44560' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUAJ4wV.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_44560 /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/7 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_44560.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crtn.o]
     arg [/usr/libexec/gcc/x86_64-redhat-linux/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc74E31j.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccUAJ4wV.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -396,7 +396,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_8044f] ==> ignore
+    arg [cmTC_44560] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o] ==> ignore
@@ -405,7 +405,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/7/../../..]
-    arg [CMakeFiles/cmTC_8044f.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_44560.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -428,13 +428,13 @@ Parsed CXX implicit link information from above output:
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_16273/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_16273.dir/build.make CMakeFiles/cmTC_16273.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_5ce7b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5ce7b.dir/build.make CMakeFiles/cmTC_5ce7b.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_16273.dir/CheckIncludeFile.c.o
-/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_16273.dir/CheckIncludeFile.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_16273
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_16273.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc      CMakeFiles/cmTC_16273.dir/CheckIncludeFile.c.o  -o cmTC_16273 
+Building C object CMakeFiles/cmTC_5ce7b.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_5ce7b.dir/CheckIncludeFile.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_5ce7b
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_5ce7b.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      CMakeFiles/cmTC_5ce7b.dir/CheckIncludeFile.c.o  -o cmTC_5ce7b 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -442,13 +442,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_44e96/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_44e96.dir/build.make CMakeFiles/cmTC_44e96.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_a571d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a571d.dir/build.make CMakeFiles/cmTC_a571d.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_44e96.dir/CheckFunctionExists.c.o
-/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_44e96.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
-Linking C executable cmTC_44e96
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_44e96.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_44e96.dir/CheckFunctionExists.c.o  -o cmTC_44e96  -lpthread 
+Building C object CMakeFiles/cmTC_a571d.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a571d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a571d
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_a571d.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a571d.dir/CheckFunctionExists.c.o  -o cmTC_a571d  -lpthread 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -456,13 +456,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if the function gethostbyname exists in the nsl passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_c0321/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c0321.dir/build.make CMakeFiles/cmTC_c0321.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_014cf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_014cf.dir/build.make CMakeFiles/cmTC_014cf.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c0321.dir/CheckFunctionExists.c.o
-/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -fPIE   -o CMakeFiles/cmTC_c0321.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
-Linking C executable cmTC_c0321
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_c0321.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_c0321.dir/CheckFunctionExists.c.o  -o cmTC_c0321  -lnsl 
+Building C object CMakeFiles/cmTC_014cf.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -fPIE   -o CMakeFiles/cmTC_014cf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_014cf
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_014cf.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_014cf.dir/CheckFunctionExists.c.o  -o cmTC_014cf  -lnsl 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -470,13 +470,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if the function clock_gettime exists in the rt passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_76c09/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_76c09.dir/build.make CMakeFiles/cmTC_76c09.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_0562b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0562b.dir/build.make CMakeFiles/cmTC_0562b.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_76c09.dir/CheckFunctionExists.c.o
-/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=clock_gettime -fPIE   -o CMakeFiles/cmTC_76c09.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
-Linking C executable cmTC_76c09
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_76c09.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=clock_gettime    CMakeFiles/cmTC_76c09.dir/CheckFunctionExists.c.o  -o cmTC_76c09  -lrt 
+Building C object CMakeFiles/cmTC_0562b.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=clock_gettime -fPIE   -o CMakeFiles/cmTC_0562b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0562b
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_0562b.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=clock_gettime    CMakeFiles/cmTC_0562b.dir/CheckFunctionExists.c.o  -o cmTC_0562b  -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -484,13 +484,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files sys/types.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_1f4cc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1f4cc.dir/build.make CMakeFiles/cmTC_1f4cc.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_ed4ad/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ed4ad.dir/build.make CMakeFiles/cmTC_ed4ad.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1f4cc.dir/HAVE_SYS_TYPES_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_1f4cc.dir/HAVE_SYS_TYPES_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_TYPES_H.c
-Linking C executable cmTC_1f4cc
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_1f4cc.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_1f4cc.dir/HAVE_SYS_TYPES_H.c.o  -o cmTC_1f4cc 
+Building C object CMakeFiles/cmTC_ed4ad.dir/HAVE_SYS_TYPES_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_ed4ad.dir/HAVE_SYS_TYPES_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_TYPES_H.c
+Linking C executable cmTC_ed4ad
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_ed4ad.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_ed4ad.dir/HAVE_SYS_TYPES_H.c.o  -o cmTC_ed4ad 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -498,13 +498,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files sys/socket.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_b3ffc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b3ffc.dir/build.make CMakeFiles/cmTC_b3ffc.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_faf6c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_faf6c.dir/build.make CMakeFiles/cmTC_faf6c.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b3ffc.dir/HAVE_SYS_SOCKET_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_b3ffc.dir/HAVE_SYS_SOCKET_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SOCKET_H.c
-Linking C executable cmTC_b3ffc
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_b3ffc.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_b3ffc.dir/HAVE_SYS_SOCKET_H.c.o  -o cmTC_b3ffc 
+Building C object CMakeFiles/cmTC_faf6c.dir/HAVE_SYS_SOCKET_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_faf6c.dir/HAVE_SYS_SOCKET_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SOCKET_H.c
+Linking C executable cmTC_faf6c
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_faf6c.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_faf6c.dir/HAVE_SYS_SOCKET_H.c.o  -o cmTC_faf6c 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -512,13 +512,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files arpa/inet.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_5ce0d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5ce0d.dir/build.make CMakeFiles/cmTC_5ce0d.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_3fc3f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3fc3f.dir/build.make CMakeFiles/cmTC_3fc3f.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5ce0d.dir/HAVE_ARPA_INET_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_5ce0d.dir/HAVE_ARPA_INET_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_ARPA_INET_H.c
-Linking C executable cmTC_5ce0d
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_5ce0d.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_5ce0d.dir/HAVE_ARPA_INET_H.c.o  -o cmTC_5ce0d 
+Building C object CMakeFiles/cmTC_3fc3f.dir/HAVE_ARPA_INET_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_3fc3f.dir/HAVE_ARPA_INET_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_ARPA_INET_H.c
+Linking C executable cmTC_3fc3f
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_3fc3f.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_3fc3f.dir/HAVE_ARPA_INET_H.c.o  -o cmTC_3fc3f 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -526,13 +526,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files arpa/nameser_compat.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_f2c92/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f2c92.dir/build.make CMakeFiles/cmTC_f2c92.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_98f76/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_98f76.dir/build.make CMakeFiles/cmTC_98f76.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f2c92.dir/HAVE_ARPA_NAMESER_COMPAT_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_f2c92.dir/HAVE_ARPA_NAMESER_COMPAT_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_ARPA_NAMESER_COMPAT_H.c
-Linking C executable cmTC_f2c92
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_f2c92.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_f2c92.dir/HAVE_ARPA_NAMESER_COMPAT_H.c.o  -o cmTC_f2c92 
+Building C object CMakeFiles/cmTC_98f76.dir/HAVE_ARPA_NAMESER_COMPAT_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_98f76.dir/HAVE_ARPA_NAMESER_COMPAT_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_ARPA_NAMESER_COMPAT_H.c
+Linking C executable cmTC_98f76
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_98f76.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_98f76.dir/HAVE_ARPA_NAMESER_COMPAT_H.c.o  -o cmTC_98f76 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -540,13 +540,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files arpa/nameser.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_42bbe/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_42bbe.dir/build.make CMakeFiles/cmTC_42bbe.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_0e760/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0e760.dir/build.make CMakeFiles/cmTC_0e760.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_42bbe.dir/HAVE_ARPA_NAMESER_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_42bbe.dir/HAVE_ARPA_NAMESER_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_ARPA_NAMESER_H.c
-Linking C executable cmTC_42bbe
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_42bbe.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_42bbe.dir/HAVE_ARPA_NAMESER_H.c.o  -o cmTC_42bbe 
+Building C object CMakeFiles/cmTC_0e760.dir/HAVE_ARPA_NAMESER_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_0e760.dir/HAVE_ARPA_NAMESER_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_ARPA_NAMESER_H.c
+Linking C executable cmTC_0e760
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_0e760.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_0e760.dir/HAVE_ARPA_NAMESER_H.c.o  -o cmTC_0e760 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -554,13 +554,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files assert.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_adb78/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_adb78.dir/build.make CMakeFiles/cmTC_adb78.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_2f290/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2f290.dir/build.make CMakeFiles/cmTC_2f290.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_adb78.dir/HAVE_ASSERT_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_adb78.dir/HAVE_ASSERT_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_ASSERT_H.c
-Linking C executable cmTC_adb78
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_adb78.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_adb78.dir/HAVE_ASSERT_H.c.o  -o cmTC_adb78 
+Building C object CMakeFiles/cmTC_2f290.dir/HAVE_ASSERT_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_2f290.dir/HAVE_ASSERT_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_ASSERT_H.c
+Linking C executable cmTC_2f290
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_2f290.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_2f290.dir/HAVE_ASSERT_H.c.o  -o cmTC_2f290 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -568,13 +568,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files errno.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_50f0a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_50f0a.dir/build.make CMakeFiles/cmTC_50f0a.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_2c5be/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2c5be.dir/build.make CMakeFiles/cmTC_2c5be.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_50f0a.dir/HAVE_ERRNO_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_50f0a.dir/HAVE_ERRNO_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_ERRNO_H.c
-Linking C executable cmTC_50f0a
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_50f0a.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_50f0a.dir/HAVE_ERRNO_H.c.o  -o cmTC_50f0a 
+Building C object CMakeFiles/cmTC_2c5be.dir/HAVE_ERRNO_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_2c5be.dir/HAVE_ERRNO_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_ERRNO_H.c
+Linking C executable cmTC_2c5be
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_2c5be.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_2c5be.dir/HAVE_ERRNO_H.c.o  -o cmTC_2c5be 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -582,13 +582,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files fcntl.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_ed53b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ed53b.dir/build.make CMakeFiles/cmTC_ed53b.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_3a9b5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3a9b5.dir/build.make CMakeFiles/cmTC_3a9b5.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ed53b.dir/HAVE_FCNTL_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_ed53b.dir/HAVE_FCNTL_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_FCNTL_H.c
-Linking C executable cmTC_ed53b
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_ed53b.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_ed53b.dir/HAVE_FCNTL_H.c.o  -o cmTC_ed53b 
+Building C object CMakeFiles/cmTC_3a9b5.dir/HAVE_FCNTL_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_3a9b5.dir/HAVE_FCNTL_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_FCNTL_H.c
+Linking C executable cmTC_3a9b5
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_3a9b5.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_3a9b5.dir/HAVE_FCNTL_H.c.o  -o cmTC_3a9b5 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -596,13 +596,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files inttypes.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_a11cc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a11cc.dir/build.make CMakeFiles/cmTC_a11cc.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_5efa8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5efa8.dir/build.make CMakeFiles/cmTC_5efa8.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a11cc.dir/HAVE_INTTYPES_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_a11cc.dir/HAVE_INTTYPES_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_INTTYPES_H.c
-Linking C executable cmTC_a11cc
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_a11cc.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_a11cc.dir/HAVE_INTTYPES_H.c.o  -o cmTC_a11cc 
+Building C object CMakeFiles/cmTC_5efa8.dir/HAVE_INTTYPES_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_5efa8.dir/HAVE_INTTYPES_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_INTTYPES_H.c
+Linking C executable cmTC_5efa8
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_5efa8.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_5efa8.dir/HAVE_INTTYPES_H.c.o  -o cmTC_5efa8 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -610,13 +610,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files limits.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_65f94/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_65f94.dir/build.make CMakeFiles/cmTC_65f94.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_8ced8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8ced8.dir/build.make CMakeFiles/cmTC_8ced8.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_65f94.dir/HAVE_LIMITS_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_65f94.dir/HAVE_LIMITS_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_LIMITS_H.c
-Linking C executable cmTC_65f94
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_65f94.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_65f94.dir/HAVE_LIMITS_H.c.o  -o cmTC_65f94 
+Building C object CMakeFiles/cmTC_8ced8.dir/HAVE_LIMITS_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_8ced8.dir/HAVE_LIMITS_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_LIMITS_H.c
+Linking C executable cmTC_8ced8
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_8ced8.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_8ced8.dir/HAVE_LIMITS_H.c.o  -o cmTC_8ced8 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -624,13 +624,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files malloc.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_94053/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_94053.dir/build.make CMakeFiles/cmTC_94053.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_36e9d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_36e9d.dir/build.make CMakeFiles/cmTC_36e9d.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_94053.dir/HAVE_MALLOC_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_94053.dir/HAVE_MALLOC_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_MALLOC_H.c
-Linking C executable cmTC_94053
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_94053.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_94053.dir/HAVE_MALLOC_H.c.o  -o cmTC_94053 
+Building C object CMakeFiles/cmTC_36e9d.dir/HAVE_MALLOC_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_36e9d.dir/HAVE_MALLOC_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_MALLOC_H.c
+Linking C executable cmTC_36e9d
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_36e9d.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_36e9d.dir/HAVE_MALLOC_H.c.o  -o cmTC_36e9d 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -638,13 +638,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files memory.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_4469b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4469b.dir/build.make CMakeFiles/cmTC_4469b.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_7ed88/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7ed88.dir/build.make CMakeFiles/cmTC_7ed88.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4469b.dir/HAVE_MEMORY_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_4469b.dir/HAVE_MEMORY_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_MEMORY_H.c
-Linking C executable cmTC_4469b
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_4469b.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_4469b.dir/HAVE_MEMORY_H.c.o  -o cmTC_4469b 
+Building C object CMakeFiles/cmTC_7ed88.dir/HAVE_MEMORY_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_7ed88.dir/HAVE_MEMORY_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_MEMORY_H.c
+Linking C executable cmTC_7ed88
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_7ed88.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_7ed88.dir/HAVE_MEMORY_H.c.o  -o cmTC_7ed88 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -652,13 +652,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files netdb.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_dc9e5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_dc9e5.dir/build.make CMakeFiles/cmTC_dc9e5.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_b8d16/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b8d16.dir/build.make CMakeFiles/cmTC_b8d16.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_dc9e5.dir/HAVE_NETDB_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_dc9e5.dir/HAVE_NETDB_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_NETDB_H.c
-Linking C executable cmTC_dc9e5
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_dc9e5.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_dc9e5.dir/HAVE_NETDB_H.c.o  -o cmTC_dc9e5 
+Building C object CMakeFiles/cmTC_b8d16.dir/HAVE_NETDB_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_b8d16.dir/HAVE_NETDB_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_NETDB_H.c
+Linking C executable cmTC_b8d16
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_b8d16.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_b8d16.dir/HAVE_NETDB_H.c.o  -o cmTC_b8d16 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -666,13 +666,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files netinet/in.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_066b8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_066b8.dir/build.make CMakeFiles/cmTC_066b8.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_f3618/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f3618.dir/build.make CMakeFiles/cmTC_f3618.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_066b8.dir/HAVE_NETINET_IN_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_066b8.dir/HAVE_NETINET_IN_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_NETINET_IN_H.c
-Linking C executable cmTC_066b8
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_066b8.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_066b8.dir/HAVE_NETINET_IN_H.c.o  -o cmTC_066b8 
+Building C object CMakeFiles/cmTC_f3618.dir/HAVE_NETINET_IN_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_f3618.dir/HAVE_NETINET_IN_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_NETINET_IN_H.c
+Linking C executable cmTC_f3618
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_f3618.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_f3618.dir/HAVE_NETINET_IN_H.c.o  -o cmTC_f3618 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -680,13 +680,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files netinet/tcp.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_c4b0f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c4b0f.dir/build.make CMakeFiles/cmTC_c4b0f.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_beae3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_beae3.dir/build.make CMakeFiles/cmTC_beae3.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c4b0f.dir/HAVE_NETINET_TCP_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_c4b0f.dir/HAVE_NETINET_TCP_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_NETINET_TCP_H.c
-Linking C executable cmTC_c4b0f
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_c4b0f.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_c4b0f.dir/HAVE_NETINET_TCP_H.c.o  -o cmTC_c4b0f 
+Building C object CMakeFiles/cmTC_beae3.dir/HAVE_NETINET_TCP_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_beae3.dir/HAVE_NETINET_TCP_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_NETINET_TCP_H.c
+Linking C executable cmTC_beae3
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_beae3.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_beae3.dir/HAVE_NETINET_TCP_H.c.o  -o cmTC_beae3 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -694,13 +694,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files net/if.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_bc0be/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bc0be.dir/build.make CMakeFiles/cmTC_bc0be.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_d63b5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d63b5.dir/build.make CMakeFiles/cmTC_d63b5.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bc0be.dir/HAVE_NET_IF_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_bc0be.dir/HAVE_NET_IF_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_NET_IF_H.c
-Linking C executable cmTC_bc0be
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_bc0be.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_bc0be.dir/HAVE_NET_IF_H.c.o  -o cmTC_bc0be 
+Building C object CMakeFiles/cmTC_d63b5.dir/HAVE_NET_IF_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_d63b5.dir/HAVE_NET_IF_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_NET_IF_H.c
+Linking C executable cmTC_d63b5
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_d63b5.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_d63b5.dir/HAVE_NET_IF_H.c.o  -o cmTC_d63b5 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -708,13 +708,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files signal.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_8fc00/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8fc00.dir/build.make CMakeFiles/cmTC_8fc00.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_cf90d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cf90d.dir/build.make CMakeFiles/cmTC_cf90d.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8fc00.dir/HAVE_SIGNAL_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_8fc00.dir/HAVE_SIGNAL_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SIGNAL_H.c
-Linking C executable cmTC_8fc00
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_8fc00.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_8fc00.dir/HAVE_SIGNAL_H.c.o  -o cmTC_8fc00 
+Building C object CMakeFiles/cmTC_cf90d.dir/HAVE_SIGNAL_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_cf90d.dir/HAVE_SIGNAL_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SIGNAL_H.c
+Linking C executable cmTC_cf90d
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_cf90d.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_cf90d.dir/HAVE_SIGNAL_H.c.o  -o cmTC_cf90d 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -722,13 +722,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files stdbool.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_a5866/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a5866.dir/build.make CMakeFiles/cmTC_a5866.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_da63c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_da63c.dir/build.make CMakeFiles/cmTC_da63c.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a5866.dir/HAVE_STDBOOL_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_a5866.dir/HAVE_STDBOOL_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STDBOOL_H.c
-Linking C executable cmTC_a5866
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_a5866.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_a5866.dir/HAVE_STDBOOL_H.c.o  -o cmTC_a5866 
+Building C object CMakeFiles/cmTC_da63c.dir/HAVE_STDBOOL_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_da63c.dir/HAVE_STDBOOL_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STDBOOL_H.c
+Linking C executable cmTC_da63c
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_da63c.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_da63c.dir/HAVE_STDBOOL_H.c.o  -o cmTC_da63c 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -736,13 +736,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files stdint.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_aea2c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_aea2c.dir/build.make CMakeFiles/cmTC_aea2c.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_ca970/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ca970.dir/build.make CMakeFiles/cmTC_ca970.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_aea2c.dir/HAVE_STDINT_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_aea2c.dir/HAVE_STDINT_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STDINT_H.c
-Linking C executable cmTC_aea2c
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_aea2c.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_aea2c.dir/HAVE_STDINT_H.c.o  -o cmTC_aea2c 
+Building C object CMakeFiles/cmTC_ca970.dir/HAVE_STDINT_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_ca970.dir/HAVE_STDINT_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STDINT_H.c
+Linking C executable cmTC_ca970
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_ca970.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_ca970.dir/HAVE_STDINT_H.c.o  -o cmTC_ca970 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -750,13 +750,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files stdlib.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_91147/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_91147.dir/build.make CMakeFiles/cmTC_91147.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_3ef07/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3ef07.dir/build.make CMakeFiles/cmTC_3ef07.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_91147.dir/HAVE_STDLIB_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_91147.dir/HAVE_STDLIB_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STDLIB_H.c
-Linking C executable cmTC_91147
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_91147.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_91147.dir/HAVE_STDLIB_H.c.o  -o cmTC_91147 
+Building C object CMakeFiles/cmTC_3ef07.dir/HAVE_STDLIB_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_3ef07.dir/HAVE_STDLIB_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STDLIB_H.c
+Linking C executable cmTC_3ef07
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_3ef07.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_3ef07.dir/HAVE_STDLIB_H.c.o  -o cmTC_3ef07 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -764,13 +764,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files strings.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_73837/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_73837.dir/build.make CMakeFiles/cmTC_73837.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_47e47/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_47e47.dir/build.make CMakeFiles/cmTC_47e47.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_73837.dir/HAVE_STRINGS_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_73837.dir/HAVE_STRINGS_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STRINGS_H.c
-Linking C executable cmTC_73837
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_73837.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_73837.dir/HAVE_STRINGS_H.c.o  -o cmTC_73837 
+Building C object CMakeFiles/cmTC_47e47.dir/HAVE_STRINGS_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_47e47.dir/HAVE_STRINGS_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STRINGS_H.c
+Linking C executable cmTC_47e47
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_47e47.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_47e47.dir/HAVE_STRINGS_H.c.o  -o cmTC_47e47 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -778,13 +778,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files string.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_965cc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_965cc.dir/build.make CMakeFiles/cmTC_965cc.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_1b881/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1b881.dir/build.make CMakeFiles/cmTC_1b881.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_965cc.dir/HAVE_STRING_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_965cc.dir/HAVE_STRING_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STRING_H.c
-Linking C executable cmTC_965cc
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_965cc.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_965cc.dir/HAVE_STRING_H.c.o  -o cmTC_965cc 
+Building C object CMakeFiles/cmTC_1b881.dir/HAVE_STRING_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_1b881.dir/HAVE_STRING_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STRING_H.c
+Linking C executable cmTC_1b881
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_1b881.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_1b881.dir/HAVE_STRING_H.c.o  -o cmTC_1b881 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -792,13 +792,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files sys/ioctl.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_a5152/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a5152.dir/build.make CMakeFiles/cmTC_a5152.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_06360/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_06360.dir/build.make CMakeFiles/cmTC_06360.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a5152.dir/HAVE_SYS_IOCTL_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_a5152.dir/HAVE_SYS_IOCTL_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_IOCTL_H.c
-Linking C executable cmTC_a5152
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_a5152.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_a5152.dir/HAVE_SYS_IOCTL_H.c.o  -o cmTC_a5152 
+Building C object CMakeFiles/cmTC_06360.dir/HAVE_SYS_IOCTL_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_06360.dir/HAVE_SYS_IOCTL_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_IOCTL_H.c
+Linking C executable cmTC_06360
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_06360.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_06360.dir/HAVE_SYS_IOCTL_H.c.o  -o cmTC_06360 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -806,13 +806,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files sys/param.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_36f09/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_36f09.dir/build.make CMakeFiles/cmTC_36f09.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_b4082/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b4082.dir/build.make CMakeFiles/cmTC_b4082.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_36f09.dir/HAVE_SYS_PARAM_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_36f09.dir/HAVE_SYS_PARAM_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_PARAM_H.c
-Linking C executable cmTC_36f09
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_36f09.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_36f09.dir/HAVE_SYS_PARAM_H.c.o  -o cmTC_36f09 
+Building C object CMakeFiles/cmTC_b4082.dir/HAVE_SYS_PARAM_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_b4082.dir/HAVE_SYS_PARAM_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_PARAM_H.c
+Linking C executable cmTC_b4082
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_b4082.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_b4082.dir/HAVE_SYS_PARAM_H.c.o  -o cmTC_b4082 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -820,13 +820,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files sys/select.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_4ef0e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4ef0e.dir/build.make CMakeFiles/cmTC_4ef0e.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_edd74/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_edd74.dir/build.make CMakeFiles/cmTC_edd74.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4ef0e.dir/HAVE_SYS_SELECT_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_4ef0e.dir/HAVE_SYS_SELECT_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SELECT_H.c
-Linking C executable cmTC_4ef0e
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_4ef0e.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_4ef0e.dir/HAVE_SYS_SELECT_H.c.o  -o cmTC_4ef0e 
+Building C object CMakeFiles/cmTC_edd74.dir/HAVE_SYS_SELECT_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_edd74.dir/HAVE_SYS_SELECT_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SELECT_H.c
+Linking C executable cmTC_edd74
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_edd74.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_edd74.dir/HAVE_SYS_SELECT_H.c.o  -o cmTC_edd74 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -834,13 +834,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files sys/stat.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_fab1c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fab1c.dir/build.make CMakeFiles/cmTC_fab1c.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_b4312/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b4312.dir/build.make CMakeFiles/cmTC_b4312.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fab1c.dir/HAVE_SYS_STAT_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_fab1c.dir/HAVE_SYS_STAT_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_STAT_H.c
-Linking C executable cmTC_fab1c
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_fab1c.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_fab1c.dir/HAVE_SYS_STAT_H.c.o  -o cmTC_fab1c 
+Building C object CMakeFiles/cmTC_b4312.dir/HAVE_SYS_STAT_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_b4312.dir/HAVE_SYS_STAT_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_STAT_H.c
+Linking C executable cmTC_b4312
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_b4312.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_b4312.dir/HAVE_SYS_STAT_H.c.o  -o cmTC_b4312 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -848,13 +848,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files sys/time.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_b7d82/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b7d82.dir/build.make CMakeFiles/cmTC_b7d82.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_ebf42/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ebf42.dir/build.make CMakeFiles/cmTC_ebf42.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b7d82.dir/HAVE_SYS_TIME_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_b7d82.dir/HAVE_SYS_TIME_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_TIME_H.c
-Linking C executable cmTC_b7d82
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_b7d82.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_b7d82.dir/HAVE_SYS_TIME_H.c.o  -o cmTC_b7d82 
+Building C object CMakeFiles/cmTC_ebf42.dir/HAVE_SYS_TIME_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_ebf42.dir/HAVE_SYS_TIME_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_TIME_H.c
+Linking C executable cmTC_ebf42
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_ebf42.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_ebf42.dir/HAVE_SYS_TIME_H.c.o  -o cmTC_ebf42 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -862,13 +862,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files sys/uio.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_b8e38/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b8e38.dir/build.make CMakeFiles/cmTC_b8e38.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_666c8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_666c8.dir/build.make CMakeFiles/cmTC_666c8.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b8e38.dir/HAVE_SYS_UIO_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_b8e38.dir/HAVE_SYS_UIO_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_UIO_H.c
-Linking C executable cmTC_b8e38
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_b8e38.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_b8e38.dir/HAVE_SYS_UIO_H.c.o  -o cmTC_b8e38 
+Building C object CMakeFiles/cmTC_666c8.dir/HAVE_SYS_UIO_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_666c8.dir/HAVE_SYS_UIO_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_UIO_H.c
+Linking C executable cmTC_666c8
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_666c8.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_666c8.dir/HAVE_SYS_UIO_H.c.o  -o cmTC_666c8 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -876,13 +876,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files time.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_6064a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6064a.dir/build.make CMakeFiles/cmTC_6064a.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_64011/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_64011.dir/build.make CMakeFiles/cmTC_64011.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6064a.dir/HAVE_TIME_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_6064a.dir/HAVE_TIME_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_TIME_H.c
-Linking C executable cmTC_6064a
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_6064a.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_6064a.dir/HAVE_TIME_H.c.o  -o cmTC_6064a 
+Building C object CMakeFiles/cmTC_64011.dir/HAVE_TIME_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_64011.dir/HAVE_TIME_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_TIME_H.c
+Linking C executable cmTC_64011
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_64011.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_64011.dir/HAVE_TIME_H.c.o  -o cmTC_64011 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -890,13 +890,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files dlfcn.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_2253a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2253a.dir/build.make CMakeFiles/cmTC_2253a.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_25e36/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_25e36.dir/build.make CMakeFiles/cmTC_25e36.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2253a.dir/HAVE_DLFCN_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_2253a.dir/HAVE_DLFCN_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_DLFCN_H.c
-Linking C executable cmTC_2253a
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_2253a.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_2253a.dir/HAVE_DLFCN_H.c.o  -o cmTC_2253a 
+Building C object CMakeFiles/cmTC_25e36.dir/HAVE_DLFCN_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_25e36.dir/HAVE_DLFCN_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_DLFCN_H.c
+Linking C executable cmTC_25e36
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_25e36.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_25e36.dir/HAVE_DLFCN_H.c.o  -o cmTC_25e36 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -904,13 +904,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if files unistd.h exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_a527e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a527e.dir/build.make CMakeFiles/cmTC_a527e.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_7b5a8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7b5a8.dir/build.make CMakeFiles/cmTC_7b5a8.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a527e.dir/HAVE_UNISTD_H.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_a527e.dir/HAVE_UNISTD_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_UNISTD_H.c
-Linking C executable cmTC_a527e
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_a527e.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_a527e.dir/HAVE_UNISTD_H.c.o  -o cmTC_a527e 
+Building C object CMakeFiles/cmTC_7b5a8.dir/HAVE_UNISTD_H.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_7b5a8.dir/HAVE_UNISTD_H.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_UNISTD_H.c
+Linking C executable cmTC_7b5a8
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_7b5a8.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_7b5a8.dir/HAVE_UNISTD_H.c.o  -o cmTC_7b5a8 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -918,13 +918,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Performing C SOURCE FILE Test HAVE_SOCKLEN_T succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_39b2b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_39b2b.dir/build.make CMakeFiles/cmTC_39b2b.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_d164f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d164f.dir/build.make CMakeFiles/cmTC_d164f.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_39b2b.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_SOCKLEN_T -fPIE   -o CMakeFiles/cmTC_39b2b.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_39b2b
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_39b2b.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_SOCKLEN_T    CMakeFiles/cmTC_39b2b.dir/src.c.o  -o cmTC_39b2b  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_d164f.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_SOCKLEN_T -fPIE   -o CMakeFiles/cmTC_d164f.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d164f
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_d164f.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_SOCKLEN_T    CMakeFiles/cmTC_d164f.dir/src.c.o  -o cmTC_d164f  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -962,13 +962,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_BOOL_T succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_ce5bb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ce5bb.dir/build.make CMakeFiles/cmTC_ce5bb.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_e678b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e678b.dir/build.make CMakeFiles/cmTC_e678b.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ce5bb.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_BOOL_T -fPIE   -o CMakeFiles/cmTC_ce5bb.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_ce5bb
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_ce5bb.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_BOOL_T    CMakeFiles/cmTC_ce5bb.dir/src.c.o  -o cmTC_ce5bb  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_e678b.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_BOOL_T -fPIE   -o CMakeFiles/cmTC_e678b.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e678b
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_e678b.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_BOOL_T    CMakeFiles/cmTC_e678b.dir/src.c.o  -o cmTC_e678b  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1006,13 +1006,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_SSIZE_T succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_c335a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c335a.dir/build.make CMakeFiles/cmTC_c335a.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_25d84/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_25d84.dir/build.make CMakeFiles/cmTC_25d84.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c335a.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_SSIZE_T -fPIE   -o CMakeFiles/cmTC_c335a.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_c335a
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_c335a.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_SSIZE_T    CMakeFiles/cmTC_c335a.dir/src.c.o  -o cmTC_c335a  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_25d84.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_SSIZE_T -fPIE   -o CMakeFiles/cmTC_25d84.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_25d84
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_25d84.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_SSIZE_T    CMakeFiles/cmTC_25d84.dir/src.c.o  -o cmTC_25d84  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1050,13 +1050,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_LONGLONG succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_65520/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_65520.dir/build.make CMakeFiles/cmTC_65520.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_af881/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_af881.dir/build.make CMakeFiles/cmTC_af881.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_65520.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_LONGLONG -fPIE   -o CMakeFiles/cmTC_65520.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_65520
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_65520.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_LONGLONG    CMakeFiles/cmTC_65520.dir/src.c.o  -o cmTC_65520  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_af881.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_LONGLONG -fPIE   -o CMakeFiles/cmTC_af881.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_af881
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_af881.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_LONGLONG    CMakeFiles/cmTC_af881.dir/src.c.o  -o cmTC_af881  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1094,13 +1094,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_SIG_ATOMIC_T succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_0c53b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0c53b.dir/build.make CMakeFiles/cmTC_0c53b.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_2fc09/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2fc09.dir/build.make CMakeFiles/cmTC_2fc09.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0c53b.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_SIG_ATOMIC_T -fPIE   -o CMakeFiles/cmTC_0c53b.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_0c53b
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_0c53b.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_SIG_ATOMIC_T    CMakeFiles/cmTC_0c53b.dir/src.c.o  -o cmTC_0c53b  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_2fc09.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_SIG_ATOMIC_T -fPIE   -o CMakeFiles/cmTC_2fc09.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2fc09
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_2fc09.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_SIG_ATOMIC_T    CMakeFiles/cmTC_2fc09.dir/src.c.o  -o cmTC_2fc09  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1138,13 +1138,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_STRUCT_ADDRINFO succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_9ed62/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9ed62.dir/build.make CMakeFiles/cmTC_9ed62.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_656a3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_656a3.dir/build.make CMakeFiles/cmTC_656a3.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9ed62.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_STRUCT_ADDRINFO -fPIE   -o CMakeFiles/cmTC_9ed62.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_9ed62
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_9ed62.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_STRUCT_ADDRINFO    CMakeFiles/cmTC_9ed62.dir/src.c.o  -o cmTC_9ed62  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_656a3.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_STRUCT_ADDRINFO -fPIE   -o CMakeFiles/cmTC_656a3.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_656a3
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_656a3.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_STRUCT_ADDRINFO    CMakeFiles/cmTC_656a3.dir/src.c.o  -o cmTC_656a3  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1182,13 +1182,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_STRUCT_IN6_ADDR succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_5055d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5055d.dir/build.make CMakeFiles/cmTC_5055d.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_03a6a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_03a6a.dir/build.make CMakeFiles/cmTC_03a6a.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5055d.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_STRUCT_IN6_ADDR -fPIE   -o CMakeFiles/cmTC_5055d.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_5055d
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_5055d.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_STRUCT_IN6_ADDR    CMakeFiles/cmTC_5055d.dir/src.c.o  -o cmTC_5055d  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_03a6a.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_STRUCT_IN6_ADDR -fPIE   -o CMakeFiles/cmTC_03a6a.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_03a6a
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_03a6a.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_STRUCT_IN6_ADDR    CMakeFiles/cmTC_03a6a.dir/src.c.o  -o cmTC_03a6a  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1226,13 +1226,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_STRUCT_SOCKADDR_IN6 succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_f9627/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f9627.dir/build.make CMakeFiles/cmTC_f9627.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_d1689/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d1689.dir/build.make CMakeFiles/cmTC_d1689.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f9627.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_STRUCT_SOCKADDR_IN6 -fPIE   -o CMakeFiles/cmTC_f9627.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_f9627
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_f9627.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_STRUCT_SOCKADDR_IN6    CMakeFiles/cmTC_f9627.dir/src.c.o  -o cmTC_f9627  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_d1689.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_STRUCT_SOCKADDR_IN6 -fPIE   -o CMakeFiles/cmTC_d1689.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d1689
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_d1689.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_STRUCT_SOCKADDR_IN6    CMakeFiles/cmTC_d1689.dir/src.c.o  -o cmTC_d1689  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1270,13 +1270,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_STRUCT_SOCKADDR_STORAGE succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_3efba/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3efba.dir/build.make CMakeFiles/cmTC_3efba.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_adfd7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_adfd7.dir/build.make CMakeFiles/cmTC_adfd7.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3efba.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_STRUCT_SOCKADDR_STORAGE -fPIE   -o CMakeFiles/cmTC_3efba.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_3efba
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_3efba.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_STRUCT_SOCKADDR_STORAGE    CMakeFiles/cmTC_3efba.dir/src.c.o  -o cmTC_3efba  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_adfd7.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_STRUCT_SOCKADDR_STORAGE -fPIE   -o CMakeFiles/cmTC_adfd7.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_adfd7
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_adfd7.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_STRUCT_SOCKADDR_STORAGE    CMakeFiles/cmTC_adfd7.dir/src.c.o  -o cmTC_adfd7  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1314,13 +1314,13 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_STRUCT_TIMEVAL succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_4bb14/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4bb14.dir/build.make CMakeFiles/cmTC_4bb14.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_c4d2c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c4d2c.dir/build.make CMakeFiles/cmTC_c4d2c.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4bb14.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_STRUCT_TIMEVAL -fPIE   -o CMakeFiles/cmTC_4bb14.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_4bb14
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_4bb14.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_STRUCT_TIMEVAL    CMakeFiles/cmTC_4bb14.dir/src.c.o  -o cmTC_4bb14  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_c4d2c.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_STRUCT_TIMEVAL -fPIE   -o CMakeFiles/cmTC_c4d2c.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c4d2c
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_c4d2c.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_STRUCT_TIMEVAL    CMakeFiles/cmTC_c4d2c.dir/src.c.o  -o cmTC_c4d2c  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1358,13 +1358,13 @@ Source file was:
 Determining if the AF_INET6 exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_9d59e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9d59e.dir/build.make CMakeFiles/cmTC_9d59e.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_dac79/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_dac79.dir/build.make CMakeFiles/cmTC_dac79.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9d59e.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_9d59e.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_9d59e
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_9d59e.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_9d59e.dir/CheckSymbolExists.c.o  -o cmTC_9d59e  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_dac79.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_dac79.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_dac79
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_dac79.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_dac79.dir/CheckSymbolExists.c.o  -o cmTC_dac79  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1404,13 +1404,13 @@ int main(int argc, char** argv)
 Determining if the O_NONBLOCK exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_6dadd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6dadd.dir/build.make CMakeFiles/cmTC_6dadd.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_11d4b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_11d4b.dir/build.make CMakeFiles/cmTC_11d4b.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6dadd.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_6dadd.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_6dadd
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_6dadd.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_6dadd.dir/CheckSymbolExists.c.o  -o cmTC_6dadd  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_11d4b.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_11d4b.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_11d4b
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_11d4b.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_11d4b.dir/CheckSymbolExists.c.o  -o cmTC_11d4b  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1450,13 +1450,13 @@ int main(int argc, char** argv)
 Determining if the FIONBIO exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_c8502/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c8502.dir/build.make CMakeFiles/cmTC_c8502.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_89f3b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_89f3b.dir/build.make CMakeFiles/cmTC_89f3b.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c8502.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_c8502.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_c8502
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_c8502.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_c8502.dir/CheckSymbolExists.c.o  -o cmTC_c8502  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_89f3b.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_89f3b.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_89f3b
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_89f3b.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_89f3b.dir/CheckSymbolExists.c.o  -o cmTC_89f3b  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1496,13 +1496,13 @@ int main(int argc, char** argv)
 Determining if the SIOCGIFADDR exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_214e2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_214e2.dir/build.make CMakeFiles/cmTC_214e2.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_73a92/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_73a92.dir/build.make CMakeFiles/cmTC_73a92.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_214e2.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_214e2.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_214e2
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_214e2.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_214e2.dir/CheckSymbolExists.c.o  -o cmTC_214e2  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_73a92.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_73a92.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_73a92
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_73a92.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_73a92.dir/CheckSymbolExists.c.o  -o cmTC_73a92  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1542,13 +1542,13 @@ int main(int argc, char** argv)
 Determining if the MSG_NOSIGNAL exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_c189b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c189b.dir/build.make CMakeFiles/cmTC_c189b.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_0ff38/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0ff38.dir/build.make CMakeFiles/cmTC_0ff38.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c189b.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_c189b.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_c189b
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_c189b.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_c189b.dir/CheckSymbolExists.c.o  -o cmTC_c189b  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_0ff38.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_0ff38.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_0ff38
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_0ff38.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_0ff38.dir/CheckSymbolExists.c.o  -o cmTC_0ff38  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1588,13 +1588,13 @@ int main(int argc, char** argv)
 Determining if the PF_INET6 exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_3a3cd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3a3cd.dir/build.make CMakeFiles/cmTC_3a3cd.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_25fa3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_25fa3.dir/build.make CMakeFiles/cmTC_25fa3.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3a3cd.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_3a3cd.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_3a3cd
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_3a3cd.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_3a3cd.dir/CheckSymbolExists.c.o  -o cmTC_3a3cd  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_25fa3.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_25fa3.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_25fa3
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_25fa3.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_25fa3.dir/CheckSymbolExists.c.o  -o cmTC_25fa3  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1634,13 +1634,13 @@ int main(int argc, char** argv)
 Determining if the CLOCK_MONOTONIC exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_ed556/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ed556.dir/build.make CMakeFiles/cmTC_ed556.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_fda06/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fda06.dir/build.make CMakeFiles/cmTC_fda06.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ed556.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_ed556.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_ed556
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_ed556.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_ed556.dir/CheckSymbolExists.c.o  -o cmTC_ed556  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_fda06.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_fda06.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_fda06
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_fda06.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_fda06.dir/CheckSymbolExists.c.o  -o cmTC_fda06  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1680,13 +1680,13 @@ int main(int argc, char** argv)
 Performing C SOURCE FILE Test HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_fa996/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fa996.dir/build.make CMakeFiles/cmTC_fa996.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_2e7fb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2e7fb.dir/build.make CMakeFiles/cmTC_2e7fb.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fa996.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_SOCKADDR_IN6_SIN6_SCOPE_ID -fPIE   -o CMakeFiles/cmTC_fa996.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_fa996
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_fa996.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_SOCKADDR_IN6_SIN6_SCOPE_ID    CMakeFiles/cmTC_fa996.dir/src.c.o  -o cmTC_fa996  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_2e7fb.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_SOCKADDR_IN6_SIN6_SCOPE_ID -fPIE   -o CMakeFiles/cmTC_2e7fb.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2e7fb
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_2e7fb.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_SOCKADDR_IN6_SIN6_SCOPE_ID    CMakeFiles/cmTC_2e7fb.dir/src.c.o  -o cmTC_2e7fb  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1722,13 +1722,13 @@ int main()
 Performing C SOURCE FILE Test HAVE_LL succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_1369e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1369e.dir/build.make CMakeFiles/cmTC_1369e.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_63f19/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_63f19.dir/build.make CMakeFiles/cmTC_63f19.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1369e.dir/src.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_LL -fPIE   -o CMakeFiles/cmTC_1369e.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_1369e
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_1369e.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DHAVE_LL    CMakeFiles/cmTC_1369e.dir/src.c.o  -o cmTC_1369e  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_63f19.dir/src.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_LL -fPIE   -o CMakeFiles/cmTC_63f19.dir/src.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_63f19
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_63f19.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DHAVE_LL    CMakeFiles/cmTC_63f19.dir/src.c.o  -o cmTC_63f19  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1737,13 +1737,13 @@ int main() { int n=1234LL; return 0; }
 Determining if the connect exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_a0e17/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a0e17.dir/build.make CMakeFiles/cmTC_a0e17.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_0cd8a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0cd8a.dir/build.make CMakeFiles/cmTC_0cd8a.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a0e17.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_a0e17.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_a0e17
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_a0e17.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_a0e17.dir/CheckSymbolExists.c.o  -o cmTC_a0e17  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_0cd8a.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_0cd8a.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_0cd8a
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_0cd8a.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_0cd8a.dir/CheckSymbolExists.c.o  -o cmTC_0cd8a  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1783,13 +1783,13 @@ int main(int argc, char** argv)
 Determining if the fcntl exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_ec53d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ec53d.dir/build.make CMakeFiles/cmTC_ec53d.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_1ed9b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1ed9b.dir/build.make CMakeFiles/cmTC_1ed9b.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ec53d.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_ec53d.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_ec53d
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_ec53d.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_ec53d.dir/CheckSymbolExists.c.o  -o cmTC_ec53d  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_1ed9b.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_1ed9b.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1ed9b
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_1ed9b.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_1ed9b.dir/CheckSymbolExists.c.o  -o cmTC_1ed9b  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1829,13 +1829,13 @@ int main(int argc, char** argv)
 Determining if the freeaddrinfo exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_8e4e0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8e4e0.dir/build.make CMakeFiles/cmTC_8e4e0.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_cba24/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cba24.dir/build.make CMakeFiles/cmTC_cba24.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8e4e0.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_8e4e0.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_8e4e0
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_8e4e0.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_8e4e0.dir/CheckSymbolExists.c.o  -o cmTC_8e4e0  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_cba24.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_cba24.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_cba24
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_cba24.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_cba24.dir/CheckSymbolExists.c.o  -o cmTC_cba24  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1875,13 +1875,13 @@ int main(int argc, char** argv)
 Determining if the getaddrinfo exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_038ec/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_038ec.dir/build.make CMakeFiles/cmTC_038ec.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_47dd3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_47dd3.dir/build.make CMakeFiles/cmTC_47dd3.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_038ec.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_038ec.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_038ec
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_038ec.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_038ec.dir/CheckSymbolExists.c.o  -o cmTC_038ec  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_47dd3.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_47dd3.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_47dd3
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_47dd3.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_47dd3.dir/CheckSymbolExists.c.o  -o cmTC_47dd3  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1921,13 +1921,13 @@ int main(int argc, char** argv)
 Determining if the getenv exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_2305a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2305a.dir/build.make CMakeFiles/cmTC_2305a.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_d3c3a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d3c3a.dir/build.make CMakeFiles/cmTC_d3c3a.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2305a.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_2305a.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_2305a
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_2305a.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_2305a.dir/CheckSymbolExists.c.o  -o cmTC_2305a  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_d3c3a.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_d3c3a.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_d3c3a
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_d3c3a.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_d3c3a.dir/CheckSymbolExists.c.o  -o cmTC_d3c3a  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -1967,13 +1967,13 @@ int main(int argc, char** argv)
 Determining if the gethostbyaddr exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_1060c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1060c.dir/build.make CMakeFiles/cmTC_1060c.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_66a1d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_66a1d.dir/build.make CMakeFiles/cmTC_66a1d.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1060c.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_1060c.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_1060c
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_1060c.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_1060c.dir/CheckSymbolExists.c.o  -o cmTC_1060c  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_66a1d.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_66a1d.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_66a1d
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_66a1d.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_66a1d.dir/CheckSymbolExists.c.o  -o cmTC_66a1d  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2013,13 +2013,13 @@ int main(int argc, char** argv)
 Determining if the gethostbyname exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_e19ff/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e19ff.dir/build.make CMakeFiles/cmTC_e19ff.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_ad4a5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ad4a5.dir/build.make CMakeFiles/cmTC_ad4a5.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e19ff.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_e19ff.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_e19ff
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_e19ff.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_e19ff.dir/CheckSymbolExists.c.o  -o cmTC_e19ff  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_ad4a5.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_ad4a5.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_ad4a5
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_ad4a5.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_ad4a5.dir/CheckSymbolExists.c.o  -o cmTC_ad4a5  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2059,13 +2059,13 @@ int main(int argc, char** argv)
 Determining if the gethostname exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_b1227/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b1227.dir/build.make CMakeFiles/cmTC_b1227.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_3b7cb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3b7cb.dir/build.make CMakeFiles/cmTC_3b7cb.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b1227.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_b1227.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_b1227
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_b1227.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_b1227.dir/CheckSymbolExists.c.o  -o cmTC_b1227  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_3b7cb.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_3b7cb.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3b7cb
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_3b7cb.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_3b7cb.dir/CheckSymbolExists.c.o  -o cmTC_3b7cb  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2105,13 +2105,13 @@ int main(int argc, char** argv)
 Determining if the getnameinfo exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_fffad/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fffad.dir/build.make CMakeFiles/cmTC_fffad.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_4899f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4899f.dir/build.make CMakeFiles/cmTC_4899f.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fffad.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_fffad.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_fffad
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_fffad.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_fffad.dir/CheckSymbolExists.c.o  -o cmTC_fffad  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_4899f.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_4899f.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_4899f
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_4899f.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_4899f.dir/CheckSymbolExists.c.o  -o cmTC_4899f  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2151,13 +2151,13 @@ int main(int argc, char** argv)
 Determining if the getservbyport_r exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_1c790/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1c790.dir/build.make CMakeFiles/cmTC_1c790.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_fb224/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fb224.dir/build.make CMakeFiles/cmTC_fb224.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1c790.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_1c790.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_1c790
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_1c790.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_1c790.dir/CheckSymbolExists.c.o  -o cmTC_1c790  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_fb224.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_fb224.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_fb224
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_fb224.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_fb224.dir/CheckSymbolExists.c.o  -o cmTC_fb224  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2197,13 +2197,13 @@ int main(int argc, char** argv)
 Determining if the gettimeofday exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_feebd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_feebd.dir/build.make CMakeFiles/cmTC_feebd.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_338e2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_338e2.dir/build.make CMakeFiles/cmTC_338e2.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_feebd.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_feebd.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_feebd
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_feebd.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_feebd.dir/CheckSymbolExists.c.o  -o cmTC_feebd  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_338e2.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_338e2.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_338e2
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_338e2.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_338e2.dir/CheckSymbolExists.c.o  -o cmTC_338e2  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2243,13 +2243,13 @@ int main(int argc, char** argv)
 Determining if the if_indextoname exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_51af4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_51af4.dir/build.make CMakeFiles/cmTC_51af4.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_28261/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_28261.dir/build.make CMakeFiles/cmTC_28261.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_51af4.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_51af4.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_51af4
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_51af4.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_51af4.dir/CheckSymbolExists.c.o  -o cmTC_51af4  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_28261.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_28261.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_28261
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_28261.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_28261.dir/CheckSymbolExists.c.o  -o cmTC_28261  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2289,13 +2289,13 @@ int main(int argc, char** argv)
 Determining if the inet_ntop exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_1770b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1770b.dir/build.make CMakeFiles/cmTC_1770b.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_a1682/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a1682.dir/build.make CMakeFiles/cmTC_a1682.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1770b.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_1770b.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_1770b
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_1770b.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_1770b.dir/CheckSymbolExists.c.o  -o cmTC_1770b  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_a1682.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_a1682.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a1682
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_a1682.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_a1682.dir/CheckSymbolExists.c.o  -o cmTC_a1682  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2335,13 +2335,13 @@ int main(int argc, char** argv)
 Determining if the inet_pton exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_e3d90/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e3d90.dir/build.make CMakeFiles/cmTC_e3d90.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_2152e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2152e.dir/build.make CMakeFiles/cmTC_2152e.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e3d90.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_e3d90.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_e3d90
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_e3d90.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_e3d90.dir/CheckSymbolExists.c.o  -o cmTC_e3d90  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_2152e.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_2152e.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_2152e
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_2152e.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_2152e.dir/CheckSymbolExists.c.o  -o cmTC_2152e  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2381,13 +2381,13 @@ int main(int argc, char** argv)
 Determining if the ioctl exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_fb6fc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fb6fc.dir/build.make CMakeFiles/cmTC_fb6fc.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_df6c5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_df6c5.dir/build.make CMakeFiles/cmTC_df6c5.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fb6fc.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_fb6fc.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_fb6fc
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_fb6fc.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_fb6fc.dir/CheckSymbolExists.c.o  -o cmTC_fb6fc  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_df6c5.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_df6c5.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_df6c5
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_df6c5.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_df6c5.dir/CheckSymbolExists.c.o  -o cmTC_df6c5  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2427,13 +2427,13 @@ int main(int argc, char** argv)
 Determining if the recv exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_b7bdb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b7bdb.dir/build.make CMakeFiles/cmTC_b7bdb.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_1540f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1540f.dir/build.make CMakeFiles/cmTC_1540f.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b7bdb.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_b7bdb.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_b7bdb
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_b7bdb.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_b7bdb.dir/CheckSymbolExists.c.o  -o cmTC_b7bdb  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_1540f.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_1540f.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1540f
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_1540f.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_1540f.dir/CheckSymbolExists.c.o  -o cmTC_1540f  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2473,13 +2473,13 @@ int main(int argc, char** argv)
 Determining if the recvfrom exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_77093/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_77093.dir/build.make CMakeFiles/cmTC_77093.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_78e5b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_78e5b.dir/build.make CMakeFiles/cmTC_78e5b.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_77093.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_77093.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_77093
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_77093.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_77093.dir/CheckSymbolExists.c.o  -o cmTC_77093  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_78e5b.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_78e5b.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_78e5b
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_78e5b.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_78e5b.dir/CheckSymbolExists.c.o  -o cmTC_78e5b  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2519,13 +2519,13 @@ int main(int argc, char** argv)
 Determining if the send exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_62544/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_62544.dir/build.make CMakeFiles/cmTC_62544.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_81de1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_81de1.dir/build.make CMakeFiles/cmTC_81de1.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_62544.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_62544.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_62544
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_62544.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_62544.dir/CheckSymbolExists.c.o  -o cmTC_62544  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_81de1.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_81de1.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_81de1
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_81de1.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_81de1.dir/CheckSymbolExists.c.o  -o cmTC_81de1  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2565,13 +2565,13 @@ int main(int argc, char** argv)
 Determining if the setsockopt exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_dee1a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_dee1a.dir/build.make CMakeFiles/cmTC_dee1a.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_6047e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6047e.dir/build.make CMakeFiles/cmTC_6047e.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_dee1a.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_dee1a.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_dee1a
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_dee1a.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_dee1a.dir/CheckSymbolExists.c.o  -o cmTC_dee1a  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_6047e.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_6047e.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_6047e
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_6047e.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_6047e.dir/CheckSymbolExists.c.o  -o cmTC_6047e  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2611,13 +2611,13 @@ int main(int argc, char** argv)
 Determining if the socket exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_69d41/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_69d41.dir/build.make CMakeFiles/cmTC_69d41.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_7d3cf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7d3cf.dir/build.make CMakeFiles/cmTC_7d3cf.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_69d41.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_69d41.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_69d41
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_69d41.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_69d41.dir/CheckSymbolExists.c.o  -o cmTC_69d41  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_7d3cf.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_7d3cf.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_7d3cf
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_7d3cf.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_7d3cf.dir/CheckSymbolExists.c.o  -o cmTC_7d3cf  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2657,13 +2657,13 @@ int main(int argc, char** argv)
 Determining if the strcasecmp exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_d8f0d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d8f0d.dir/build.make CMakeFiles/cmTC_d8f0d.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_d84da/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d84da.dir/build.make CMakeFiles/cmTC_d84da.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d8f0d.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_d8f0d.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_d8f0d
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_d8f0d.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_d8f0d.dir/CheckSymbolExists.c.o  -o cmTC_d8f0d  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_d84da.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_d84da.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_d84da
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_d84da.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_d84da.dir/CheckSymbolExists.c.o  -o cmTC_d84da  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2703,13 +2703,13 @@ int main(int argc, char** argv)
 Determining if the strdup exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_5a664/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5a664.dir/build.make CMakeFiles/cmTC_5a664.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_90395/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_90395.dir/build.make CMakeFiles/cmTC_90395.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5a664.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_5a664.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_5a664
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_5a664.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_5a664.dir/CheckSymbolExists.c.o  -o cmTC_5a664  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_90395.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_90395.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_90395
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_90395.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_90395.dir/CheckSymbolExists.c.o  -o cmTC_90395  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2749,13 +2749,13 @@ int main(int argc, char** argv)
 Determining if the strncasecmp exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_6c57d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6c57d.dir/build.make CMakeFiles/cmTC_6c57d.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_9cbff/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9cbff.dir/build.make CMakeFiles/cmTC_9cbff.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6c57d.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_6c57d.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_6c57d
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_6c57d.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_6c57d.dir/CheckSymbolExists.c.o  -o cmTC_6c57d  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_9cbff.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_9cbff.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9cbff
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_9cbff.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_9cbff.dir/CheckSymbolExists.c.o  -o cmTC_9cbff  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2795,13 +2795,13 @@ int main(int argc, char** argv)
 Determining if the writev exist passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_cccca/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cccca.dir/build.make CMakeFiles/cmTC_cccca.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_7b585/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7b585.dir/build.make CMakeFiles/cmTC_7b585.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cccca.dir/CheckSymbolExists.c.o
-/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_cccca.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_cccca
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_cccca.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_cccca.dir/CheckSymbolExists.c.o  -o cmTC_cccca  -lnsl -lrt 
+Building C object CMakeFiles/cmTC_7b585.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_7b585.dir/CheckSymbolExists.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_7b585
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_7b585.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_7b585.dir/CheckSymbolExists.c.o  -o cmTC_7b585  -lnsl -lrt 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2841,13 +2841,13 @@ int main(int argc, char** argv)
 Performing C++ SOURCE FILE Test protobuf_HAVE_BUILTIN_ATOMICS succeeded with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_da171/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_da171.dir/build.make CMakeFiles/cmTC_da171.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_0a457/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0a457.dir/build.make CMakeFiles/cmTC_0a457.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_da171.dir/src.cxx.o
-/usr/lib64/ccache/c++    -Dprotobuf_HAVE_BUILTIN_ATOMICS -std=c++11 -fPIE   -o CMakeFiles/cmTC_da171.dir/src.cxx.o -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_da171
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_da171.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++    -Dprotobuf_HAVE_BUILTIN_ATOMICS -std=c++11    -rdynamic CMakeFiles/cmTC_da171.dir/src.cxx.o  -o cmTC_da171 
+Building CXX object CMakeFiles/cmTC_0a457.dir/src.cxx.o
+/usr/lib64/ccache/c++    -Dprotobuf_HAVE_BUILTIN_ATOMICS -std=c++11 -fPIE   -o CMakeFiles/cmTC_0a457.dir/src.cxx.o -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0a457
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_0a457.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++    -Dprotobuf_HAVE_BUILTIN_ATOMICS -std=c++11    -rdynamic CMakeFiles/cmTC_0a457.dir/src.cxx.o  -o cmTC_0a457 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2867,13 +2867,13 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 Determining if the include file stddef.h exists passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_15c38/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_15c38.dir/build.make CMakeFiles/cmTC_15c38.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_89446/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_89446.dir/build.make CMakeFiles/cmTC_89446.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_15c38.dir/CheckIncludeFile.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_15c38.dir/CheckIncludeFile.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_15c38
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_15c38.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       CMakeFiles/cmTC_15c38.dir/CheckIncludeFile.c.o  -o cmTC_15c38 
+Building C object CMakeFiles/cmTC_89446.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_89446.dir/CheckIncludeFile.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_89446
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_89446.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       CMakeFiles/cmTC_89446.dir/CheckIncludeFile.c.o  -o cmTC_89446 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2881,13 +2881,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining size of off64_t passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_33fc2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_33fc2.dir/build.make CMakeFiles/cmTC_33fc2.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_2e808/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2e808.dir/build.make CMakeFiles/cmTC_2e808.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_33fc2.dir/OFF64_T.c.o
-/usr/lib64/ccache/cc -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_TYPES_H -D_LARGEFILE64_SOURCE=1  -fPIE   -o CMakeFiles/cmTC_33fc2.dir/OFF64_T.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckTypeSize/OFF64_T.c
-Linking C executable cmTC_33fc2
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_33fc2.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_33fc2.dir/OFF64_T.c.o  -o cmTC_33fc2 
+Building C object CMakeFiles/cmTC_2e808.dir/OFF64_T.c.o
+/usr/lib64/ccache/cc -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_TYPES_H -D_LARGEFILE64_SOURCE=1  -fPIE   -o CMakeFiles/cmTC_2e808.dir/OFF64_T.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CheckTypeSize/OFF64_T.c
+Linking C executable cmTC_2e808
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_2e808.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       -rdynamic CMakeFiles/cmTC_2e808.dir/OFF64_T.c.o  -o cmTC_2e808 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2895,13 +2895,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if the function fseeko exists passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_34383/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_34383.dir/build.make CMakeFiles/cmTC_34383.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_337e4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_337e4.dir/build.make CMakeFiles/cmTC_337e4.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_34383.dir/CheckFunctionExists.c.o
-/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=fseeko -fPIE   -o CMakeFiles/cmTC_34383.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
-Linking C executable cmTC_34383
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_34383.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=fseeko    -rdynamic CMakeFiles/cmTC_34383.dir/CheckFunctionExists.c.o  -o cmTC_34383 
+Building C object CMakeFiles/cmTC_337e4.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=fseeko -fPIE   -o CMakeFiles/cmTC_337e4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_337e4
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_337e4.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=fseeko    -rdynamic CMakeFiles/cmTC_337e4.dir/CheckFunctionExists.c.o  -o cmTC_337e4 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
@@ -2909,13 +2909,13 @@ gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMa
 Determining if the include file unistd.h exists passed with the following output:
 Change Dir: /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_7ee7f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7ee7f.dir/build.make CMakeFiles/cmTC_7ee7f.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_6ee7a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6ee7a.dir/build.make CMakeFiles/cmTC_6ee7a.dir/build
 gmake[1]: Entering directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7ee7f.dir/CheckIncludeFile.c.o
-/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_7ee7f.dir/CheckIncludeFile.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_7ee7f
-/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_7ee7f.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc       CMakeFiles/cmTC_7ee7f.dir/CheckIncludeFile.c.o  -o cmTC_7ee7f 
+Building C object CMakeFiles/cmTC_6ee7a.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc   -fPIE   -o CMakeFiles/cmTC_6ee7a.dir/CheckIncludeFile.c.o   -c /home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6ee7a
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_6ee7a.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc       CMakeFiles/cmTC_6ee7a.dir/CheckIncludeFile.c.o  -o cmTC_6ee7a 
 gmake[1]: Leaving directory `/home/tong/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
 
 
