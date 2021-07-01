@@ -3,4 +3,4 @@ build/
 *.clang-format
 alpha/
 gtest/
-thirdparty
+thirdparty/grpc/cmake
