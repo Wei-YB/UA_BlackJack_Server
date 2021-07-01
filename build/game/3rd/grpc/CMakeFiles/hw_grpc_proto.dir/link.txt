@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../GameServer/3rd/grpc/libhw_grpc_proto.a  CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.grpc.pb.cc.o CMakeFiles/hw_grpc_proto.dir/grpc_cpp/UA_BlackJack.pb.cc.o
+/usr/bin/ranlib ../../../../GameServer/3rd/grpc/libhw_grpc_proto.a
