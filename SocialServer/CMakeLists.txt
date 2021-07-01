@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-project(social C CXX)
+# project(social C CXX)
 
-include(common.cmake)
+# include("${PROJECT_SOURCE_DIR}/cmake/common.cmake")
 
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
 
-get_filename_component(hw_proto "UA_BlackJack.proto" ABSOLUTE)  # demo dependent
+get_filename_component(hw_proto "${PROJECT_SOURCE_DIR}/protos/UA_BlackJack.proto" ABSOLUTE)  # demo dependent
 get_filename_component(hw_proto_path "${hw_proto}" PATH)
 
 set(hw_proto_srcs "${CMAKE_CURRENT_SOURCE_DIR}/grpc/UA_BlackJack.pb.cc") # demo dependent
@@ -25,21 +25,20 @@ add_custom_command(
 
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/grpc")
 
-add_library(hw_grpc_proto
-  ${hw_grpc_srcs}
-  ${hw_grpc_hdrs}
-  ${hw_proto_srcs}
-  ${hw_proto_hdrs})
-target_link_libraries(hw_grpc_proto
-  ${_REFLECTION}
-  ${_GRPC_GRPCPP}
-  ${_PROTOBUF_LIBPROTOBUF})
+# add_library(hw_grpc_proto
+#   ${hw_grpc_srcs}
+#   ${hw_grpc_hdrs}
+#   ${hw_proto_srcs}
+#   ${hw_proto_hdrs})
+# target_link_libraries(hw_grpc_proto
+#   ${_REFLECTION}
+#   ${_GRPC_GRPCPP}
+#   ${_PROTOBUF_LIBPROTOBUF})
 
 file(GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc" "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc")
 
 add_executable(SocialServer "${SOURCES}")
 target_link_libraries(SocialServer
-  hw_grpc_proto
   ${_REFLECTION}
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF}

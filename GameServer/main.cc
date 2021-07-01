@@ -1,5 +1,8 @@
 #include <iostream>
 #include <queue>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <fcntl.h>
 #include "GameProcess.h"
 #include "ClientForDatebase.h"
 #include "ClientForLobby.h"
@@ -124,7 +127,7 @@ bool start_daemon()
 }
 int main(int agrc, char *argv[])
 {
-
+    
     auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", "logs/async_log.log");
     spdlog::set_default_logger(async_file);
     spdlog::flush_on(spdlog::level::trace);

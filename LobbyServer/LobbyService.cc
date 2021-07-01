@@ -1,4 +1,5 @@
 #include "LobbyService.h"
+#include <thread>
 
 ua_blackjack::LobbyServer::LobbyServer(const std::string& game_server, const std::string& database_server):
     database_channel_(NewChannel(database_server)), game_channel_(NewChannel(game_server)),

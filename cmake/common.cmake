@@ -4,7 +4,7 @@ set (CMAKE_CXX_STANDARD 11)
 
 find_package(Threads REQUIRED)
 
-add_subdirectory("thirdparty/grpc" ${CMAKE_CURRENT_BINARY_DIR}/grpc EXCLUDE_FROM_ALL)
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/grpc" ${CMAKE_CURRENT_BINARY_DIR}/grpc EXCLUDE_FROM_ALL)
 message(STATUS "Using gRPC via add_subdirectory.")
 
 # After using add_subdirectory, we can now use the grpc targets directly from
@@ -24,7 +24,7 @@ else()
   set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:grpc_cpp_plugin>)
 endif()
 
-add_subdirectory("thirdparty/spdlog" ${CMAKE_CURRENT_BINARY_DIR}/spdlog EXCLUDE_FROM_ALL)
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/spdlog" "${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/spdlog" EXCLUDE_FROM_ALL)
 message(STATUS "Using spdlog via add_subdirectory.")
 
 if(NOT TARGET spdlog)

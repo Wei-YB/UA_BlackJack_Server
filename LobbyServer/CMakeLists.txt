@@ -1,9 +1,9 @@
-﻿cmake_minimum_required (VERSION 3.16)
+﻿cmake_minimum_required(VERSION 3.5.1)
 
-set(CMAKE_CXX_STANDARD 17)
-project("Lobby")
+# set(CMAKE_CXX_STANDARD 17)
+# project("Lobby")
 
-include(common.cmake)
+# include(common.cmake)
 
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
 	 add_definitions(-D_DEBUG)

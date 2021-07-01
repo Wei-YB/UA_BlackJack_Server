@@ -3,6 +3,7 @@
 #include <sys/eventfd.h>
 #include <sys/epoll.h>
 #include <list>
+#include <unistd.h>
 #include <spdlog/spdlog.h>
 
 
