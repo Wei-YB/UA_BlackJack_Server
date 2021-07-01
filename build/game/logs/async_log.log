@@ -1,9 +1,0 @@
-[13:23:07 +08:00] [async_file_logger] [---I---] [thread 28198] ===========control port55555===========
-[13:23:07 +08:00] [async_file_logger] [---I---] [thread 28191] Server listening on 0.0.0.0:50051
-[13:23:07 +08:00] [async_file_logger] [---I---] [thread 28191] grpc async begin...
-[13:23:21 +08:00] [async_file_logger] [---I---] [thread 28198] accept suuccess
-[13:23:21 +08:00] [async_file_logger] [---I---] [thread 28198] get buffer 1234564879
-[13:23:23 +08:00] [async_file_logger] [---I---] [thread 28198] accept suuccess
-[13:23:26 +08:00] [async_file_logger] [---I---] [thread 28198] accept suuccess
-[13:23:26 +08:00] [async_file_logger] [---I---] [thread 28198] get buffer sadas
-[13:23:28 +08:00] [async_file_logger] [---I---] [thread 28198] accept suuccess
