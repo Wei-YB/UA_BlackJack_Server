@@ -3,6 +3,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <fcntl.h>
+#include <fstream>
 #include "GameProcess.h"
 #include "ClientForDatebase.h"
 #include "ClientForLobby.h"
@@ -11,10 +12,13 @@
 #include <sstream>
 #include "spdlog/async.h"
 #include "spdlog/sinks/basic_file_sink.h"
-#include "TcpServer.h"
-std::string ProxyServiceAddr = "9.134.125.154:50050";
-std::string LobbyServiceAddr = "9.134.69.87:50050";
-std::string DatabaseServiceAddr = "9.134.69.87:50051";
+#include "ControlTcpServer.h"
+
+std::string ProxyServiceAddr;
+std::string LobbyServiceAddr;
+std::string DatabaseServiceAddr;
+std::string controlTcpPort;
+std::string gameRpcAddr;
 bool start_daemon()
 {
     int fd;
@@ -64,7 +68,6 @@ bool start_daemon()
     }
 
     umask(0);
-    chdir("/");
 
     long maxfd;
     if ((maxfd = sysconf(_SC_OPEN_MAX)) != -1)
@@ -127,7 +130,61 @@ bool start_daemon()
 }
 int main(int agrc, char *argv[])
 {
-    
+    {
+        std::string configFilePath = "../../GameServer/game.config";
+
+        std::ifstream _file;
+        _file.open(configFilePath);
+        if (!_file)
+        {
+            std::cout << configFilePath << " not exist " << std::endl;
+            return -1;
+        }
+
+        std::cout << "read config file..." << std::endl;
+        while (!_file.eof())
+        {
+            std::string buffer;
+            _file >> buffer;
+            if (buffer == "ProxyServiceAddr")
+            {
+                _file >> buffer;
+                ProxyServiceAddr = buffer;
+            }
+            else if (buffer == "LobbyServiceAddr")
+            {
+                _file >> buffer;
+                LobbyServiceAddr = buffer;
+            }
+            else if (buffer == "DatabaseServiceAddr")
+            {
+                _file >> buffer;
+                DatabaseServiceAddr = buffer;
+            }
+            else if (buffer == "controlTcpPort")
+            {
+                _file >> buffer;
+                controlTcpPort = buffer;
+            }
+            else if (buffer == "gameRpcAddr")
+            {
+                _file >> buffer;
+                gameRpcAddr = buffer;
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+    std::cout << "ProxyServiceAddr = " << ProxyServiceAddr << std::endl;
+    std::cout << "LobbyServiceAddr = " << LobbyServiceAddr << std::endl;
+    std::cout << "DatabaseServiceAddr = " << DatabaseServiceAddr << std::endl;
+    std::cout << "controlTcpPort = " << controlTcpPort << std::endl;
+    std::cout << "gameRpcAddr = " << gameRpcAddr << std::endl;
+    std::cout << "start_daemon..." << std::endl;
+    start_daemon();
+
     auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", "logs/async_log.log");
     spdlog::set_default_logger(async_file);
     spdlog::flush_on(spdlog::level::trace);

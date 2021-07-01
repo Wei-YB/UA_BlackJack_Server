@@ -1,1 +1,0 @@
-/usr/bin/c++    -O2 -DNDEBUG  -rdynamic CMakeFiles/protoc.dir/__/src/google/protobuf/compiler/main.cc.o  -o protoc-3.15.8.0  -Wl,-rpath,:::::::::::::::: libprotoc.a libprotobuf.a -lpthread 

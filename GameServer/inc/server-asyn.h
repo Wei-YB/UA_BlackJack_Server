@@ -72,15 +72,13 @@ namespace ua_blackjack
       // There is no shutdown handling in this code.
       void Run()
       {
-        std::string server_address("0.0.0.0:50051");
-
         ServerBuilder builder;
-        builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
+        builder.AddListeningPort(gameRpcAddr, grpc::InsecureServerCredentials());
         builder.RegisterService(&service_);
 
         cq_ = builder.AddCompletionQueue();
         server_ = builder.BuildAndStart();
-        spdlog::info("Server listening on {0:d}", server_address);
+        spdlog::info("Server listening on {0:d}", gameRpcAddr);
       }
 
     public:
