@@ -19,13 +19,25 @@ void ua_blackjack::Game::createServiece(void)
     address.sin_port = htons(port);
 
     int listenfd = socket(AF_INET, SOCK_STREAM, 0);
-    assert(listenfd >= 0);
+    if (listenfd < 0)
+    {
+        spdlog::error("create socket error");
+        exit(1);
+    }
 
     int ret = bind(listenfd, (struct sockaddr *)&address, sizeof address);
-    assert(ret >= 0);
+    if (ret < 0)
+    {
+        spdlog::error("bind error");
+        exit(1);
+    }
 
     ret = listen(listenfd, 5);
-    assert(ret >= 0);
+    if (ret < 0)
+    {
+        spdlog::error("bind error");
+        exit(1);
+    }
     spdlog::info("===========control port{0}===========", port);
     int epollfd = epoll_create(5);
     epoll_event event;
@@ -40,6 +52,7 @@ void ua_blackjack::Game::createServiece(void)
         if (ret < 0)
         {
             spdlog::error("EPOLL ERROR");
+            exit(1);
         }
         for (int i = 0; i < ret; i++) //处理每一个epoll事件
         {
