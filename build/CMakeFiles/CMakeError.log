@@ -1,0 +1,886 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_4c314/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4c314.dir/build.make CMakeFiles/cmTC_4c314.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4c314.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4c314.dir/src.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4c314
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_4c314.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_4c314.dir/src.c.o  -o cmTC_4c314 
+CMakeFiles/cmTC_4c314.dir/src.c.o: In function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+src.c:(.text+0x39): undefined reference to `pthread_detach'
+src.c:(.text+0x45): undefined reference to `pthread_cancel'
+src.c:(.text+0x56): undefined reference to `pthread_join'
+src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_4c314] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_4c314/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_add0d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_add0d.dir/build.make CMakeFiles/cmTC_add0d.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_add0d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_add0d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_add0d
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_add0d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_add0d.dir/CheckFunctionExists.c.o  -o cmTC_add0d  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_add0d] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_add0d/fast] Error 2
+
+
+
+Determining if the function res_servicename exists in the resolv failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c17c6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c17c6.dir/build.make CMakeFiles/cmTC_c17c6.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c17c6.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=res_servicename -fPIE   -o CMakeFiles/cmTC_c17c6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c17c6
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_c17c6.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=res_servicename    CMakeFiles/cmTC_c17c6.dir/CheckFunctionExists.c.o  -o cmTC_c17c6  -lresolv 
+CMakeFiles/cmTC_c17c6.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `res_servicename'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_c17c6] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_c17c6/fast] Error 2
+
+
+
+Determining if the function gethostbyname exists in the socket failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_23ba7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_23ba7.dir/build.make CMakeFiles/cmTC_23ba7.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_23ba7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -fPIE   -o CMakeFiles/cmTC_23ba7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_23ba7
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_23ba7.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_23ba7.dir/CheckFunctionExists.c.o  -o cmTC_23ba7  -lsocket 
+/usr/bin/ld: cannot find -lsocket
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_23ba7] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_23ba7/fast] Error 2
+
+
+
+Determining if the function socket exists in the socket failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_3891c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3891c.dir/build.make CMakeFiles/cmTC_3891c.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3891c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=socket -fPIE   -o CMakeFiles/cmTC_3891c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3891c
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_3891c.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=socket    CMakeFiles/cmTC_3891c.dir/CheckFunctionExists.c.o  -o cmTC_3891c  -lsocket 
+/usr/bin/ld: cannot find -lsocket
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_3891c] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_3891c/fast] Error 2
+
+
+
+Determining if files socket.h exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_aff3a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_aff3a.dir/build.make CMakeFiles/cmTC_aff3a.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aff3a.dir/HAVE_SOCKET_H.c.o
+/usr/bin/cc   -fPIE   -o CMakeFiles/cmTC_aff3a.dir/HAVE_SOCKET_H.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SOCKET_H.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_SOCKET_H.c:2:10: fatal error: socket.h: No such file or directory
+ #include <socket.h>
+          ^~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_aff3a.dir/HAVE_SOCKET_H.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_aff3a/fast] Error 2
+
+
+Source:
+/* */
+#include <socket.h>
+
+
+int main(void){return 0;}
+
+Determining if files stropts.h exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_9410a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9410a.dir/build.make CMakeFiles/cmTC_9410a.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9410a.dir/HAVE_STROPTS_H.c.o
+/usr/bin/cc   -fPIE   -o CMakeFiles/cmTC_9410a.dir/HAVE_STROPTS_H.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STROPTS_H.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_STROPTS_H.c:2:10: fatal error: stropts.h: No such file or directory
+ #include <stropts.h>
+          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_9410a.dir/HAVE_STROPTS_H.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_9410a/fast] Error 2
+
+
+Source:
+/* */
+#include <stropts.h>
+
+
+int main(void){return 0;}
+
+Determining if files winsock2.h;windows.h exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_1ab94/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1ab94.dir/build.make CMakeFiles/cmTC_1ab94.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1ab94.dir/HAVE_WINSOCK2_H.c.o
+/usr/bin/cc   -fPIE   -o CMakeFiles/cmTC_1ab94.dir/HAVE_WINSOCK2_H.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_WINSOCK2_H.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_WINSOCK2_H.c:2:10: fatal error: winsock2.h: No such file or directory
+ #include <winsock2.h>
+          ^~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_1ab94.dir/HAVE_WINSOCK2_H.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_1ab94/fast] Error 2
+
+
+Source:
+/* */
+#include <winsock2.h>
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Determining if files winsock2.h;ws2tcpip.h;windows.h exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_8908b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8908b.dir/build.make CMakeFiles/cmTC_8908b.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8908b.dir/HAVE_WS2TCPIP_H.c.o
+/usr/bin/cc   -fPIE   -o CMakeFiles/cmTC_8908b.dir/HAVE_WS2TCPIP_H.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_WS2TCPIP_H.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_WS2TCPIP_H.c:2:10: fatal error: winsock2.h: No such file or directory
+ #include <winsock2.h>
+          ^~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_8908b.dir/HAVE_WS2TCPIP_H.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_8908b/fast] Error 2
+
+
+Source:
+/* */
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Determining if files winsock.h;windows.h exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_e0e0a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e0e0a.dir/build.make CMakeFiles/cmTC_e0e0a.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e0e0a.dir/HAVE_WINSOCK_H.c.o
+/usr/bin/cc   -fPIE   -o CMakeFiles/cmTC_e0e0a.dir/HAVE_WINSOCK_H.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_WINSOCK_H.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_WINSOCK_H.c:2:10: fatal error: winsock.h: No such file or directory
+ #include <winsock.h>
+          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_e0e0a.dir/HAVE_WINSOCK_H.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_e0e0a/fast] Error 2
+
+
+Source:
+/* */
+#include <winsock.h>
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_84ff2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_84ff2.dir/build.make CMakeFiles/cmTC_84ff2.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_84ff2.dir/HAVE_WINDOWS_H.c.o
+/usr/bin/cc   -fPIE   -o CMakeFiles/cmTC_84ff2.dir/HAVE_WINDOWS_H.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_WINDOWS_H.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CheckIncludeFiles/HAVE_WINDOWS_H.c:2:10: fatal error: windows.h: No such file or directory
+ #include <windows.h>
+          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_84ff2.dir/HAVE_WINDOWS_H.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_84ff2/fast] Error 2
+
+
+Source:
+/* */
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test HAVE_TYPE_SOCKET failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_cc6e9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cc6e9.dir/build.make CMakeFiles/cmTC_cc6e9.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cc6e9.dir/src.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DHAVE_TYPE_SOCKET -fPIE   -o CMakeFiles/cmTC_cc6e9.dir/src.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/src.c:26:4: error: unknown type name ‘SOCKET’; did you mean ‘LOCK_EX’?
+    SOCKET var_exists;
+    ^~~~~~
+    LOCK_EX
+gmake[1]: *** [CMakeFiles/cmTC_cc6e9.dir/src.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_cc6e9/fast] Error 2
+
+
+Source file was:
+
+		#include <stdio.h>
+		#include <stdlib.h>
+	
+		#include <stdbool.h>
+		#include <sys/types.h>
+		#include <arpa/inet.h>
+		#include <arpa/nameser.h>
+		#include <netdb.h>
+		#include <net/if.h>
+		#include <netinet/in.h>
+		#include <netinet/tcp.h>
+		#include <signal.h>
+		#include <stdlib.h>
+		#include <string.h>
+		#include <strings.h>
+		#include <sys/ioctl.h>
+		#include <sys/select.h>
+		#include <sys/socket.h>
+		#include <sys/time.h>
+		#include <sys/uio.h>
+		#include <time.h>
+		#include <fcntl.h>
+		#include <unistd.h>
+		int main() {
+			SOCKET var_exists;
+			(void)var_exists;
+			return 0;
+		}
+	
+Determining if the SO_NONBLOCK exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_10a9e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_10a9e.dir/build.make CMakeFiles/cmTC_10a9e.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_10a9e.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_10a9e.dir/CheckSymbolExists.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘SO_NONBLOCK’ undeclared (first use in this function); did you mean ‘O_NONBLOCK’?
+   return ((int*)(&SO_NONBLOCK))[argc];
+                   ^~~~~~~~~~~
+                   O_NONBLOCK
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_10a9e.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_10a9e/fast] Error 2
+
+
+File /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef SO_NONBLOCK
+  return ((int*)(&SO_NONBLOCK))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the bitncmp exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_5dd36/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5dd36.dir/build.make CMakeFiles/cmTC_5dd36.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5dd36.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_5dd36.dir/CheckSymbolExists.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘bitncmp’ undeclared (first use in this function); did you mean ‘bcmp’?
+   return ((int*)(&bitncmp))[argc];
+                   ^~~~~~~
+                   bcmp
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_5dd36.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_5dd36/fast] Error 2
+
+
+File /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef bitncmp
+  return ((int*)(&bitncmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the closesocket exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_53310/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_53310.dir/build.make CMakeFiles/cmTC_53310.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_53310.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_53310.dir/CheckSymbolExists.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘closesocket’ undeclared (first use in this function); did you mean ‘socket’?
+   return ((int*)(&closesocket))[argc];
+                   ^~~~~~~~~~~
+                   socket
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_53310.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_53310/fast] Error 2
+
+
+File /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef closesocket
+  return ((int*)(&closesocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the CloseSocket exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_aa088/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_aa088.dir/build.make CMakeFiles/cmTC_aa088.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aa088.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_aa088.dir/CheckSymbolExists.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘CloseSocket’ undeclared (first use in this function); did you mean ‘socket’?
+   return ((int*)(&CloseSocket))[argc];
+                   ^~~~~~~~~~~
+                   socket
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_aa088.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_aa088/fast] Error 2
+
+
+File /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CloseSocket
+  return ((int*)(&CloseSocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the inet_net_pton exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_610a0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_610a0.dir/build.make CMakeFiles/cmTC_610a0.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_610a0.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_610a0.dir/CheckSymbolExists.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_610a0
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_610a0.dir/link.txt --verbose=1
+/usr/bin/cc       -rdynamic CMakeFiles/cmTC_610a0.dir/CheckSymbolExists.c.o  -o cmTC_610a0  -lnsl -lrt 
+CMakeFiles/cmTC_610a0.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `inet_net_pton'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_610a0] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_610a0/fast] Error 2
+
+
+File /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inet_net_pton
+  return ((int*)(&inet_net_pton))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the ioctlsocket exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_2ae89/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2ae89.dir/build.make CMakeFiles/cmTC_2ae89.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2ae89.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_2ae89.dir/CheckSymbolExists.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘ioctlsocket’ undeclared (first use in this function); did you mean ‘socket’?
+   return ((int*)(&ioctlsocket))[argc];
+                   ^~~~~~~~~~~
+                   socket
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_2ae89.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_2ae89/fast] Error 2
+
+
+File /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef ioctlsocket
+  return ((int*)(&ioctlsocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the IoctlSocket exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_f4e2f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f4e2f.dir/build.make CMakeFiles/cmTC_f4e2f.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f4e2f.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_f4e2f.dir/CheckSymbolExists.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘IoctlSocket’ undeclared (first use in this function); did you mean ‘clock_t’?
+   return ((int*)(&IoctlSocket))[argc];
+                   ^~~~~~~~~~~
+                   clock_t
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_f4e2f.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_f4e2f/fast] Error 2
+
+
+File /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IoctlSocket
+  return ((int*)(&IoctlSocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strcmpi exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_e6b94/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e6b94.dir/build.make CMakeFiles/cmTC_e6b94.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e6b94.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_e6b94.dir/CheckSymbolExists.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘strcmpi’ undeclared (first use in this function); did you mean ‘strcmp’?
+   return ((int*)(&strcmpi))[argc];
+                   ^~~~~~~
+                   strcmp
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_e6b94.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_e6b94/fast] Error 2
+
+
+File /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcmpi
+  return ((int*)(&strcmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the stricmp exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_61063/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_61063.dir/build.make CMakeFiles/cmTC_61063.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_61063.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_61063.dir/CheckSymbolExists.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘stricmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   return ((int*)(&stricmp))[argc];
+                   ^~~~~~~
+                   strncmp
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_61063.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_61063/fast] Error 2
+
+
+File /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef stricmp
+  return ((int*)(&stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strncmpi exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_83bc3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_83bc3.dir/build.make CMakeFiles/cmTC_83bc3.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_83bc3.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_83bc3.dir/CheckSymbolExists.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘strncmpi’ undeclared (first use in this function); did you mean ‘strncmp’?
+   return ((int*)(&strncmpi))[argc];
+                   ^~~~~~~~
+                   strncmp
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_83bc3.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_83bc3/fast] Error 2
+
+
+File /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strncmpi
+  return ((int*)(&strncmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strnicmp exist failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_53225/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_53225.dir/build.make CMakeFiles/cmTC_53225.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_53225.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE   -o CMakeFiles/cmTC_53225.dir/CheckSymbolExists.c.o   -c /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘strnicmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   return ((int*)(&strnicmp))[argc];
+                   ^~~~~~~~
+                   strncmp
+/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_53225.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_53225/fast] Error 2
+
+
+File /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strnicmp
+  return ((int*)(&strnicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function __system_property_get exists failed with the following output:
+Change Dir: /root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_cee3f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cee3f.dir/build.make CMakeFiles/cmTC_cee3f.dir/build
+gmake[1]: Entering directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cee3f.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DCHECK_FUNCTION_EXISTS=__system_property_get -fPIE   -o CMakeFiles/cmTC_cee3f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cee3f
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/cmTC_cee3f.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=__system_property_get    -rdynamic CMakeFiles/cmTC_cee3f.dir/CheckFunctionExists.c.o  -o cmTC_cee3f  -lnsl -lrt 
+CMakeFiles/cmTC_cee3f.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `__system_property_get'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_cee3f] Error 1
+gmake[1]: Leaving directory `/root/ricki/UA_BlackJack_Server/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_cee3f/fast] Error 2
+
+
+
