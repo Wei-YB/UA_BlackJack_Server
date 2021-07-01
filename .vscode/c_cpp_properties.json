@@ -3,11 +3,7 @@
 		{
 			"name": "Linux",
 			"includePath": [
-				"${workspaceFolder}/proxy/include",
-				"${workspaceFolder}/proxy/include/grpc",
-				"/include",
-				"/usr/local/include/google/protobuf",
-				"${workspaceFolder}/../spdlog/include"
+				"${workspaceFolder}/**,
 			],
 			"defines":[],
 			"compilerPath": "/usr/bin/gcc",

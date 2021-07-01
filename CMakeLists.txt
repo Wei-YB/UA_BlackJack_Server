@@ -11,6 +11,6 @@ add_subdirectory(LobbyServer "${CMAKE_CURRENT_BINARY_DIR}/lobby")
 add_subdirectory(SocialServer "${CMAKE_CURRENT_BINARY_DIR}/social")
 add_subdirectory(GameServer "${CMAKE_CURRENT_BINARY_DIR}/game")
 add_subdirectory(PlayerServer "${CMAKE_CURRENT_BINARY_DIR}/player")
-add_subdirectory(DBServer "${CMAKE_CURRENT_BINARY_DIR}/database")
+# add_subdirectory(DBServer "${CMAKE_CURRENT_BINARY_DIR}/database")
 add_subdirectory(Client "${CMAKE_CURRENT_BINARY_DIR}/client")
 
