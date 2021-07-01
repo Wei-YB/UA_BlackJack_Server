@@ -1,0 +1,6 @@
+./.vscode/
+./build/
+*.clang-format
+alpha/
+gtest/
+./thirdparty/grpc/cmake/build
