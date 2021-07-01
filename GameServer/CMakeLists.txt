@@ -31,7 +31,7 @@ ${_REFLECTION}
 )
 
 # 指定生成目标 
-add_executable(Main main.cc ${DIR_SRCS} ${RPC_SRCS})       
+add_executable(GameService main.cc ${DIR_SRCS} ${RPC_SRCS})       
 
 
 
