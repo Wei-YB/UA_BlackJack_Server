@@ -324,3 +324,677 @@
 [2021-07-02 20:51:12.932] [basic_logger] [info] Get command from console
 [2021-07-02 20:56:45.645] [basic_logger] [info] Client Init
 [2021-07-02 20:56:51.379] [basic_logger] [info] Get command from console
+[2021-07-02 20:59:54.166] [basic_logger] [info] Client Init
+[2021-07-02 21:00:02.115] [basic_logger] [info] Get command from console
+[2021-07-02 21:00:02.115] [basic_logger] [info] Send request to proxy, type: 1, uid: -1, stamp: 7949
+[2021-07-02 21:00:02.120] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:00:02.120] [basic_logger] [info] Get data length from proxy, length: 10
+[2021-07-02 21:00:02.120] [basic_logger] [info] Get complete data from proxy, 10 bytes
+[2021-07-02 21:00:02.120] [basic_logger] [info] stamp: 31854512
+[2021-07-02 21:00:02.120] [basic_logger] [info] seconds: -31846
+[2021-07-02 21:00:02.120] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 31854512
+[2021-07-02 21:00:23.274] [basic_logger] [info] Get command from console
+[2021-07-02 21:00:23.274] [basic_logger] [info] Send request to proxy, type: 6, uid: 232, stamp: 29108
+[2021-07-02 21:00:23.277] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:00:23.277] [basic_logger] [info] Get data length from proxy, length: 12
+[2021-07-02 21:00:23.277] [basic_logger] [info] Get complete data from proxy, 12 bytes
+[2021-07-02 21:00:23.277] [basic_logger] [info] stamp: 29108
+[2021-07-02 21:00:23.277] [basic_logger] [info] seconds: 0
+[2021-07-02 21:00:23.277] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 29108
+[2021-07-02 21:00:37.858] [basic_logger] [info] Get command from console
+[2021-07-02 21:01:00.834] [basic_logger] [info] Get command from console
+[2021-07-02 21:01:23.586] [basic_logger] [info] Get command from console
+[2021-07-02 21:01:27.709] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:01:27.709] [basic_logger] [info] Get data length from proxy, length: 20
+[2021-07-02 21:01:27.709] [basic_logger] [info] Get complete data from proxy, 20 bytes
+[2021-07-02 21:01:27.709] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846038352, args: start, currentState: 4
+[2021-07-02 21:01:36.330] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846038352
+[2021-07-02 21:01:36.331] [basic_logger] [info] Send 31 bytes Response to proxy
+[2021-07-02 21:01:48.410] [basic_logger] [info] Get command from console
+[2021-07-02 21:01:48.410] [basic_logger] [info] Send request to proxy, type: 12, uid: 232, stamp: 114243
+[2021-07-02 21:01:48.412] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:01:48.412] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:01:48.412] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:01:48.412] [basic_logger] [info] stamp: 114243
+[2021-07-02 21:01:48.412] [basic_logger] [info] seconds: 0
+[2021-07-02 21:01:48.412] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 114243
+[2021-07-02 21:01:51.777] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:01:51.777] [basic_logger] [info] Get data length from proxy, length: 82
+[2021-07-02 21:01:51.777] [basic_logger] [info] Get complete data from proxy, 82 bytes
+[2021-07-02 21:01:51.777] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846059264, args: update, currentState: 5
+[2021-07-02 21:01:51.777] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846059264
+[2021-07-02 21:01:51.777] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:01:51.777] [basic_logger] [info] Cards update
+[2021-07-02 21:01:51.777] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:01:51.777] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:01:51.777] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:01:51.777] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846128928, args: hit, currentState: 5
+[2021-07-02 21:02:04.394] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846128928
+[2021-07-02 21:02:04.394] [basic_logger] [info] Send 26 bytes Response to proxy
+[2021-07-02 21:02:04.394] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:02:04.394] [basic_logger] [info] Get data length from proxy, length: 33
+[2021-07-02 21:02:04.394] [basic_logger] [info] Get complete data from proxy, 33 bytes
+[2021-07-02 21:02:04.394] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846059264, args: update, currentState: 5
+[2021-07-02 21:02:04.394] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846059264
+[2021-07-02 21:02:04.394] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:02:04.394] [basic_logger] [info] Cards update
+[2021-07-02 21:02:14.817] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:02:14.817] [basic_logger] [info] Get data length from proxy, length: 32
+[2021-07-02 21:02:14.817] [basic_logger] [info] Get complete data from proxy, 32 bytes
+[2021-07-02 21:02:14.818] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846038688, args: update, currentState: 5
+[2021-07-02 21:02:14.818] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846038688
+[2021-07-02 21:02:14.818] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:02:14.818] [basic_logger] [info] Cards update
+[2021-07-02 21:02:14.818] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:02:14.818] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:02:14.818] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:02:14.818] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846166064, args: hit, currentState: 5
+[2021-07-02 21:02:19.855] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846166064
+[2021-07-02 21:02:19.855] [basic_logger] [info] Send 26 bytes Response to proxy
+[2021-07-02 21:02:19.858] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:02:19.858] [basic_logger] [info] Get data length from proxy, length: 32
+[2021-07-02 21:02:19.858] [basic_logger] [info] Get complete data from proxy, 32 bytes
+[2021-07-02 21:02:19.858] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846162096, args: update, currentState: 5
+[2021-07-02 21:02:19.858] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846162096
+[2021-07-02 21:02:19.858] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:02:19.858] [basic_logger] [info] Cards update
+[2021-07-02 21:02:26.151] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:02:26.151] [basic_logger] [info] Get data length from proxy, length: 33
+[2021-07-02 21:02:26.151] [basic_logger] [info] Get complete data from proxy, 33 bytes
+[2021-07-02 21:02:26.151] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846112560, args: update, currentState: 5
+[2021-07-02 21:02:26.151] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846112560
+[2021-07-02 21:02:26.151] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:02:26.151] [basic_logger] [info] Cards update
+[2021-07-02 21:02:26.151] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:02:26.151] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:02:26.152] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:02:26.152] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846130400, args: hit, currentState: 5
+[2021-07-02 21:02:28.977] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846130400
+[2021-07-02 21:02:28.977] [basic_logger] [info] Send 28 bytes Response to proxy
+[2021-07-02 21:02:28.981] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:02:28.981] [basic_logger] [info] Get data length from proxy, length: 32
+[2021-07-02 21:02:28.981] [basic_logger] [info] Get complete data from proxy, 32 bytes
+[2021-07-02 21:02:28.981] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846112560, args: update, currentState: 5
+[2021-07-02 21:02:28.981] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846112560
+[2021-07-02 21:02:28.981] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:02:28.981] [basic_logger] [info] Cards update
+[2021-07-02 21:02:28.981] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:02:28.981] [basic_logger] [info] Get data length from proxy, length: 24
+[2021-07-02 21:02:28.981] [basic_logger] [info] Get complete data from proxy, 24 bytes
+[2021-07-02 21:02:28.981] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846068928, args: end, currentState: 5
+[2021-07-02 21:02:28.981] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846068928
+[2021-07-02 21:02:28.981] [basic_logger] [info] Send 26 bytes Response to proxy
+[2021-07-02 21:02:28.981] [basic_logger] [info] Game end
+[2021-07-02 21:05:38.935] [basic_logger] [info] Get command from console
+[2021-07-02 21:05:38.935] [basic_logger] [info] Send request to proxy, type: 16, uid: 232, stamp: 344768
+[2021-07-02 21:05:38.939] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:05:38.939] [basic_logger] [info] Get data length from proxy, length: 16
+[2021-07-02 21:05:38.939] [basic_logger] [info] Get complete data from proxy, 16 bytes
+[2021-07-02 21:05:38.939] [basic_logger] [info] stamp: 344768
+[2021-07-02 21:05:38.939] [basic_logger] [info] seconds: 0
+[2021-07-02 21:05:38.939] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 344768
+[2021-07-02 21:05:48.311] [basic_logger] [info] Get command from console
+[2021-07-02 21:05:48.311] [basic_logger] [info] Send request to proxy, type: 7, uid: 232, stamp: 354145
+[2021-07-02 21:06:18.216] [basic_logger] [info] Get command from console
+[2021-07-02 21:06:18.216] [basic_logger] [info] Send request to proxy, type: 7, uid: 232, stamp: 384050
+[2021-07-02 21:06:42.423] [basic_logger] [info] Get command from console
+[2021-07-02 21:06:42.423] [basic_logger] [info] Send request to proxy, type: 21, uid: 232, stamp: 408257
+[2021-07-02 21:06:42.426] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:06:42.426] [basic_logger] [info] Get data length from proxy, length: 7
+[2021-07-02 21:06:42.426] [basic_logger] [info] Get complete data from proxy, 7 bytes
+[2021-07-02 21:06:42.426] [basic_logger] [info] stamp: 408257
+[2021-07-02 21:06:42.426] [basic_logger] [info] seconds: 0
+[2021-07-02 21:06:42.426] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 408257
+[2021-07-02 21:06:59.184] [basic_logger] [info] Get command from console
+[2021-07-02 21:06:59.184] [basic_logger] [info] Send request to proxy, type: 23, uid: 232, stamp: 425018
+[2021-07-02 21:06:59.190] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:06:59.190] [basic_logger] [info] Get data length from proxy, length: 14
+[2021-07-02 21:06:59.190] [basic_logger] [info] Get complete data from proxy, 14 bytes
+[2021-07-02 21:06:59.190] [basic_logger] [info] stamp: 425018
+[2021-07-02 21:06:59.190] [basic_logger] [info] seconds: 0
+[2021-07-02 21:06:59.190] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 425018
+[2021-07-02 21:07:59.592] [basic_logger] [info] Get command from console
+[2021-07-02 21:07:59.592] [basic_logger] [info] Send request to proxy, type: 19, uid: 232, stamp: 485426
+[2021-07-02 21:07:59.599] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:07:59.599] [basic_logger] [info] Get data length from proxy, length: 7
+[2021-07-02 21:07:59.599] [basic_logger] [info] Get complete data from proxy, 7 bytes
+[2021-07-02 21:07:59.599] [basic_logger] [info] stamp: 485426
+[2021-07-02 21:07:59.599] [basic_logger] [info] seconds: 0
+[2021-07-02 21:07:59.599] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 485426
+[2021-07-02 21:08:05.079] [basic_logger] [info] Get command from console
+[2021-07-02 21:08:05.079] [basic_logger] [info] Send request to proxy, type: 21, uid: 232, stamp: 490912
+[2021-07-02 21:08:05.083] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:08:05.083] [basic_logger] [info] Get data length from proxy, length: 14
+[2021-07-02 21:08:05.083] [basic_logger] [info] Get complete data from proxy, 14 bytes
+[2021-07-02 21:08:05.083] [basic_logger] [info] stamp: 490912
+[2021-07-02 21:08:05.083] [basic_logger] [info] seconds: 0
+[2021-07-02 21:08:05.083] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 490912
+[2021-07-02 21:08:14.272] [basic_logger] [info] Get command from console
+[2021-07-02 21:08:14.272] [basic_logger] [info] Send request to proxy, type: 19, uid: 232, stamp: 500106
+[2021-07-02 21:08:14.279] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:08:14.280] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:08:14.280] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:08:14.280] [basic_logger] [info] stamp: 500106
+[2021-07-02 21:08:14.280] [basic_logger] [info] seconds: 0
+[2021-07-02 21:08:14.280] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 500106
+[2021-07-02 21:08:28.680] [basic_logger] [info] Get command from console
+[2021-07-02 21:08:28.680] [basic_logger] [info] Send request to proxy, type: 18, uid: 232, stamp: 514514
+[2021-07-02 21:08:28.685] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:08:28.685] [basic_logger] [info] Get data length from proxy, length: 7
+[2021-07-02 21:08:28.685] [basic_logger] [info] Get complete data from proxy, 7 bytes
+[2021-07-02 21:08:28.685] [basic_logger] [info] stamp: 514514
+[2021-07-02 21:08:28.685] [basic_logger] [info] seconds: 0
+[2021-07-02 21:08:28.685] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 514514
+[2021-07-02 21:08:41.127] [basic_logger] [info] Get command from console
+[2021-07-02 21:08:41.127] [basic_logger] [info] Send request to proxy, type: 23, uid: 232, stamp: 526961
+[2021-07-02 21:08:41.132] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:08:41.132] [basic_logger] [info] Get data length from proxy, length: 14
+[2021-07-02 21:08:41.132] [basic_logger] [info] Get complete data from proxy, 14 bytes
+[2021-07-02 21:08:41.132] [basic_logger] [info] stamp: 526961
+[2021-07-02 21:08:41.132] [basic_logger] [info] seconds: 0
+[2021-07-02 21:08:41.132] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 526961
+[2021-07-02 21:09:02.742] [basic_logger] [info] Get command from console
+[2021-07-02 21:09:02.742] [basic_logger] [info] Send request to proxy, type: 19, uid: 232, stamp: 548576
+[2021-07-02 21:09:02.750] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:09:02.750] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:09:02.750] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:09:02.750] [basic_logger] [info] stamp: 548576
+[2021-07-02 21:09:02.750] [basic_logger] [info] seconds: 0
+[2021-07-02 21:09:02.750] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 548576
+[2021-07-02 21:09:17.557] [basic_logger] [info] Get command from console
+[2021-07-02 21:09:17.558] [basic_logger] [info] Send request to proxy, type: 23, uid: 232, stamp: 563391
+[2021-07-02 21:09:17.561] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:09:17.561] [basic_logger] [info] Get data length from proxy, length: 7
+[2021-07-02 21:09:17.561] [basic_logger] [info] Get complete data from proxy, 7 bytes
+[2021-07-02 21:09:17.561] [basic_logger] [info] stamp: 563391
+[2021-07-02 21:09:17.561] [basic_logger] [info] seconds: 0
+[2021-07-02 21:09:17.561] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 563391
+[2021-07-02 21:10:44.054] [basic_logger] [info] Get command from console
+[2021-07-02 21:10:44.054] [basic_logger] [info] Send request to proxy, type: 21, uid: 232, stamp: 649888
+[2021-07-02 21:10:44.060] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:10:44.060] [basic_logger] [info] Get data length from proxy, length: 21
+[2021-07-02 21:10:44.060] [basic_logger] [info] Get complete data from proxy, 21 bytes
+[2021-07-02 21:10:44.060] [basic_logger] [info] stamp: 649888
+[2021-07-02 21:10:44.060] [basic_logger] [info] seconds: 0
+[2021-07-02 21:10:44.060] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 649888
+[2021-07-02 21:11:31.558] [basic_logger] [info] Get command from console
+[2021-07-02 21:11:31.558] [basic_logger] [info] Send request to proxy, type: 7, uid: 232, stamp: 697392
+[2021-07-02 21:12:06.006] [basic_logger] [info] Get command from console
+[2021-07-02 21:12:54.029] [basic_logger] [info] Get command from console
+[2021-07-02 21:12:54.029] [basic_logger] [info] Send request to proxy, type: 22, uid: 232, stamp: 779863
+[2021-07-02 21:12:54.034] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:12:54.034] [basic_logger] [info] Get data length from proxy, length: 10
+[2021-07-02 21:12:54.034] [basic_logger] [info] Get complete data from proxy, 10 bytes
+[2021-07-02 21:12:54.034] [basic_logger] [info] stamp: 779863
+[2021-07-02 21:12:54.034] [basic_logger] [info] seconds: 0
+[2021-07-02 21:12:54.034] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 779863
+[2021-07-02 21:13:05.622] [basic_logger] [info] Get command from console
+[2021-07-02 21:13:05.622] [basic_logger] [info] Send request to proxy, type: 29, uid: 232, stamp: 791456
+[2021-07-02 21:13:05.630] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:13:05.630] [basic_logger] [info] Get data length from proxy, length: 79
+[2021-07-02 21:13:05.630] [basic_logger] [info] Get complete data from proxy, 79 bytes
+[2021-07-02 21:13:05.630] [basic_logger] [info] stamp: 791456
+[2021-07-02 21:13:05.630] [basic_logger] [info] seconds: 0
+[2021-07-02 21:13:05.630] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 791456
+[2021-07-02 21:13:44.670] [basic_logger] [info] Get command from console
+[2021-07-02 21:13:44.670] [basic_logger] [info] Send request to proxy, type: 20, uid: 232, stamp: 830504
+[2021-07-02 21:13:44.676] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:13:44.676] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:13:44.676] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:13:44.676] [basic_logger] [info] stamp: 830504
+[2021-07-02 21:13:44.676] [basic_logger] [info] seconds: 0
+[2021-07-02 21:13:44.676] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 830504
+[2021-07-02 21:13:58.941] [basic_logger] [info] Get command from console
+[2021-07-02 21:13:58.941] [basic_logger] [info] Send request to proxy, type: 21, uid: 232, stamp: 844774
+[2021-07-02 21:13:58.945] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:13:58.945] [basic_logger] [info] Get data length from proxy, length: 14
+[2021-07-02 21:13:58.945] [basic_logger] [info] Get complete data from proxy, 14 bytes
+[2021-07-02 21:13:58.945] [basic_logger] [info] stamp: 844774
+[2021-07-02 21:13:58.945] [basic_logger] [info] seconds: 0
+[2021-07-02 21:13:58.945] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 844774
+[2021-07-02 21:14:07.358] [basic_logger] [info] Get command from console
+[2021-07-02 21:14:07.358] [basic_logger] [info] Send request to proxy, type: 20, uid: 232, stamp: 853192
+[2021-07-02 21:14:07.366] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:14:07.366] [basic_logger] [info] Get data length from proxy, length: 7
+[2021-07-02 21:14:07.366] [basic_logger] [info] Get complete data from proxy, 7 bytes
+[2021-07-02 21:14:07.366] [basic_logger] [info] stamp: 853192
+[2021-07-02 21:14:07.366] [basic_logger] [info] seconds: 0
+[2021-07-02 21:14:07.366] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 853192
+[2021-07-02 21:14:38.300] [basic_logger] [info] Get command from console
+[2021-07-02 21:14:38.301] [basic_logger] [info] Send request to proxy, type: 21, uid: 232, stamp: 884134
+[2021-07-02 21:14:38.305] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:14:38.305] [basic_logger] [info] Get data length from proxy, length: 7
+[2021-07-02 21:14:38.305] [basic_logger] [info] Get complete data from proxy, 7 bytes
+[2021-07-02 21:14:38.305] [basic_logger] [info] stamp: 884134
+[2021-07-02 21:14:38.305] [basic_logger] [info] seconds: 0
+[2021-07-02 21:14:38.305] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 884134
+[2021-07-02 21:14:46.229] [basic_logger] [info] Get command from console
+[2021-07-02 21:14:46.229] [basic_logger] [info] Send request to proxy, type: 18, uid: 232, stamp: 892063
+[2021-07-02 21:14:46.242] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:14:46.242] [basic_logger] [info] Get data length from proxy, length: 7
+[2021-07-02 21:14:46.242] [basic_logger] [info] Get complete data from proxy, 7 bytes
+[2021-07-02 21:14:46.242] [basic_logger] [info] stamp: 892063
+[2021-07-02 21:14:46.242] [basic_logger] [info] seconds: 0
+[2021-07-02 21:14:46.242] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 892063
+[2021-07-02 21:14:51.173] [basic_logger] [info] Get command from console
+[2021-07-02 21:14:51.173] [basic_logger] [info] Send request to proxy, type: 18, uid: 232, stamp: 897007
+[2021-07-02 21:14:51.178] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:14:51.178] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:14:51.178] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:14:51.178] [basic_logger] [info] stamp: 897007
+[2021-07-02 21:14:51.178] [basic_logger] [info] seconds: 0
+[2021-07-02 21:14:51.178] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 897007
+[2021-07-02 21:14:59.309] [basic_logger] [info] Get command from console
+[2021-07-02 21:14:59.309] [basic_logger] [info] Send request to proxy, type: 19, uid: 232, stamp: 905143
+[2021-07-02 21:14:59.316] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:14:59.316] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:14:59.316] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:14:59.316] [basic_logger] [info] stamp: 905143
+[2021-07-02 21:14:59.316] [basic_logger] [info] seconds: 0
+[2021-07-02 21:14:59.316] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 905143
+[2021-07-02 21:15:03.773] [basic_logger] [info] Get command from console
+[2021-07-02 21:15:03.773] [basic_logger] [info] Send request to proxy, type: 21, uid: 232, stamp: 909607
+[2021-07-02 21:15:03.778] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:15:03.778] [basic_logger] [info] Get data length from proxy, length: 14
+[2021-07-02 21:15:03.778] [basic_logger] [info] Get complete data from proxy, 14 bytes
+[2021-07-02 21:15:03.778] [basic_logger] [info] stamp: 909607
+[2021-07-02 21:15:03.778] [basic_logger] [info] seconds: 0
+[2021-07-02 21:15:03.778] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 909607
+[2021-07-02 21:15:21.028] [basic_logger] [info] Get command from console
+[2021-07-02 21:15:21.028] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 926862
+[2021-07-02 21:15:21.030] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:15:21.030] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:15:21.030] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:15:21.030] [basic_logger] [info] stamp: 926862
+[2021-07-02 21:15:21.030] [basic_logger] [info] seconds: 0
+[2021-07-02 21:15:21.030] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 926862
+[2021-07-02 21:15:28.787] [basic_logger] [info] Get command from console
+[2021-07-02 21:15:28.787] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 934621
+[2021-07-02 21:15:28.790] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:15:28.790] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:15:28.790] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:15:28.790] [basic_logger] [info] stamp: 934621
+[2021-07-02 21:15:28.790] [basic_logger] [info] seconds: 0
+[2021-07-02 21:15:28.790] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 934621
+[2021-07-02 21:15:56.699] [basic_logger] [info] Get command from console
+[2021-07-02 21:15:56.699] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 962533
+[2021-07-02 21:15:56.702] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:15:56.702] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:15:56.702] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:15:56.703] [basic_logger] [info] stamp: 962533
+[2021-07-02 21:15:56.703] [basic_logger] [info] seconds: 0
+[2021-07-02 21:15:56.703] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 962533
+[2021-07-02 21:18:09.891] [basic_logger] [info] Get command from console
+[2021-07-02 21:18:09.891] [basic_logger] [info] Send request to proxy, type: 2, uid: 232, stamp: 1095725
+[2021-07-02 21:18:09.893] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:18:09.893] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:18:09.893] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:18:09.893] [basic_logger] [info] stamp: 1095725
+[2021-07-02 21:18:09.893] [basic_logger] [info] seconds: 0
+[2021-07-02 21:18:09.893] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 1095725
+[2021-07-02 21:18:18.468] [basic_logger] [info] Get command from console
+[2021-07-02 21:18:26.973] [basic_logger] [info] Get command from console
+[2021-07-02 21:18:26.973] [basic_logger] [info] Send request to proxy, type: 1, uid: 232, stamp: 1112807
+[2021-07-02 21:18:26.978] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:18:26.978] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:18:26.978] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:18:26.978] [basic_logger] [info] stamp: 1112807
+[2021-07-02 21:18:26.978] [basic_logger] [info] seconds: 0
+[2021-07-02 21:18:26.978] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 1112807
+[2021-07-02 21:18:33.083] [basic_logger] [info] Get command from console
+[2021-07-02 21:18:41.388] [basic_logger] [info] Get command from console
+[2021-07-02 21:18:41.388] [basic_logger] [info] Send request to proxy, type: 6, uid: 232, stamp: 1127222
+[2021-07-02 21:18:41.393] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:18:41.393] [basic_logger] [info] Get data length from proxy, length: 12
+[2021-07-02 21:18:41.393] [basic_logger] [info] Get complete data from proxy, 12 bytes
+[2021-07-02 21:18:41.393] [basic_logger] [info] stamp: 1127222
+[2021-07-02 21:18:41.393] [basic_logger] [info] seconds: 0
+[2021-07-02 21:18:41.393] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 1127222
+[2021-07-02 21:18:45.691] [basic_logger] [info] Get command from console
+[2021-07-02 21:18:45.691] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 1131525
+[2021-07-02 21:18:45.696] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:18:45.696] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:18:45.696] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:18:45.696] [basic_logger] [info] stamp: 1131525
+[2021-07-02 21:18:45.696] [basic_logger] [info] seconds: 0
+[2021-07-02 21:18:45.696] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 1131525
+[2021-07-02 21:18:59.580] [basic_logger] [info] Get command from console
+[2021-07-02 21:18:59.580] [basic_logger] [info] Send request to proxy, type: 3, uid: 232, stamp: 1145414
+[2021-07-02 21:18:59.584] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:18:59.584] [basic_logger] [info] Get data length from proxy, length: 15
+[2021-07-02 21:18:59.584] [basic_logger] [info] Get complete data from proxy, 15 bytes
+[2021-07-02 21:18:59.584] [basic_logger] [info] stamp: 1145414
+[2021-07-02 21:18:59.584] [basic_logger] [info] seconds: 0
+[2021-07-02 21:18:59.584] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 1145414
+[2021-07-02 21:19:48.395] [basic_logger] [info] Get command from console
+[2021-07-02 21:19:48.395] [basic_logger] [info] Send request to proxy, type: 5, uid: 232, stamp: 1194229
+[2021-07-02 21:19:48.398] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:19:48.398] [basic_logger] [info] Get data length from proxy, length: 12
+[2021-07-02 21:19:48.398] [basic_logger] [info] Get complete data from proxy, 12 bytes
+[2021-07-02 21:19:48.398] [basic_logger] [info] stamp: 1194229
+[2021-07-02 21:19:48.398] [basic_logger] [info] seconds: 0
+[2021-07-02 21:19:48.398] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 1194229
+[2021-07-02 21:19:54.140] [basic_logger] [info] Get command from console
+[2021-07-02 21:19:54.140] [basic_logger] [info] Send request to proxy, type: 4, uid: 232, stamp: 1199974
+[2021-07-02 21:19:54.142] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:19:54.142] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:19:54.142] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:19:54.142] [basic_logger] [info] stamp: 1199974
+[2021-07-02 21:19:54.142] [basic_logger] [info] seconds: 0
+[2021-07-02 21:19:54.142] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 1199974
+[2021-07-02 21:19:59.403] [basic_logger] [info] Get command from console
+[2021-07-02 21:19:59.403] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 1205237
+[2021-07-02 21:19:59.407] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:19:59.407] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:19:59.407] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:19:59.407] [basic_logger] [info] stamp: 1205237
+[2021-07-02 21:19:59.407] [basic_logger] [info] seconds: 0
+[2021-07-02 21:19:59.407] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 1205237
+[2021-07-02 21:20:04.612] [basic_logger] [info] Get command from console
+[2021-07-02 21:20:04.612] [basic_logger] [info] Send request to proxy, type: 4, uid: 232, stamp: 1210446
+[2021-07-02 21:20:04.615] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:20:04.615] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:20:04.615] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:20:04.615] [basic_logger] [info] stamp: 1210446
+[2021-07-02 21:20:04.615] [basic_logger] [info] seconds: 0
+[2021-07-02 21:20:04.615] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 1210446
+[2021-07-02 21:20:20.978] [basic_logger] [info] Get command from console
+[2021-07-02 21:20:20.978] [basic_logger] [info] Send request to proxy, type: 7, uid: 232, stamp: 1226812
+[2021-07-02 21:20:20.980] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:20:20.980] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:20:20.980] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:20:20.980] [basic_logger] [info] stamp: 1226812
+[2021-07-02 21:20:20.980] [basic_logger] [info] seconds: 0
+[2021-07-02 21:20:20.980] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 1226812
+[2021-07-02 21:20:39.154] [basic_logger] [info] Get command from console
+[2021-07-02 21:20:39.154] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 1244987
+[2021-07-02 21:20:39.156] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:20:39.156] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:20:39.156] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:20:39.156] [basic_logger] [info] stamp: 1244987
+[2021-07-02 21:20:39.156] [basic_logger] [info] seconds: 0
+[2021-07-02 21:20:39.156] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 1244987
+[2021-07-02 21:23:37.522] [basic_logger] [info] Get command from console
+[2021-07-02 21:23:37.522] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 1423355
+[2021-07-02 21:23:45.338] [basic_logger] [info] Get command from console
+[2021-07-02 21:23:47.342] [basic_logger] [info] Client Init
+[2021-07-02 21:23:51.626] [basic_logger] [info] Get command from console
+[2021-07-02 21:23:51.626] [basic_logger] [info] Send request to proxy, type: 1, uid: -1, stamp: 4284
+[2021-07-02 21:24:45.275] [basic_logger] [info] Get command from console
+[2021-07-02 21:24:45.276] [basic_logger] [info] Send request to proxy, type: 1, uid: -1, stamp: 57933
+[2021-07-02 21:25:26.600] [basic_logger] [info] Get command from console
+[2021-07-02 21:25:26.600] [basic_logger] [info] Send request to proxy, type: 1, uid: -1, stamp: 99258
+[2021-07-02 21:25:26.605] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:25:26.605] [basic_logger] [info] Get data length from proxy, length: 10
+[2021-07-02 21:25:26.605] [basic_logger] [info] Get complete data from proxy, 10 bytes
+[2021-07-02 21:25:26.605] [basic_logger] [info] stamp: 31818768
+[2021-07-02 21:25:26.605] [basic_logger] [info] seconds: -31719
+[2021-07-02 21:25:26.605] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 31818768
+[2021-07-02 21:25:37.546] [basic_logger] [info] Get command from console
+[2021-07-02 21:25:37.546] [basic_logger] [info] Send request to proxy, type: 3, uid: 232, stamp: 110204
+[2021-07-02 21:25:37.548] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:25:37.548] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:25:37.548] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:25:37.548] [basic_logger] [info] stamp: 110204
+[2021-07-02 21:25:37.548] [basic_logger] [info] seconds: 0
+[2021-07-02 21:25:37.548] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 110204
+[2021-07-02 21:25:45.264] [basic_logger] [info] Get command from console
+[2021-07-02 21:25:45.264] [basic_logger] [info] Send request to proxy, type: 6, uid: 232, stamp: 117922
+[2021-07-02 21:25:45.265] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:25:45.265] [basic_logger] [info] Get data length from proxy, length: 12
+[2021-07-02 21:25:45.265] [basic_logger] [info] Get complete data from proxy, 12 bytes
+[2021-07-02 21:25:45.265] [basic_logger] [info] stamp: 117922
+[2021-07-02 21:25:45.265] [basic_logger] [info] seconds: 0
+[2021-07-02 21:25:45.265] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 117922
+[2021-07-02 21:25:46.759] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:25:46.759] [basic_logger] [info] Get data length from proxy, length: 20
+[2021-07-02 21:25:46.759] [basic_logger] [info] Get complete data from proxy, 20 bytes
+[2021-07-02 21:25:46.759] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846074880, args: start, currentState: 4
+[2021-07-02 21:26:00.058] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846074880
+[2021-07-02 21:26:00.058] [basic_logger] [info] Send 31 bytes Response to proxy
+[2021-07-02 21:26:16.920] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:26:16.920] [basic_logger] [info] Get data length from proxy, length: 81
+[2021-07-02 21:26:16.920] [basic_logger] [info] Get complete data from proxy, 81 bytes
+[2021-07-02 21:26:16.920] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846112560, args: update, currentState: 5
+[2021-07-02 21:26:16.920] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846112560
+[2021-07-02 21:26:16.920] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:26:16.920] [basic_logger] [info] Cards update
+[2021-07-02 21:26:16.924] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:26:16.924] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:26:16.924] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:26:16.924] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846068928, args: hit, currentState: 5
+[2021-07-02 21:26:40.264] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846068928
+[2021-07-02 21:26:40.265] [basic_logger] [info] Send 28 bytes Response to proxy
+[2021-07-02 21:26:51.280] [basic_logger] [info] Get command from console
+[2021-07-02 21:26:51.280] [basic_logger] [info] Send request to proxy, type: 12, uid: 232, stamp: 183938
+[2021-07-02 21:26:51.286] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:26:51.286] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:26:51.286] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:26:51.286] [basic_logger] [info] stamp: 183938
+[2021-07-02 21:26:51.286] [basic_logger] [info] seconds: 0
+[2021-07-02 21:26:51.286] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 183938
+[2021-07-02 21:26:53.302] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:26:53.302] [basic_logger] [info] Get data length from proxy, length: 33
+[2021-07-02 21:26:53.302] [basic_logger] [info] Get complete data from proxy, 33 bytes
+[2021-07-02 21:26:53.302] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846112560, args: update, currentState: 5
+[2021-07-02 21:26:53.302] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846112560
+[2021-07-02 21:26:53.302] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:26:53.302] [basic_logger] [info] Cards update
+[2021-07-02 21:26:53.302] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:26:53.302] [basic_logger] [info] Get data length from proxy, length: 31
+[2021-07-02 21:26:53.302] [basic_logger] [info] Get complete data from proxy, 31 bytes
+[2021-07-02 21:26:53.302] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846243680, args: update, currentState: 5
+[2021-07-02 21:26:53.302] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846243680
+[2021-07-02 21:26:53.302] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:26:53.303] [basic_logger] [info] Cards update
+[2021-07-02 21:26:53.303] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:26:53.303] [basic_logger] [info] Get data length from proxy, length: 32
+[2021-07-02 21:26:53.303] [basic_logger] [info] Get complete data from proxy, 32 bytes
+[2021-07-02 21:26:53.303] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846251616, args: update, currentState: 5
+[2021-07-02 21:26:53.303] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846251616
+[2021-07-02 21:26:53.303] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:26:53.303] [basic_logger] [info] Cards update
+[2021-07-02 21:26:53.303] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:26:53.303] [basic_logger] [info] Get data length from proxy, length: 31
+[2021-07-02 21:26:53.303] [basic_logger] [info] Get complete data from proxy, 31 bytes
+[2021-07-02 21:26:53.303] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846259552, args: update, currentState: 5
+[2021-07-02 21:26:53.303] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846259552
+[2021-07-02 21:26:53.303] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:26:53.303] [basic_logger] [info] Cards update
+[2021-07-02 21:26:53.303] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:26:53.303] [basic_logger] [info] Get data length from proxy, length: 31
+[2021-07-02 21:26:53.303] [basic_logger] [info] Get complete data from proxy, 31 bytes
+[2021-07-02 21:26:53.303] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846085280, args: update, currentState: 5
+[2021-07-02 21:26:53.303] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846085280
+[2021-07-02 21:26:53.303] [basic_logger] [info] Send 29 bytes Response to proxy
+[2021-07-02 21:26:53.304] [basic_logger] [info] Cards update
+[2021-07-02 21:26:53.304] [basic_logger] [info] Get data type from proxy, type: 1
+[2021-07-02 21:26:53.304] [basic_logger] [info] Get data length from proxy, length: 23
+[2021-07-02 21:26:53.304] [basic_logger] [info] Get complete data from proxy, 23 bytes
+[2021-07-02 21:26:53.304] [basic_logger] [info] Received room request, type: 24, uid: 232, stamp: 139678846253600, args: end, currentState: 5
+[2021-07-02 21:26:53.304] [basic_logger] [info] Constructed Room Response status:1 uid:232 stamp:139678846253600
+[2021-07-02 21:26:53.304] [basic_logger] [info] Send 26 bytes Response to proxy
+[2021-07-02 21:26:53.304] [basic_logger] [info] Game end
+[2021-07-02 21:26:53.456] [basic_logger] [info] Get command from console
+[2021-07-02 21:27:08.840] [basic_logger] [info] Get command from console
+[2021-07-02 21:27:08.840] [basic_logger] [info] Send request to proxy, type: 17, uid: 232, stamp: 201498
+[2021-07-02 21:27:08.854] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:27:08.854] [basic_logger] [info] Get data length from proxy, length: 63
+[2021-07-02 21:27:08.854] [basic_logger] [info] Get complete data from proxy, 63 bytes
+[2021-07-02 21:27:08.854] [basic_logger] [info] stamp: 201498
+[2021-07-02 21:27:08.854] [basic_logger] [info] seconds: 0
+[2021-07-02 21:27:08.854] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 201498
+[2021-07-02 21:27:15.696] [basic_logger] [info] Get command from console
+[2021-07-02 21:27:15.696] [basic_logger] [info] Send request to proxy, type: 17, uid: 232, stamp: 208354
+[2021-07-02 21:27:15.716] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:27:15.716] [basic_logger] [info] Get data length from proxy, length: 88
+[2021-07-02 21:27:15.716] [basic_logger] [info] Get complete data from proxy, 88 bytes
+[2021-07-02 21:27:15.716] [basic_logger] [info] stamp: 208354
+[2021-07-02 21:27:15.716] [basic_logger] [info] seconds: 0
+[2021-07-02 21:27:15.716] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 208354
+[2021-07-02 21:28:27.768] [basic_logger] [info] Get command from console
+[2021-07-02 21:28:27.768] [basic_logger] [info] Send request to proxy, type: 22, uid: 232, stamp: 280426
+[2021-07-02 21:28:27.771] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:28:27.771] [basic_logger] [info] Get data length from proxy, length: 13
+[2021-07-02 21:28:27.771] [basic_logger] [info] Get complete data from proxy, 13 bytes
+[2021-07-02 21:28:27.771] [basic_logger] [info] stamp: 280426
+[2021-07-02 21:28:27.771] [basic_logger] [info] seconds: 0
+[2021-07-02 21:28:27.771] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 280426
+[2021-07-02 21:28:33.568] [basic_logger] [info] Get command from console
+[2021-07-02 21:28:33.569] [basic_logger] [info] Send request to proxy, type: 29, uid: 232, stamp: 286226
+[2021-07-02 21:28:33.577] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:28:33.577] [basic_logger] [info] Get data length from proxy, length: 72
+[2021-07-02 21:28:33.577] [basic_logger] [info] Get complete data from proxy, 72 bytes
+[2021-07-02 21:28:33.577] [basic_logger] [info] stamp: 286226
+[2021-07-02 21:28:33.577] [basic_logger] [info] seconds: 0
+[2021-07-02 21:28:33.577] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 286226
+[2021-07-02 21:30:22.608] [basic_logger] [info] Get command from console
+[2021-07-02 21:30:22.608] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 395266
+[2021-07-02 21:30:22.613] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:30:22.613] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:30:22.613] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:30:22.613] [basic_logger] [info] stamp: 395266
+[2021-07-02 21:30:22.613] [basic_logger] [info] seconds: 0
+[2021-07-02 21:30:22.613] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 395266
+[2021-07-02 21:30:29.855] [basic_logger] [info] Get command from console
+[2021-07-02 21:30:29.855] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 402513
+[2021-07-02 21:30:29.857] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:30:29.857] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:30:29.857] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:30:29.857] [basic_logger] [info] stamp: 402513
+[2021-07-02 21:30:29.857] [basic_logger] [info] seconds: 0
+[2021-07-02 21:30:29.858] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 402513
+[2021-07-02 21:30:52.487] [basic_logger] [info] Get command from console
+[2021-07-02 21:30:52.487] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 425145
+[2021-07-02 21:30:52.488] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:30:52.488] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:30:52.489] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:30:52.489] [basic_logger] [info] stamp: 425145
+[2021-07-02 21:30:52.489] [basic_logger] [info] seconds: 0
+[2021-07-02 21:30:52.489] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 425145
+[2021-07-02 21:32:14.134] [basic_logger] [info] Get command from console
+[2021-07-02 21:32:14.134] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 506791
+[2021-07-02 21:32:14.136] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:32:14.136] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:32:14.136] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:32:14.136] [basic_logger] [info] stamp: 506791
+[2021-07-02 21:32:14.136] [basic_logger] [info] seconds: 0
+[2021-07-02 21:32:14.136] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 506791
+[2021-07-02 21:32:18.215] [basic_logger] [info] Get command from console
+[2021-07-02 21:32:23.810] [basic_logger] [info] Client Init
+[2021-07-02 21:32:32.688] [basic_logger] [info] Get command from console
+[2021-07-02 21:32:32.689] [basic_logger] [info] Send request to proxy, type: 1, uid: -1, stamp: 8882
+[2021-07-02 21:32:32.694] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:32:32.694] [basic_logger] [info] Get data length from proxy, length: 19
+[2021-07-02 21:32:32.694] [basic_logger] [info] Get complete data from proxy, 19 bytes
+[2021-07-02 21:32:32.694] [basic_logger] [info] stamp: 31840880
+[2021-07-02 21:32:32.694] [basic_logger] [info] seconds: -31831
+[2021-07-02 21:32:32.694] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 31840880
+[2021-07-02 21:32:37.533] [basic_logger] [info] Get command from console
+[2021-07-02 21:32:37.533] [basic_logger] [info] Send request to proxy, type: 1, uid: -1, stamp: 13726
+[2021-07-02 21:32:37.540] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:32:37.540] [basic_logger] [info] Get data length from proxy, length: 10
+[2021-07-02 21:32:37.540] [basic_logger] [info] Get complete data from proxy, 10 bytes
+[2021-07-02 21:32:37.540] [basic_logger] [info] stamp: 31840880
+[2021-07-02 21:32:37.540] [basic_logger] [info] seconds: -31827
+[2021-07-02 21:32:37.540] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 31840880
+[2021-07-02 21:32:45.191] [basic_logger] [info] Get command from console
+[2021-07-02 21:32:45.191] [basic_logger] [info] Send request to proxy, type: 6, uid: 232, stamp: 21384
+[2021-07-02 21:32:45.193] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:32:45.193] [basic_logger] [info] Get data length from proxy, length: 12
+[2021-07-02 21:32:45.193] [basic_logger] [info] Get complete data from proxy, 12 bytes
+[2021-07-02 21:32:45.194] [basic_logger] [info] stamp: 21384
+[2021-07-02 21:32:45.194] [basic_logger] [info] seconds: 0
+[2021-07-02 21:32:45.194] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 21384
+[2021-07-02 21:32:52.638] [basic_logger] [info] Get command from console
+[2021-07-02 21:32:52.638] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 28831
+[2021-07-02 21:32:52.642] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:32:52.642] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:32:52.642] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:32:52.642] [basic_logger] [info] stamp: 28831
+[2021-07-02 21:32:52.642] [basic_logger] [info] seconds: 0
+[2021-07-02 21:32:52.642] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 28831
+[2021-07-02 21:32:58.686] [basic_logger] [info] Get command from console
+[2021-07-02 21:32:58.686] [basic_logger] [info] Send request to proxy, type: 3, uid: 232, stamp: 34879
+[2021-07-02 21:32:58.688] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:32:58.688] [basic_logger] [info] Get data length from proxy, length: 12
+[2021-07-02 21:32:58.688] [basic_logger] [info] Get complete data from proxy, 12 bytes
+[2021-07-02 21:32:58.688] [basic_logger] [info] stamp: 34879
+[2021-07-02 21:32:58.688] [basic_logger] [info] seconds: 0
+[2021-07-02 21:32:58.688] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 34879
+[2021-07-02 21:33:16.064] [basic_logger] [info] Get command from console
+[2021-07-02 21:33:16.064] [basic_logger] [info] Send request to proxy, type: 4, uid: 232, stamp: 52257
+[2021-07-02 21:33:16.066] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:33:16.066] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:33:16.066] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:33:16.066] [basic_logger] [info] stamp: 52257
+[2021-07-02 21:33:16.066] [basic_logger] [info] seconds: 0
+[2021-07-02 21:33:16.066] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 52257
+[2021-07-02 21:33:18.942] [basic_logger] [info] Get command from console
+[2021-07-02 21:33:18.942] [basic_logger] [info] Send request to proxy, type: 7, uid: 232, stamp: 55135
+[2021-07-02 21:33:18.944] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:33:18.944] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:33:18.944] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:33:18.944] [basic_logger] [info] stamp: 55135
+[2021-07-02 21:33:18.944] [basic_logger] [info] seconds: 0
+[2021-07-02 21:33:18.944] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 55135
+[2021-07-02 21:34:39.133] [basic_logger] [info] Get command from console
+[2021-07-02 21:34:39.133] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 135326
+[2021-07-02 21:34:39.135] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:34:39.135] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:34:39.135] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:34:39.136] [basic_logger] [info] stamp: 135326
+[2021-07-02 21:34:39.136] [basic_logger] [info] seconds: 0
+[2021-07-02 21:34:39.136] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 135326
+[2021-07-02 21:34:44.718] [basic_logger] [info] Get command from console
+[2021-07-02 21:34:44.718] [basic_logger] [info] Send request to proxy, type: 3, uid: 232, stamp: 140911
+[2021-07-02 21:34:44.721] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:34:44.721] [basic_logger] [info] Get data length from proxy, length: 15
+[2021-07-02 21:34:44.721] [basic_logger] [info] Get complete data from proxy, 15 bytes
+[2021-07-02 21:34:44.721] [basic_logger] [info] stamp: 140911
+[2021-07-02 21:34:44.721] [basic_logger] [info] seconds: 0
+[2021-07-02 21:34:44.721] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 140911
+[2021-07-02 21:36:49.989] [basic_logger] [info] Get command from console
+[2021-07-02 21:36:49.989] [basic_logger] [info] Send request to proxy, type: 3, uid: 232, stamp: 266182
+[2021-07-02 21:36:49.991] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:36:49.991] [basic_logger] [info] Get data length from proxy, length: 15
+[2021-07-02 21:36:49.991] [basic_logger] [info] Get complete data from proxy, 15 bytes
+[2021-07-02 21:36:49.991] [basic_logger] [info] stamp: 266182
+[2021-07-02 21:36:49.991] [basic_logger] [info] seconds: 0
+[2021-07-02 21:36:49.991] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 266182
+[2021-07-02 21:37:26.301] [basic_logger] [info] Get command from console
+[2021-07-02 21:37:26.301] [basic_logger] [info] Send request to proxy, type: 4, uid: 232, stamp: 302494
+[2021-07-02 21:37:26.305] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:37:26.305] [basic_logger] [info] Get data length from proxy, length: 18
+[2021-07-02 21:37:26.305] [basic_logger] [info] Get complete data from proxy, 18 bytes
+[2021-07-02 21:37:26.305] [basic_logger] [info] stamp: 302494
+[2021-07-02 21:37:26.305] [basic_logger] [info] seconds: 0
+[2021-07-02 21:37:26.305] [basic_logger] [info] Receive response, status:-1 uid: 232, stamp: 302494
+[2021-07-02 21:37:33.165] [basic_logger] [info] Get command from console
+[2021-07-02 21:37:33.165] [basic_logger] [info] Send request to proxy, type: 6, uid: 232, stamp: 309358
+[2021-07-02 21:37:33.168] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:37:33.168] [basic_logger] [info] Get data length from proxy, length: 12
+[2021-07-02 21:37:33.168] [basic_logger] [info] Get complete data from proxy, 12 bytes
+[2021-07-02 21:37:33.168] [basic_logger] [info] stamp: 309358
+[2021-07-02 21:37:33.168] [basic_logger] [info] seconds: 0
+[2021-07-02 21:37:33.168] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 309358
+[2021-07-02 21:37:41.116] [basic_logger] [info] Get command from console
+[2021-07-02 21:37:48.644] [basic_logger] [info] Get command from console
+[2021-07-02 21:37:48.644] [basic_logger] [info] Send request to proxy, type: 8, uid: 232, stamp: 324837
+[2021-07-02 21:37:48.647] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:37:48.647] [basic_logger] [info] Get data length from proxy, length: 9
+[2021-07-02 21:37:48.647] [basic_logger] [info] Get complete data from proxy, 9 bytes
+[2021-07-02 21:37:48.647] [basic_logger] [info] stamp: 324837
+[2021-07-02 21:37:48.647] [basic_logger] [info] seconds: 0
+[2021-07-02 21:37:48.647] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 324837
+[2021-07-02 21:37:53.916] [basic_logger] [info] Get command from console
+[2021-07-02 21:37:53.916] [basic_logger] [info] Send request to proxy, type: 3, uid: 232, stamp: 330109
+[2021-07-02 21:37:53.918] [basic_logger] [info] Get data type from proxy, type: 2
+[2021-07-02 21:37:53.918] [basic_logger] [info] Get data length from proxy, length: 12
+[2021-07-02 21:37:53.918] [basic_logger] [info] Get complete data from proxy, 12 bytes
+[2021-07-02 21:37:53.918] [basic_logger] [info] stamp: 330109
+[2021-07-02 21:37:53.918] [basic_logger] [info] seconds: 0
+[2021-07-02 21:37:53.918] [basic_logger] [info] Receive response, status:0 uid: 232, stamp: 330109
+[2021-07-02 21:38:04.173] [basic_logger] [info] Get command from console
+[2021-07-02 21:38:48.620] [basic_logger] [info] Get command from console
+[2021-07-02 21:38:58.652] [basic_logger] [info] Get command from console

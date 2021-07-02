@@ -199,9 +199,10 @@ void Display::DisplayResponseRankTop(ua_blackjack::Response& response) {
 void Display::DisplayResponseAddFriend(ua_blackjack::Response& response) {
     if (response.status() == -1) {
         if (response.args().size() > 0 && response.args()[0] == "none") {
-            std::cout << ":( Failed, Already in WaitingFriendList" << std::endl;
-        } else {
             std::cout << ":( AddFriend Failed, user doesn't exist" << std::endl;
+
+        } else {
+            std::cout << ":( Failed, Already in user's WaitingFriendList" << std::endl;
         }
         return;
     }
@@ -239,6 +240,8 @@ void Display::DisplayResponseFriendList(ua_blackjack::Response& response) {
     for (int i = 0; i < sz; ++i) {
         std::cout << response.args()[i] << std::endl;
     }
+
+    if (sz == 0) std::cout << "No available friend" << std::endl;
 }
 void Display::DisplayResponseWaitingFriendList(ua_blackjack::Response& response) {
     if (response.status() == -1) {
@@ -251,6 +254,8 @@ void Display::DisplayResponseWaitingFriendList(ua_blackjack::Response& response)
     for (int i = 0; i < sz; ++i) {
         std::cout << response.args()[i] << std::endl;
     }
+
+    if (sz == 0) std::cout << "No available waiting friend" << std::endl;
 }
 
 void Display::DisplayResponseMatchList(ua_blackjack::Response& response) {
@@ -264,6 +269,8 @@ void Display::DisplayResponseMatchList(ua_blackjack::Response& response) {
     for (int i = 0; i < sz; ++i) {
         std::cout << response.args()[i] << std::endl;
     }
+
+    if (sz == 0) std::cout << "No available match list" << std::endl;
 }
 
 void Display::DisplayResponseMatchInfo(ua_blackjack::Response& response) {
@@ -332,4 +339,31 @@ void Display::DisplayCards(int idx_, std::unordered_map<int, std::string>& idx2n
 
         std::cout << std::endl;
     }
+}
+
+void Display::DisplayHelp() {
+    std::cout << "  SignUp [name] [password]" << std::endl;
+    std::cout << "  Login [name] [password]" << std::endl;
+    std::cout << "  Logout" << std::endl;
+    std::cout << "  RoomList" << std::endl;
+    std::cout << "  JoinRoom [room id]" << std::endl;
+    std::cout << "  CreateRoom" << std::endl;
+    std::cout << "  QuickMatch" << std::endl;
+    std::cout << "  Ready" << std::endl;
+    std::cout << "  LeaveRoom" << std::endl;
+    std::cout << "  Bet [money]" << std::endl;
+    std::cout << "  Hit" << std::endl;
+    std::cout << "  Stand" << std::endl;
+    std::cout << "  Double" << std::endl;
+    std::cout << "  Surrender" << std::endl;
+    std::cout << "  RankMe" << std::endl;
+    std::cout << "  RankTop [number]" << std::endl;
+    std::cout << "  AddFriend [name]" << std::endl;
+    std::cout << "  AcceptFriend [name]" << std::endl;
+    std::cout << "  DeleteFriend [name]" << std::endl;
+    std::cout << "  FriendList" << std::endl;
+    std::cout << "  WaitingFriendList" << std::endl;
+    std::cout << "  MatchList" << std::endl;
+    std::cout << "  MatchInfo [match id]" << std::endl;
+    std::cout << "  Quit" << std::endl;
 }

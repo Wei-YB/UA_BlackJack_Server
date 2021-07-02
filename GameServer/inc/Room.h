@@ -19,7 +19,7 @@ namespace ua_blackjack
 
         class Room : std::enable_shared_from_this<Room>
         {
-        private:
+        public:
             BlackJackRoomID rid = -1;
 
         public:
@@ -27,7 +27,6 @@ namespace ua_blackjack
             using PalyerPointer = ua_blackjack::Game::Player::ptr;
             using PlayerList = std::list<PalyerPointer>;
 
-            bool isGameBegin = false; //对局是否开始
             inline BlackJackRoomID getRoomId(void) { return rid; }
             Room(BlackJackRoomID _rid, UidList &uids) : rid(_rid)
             {
@@ -56,22 +55,22 @@ namespace ua_blackjack
             };
             void showMessage(void) const;
             ua_blackjack::Game::Poker::ptr getPokerFromShuffledPokers(void);
-            inline void setExpire(void) { expired = true; };
-            inline bool isExpired(void) { return expired; };
 
             void judgeWinOrLose(void); //判断最后的输赢
             int setBettingMoney(BlackJackUID uid, BlackJackMoney money);
             void deleteRoom(void);
             ~Room();
             PlayerList playerList;
+            void reset(void);
 
         private:
             ua_blackjack::Game::ShuffledPokers::ptr shuffledPokers;
             BlackJackMoney dealerFinalWinMoney = 0;
-            bool expired = false; //房间是否已经解散
         };
     }
 }
 
 ua_blackjack::Game::Room::ptr malloOneRoom(BlackJackRoomID rid, UidList &uids);
 extern std::unordered_map<BlackJackRoomID, std::weak_ptr<ua_blackjack::Game::Room>> roomHashMap;
+extern std::queue<std::shared_ptr<ua_blackjack::Game::Room>> roomPool[];
+extern std::vector<std::shared_ptr<ua_blackjack::Game::Room>> roomLists;

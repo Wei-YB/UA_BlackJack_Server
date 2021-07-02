@@ -9,7 +9,8 @@
 #include <sstream>
 #include "GameProcess.h"
 std::unordered_map<BlackJackRoomID, std::weak_ptr<ua_blackjack::Game::Room>> roomHashMap;
-
+std::queue<std::shared_ptr<ua_blackjack::Game::Room>> roomPool[5];
+std::vector<std::shared_ptr<ua_blackjack::Game::Room>> roomLists;
 ua_blackjack::Game::Room::ptr malloOneRoom(BlackJackRoomID rid, UidList &uids)
 {
 
@@ -196,4 +197,15 @@ void ua_blackjack::Game::Room::deleteRoom(void)
 }
 ua_blackjack::Game::Room::~Room() //房间解散
 {
+}
+void ua_blackjack::Game::Room::reset(void)
+{
+    rid = -1;
+    dealerFinalWinMoney = 0;
+    for (auto player : playerList)
+    {
+        shuffledPokers->shuffle();
+        shuffledPokers->nowIndex = 0;
+        player->reset();
+    }
 }

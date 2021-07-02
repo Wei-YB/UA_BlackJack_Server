@@ -104,3 +104,15 @@ void ua_blackjack::Game::Player::showMessage(void) const
         poker->showMessage();
     }
 }
+void ua_blackjack::Game::Player::reset(void)
+{
+    pokerList.clear();
+    bettingMoney = 0;
+    uid = -1;
+    isDealer = false;  //用户是否为庄家
+    isStand = false;   //是否停牌
+    isQuit = false;    //是否退游
+    finalResult = WIN; //默认用户会赢
+    nickName = "";
+    room = -1;
+}

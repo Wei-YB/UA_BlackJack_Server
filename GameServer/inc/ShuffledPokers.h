@@ -16,7 +16,7 @@ namespace ua_blackjack
 
             ShuffledPokers(void);
             void showMessage(void) const;
-
+            void shuffle(void);
             std::vector<ua_blackjack::Game::Poker::ptr> pokers;
             int nowIndex = 0; //已发到的牌
         };

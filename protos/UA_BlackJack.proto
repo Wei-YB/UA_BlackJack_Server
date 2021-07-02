@@ -38,7 +38,7 @@ message Request {
         GET_MATCH_INFO = 29;
         MATCH_END = 30; //
         ADD_WAIT_FRIEND = 31;
-        DELETE_WAIT_FRIEND = 32;
+        DELETE_WAIT_FRIEND = 32;    
         GAME_START = 33;    //
     }
     optional RequestType requestType = 1;

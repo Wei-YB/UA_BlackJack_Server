@@ -21,32 +21,35 @@ Client::Client()
       uid_(-1),
       rid_(-1),
       epfd_(-1),
-      cmd2req_{{"SignUp", {ua_blackjack::Request::SIGNUP, 2}},
-               {"Login", {ua_blackjack::Request::LOGIN, 2}},
-               {"Logout", {ua_blackjack::Request::LOGOUT, 0}},
-               {"RoomList", {ua_blackjack::Request::ROOM_LIST, 0}},
-               {"JoinRoom", {ua_blackjack::Request::JOIN_ROOM, 1}},
-               {"CreateRoom", {ua_blackjack::Request::CREATE_ROOM, 0}},
-               {"QuickMatch", {ua_blackjack::Request::QUICK_MATCH, 0}},
-               {"Ready", {ua_blackjack::Request::READY, 0}},
-               {"LeaveRoom", {ua_blackjack::Request::LEAVE_ROOM, 0}},
-               {"Bet", {ua_blackjack::Request::BET, 1}},
-               {"Hit", {ua_blackjack::Request::HIT, 0}},
-               {"Stand", {ua_blackjack::Request::STAND, 0}},
-               {"Double", {ua_blackjack::Request::DOUBLE, 0}},
-               {"Surrender", {ua_blackjack::Request::SURRENDER, 0}},
-               {"Info", {ua_blackjack::Request::INFO, 0}},
-               {"RankMe", {ua_blackjack::Request::RANK_ME, 0}},
-               {"RankTop", {ua_blackjack::Request::RANK_TOP, 1}},
-               {"AddFriend", {ua_blackjack::Request::ADD_FRIEND, 1}},
-               {"AcceptFriend", {ua_blackjack::Request::ACCEPT_FRIEND, 1}},
-               {"DeleteFriend", {ua_blackjack::Request::DELETE_FRIEND, 1}},
-               {"DeleteWaitingFriend", {ua_blackjack::Request::DELETE_WAIT_FRIEND, 1}},
-               {"FriendList", {ua_blackjack::Request::LIST_FRIEND, 0}},
-               {"WaitingFriendList", {ua_blackjack::Request::LIST_WAITTING, 0}},
-               {"MatchList", {ua_blackjack::Request::LIST_MATCH, 0}},
-               {"MatchInfo", {ua_blackjack::Request::GET_MATCH_INFO, 1}},
-               {"Quit", {ua_blackjack::Request::INVAL, 0}}},
+      cmd2req_{
+          {"SignUp", {ua_blackjack::Request::SIGNUP, 2}},
+          {"Login", {ua_blackjack::Request::LOGIN, 2}},
+          {"Logout", {ua_blackjack::Request::LOGOUT, 0}},
+          {"RoomList", {ua_blackjack::Request::ROOM_LIST, 0}},
+          {"JoinRoom", {ua_blackjack::Request::JOIN_ROOM, 1}},
+          {"CreateRoom", {ua_blackjack::Request::CREATE_ROOM, 0}},
+          {"QuickMatch", {ua_blackjack::Request::QUICK_MATCH, 0}},
+          {"Ready", {ua_blackjack::Request::READY, 0}},
+          {"LeaveRoom", {ua_blackjack::Request::LEAVE_ROOM, 0}},
+          {"Bet", {ua_blackjack::Request::BET, 1}},
+          {"Hit", {ua_blackjack::Request::HIT, 0}},
+          {"Stand", {ua_blackjack::Request::STAND, 0}},
+          {"Double", {ua_blackjack::Request::DOUBLE, 0}},
+          {"Surrender", {ua_blackjack::Request::SURRENDER, 0}},
+          {"Info", {ua_blackjack::Request::INFO, 0}},
+          {"RankMe", {ua_blackjack::Request::RANK_ME, 0}},
+          {"RankTop", {ua_blackjack::Request::RANK_TOP, 1}},
+          {"AddFriend", {ua_blackjack::Request::ADD_FRIEND, 1}},
+          {"AcceptFriend", {ua_blackjack::Request::ACCEPT_FRIEND, 1}},
+          {"DeleteFriend", {ua_blackjack::Request::DELETE_FRIEND, 1}},
+          {"DeleteWaitingFriend", {ua_blackjack::Request::DELETE_WAIT_FRIEND, 1}},
+          {"FriendList", {ua_blackjack::Request::LIST_FRIEND, 0}},
+          {"WaitingFriendList", {ua_blackjack::Request::LIST_WAITTING, 0}},
+          {"MatchList", {ua_blackjack::Request::LIST_MATCH, 0}},
+          {"MatchInfo", {ua_blackjack::Request::GET_MATCH_INFO, 1}},
+          {"Quit", {ua_blackjack::Request::INVAL, 0}},
+          {"Help", {ua_blackjack::Request::INVAL, 0}},
+      },
       state_(OFFLINE),
       next_state_(OFFLINE),
       state2str_{{INVALID, "INVALID"},
@@ -579,6 +582,13 @@ void Client::ProcessCommand(Rio& rio) {
     if (args[0] == "Quit") {
         exit(EXIT_SUCCESS);
     }
+    if (args[0] == "Help") {
+        display_ins.DisplayHelp();
+        std::cout << "21Game "
+                  << "(" << state2str_[state_] << ")"
+                  << " > " << std::flush;
+        return;
+    }
 
     next_state_ = GetNextState(args[0]);
     if (next_state_ == INVALID) {
@@ -636,6 +646,7 @@ void Client::ProcessSocket(Rio& rio) {
     } else if (data_type == RESPONSE) {
         ua_blackjack::Response response;
         response.ParseFromString(data);
+        logger->info("stamp: {0}", response.stamp());
 
         if (DealTimeout(response)) return;
         alarm(0);
@@ -658,7 +669,7 @@ bool Client::DealTimeout(ua_blackjack::Response& response) {
     int64_t stamp = response.stamp();
     int64_t now = std::chrono::duration_cast<MilliSeconds>(SteadyClock::now() - start).count();
     int64_t sec = (now - stamp) / 1000.0;
-    logger->info("delay for uid: {}", sec);
+    logger->info("seconds: {0}", sec);
     if (sec >= TIME_OUT) {
         logger->info("timeout for uid: {}", response.uid());
         return true;

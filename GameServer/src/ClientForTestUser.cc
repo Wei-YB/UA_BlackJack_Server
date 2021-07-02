@@ -10,8 +10,10 @@
 #define STAMP_ASK_END 0X4
 void ua_blackjack::Game::ClientForTestUser::askBettingMoney(const BlackJackUID uid)
 {
-
-    //spdlog::info("Start betting rpc request uid {0}", uid);
+#ifdef LOG_ON
+    spdlog::info("Start betting rpc request uid {0}", uid);
+#endif
+    //
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);
@@ -40,7 +42,10 @@ void ua_blackjack::Game::ClientForTestUser::askBettingMoney(const BlackJackUID u
 
 void ua_blackjack::Game::ClientForTestUser::askHitOrStand(const BlackJackUID uid)
 {
-    //spdlog::info("Start ask hit uid {0}", uid);
+#ifdef LOG_ON
+    spdlog::info("Start ask hit uid {0}", uid);
+#endif
+    //
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);
@@ -85,19 +90,21 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const BlackJackUID uid, co
             ss << " ";
             ss << num;
             request.add_args(ss.str());
-
-            //spdlog::info("Start Update request args {0} uid {1}", ss.str(), notifyUser);
+#ifdef LOG_ON
+            spdlog::info("Start Update request args {0} uid {1}", ss.str(), notifyUser);
+#endif
+            //
         }
         else
         {
             spdlog::error("Player not exist!!! {0}", notifyUser);
-            exit(1);
+            //exit(1);
         }
     }
     else
     {
         spdlog::error("Player not exist!!! {0}", uid);
-        exit(1);
+        //exit(1);
     }
     // Call object to store rpc data
     AsyncClientCall *call = new AsyncClientCall;
@@ -137,18 +144,21 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const BlackJackUID uid, co
             ss << num;
 
             request.add_args(ss.str());
-            //spdlog::info("Start Update request args {0} uid {1}", ss.str(), notifyUser);
+#ifdef LOG_ON
+            spdlog::info("Start Update request args {0} uid {1}", ss.str(), notifyUser);
+#endif
+            //
         }
         else
         {
             spdlog::error("Player not exist!!! {0}", notifyUser);
-            exit(1);
+            //exit(1);
         }
     }
     else
     {
         spdlog::error("Player not exist!!! {0}", uid);
-        exit(1);
+        //exit(1);
     }
     // Call object to store rpc data
     AsyncClientCall *call = new AsyncClientCall;
@@ -196,7 +206,10 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const std::list<ua_blackja
                 }
             }
             request.add_args(ss.str());
-            //spdlog::info("Start Update request args {0} uid {1} index {2}", ss.str(), notifyUser, index);
+#ifdef LOG_ON
+            spdlog::info("Start Update request args {0} uid {1} index {2}", ss.str(), notifyUser, index);
+#endif
+            //
         }
     }
     else
@@ -218,8 +231,10 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const std::list<ua_blackja
 void ua_blackjack::Game::ClientForTestUser::askEnd(const BlackJackUID uid, FinalResultOfGame isWin)
 {
 
-    //spdlog::info("Start End request uid {0} iswin{1}", uid, isWin);
-
+    //
+#ifdef LOG_ON
+    spdlog::info("Start End request uid {0} iswin{1}", uid, isWin);
+#endif
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);
