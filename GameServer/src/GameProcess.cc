@@ -7,7 +7,7 @@ stCoRoutine_t *receiveSignalFromRPC;
 stCoRoutine_t *recoverystCo;
 int conditionForWaitingRpc; //接受rpc的信号量
 int conditionForClearRoom;  //清楚房间的信号量
-#define TIMEOUT_FOR_USER 30000
+#define TIMEOUT_FOR_USER -1
 uint64_t sumOfRoom = 0;
 int createstEnv_t(BlackJackRoomID roomID, UidList &uids) //创建协程
 {
@@ -41,8 +41,41 @@ void *createOneGame(void *arg) //开启一局游戏
     co_enable_hook_sys();
     stEnv_t *env = (stEnv_t *)arg;
 
-    //spdlog::info("GAME BEGIN");
-    auto room = malloOneRoom(env->roomID, env->uids); //创建一个房间
+//
+#ifdef LOG_ON
+    spdlog::info("GAME BEGIN");
+#endif
+    int playerSize = env->uids.size();
+
+    ua_blackjack::Game::Room::ptr room;
+    if (roomPool[playerSize - 2].size() == 0)
+    {
+        room = malloOneRoom(env->roomID, env->uids); //创建一个房间
+        roomLists.push_back(room);
+    }
+    else
+    {
+        room = roomPool[playerSize - 2].front();
+        room->rid = env->roomID;
+        auto iterUids = env->uids.begin();
+        auto iterPlayers = room->playerList.begin();
+        while (iterUids != env->uids.end())
+        {
+            (*iterPlayers)->uid = *iterUids;
+            (*iterPlayers)->setRoom(room->rid);
+            playerHashMap[*iterUids] = (*iterPlayers);
+            if (isProgramRelase == true)
+            {
+                ua_blackjack::Game::ClientForDatebase::getInstance().askPlayerNickName(*iterUids); //设置nickname
+            }
+            iterUids++;
+            iterPlayers++;
+        }
+        room->playerList.front()->isDealer = true;
+
+        roomHashMap[env->roomID] = room;
+        roomPool[playerSize - 2].pop();
+    }
     int conRet = 0;
     //选择筹码
     for (auto &player : room->playerList)
@@ -73,8 +106,10 @@ void *createOneGame(void *arg) //开启一局游戏
         {
             auto money = ((BetMoneyArgument *)env->arg)->money;
             player->bettingMoney = money;
-            //spdlog::info("uid {0:d} set betting money", player->uid);
-
+            //
+#ifdef LOG_ON
+            spdlog::info("uid {0:d} set betting money", player->uid);
+#endif
             continue;
         }
     }
@@ -129,12 +164,18 @@ void *createOneGame(void *arg) //开启一局游戏
                 {
                     player->hitPoker();
                     UpdateAll(room->playerList, player->uid); //抽牌，更新下
-                    //spdlog::info("uid {0:d} hit", player->uid);
+//
+#ifdef LOG_ON
+                    spdlog::info("uid {0:d} hit", player->uid);
+#endif
                 }
                 else if (env->operateId == OPERATE_STAND)
                 {
                     player->standPoker();
-                    //spdlog::info("uid {0:d} stand", player->uid);
+//
+#ifdef LOG_ON
+                    spdlog::info("uid {0:d} stand", player->uid);
+#endif
                 }
                 continue;
             }
@@ -195,11 +236,17 @@ void *recoveryUnusedCo(void *arg) //回收协程的协程
         else
         {
             BlackJackRoomID roomid = unUsedstEnvRoomID.front();
+            auto room = roomHashMap[roomid].lock();
+            int playerSize = room->playerList.size();
             spdlog::info("start delete room {0:d}", roomid);
             unUsedstEnvRoomID.pop();
             free(roomEnvirHashMap[roomid]->arg);
             co_release(roomEnvirHashMap[roomid]->coRoutine); //释放协程资源
             roomEnvirHashMap.erase(roomid);
+
+            room->reset(); //重置房间
+            roomPool[playerSize - 2].push(room);
+
             spdlog::info("complete delete room {0:d}", roomid);
         }
     }

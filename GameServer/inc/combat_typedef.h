@@ -38,7 +38,7 @@ struct BetMoneyArgument
     BlackJackUID uid;
     BlackJackMoney money;
 };
-
+#define LOG_ON
 extern std::string ProxyServiceAddr;
 extern std::string LobbyServiceAddr;
 extern std::string DatabaseServiceAddr;

@@ -104,7 +104,12 @@ void ua_blackjack::Game::createServiece(void)
                     {
                         std::stringstream ss;
                         ss << "now room num " << roomEnvirHashMap.size();
-                        ss << " sum room num " << sumOfRoom;
+                        ss << " sum room num " << sumOfRoom << std::endl;
+
+                        for (int i = 0; i < 5; i++)
+                        {
+                            ss << "room pool " << i + 2 << " size: " << roomPool[i].size() << std::endl;
+                        }
                         int ret = send(fd, ss.str().c_str(), ss.str().size(), 0);
                         if (ret <= 0) //客户端断开
                             break;
