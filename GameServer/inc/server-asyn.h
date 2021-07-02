@@ -107,12 +107,13 @@ namespace ua_blackjack
             auto uid = request_.uid();
             auto stamp = request_.stamp();
             auto args = request_.args();
-            reply_.set_status(0);
+            reply_.set_status(-1);
             reply_.set_uid(uid);
             reply_.set_stamp(stamp);
             spdlog::info("type = {0:d} uid = {1:d} stamp = {2:d}", type, uid, stamp);
             if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //真正的创建房间code
             {
+              reply_.set_status(0);
               UidList uids;
               BlackJackRoomID roomid = atoi(args[0].c_str());
 
@@ -128,6 +129,7 @@ namespace ua_blackjack
 
             else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //退出房间
             {
+              reply_.set_status(0);
               if (auto playerPtr = playerHashMap[uid].lock())
               {
                 spdlog::info("{0:d} quit by itself", uid);
@@ -140,26 +142,32 @@ namespace ua_blackjack
             }
             else if (type == ua_blackjack::Request_RequestType::Request_RequestType_DOUBLE) //双倍
             {
+
               if (auto playerPtr = playerHashMap[uid].lock())
               {
+                reply_.set_status(0);
                 spdlog::info("{0:d} double by itself", uid);
 
                 playerPtr->bettingMoney *= 2;
               }
               else
               {
+                reply_.set_status(-1);
                 spdlog::error("Double error uid {0:d}   not existed in any room", uid);
               }
             }
             else if (type == ua_blackjack::Request_RequestType::Request_RequestType_SURRENDER) //投降
             {
+
               if (auto playerPtr = playerHashMap[uid].lock())
               {
+                reply_.set_status(0);
                 spdlog::info("{0:d} surrond by itself", uid);
                 playerPtr->bettingMoney *= 2;
               }
               else
               {
+                reply_.set_status(-1);
                 spdlog::error("Surrond error uid {0:d}   not existed in any room", uid);
               }
             }
