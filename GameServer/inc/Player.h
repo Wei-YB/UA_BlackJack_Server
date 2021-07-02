@@ -43,6 +43,7 @@ namespace ua_blackjack
             inline void setRoom(BlackJackRoomID _room) { this->room = _room; }
             inline BlackJackRoomID getRoom(void) { return room; };
             void reset(void);
+            bool isWaitingReply = false;
 
         private:
             BlackJackRoomID room = -1; //用户当前所在房间，在一局对局当中，用户的room是不能被更改的

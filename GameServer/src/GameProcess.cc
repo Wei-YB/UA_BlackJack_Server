@@ -92,8 +92,10 @@ void *createOneGame(void *arg) //开启一局游戏
         ua_blackjack::Game::ClientForTestUser::getInstance().askBettingMoney(player->uid);
         myConditionSignal(conditionForWaitingRpc); //有机会唤醒
         conRet = 0;
+        player->isWaitingReply = true;
         conRet = myConditionWait(env->cond, TIMEOUT_FOR_USER); //30秒内应收到信号
-        if (conRet == 0)                                       //超时未收到信号，认为玩家已退出游戏
+        player->isWaitingReply = false;
+        if (conRet == 0) //超时未收到信号，认为玩家已退出游戏
         {
             player->quit();             //托管
             player->isStand = true;     //玩家停牌
@@ -148,8 +150,10 @@ void *createOneGame(void *arg) //开启一局游戏
             ua_blackjack::Game::ClientForTestUser::getInstance().askHitOrStand(player->uid);
             myConditionSignal(conditionForWaitingRpc); //有机会唤醒
             conRet = 0;
+            player->isWaitingReply = true;
             conRet = myConditionWait(env->cond, TIMEOUT_FOR_USER); //30秒内应收到信号
-            if (conRet == 0)                                       //超时未收到信号，认为玩家已退出游戏
+            player->isWaitingReply = false;
+            if (conRet == 0) //超时未收到信号，认为玩家已退出游戏
             {
                 player->quit(); //托管
                 player->hitPoker();

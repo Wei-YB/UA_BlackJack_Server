@@ -16,7 +16,10 @@
  *
  */
 #pragma once
+#include "GameProcess.h"
+#include "MycondintonCo.h"
 #include "combat_typedef.h"
+#include <memory>
 #include <iostream>
 #include <memory>
 #include <string>
@@ -32,6 +35,7 @@
 #endif
 #include "UA_BlackJack.pb.h"
 #include "spdlog/spdlog.h"
+
 int createstEnv_t(BlackJackRoomID roomID, UidList &uids);
 void *createOneGame(void *arg);
 void *waitingSignalFromOtherModule(void *arg);
@@ -49,7 +53,18 @@ using ua_blackjack::GameService;
 using ua_blackjack::Request;
 using ua_blackjack::Response;
 /*************************/
-
+struct stEnv_t
+{
+  typedef std::shared_ptr<stEnv_t> ptr;
+  stCoRoutine_t *coRoutine; //协程句柄
+  BlackJackRoomID roomID;   //创建的房间号
+  UidList &uids;            //所有玩家的uid
+  int cond;                 //信号量
+  OperateID operateId;      //操作码
+  void *arg;                //操作数
+  stEnv_t(BlackJackRoomID _roomID, UidList &_uids) : roomID(_roomID), uids(_uids){};
+};
+extern std::unordered_map<BlackJackRoomID, std::shared_ptr<stEnv_t>> roomEnvirHashMap; //roomid和句柄的hash映射
 namespace ua_blackjack
 {
   namespace Game
@@ -134,6 +149,12 @@ namespace ua_blackjack
               {
                 spdlog::info("{0:d} quit by itself", uid);
                 playerPtr->quit(); //托管
+                if (playerPtr->isWaitingReply == true)
+                {
+                  int roomId = playerPtr->getRoom();
+                  auto env = roomEnvirHashMap[roomId];
+                  myConditionSignal(env->cond);
+                }
               }
               else
               {
@@ -147,7 +168,6 @@ namespace ua_blackjack
               {
                 reply_.set_status(0);
                 spdlog::info("{0:d} double by itself", uid);
-
                 playerPtr->bettingMoney *= 2;
               }
               else
@@ -163,13 +183,26 @@ namespace ua_blackjack
               {
                 reply_.set_status(0);
                 spdlog::info("{0:d} surrond by itself", uid);
-                playerPtr->bettingMoney *= 2;
+                playerPtr->bettingMoney /= 2;
+                playerPtr->isStand = true;
+                playerPtr->finalResult = FinalResultOfGame::LOSE;
+                if (playerPtr->isWaitingReply == true)
+                {
+                  int roomId = playerPtr->getRoom();
+                  auto env = roomEnvirHashMap[roomId];
+                  myConditionSignal(env->cond);
+                }
               }
               else
               {
                 reply_.set_status(-1);
                 spdlog::error("Surrond error uid {0:d}   not existed in any room", uid);
               }
+            }
+            else
+            {
+              reply_.set_status(-1);
+              spdlog::error("unexpected command uid {0:d}  ", uid);
             }
 
             status_ = FINISH;
