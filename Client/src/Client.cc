@@ -16,7 +16,49 @@ using namespace ua_blackjack::robust_io;
 
 static Display& display_ins = Display::DisplayInstance();
 
-std::shared_ptr<spdlog::logger> logger = nullptr;
+Client::Client()
+    : sfd_(-1),
+      uid_(-1),
+      rid_(-1),
+      epfd_(-1),
+      cmd2req_{{"SignUp", {ua_blackjack::Request::SIGNUP, 2}},
+               {"Login", {ua_blackjack::Request::LOGIN, 2}},
+               {"Logout", {ua_blackjack::Request::LOGOUT, 0}},
+               {"RoomList", {ua_blackjack::Request::ROOM_LIST, 0}},
+               {"JoinRoom", {ua_blackjack::Request::JOIN_ROOM, 1}},
+               {"CreateRoom", {ua_blackjack::Request::CREATE_ROOM, 0}},
+               {"QuickMatch", {ua_blackjack::Request::QUICK_MATCH, 0}},
+               {"Ready", {ua_blackjack::Request::READY, 0}},
+               {"LeaveRoom", {ua_blackjack::Request::LEAVE_ROOM, 0}},
+               {"Bet", {ua_blackjack::Request::BET, 1}},
+               {"Hit", {ua_blackjack::Request::HIT, 0}},
+               {"Stand", {ua_blackjack::Request::STAND, 0}},
+               {"Double", {ua_blackjack::Request::DOUBLE, 0}},
+               {"Surrender", {ua_blackjack::Request::SURRENDER, 0}},
+               {"Info", {ua_blackjack::Request::INFO, 0}},
+               {"RankMe", {ua_blackjack::Request::RANK_ME, 0}},
+               {"RankTop", {ua_blackjack::Request::RANK_TOP, 1}},
+               {"AddFriend", {ua_blackjack::Request::ADD_FRIEND, 1}},
+               {"AcceptFriend", {ua_blackjack::Request::ACCEPT_FRIEND, 1}},
+               {"DeleteFriend", {ua_blackjack::Request::DELETE_FRIEND, 1}},
+               {"DeleteWaitingFriend", {ua_blackjack::Request::DELETE_WAIT_FRIEND, 1}},
+               {"FriendList", {ua_blackjack::Request::LIST_FRIEND, 0}},
+               {"WaitingFriendList", {ua_blackjack::Request::LIST_WAITTING, 0}},
+               {"MatchList", {ua_blackjack::Request::LIST_MATCH, 0}},
+               {"MatchInfo", {ua_blackjack::Request::GET_MATCH_INFO, 1}},
+               {"Quit", {ua_blackjack::Request::INVAL, 0}}},
+      state_(OFFLINE),
+      next_state_(OFFLINE),
+      state2str_{{INVALID, "INVALID"},
+                 {OFFLINE, "OFFLINE"},
+                 {ONLINE, "ONLINE"},
+                 {INROOM_UNREADY, "INROOM_UNREADY"},
+                 {INROOM_READY, "INROOM_READY"},
+                 {INGAME_IDLE, "INGAME_IDLE"},
+                 {INGAME_TURN, "INGAME_TURN"}},
+      idx_(0),
+      request_type_(ua_blackjack::Request::INVAL),
+      dealer_(false) {}
 
 int Client::Connect(const char* host, const char* service, int type) {
     struct addrinfo hints;
@@ -112,7 +154,8 @@ ua_blackjack::Request Client::ConstructRequest(const std::vector<std::string>& a
     auto type = cmd2req_[args[0]].first;
     request.set_requesttype(type);
     request.set_uid(uid_);
-    request.set_stamp(std::time(nullptr));
+    int64_t timestamp = std::chrono::duration_cast<MilliSeconds>(SteadyClock::now() - start).count();
+    request.set_stamp(timestamp);
     for (int i = 1; i < args.size(); ++i) {
         request.add_args(args[i]);
     }
@@ -554,6 +597,8 @@ void Client::ProcessCommand(Rio& rio) {
 
     logger->info("Send request to proxy, type: {0}, uid: {1}, stamp: {2}", request.requesttype(), request.uid(),
                  request.stamp());
+
+    alarm(TIME_OUT);
 }
 
 void Client::ProcessSocket(Rio& rio) {
@@ -591,6 +636,10 @@ void Client::ProcessSocket(Rio& rio) {
     } else if (data_type == RESPONSE) {
         ua_blackjack::Response response;
         response.ParseFromString(data);
+
+        if (DealTimeout(response)) return;
+        alarm(0);
+
         ProcessResponse(response);
     } else {
         logger->error("ListenProxy: Wrong data type");
@@ -603,6 +652,17 @@ void Client::ProcessSocket(Rio& rio) {
     std::cout << "21Game "
               << "(" << state2str_[state_] << ")"
               << " > " << std::flush;
+}
+
+bool Client::DealTimeout(ua_blackjack::Response& response) {
+    int64_t stamp = response.stamp();
+    int64_t now = std::chrono::duration_cast<MilliSeconds>(SteadyClock::now() - start).count();
+    int64_t sec = (now - stamp) / 1000.0;
+    if (sec >= TIME_OUT) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 void Client::Run(const char* ip, const char* port) {
@@ -645,16 +705,4 @@ void Client::Run(const char* ip, const char* port) {
             }
         }
     }
-}
-
-int main(int argc, char* argv[]) {
-    assert(argc == 4);
-
-    logger = spdlog::basic_logger_mt("basic_logger", argv[3]);
-    logger->flush_on(spdlog::level::trace);
-
-    Client client;
-    client.Run(argv[1], argv[2]);
-
-    return 0;
 }
