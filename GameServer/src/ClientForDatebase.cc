@@ -5,7 +5,9 @@
 #define STAMP_GET_NICKNAME 123456
 void ua_blackjack::Game::ClientForDatebase::matchEnd(const std::list<ua_blackjack::Game::Player::ptr> playerList)
 {
-    //spdlog::info("Start database match end request");
+#ifdef LOG_ON
+    spdlog::info("Start database match end request");
+#endif
     std::chrono::time_point<std::chrono::system_clock, std::chrono::milliseconds> tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now()); //获取当前时间点
     std::time_t timestamp = tp.time_since_epoch().count();                                                                                                                        //计算距离1970-1-1,00:00的时间长度
     std::stringstream ss;
@@ -43,7 +45,10 @@ void ua_blackjack::Game::ClientForDatebase::matchEnd(const std::list<ua_blackjac
 
 void ua_blackjack::Game::ClientForDatebase::askPlayerNickName(const BlackJackUID uid)
 {
-    //spdlog::info("Start database nickname request");
+#ifdef LOG_ON
+    spdlog::info("Start database nickname request");
+#endif
+    //
     std::chrono::time_point<std::chrono::system_clock, std::chrono::milliseconds> tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now()); //获取当前时间点
     std::time_t timestamp = tp.time_since_epoch().count();                                                                                                                        //计算距离1970-1-1,00:00的时间长度
     std::stringstream ss;

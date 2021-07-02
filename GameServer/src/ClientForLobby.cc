@@ -4,7 +4,10 @@
 #include <sstream>
 void ua_blackjack::Game::ClientForLobby::matchEnd(const BlackJackRoomID roomid)
 {
-    //spdlog::info("Start lobby match end request");
+#ifdef LOG_ON
+    spdlog::info("Start lobby match end request");
+#endif
+
     Request request;
     std::stringstream ss;
     ss << roomid;

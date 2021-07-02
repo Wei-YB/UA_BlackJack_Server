@@ -11,6 +11,12 @@ ua_blackjack::Game::ShuffledPokers::ShuffledPokers()
     auto rng = std::default_random_engine(seed);
     std::shuffle(pokers.begin(), pokers.end(), rng);
 }
+void ua_blackjack::Game::ShuffledPokers::shuffle(void)
+{
+    auto seed = std::chrono::system_clock::now().time_since_epoch().count();
+    auto rng = std::default_random_engine(seed);
+    std::shuffle(pokers.begin(), pokers.end(), rng);
+}
 void ua_blackjack::Game::ShuffledPokers::showMessage(void) const
 {
     spdlog::info("ShuffledMessage-");
