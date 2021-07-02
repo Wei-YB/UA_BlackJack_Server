@@ -29,8 +29,8 @@ requestTypeToModule = {
     {Request::CREATE_ROOM, BackEndModule::Lobby},
     {Request::QUICK_MATCH, BackEndModule::Lobby},
     {Request::READY, BackEndModule::Lobby},
+    {Request::LEAVE_ROOM, BackEndModule::Lobby},
     // Room request
-    {Request::LEAVE_ROOM, BackEndModule::Room},
     {Request::BET, BackEndModule::Room},
     {Request::HIT, BackEndModule::Room},
     {Request::STAND, BackEndModule::Room},

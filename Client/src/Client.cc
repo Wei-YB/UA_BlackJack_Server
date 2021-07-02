@@ -658,7 +658,9 @@ bool Client::DealTimeout(ua_blackjack::Response& response) {
     int64_t stamp = response.stamp();
     int64_t now = std::chrono::duration_cast<MilliSeconds>(SteadyClock::now() - start).count();
     int64_t sec = (now - stamp) / 1000.0;
+    logger->info("delay for uid: {}", sec);
     if (sec >= TIME_OUT) {
+        logger->info("timeout for uid: {}", response.uid());
         return true;
     } else {
         return false;

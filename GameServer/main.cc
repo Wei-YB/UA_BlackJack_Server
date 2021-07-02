@@ -150,7 +150,7 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    {
+    {   // 配置文件路径可以作为命令行参数？
         std::string configFilePath = "../../GameServer/game.config";
 
         std::ifstream _file;
@@ -208,7 +208,7 @@ int main(int argc, char *argv[])
     std::cout << "gameRpcAddr = " << gameRpcAddr << std::endl;
     std::cout << "start_daemon..." << std::endl;
     start_daemon();
-
+    // log路径感觉可以写进config文件或者作为命令行参数
     auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", "logs/async_log.log");
     spdlog::set_default_logger(async_file);
     spdlog::flush_on(spdlog::level::trace);
@@ -216,7 +216,7 @@ int main(int argc, char *argv[])
 
     std::thread thread_ = std::thread(&ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc, &ua_blackjack::Game::ClientForTestUser::getInstance());
     std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
-    std::thread threadReceiveRestartCommand = std::thread(&ua_blackjack::Game::createServiece);
+    std::thread threadReceiveRestartCommand = std::thread(&ua_blackjack::Game::createServiece); // 这个线程不用join吗
 
     ua_blackjack::Game::ServerImpl rpcServer;
     rpcServer.Run();
