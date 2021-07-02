@@ -636,6 +636,7 @@ void Client::ProcessSocket(Rio& rio) {
     } else if (data_type == RESPONSE) {
         ua_blackjack::Response response;
         response.ParseFromString(data);
+        logger->info("stamp: {0}", response.stamp());
 
         if (DealTimeout(response)) return;
         alarm(0);
@@ -658,6 +659,7 @@ bool Client::DealTimeout(ua_blackjack::Response& response) {
     int64_t stamp = response.stamp();
     int64_t now = std::chrono::duration_cast<MilliSeconds>(SteadyClock::now() - start).count();
     int64_t sec = (now - stamp) / 1000.0;
+    logger->info("seconds: {0}", sec);
     if (sec >= TIME_OUT) {
         return true;
     } else {
