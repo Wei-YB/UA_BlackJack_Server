@@ -25,6 +25,8 @@ public:
                       std::unordered_map<std::string, int> &name2idx_, std::string &name_,
                       std::vector<std::pair<int, int>> *cards_, bool dealer_);
 
+    void DisplayHelp();
+
 private:
     Display() = default;
 
