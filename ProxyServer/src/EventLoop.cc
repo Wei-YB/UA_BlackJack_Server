@@ -19,13 +19,13 @@
 using namespace Net;
 
 Net::EventsSource::EventsSource(FileDesc fd, EventLoop *loop,
-                        const std::function<int()> &inEventCallBack,
-                        const std::function<int()> &outEventCallBack,
-                        const std::function<int()> &errEventCallBack)
-                        : fd_(fd), loop_(loop),
-                        inEventCallBack_(inEventCallBack),
-                        outEventCallBack_(outEventCallBack),
-                        errEventCallBack_(errEventCallBack) {}
+                                const std::function<int()> &inEventCallBack,
+                                const std::function<int()> &outEventCallBack,
+                                const std::function<int()> &errEventCallBack)
+    : fd_(fd), loop_(loop),
+      inEventCallBack_(inEventCallBack),
+      outEventCallBack_(outEventCallBack),
+      errEventCallBack_(errEventCallBack) {}
 
 int Net::EventsSource::HandleEvents(Event events)
 {
@@ -33,17 +33,17 @@ int Net::EventsSource::HandleEvents(Event events)
     if (events & EV_IN)
     {
         logger_ptr->info("In main thread: On input event from fd: {}", fd_);
-        ret = inEventCallBack_() == -1 ? -1 : ret; 
+        ret = inEventCallBack_() == -1 ? -1 : ret;
     }
     if (events & EV_OUT)
     {
         logger_ptr->info("In main thread: On onput event from fd: {}", fd_);
-        ret = outEventCallBack_() == -1 ? -1 : ret; 
+        ret = outEventCallBack_() == -1 ? -1 : ret;
     }
     if (events & EV_ERR)
     {
         logger_ptr->info("In main thread: On error event from fd: {}", fd_);
-        ret = errEventCallBack_() == -1 ? -1 : ret; 
+        ret = errEventCallBack_() == -1 ? -1 : ret;
     }
     return ret;
 }
@@ -63,7 +63,7 @@ int Net::EventsSource::Close()
     return loop_->del(shared_from_this());
 }
 
-FileDesc Net::EventsSource::fd() const 
+FileDesc Net::EventsSource::fd() const
 {
     return fd_;
 }
@@ -77,20 +77,19 @@ Net::EventLoop::EventLoop(int max_events) : maxEvents_(max_events)
     if ((events_ = new struct epoll_event[maxEvents_]) == NULL)
     {
         close(epollfd_);
-        throw "EventLoop: fail to assign epoll event array.\n";        
+        throw "EventLoop: fail to assign epoll event array.\n";
     }
 }
 
-Net::EventLoop::~EventLoop() 
+Net::EventLoop::~EventLoop()
 {
-    delete [] events_;
+    delete[] events_;
     close(epollfd_);
 }
 
 int Net::EventLoop::add(std::shared_ptr<EventsSource> evsSource)
 {
-    if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end() 
-        || eventsCnt_ >= maxEvents_)
+    if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end() || eventsCnt_ >= maxEvents_)
     {
         return -1;
     }
@@ -133,7 +132,7 @@ int Net::EventLoop::del(std::shared_ptr<EventsSource> evsSource)
         eventsCnt_--;
         return 0;
     }
-    
+
     return -1;
 }
 
@@ -156,7 +155,7 @@ int Net::EventLoop::loopOnce(int timeout)
     for (int i = 0; i < nfds; ++i)
     {
         int sockfd = events_[i].data.fd;
-        int events = events_[i].events;  
+        int events = events_[i].events;
         if (fdToEventsSource_.find(sockfd) == fdToEventsSource_.end())
         {
             continue;

@@ -21,10 +21,10 @@
 #include "UA_BlackJack.grpc.pb.h"
 #include "UA_BlackJack.pb.h"
 
-using ua_blackjack::LobbyService;
 using ua_blackjack::GameService;
-using ua_blackjack::SocialService;
+using ua_blackjack::LobbyService;
 using ua_blackjack::PlayerService;
+using ua_blackjack::SocialService;
 
 bool flag = false;
 
@@ -35,7 +35,7 @@ void stop_server(int)
 
 const char *path_to_pid_file = "/tmp/ua_blackjack/proxy.pid";
 
-static void ReadConfig(const char *config_path, 
+static void ReadConfig(const char *config_path,
                        std::unordered_map<std::string, std::string> &config)
 {
     std::ifstream fin(config_path, std::ifstream::in);
@@ -67,7 +67,7 @@ static void Deamonize(const std::unordered_map<std::string, std::string> &config
     }
     if (pid > 0)
         exit(EXIT_SUCCESS);
-  
+
     if (setsid() < 0)
     {
         std::cerr << "In deamonizing: fail to setsid()." << std::endl;
@@ -88,7 +88,7 @@ static void Deamonize(const std::unordered_map<std::string, std::string> &config
     {
         exit(EXIT_SUCCESS);
     }
-    
+
     logger_flush_on();
     set_logger_name(config.find("logger_name")->second);
     set_log_path(config.find("log_path")->second);
@@ -102,7 +102,7 @@ static void Deamonize(const std::unordered_map<std::string, std::string> &config
         exit(EXIT_FAILURE);
     }
     pid = getpid();
-    
+
     char buf[64];
     int len = sprintf(buf, "%d", pid);
     write(pid_fd, buf, len);
@@ -130,9 +130,9 @@ int main(int argc, char **argv)
         exit(0);
     }
 
-    // 
+    //
     if (std::string(argv[2]) == "start")
-    {   // check whether the service is already startted
+    { // check whether the service is already startted
         int fd = open(path_to_pid_file, O_RDWR, S_IRWXU);
         char buf[64];
         memset(buf, '\0', sizeof(buf));
@@ -183,7 +183,7 @@ int main(int argc, char **argv)
     std::shared_ptr<ServiceClient> roomClient = std::make_shared<ConcreteServiceClient<GameService>>("room", config["roomAddress"]);
     std::shared_ptr<ServiceClient> socialClient = std::make_shared<ConcreteServiceClient<SocialService>>("social", config["socialAddress"]);
     std::shared_ptr<ServiceClient> playerClient = std::make_shared<ConcreteServiceClient<PlayerService>>("player", config["playerAddress"]);
-  
+
     logger_ptr->info("In main thread: Successfully create four rpc clients.");
 
     std::shared_ptr<ProxyServer> proxyServer = std::make_shared<ProxyServer>(config.find("host")->second.c_str(),
@@ -194,27 +194,27 @@ int main(int argc, char **argv)
     {
         switch (iter->second)
         {
-            case BackEndModule::Lobby:
-            {
-                proxyServer->RegisterServiceClient(iter->first, lobbyClient);
-                break;
-            }
-            case BackEndModule::Room:
-            {
-                proxyServer->RegisterServiceClient(iter->first, roomClient);
-                break;
-            }
-            case BackEndModule::Social:
-            {
-                proxyServer->RegisterServiceClient(iter->first, socialClient);
-                break;
-            }
-            case BackEndModule::Player:
-            {
-                proxyServer->RegisterServiceClient(iter->first, playerClient);
-            }
-            default:
-                break;
+        case BackEndModule::Lobby:
+        {
+            proxyServer->RegisterServiceClient(iter->first, lobbyClient);
+            break;
+        }
+        case BackEndModule::Room:
+        {
+            proxyServer->RegisterServiceClient(iter->first, roomClient);
+            break;
+        }
+        case BackEndModule::Social:
+        {
+            proxyServer->RegisterServiceClient(iter->first, socialClient);
+            break;
+        }
+        case BackEndModule::Player:
+        {
+            proxyServer->RegisterServiceClient(iter->first, playerClient);
+        }
+        default:
+            break;
         }
     }
 
@@ -236,8 +236,6 @@ int main(int argc, char **argv)
     ProxyRpcServer gRpcServer(config.find("proxyAddress")->second, proxyServer);
     proxyServer->SetClientResponseCallBack(std::bind(&ProxyRpcServer::OnClientResponse, &gRpcServer, std::placeholders::_1));
     std::thread gRpcServerThread = std::thread(&ProxyRpcServer::Run, &gRpcServer);
-
-
 
     logger_ptr->info("In main thread: Four rpc client threads start.");
 #endif

@@ -9,6 +9,7 @@
 #include <sstream>
 #include "GameProcess.h"
 std::unordered_map<BlackJackRoomID, std::weak_ptr<ua_blackjack::Game::Room>> roomHashMap;
+
 ua_blackjack::Game::Room::ptr malloOneRoom(BlackJackRoomID rid, UidList &uids)
 {
 
@@ -59,7 +60,6 @@ void ua_blackjack::Game::Room::judgeWinOrLose(void) //判断最后的输赢
     {
         dealer->hitPoker(); //抽牌
         UpdateAll(playerList, dealer->uid);
-        dealer->showMessage();
         int val = dealer->pokerList.back()->getValue() % 13 + 1;
         if (val == 1) //ace
         {
@@ -174,7 +174,7 @@ void ua_blackjack::Game::Room::deleteRoom(void)
     spdlog::info("game over");
     for (auto &player : playerList)
     {
-        player->showMessage();
+        //player->showMessage();
     }
     for (auto &player : playerList)
     {
@@ -187,8 +187,11 @@ void ua_blackjack::Game::Room::deleteRoom(void)
     }
 
     /*************存储数据到数据库**************/
-    ua_blackjack::Game::ClientForDatebase::getInstance().matchEnd(this->playerList); //向数据库发送
-    ua_blackjack::Game::ClientForLobby::getInstance().matchEnd(this->getRoomId());   //向lobby发送
+    if (isProgramRelase == true)
+    {
+        ua_blackjack::Game::ClientForDatebase::getInstance().matchEnd(this->playerList); //向数据库发送
+        ua_blackjack::Game::ClientForLobby::getInstance().matchEnd(this->getRoomId());   //向lobby发送
+    }
     /*************存储数据到数据库**************/
 }
 ua_blackjack::Game::Room::~Room() //房间解散

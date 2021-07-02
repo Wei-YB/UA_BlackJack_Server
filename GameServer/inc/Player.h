@@ -27,7 +27,7 @@ namespace ua_blackjack
             bool isStand = false;                //是否停牌
             bool isQuit = false;                 //是否退游
             FinalResultOfGame finalResult = WIN; //默认用户会赢
-            std::string nickNmae;
+            std::string nickName;
 
             int getAccumulateOfPoker(void) const;     //获取用户当前手头的牌的大小
             void hitPoker(void);                      //用户从牌堆中拿取一张牌

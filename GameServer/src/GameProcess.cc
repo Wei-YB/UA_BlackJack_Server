@@ -7,9 +7,11 @@ stCoRoutine_t *receiveSignalFromRPC;
 stCoRoutine_t *recoverystCo;
 int conditionForWaitingRpc; //接受rpc的信号量
 int conditionForClearRoom;  //清楚房间的信号量
-#define TIMEOUT_FOR_USER -1
+#define TIMEOUT_FOR_USER 30000
+uint64_t sumOfRoom = 0;
 int createstEnv_t(BlackJackRoomID roomID, UidList &uids) //创建协程
 {
+    sumOfRoom++;
     std::stringstream ss;
     ss << " roomid = " << roomID;
     ss << " uids = ";
@@ -39,7 +41,7 @@ void *createOneGame(void *arg) //开启一局游戏
     co_enable_hook_sys();
     stEnv_t *env = (stEnv_t *)arg;
 
-    spdlog::info("GAME BEGIN");
+    //spdlog::info("GAME BEGIN");
     auto room = malloOneRoom(env->roomID, env->uids); //创建一个房间
     int conRet = 0;
     //选择筹码
@@ -71,7 +73,7 @@ void *createOneGame(void *arg) //开启一局游戏
         {
             auto money = ((BetMoneyArgument *)env->arg)->money;
             player->bettingMoney = money;
-            spdlog::info("uid {0:d} set betting money", player->uid);
+            //spdlog::info("uid {0:d} set betting money", player->uid);
 
             continue;
         }
@@ -127,12 +129,12 @@ void *createOneGame(void *arg) //开启一局游戏
                 {
                     player->hitPoker();
                     UpdateAll(room->playerList, player->uid); //抽牌，更新下
-                    spdlog::info("uid {0:d} hit", player->uid);
+                    //spdlog::info("uid {0:d} hit", player->uid);
                 }
                 else if (env->operateId == OPERATE_STAND)
                 {
                     player->standPoker();
-                    spdlog::info("uid {0:d} stand", player->uid);
+                    //spdlog::info("uid {0:d} stand", player->uid);
                 }
                 continue;
             }

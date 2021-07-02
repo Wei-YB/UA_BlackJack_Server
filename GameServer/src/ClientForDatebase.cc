@@ -5,7 +5,7 @@
 #define STAMP_GET_NICKNAME 123456
 void ua_blackjack::Game::ClientForDatebase::matchEnd(const std::list<ua_blackjack::Game::Player::ptr> playerList)
 {
-    spdlog::info("Start database match end request");
+    //spdlog::info("Start database match end request");
     std::chrono::time_point<std::chrono::system_clock, std::chrono::milliseconds> tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now()); //获取当前时间点
     std::time_t timestamp = tp.time_since_epoch().count();                                                                                                                        //计算距离1970-1-1,00:00的时间长度
     std::stringstream ss;
@@ -43,7 +43,7 @@ void ua_blackjack::Game::ClientForDatebase::matchEnd(const std::list<ua_blackjac
 
 void ua_blackjack::Game::ClientForDatebase::askPlayerNickName(const BlackJackUID uid)
 {
-    spdlog::info("Start database nickname request");
+    //spdlog::info("Start database nickname request");
     std::chrono::time_point<std::chrono::system_clock, std::chrono::milliseconds> tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now()); //获取当前时间点
     std::time_t timestamp = tp.time_since_epoch().count();                                                                                                                        //计算距离1970-1-1,00:00的时间长度
     std::stringstream ss;
@@ -80,7 +80,7 @@ void ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc() //开一个线程
 
         if (call->status.ok())
         {
-            this->printResponce(call->reply); //收到信号
+            //this->printResponce(call->reply); //收到信号
 
             auto replyuid = call->reply.uid();
             auto replyargs = call->reply.args();
@@ -94,7 +94,7 @@ void ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc() //开一个线程
                 }
                 if (auto player = playerHashMap[replyuid].lock())
                 {
-                    player->nickNmae = replyargs[0];
+                    player->nickName = replyargs[0];
                 }
                 else
                 {
