@@ -118,10 +118,14 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request &request)
         // we use the memory addr of the client as its identity,
         // since stamps from multiple clients might conflict
         int64_t stamp = (int64_t)client.get();
-        logger_ptr->info("In main thread: setting the request stamp to {}", stamp);
+        logger_ptr->info("In main thread: login request, setting the request stamp to {}", stamp);
         {
         std::lock_guard<std::mutex> guard(stampToUnloginClientLock_);
-        stampToUnloginClient_.emplace(stamp, client);
+        if (!stampToUnloginClient_.emplace(stamp, client).second)
+        {   // don't send it, since it has conflicts
+            logger_ptr->warn("In main thread: Conflict happens when inserting a unlogin client (fd: {}) to unlogin client set.", fd);
+            return;
+        }
         }
         client->SetUnloginStamp(request.stamp());
         // modify the stamp so we can recognize when we get response 
@@ -135,10 +139,14 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request &request)
         // we use the memory addr of the client as its identity,
         // since stamps from multiple clients might conflict
         int64_t stamp = (int64_t)client.get();
-        logger_ptr->info("In main thread: setting the request stamp to {}", stamp);
+        logger_ptr->info("In main thread: signup request, setting the request stamp to {}", stamp);
         {
         std::lock_guard<std::mutex> guard(stampToSignupClientLock_);
-        stampToSignupClient_.emplace(stamp, client);
+        if (!stampToSignupClient_.emplace(stamp, client).second)
+        {   // don't send it, since it has conflicts
+            logger_ptr->warn("In main thread: Conflict happens when inserting a signup client (fd: {}) to signup client set.", fd);
+            return;
+        }
         }
         client->SetSignupStamp(request.stamp());
         // modify the stamp so we can recognize when we get response 
