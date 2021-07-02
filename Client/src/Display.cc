@@ -340,3 +340,30 @@ void Display::DisplayCards(int idx_, std::unordered_map<int, std::string>& idx2n
         std::cout << std::endl;
     }
 }
+
+void Display::DisplayHelp() {
+    std::cout << "  SignUp [name] [password]" << std::endl;
+    std::cout << "  Login [name] [password]" << std::endl;
+    std::cout << "  Logout" << std::endl;
+    std::cout << "  RoomList" << std::endl;
+    std::cout << "  JoinRoom [room id]" << std::endl;
+    std::cout << "  CreateRoom" << std::endl;
+    std::cout << "  QuickMatch" << std::endl;
+    std::cout << "  Ready" << std::endl;
+    std::cout << "  LeaveRoom" << std::endl;
+    std::cout << "  Bet [money]" << std::endl;
+    std::cout << "  Hit" << std::endl;
+    std::cout << "  Stand" << std::endl;
+    std::cout << "  Double" << std::endl;
+    std::cout << "  Surrender" << std::endl;
+    std::cout << "  RankMe" << std::endl;
+    std::cout << "  RankTop [number]" << std::endl;
+    std::cout << "  AddFriend [name]" << std::endl;
+    std::cout << "  AcceptFriend [name]" << std::endl;
+    std::cout << "  DeleteFriend [name]" << std::endl;
+    std::cout << "  FriendList" << std::endl;
+    std::cout << "  WaitingFriendList" << std::endl;
+    std::cout << "  MatchList" << std::endl;
+    std::cout << "  MatchInfo [match id]" << std::endl;
+    std::cout << "  Quit" << std::endl;
+}
