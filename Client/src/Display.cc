@@ -199,9 +199,10 @@ void Display::DisplayResponseRankTop(ua_blackjack::Response& response) {
 void Display::DisplayResponseAddFriend(ua_blackjack::Response& response) {
     if (response.status() == -1) {
         if (response.args().size() > 0 && response.args()[0] == "none") {
-            std::cout << ":( Failed, Already in WaitingFriendList" << std::endl;
-        } else {
             std::cout << ":( AddFriend Failed, user doesn't exist" << std::endl;
+
+        } else {
+            std::cout << ":( Failed, Already in user's WaitingFriendList" << std::endl;
         }
         return;
     }
@@ -239,6 +240,8 @@ void Display::DisplayResponseFriendList(ua_blackjack::Response& response) {
     for (int i = 0; i < sz; ++i) {
         std::cout << response.args()[i] << std::endl;
     }
+
+    if (sz == 0) std::cout << "No available friend" << std::endl;
 }
 void Display::DisplayResponseWaitingFriendList(ua_blackjack::Response& response) {
     if (response.status() == -1) {
@@ -251,6 +254,8 @@ void Display::DisplayResponseWaitingFriendList(ua_blackjack::Response& response)
     for (int i = 0; i < sz; ++i) {
         std::cout << response.args()[i] << std::endl;
     }
+
+    if (sz == 0) std::cout << "No available waiting friend" << std::endl;
 }
 
 void Display::DisplayResponseMatchList(ua_blackjack::Response& response) {
@@ -264,6 +269,8 @@ void Display::DisplayResponseMatchList(ua_blackjack::Response& response) {
     for (int i = 0; i < sz; ++i) {
         std::cout << response.args()[i] << std::endl;
     }
+
+    if (sz == 0) std::cout << "No available match list" << std::endl;
 }
 
 void Display::DisplayResponseMatchInfo(ua_blackjack::Response& response) {
