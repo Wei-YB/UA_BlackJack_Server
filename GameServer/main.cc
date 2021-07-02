@@ -128,8 +128,28 @@ bool start_daemon()
 
     return true;
 }
-int main(int agrc, char *argv[])
+bool isProgramRelase;
+int main(int argc, char *argv[])
 {
+    if (argc != 2)
+    {
+        std::cout << "Usage " << argv[0] << " [RELEASE TEST]" << std::endl;
+        return 0;
+    }
+    if (strcmp(argv[1], "RELEASE") == 0)
+    {
+        isProgramRelase = true;
+    }
+    else if (strcmp(argv[1], "TEST") == 0)
+    {
+        isProgramRelase = false;
+    }
+    else
+    {
+        std::cout << "Usage " << argv[0] << " [RELEASE TEST]" << std::endl;
+        return 0;
+    }
+
     {
         std::string configFilePath = "../../GameServer/game.config";
 
@@ -146,6 +166,10 @@ int main(int agrc, char *argv[])
         {
             std::string buffer;
             _file >> buffer;
+            if (buffer[0] == '#') //注释不读
+            {
+                continue;
+            }
             if (buffer == "ProxyServiceAddr")
             {
                 _file >> buffer;
@@ -173,7 +197,7 @@ int main(int agrc, char *argv[])
             }
             else
             {
-                break;
+                continue;
             }
         }
     }

@@ -11,7 +11,7 @@
 void ua_blackjack::Game::ClientForTestUser::askBettingMoney(const BlackJackUID uid)
 {
 
-    spdlog::info("Start betting rpc request uid {0}", uid);
+    //spdlog::info("Start betting rpc request uid {0}", uid);
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);
@@ -40,7 +40,7 @@ void ua_blackjack::Game::ClientForTestUser::askBettingMoney(const BlackJackUID u
 
 void ua_blackjack::Game::ClientForTestUser::askHitOrStand(const BlackJackUID uid)
 {
-    spdlog::info("Start ask hit uid {0}", uid);
+    //spdlog::info("Start ask hit uid {0}", uid);
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);
@@ -71,7 +71,7 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const BlackJackUID uid, co
     if (auto ptr = player.lock())
     {
         std::stringstream ss;
-        ss << ptr->nickNmae;
+        ss << ptr->nickName;
 
         auto poker = ptr->pokerList.back(); //发最后一张牌
 
@@ -86,7 +86,7 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const BlackJackUID uid, co
             ss << num;
             request.add_args(ss.str());
 
-            spdlog::info("Start Update request args {0} uid {1}", ss.str(), notifyUser);
+            //spdlog::info("Start Update request args {0} uid {1}", ss.str(), notifyUser);
         }
         else
         {
@@ -122,7 +122,7 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const BlackJackUID uid, co
     if (auto ptr = player.lock())
     {
         std::stringstream ss;
-        ss << ptr->nickNmae;
+        ss << ptr->nickName;
 
         auto poker = ptr->pokerList.front();
 
@@ -137,7 +137,7 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const BlackJackUID uid, co
             ss << num;
 
             request.add_args(ss.str());
-            spdlog::info("Start Update request args {0} uid {1}", ss.str(), notifyUser);
+            //spdlog::info("Start Update request args {0} uid {1}", ss.str(), notifyUser);
         }
         else
         {
@@ -177,7 +177,7 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const std::list<ua_blackja
         {
             index++;
             std::stringstream ss;
-            ss << player->nickNmae;
+            ss << player->nickName;
 
             for (auto &poker : player->pokerList)
             {
@@ -196,7 +196,7 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const std::list<ua_blackja
                 }
             }
             request.add_args(ss.str());
-            spdlog::info("Start Update request args {0} uid {1} index {2}", ss.str(), notifyUser, index);
+            //spdlog::info("Start Update request args {0} uid {1} index {2}", ss.str(), notifyUser, index);
         }
     }
     else
@@ -218,7 +218,7 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const std::list<ua_blackja
 void ua_blackjack::Game::ClientForTestUser::askEnd(const BlackJackUID uid, FinalResultOfGame isWin)
 {
 
-    spdlog::info("Start End request uid {0} iswin{1}", uid, isWin);
+    //spdlog::info("Start End request uid {0} iswin{1}", uid, isWin);
 
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
@@ -264,7 +264,7 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
         GPR_ASSERT(ok);
         if (call->status.ok())
         {
-            this->printResponce(call->reply); //收到信号
+            //this->printResponce(call->reply); //收到信号
 
             auto replyuid = call->reply.uid();
             auto replyargs = call->reply.args();
@@ -344,10 +344,6 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
                 
                 */
                 }
-            }
-            else
-            {
-                spdlog::warn("unexpected reply uid {0:d}", replyuid);
             }
         }
         else

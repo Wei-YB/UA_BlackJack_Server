@@ -5,7 +5,9 @@
 #include <sys/epoll.h>
 #include <iostream>
 #include <unistd.h>
+#include <sstream>
 #include "combat_typedef.h"
+#include "GameProcess.h"
 
 void ua_blackjack::Game::createServiece(void)
 {
@@ -84,13 +86,28 @@ void ua_blackjack::Game::createServiece(void)
                     if (strcmp(buffer, "restart") == 0)
                     {
                         spdlog::info("restarting...");
+                        std::stringstream ss;
+                        ss << "restart receive ";
+                        int ret = send(fd, ss.str().c_str(), ss.str().size(), 0);
                     }
                     else if (strcmp(buffer, "quit") == 0)
                     {
                         spdlog::info("quiting...");
+                        std::stringstream ss;
+                        ss << "quiting receive ";
+                        int ret = send(fd, ss.str().c_str(), ss.str().size(), 0);
                         close(fd);
                         close(listenfd);
                         exit(0);
+                    }
+                    else if (strcmp(buffer, "ask") == 0)
+                    {
+                        std::stringstream ss;
+                        ss << "now room num " << roomEnvirHashMap.size();
+                        ss << " sum room num " << sumOfRoom;
+                        int ret = send(fd, ss.str().c_str(), ss.str().size(), 0);
+                        if (ret <= 0) //客户端断开
+                            break;
                     }
                 }
             }

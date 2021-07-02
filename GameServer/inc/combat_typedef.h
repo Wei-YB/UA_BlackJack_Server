@@ -39,10 +39,10 @@ struct BetMoneyArgument
     BlackJackMoney money;
 };
 
-#define PRINT_LOG
-
 extern std::string ProxyServiceAddr;
 extern std::string LobbyServiceAddr;
 extern std::string DatabaseServiceAddr;
 extern std::string controlTcpPort;
 extern std::string gameRpcAddr;
+extern bool isProgramRelase;
+extern uint64_t sumOfRoom;
