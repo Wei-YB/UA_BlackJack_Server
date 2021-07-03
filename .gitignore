@@ -1,6 +1,10 @@
-./proxy/build/
-./proxy/test/build/
-./proxy/protos/build/
-./proxy/log/
+.vscode/
+build/
+*.clang-format
+alpha/
+gtest/
+thirdparty/grpc/cmake/build
+thirdparty/spdlog/CMakeFiles
 *.a
 *.so
+test-program/
