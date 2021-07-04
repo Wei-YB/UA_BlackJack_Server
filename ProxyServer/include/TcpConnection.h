@@ -43,7 +43,7 @@ public:
     void SetErrorCallBack(const std::function<void()> &cb) {errorCallBack_ = cb;}
     void SetEncoder(const std::function<int(int32_t, const std::string &, CircularBuffer &)> &cb) {encoder_ = cb;}
     void SetDecoder(const std::function<StringPiece(CircularBuffer &, int*, int32_t*)> &cb) {decoder_ = cb;}
-
+    CircularBuffer writeBuffer_;    // temporarily expose it
 // private:
     // callbacks
     int OnInput();
@@ -65,7 +65,7 @@ private:
     std::function<int(int32_t, const std::string &, CircularBuffer &)> encoder_;
     // std::function<std::string(CircularBuffer &, int32_t *)> decoder_;
     std::function<StringPiece(CircularBuffer &, int*, int32_t*)> decoder_;
-    CircularBuffer writeBuffer_;
+
     CircularBuffer readBuffer_;
 };
 

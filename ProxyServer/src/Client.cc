@@ -45,10 +45,14 @@ int Client::SendRequest(const Request &request)
 
 int Client::SendResponse(const Response &response)
 {
-    std::string rawResponse(std::move(response.SerializeAsString()));
-    // when we try to write data to the lower tcp socket, we need to hold a lock
     std::lock_guard<std::mutex> guard(connLock_);
-    return conn_->Send(RESPONSE, rawResponse);
+    if (0 > pack_sp(response, conn_->writeBuffer_))
+        return -1;
+    
+    //std::string rawResponse(std::move(response.SerializeAsString()));
+    // when we try to write data to the lower tcp socket, we need to hold a lock
+    
+    return conn_->Send(RESPONSE, "");
 }
 
 //void Client::OnMessages(std::vector<std::pair<int32_t, std::string>> msgs)

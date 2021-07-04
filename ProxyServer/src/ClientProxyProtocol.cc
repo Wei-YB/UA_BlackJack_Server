@@ -22,6 +22,52 @@ int pack(int32_t type, const std::string &msg, CircularBuffer &buffer)
     return 0;
 }
 
+int pack_sp(const Request &request, CircularBuffer &buffer)
+{
+    int msgLen = request.ByteSizeLong();
+    if (buffer.capacity() - buffer.size() < msgLen + PACKAGE_HDR_LEN)
+        return -1;
+    int32_t type = REQUEST;
+    writeAs(buffer, type, true);
+    writeAs(buffer, msgLen, true);
+    int tailRoom = buffer.m_tail >= buffer.m_head ? \
+                    buffer.capacity() - buffer.m_tail - 1
+                    : buffer.m_head - buffer.m_tail - 1;
+  
+    if (tailRoom >= msgLen)
+    {
+        request.SerializeToArray(buffer.m_buffer + buffer.m_tail + 1, tailRoom);
+        buffer.m_tail = (buffer.m_tail + msgLen) % buffer.capacity();
+        return 0;
+    }
+    std::string tmp(std::move(request.SerializeAsString()));
+    put(buffer, tmp.c_str(), tmp.size());
+    return 0;
+}
+
+int pack_sp(const Response &response, CircularBuffer &buffer)
+{
+    int msgLen = response.ByteSizeLong();
+    if (buffer.capacity() - buffer.size() < msgLen + PACKAGE_HDR_LEN)
+        return -1;
+    int32_t type = RESPONSE;
+    writeAs(buffer, type, true);
+    writeAs(buffer, msgLen, true);
+    int tailRoom = buffer.m_tail >= buffer.m_head ? \
+                    buffer.capacity() - buffer.m_tail - 1
+                    : buffer.m_head - buffer.m_tail - 1;
+  
+    if (tailRoom >= msgLen)
+    {
+        response.SerializeToArray(buffer.m_buffer + buffer.m_tail + 1, tailRoom);
+        buffer.m_tail = (buffer.m_tail + msgLen) % buffer.capacity();
+        return 0;
+    }
+    std::string tmp(std::move(response.SerializeAsString()));
+    put(buffer, tmp.c_str(), tmp.size());
+    return 0;
+}
+
 std::string unpack(CircularBuffer &buffer, int32_t *type)
 {
     // the package must be bigger tha 8 bytes to be complete

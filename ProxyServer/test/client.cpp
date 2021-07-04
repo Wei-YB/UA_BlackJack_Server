@@ -93,13 +93,17 @@ public:
         request.set_stamp(stamp);
         stampToRequest_.emplace(stamp, request);
 
-        std::string rawRequest(std::move(request.SerializeAsString()));
+        if (0 > pack_sp(request, conn_.writeBuffer_))
+            return -1;
+    
+        conn_.Send(RESPONSE, "");
+        //std::string rawRequest(std::move(request.SerializeAsString()));
         if (request.requesttype() == Request::LOGOUT)
         {
             uid_ = -1;
         }
         // record
-        conn_.Send(REQUEST, rawRequest);
+        //conn_.Send(REQUEST, rawRequest);
         
         return 0;
     }

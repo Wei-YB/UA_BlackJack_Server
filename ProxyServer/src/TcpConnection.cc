@@ -164,8 +164,8 @@ int TcpConnection::Send(int32_t type, const std::string &pkgsData)
 {
     if (encoder_)
     {
-        if (encoder_(type, pkgsData, writeBuffer_) < 0)
-            return -1;
+        // if (encoder_(type, pkgsData, writeBuffer_) < 0)
+        //     return -1;
     }
     else
     {

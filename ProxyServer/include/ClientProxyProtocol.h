@@ -31,4 +31,8 @@ void ParseFromStringPiece(Request &request, StringPiece stringPiece);
 
 void ParseFromStringPiece(Response &response, StringPiece stringPiece);
 
+int pack_sp(const Request &request, CircularBuffer &buffer);
+
+int pack_sp(const Response &response, CircularBuffer &buffer);
+
 #endif
