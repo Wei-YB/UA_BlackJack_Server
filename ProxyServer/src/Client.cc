@@ -31,7 +31,8 @@ Client::Client(std::shared_ptr<TcpConnection> conn,
     conn_->SetHupCallBack(std::bind(&Client::OnLeave, this));
     conn_->SetErrorCallBack(std::bind(&Client::OnError, this));
     conn_->SetEncoder(std::bind(pack, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
-    conn_->SetDecoder(std::bind(unpack, std::placeholders::_1, std::placeholders::_2));
+    //conn_->SetDecoder(std::bind(unpack, std::placeholders::_1, std::placeholders::_2));
+    conn_->SetDecoder(std::bind(unpack_sp, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
 }
 
 int Client::SendRequest(const Request &request)
@@ -50,33 +51,27 @@ int Client::SendResponse(const Response &response)
     return conn_->Send(RESPONSE, rawResponse);
 }
 
-void Client::OnMessages(std::vector<std::pair<int32_t, std::string>> msgs)
+//void Client::OnMessages(std::vector<std::pair<int32_t, std::string>> msgs)
+void Client::OnMessages(std::vector<std::pair<int32_t, StringPiece>> msgs)
 {
     int requestCnt = 0, responseCnt = 0;
-    if (requestCallBack_)
+    for (int i = 0; i < msgs.size(); ++i)
     {
-        for (int i = 0; i < msgs.size(); ++i)
+        if (msgs[i].first == REQUEST)
         {
-            if (msgs[i].first == REQUEST)
-            {
-                Request request;
-                request.ParseFromString(std::get<1>(msgs[i]));
-                requestCallBack_(conn_->SockFd(), std::move(request));
-                requestCnt++;
-            }
+            Request request;
+            ParseFromStringPiece(request, msgs[i].second);
+            //request.ParseFromString(std::get<1>(msgs[i]));
+            if (requestCallBack_) requestCallBack_(conn_->SockFd(), std::move(request));
+            requestCnt++;
         }
-    }
-    if (responseCallBack_)
-    {
-        for (int i = 0; i < msgs.size(); ++i)
+        else if (msgs[i].first == RESPONSE)
         {
-            if (msgs[i].first == RESPONSE)
-            {
-                Response response;
-                response.ParseFromString(std::get<1>(msgs[i]));
-                responseCallBack_(std::move(response));
-                responseCnt++;
-            }
+            Response response;
+            //response.ParseFromString(std::get<1>(msgs[i]));
+            ParseFromStringPiece(response, msgs[i].second);
+            if (responseCallBack_) responseCallBack_(std::move(response));
+            responseCnt++;
         }
     }
     // logger_ptr->info("In main thread: tcp (sockfd: {0}) get {1} requests and {2} response from client (uid: {3})", conn_->SockFd(), requestCnt, responseCnt, uid_);

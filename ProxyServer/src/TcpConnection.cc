@@ -64,9 +64,9 @@ TcpConnection::~TcpConnection()
 int TcpConnection::OnInput()
 {
     FileDesc clientfd = eventsSource_->fd();
-    int byteRead, pkgProcessed = 0;
+    int byteRead, pkgProcessed = 0, offset = 0;
     bool needToRead = true;
-    std::vector<std::pair<int32_t, std::string>> pkgs;
+    std::vector<std::pair<int32_t, StringPiece>> pkgs;
     while (needToRead)
     {
         if ((byteRead = read(clientfd, readBuffer_)) < 0)
@@ -90,21 +90,27 @@ int TcpConnection::OnInput()
             while (true)
             {
                 int32_t pkgType;
-                std::string pkg(std::move(decoder_(readBuffer_, &pkgType)));
-                if (pkg.size() == 0)
+                StringPiece strPiece = decoder_(readBuffer_, &offset, &pkgType);
+                //std::string pkg(std::move(decoder_(readBuffer_, &pkgType)));
+                //if (pkg.size() == 0)
+                if (strPiece.length() == 0)
                 {
                     break;
                 }
-                readBuffer_.free(pkg.size());
+                // readBuffer_.free(pkg.size());
                 pkgProcessed++;
-                pkgs.emplace_back(std::move(pkgType), std::move(pkg));
+                //pkgs.emplace_back(std::move(pkgType), std::move(pkg));
+                pkgs.push_back(std::make_pair(pkgType, strPiece));
             }   
         }
         else
         {
             // // logger_ptr->info("no decoder available.");
-            pkgs.emplace_back(0, std::move(circularBufferToString(readBuffer_, readBuffer_.size())));
-            readBuffer_.free(readBuffer_.size());
+            StringPiece strPiece(&readBuffer_, (readBuffer_.m_head + offset) % readBuffer_.capacity(), readBuffer_.size() - offset);
+            pkgs.push_back(std::make_pair(0, strPiece));
+            offset += readBuffer_.size();
+            // pkgs.emplace_back(0, std::move(circularBufferToString(readBuffer_, readBuffer_.size())));
+            //readBuffer_.free(readBuffer_.size());
             continue;
         }
     }

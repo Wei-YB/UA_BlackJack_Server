@@ -6,6 +6,7 @@
 
 namespace Net {
     class TcpConnection;
+    class StringPiece;
 }
 
 namespace ua_blackjack {
@@ -16,6 +17,8 @@ namespace ua_blackjack {
 using namespace Net;
 using ua_blackjack::Response;
 using ua_blackjack::Request;
+
+
 
 class Client
 {
@@ -40,7 +43,8 @@ public:
     
 // private:
     // callbacks
-    void OnMessages(std::vector<std::pair<int32_t, std::string>> msgs);
+    //void OnMessages(std::vector<std::pair<int32_t, std::string>> msgs);
+    void OnMessages(std::vector<std::pair<int32_t, StringPiece>> msgs);
     void OnLeave();
     void OnSendReady() {/*TODO: write requests/responses buffer to tcp connection*/;}
     void OnError();

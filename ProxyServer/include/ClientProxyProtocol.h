@@ -17,7 +17,7 @@ int pack(int32_t type, const std::string &msg, CircularBuffer &buffer);
 
 std::string unpack(Net::CircularBuffer &buffer, int32_t *type);
 
-StringPiece unpack_sp(Net::CircularBuffer &buffer, int32_t *type);
+StringPiece unpack_sp(Net::CircularBuffer &buffer, int *offset, int32_t *type);
 
 namespace ua_blackjack
 {
@@ -29,6 +29,6 @@ using ua_blackjack::Response;
 
 void ParseFromStringPiece(Request &request, StringPiece stringPiece);
 
-void ParseFromStringPiece(Request &response, StringPiece stringPiece);
+void ParseFromStringPiece(Response &response, StringPiece stringPiece);
 
 #endif

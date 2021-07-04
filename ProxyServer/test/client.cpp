@@ -71,7 +71,8 @@ public:
             conn_.SetHupCallBack(std::bind(&BlackJackClient::OnError, this));
             conn_.SetErrorCallBack(std::bind(&BlackJackClient::OnError, this));
             conn_.SetEncoder(std::bind(pack, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
-            conn_.SetDecoder(std::bind(unpack, std::placeholders::_1, std::placeholders::_2));
+            // conn_.SetDecoder(std::bind(unpack, std::placeholders::_1, std::placeholders::_2));
+            conn_.SetDecoder(std::bind(unpack_sp, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
             setNonBlocking(conn_.SockFd());
             return 0;
         }
@@ -84,7 +85,7 @@ public:
             && request.requesttype() != Request::LOGIN
             && request.requesttype() != Request::SIGNUP)
         {
-            logger_ptr->warn("client (uid: {0} fd: {1}) try to send invalid request.", uid_, conn_.SockFd());
+            // logger_ptr->warn("client (uid: {0} fd: {1}) try to send invalid request.", uid_, conn_.SockFd());
             return -1;
         }
         request.set_uid(uid_ == -1 ? 0 : uid_);
@@ -108,14 +109,19 @@ public:
     UserId uid() const {return uid_;}
 
 private:
-    void OnMessages(std::vector<std::pair<int32_t, std::string>> msgs)
+    //void OnMessages(std::vector<std::pair<int32_t, std::string>> msgs)
+    void OnMessages(std::vector<std::pair<int32_t, StringPiece>> msgs)
     {
         for (int i = 0; i < msgs.size(); ++i)
         {
             if (msgs[i].first != RESPONSE)
+            {
+                msgs[i].second.free();
                 continue;
+            }
             Response response;
-            response.ParseFromString(std::get<1>(msgs[i]));
+            ParseFromStringPiece(response, msgs[i].second);
+            //response.ParseFromString(std::get<1>(msgs[i]));
             // logger_ptr->info("client (uid: {0}, fd: {1}) gets response from proxy", uid_, conn_.SockFd());
             waittingResponse_ = false;
             int64_t stamp = response.stamp();
@@ -232,7 +238,7 @@ int main(int argc, char **argv)
     parseFile(argv[3], requests);
     if (requests.size() == 0)
     {
-        logger_ptr->error("fail to parse samples file.");
+        // logger_ptr->error("fail to parse samples file.");
         exit(0);
     }
 
@@ -242,7 +248,7 @@ int main(int argc, char **argv)
     int clientno = atoi(argv[4]);
     if (clientno <= 0 || clientno > 20000)
     {
-        logger_ptr->error("invalid client number or client number too large.");
+        // logger_ptr->error("invalid client number or client number too large.");
         exit(0);
     }
     // create clients
@@ -263,7 +269,7 @@ int main(int argc, char **argv)
     }
     if (connCnt == 0)
     {
-        logger_ptr->error("no clients connected to proxy.");
+        // logger_ptr->error("no clients connected to proxy.");
         exit(0);
     }
     // logger_ptr->info("{} clients connected to proxy.", connCnt);

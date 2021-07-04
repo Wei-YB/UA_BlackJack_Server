@@ -152,10 +152,11 @@ void StringPiece::free()
         || cirBuf_->m_tail - cirBuf_->m_head  == cirBuf_->capacity() - 1)
     {
         cirBuf_->m_tail = -1;
+        cirBuf_->m_head = 0;
     }
 }
 
-bool StringPiece::continuous()
+bool StringPiece::continuous() const
 {
     return head_ + length_ <= cirBuf_->capacity();
 }

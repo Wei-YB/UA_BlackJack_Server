@@ -40,20 +40,22 @@ std::string unpack(CircularBuffer &buffer, int32_t *type)
     return "";
 }
 
-StringPiece unpack_sp(Net::CircularBuffer &buffer, int offset, int32_t *type)
+StringPiece unpack_sp(Net::CircularBuffer &buffer, int *offset, int32_t *type)
 {
     // the package must be bigger tha 8 bytes to be complete
-    if (buffer.size() - offset < PACKAGE_HDR_LEN)
+    int off = *offset;
+    if (buffer.size() - off < PACKAGE_HDR_LEN)
     {
         return StringPiece(NULL, 0, 0);
     }
     int32_t msgLen;
-    readAs(buffer, offset, *type, true);
-    readAs(buffer, offset + 4, msgLen, true);
-    if (buffer.size() - offset >= msgLen + PACKAGE_HDR_LEN)
+    readAs(buffer, off, *type, true);
+    readAs(buffer, off + 4, msgLen, true);
+    if (buffer.size() - off >= msgLen + PACKAGE_HDR_LEN)
     {
         // buffer.free(PACKAGE_HDR_LEN);
-        return StringPiece(&buffer, (buffer.m_head + offset) % buffer.capacity(), msgLen);
+        *offset = (off + msgLen + PACKAGE_HDR_LEN) % buffer.capacity();
+        return StringPiece(&buffer, (buffer.m_head + off + PACKAGE_HDR_LEN) % buffer.capacity(), msgLen);
     }
     return StringPiece(NULL, 0, 0);
 }
@@ -73,7 +75,7 @@ void ParseFromStringPiece(Request &request, StringPiece stringPiece)
     stringPiece.free();
 }
 
-void ParseFromStringPiece(Request &response, StringPiece stringPiece)
+void ParseFromStringPiece(Response &response, StringPiece stringPiece)
 {
     if (stringPiece.continuous())
     {

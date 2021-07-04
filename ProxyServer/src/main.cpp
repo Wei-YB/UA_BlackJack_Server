@@ -100,7 +100,7 @@ static void Deamonize(const std::unordered_map<std::string, std::string> &config
     int pid_fd = open(path_to_pid_file, O_RDWR | O_CREAT, S_IRWXU);
     if (pid_fd < 0)
     {
-        logger_ptr->error("In deamonizing: fail to create pid file, exit now.");
+        // logger_ptr->error("In deamonizing: fail to create pid file, exit now.");
         exit(EXIT_FAILURE);
     }
     pid = getpid();
