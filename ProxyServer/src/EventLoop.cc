@@ -1,6 +1,3 @@
-#include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
 #include <sys/types.h>
 #include <sys/epoll.h>
 #include <unistd.h>
@@ -18,57 +15,91 @@
 
 using namespace Net;
 
-Net::EventsSource::EventsSource(FileDesc fd, EventLoop *loop,
-                                const std::function<int()> &inEventCallBack,
-                                const std::function<int()> &outEventCallBack,
-                                const std::function<int()> &errEventCallBack)
+EventsSource::EventsSource(FileDesc fd, EventLoop *loop,
+                const std::function<int()> &inEventCallBack,
+                const std::function<int()> &outEventCallBack,
+                const std::function<int()> &errEventCallBack,
+                const std::function<int()> &closeEventCallBack)
     : fd_(fd), loop_(loop),
       inEventCallBack_(inEventCallBack),
       outEventCallBack_(outEventCallBack),
-      errEventCallBack_(errEventCallBack) {}
-
-int Net::EventsSource::HandleEvents(Event events)
+      errEventCallBack_(errEventCallBack),
+      closeEventCallBack_(closeEventCallBack)
 {
-    int ret = 0;
+    // fcntl(fd_, F_SETFL, fcntl(fd_, F_GETFL) | O_NONBLOCK);
+}
+
+int EventsSource::HandleEvents(Event events)
+{
+    if (events & (EV_ERR | EV_HUP))
+    {
+        // logger_ptr->info("In main thread: On error event from fd: {}", fd_);
+        if (errEventCallBack_) errEventCallBack_();
+        return -1;
+    }
+    if ((events & EV_IN) && (events & EV_RDHUP))
+    {
+        // logger_ptr->info("In main thread: On input event from fd: {}", fd_);
+        if (inEventCallBack_) inEventCallBack_();
+        return -1;
+    }
     if (events & EV_IN)
     {
-        logger_ptr->info("In main thread: On input event from fd: {}", fd_);
-        ret = inEventCallBack_() == -1 ? -1 : ret;
+        // logger_ptr->info("In main thread: On input event from fd: {}", fd_);
+        if (inEventCallBack_) 
+            if (inEventCallBack_() < 0) 
+            {
+                // logger_ptr->info("In main thread: just to prove evsSource (fd: {}) is not dead.", fd_);
+                return -1;
+            }
     }
     if (events & EV_OUT)
     {
-        logger_ptr->info("In main thread: On onput event from fd: {}", fd_);
-        ret = outEventCallBack_() == -1 ? -1 : ret;
+        // logger_ptr->info("In main thread: On onput event from fd: {}", fd_);
+        if (outEventCallBack_) 
+            if (outEventCallBack_() < 0)
+                return -1;
     }
-    if (events & EV_ERR)
-    {
-        logger_ptr->info("In main thread: On error event from fd: {}", fd_);
-        ret = errEventCallBack_() == -1 ? -1 : ret;
-    }
-    return ret;
+    
+    return 0;
 }
 
-int Net::EventsSource::Update(Event events)
+int EventsSource::EnableET()
 {
-    if (events_ == events)
-    {
-        return 0;
-    }
-    events_ = events;
+    events_ |= EV_ET;
     return loop_->mod(shared_from_this());
 }
 
-int Net::EventsSource::Close()
+int EventsSource::EnableWrite()
+{
+    events_ |= EV_OUT;
+    return loop_->mod(shared_from_this());
+}
+
+int EventsSource::EnableRead()
+{
+    events_ |= EV_IN;
+    return loop_->mod(shared_from_this());
+}
+
+int EventsSource::DisableWrite()
+{
+    events_ &= ~EV_OUT;
+    return loop_->mod(shared_from_this());
+}
+
+int EventsSource::DisableRead()
+{
+    events_ &= ~EV_IN;
+    return loop_->mod(shared_from_this());
+}
+
+int EventsSource::RemoveFromLoop()
 {
     return loop_->del(shared_from_this());
 }
 
-FileDesc Net::EventsSource::fd() const
-{
-    return fd_;
-}
-
-Net::EventLoop::EventLoop(int max_events) : maxEvents_(max_events)
+EventLoop::EventLoop(int max_events) : maxEvents_(max_events)
 {
     if ((epollfd_ = epoll_create(5)) < 0)
     {
@@ -81,15 +112,16 @@ Net::EventLoop::EventLoop(int max_events) : maxEvents_(max_events)
     }
 }
 
-Net::EventLoop::~EventLoop()
+EventLoop::~EventLoop()
 {
     delete[] events_;
     close(epollfd_);
 }
 
-int Net::EventLoop::add(std::shared_ptr<EventsSource> evsSource)
+int EventLoop::add(std::shared_ptr<EventsSource> evsSource)
 {
-    if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end() || eventsCnt_ >= maxEvents_)
+    if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end() 
+        || eventsCnt_ >= maxEvents_)
     {
         return -1;
     }
@@ -100,13 +132,17 @@ int Net::EventLoop::add(std::shared_ptr<EventsSource> evsSource)
     {
         return -1;
     }
-    fdToEventsSource_.emplace(evsSource->fd_, evsSource);
+    if (!fdToEventsSource_.emplace(evsSource->fd_, evsSource).second)
+    {
+        epoll_ctl(epollfd_, EPOLL_CTL_DEL, evsSource->fd_, NULL);
+        return -1;
+    }
     eventsCnt_++;
-    logger_ptr->info("In main thread: Successfully add event source.");
+    // logger_ptr->info("In main thread: Successfully add event source (fd: {}).", evsSource->fd_);
     return 0;
 }
 
-int Net::EventLoop::mod(std::shared_ptr<EventsSource> evsSource)
+int EventLoop::mod(std::shared_ptr<EventsSource> evsSource)
 {
     if (fdToEventsSource_.find(evsSource->fd_) == fdToEventsSource_.end())
     {
@@ -119,11 +155,11 @@ int Net::EventLoop::mod(std::shared_ptr<EventsSource> evsSource)
     {
         return -1;
     }
-    logger_ptr->info("In main thread: Successfully modify events.");
+    // logger_ptr->info("In main thread: Successfully modify eventsSource (fd: {}).", evsSource->fd_);
     return 0;
 }
 
-int Net::EventLoop::del(std::shared_ptr<EventsSource> evsSource)
+int EventLoop::del(std::shared_ptr<EventsSource> evsSource)
 {
     if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end())
     {
@@ -142,7 +178,7 @@ int Net::EventLoop::loopOnce(int timeout)
     {
         return -1;
     }
-    // memset(m_events, 0, sizeof(struct epoll_event) * m_max_events);
+    
     int nfds = epoll_wait(epollfd_, events_, maxEvents_, timeout);
     if (nfds < 0)
     {
@@ -160,10 +196,14 @@ int Net::EventLoop::loopOnce(int timeout)
         {
             continue;
         }
+        std::shared_ptr<EventsSource> evsSource;
+        if (fdToEventsSource_.find(sockfd) == fdToEventsSource_.end())
+            continue;
+        evsSource = fdToEventsSource_[sockfd];
         // if the return val is -1, it means we should remove this sockfd from poller
-        if (0 > fdToEventsSource_[sockfd]->HandleEvents(toNetEvent(events)))
+        if (0 > evsSource->HandleEvents(toNetEvent(events)))
         {
-            del(fdToEventsSource_[sockfd]);
+            del(evsSource);
         }
     }
     return nfds;

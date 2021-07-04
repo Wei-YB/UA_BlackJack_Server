@@ -3,21 +3,25 @@
 
 #include <sys/types.h>
 #include <sys/epoll.h>
+#include <unistd.h>
 #include <memory>
 #include <unordered_map>
+#include <memory>
 #include "common.h"
 
-#define DEFAULT_MAX_EVENTS  20000
+#define DEFAULT_MAX_EVENTS  25000
 
 namespace Net {
 
 typedef int Event;
-const Event EV_NULL = 0x00;
-const Event EV_IN = 0x01;
-const Event EV_OUT = 0x02;
-const Event EV_TIMEOUT = 0x04;
-const Event EV_ERR = 0x08;
-const Event EV_ET = 0x10;
+
+static const Event EV_NULL = 0x00;
+static const Event EV_IN = 0x01;
+static const Event EV_OUT = 0x02;
+static const Event EV_ET = 0x04;
+static const Event EV_RDHUP = 0x08;
+static const Event EV_HUP = 0x10;
+static const Event EV_ERR = 0x20;
 
 inline int toEpollEvent(Event events)
 {
@@ -25,16 +29,20 @@ inline int toEpollEvent(Event events)
     epEv |= events & EV_IN ? EPOLLIN : 0x0;
     epEv |= events & EV_OUT ? EPOLLOUT : 0x0;
     epEv |= events & EV_ERR ? EPOLLERR : 0x0;
+    epEv |= events & EV_HUP ? EPOLLHUP : 0x0;
+    epEv |= events & EV_RDHUP ? EPOLLRDHUP : 0x0;
     epEv |= events & EV_ET ? EPOLLET : 0x0;
     return epEv;
 }
 
 inline Event toNetEvent(int epEv)
 {
-    int events = 0;
+    int events = EV_NULL;
     events |= epEv & EPOLLIN ? EV_IN : EV_NULL;
     events |= epEv & EPOLLOUT ? EV_OUT : EV_NULL;
     events |= epEv & EPOLLERR ? EV_ERR : EV_NULL;
+    events |= epEv & EPOLLHUP ? EV_HUP : EV_NULL;
+    events |= epEv & EPOLLRDHUP ? EV_RDHUP : EV_NULL;
     events |= epEv & EPOLLET ? EV_ET : EV_NULL;
     return events;
 }
@@ -47,25 +55,39 @@ public:
     EventsSource(FileDesc fd, EventLoop *loop,
                 const std::function<int()> &inEventCallBack,
                 const std::function<int()> &outEventCallBack,
-                const std::function<int()> &errEventCallBack);
-public:
-    int HandleEvents(Net::Event events);
+                const std::function<int()> &errEventCallBack,
+                const std::function<int()> &closeEventCallBack);
     
-    int Update(Net::Event events);
+    ~EventsSource() {::close(fd_);}
 
-    int Close();
+public:
+    int EnableWrite();
 
-    FileDesc fd() const;
-    Net::Event events_ = 0;
+    int EnableRead();
+
+    int EnableET();
+
+    int DisableWrite();
+
+    int DisableRead();
+
+    int RemoveFromLoop();
+
+    FileDesc fd() const {return fd_;};
+
     friend class EventLoop;
+
+// private:
+    int HandleEvents(Net::Event events);
+
 private:
     FileDesc fd_;
-    
-    Net::Event out_events_;
+    Event events_ = 0;
     EventLoop *loop_;
     std::function<int()> inEventCallBack_;
     std::function<int()> outEventCallBack_;
     std::function<int()> errEventCallBack_;
+    std::function<int()> closeEventCallBack_;
 };
 
 class EventLoop
