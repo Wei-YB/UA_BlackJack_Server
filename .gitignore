@@ -8,3 +8,5 @@ thirdparty/spdlog/CMakeFiles
 *.a
 *.so
 test-program/
+log/
+*.log
