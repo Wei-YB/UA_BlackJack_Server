@@ -145,6 +145,21 @@ int Net::write(int fd, CircularBuffer &buffer, bool freeAfterWrite)
     return cnt;
 }
 
+void StringPiece::free()
+{
+    cirBuf_->m_head = (head_ + length_) % cirBuf_->capacity();
+    if (cirBuf_->m_head - cirBuf_->m_tail == 1 
+        || cirBuf_->m_tail - cirBuf_->m_head  == cirBuf_->capacity() - 1)
+    {
+        cirBuf_->m_tail = -1;
+    }
+}
+
+bool StringPiece::continuous()
+{
+    return head_ + length_ <= cirBuf_->capacity();
+}
+
 void Net::circularBufferToString(const CircularBuffer &buffer, size_t length, ::std::string &str)
 {
     int tailRoom;

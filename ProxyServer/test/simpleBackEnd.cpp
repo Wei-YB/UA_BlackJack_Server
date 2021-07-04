@@ -20,7 +20,7 @@ std::string playerAddress = "localhost:50054";
 
 void trivialRpcHandler(const Request &request, Response &response)
 {
-    logger_ptr->info("get one request from client (uid: {})", request.uid());
+    // logger_ptr->info("get one request from client (uid: {})", request.uid());
     // print(std::cout, request);
     int64_t uid = request.uid();
     // handle login situation
@@ -32,7 +32,7 @@ void trivialRpcHandler(const Request &request, Response &response)
     response.set_status(0);
     response.set_stamp(request.stamp());
     response.set_uid(uid);
-    logger_ptr->info("Sucessfully handle the request.");
+    // logger_ptr->info("Sucessfully handle the request.");
 }
 
 bool flag = false;
@@ -81,7 +81,7 @@ int main(int argc, char **argv)
     socialServerThread.join();
     playerServerThread.join();
 
-    logger_ptr->info("In main thread: exit the simpleBackEnd.");
+    // logger_ptr->info("In main thread: exit the simpleBackEnd.");
 
     return 0;
 }

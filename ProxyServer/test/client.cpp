@@ -14,6 +14,7 @@
 #include <queue>
 #include <vector>
 #include <unordered_map>
+#include <chrono>
 
 #include "EventLoop.h"
 #include "CircularBuffer.h"
@@ -23,7 +24,9 @@
 #include "common.h"
 #include "log.h"
 
-typedef std::chrono::time_point<std::chrono::steady_clock> time_point;
+typedef std::chrono::steady_clock SteadyClock;
+typedef std::chrono::time_point<SteadyClock> TimePoint;
+typedef std::chrono::milliseconds MilliSeconds;
 
 using namespace Net;
 using ua_blackjack::Request;
@@ -49,22 +52,28 @@ class BlackJackClient
 public:
     BlackJackClient(const char *server_ip, 
                     unsigned short server_port, 
-                    EventLoop *loop, int64_t objId,
+                    EventLoop *loop, 
+                    int64_t objId,
                     size_t bufferSize = DEFAULT_BUFFER_SIZE) 
-                    : conn_(server_ip, server_port, loop), objId_(objId),
-                    readBuffer_(bufferSize), writeBuffer_(bufferSize),
-                    createTime_(std::chrono::steady_clock::now()) {}
+                    : conn_(server_ip, server_port, loop), 
+                    objId_(objId),
+                    readBuffer_(bufferSize), 
+                    writeBuffer_(bufferSize),
+                    createTime_(SteadyClock::now()) {}
 public:
     int Connect()
     {
         int ret = conn_.Connect();
         if (ret != -1)
         {
-            conn_.SetInputCallBack(std::bind(&BlackJackClient::OnMessages, this, std::placeholders::_1, std::placeholders::_2));
+            conn_.SetInputCallBack(std::bind(&BlackJackClient::OnMessages, this, std::placeholders::_1));
             conn_.SetOutPutCallBack(std::bind(&BlackJackClient::OnSendReady, this));
             conn_.SetHupCallBack(std::bind(&BlackJackClient::OnError, this));
             conn_.SetErrorCallBack(std::bind(&BlackJackClient::OnError, this));
-            return setNonBlocking(conn_.SockFd());
+            conn_.SetEncoder(std::bind(pack, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
+            conn_.SetDecoder(std::bind(unpack, std::placeholders::_1, std::placeholders::_2));
+            setNonBlocking(conn_.SockFd());
+            return 0;
         }
         return -1;
     }
@@ -78,72 +87,63 @@ public:
             logger_ptr->warn("client (uid: {0} fd: {1}) try to send invalid request.", uid_, conn_.SockFd());
             return -1;
         }
-        if (conn_.GetWriteBufferRoom() < request.ByteSizeLong() + 8)
-        {   // should wait
-            return 0;
-        }
         request.set_uid(uid_ == -1 ? 0 : uid_);
-        time_point now = std::chrono::steady_clock::now();
-        int64_t stamp = std::chrono::duration_cast<std::chrono::milliseconds>(now - createTime_).count();
+        int64_t stamp = std::chrono::duration_cast<MilliSeconds>(SteadyClock::now() - createTime_).count();
         request.set_stamp(stamp);
         stampToRequest_.emplace(stamp, request);
 
-        std::string rawRequest = request.SerializeAsString();
-        std::string pkgData(8 + rawRequest.size(), '\0');
-        NS::pack(NS::REQUEST, rawRequest, &pkgData[0], pkgData.size());
+        std::string rawRequest(std::move(request.SerializeAsString()));
         if (request.requesttype() == Request::LOGOUT)
         {
             uid_ = -1;
         }
         // record
-        conn_.Send(pkgData);
+        conn_.Send(REQUEST, rawRequest);
         
-        //print(std::cout, request);
-        return 1;
+        return 0;
     }
+    
     void SetRequests(const std::queue<Request> &requests) {requests_ = requests;}
+    
     UserId uid() const {return uid_;}
 
 private:
-    void OnMessages(std::vector<Request> &requests, std::vector<Response> &responses)
+    void OnMessages(std::vector<std::pair<int32_t, std::string>> msgs)
     {
-        for (int i = 0; i < requests.size(); ++i)
+        for (int i = 0; i < msgs.size(); ++i)
         {
-            logger_ptr->warn("client (uid: {0}, fd: {1}) gets request from proxy", uid_, conn_.SockFd());
-        }
-        for (int i = 0; i < responses.size(); ++i)
-        {
-            logger_ptr->info("client (uid: {0}, fd: {1}) gets response from proxy", uid_, conn_.SockFd());
+            if (msgs[i].first != RESPONSE)
+                continue;
+            Response response;
+            response.ParseFromString(std::get<1>(msgs[i]));
+            // logger_ptr->info("client (uid: {0}, fd: {1}) gets response from proxy", uid_, conn_.SockFd());
             waittingResponse_ = false;
-            int64_t stamp = responses[i].stamp();
+            int64_t stamp = response.stamp();
             if (uid_ == -1)
             {
-                uid_ = responses[i].uid();
-                logger_ptr->info("setting client's uid to {}", uid_);
+                uid_ = response.uid();
+                // logger_ptr->info("setting client's uid to {}", uid_);
             }
             stampToRequest_.erase(stamp);
-            time_point now = std::chrono::steady_clock::now();
-            stamp = std::chrono::duration_cast<std::chrono::milliseconds>(now - createTime_).count() - stamp;
+            stamp = std::chrono::duration_cast<MilliSeconds>(SteadyClock::now() - createTime_).count() - stamp;
             stamp = stamp < 0 ? 0 : stamp;
-            logger_ptr->info("response time: {} ms", stamp);
+            // logger_ptr->info("response time: {} ms", stamp);
             // update statistic
             responseTime_ = responseTime_ * ((double)requestSent_ / (requestSent_ + 1)) + (double)stamp / (requestSent_ + 1);
             requestSent_++;
         }
         if (!waittingResponse_ && !requests_.empty())
         {
-            Request request = requests_.front();
-            if (sendRequest(request) > 0)
+            if (sendRequest(requests_.front()) > -1)
             {
-                logger_ptr->info("client (uid: {0}, fd: {1}) successfully send {2} request to proxy.", 
-                                            uid_, conn_.SockFd(), requestTypeToStr[request.requesttype()]);
+                // logger_ptr->info("client (uid: {0}, fd: {1}) successfully send {2} request to proxy.", uid_, conn_.SockFd(), requestTypeToStr[requests_.front().requesttype()]);
                 waittingResponse_ = true;
                 requests_.pop();
             }
         }
         else if (!waittingResponse_ && requests_.empty())
         {
-            logger_ptr->info("client (uid: {0}, fd: {1}) has sent all requests to proxy.", uid_, conn_.SockFd());
+            // logger_ptr->info("client (uid: {0}, fd: {1}) has sent all requests to proxy.", uid_, conn_.SockFd());
             conn_.DisConnect();
             stats[objId_] = responseTime_;
         }
@@ -153,18 +153,16 @@ private:
     {
         if (!waittingResponse_ && !requests_.empty())
         {
-            Request request = requests_.front();
-            if (sendRequest(request) > 0)
+            if (sendRequest(requests_.front()) > -1)
             {
-                logger_ptr->info("client (uid: {0}, fd: {1}) successfully send {2} request to proxy.",
-                                                 uid_, conn_.SockFd(), requestTypeToStr[request.requesttype()]);
+                // logger_ptr->info("client (uid: {0}, fd: {1}) successfully send {2} request to proxy.", uid_, conn_.SockFd(), requestTypeToStr[requests_.front().requesttype()]);
                 requests_.pop();
                 waittingResponse_ = true;
             }
         }
         else if (!waittingResponse_ && requests_.empty())
         {
-            logger_ptr->info("client (uid: {0}, fd: {1}) has sent all requests to proxy.", uid_, conn_.SockFd());
+            // logger_ptr->info("client (uid: {0}, fd: {1}) has sent all requests to proxy.", uid_, conn_.SockFd());
             conn_.DisConnect();
             stats[objId_] = responseTime_;
         }
@@ -185,7 +183,7 @@ private:
     std::unordered_map<int64_t, Request> stampToRequest_;
     int requestSent_ = 0;
     double responseTime_ = 0;
-    time_point createTime_;
+    TimePoint createTime_;
     std::queue<Request> requests_;
     bool waittingResponse_ = false;
 };
@@ -268,17 +266,17 @@ int main(int argc, char **argv)
         logger_ptr->error("no clients connected to proxy.");
         exit(0);
     }
-    logger_ptr->info("{} clients connected to proxy.", connCnt);
+    // logger_ptr->info("{} clients connected to proxy.", connCnt);
     
     signal(SIGINT, stop_client);
     // now start to flood the proxy
-    time_point begin = std::chrono::steady_clock::now();
+    TimePoint begin = SteadyClock::now();
     while (!flag && loop.loopOnce(1000) != -1);
-    time_point end = std::chrono::steady_clock::now();
+    TimePoint end = SteadyClock::now();
 
     if (flag)
     {
-        logger_ptr->info("program stopped by SIGINT.");
+        // logger_ptr->info("program stopped by SIGINT.");
     }
     else
     {
@@ -286,7 +284,7 @@ int main(int argc, char **argv)
         for (int i = 0; i < stats.size(); ++i) sum += stats[i];
         sum /= stats.size();
         std::cout << "QPS: " 
-                  << requests.size() * clientno / std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count()
+                  << requests.size() * clientno * 1000 / std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count()
                   << std::endl;
         std::cout << "average response time: " << sum << " ms" << std::endl;
     }

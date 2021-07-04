@@ -3,12 +3,13 @@
 
 #include <sys/types.h>
 #include <sys/epoll.h>
+#include <unistd.h>
 #include <memory>
 #include <unordered_map>
 #include <memory>
 #include "common.h"
 
-#define DEFAULT_MAX_EVENTS  20000
+#define DEFAULT_MAX_EVENTS  25000
 
 namespace Net {
 
@@ -56,28 +57,32 @@ public:
                 const std::function<int()> &outEventCallBack,
                 const std::function<int()> &errEventCallBack,
                 const std::function<int()> &closeEventCallBack);
-public:
-    int HandleEvents(Net::Event events);
     
+    ~EventsSource() {::close(fd_);}
+
+public:
     int EnableWrite();
 
     int EnableRead();
+
+    int EnableET();
 
     int DisableWrite();
 
     int DisableRead();
 
-    int SetNonBlocking(bool flag = true);
+    int RemoveFromLoop();
 
-    int Close();
+    FileDesc fd() const {return fd_;};
 
-    FileDesc fd() const;
-    Net::Event events_ = 0;
     friend class EventLoop;
+
+// private:
+    int HandleEvents(Net::Event events);
+
 private:
     FileDesc fd_;
-    
-    Net::Event out_events_;
+    Event events_ = 0;
     EventLoop *loop_;
     std::function<int()> inEventCallBack_;
     std::function<int()> outEventCallBack_;

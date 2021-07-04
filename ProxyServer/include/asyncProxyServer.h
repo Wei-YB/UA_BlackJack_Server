@@ -86,7 +86,7 @@ public:
 
         cq_ = builder.AddCompletionQueue();
         server_ = builder.BuildAndStart();
-        logger_ptr->info("Server listening on {}", serverAddress_);
+        // logger_ptr->info("Server listening on {}", serverAddress_);
     
         HandleRpcs();
     }
@@ -105,7 +105,7 @@ public:
         }
         if (call)
         {
-            logger_ptr->info("In main thread: found the caller for response (stamp: {})", response.stamp());
+            // logger_ptr->info("In main thread: found the caller for response (stamp: {})", response.stamp());
             stamp = call->stamp_;
             response.set_stamp(stamp);
             call->reply_ = response;
@@ -113,7 +113,7 @@ public:
             call->status_ = FINISH;
             return;
         }
-        logger_ptr->info("In main thread: can not find the caller for response (stamp: {})", response.stamp());
+        // logger_ptr->info("In main thread: can not find the caller for response (stamp: {})", response.stamp());
     }
 
     void Stop() {stop_ = true;}

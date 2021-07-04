@@ -14,9 +14,10 @@ using ua_blackjack::Response;
 using namespace Net;
 
 
+
 Client::Client(std::shared_ptr<TcpConnection> conn,
-           const std::function<void(FileDesc, Request &)> &requestCallBack,
-           const std::function<void(Response &)> &responseCallBack,
+           const std::function<void(FileDesc, Request)> &requestCallBack,
+           const std::function<void(Response)> &responseCallBack,
            const std::function<void(FileDesc)> &disconnectCallBack,
            const std::function<void(FileDesc)> &errorCallBack)
        : conn_(conn), 
@@ -25,68 +26,71 @@ Client::Client(std::shared_ptr<TcpConnection> conn,
         errorCallBack_(errorCallBack),
         disconnectCallBack_(disconnectCallBack) 
 {
-    conn_->SetInputCallBack(std::bind(&Client::OnMessages, this, std::placeholders::_1, std::placeholders::_2));
+    conn_->SetInputCallBack(std::bind(&Client::OnMessages, this, std::placeholders::_1));
     conn_->SetOutPutCallBack(std::bind(&Client::OnSendReady, this));
     conn_->SetHupCallBack(std::bind(&Client::OnLeave, this));
     conn_->SetErrorCallBack(std::bind(&Client::OnError, this));
+    conn_->SetEncoder(std::bind(pack, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
+    conn_->SetDecoder(std::bind(unpack, std::placeholders::_1, std::placeholders::_2));
 }
 
 int Client::SendRequest(const Request &request)
 {
-    int ret = 0;
-    std::string rawRequest = request.SerializeAsString();
-    std::string pkgData(8 + rawRequest.size(), '\0');
-    NS::pack(NS::REQUEST, rawRequest, &pkgData[0], pkgData.size());
-    {   // when we try to write data to the lower tcp socket, we need to hold a lock
-        std::lock_guard<std::mutex> guard(connLock_);
-        if (pkgData.size() > conn_->GetWriteBufferRoom())
-        {   // TODO: maybe we can buffer this request
-            logger_ptr->info("In gRPC server thread: Try to send request to client (uid: {}), but tcp buffer has no free room.", request.uid());
-            return -1;
-        }
-        ret = conn_->Send(pkgData);
-    }
-    return ret;
+    std::string rawRequest(std::move(request.SerializeAsString()));
+    // when we try to write data to the lower tcp socket, we need to hold a lock
+    std::lock_guard<std::mutex> guard(connLock_);
+    return conn_->Send(REQUEST, rawRequest);
 }
 
 int Client::SendResponse(const Response &response)
 {
-    int ret = 0;
-    std::string rawResponse = response.SerializeAsString();
-    std::string pkgData(8 + rawResponse.size(), '\0');
-    NS::pack(NS::RESPONSE, rawResponse, &pkgData[0], pkgData.size());
-    {
-        std::lock_guard<std::mutex> guard(connLock_);
-        if (pkgData.size() > conn_->GetWriteBufferRoom())
-        {   // TODO: maybe we can buffer this request
-            logger_ptr->info("In gRPC server thread: Try to send request to response (uid: {}), but tcp buffer has no free room.", response.uid());
-            return -1;
-        }
-        ret = conn_->Send(pkgData);
-    }
-    return ret;
+    std::string rawResponse(std::move(response.SerializeAsString()));
+    // when we try to write data to the lower tcp socket, we need to hold a lock
+    std::lock_guard<std::mutex> guard(connLock_);
+    return conn_->Send(RESPONSE, rawResponse);
 }
 
-void Client::OnMessages(std::vector<Request> &requests, std::vector<Response> &responses)
+void Client::OnMessages(std::vector<std::pair<int32_t, std::string>> msgs)
 {
-    logger_ptr->info("In main thread: tcp (sockfd: {0}) get {1} requests and {2} response from client (uid: {3})", 
-                                            conn_->SockFd(), requests.size(), responses.size(), uid_);
+    int requestCnt = 0, responseCnt = 0;
     if (requestCallBack_)
     {
-        for (int i = 0; i < requests.size(); ++i)
+        for (int i = 0; i < msgs.size(); ++i)
         {
-            requestCallBack_(conn_->SockFd(), requests[i]);
+            if (msgs[i].first == REQUEST)
+            {
+                Request request;
+                request.ParseFromString(std::get<1>(msgs[i]));
+                requestCallBack_(conn_->SockFd(), std::move(request));
+                requestCnt++;
+            }
         }
     }
     if (responseCallBack_)
     {
-        for (int i = 0; i < responses.size(); ++i)
+        for (int i = 0; i < msgs.size(); ++i)
         {
-            responseCallBack_(responses[i]);
+            if (msgs[i].first == RESPONSE)
+            {
+                Response response;
+                response.ParseFromString(std::get<1>(msgs[i]));
+                responseCallBack_(std::move(response));
+                responseCnt++;
+            }
         }
     }
+    // logger_ptr->info("In main thread: tcp (sockfd: {0}) get {1} requests and {2} response from client (uid: {3})", conn_->SockFd(), requestCnt, responseCnt, uid_);
 }
 
-void Client::OnLeave() {disconnectCallBack_(conn_->SockFd());}
+void Client::OnLeave() 
+{
+    // logger_ptr->info("In main thread: client (uid: {}) is leaving.", uid_);
+    if (disconnectCallBack_) 
+    {
+        disconnectCallBack_(conn_->SockFd());
+        return;
+    }
+    // logger_ptr->info("In main thread: client (uid: {}) has no chance to tell the proxy server.", uid_);
+}
 
 void Client::OnError() {errorCallBack_(conn_->SockFd());}

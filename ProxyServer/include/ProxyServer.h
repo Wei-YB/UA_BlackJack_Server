@@ -33,23 +33,6 @@ public:
     // port: which port to listen
     // loop: pointer to the eventloop of the main thread
     ProxyServer(const char *ip, unsigned short port, Net::EventLoop *loop);
-
-    // conn: shared ptr to new tcp connection
-    void OnNewClient(std::shared_ptr<Net::TcpConnection> conn);
-
-    // fd: file descriptor for the tcp connection of the client
-    // request: request from client
-    void OnClientRequest(FileDesc fd, Request &request);
-
-    // response: response from client
-    void OnClientResponse(Response &response);
-
-    // response: response from rpc server
-    void OnServiceResponse(const Response& response);
-    // fd: file descriptor for the tcp connection of the client
-    void OnDisConnection(FileDesc fd);
-
-    void OnError(FileDesc fd);
     
     // request: request from remote rpc caller
     int SendRequest(Request &request);
@@ -61,6 +44,26 @@ public:
     //  register rpc client
     void RegisterServiceClient(Request::RequestType requestType, std::shared_ptr<ServiceClient> client)
     {requestTypeToServiceClient_.emplace(requestType, client);}
+
+    // response: response from rpc server
+    void OnServiceResponse(Response& response);
+
+// private:
+    // conn: shared ptr to new tcp connection
+    void OnNewClient(std::shared_ptr<Net::TcpConnection> conn);
+
+    // fd: file descriptor for the tcp connection of the client
+    // request: request from client
+    void OnClientRequest(FileDesc fd, Request request);
+
+    // response: response from client
+    void OnClientResponse(Response response);
+
+    // fd: file descriptor for the tcp connection of the client
+    void OnDisConnection(FileDesc fd);
+
+    void OnError(FileDesc fd);
+
 private:
     std::mutex uidToClientLock_;
     std::unordered_map<UserId, std::shared_ptr<Client>> uidToClient_;   
