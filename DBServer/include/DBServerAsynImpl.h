@@ -29,14 +29,15 @@ public:
     void Run();
 
     void Shutdown() {
-        server_->Shutdown();
-        cq_->Shutdown();
+        stop_ = true;
     }
 
     void HandleRpcs();
 
     friend class CallData;
 private:
+
+    bool stop_;
     std::string rpc_host_;
     std::string redis_host_;
     ua_blackjack::data_base_server::RequestParser parser_;
