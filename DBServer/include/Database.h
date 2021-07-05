@@ -42,9 +42,13 @@ public:
 
     bool AddFriend(int64_t uid, int64_t friendID);
     bool DeleteFriend(int64_t uid, int64_t friendID);
+    bool IsFriend(int64_t uid, int64_t friendID);
+
 
     bool AddWaitFriend(int64_t uid, int64_t friendID);
     bool DeleteWaitingFriend(int64_t uid, int64_t friendID);
+    bool IsWaitingFriend(int64_t uid, int64_t friendID);
+
 
     bool      MatchFinish(const MatchInfo& match_info);
     MatchInfo GetMatchInfo(int64_t mid);

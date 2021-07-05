@@ -29,14 +29,16 @@ struct Config{
     void GetConfig(const std::string& path = ""){
         std::ifstream config_file{};
         if(path.empty()){
+            std::cout <<"use default config" << std::endl;
             config_file.open(defalut_config);
         }else{
             config_file.open(path);
         }
         if(config_file.bad()){
-            std::cerr<<"bad config file path, using defalut config." << std::endl;
-            return;
+            std::cerr<<"bad config file path" << std::endl;
+            exit(0);
         }
+        std::cout <<"----reading config-----" << std::endl;
         std::string line;
         std::string key, value;
         while(getline(config_file, line)){
@@ -67,11 +69,7 @@ private:
 };
 
 void StartServer() {
-    auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>
-    ("async_file_logger", "logs/async_log.txt");
-    spdlog::set_default_logger(async_file);
-    spdlog::flush_on(spdlog::level::trace);
-    spdlog::set_level(spdlog::level::trace);
+    
 
     Config config;
     config.GetConfig(config_file_path);
@@ -84,6 +82,12 @@ void StartServer() {
         pid_file.close();
     }
    
+    auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>
+    ("async_file_logger", "logs/async_log.txt");
+    spdlog::set_default_logger(async_file);
+    spdlog::flush_on(spdlog::level::trace);
+    spdlog::set_level(spdlog::level::trace);
+
     SPDLOG_TRACE("start database server");
 
     server = new ServerAsynImpl(config.grpc_host,config.redis_host,config.init_score);
