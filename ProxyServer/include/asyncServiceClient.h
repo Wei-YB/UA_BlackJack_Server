@@ -60,7 +60,7 @@ public:
         void *got_tag;
         bool ok = false;
 
-        // logger_ptr->info("In {0} thread: Thread started.", serviceName_);
+        logger_ptr->info("In {0} thread: Thread started.", serviceName_);
         TimePoint deadline = SystemClock::now() + MilliSeconds(500);
         grpc::CompletionQueue::NextStatus sta;
         while (!stop_ && (sta = cq_.AsyncNext(&got_tag, &ok, deadline)))
@@ -77,7 +77,7 @@ public:
             }
             else 
             {
-                // logger_ptr->info("In {} thread: response not ok", serviceName_);
+                logger_ptr->info("In {} thread: response not ok", serviceName_);
                 Response res;
                 res.set_status(-1);
                 res.set_uid(call->request.uid());
@@ -89,7 +89,7 @@ public:
             deadline = SystemClock::now() + MilliSeconds(500);
         }
 
-        // logger_ptr->info("In {} thread: leaving the thread", serviceName_);
+        logger_ptr->info("In {} thread: leaving the thread", serviceName_);
     }
 
     void AsyncCompleteRpc_stand_alone_()
@@ -103,12 +103,12 @@ public:
                     || call->request.requesttype() == Request::SIGNUP)
                 {
                     call->reply.set_uid(++requestCnt_);
-                    // logger_ptr->info("In gRPC client {0} thread: this is a login request, set its uid to {1}", serviceName_, requestCnt_);
+                    logger_ptr->info("In gRPC client {0} thread: this is a login request, set its uid to {1}", serviceName_, requestCnt_);
                 }
                 else
                 {
                     call->reply.set_uid(call->request.uid());
-                    // logger_ptr->info("In gRPC client {0} thread: this is a normal request, simply echo back", serviceName_);
+                    logger_ptr->info("In gRPC client {0} thread: this is a normal request, simply echo back", serviceName_);
                 }
                 call->reply.set_stamp(call->request.stamp());
                 call->reply.set_status(0);
@@ -121,7 +121,7 @@ public:
             }   
         }
 
-        // logger_ptr->info("In gRPC client {0} thread: leaving the thread", serviceName_);
+        logger_ptr->info("In gRPC client {0} thread: leaving the thread", serviceName_);
     }
 
 protected:
@@ -158,7 +158,7 @@ public:
 public:
     int Call(const Request &request)
     {  
-        // logger_ptr->info("In main thread: client (uid: {0}) call {1}", request.uid(), serviceName_);
+        logger_ptr->info("In main thread: client (uid: {0}) call {1}", request.uid(), serviceName_);
         AsyncClientCall *call =  new AsyncClientCall;
         call->request = request;
         if (serviceAddr_ != "0.0.0.0:0")
@@ -169,7 +169,7 @@ public:
         }    
         else
         {
-            // logger_ptr->info("push request (type: {0}, from: uid = {1}) into call queue.", request.requesttype(), request.uid());
+            logger_ptr->info("push request (type: {0}, from: uid = {1}) into call queue.", request.requesttype(), request.uid());
             callQueue_.Push(call);
         }
         return 0;

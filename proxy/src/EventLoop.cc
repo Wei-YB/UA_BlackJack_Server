@@ -33,7 +33,7 @@ int EventsSource::HandleEvents(Event events)
 {
     int ret;
     if (events & EV_HUP || events & EV_ERR)
-    {   // logger_ptr->warn("fatal error happens in event source (fd: {}), close it now.", fd_);
+    {   logger_ptr->warn("fatal error happens in event source (fd: {}), close it now.", fd_);
         if (closeEventCallBack_) 
         {
             closeEventCallBack_();
@@ -91,12 +91,12 @@ EventLoop::EventLoop(int max_events) : maxEvents_(max_events)
 {
     if ((epollfd_ = epoll_create(5)) < 0)
     {
-        // logger_ptr->error("fail to create epollfd.");
+        logger_ptr->error("fail to create epollfd.");
     }
     if ((events_ = new struct epoll_event[maxEvents_]) == NULL)
     {
         close(epollfd_);
-        // logger_ptr->error("fail to assign epoll event array.");
+        logger_ptr->error("fail to assign epoll event array.");
         throw "EventLoop: fail to assign epoll event array.\n";        
     }
 }

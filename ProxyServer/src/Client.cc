@@ -1,4 +1,5 @@
 #include <memory>
+#include <mutex>
 #include "Client.h"
 #include "TcpConnection.h"
 #include "ClientProxyProtocol.h"
@@ -37,10 +38,16 @@ Client::Client(std::shared_ptr<TcpConnection> conn,
 
 int Client::SendRequest(const Request &request)
 {
-    std::string rawRequest(std::move(request.SerializeAsString()));
+    // std::string rawRequest(std::move(request.SerializeAsString()));
     // when we try to write data to the lower tcp socket, we need to hold a lock
     std::lock_guard<std::mutex> guard(connLock_);
-    return conn_->Send(REQUEST, rawRequest);
+    if (0 > pack_sp(request, conn_->writeBuffer_))
+    {
+        logger_ptr->warn("In gRPC service thread: fail to pack request to buffer.");
+        return -1;
+    }
+    return conn_->Send(REQUEST, "");    
+    //return conn_->Send(REQUEST, rawRequest);
 }
 
 int Client::SendResponse(const Response &response)
@@ -78,18 +85,18 @@ void Client::OnMessages(std::vector<std::pair<int32_t, StringPiece>> msgs)
             responseCnt++;
         }
     }
-    // logger_ptr->info("In main thread: tcp (sockfd: {0}) get {1} requests and {2} response from client (uid: {3})", conn_->SockFd(), requestCnt, responseCnt, uid_);
+    logger_ptr->info("In main thread: tcp (sockfd: {0}) get {1} requests and {2} response from client (uid: {3})", conn_->SockFd(), requestCnt, responseCnt, uid_);
 }
 
 void Client::OnLeave() 
 {
-    // logger_ptr->info("In main thread: client (uid: {}) is leaving.", uid_);
+    logger_ptr->info("In main thread: client (uid: {}) is leaving.", uid_);
     if (disconnectCallBack_) 
     {
         disconnectCallBack_(conn_->SockFd());
         return;
     }
-    // logger_ptr->info("In main thread: client (uid: {}) has no chance to tell the proxy server.", uid_);
+    logger_ptr->info("In main thread: client (uid: {}) has no chance to tell the proxy server.", uid_);
 }
 
 void Client::OnError() {errorCallBack_(conn_->SockFd());}

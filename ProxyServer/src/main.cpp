@@ -91,7 +91,7 @@ static void Deamonize(const std::unordered_map<std::string, std::string> &config
         exit(EXIT_SUCCESS);
     }
 
-    //logger_flush_on();
+    logger_flush_on();
     set_logger_name(config.find("logger_name")->second);
     set_log_path(config.find("log_path")->second);
     create_logger();
@@ -100,7 +100,7 @@ static void Deamonize(const std::unordered_map<std::string, std::string> &config
     int pid_fd = open(path_to_pid_file, O_RDWR | O_CREAT, S_IRWXU);
     if (pid_fd < 0)
     {
-        // logger_ptr->error("In deamonizing: fail to create pid file, exit now.");
+        logger_ptr->error("In deamonizing: fail to create pid file, exit now.");
         exit(EXIT_FAILURE);
     }
     pid = getpid();
@@ -110,7 +110,7 @@ static void Deamonize(const std::unordered_map<std::string, std::string> &config
     write(pid_fd, buf, len);
     close(pid_fd);
 
-    // logger_ptr->info("In deamonizing: successfullt deamonize service (pid = {}).", pid);
+    logger_ptr->info("In deamonizing: successfullt deamonize service (pid = {}).", pid);
 
     /* set new file permission mask */
     umask(0);
@@ -175,7 +175,7 @@ int main(int argc, char **argv)
 
     Deamonize(config);
 
-    // logger_ptr->info("In main thread: Successfully create an async logger.");
+    logger_ptr->info("In main thread: Successfully create an async logger.");
 
     signal(SIGINT, stop_server);
 
@@ -186,7 +186,7 @@ int main(int argc, char **argv)
     std::shared_ptr<ServiceClient> socialClient = std::make_shared<ConcreteServiceClient<SocialService>>("social", config["socialAddress"]);
     std::shared_ptr<ServiceClient> playerClient = std::make_shared<ConcreteServiceClient<PlayerService>>("player", config["playerAddress"]);
 
-    // logger_ptr->info("In main thread: Successfully create four rpc clients.");
+    logger_ptr->info("In main thread: Successfully create four rpc clients.");
 
     std::shared_ptr<ProxyServer> proxyServer = std::make_shared<ProxyServer>(config["host"].c_str(), (unsigned short)atoi(config["port"].c_str()), &loop);
     // resgister the service Clients to the proxy server
@@ -218,7 +218,7 @@ int main(int argc, char **argv)
         }
     }
 
-    // logger_ptr->info("In main thread: Successfully create proxy server.");
+    logger_ptr->info("In main thread: Successfully create proxy server.");
 
     lobbyClient->SetResponseCallBack(std::bind(&ProxyServer::OnServiceResponse, proxyServer.get(), std::placeholders::_1));
     roomClient->SetResponseCallBack(std::bind(&ProxyServer::OnServiceResponse, proxyServer.get(), std::placeholders::_1));
@@ -241,7 +241,7 @@ int main(int argc, char **argv)
         gRpcServerThread = std::thread(&ProxyRpcServer::Run, gRpcServer.get());
     }
 
-    // logger_ptr->info("In main thread: Four rpc client threads start.");
+    logger_ptr->info("In main thread: Four rpc client threads start.");
 
     while (!flag)
     {
@@ -249,7 +249,7 @@ int main(int argc, char **argv)
             stop_server(0);
     }
 
-    // logger_ptr->info("In main thread: The event loop stops.");
+    logger_ptr->info("In main thread: The event loop stops.");
 
     lobbyClient->StopClient();
     roomClient->StopClient();
@@ -264,7 +264,7 @@ int main(int argc, char **argv)
     if (gRpcServerThread.joinable())
         gRpcServerThread.join();
 
-    // logger_ptr->info("Exit the program.");
+    logger_ptr->info("Exit the program.");
     remove(path_to_pid_file);
     return 0;
 }

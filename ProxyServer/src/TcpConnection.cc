@@ -71,7 +71,7 @@ int TcpConnection::OnInput()
     {
         if ((byteRead = read(clientfd, readBuffer_)) < 0)
         {
-            // // logger_ptr->info("In main thread: connection (sockfd: {}) shutdown by peer.", SockFd());
+            // logger_ptr->info("In main thread: connection (sockfd: {}) shutdown by peer.", SockFd());
             if (hupCallBack_) 
             {
                 ::close(SockFd());
@@ -85,7 +85,7 @@ int TcpConnection::OnInput()
         }
         // if specify a decoder, decode it
         if (decoder_)
-        {   // // logger_ptr->info("In main thread: using decoder");
+        {   // logger_ptr->info("In main thread: using decoder");
             // handle packages in buffer one by one
             while (true)
             {
@@ -105,7 +105,7 @@ int TcpConnection::OnInput()
         }
         else
         {
-            // // logger_ptr->info("no decoder available.");
+            // logger_ptr->info("no decoder available.");
             StringPiece strPiece(&readBuffer_, (readBuffer_.m_head + offset) % readBuffer_.capacity(), readBuffer_.size() - offset);
             pkgs.push_back(std::make_pair(0, strPiece));
             offset += readBuffer_.size();
@@ -115,7 +115,7 @@ int TcpConnection::OnInput()
         }
     }
 
-    // // logger_ptr->info("In main thread: connection (sockfd: {0}) receives {1} packages.", SockFd(), pkgs.size());
+    // logger_ptr->info("In main thread: connection (sockfd: {0}) receives {1} packages.", SockFd(), pkgs.size());
     if (inputCallBack_)
     {
         inputCallBack_(std::move(pkgs));
@@ -133,18 +133,18 @@ int TcpConnection::OnOutput()
     }
     if (writeBuffer_.empty())
     {
-        // logger_ptr->info("In main thread: connection (sockfd: {0}) has no data to send, unregister EV_IN event.", SockFd());
+        logger_ptr->info("In main thread: connection (sockfd: {0}) has no data to send, unregister EV_IN event.", SockFd());
         eventsSource_->DisableWrite();
         return 0;
     }
     int ret = write(eventsSource_->fd(), writeBuffer_);
-    // logger_ptr->info("In main thread: connection (sockfd: {0}) write {1} bytes.", SockFd(), ret);
+    logger_ptr->info("In main thread: connection (sockfd: {0}) write {1} bytes.", SockFd(), ret);
     return 0;
 }
 
 int TcpConnection::OnError()
 {
-    // logger_ptr->info("In main thread: connection (sockfd: {0}) has error!", SockFd());
+    logger_ptr->info("In main thread: connection (sockfd: {0}) has error!", SockFd());
     if (errorCallBack_)
         errorCallBack_();
     ::close(SockFd());
@@ -153,7 +153,7 @@ int TcpConnection::OnError()
 
 int TcpConnection::OnDisconnect()
 {
-    // logger_ptr->info("In main thread: connection (sockfd: {0}) shutdown by peer!", SockFd());
+    logger_ptr->info("In main thread: connection (sockfd: {0}) shutdown by peer!", SockFd());
     if (hupCallBack_)
         hupCallBack_();
     close(SockFd());
@@ -177,7 +177,7 @@ int TcpConnection::Send(int32_t type, const std::string &pkgsData)
     int bytesWritten = write(SockFd(), writeBuffer_);
     if (bytesWritten < 0)
     {
-        // logger_ptr->info("In main thread: connection (sockfd: {0}) send with fatal error!", SockFd());
+        logger_ptr->info("In main thread: connection (sockfd: {0}) send with fatal error!", SockFd());
         return -1;
     }
     // if there are data left
@@ -186,7 +186,7 @@ int TcpConnection::Send(int32_t type, const std::string &pkgsData)
         eventsSource_->EnableWrite();
     }
 
-    // logger_ptr->info("In main thread: connection (sockfd: {0}) send {1} bytes data.", SockFd(), bytesWritten);
+    logger_ptr->info("In main thread: connection (sockfd: {0}) send {1} bytes data.", SockFd(), bytesWritten);
 
     return 0;
 }
@@ -196,20 +196,20 @@ int TcpConnection::Connect()
     int ret = connect(SockFd(), (struct sockaddr *)&addr_, sizeof(addr_));
     if (ret > -1)
     {
-        // logger_ptr->info("In main thread: (sockfd: {0}) successfully connect to host", SockFd());
+        logger_ptr->info("In main thread: (sockfd: {0}) successfully connect to host", SockFd());
         eventsSource_->EnableWrite();
         eventsSource_->EnableRead();
         eventsSource_->EnableET();
         setNonBlocking(SockFd());
         return 0;
     }
-    // logger_ptr->info("In main thread: (sockfd: {0}) fail to connect to host", SockFd());
+    logger_ptr->info("In main thread: (sockfd: {0}) fail to connect to host", SockFd());
     return -1;
 }
 
 int TcpConnection::DisConnect()
 {
-    // logger_ptr->info("In main thread: (sockfd: {0}) disconnect from host", SockFd());
+    logger_ptr->info("In main thread: (sockfd: {0}) disconnect from host", SockFd());
     ::close(SockFd());
     eventsSource_->RemoveFromLoop();
     return 0;

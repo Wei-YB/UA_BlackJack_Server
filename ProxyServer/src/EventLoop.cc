@@ -33,29 +33,29 @@ int EventsSource::HandleEvents(Event events)
 {
     if (events & (EV_ERR | EV_HUP))
     {
-        // logger_ptr->info("In main thread: On error event from fd: {}", fd_);
+        logger_ptr->info("In main thread: On error event from fd: {}", fd_);
         if (errEventCallBack_) errEventCallBack_();
         return -1;
     }
     if ((events & EV_IN) && (events & EV_RDHUP))
     {
-        // logger_ptr->info("In main thread: On input event from fd: {}", fd_);
+        logger_ptr->info("In main thread: On input event from fd: {}", fd_);
         if (inEventCallBack_) inEventCallBack_();
         return -1;
     }
     if (events & EV_IN)
     {
-        // logger_ptr->info("In main thread: On input event from fd: {}", fd_);
+        logger_ptr->info("In main thread: On input event from fd: {}", fd_);
         if (inEventCallBack_) 
             if (inEventCallBack_() < 0) 
             {
-                // logger_ptr->info("In main thread: just to prove evsSource (fd: {}) is not dead.", fd_);
+                logger_ptr->info("In main thread: just to prove evsSource (fd: {}) is not dead.", fd_);
                 return -1;
             }
     }
     if (events & EV_OUT)
     {
-        // logger_ptr->info("In main thread: On onput event from fd: {}", fd_);
+        logger_ptr->info("In main thread: On onput event from fd: {}", fd_);
         if (outEventCallBack_) 
             if (outEventCallBack_() < 0)
                 return -1;
@@ -138,7 +138,7 @@ int EventLoop::add(std::shared_ptr<EventsSource> evsSource)
         return -1;
     }
     eventsCnt_++;
-    // logger_ptr->info("In main thread: Successfully add event source (fd: {}).", evsSource->fd_);
+    logger_ptr->info("In main thread: Successfully add event source (fd: {}).", evsSource->fd_);
     return 0;
 }
 
@@ -155,7 +155,7 @@ int EventLoop::mod(std::shared_ptr<EventsSource> evsSource)
     {
         return -1;
     }
-    // logger_ptr->info("In main thread: Successfully modify eventsSource (fd: {}).", evsSource->fd_);
+    logger_ptr->info("In main thread: Successfully modify eventsSource (fd: {}).", evsSource->fd_);
     return 0;
 }
 

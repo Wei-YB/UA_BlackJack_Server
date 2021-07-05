@@ -2,6 +2,7 @@
 #define _TCPCONNECTION_H_
 #include <functional>
 #include <netinet/in.h>
+#include <vector>
 #include "common.h"
 #include "CircularBuffer.h"
 #include "EventLoop.h"

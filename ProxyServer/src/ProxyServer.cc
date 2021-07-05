@@ -34,7 +34,7 @@ ProxyServer::ProxyServer(const char *ip, unsigned short port, EventLoop *loop)
 // this should be called by tcp server
 void ProxyServer::OnNewClient(std::shared_ptr<TcpConnection> conn)
 {
-    // logger_ptr->info("In main thread: Get a new client connection (sockfd: {})", conn->SockFd());
+    logger_ptr->info("In main thread: Get a new client connection (sockfd: {})", conn->SockFd());
     std::shared_ptr<Client> newClient = std::make_shared<Client>(conn, 
                                                                 std::bind(&ProxyServer::OnClientRequest, this, std::placeholders::_1, std::placeholders::_2),
                                                                 std::bind(&ProxyServer::OnClientResponse, this, std::placeholders::_1),
@@ -48,15 +48,15 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request request)
     // check whether the request valid
     if (requestTypeToModule.find(request.requesttype()) == requestTypeToModule.end()) 
     {
-        // logger_ptr->info("In main thread: Get unkonwn request (type number: {2}) from client (uid: {0}, sockfd: {1})", request.uid(), fd, request.requesttype());
+        logger_ptr->info("In main thread: Get unkonwn request (type number: {2}) from client (uid: {0}, sockfd: {1})", request.uid(), fd, request.requesttype());
         return;
     }
-    // logger_ptr->info("In main thread: Get request (type: {2}, stamp: {3}) from client (uid: {0}, sockfd: {1})", request.uid(), fd, requestTypeToStr[request.requesttype()], request.stamp());
+    logger_ptr->info("In main thread: Get request (type: {2}, stamp: {3}) from client (uid: {0}, sockfd: {1})", request.uid(), fd, requestTypeToStr[request.requesttype()], request.stamp());
     // check whether the service exist
     std::shared_ptr<ServiceClient> serviceClient = requestTypeToServiceClient_[request.requesttype()].lock();
     if (!serviceClient)
     {
-        // logger_ptr->info("In main thread: Service unavailable!");
+        logger_ptr->info("In main thread: Service unavailable!");
         return;
     }
     // for unlogin user, we only handle signin and login request
@@ -66,13 +66,26 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request request)
         // we use the memory addr of the client as its identity,
         // since stamps from multiple clients might conflict
         int64_t stamp = (int64_t)client.get();
-        // logger_ptr->info("In main thread: setting the request stamp to {}", stamp);
+        logger_ptr->info("In main thread: setting the request stamp to {}", stamp);
         {
         std::lock_guard<std::mutex> guard(stampToUnloginClientLock_);
-        if (!stampToUnloginClient_.emplace(stamp, client).second)
-        {   // don't send it, since it has conflicts
-            logger_ptr->warn("In main thread: Conflict happens when inserting a unlogin client (fd: {}) to unlogin client set.", fd);
-            return;
+        // conflict happens! must check whether the previous client's still alive
+        if (stampToUnloginClient_.find(stamp) != stampToUnloginClient_.end())
+        {   logger_ptr->warn("In main thread: Conflict happens when inserting a unlogin client (fd: {}) to unlogin client set.", fd);
+            if (!stampToUnloginClient_[stamp].lock())
+            {   // it is ok to replace it, since it is a expired client
+                logger_ptr->warn("In main thread: Conflict resolved for client (fd: {})", fd);
+                stampToUnloginClient_[stamp] = client;
+            }
+            else
+            {
+                logger_ptr->warn("In main thread: Conflict cannot be resolved for client (fd: {})", fd);
+                return;
+            }
+        }
+        else
+        {
+            stampToUnloginClient_.emplace(stamp, client);
         }
         }
         client->SetUnloginStamp(request.stamp());
@@ -87,13 +100,25 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request request)
         // we use the memory addr of the client as its identity,
         // since stamps from multiple clients might conflict
         int64_t stamp = (int64_t)client.get();
-        // logger_ptr->info("In main thread: setting the request stamp to {}", stamp);
+        logger_ptr->info("In main thread: setting the request stamp to {}", stamp);
         {
         std::lock_guard<std::mutex> guard(stampToSignupClientLock_);
-        if (!stampToSignupClient_.emplace(stamp, client).second)
-        {   // don't send it, since it has conflicts
-            logger_ptr->warn("In main thread: Conflict happens when inserting a signup client (fd: {}) to signup client set.", fd);
-            return;
+        if (stampToSignupClient_.find(stamp) != stampToSignupClient_.end())
+        {   logger_ptr->warn("In main thread: Conflict happens when inserting a signup client (fd: {}) to signup client set.", fd);
+            if (!stampToSignupClient_[stamp].lock())
+            {   // it is ok to replace it, since it is a expired client
+                logger_ptr->warn("In main thread: Conflict resolved for client (fd: {})", fd);
+                stampToSignupClient_[stamp] = client;
+            }
+            else
+            {
+                logger_ptr->warn("In main thread: Conflict cannot be resolved for client (fd: {})", fd);
+                return;
+            }
+        }
+        else
+        {
+            stampToSignupClient_.emplace(stamp, client);
         }
         }
         client->SetSignupStamp(request.stamp());
@@ -103,12 +128,12 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request request)
     }
     else if (fdToClient_[fd]->uid() != -1)
     {
-        // logger_ptr->info("In main thread: client (uid: {}) directly call", fdToClient_[fd]->uid());
+        logger_ptr->info("In main thread: client (uid: {}) directly call", fdToClient_[fd]->uid());
         serviceClient->Call(request);
     }
     else
     {
-        // logger_ptr->info("In main thread: Client (uid: {0}, sockfd: {1}) sends illegal request, drop it.", request.uid(), fd);
+        logger_ptr->info("In main thread: Client (uid: {0}, sockfd: {1}) sends illegal request, drop it.", request.uid(), fd);
         // simply drop it
     }
 }
@@ -116,7 +141,12 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request request)
 // this callback directly forward the response to RpcServer
 void ProxyServer::OnClientResponse(Response response)
 {
-    // logger_ptr->info("In main thread: Get response (stamp: {1}) from client (uid: {0})", response.uid(), response.stamp());
+    logger_ptr->info("In main thread: Get response (stamp: {1}) from client (uid: {0})", response.uid(), response.stamp());
+    int cnt = 0;
+    for (auto arg: response.args())
+    {
+        logger_ptr->info("In main thread: arg{0}: {1}", cnt++, arg);
+    }
     if (clientResponseCallBack_)
         clientResponseCallBack_(response);
 }
@@ -125,7 +155,7 @@ void ProxyServer::OnServiceResponse(Response& response)
 {
     UserId uid = response.uid();
     int64_t stamp = response.stamp();
-    // logger_ptr->info("In service client thread: Get response for client (uid: {0}, stamp: {1})", uid, stamp);
+    logger_ptr->info("In service client thread: Get response for client (uid: {0}, stamp: {1})", uid, stamp);
     // if the response is for a logined client
     std::shared_ptr<Client> client;
     {
@@ -148,7 +178,7 @@ void ProxyServer::OnServiceResponse(Response& response)
         std::lock_guard<std::mutex> guard(stampToUnloginClientLock_);
         if (stampToUnloginClient_.find(stamp) != stampToUnloginClient_.end())
         {
-            // logger_ptr->info("In service client thread: This response is for an unlogin client.");
+            logger_ptr->info("In service client thread: This response is for an unlogin client.");
             flag = true;
             client_weak = stampToUnloginClient_[stamp];
             stampToUnloginClient_.erase(stamp);
@@ -160,7 +190,7 @@ void ProxyServer::OnServiceResponse(Response& response)
         std::lock_guard<std::mutex> guard(stampToSignupClientLock_);
         if (stampToSignupClient_.find(stamp) != stampToSignupClient_.end())
         {
-            // logger_ptr->info("In service client thread: This response is for an signup client.");
+            logger_ptr->info("In service client thread: This response is for an signup client.");
             client_weak = stampToSignupClient_[stamp];
             stampToSignupClient_.erase(stamp);
         }
@@ -175,7 +205,7 @@ void ProxyServer::OnServiceResponse(Response& response)
         // if this is a login (and successful) response, set its uid and put into login client set
         if (flag & response.status() == 0)
         {
-            // logger_ptr->info("In service client thread: setting client uid to {}.", uid);
+            logger_ptr->info("In service client thread: setting client uid to {}.", uid);
             client->SetUid(uid);
             // add client to login set if it is login client
             std::lock_guard<std::mutex> guard(uidToClientLock_);
@@ -185,14 +215,14 @@ void ProxyServer::OnServiceResponse(Response& response)
     }
     else
     {
-        // logger_ptr->info("In service client thread: Unknown response for uid: {}.", uid);
+        logger_ptr->info("In service client thread: Unknown response for uid: {}.", uid);
     }
 }
 
 void ProxyServer::OnDisConnection(FileDesc fd)
 {
     std::shared_ptr<Client> client = fdToClient_[fd];
-    // logger_ptr->info("In main thread: found the exiting client by fd: {}, deleting it...", fd);
+    logger_ptr->info("In main thread: found the exiting client by fd: {}, deleting it...", fd);
     fdToClient_.erase(fd);
     if (client->uid() != -1)
     {
@@ -211,7 +241,7 @@ void ProxyServer::OnDisConnection(FileDesc fd)
             lobbyClient->Call(logoutRequest);
         }
     }
-    // logger_ptr->info("In main thread: Client (uid: {0} sockfd: {1}) out.", client->uid(), fd);
+    logger_ptr->info("In main thread: Client (uid: {0} sockfd: {1}) out.", client->uid(), fd);
 }
 
 void ProxyServer::OnError(FileDesc fd)
@@ -219,10 +249,10 @@ void ProxyServer::OnError(FileDesc fd)
     // if it was not client, it must be the tcp server
     if (fd == server_->listenFd())
     {
-        // logger_ptr->info("In main thread: Fatal error in tcp server, exiting now...");
+        logger_ptr->info("In main thread: Fatal error in tcp server, exiting now...");
         abort();
     }
-    // logger_ptr->info("In main thread: Fatal error in client (sockfd: {})", fd);
+    logger_ptr->info("In main thread: Fatal error in client (sockfd: {})", fd);
     OnDisConnection(fd);
 }
 
@@ -241,9 +271,9 @@ int ProxyServer::SendRequest(Request &request)
     }
     if (client)
     {
-        // logger_ptr->info("In gRPC server thread: Send request (type: {0}) to client (uid: {1})", requestTypeToStr[request.requesttype()], uid);
+        logger_ptr->info("In gRPC server thread: Send request (type: {0}) to client (uid: {1})", requestTypeToStr[request.requesttype()], uid);
         return client->SendRequest(request);
     }
-    // logger_ptr->info("In gRPC server thread: Send request (type: {0}) to unknown client (uid: {1})", requestTypeToStr[request.requesttype()], uid);
+    logger_ptr->info("In gRPC server thread: Send request (type: {0}) to unknown client (uid: {1})", requestTypeToStr[request.requesttype()], uid);
     return -1;
 }

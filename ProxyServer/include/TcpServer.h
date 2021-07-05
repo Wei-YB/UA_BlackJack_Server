@@ -3,6 +3,7 @@
 
 #include <sys/types.h>
 #include <netinet/in.h>
+#include <functional>
 
 #define DEFAULT_WAIT_QUEUE_LEN  64
 

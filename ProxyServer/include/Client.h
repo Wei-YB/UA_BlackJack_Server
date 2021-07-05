@@ -3,6 +3,8 @@
 
 #include <memory>
 #include "common.h"
+#include <functional>
+#include <vector>
 
 namespace Net {
     class TcpConnection;

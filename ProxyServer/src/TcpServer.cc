@@ -42,8 +42,8 @@ TcpServer::TcpServer(const char *ip,
         throw "Socket: fail to create socket.\n";
     }
 
-    //int reuse = 1;
-    //setsockopt(eventsSource_->fd(), SOL_SOCKET, SO_REUSEPORT, (const void *)&reuse , sizeof(int));
+    int reuse = 1;
+    setsockopt(eventsSource_->fd(), SOL_SOCKET, SO_REUSEPORT, (const void *)&reuse , sizeof(int));
     
     if (bind(eventsSource_->fd(), (struct sockaddr *)&addr_, sizeof(addr_)) < 0)
     {
@@ -52,7 +52,7 @@ TcpServer::TcpServer(const char *ip,
     if (listen(eventsSource_->fd(), DEFAULT_WAIT_QUEUE_LEN) < 0)
     {
         close(eventsSource_->fd());
-        //// logger_ptr->info("In main thread: tcp server fail to listen.");
+        //logger_ptr->info("In main thread: tcp server fail to listen.");
         throw "TcpListener: fail to listen.\n";
     }
     setNonBlocking(eventsSource_->fd());
@@ -82,13 +82,13 @@ int TcpServer::OnConnection()
             connectionCallBack_(conn);
         }
     }
-    //// logger_ptr->info("In main thread: Tcp server accept {} new connections.", connCnt);
+    //logger_ptr->info("In main thread: Tcp server accept {} new connections.", connCnt);
     return 0;
 }
 
 int TcpServer::OnError()
 {
-    // // logger_ptr->info("In main thread: Tcp server has error.");
+    // logger_ptr->info("In main thread: Tcp server has error.");
     if (errorCallBack_)
         errorCallBack_(eventsSource_->fd());
     ::close(eventsSource_->fd());
