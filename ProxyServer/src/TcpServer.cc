@@ -23,8 +23,10 @@ TcpServer::TcpServer(const char *ip,
         unsigned short port, 
         EventLoop *loop,
         const std::function<void(std::shared_ptr<TcpConnection>)> &connCb,
-        const std::function<void(FileDesc)> &errCb) 
-        : loop_(loop), connectionCallBack_(connCb), errorCallBack_(errCb)
+        const std::function<void(FileDesc)> &errCb,
+        int healthReportPeriod) 
+        : loop_(loop), connectionCallBack_(connCb), errorCallBack_(errCb),
+        timer(loop, std::bind(&TcpServer::OnHealthReport, this))
 {
     eventsSource_ = std::make_shared<EventsSource>(socket(AF_INET, SOCK_STREAM, 0), loop, 
                                                 std::bind(&TcpServer::OnConnection, this),
@@ -35,35 +37,45 @@ TcpServer::TcpServer(const char *ip,
     addr_.sin_port = htons(port);
     if (inet_pton(AF_INET, ip, &addr_.sin_addr) == 0)
     {
-        throw "Socket: Invalid IP addr.\n";
+        logger_ptr->error("In TcpServer ctor: Invalid IP addr.\n");
+        throw std::exception();
     }
     if (eventsSource_->fd() < 0)
     {
-        throw "Socket: fail to create socket.\n";
+        logger_ptr->error("In TcpServer ctor: fail to create socket.\n");
+        throw std::exception();
     }
 
-    int reuse = 1;
-    setsockopt(eventsSource_->fd(), SOL_SOCKET, SO_REUSEPORT, (const void *)&reuse , sizeof(int));
+    // I think we currentlt dont need to reuse port, since I dont need multi-thread/process
+    // to boost the IO throughput and the part dragging the whole backend performance
+    // is not proxy.
+    // int reuse = 1;
+    // setsockopt(eventsSource_->fd(), SOL_SOCKET, SO_REUSEPORT, (const void *)&reuse , sizeof(int));
     
     if (bind(eventsSource_->fd(), (struct sockaddr *)&addr_, sizeof(addr_)) < 0)
     {
-        throw "TcpListener: fail to bind socket with address.\n";
+        logger_ptr->error("In TcpServer ctor: fail to bind socket with address.\n");
+        throw std::exception();
     }
     if (listen(eventsSource_->fd(), DEFAULT_WAIT_QUEUE_LEN) < 0)
     {
         close(eventsSource_->fd());
-        //logger_ptr->info("In main thread: tcp server fail to listen.");
-        throw "TcpListener: fail to listen.\n";
+        logger_ptr->error("In TcpServer ctor: tcp server fail to listen.");
+        throw std::exception();
     }
     setNonBlocking(eventsSource_->fd());
     eventsSource_->EnableRead();
     eventsSource_->EnableET();
+
+    timer_.SetPeriod(healthReportPeriod);
 }
 
 TcpServer::~TcpServer() 
 {
     close(eventsSource_->fd());
-    // eventsSource_->RemoveFromLoop();
+    // I think it should call RemoveFromLoop for the eventsSource,
+    // since it wouldn't be removed from the eventloop it the fd is closed.
+    eventsSource_->RemoveFromLoop();
 }
 
 int TcpServer::OnConnection()
@@ -82,15 +94,21 @@ int TcpServer::OnConnection()
             connectionCallBack_(conn);
         }
     }
-    //logger_ptr->info("In main thread: Tcp server accept {} new connections.", connCnt);
+    connAccepted_ += connCnt;
+    logger_ptr->trace("In TcpServer::OnConnection: accept {} new connections.", connCnt);
     return 0;
 }
 
 int TcpServer::OnError()
 {
-    // logger_ptr->info("In main thread: Tcp server has error.");
+    logger_ptr->critical("TcpServer::OnError: Tcp server has error, the server will not be able to accept new client.");
+    ::close(eventsSource_->fd());    // do it in case the owner of this tcp server dont delete it
     if (errorCallBack_)
         errorCallBack_(eventsSource_->fd());
-    ::close(eventsSource_->fd());
     return -1;
+}
+
+void TcpServer::OnHealthReport()
+{
+
 }

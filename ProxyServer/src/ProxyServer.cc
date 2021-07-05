@@ -24,11 +24,19 @@ using namespace Net;
 
 #define BUFFER_SIZE 1024 * 4     // 4 KB
 
-ProxyServer::ProxyServer(const char *ip, unsigned short port, EventLoop *loop)
+ProxyServer::ProxyServer(const char *ip, 
+                         unsigned short port, 
+                         EventLoop *loop, 
+                         int healthReportPeriod)
+                         : timer_(loop, std::bind(&ProxyServer::OnHealthReport, this)),
+                         server_(std::make_shared<TcpServer>(ip, port, loop, 
+                                std::bind(&ProxyServer::OnNewClient, this, std::placeholders::_1),
+                                std::bind(&ProxyServer::OnError, this, std::placeholders::_1)))
 {
-    server_ = std::make_shared<TcpServer>(ip, port, loop, 
-                                    std::bind(&ProxyServer::OnNewClient, this, std::placeholders::_1),
-                                    std::bind(&ProxyServer::OnError, this, std::placeholders::_1));
+    if (healthReportPeriod > 0)
+    {
+        timer_.SetPeriod(healthReportPeriod);
+    }
 }
 
 // this should be called by tcp server
@@ -254,6 +262,33 @@ void ProxyServer::OnError(FileDesc fd)
     }
     logger_ptr->info("In main thread: Fatal error in client (sockfd: {})", fd);
     OnDisConnection(fd);
+}
+
+void ProxyServer::OnHealthReport()
+{
+    // the only thread will modify the following two maps is the main thread,
+    // so we don't need to hold lock
+    int clientTotal = fdToClient_.size();
+    int clientLogined = uidToClient_.size();
+    int clientLogining, clientSignuping;
+    // these two should hold locks
+    {
+    std::lock_guard<std::mutex> guard(stampToUnloginClientLock_);
+    clientLogining = stampToUnloginClient_.size();
+    }
+    {
+    std::lock_guard<std::mutex> guard(stampToSignupClientLock_);
+    clientSignuping = stampToSignupClient_.size();
+    }
+    logger_ptr->info("ProxyServer Health Report: \
+                      unlogined clients : {0}, \
+                      logined clients: {1}, \
+                      logining clients: {2}, \
+                      signuping clients: {3}.", 
+                      clientTotal - clientLogined,
+                      clientLogined, 
+                      clientLogining,
+                      clientSignuping);
 }
 
 // this function should be called by the RpcServer

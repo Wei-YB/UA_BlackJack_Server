@@ -6,6 +6,7 @@
 #include <functional>
 
 #include "UA_BlackJack.pb.h"
+#include "Timer.h"
 #include "common.h"
 
 using ua_blackjack::Request;
@@ -26,13 +27,14 @@ namespace Net {
     class EventLoop;
 }
 
+#define HEALTH_REPORT_PERIOD    5   // 1s
 
 class ProxyServer {
 public:
     // ip: which ip to bind
     // port: which port to listen
     // loop: pointer to the eventloop of the main thread
-    ProxyServer(const char *ip, unsigned short port, Net::EventLoop *loop);
+    ProxyServer(const char *ip, unsigned short port, Net::EventLoop *loop, int healthReportPeriod = HEALTH_REPORT_PERIOD);
     
     // request: request from remote rpc caller
     int SendRequest(Request &request);
@@ -48,7 +50,7 @@ public:
     // response: response from rpc server
     void OnServiceResponse(Response& response);
 
-// private:
+private:
     // conn: shared ptr to new tcp connection
     void OnNewClient(std::shared_ptr<Net::TcpConnection> conn);
 
@@ -64,6 +66,8 @@ public:
 
     void OnError(FileDesc fd);
 
+    void OnHealthReport();
+
 private:
     std::mutex uidToClientLock_;
     std::unordered_map<UserId, std::shared_ptr<Client>> uidToClient_;   
@@ -75,6 +79,7 @@ private:
     std::unordered_map<Request::RequestType, std::weak_ptr<ServiceClient>> requestTypeToServiceClient_;
     std::function<void(Response &)> clientResponseCallBack_;
     std::shared_ptr<Net::TcpServer> server_;
+    Timer timer_;
 };
 
 enum BackEndModule {Proxy = 0, Lobby, Room, Social, Player, DataBase};

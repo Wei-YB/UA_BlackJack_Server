@@ -3,6 +3,7 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <atomic>
 // #include "ClientProxyProtocol.h"
 #include "co_routine.h"
 #include "UA_BlackJack.pb.h"
@@ -10,6 +11,13 @@
 
 using ua_blackjack::Request;
 using ua_blackjack::Response;
+
+std::atomic<int> g_active_player;
+
+int need_to_stop(void *arg)
+{
+    return static_cast<std::atomic<int>*>(arg)->load() == 0 ? -1 : 0;
+}
 
 static int setNonBlocking(int fd)
 {
@@ -78,6 +86,7 @@ static void *SignUpRoutine(void *arg)
         }
         idx += ret;
     }
+    // std::cout << "successfully send request to proxy." << std::endl;
     // wait for response
     idx = 0;
     char buf[2048];
@@ -92,6 +101,7 @@ static void *SignUpRoutine(void *arg)
         close(player->fd_); 
         return 0;     
     }
+    // std::cout << "successfully get response" << std::endl;
     // parse package
     const char *rawResponse = unpack(buf, ret);
     if (!rawResponse)
@@ -110,6 +120,8 @@ static void *SignUpRoutine(void *arg)
     }
     player->uid_ = response.uid();
     player->isSignUp_ = true;
+    //std::cout << "player's uid is " << player->uid_ << std::endl;
+    g_active_player--;
     return 0;
 }
 
@@ -150,7 +162,12 @@ int main(int argc, char **argv)
         }
     }
     std::cout << nConnected << " players connected to server." << std::endl;
+    if (nConnected == 0)
+    {
+        return 0;
+    }
 
+    g_active_player = nConnected;
     for (int i = 0; i < players.size(); ++i)
     {
         if (players[i].fd_ > -1)
@@ -160,7 +177,7 @@ int main(int argc, char **argv)
         }
     }
 
-    co_eventloop(co_get_epoll_ct(), 0, 0);
+    co_eventloop(co_get_epoll_ct(), need_to_stop, &g_active_player);
 
     // count the successfully signuped player
     int nSignUped = 0;
