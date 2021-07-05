@@ -208,4 +208,5 @@ void ua_blackjack::Game::Room::reset(void)
         shuffledPokers->nowIndex = 0;
         player->reset();
     }
+    isGameBegin = false;
 }

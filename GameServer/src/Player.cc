@@ -106,6 +106,7 @@ void ua_blackjack::Game::Player::showMessage(void) const
 }
 void ua_blackjack::Game::Player::reset(void)
 {
+    playerHashMap.erase(uid);
     pokerList.clear();
     bettingMoney = 0;
     uid = -1;
@@ -115,4 +116,7 @@ void ua_blackjack::Game::Player::reset(void)
     finalResult = WIN; //默认用户会赢
     nickName = "";
     room = -1;
+
+    isWaitingReply = false;
+    isFinishBetting = false;
 }

@@ -44,6 +44,7 @@ namespace ua_blackjack
             inline BlackJackRoomID getRoom(void) { return room; };
             void reset(void);
             bool isWaitingReply = false;
+            bool isFinishBetting = false;
 
         private:
             BlackJackRoomID room = -1; //用户当前所在房间，在一局对局当中，用户的room是不能被更改的

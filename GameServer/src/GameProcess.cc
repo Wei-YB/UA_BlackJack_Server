@@ -53,7 +53,7 @@ void *createOneGame(void *arg) //开启一局游戏
         room = malloOneRoom(env->roomID, env->uids); //创建一个房间
         roomLists.push_back(room);
     }
-    else
+    else //池中房间不够，重创一个
     {
         room = roomPool[playerSize - 2].front();
         room->rid = env->roomID;
@@ -80,42 +80,27 @@ void *createOneGame(void *arg) //开启一局游戏
     //选择筹码
     for (auto &player : room->playerList)
     {
-        if (player->isDealer == true) //庄家无需设置筹码,但需要发开始信号
-        {
-            ua_blackjack::Game::ClientForTestUser::getInstance().askBettingMoney(player->uid);
-            myConditionSignal(conditionForWaitingRpc); //有机会唤醒
-            continue;
-        }
-        if (player->isQuit == true) //玩家已退出游戏,不需要设置筹码
-            continue;
-
         ua_blackjack::Game::ClientForTestUser::getInstance().askBettingMoney(player->uid);
-        myConditionSignal(conditionForWaitingRpc); //有机会唤醒
-        conRet = 0;
-        player->isWaitingReply = true;
-        conRet = myConditionWait(env->cond, TIMEOUT_FOR_USER); //30秒内应收到信号
-        player->isWaitingReply = false;
-        if (conRet == 0) //超时未收到信号，认为玩家已退出游戏
+    }
+    conRet = 0;
+    conRet = myConditionWait(env->cond, TIMEOUT_FOR_USER); //30秒内应收到信号
+    if (conRet == 0)
+    {
+        for (auto &player : room->playerList)
         {
-            player->quit();             //托管
-            player->isStand = true;     //玩家停牌
-            player->finalResult = DRAW; //筹码阶段退出应判输0元
-            spdlog::warn("uid {0:d} timeout and quit game", player->uid);
-            continue;
-        }
-        //接收到玩家的筹码信号
-        if ((env->operateId == OPERATE_BETMONEY) && (((BetMoneyArgument *)env->arg)->uid == player->uid))
-        {
-            auto money = ((BetMoneyArgument *)env->arg)->money;
-            player->bettingMoney = money;
-            //
-#ifdef LOG_ON
-            spdlog::info("uid {0:d} set betting money", player->uid);
-#endif
-            continue;
+            if (player->isDealer == true)
+                continue;                                        //庄家无需设置筹码
+            if (conRet == 0 && player->isFinishBetting == false) //超时未收到信号，认为玩家已退出游戏
+            {
+                player->quit();             //托管
+                player->isStand = true;     //玩家停牌
+                player->finalResult = DRAW; //筹码阶段退出应判输0元
+                spdlog::warn("uid {0:d} timeout and quit game", player->uid);
+                continue;
+            }
         }
     }
-
+    room->isGameBegin = true;
     //发初始牌,每人2张
     for (int i = 0; i < 2; i++)
     {
@@ -241,6 +226,7 @@ void *recoveryUnusedCo(void *arg) //回收协程的协程
         {
             BlackJackRoomID roomid = unUsedstEnvRoomID.front();
             auto room = roomHashMap[roomid].lock();
+            roomHashMap.erase(roomid);
             int playerSize = room->playerList.size();
             spdlog::info("start delete room {0:d}", roomid);
             unUsedstEnvRoomID.pop();

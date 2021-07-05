@@ -289,6 +289,14 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
 
                 if (call->reply.stamp() == STAMP_ASK_BETTING) //ask betting有响应了
                 {
+                    int roomId = ptr->getRoom();
+                    auto env = roomEnvirHashMap[roomId];
+                    auto room = roomHashMap[roomId];
+                    env->sizeOfCompleteBetting++;
+                    if (env->sizeOfCompleteBetting >= room.lock()->playerList.size())
+                    {
+                        myConditionSignal(env->cond); //所有玩家都收到筹码了
+                    }
                     if (ptr->isQuit == true) //已退出玩家的相应不处理,庄家相应不处理
                     {
                         spdlog::warn("uid {0:d}user quit but reply later", replyuid);
@@ -306,13 +314,9 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
                         spdlog::error("uid {0:d}user unexpected reply betting money", replyuid);
                         exit(1);
                     }
-                    int roomId = ptr->getRoom();
-                    auto env = roomEnvirHashMap[roomId];
-                    env->operateId = OPERATE_BETMONEY;
-                    ((BetMoneyArgument *)env->arg)->uid = replyuid;
-                    ((BetMoneyArgument *)env->arg)->money = atoi(replyargs[1].c_str());
 
-                    myConditionSignal(env->cond);
+                    ptr->bettingMoney = atoi(replyargs[1].c_str());
+                    ptr->isFinishBetting = true;
                 }
                 else if (call->reply.stamp() == STAMP_ASK_HIT) //ask hit有响应了
                 {

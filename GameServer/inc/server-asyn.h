@@ -62,6 +62,7 @@ struct stEnv_t
   int cond;                 //信号量
   OperateID operateId;      //操作码
   void *arg;                //操作数
+  int sizeOfCompleteBetting = 0;
   stEnv_t(BlackJackRoomID _roomID, UidList &_uids) : roomID(_roomID), uids(_uids){};
 };
 extern std::unordered_map<BlackJackRoomID, std::shared_ptr<stEnv_t>> roomEnvirHashMap; //roomid和句柄的hash映射
