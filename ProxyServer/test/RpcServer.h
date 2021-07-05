@@ -85,7 +85,7 @@ public:
         builder.RegisterService(&service_);
         cq_ = builder.AddCompletionQueue();
         server_ = builder.BuildAndStart();
-        logger_ptr->info("Server listening on {}", serverAddr_);
+        // logger_ptr->info("Server listening on {}", serverAddr_);
         HandleRpcs();
     }
 

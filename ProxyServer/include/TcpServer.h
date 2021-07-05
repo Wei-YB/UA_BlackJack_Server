@@ -26,7 +26,9 @@ public:
 
     TcpServer &operator=(const TcpServer &) = delete;
 
-public:
+    FileDesc listenFd() const {return eventsSource_->fd();}
+
+// private:
     int OnConnection();
 
     int OnError();

@@ -6,6 +6,7 @@
 
 namespace Net {
     class TcpConnection;
+    class StringPiece;
 }
 
 namespace ua_blackjack {
@@ -17,12 +18,14 @@ using namespace Net;
 using ua_blackjack::Response;
 using ua_blackjack::Request;
 
+
+
 class Client
 {
 public:
     Client(std::shared_ptr<TcpConnection> conn,
-           const std::function<void(FileDesc, Request &)> &requestCallBack,
-           const std::function<void(Response &)> &responseCallBack,
+           const std::function<void(FileDesc, Request)> &requestCallBack,
+           const std::function<void(Response)> &responseCallBack,
            const std::function<void(FileDesc)> &disconnectCallBack,
            const std::function<void(FileDesc)> &errorCallBack);
 public:
@@ -33,21 +36,27 @@ public:
     
     UserId uid() const {return uid_;}
     void SetUid(UserId id) {uid_ = id;}
+    int64_t unloginStamp() const {return unloginStamp_;}
     void SetUnloginStamp(int64_t stamp) {unloginStamp_ = stamp;}
+    int64_t signupStamp() const {return signupStamp_;}
     void SetSignupStamp(int64_t stamp) {signupStamp_ = stamp;}
+    
+// private:
     // callbacks
-    void OnMessages(std::vector<Request> &requests, std::vector<Response> &responses);
+    //void OnMessages(std::vector<std::pair<int32_t, std::string>> msgs);
+    void OnMessages(std::vector<std::pair<int32_t, StringPiece>> msgs);
     void OnLeave();
     void OnSendReady() {/*TODO: write requests/responses buffer to tcp connection*/;}
     void OnError();
+
 private:
     UserId uid_ = -1;
     int64_t unloginStamp_;
     int64_t signupStamp_;
     std::mutex connLock_;
     std::shared_ptr<TcpConnection> conn_;
-    std::function<void(FileDesc, Request &)> requestCallBack_;
-    std::function<void(Response &)> responseCallBack_;
+    std::function<void(FileDesc, Request)> requestCallBack_;
+    std::function<void(Response)> responseCallBack_;
     std::function<void(FileDesc)> disconnectCallBack_;
     std::function<void(FileDesc)> errorCallBack_;
 };

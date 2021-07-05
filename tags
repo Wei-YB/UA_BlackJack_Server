@@ -1,0 +1,774 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACCEPT_FRIEND	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::ACCEPT_FRIEND;$/;"	m	class:ua_blackjack::Request	file:
+ACCEPT_FRIEND	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType ACCEPT_FRIEND =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+ADD_FRIEND	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::ADD_FRIEND;$/;"	m	class:ua_blackjack::Request	file:
+ADD_FRIEND	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType ADD_FRIEND =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+ADD_WAIT_FRIEND	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::ADD_WAIT_FRIEND;$/;"	m	class:ua_blackjack::Request	file:
+ADD_WAIT_FRIEND	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType ADD_WAIT_FRIEND =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+ArenaDtor	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Request::ArenaDtor(void* object) {$/;"	f	class:ua_blackjack::Request
+ArenaDtor	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Response::ArenaDtor(void* object) {$/;"	f	class:ua_blackjack::Response
+AsyncCall	proxy/include/asyncProxyServer.h	/^    AsyncCall() : responder_(&ctx_), status_(CREATE) {}$/;"	f	struct:AsyncCall
+AsyncCall	proxy/include/asyncProxyServer.h	/^struct AsyncCall$/;"	s
+AsyncCall	proxy/test/RpcServer.h	/^    AsyncCall(AsyncRpcService *service, $/;"	f	class:AsyncCall
+AsyncCall	proxy/test/RpcServer.h	/^class AsyncCall$/;"	c
+AsyncClientCall	proxy/include/asyncServiceClient.h	/^    struct AsyncClientCall$/;"	s	class:ServiceClient
+AsyncCompleteRpc	proxy/include/asyncServiceClient.h	/^    void AsyncCompleteRpc()$/;"	f	class:ServiceClient
+AsyncCompleteRpc_	proxy/include/asyncServiceClient.h	/^    void AsyncCompleteRpc_()$/;"	f	class:ServiceClient
+AsyncCompleteRpc_stand_alone_	proxy/include/asyncServiceClient.h	/^    void AsyncCompleteRpc_stand_alone_()$/;"	f	class:ServiceClient
+AsyncNotify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>> AsyncNotify(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::final::final
+AsyncNotify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ua_blackjack::Response>> AsyncNotify(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::final::StubInterface
+AsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* DatabaseService::Stub::AsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::DatabaseService::Stub
+AsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* GameService::Stub::AsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::GameService::Stub
+AsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* LobbyService::Stub::AsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::LobbyService::Stub
+AsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* PlayerService::Stub::AsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::PlayerService::Stub
+AsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* ProxyService::Stub::AsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::ProxyService::Stub
+AsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* SocialService::Stub::AsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::SocialService::Stub
+AsyncRpcServer	proxy/test/RpcServer.h	/^    AsyncRpcServer( const std::string &serverAddr, $/;"	f	class:final
+AsyncService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  typedef WithAsyncMethod_Notify<Service > AsyncService;$/;"	t	class:ua_blackjack::final
+BET	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::BET;$/;"	m	class:ua_blackjack::Request	file:
+BET	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType BET =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+BUFFER_SIZE	proxy/include/ProxyServer.h	16;"	d
+BUFFER_SIZE	proxy/src/ProxyServer.cc	25;"	d	file:
+BackEndModule	proxy/include/common.h	/^enum BackEndModule {Proxy = 0, Lobby, Room, Social, Player, DataBase};$/;"	g
+BaseClassMustBeDerivedFromService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    void BaseClassMustBeDerivedFromService(const Service* \/*service*\/) {}$/;"	f	class:ua_blackjack::final::ExperimentalWithCallbackMethod_Notify
+BaseClassMustBeDerivedFromService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    void BaseClassMustBeDerivedFromService(const Service* \/*service*\/) {}$/;"	f	class:ua_blackjack::final::ExperimentalWithRawCallbackMethod_Notify
+BaseClassMustBeDerivedFromService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    void BaseClassMustBeDerivedFromService(const Service* \/*service*\/) {}$/;"	f	class:ua_blackjack::final::WithAsyncMethod_Notify
+BaseClassMustBeDerivedFromService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    void BaseClassMustBeDerivedFromService(const Service* \/*service*\/) {}$/;"	f	class:ua_blackjack::final::WithGenericMethod_Notify
+BaseClassMustBeDerivedFromService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    void BaseClassMustBeDerivedFromService(const Service* \/*service*\/) {}$/;"	f	class:ua_blackjack::final::WithRawMethod_Notify
+BaseClassMustBeDerivedFromService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    void BaseClassMustBeDerivedFromService(const Service* \/*service*\/) {}$/;"	f	class:ua_blackjack::final::WithStreamedUnaryMethod_Notify
+BlackJackClient	proxy/test/client.cpp	/^    BlackJackClient(const char *server_ip, $/;"	f	class:BlackJackClient
+BlackJackClient	proxy/test/client.cpp	/^class BlackJackClient$/;"	c	file:
+ByteSizeLong	proxy/include/grpc/UA_BlackJack.pb.cc	/^size_t Request::ByteSizeLong() const {$/;"	f	class:ua_blackjack::Request
+ByteSizeLong	proxy/include/grpc/UA_BlackJack.pb.cc	/^size_t Response::ByteSizeLong() const {$/;"	f	class:ua_blackjack::Response
+CHK_	proxy/include/grpc/UA_BlackJack.pb.cc	310;"	d	file:
+CHK_	proxy/include/grpc/UA_BlackJack.pb.cc	375;"	d	file:
+CHK_	proxy/include/grpc/UA_BlackJack.pb.cc	622;"	d	file:
+CHK_	proxy/include/grpc/UA_BlackJack.pb.cc	687;"	d	file:
+CREATE	proxy/include/asyncProxyServer.h	/^    enum CallStatus {CREATE, PROCESS, FORWARD, FINISH};$/;"	e	enum:__anon1::CallStatus
+CREATE	proxy/test/RpcServer.h	/^    enum CallStatus {CREATE, PROCESS, FINISH};$/;"	e	enum:AsyncCall::CallStatus
+CREATE_ROOM	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::CREATE_ROOM;$/;"	m	class:ua_blackjack::Request	file:
+CREATE_ROOM	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType CREATE_ROOM =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+Call	proxy/include/asyncServiceClient.h	/^    int Call(const Request &request)$/;"	f	class:ConcreteServiceClient
+CallStatus	proxy/include/asyncProxyServer.h	/^    enum CallStatus {CREATE, PROCESS, FORWARD, FINISH};$/;"	g	namespace:__anon1
+CallStatus	proxy/test/RpcServer.h	/^    enum CallStatus {CREATE, PROCESS, FINISH};$/;"	g	class:AsyncCall
+CallbackService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  typedef ExperimentalWithCallbackMethod_Notify<Service > CallbackService;$/;"	t	class:ua_blackjack::final
+CircularBuffer	proxy/include/CircularBuffer.h	/^struct CircularBuffer$/;"	s	namespace:Net
+CircularBuffer	proxy/src/CircularBuffer.cc	/^CircularBuffer::CircularBuffer(const CircularBuffer &circBuffer) : m_bufferSize(circBuffer.m_bufferSize)$/;"	f	class:CircularBuffer
+CircularBuffer	proxy/src/CircularBuffer.cc	/^CircularBuffer::CircularBuffer(int bufferSize) : m_bufferSize(bufferSize)$/;"	f	class:CircularBuffer
+CircularQueue	proxy/include/CircularBuffer.h	/^    CircularQueue(size_t capacity = QUEUE_CAPACITY) : m_capacity(capacity), m_head(0), m_tail(0)$/;"	f	class:Net::CircularQueue
+CircularQueue	proxy/include/CircularBuffer.h	/^class CircularQueue {$/;"	c	namespace:Net
+Clear	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Request::Clear() {$/;"	f	class:ua_blackjack::Request
+Clear	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Response::Clear() {$/;"	f	class:ua_blackjack::Response
+Client	proxy/include/Client.h	/^class Client$/;"	c
+Client	proxy/src/Client.cc	/^Client::Client(std::shared_ptr<TcpConnection> conn,$/;"	f	class:Client
+Close	proxy/src/EventLoop.cc	/^int EventsSource::Close()$/;"	f	class:EventsSource
+ConcreteServiceClient	proxy/include/asyncServiceClient.h	/^    ConcreteServiceClient(const std::string &serviceName, $/;"	f	class:ConcreteServiceClient
+ConcreteServiceClient	proxy/include/asyncServiceClient.h	/^class ConcreteServiceClient : public ServiceClient$/;"	c
+Connect	proxy/src/TcpConnection.cc	/^int TcpConnection::Connect()$/;"	f	class:TcpConnection
+Connect	proxy/test/client.cpp	/^    int Connect()$/;"	f	class:BlackJackClient
+CopyFrom	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {$/;"	f	class:ua_blackjack::Request
+CopyFrom	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Request::CopyFrom(const Request& from) {$/;"	f	class:ua_blackjack::Request
+CopyFrom	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {$/;"	f	class:ua_blackjack::Response
+CopyFrom	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Response::CopyFrom(const Response& from) {$/;"	f	class:ua_blackjack::Response
+CreateMaybeMessage	proxy/include/grpc/UA_BlackJack.pb.cc	/^template<> PROTOBUF_NOINLINE ::ua_blackjack::Request* Arena::CreateMaybeMessage< ::ua_blackjack::Request >(Arena* arena) {$/;"	f	class:Arena
+CreateMaybeMessage	proxy/include/grpc/UA_BlackJack.pb.cc	/^template<> PROTOBUF_NOINLINE ::ua_blackjack::Response* Arena::CreateMaybeMessage< ::ua_blackjack::Response >(Arena* arena) {$/;"	f	class:Arena
+DEBUG_MODE	proxy/include/common.h	11;"	d
+DEFAULT_BUFFER_SIZE	proxy/test/client.cpp	32;"	d	file:
+DEFAULT_MAX_EVENTS	proxy/include/EventLoop.h	11;"	d
+DEFAULT_WAIT_QUEUE_LEN	proxy/include/TcpServer.h	7;"	d
+DELETE_FRIEND	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::DELETE_FRIEND;$/;"	m	class:ua_blackjack::Request	file:
+DELETE_FRIEND	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType DELETE_FRIEND =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+DELETE_WAIT_FRIEND	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::DELETE_WAIT_FRIEND;$/;"	m	class:ua_blackjack::Request	file:
+DELETE_WAIT_FRIEND	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType DELETE_WAIT_FRIEND =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+DOUBLE	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::DOUBLE;$/;"	m	class:ua_blackjack::Request	file:
+DOUBLE	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType DOUBLE =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+DUMMY	proxy/include/ClientProxyProtocol.h	9;"	d
+DataBase	proxy/include/common.h	/^enum BackEndModule {Proxy = 0, Lobby, Room, Social, Player, DataBase};$/;"	e	enum:BackEndModule
+DatabaseService_method_names	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^static const char* DatabaseService_method_names[] = {$/;"	m	namespace:ua_blackjack	file:
+Deamonize	proxy/src/main.cpp	/^static void Deamonize(const std::unordered_map<std::string, std::string> &config)$/;"	f	file:
+DestructorSkippable_	proxy/include/grpc/UA_BlackJack.pb.h	/^  typedef void DestructorSkippable_;$/;"	t	class:ua_blackjack::PROTOBUF_FINAL
+DisConnect	proxy/src/TcpConnection.cc	/^int TcpConnection::DisConnect()$/;"	f	class:TcpConnection
+EV_ERR	proxy/include/EventLoop.h	/^static const Event EV_ERR = 0x20;$/;"	m	namespace:Net
+EV_ET	proxy/include/EventLoop.h	/^static const Event EV_ET = 0x04;$/;"	m	namespace:Net
+EV_HUP	proxy/include/EventLoop.h	/^static const Event EV_HUP = 0x10;$/;"	m	namespace:Net
+EV_IN	proxy/include/EventLoop.h	/^static const Event EV_IN = 0x01;$/;"	m	namespace:Net
+EV_NULL	proxy/include/EventLoop.h	/^static const Event EV_NULL = 0x00;$/;"	m	namespace:Net
+EV_OUT	proxy/include/EventLoop.h	/^static const Event EV_OUT = 0x02;$/;"	m	namespace:Net
+EV_RDHUP	proxy/include/EventLoop.h	/^static const Event EV_RDHUP = 0x08;$/;"	m	namespace:Net
+EnableRead	proxy/src/EventLoop.cc	/^int EventsSource::EnableRead()$/;"	f	class:EventsSource
+EnableWrite	proxy/src/EventLoop.cc	/^int EventsSource::EnableWrite()$/;"	f	class:EventsSource
+Event	proxy/include/EventLoop.h	/^typedef int Event;$/;"	t	namespace:Net
+EventLoop	proxy/include/EventLoop.h	/^class EventLoop$/;"	c	namespace:Net
+EventLoop	proxy/src/EventLoop.cc	/^EventLoop::EventLoop(int max_events) : maxEvents_(max_events)$/;"	f	class:EventLoop
+EventsSource	proxy/include/EventLoop.h	/^class EventsSource : public std::enable_shared_from_this<EventsSource>$/;"	c	namespace:Net
+EventsSource	proxy/src/EventLoop.cc	/^EventsSource::EventsSource(FileDesc fd, EventLoop *loop,$/;"	f	class:EventsSource
+ExperimentalCallbackService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  typedef ExperimentalWithCallbackMethod_Notify<Service > ExperimentalCallbackService;$/;"	t	class:ua_blackjack::final
+ExperimentalWithCallbackMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    ExperimentalWithCallbackMethod_Notify() {$/;"	f	class:ua_blackjack::final::ExperimentalWithCallbackMethod_Notify
+ExperimentalWithCallbackMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  class ExperimentalWithCallbackMethod_Notify : public BaseClass {$/;"	c	class:ua_blackjack::final
+ExperimentalWithRawCallbackMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    ExperimentalWithRawCallbackMethod_Notify() {$/;"	f	class:ua_blackjack::final::ExperimentalWithRawCallbackMethod_Notify
+ExperimentalWithRawCallbackMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  class ExperimentalWithRawCallbackMethod_Notify : public BaseClass {$/;"	c	class:ua_blackjack::final
+FINISH	proxy/include/asyncProxyServer.h	/^    enum CallStatus {CREATE, PROCESS, FORWARD, FINISH};$/;"	e	enum:__anon1::CallStatus
+FINISH	proxy/test/RpcServer.h	/^    enum CallStatus {CREATE, PROCESS, FINISH};$/;"	e	enum:AsyncCall::CallStatus
+FORWARD	proxy/include/asyncProxyServer.h	/^    enum CallStatus {CREATE, PROCESS, FORWARD, FINISH};$/;"	e	enum:__anon1::CallStatus
+FileDesc	proxy/include/common.h	/^typedef int FileDesc;$/;"	t
+FullMessageName	proxy/include/grpc/UA_BlackJack.pb.h	/^  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+GAME_START	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::GAME_START;$/;"	m	class:ua_blackjack::Request	file:
+GAME_START	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType GAME_START =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+GET_MATCH_INFO	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::GET_MATCH_INFO;$/;"	m	class:ua_blackjack::Request	file:
+GET_MATCH_INFO	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType GET_MATCH_INFO =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+GET_NAME	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::GET_NAME;$/;"	m	class:ua_blackjack::Request	file:
+GET_NAME	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType GET_NAME =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+GET_PASSWORD	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::GET_PASSWORD;$/;"	m	class:ua_blackjack::Request	file:
+GET_PASSWORD	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType GET_PASSWORD =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+GET_SCORE	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::GET_SCORE;$/;"	m	class:ua_blackjack::Request	file:
+GET_SCORE	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType GET_SCORE =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+GET_UID	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::GET_UID;$/;"	m	class:ua_blackjack::Request	file:
+GET_UID	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType GET_UID =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+GOOGLE_PROTOBUF_INCLUDED_UA_5fBlackJack_2eproto	proxy/include/grpc/UA_BlackJack.pb.h	5;"	d
+GRPC_UA_5fBlackJack_2eproto__INCLUDED	proxy/include/grpc/UA_BlackJack.grpc.pb.h	5;"	d
+GameService_method_names	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^static const char* GameService_method_names[] = {$/;"	m	namespace:ua_blackjack	file:
+GetDescriptor	proxy/include/grpc/UA_BlackJack.pb.h	/^  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+GetEnumDescriptor	proxy/include/grpc/UA_BlackJack.pb.h	/^inline const EnumDescriptor* GetEnumDescriptor< ::ua_blackjack::Request_RequestType>() {$/;"	f
+GetMetadata	proxy/include/grpc/UA_BlackJack.pb.cc	/^::PROTOBUF_NAMESPACE_ID::Metadata Request::GetMetadata() const {$/;"	f	class:ua_blackjack::Request
+GetMetadata	proxy/include/grpc/UA_BlackJack.pb.cc	/^::PROTOBUF_NAMESPACE_ID::Metadata Response::GetMetadata() const {$/;"	f	class:ua_blackjack::Response
+GetMetadataStatic	proxy/include/grpc/UA_BlackJack.pb.h	/^  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+GetReflection	proxy/include/grpc/UA_BlackJack.pb.h	/^  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+GetWriteBufferRoom	proxy/src/TcpConnection.cc	/^int TcpConnection::GetWriteBufferRoom() const {return writeBuffer_.capacity() - writeBuffer_.size();}/;"	f	class:TcpConnection
+HIT	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::HIT;$/;"	m	class:ua_blackjack::Request	file:
+HIT	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType HIT =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+HandleEvents	proxy/src/EventLoop.cc	/^int EventsSource::HandleEvents(Event events)$/;"	f	class:EventsSource
+HandleRpcs	proxy/include/asyncProxyServer.h	/^    void HandleRpcs()$/;"	f	class:final
+HandleRpcs	proxy/test/RpcServer.h	/^    void HandleRpcs()$/;"	f	class:final
+INFO	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::INFO;$/;"	m	class:ua_blackjack::Request	file:
+INFO	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType INFO =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+INVAL	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::INVAL;$/;"	m	class:ua_blackjack::Request	file:
+INVAL	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType INVAL =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+InternalArenaConstructable_	proxy/include/grpc/UA_BlackJack.pb.h	/^  typedef void InternalArenaConstructable_;$/;"	t	class:ua_blackjack::PROTOBUF_FINAL
+InternalSwap	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Request::InternalSwap(Request* other) {$/;"	f	class:ua_blackjack::Request
+InternalSwap	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Response::InternalSwap(Response* other) {$/;"	f	class:ua_blackjack::Response
+IsInitialized	proxy/include/grpc/UA_BlackJack.pb.cc	/^bool Request::IsInitialized() const {$/;"	f	class:ua_blackjack::Request
+IsInitialized	proxy/include/grpc/UA_BlackJack.pb.cc	/^bool Response::IsInitialized() const {$/;"	f	class:ua_blackjack::Response
+JOIN_ROOM	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::JOIN_ROOM;$/;"	m	class:ua_blackjack::Request	file:
+JOIN_ROOM	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType JOIN_ROOM =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+LEAVE_ROOM	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::LEAVE_ROOM;$/;"	m	class:ua_blackjack::Request	file:
+LEAVE_ROOM	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType LEAVE_ROOM =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+LIST_FRIEND	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::LIST_FRIEND;$/;"	m	class:ua_blackjack::Request	file:
+LIST_FRIEND	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType LIST_FRIEND =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+LIST_MATCH	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::LIST_MATCH;$/;"	m	class:ua_blackjack::Request	file:
+LIST_MATCH	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType LIST_MATCH =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+LIST_WAITTING	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::LIST_WAITTING;$/;"	m	class:ua_blackjack::Request	file:
+LIST_WAITTING	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType LIST_WAITTING =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+LOGIN	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::LOGIN;$/;"	m	class:ua_blackjack::Request	file:
+LOGIN	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType LOGIN =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+LOGOUT	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::LOGOUT;$/;"	m	class:ua_blackjack::Request	file:
+LOGOUT	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType LOGOUT =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+Lobby	proxy/include/common.h	/^enum BackEndModule {Proxy = 0, Lobby, Room, Social, Player, DataBase};$/;"	e	enum:BackEndModule
+LobbyService_method_names	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^static const char* LobbyService_method_names[] = {$/;"	m	namespace:ua_blackjack	file:
+MATCH_END	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::MATCH_END;$/;"	m	class:ua_blackjack::Request	file:
+MATCH_END	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType MATCH_END =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+MAX	proxy/include/CircularBuffer.h	8;"	d
+MAX_FORWORD_FAILURE	proxy/include/ProxyServer.h	14;"	d
+MIN	proxy/include/CircularBuffer.h	9;"	d
+MergeFrom	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {$/;"	f	class:ua_blackjack::Request
+MergeFrom	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Request::MergeFrom(const Request& from) {$/;"	f	class:ua_blackjack::Request
+MergeFrom	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {$/;"	f	class:ua_blackjack::Response
+MergeFrom	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Response::MergeFrom(const Response& from) {$/;"	f	class:ua_blackjack::Response
+NAMESPACE_BEGIN	proxy/include/common.h	14;"	d
+NAMESPACE_END	proxy/include/common.h	16;"	d
+NOTIFY_USER	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::NOTIFY_USER;$/;"	m	class:ua_blackjack::Request	file:
+NOTIFY_USER	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType NOTIFY_USER =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+NS	proxy/include/common.h	13;"	d
+Net	proxy/include/CircularBuffer.h	/^namespace Net$/;"	n
+Net	proxy/include/Client.h	/^namespace Net {$/;"	n
+Net	proxy/include/EventLoop.h	/^namespace Net {$/;"	n
+Net	proxy/include/ProxyServer.h	/^namespace Net {$/;"	n
+Net	proxy/include/TcpConnection.h	/^namespace Net {$/;"	n
+Net	proxy/include/TcpServer.h	/^namespace Net {$/;"	n
+NewStub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^std::unique_ptr< DatabaseService::Stub> DatabaseService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {$/;"	f	class:ua_blackjack::DatabaseService
+NewStub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^std::unique_ptr< GameService::Stub> GameService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {$/;"	f	class:ua_blackjack::GameService
+NewStub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^std::unique_ptr< LobbyService::Stub> LobbyService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {$/;"	f	class:ua_blackjack::LobbyService
+NewStub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^std::unique_ptr< PlayerService::Stub> PlayerService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {$/;"	f	class:ua_blackjack::PlayerService
+NewStub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^std::unique_ptr< ProxyService::Stub> ProxyService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {$/;"	f	class:ua_blackjack::ProxyService
+NewStub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^std::unique_ptr< SocialService::Stub> SocialService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {$/;"	f	class:ua_blackjack::SocialService
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status DatabaseService::Service::Notify(::grpc::ServerContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::DatabaseService::Service
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status DatabaseService::Stub::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::DatabaseService::Stub
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status GameService::Service::Notify(::grpc::ServerContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::GameService::Service
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status GameService::Stub::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::GameService::Stub
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status LobbyService::Service::Notify(::grpc::ServerContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::LobbyService::Service
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status LobbyService::Stub::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::LobbyService::Stub
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status PlayerService::Service::Notify(::grpc::ServerContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::PlayerService::Service
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status PlayerService::Stub::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::PlayerService::Stub
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status ProxyService::Service::Notify(::grpc::ServerContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::ProxyService::Service
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status ProxyService::Stub::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::ProxyService::Stub
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status SocialService::Service::Notify(::grpc::ServerContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::SocialService::Service
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::Status SocialService::Stub::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::ua_blackjack::Response* response) {$/;"	f	class:ua_blackjack::SocialService::Stub
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void DatabaseService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, ::grpc::experimental::ClientUnaryReactor* reactor) {$/;"	f	class:ua_blackjack::DatabaseService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void DatabaseService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, std::function<void(::grpc::Status)> f) {$/;"	f	class:ua_blackjack::DatabaseService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void GameService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, ::grpc::experimental::ClientUnaryReactor* reactor) {$/;"	f	class:ua_blackjack::GameService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void GameService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, std::function<void(::grpc::Status)> f) {$/;"	f	class:ua_blackjack::GameService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void LobbyService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, ::grpc::experimental::ClientUnaryReactor* reactor) {$/;"	f	class:ua_blackjack::LobbyService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void LobbyService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, std::function<void(::grpc::Status)> f) {$/;"	f	class:ua_blackjack::LobbyService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void PlayerService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, ::grpc::experimental::ClientUnaryReactor* reactor) {$/;"	f	class:ua_blackjack::PlayerService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void PlayerService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, std::function<void(::grpc::Status)> f) {$/;"	f	class:ua_blackjack::PlayerService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void ProxyService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, ::grpc::experimental::ClientUnaryReactor* reactor) {$/;"	f	class:ua_blackjack::ProxyService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void ProxyService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, std::function<void(::grpc::Status)> f) {$/;"	f	class:ua_blackjack::ProxyService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void SocialService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, ::grpc::experimental::ClientUnaryReactor* reactor) {$/;"	f	class:ua_blackjack::SocialService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^void SocialService::Stub::experimental_async::Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, std::function<void(::grpc::Status)> f) {$/;"	f	class:ua_blackjack::SocialService::Stub::experimental_async
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    virtual ::grpc::ServerUnaryReactor* Notify($/;"	f	class:ua_blackjack::final::ExperimentalWithCallbackMethod_Notify
+Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    virtual ::grpc::ServerUnaryReactor* Notify($/;"	f	class:ua_blackjack::final::ExperimentalWithRawCallbackMethod_Notify
+OnClientRequest	proxy/src/ProxyServer.cc	/^void ProxyServer::OnClientRequest(FileDesc fd, Request &request)$/;"	f	class:ProxyServer
+OnClientResponse	proxy/include/asyncProxyServer.h	/^    void OnClientResponse(Response &response)$/;"	f	class:final
+OnClientResponse	proxy/src/ProxyServer.cc	/^void ProxyServer::OnClientResponse(Response &response)$/;"	f	class:ProxyServer
+OnConnection	proxy/src/TcpServer.cc	/^int TcpServer::OnConnection()$/;"	f	class:TcpServer
+OnDisConnection	proxy/src/ProxyServer.cc	/^void ProxyServer::OnDisConnection(FileDesc fd)$/;"	f	class:ProxyServer
+OnError	proxy/src/Client.cc	/^void Client::OnError() {disconnectCallBack_(conn_->SockFd());}$/;"	f	class:Client
+OnError	proxy/src/ProxyServer.cc	/^void ProxyServer::OnError(FileDesc fd)$/;"	f	class:ProxyServer
+OnError	proxy/src/TcpConnection.cc	/^int TcpConnection::OnError()$/;"	f	class:TcpConnection
+OnError	proxy/src/TcpServer.cc	/^int TcpServer::OnError()$/;"	f	class:TcpServer
+OnError	proxy/test/client.cpp	/^    void OnError() $/;"	f	class:BlackJackClient	file:
+OnInput	proxy/src/TcpConnection.cc	/^int TcpConnection::OnInput()$/;"	f	class:TcpConnection
+OnLeave	proxy/src/Client.cc	/^void Client::OnLeave() {errorCallBack_(conn_->SockFd());}$/;"	f	class:Client
+OnMessages	proxy/src/Client.cc	/^void Client::OnMessages(std::vector<Request> &requests, std::vector<Response> &responses)$/;"	f	class:Client
+OnMessages	proxy/test/client.cpp	/^    void OnMessages(std::vector<Request> &requests, std::vector<Response> &responses)$/;"	f	class:BlackJackClient	file:
+OnNewClient	proxy/src/ProxyServer.cc	/^void ProxyServer::OnNewClient(std::shared_ptr<TcpConnection> conn)$/;"	f	class:ProxyServer
+OnOutput	proxy/src/TcpConnection.cc	/^int TcpConnection::OnOutput()$/;"	f	class:TcpConnection
+OnSendReady	proxy/include/Client.h	/^    void OnSendReady() {\/*TODO: write requests\/responses buffer to tcp connection*\/;}$/;"	f	class:Client
+OnSendReady	proxy/test/client.cpp	/^    void OnSendReady() $/;"	f	class:BlackJackClient	file:
+OnServiceResponse	proxy/src/ProxyServer.cc	/^void ProxyServer::OnServiceResponse(const Response& response)$/;"	f	class:ProxyServer
+PACKAGE_HDR_LEN	proxy/include/ClientProxyProtocol.h	10;"	d
+PROCESS	proxy/include/asyncProxyServer.h	/^    enum CallStatus {CREATE, PROCESS, FORWARD, FINISH};$/;"	e	enum:__anon1::CallStatus
+PROCESS	proxy/test/RpcServer.h	/^    enum CallStatus {CREATE, PROCESS, FINISH};$/;"	e	enum:AsyncCall::CallStatus
+PROTOBUF_FINAL	proxy/include/grpc/UA_BlackJack.pb.h	/^class Request PROTOBUF_FINAL :$/;"	c	namespace:ua_blackjack
+PROTOBUF_FINAL	proxy/include/grpc/UA_BlackJack.pb.h	/^class Response PROTOBUF_FINAL :$/;"	c	namespace:ua_blackjack
+PROTOBUF_INTERNAL_EXPORT_UA_5fBlackJack_2eproto	proxy/include/grpc/UA_BlackJack.pb.h	37;"	d
+Player	proxy/include/common.h	/^enum BackEndModule {Proxy = 0, Lobby, Room, Social, Player, DataBase};$/;"	e	enum:BackEndModule
+PlayerService_method_names	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^static const char* PlayerService_method_names[] = {$/;"	m	namespace:ua_blackjack	file:
+PrepareAsyncNotify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>> PrepareAsyncNotify(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::final::final
+PrepareAsyncNotify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ua_blackjack::Response>> PrepareAsyncNotify(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::final::StubInterface
+PrepareAsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* DatabaseService::Stub::PrepareAsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::DatabaseService::Stub
+PrepareAsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* GameService::Stub::PrepareAsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::GameService::Stub
+PrepareAsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* LobbyService::Stub::PrepareAsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::LobbyService::Stub
+PrepareAsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* PlayerService::Stub::PrepareAsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::PlayerService::Stub
+PrepareAsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* ProxyService::Stub::PrepareAsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::ProxyService::Stub
+PrepareAsyncNotifyRaw	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* SocialService::Stub::PrepareAsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) {$/;"	f	class:ua_blackjack::SocialService::Stub
+Proceed	proxy/test/RpcServer.h	/^    void Proceed()$/;"	f	class:AsyncCall
+ProcessCall	proxy/include/asyncProxyServer.h	/^    void ProcessCall(AsyncCall *call)$/;"	f	class:final
+Proxy	proxy/include/common.h	/^enum BackEndModule {Proxy = 0, Lobby, Room, Social, Player, DataBase};$/;"	e	enum:BackEndModule
+ProxyRpcServer	proxy/include/asyncProxyServer.h	/^    ProxyRpcServer(const std::string &serverAddress,$/;"	f	class:final
+ProxyServer	proxy/include/ProxyServer.h	/^class ProxyServer {$/;"	c
+ProxyServer	proxy/src/ProxyServer.cc	/^ProxyServer::ProxyServer(const char *ip, unsigned short port, EventLoop *loop)$/;"	f	class:ProxyServer
+ProxyService_method_names	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^static const char* ProxyService_method_names[] = {$/;"	m	namespace:ua_blackjack	file:
+QUEUE_CAPACITY	proxy/include/CircularBuffer.h	10;"	d
+QUEUE_SIZE	proxy/include/ProxyServer.h	17;"	d
+QUICK_MATCH	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::QUICK_MATCH;$/;"	m	class:ua_blackjack::Request	file:
+QUICK_MATCH	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType QUICK_MATCH =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+RANK_ME	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::RANK_ME;$/;"	m	class:ua_blackjack::Request	file:
+RANK_ME	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType RANK_ME =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+RANK_TOP	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::RANK_TOP;$/;"	m	class:ua_blackjack::Request	file:
+RANK_TOP	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType RANK_TOP =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+READY	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::READY;$/;"	m	class:ua_blackjack::Request	file:
+READY	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType READY =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+REQUEST	proxy/include/ClientProxyProtocol.h	/^const int32_t REQUEST = 1;$/;"	v
+RESPONSE	proxy/include/ClientProxyProtocol.h	/^const int32_t RESPONSE = 2;$/;"	v
+ROOM_LIST	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::ROOM_LIST;$/;"	m	class:ua_blackjack::Request	file:
+ROOM_LIST	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType ROOM_LIST =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+ReadConfig	proxy/src/main.cpp	/^static void ReadConfig(const char *config_path, $/;"	f	file:
+RegisterArenaDtor	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Request::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {$/;"	f	class:ua_blackjack::Request
+RegisterArenaDtor	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Response::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {$/;"	f	class:ua_blackjack::Response
+RegisterServiceClient	proxy/include/ProxyServer.h	/^    void RegisterServiceClient(Request::RequestType requestType, std::shared_ptr<ServiceClient> client)$/;"	f	class:ProxyServer
+Request	proxy/include/grpc/UA_BlackJack.pb.cc	/^Request::Request(::PROTOBUF_NAMESPACE_ID::Arena* arena)$/;"	f	class:ua_blackjack::Request
+Request	proxy/include/grpc/UA_BlackJack.pb.cc	/^Request::Request(const Request& from)$/;"	f	class:ua_blackjack::Request
+Request	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request::Request($/;"	f	class:ua_blackjack::Request
+Request	proxy/include/grpc/UA_BlackJack.pb.h	/^    : Request() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+Request	proxy/include/grpc/UA_BlackJack.pb.h	/^  inline Request() : Request(nullptr) {}$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+RequestCallBack	proxy/test/RpcServer.h	/^    typedef std::function<void(const Request&, Response&)> RequestCallBack;$/;"	t	class:AsyncCall
+RequestCallBack	proxy/test/RpcServer.h	/^    typedef std::function<void(const Request&, Response&)> RequestCallBack;$/;"	t	class:final
+RequestDefaultTypeInternal	proxy/include/grpc/UA_BlackJack.pb.cc	/^  constexpr RequestDefaultTypeInternal()$/;"	f	struct:ua_blackjack::RequestDefaultTypeInternal
+RequestDefaultTypeInternal	proxy/include/grpc/UA_BlackJack.pb.cc	/^struct RequestDefaultTypeInternal {$/;"	s	namespace:ua_blackjack	file:
+RequestNotify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    void RequestNotify(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {$/;"	f	class:ua_blackjack::final::WithRawMethod_Notify
+RequestNotify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    void RequestNotify(::grpc::ServerContext* context, ::ua_blackjack::Request* request, ::grpc::ServerAsyncResponseWriter< ::ua_blackjack::Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {$/;"	f	class:ua_blackjack::final::WithAsyncMethod_Notify
+RequestType	proxy/include/grpc/UA_BlackJack.pb.h	/^  typedef Request_RequestType RequestType;$/;"	t	class:ua_blackjack::PROTOBUF_FINAL
+RequestType_ARRAYSIZE	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr int Request::RequestType_ARRAYSIZE;$/;"	m	class:ua_blackjack::Request	file:
+RequestType_ARRAYSIZE	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr int RequestType_ARRAYSIZE =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+RequestType_IsValid	proxy/include/grpc/UA_BlackJack.pb.h	/^  static inline bool RequestType_IsValid(int value) {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+RequestType_MAX	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::RequestType_MAX;$/;"	m	class:ua_blackjack::Request	file:
+RequestType_MAX	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType RequestType_MAX =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+RequestType_MIN	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::RequestType_MIN;$/;"	m	class:ua_blackjack::Request	file:
+RequestType_MIN	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType RequestType_MIN =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+RequestType_Name	proxy/include/grpc/UA_BlackJack.pb.h	/^  static inline const std::string& RequestType_Name(T enum_t_value) {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+RequestType_Parse	proxy/include/grpc/UA_BlackJack.pb.h	/^  static inline bool RequestType_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+RequestType_descriptor	proxy/include/grpc/UA_BlackJack.pb.h	/^  RequestType_descriptor() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+Request_RequestType_IsValid	proxy/include/grpc/UA_BlackJack.pb.cc	/^bool Request_RequestType_IsValid(int value) {$/;"	f	namespace:ua_blackjack
+Request_RequestType_Name	proxy/include/grpc/UA_BlackJack.pb.h	/^inline const std::string& Request_RequestType_Name(T enum_t_value) {$/;"	f	namespace:ua_blackjack
+Request_RequestType_Parse	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Request_RequestType_Parse($/;"	f	namespace:ua_blackjack
+Request_RequestType_RequestType_ARRAYSIZE	proxy/include/grpc/UA_BlackJack.pb.h	/^constexpr int Request_RequestType_RequestType_ARRAYSIZE = Request_RequestType_RequestType_MAX + 1;$/;"	m	namespace:ua_blackjack
+Request_RequestType_RequestType_MAX	proxy/include/grpc/UA_BlackJack.pb.h	/^constexpr Request_RequestType Request_RequestType_RequestType_MAX = Request_RequestType_GAME_START;$/;"	m	namespace:ua_blackjack
+Request_RequestType_RequestType_MIN	proxy/include/grpc/UA_BlackJack.pb.h	/^constexpr Request_RequestType Request_RequestType_RequestType_MIN = Request_RequestType_INVAL;$/;"	m	namespace:ua_blackjack
+Request_RequestType_descriptor	proxy/include/grpc/UA_BlackJack.pb.cc	/^const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Request_RequestType_descriptor() {$/;"	f	namespace:ua_blackjack
+Response	proxy/include/grpc/UA_BlackJack.pb.cc	/^Response::Response(::PROTOBUF_NAMESPACE_ID::Arena* arena)$/;"	f	class:ua_blackjack::Response
+Response	proxy/include/grpc/UA_BlackJack.pb.cc	/^Response::Response(const Response& from)$/;"	f	class:ua_blackjack::Response
+Response	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Response::Response($/;"	f	class:ua_blackjack::Response
+Response	proxy/include/grpc/UA_BlackJack.pb.h	/^    : Response() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+Response	proxy/include/grpc/UA_BlackJack.pb.h	/^  inline Response() : Response(nullptr) {}$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+ResponseDefaultTypeInternal	proxy/include/grpc/UA_BlackJack.pb.cc	/^  constexpr ResponseDefaultTypeInternal()$/;"	f	struct:ua_blackjack::ResponseDefaultTypeInternal
+ResponseDefaultTypeInternal	proxy/include/grpc/UA_BlackJack.pb.cc	/^struct ResponseDefaultTypeInternal {$/;"	s	namespace:ua_blackjack	file:
+Room	proxy/include/common.h	/^enum BackEndModule {Proxy = 0, Lobby, Room, Social, Player, DataBase};$/;"	e	enum:BackEndModule
+Run	proxy/include/asyncProxyServer.h	/^    void Run() $/;"	f	class:final
+Run	proxy/test/RpcServer.h	/^    void Run()$/;"	f	class:final
+SIGNUP	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::SIGNUP;$/;"	m	class:ua_blackjack::Request	file:
+SIGNUP	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType SIGNUP =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+STAND	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::STAND;$/;"	m	class:ua_blackjack::Request	file:
+STAND	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType STAND =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+SURRENDER	proxy/include/grpc/UA_BlackJack.pb.cc	/^constexpr Request_RequestType Request::SURRENDER;$/;"	m	class:ua_blackjack::Request	file:
+SURRENDER	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr RequestType SURRENDER =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+Send	proxy/src/TcpConnection.cc	/^int TcpConnection::Send(const std::string &pkgsData)$/;"	f	class:TcpConnection
+SendRequest	proxy/src/Client.cc	/^int Client::SendRequest(const Request &request)$/;"	f	class:Client
+SendRequest	proxy/src/ProxyServer.cc	/^int ProxyServer::SendRequest(Request &request)$/;"	f	class:ProxyServer
+SendResponse	proxy/src/Client.cc	/^int Client::SendResponse(const Response &response)$/;"	f	class:Client
+Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^DatabaseService::Service::Service() {$/;"	f	class:ua_blackjack::DatabaseService::Service
+Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^GameService::Service::Service() {$/;"	f	class:ua_blackjack::GameService::Service
+Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^LobbyService::Service::Service() {$/;"	f	class:ua_blackjack::LobbyService::Service
+Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^PlayerService::Service::Service() {$/;"	f	class:ua_blackjack::PlayerService::Service
+Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^ProxyService::Service::Service() {$/;"	f	class:ua_blackjack::ProxyService::Service
+Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^SocialService::Service::Service() {$/;"	f	class:ua_blackjack::SocialService::Service
+Service	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  class Service : public ::grpc::Service {$/;"	c	class:ua_blackjack::final
+ServiceClient	proxy/include/asyncServiceClient.h	/^    ServiceClient(const std::string &serviceName, $/;"	f	class:ServiceClient
+ServiceClient	proxy/include/asyncServiceClient.h	/^class ServiceClient$/;"	c
+SetCachedSize	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Request::SetCachedSize(int size) const {$/;"	f	class:ua_blackjack::Request
+SetCachedSize	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Response::SetCachedSize(int size) const {$/;"	f	class:ua_blackjack::Response
+SetClientResponseCallBack	proxy/include/ProxyServer.h	/^    void SetClientResponseCallBack(const std::function<void(Response &)> &clientResponseCallBack)$/;"	f	class:ProxyServer
+SetErrorCallBack	proxy/include/TcpConnection.h	/^    void SetErrorCallBack(const std::function<void()> &cb) {errorCallBack_ = cb;}$/;"	f	class:Net::TcpConnection
+SetHupCallBack	proxy/include/TcpConnection.h	/^    void SetHupCallBack(const std::function<void()> &cb) {hupCallBack_ = cb;}$/;"	f	class:Net::TcpConnection
+SetInputCallBack	proxy/include/TcpConnection.h	/^    void SetInputCallBack(const std::function<void(std::vector<Request>&, std::vector<Response>&)> &cb) {inputCallBack_ = cb;}$/;"	f	class:Net::TcpConnection
+SetMessageAllocatorFor_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    void SetMessageAllocatorFor_Notify($/;"	f	class:ua_blackjack::final::ExperimentalWithCallbackMethod_Notify
+SetOutPutCallBack	proxy/include/TcpConnection.h	/^    void SetOutPutCallBack(const std::function<void()> &cb) {outputCallBack_ = cb;}$/;"	f	class:Net::TcpConnection
+SetRequests	proxy/test/client.cpp	/^    void SetRequests(const std::queue<Request> &requests) {requests_ = requests;}$/;"	f	class:BlackJackClient
+SetResponseCallBack	proxy/include/asyncServiceClient.h	/^    void SetResponseCallBack(const std::function<void(const Response&)> &cb) {responseCallBack_ = cb;}$/;"	f	class:ServiceClient
+SetSignupStamp	proxy/include/Client.h	/^    void SetSignupStamp(int64_t stamp) {signupStamp_ = stamp;}$/;"	f	class:Client
+SetUid	proxy/include/Client.h	/^    void SetUid(UserId id) {uid_ = id;}$/;"	f	class:Client
+SetUnloginStamp	proxy/include/Client.h	/^    void SetUnloginStamp(int64_t stamp) {unloginStamp_ = stamp;}$/;"	f	class:Client
+SharedCtor	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Request::SharedCtor() {$/;"	f	class:ua_blackjack::Request
+SharedCtor	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Response::SharedCtor() {$/;"	f	class:ua_blackjack::Response
+SharedDtor	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Request::SharedDtor() {$/;"	f	class:ua_blackjack::Request
+SharedDtor	proxy/include/grpc/UA_BlackJack.pb.cc	/^void Response::SharedDtor() {$/;"	f	class:ua_blackjack::Response
+Social	proxy/include/common.h	/^enum BackEndModule {Proxy = 0, Lobby, Room, Social, Player, DataBase};$/;"	e	enum:BackEndModule
+SocialService_method_names	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^static const char* SocialService_method_names[] = {$/;"	m	namespace:ua_blackjack	file:
+SockFd	proxy/src/TcpConnection.cc	/^int TcpConnection::SockFd() const {return eventsSource_->fd();}$/;"	f	class:TcpConnection
+SplitStreamedService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  typedef Service SplitStreamedService;$/;"	t	class:ua_blackjack::final
+Stop	proxy/include/asyncProxyServer.h	/^    void Stop() {stop_ = true;}$/;"	f	class:final
+Stop	proxy/test/RpcServer.h	/^    void Stop() {flag_ = true;}$/;"	f	class:final
+StopClient	proxy/include/asyncServiceClient.h	/^    void StopClient() {stop_ = true;}$/;"	f	class:ServiceClient
+StreamedService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  typedef WithStreamedUnaryMethod_Notify<Service > StreamedService;$/;"	t	class:ua_blackjack::final
+StreamedUnaryService	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  typedef WithStreamedUnaryMethod_Notify<Service > StreamedUnaryService;$/;"	t	class:ua_blackjack::final
+Stub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^DatabaseService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)$/;"	f	class:ua_blackjack::DatabaseService::Stub
+Stub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^GameService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)$/;"	f	class:ua_blackjack::GameService::Stub
+Stub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^LobbyService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)$/;"	f	class:ua_blackjack::LobbyService::Stub
+Stub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^PlayerService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)$/;"	f	class:ua_blackjack::PlayerService::Stub
+Stub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^ProxyService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)$/;"	f	class:ua_blackjack::ProxyService::Stub
+Stub	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^SocialService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)$/;"	f	class:ua_blackjack::SocialService::Stub
+StubInterface	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  class StubInterface {$/;"	c	class:ua_blackjack::final
+Swap	proxy/include/grpc/UA_BlackJack.pb.h	/^  inline void Swap(Request* other) {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+Swap	proxy/include/grpc/UA_BlackJack.pb.h	/^  inline void Swap(Response* other) {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+TableStruct_UA_5fBlackJack_2eproto	proxy/include/grpc/UA_BlackJack.pb.h	/^struct TableStruct_UA_5fBlackJack_2eproto {$/;"	s
+TcpConnection	proxy/include/TcpConnection.h	/^class TcpConnection$/;"	c	namespace:Net
+TcpConnection	proxy/src/TcpConnection.cc	/^TcpConnection::TcpConnection(FileDesc connfd, $/;"	f	class:TcpConnection
+TcpConnection	proxy/src/TcpConnection.cc	/^TcpConnection::TcpConnection(const char *ip, $/;"	f	class:TcpConnection
+TcpServer	proxy/include/TcpServer.h	/^class TcpServer$/;"	c	namespace:Net
+TcpServer	proxy/src/TcpServer.cc	/^TcpServer::TcpServer(const char *ip, $/;"	f	class:TcpServer
+UnsafeArenaSwap	proxy/include/grpc/UA_BlackJack.pb.h	/^  void UnsafeArenaSwap(Request* other) {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+UnsafeArenaSwap	proxy/include/grpc/UA_BlackJack.pb.h	/^  void UnsafeArenaSwap(Response* other) {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+UserId	proxy/include/common.h	/^typedef int64_t UserId;$/;"	t
+WithAsyncMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    WithAsyncMethod_Notify() {$/;"	f	class:ua_blackjack::final::WithAsyncMethod_Notify
+WithAsyncMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  class WithAsyncMethod_Notify : public BaseClass {$/;"	c	class:ua_blackjack::final
+WithGenericMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    WithGenericMethod_Notify() {$/;"	f	class:ua_blackjack::final::WithGenericMethod_Notify
+WithGenericMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  class WithGenericMethod_Notify : public BaseClass {$/;"	c	class:ua_blackjack::final
+WithRawMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    WithRawMethod_Notify() {$/;"	f	class:ua_blackjack::final::WithRawMethod_Notify
+WithRawMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  class WithRawMethod_Notify : public BaseClass {$/;"	c	class:ua_blackjack::final
+WithStreamedUnaryMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    WithStreamedUnaryMethod_Notify() {$/;"	f	class:ua_blackjack::final::WithStreamedUnaryMethod_Notify
+WithStreamedUnaryMethod_Notify	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  class WithStreamedUnaryMethod_Notify : public BaseClass {$/;"	c	class:ua_blackjack::final
+_ASYNCPROXYSERVER_H_	proxy/include/asyncProxyServer.h	2;"	d
+_ASYNCSERVICECALIENT_H_	proxy/include/asyncServiceClient.h	2;"	d
+_CIRC_BUF_H_	proxy/include/CircularBuffer.h	2;"	d
+_CLIENTPROXYPROTOCOL_H_	proxy/include/ClientProxyProtocol.h	2;"	d
+_CLIENT_H_	proxy/include/Client.h	2;"	d
+_COMMON_H_	proxy/include/common.h	2;"	d
+_EVENTLOOP_H_	proxy/include/EventLoop.h	2;"	d
+_Internal	proxy/include/grpc/UA_BlackJack.pb.cc	/^class Request::_Internal {$/;"	c	class:ua_blackjack::Request	file:
+_Internal	proxy/include/grpc/UA_BlackJack.pb.cc	/^class Response::_Internal {$/;"	c	class:ua_blackjack::Response	file:
+_InternalParse	proxy/include/grpc/UA_BlackJack.pb.cc	/^const char* Request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {$/;"	f	class:ua_blackjack::Request
+_InternalParse	proxy/include/grpc/UA_BlackJack.pb.cc	/^const char* Response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {$/;"	f	class:ua_blackjack::Response
+_InternalSerialize	proxy/include/grpc/UA_BlackJack.pb.cc	/^::PROTOBUF_NAMESPACE_ID::uint8* Request::_InternalSerialize($/;"	f	class:ua_blackjack::Request
+_InternalSerialize	proxy/include/grpc/UA_BlackJack.pb.cc	/^::PROTOBUF_NAMESPACE_ID::uint8* Response::_InternalSerialize($/;"	f	class:ua_blackjack::Response
+_LOG_H_	proxy/include/log.h	2;"	d
+_PROXYSERVER_H_	proxy/include/ProxyServer.h	2;"	d
+_RPCSERVER_H_	proxy/test/RpcServer.h	2;"	d
+_Request_default_instance_	proxy/include/grpc/UA_BlackJack.pb.cc	/^PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RequestDefaultTypeInternal _Request_default_instance_;$/;"	m	namespace:ua_blackjack	file:
+_Response_default_instance_	proxy/include/grpc/UA_BlackJack.pb.cc	/^PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ResponseDefaultTypeInternal _Response_default_instance_;$/;"	m	namespace:ua_blackjack	file:
+_TCPCONNECTION_H_	proxy/include/TcpConnection.h	2;"	d
+_TCPSERVER_H_	proxy/include/TcpServer.h	2;"	d
+_cached_size_	proxy/include/grpc/UA_BlackJack.pb.h	/^  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+_has_bits_	proxy/include/grpc/UA_BlackJack.pb.h	/^  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+_instance	proxy/include/grpc/UA_BlackJack.pb.cc	/^    Request _instance;$/;"	m	union:ua_blackjack::RequestDefaultTypeInternal::__anon2	file:
+_instance	proxy/include/grpc/UA_BlackJack.pb.cc	/^    Response _instance;$/;"	m	union:ua_blackjack::ResponseDefaultTypeInternal::__anon3	file:
+_internal_add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline std::string* Request::_internal_add_args() {$/;"	f	class:ua_blackjack::Request
+_internal_add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline std::string* Response::_internal_add_args() {$/;"	f	class:ua_blackjack::Response
+_internal_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline const std::string& Request::_internal_args(int index) const {$/;"	f	class:ua_blackjack::Request
+_internal_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline const std::string& Response::_internal_args(int index) const {$/;"	f	class:ua_blackjack::Response
+_internal_args_size	proxy/include/grpc/UA_BlackJack.pb.h	/^inline int Request::_internal_args_size() const {$/;"	f	class:ua_blackjack::Request
+_internal_args_size	proxy/include/grpc/UA_BlackJack.pb.h	/^inline int Response::_internal_args_size() const {$/;"	f	class:ua_blackjack::Response
+_internal_has_requesttype	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Request::_internal_has_requesttype() const {$/;"	f	class:ua_blackjack::Request
+_internal_has_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Request::_internal_has_stamp() const {$/;"	f	class:ua_blackjack::Request
+_internal_has_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Response::_internal_has_stamp() const {$/;"	f	class:ua_blackjack::Response
+_internal_has_status	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Response::_internal_has_status() const {$/;"	f	class:ua_blackjack::Response
+_internal_has_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Request::_internal_has_uid() const {$/;"	f	class:ua_blackjack::Request
+_internal_has_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Response::_internal_has_uid() const {$/;"	f	class:ua_blackjack::Response
+_internal_requesttype	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::ua_blackjack::Request_RequestType Request::_internal_requesttype() const {$/;"	f	class:ua_blackjack::Request
+_internal_set_requesttype	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::_internal_set_requesttype(::ua_blackjack::Request_RequestType value) {$/;"	f	class:ua_blackjack::Request
+_internal_set_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::_internal_set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {$/;"	f	class:ua_blackjack::Request
+_internal_set_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::_internal_set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {$/;"	f	class:ua_blackjack::Response
+_internal_set_status	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::_internal_set_status(::PROTOBUF_NAMESPACE_ID::int64 value) {$/;"	f	class:ua_blackjack::Response
+_internal_set_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::_internal_set_uid(::PROTOBUF_NAMESPACE_ID::int64 value) {$/;"	f	class:ua_blackjack::Request
+_internal_set_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::_internal_set_uid(::PROTOBUF_NAMESPACE_ID::int64 value) {$/;"	f	class:ua_blackjack::Response
+_internal_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::PROTOBUF_NAMESPACE_ID::int64 Request::_internal_stamp() const {$/;"	f	class:ua_blackjack::Request
+_internal_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::PROTOBUF_NAMESPACE_ID::int64 Response::_internal_stamp() const {$/;"	f	class:ua_blackjack::Response
+_internal_status	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::PROTOBUF_NAMESPACE_ID::int64 Response::_internal_status() const {$/;"	f	class:ua_blackjack::Response
+_internal_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::PROTOBUF_NAMESPACE_ID::int64 Request::_internal_uid() const {$/;"	f	class:ua_blackjack::Request
+_internal_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::PROTOBUF_NAMESPACE_ID::int64 Response::_internal_uid() const {$/;"	f	class:ua_blackjack::Response
+add	proxy/src/EventLoop.cc	/^int Net::EventLoop::add(std::shared_ptr<EventsSource> evsSource)$/;"	f	class:Net::EventLoop
+add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline std::string* Request::add_args() {$/;"	f	class:ua_blackjack::Request
+add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline std::string* Response::add_args() {$/;"	f	class:ua_blackjack::Response
+add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::add_args(const char* value) {$/;"	f	class:ua_blackjack::Request
+add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::add_args(const char* value, size_t size) {$/;"	f	class:ua_blackjack::Request
+add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::add_args(const std::string& value) {$/;"	f	class:ua_blackjack::Request
+add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::add_args(std::string&& value) {$/;"	f	class:ua_blackjack::Request
+add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::add_args(const char* value) {$/;"	f	class:ua_blackjack::Response
+add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::add_args(const char* value, size_t size) {$/;"	f	class:ua_blackjack::Response
+add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::add_args(const std::string& value) {$/;"	f	class:ua_blackjack::Response
+add_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::add_args(std::string&& value) {$/;"	f	class:ua_blackjack::Response
+addr_	proxy/include/TcpConnection.h	/^    struct sockaddr_in addr_;$/;"	m	class:Net::TcpConnection	typeref:struct:Net::TcpConnection::sockaddr_in
+addr_	proxy/include/TcpServer.h	/^    struct sockaddr_in addr_;$/;"	m	class:Net::TcpServer	typeref:struct:Net::TcpServer::sockaddr_in
+args	proxy/include/grpc/UA_BlackJack.pb.h	/^Request::args() const {$/;"	f	class:ua_blackjack::Request
+args	proxy/include/grpc/UA_BlackJack.pb.h	/^Response::args() const {$/;"	f	class:ua_blackjack::Response
+args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline const std::string& Request::args(int index) const {$/;"	f	class:ua_blackjack::Request
+args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline const std::string& Response::args(int index) const {$/;"	f	class:ua_blackjack::Response
+args_	proxy/include/grpc/UA_BlackJack.pb.h	/^  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> args_;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+args_size	proxy/include/grpc/UA_BlackJack.pb.h	/^inline int Request::args_size() const {$/;"	f	class:ua_blackjack::Request
+args_size	proxy/include/grpc/UA_BlackJack.pb.h	/^inline int Response::args_size() const {$/;"	f	class:ua_blackjack::Response
+async	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    async_interface* async() { return experimental_async(); }$/;"	f	class:ua_blackjack::final::StubInterface
+asyncCallsLock_	proxy/include/asyncServiceClient.h	/^    std::mutex asyncCallsLock_;$/;"	m	class:ServiceClient
+asyncCalls_	proxy/include/asyncServiceClient.h	/^    std::unordered_map<int64_t, std::shared_ptr<AsyncClientCall>> asyncCalls_;$/;"	m	class:ServiceClient
+async_interface	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    typedef class experimental_async_interface async_interface;$/;"	t	class:ua_blackjack::final::StubInterface	typeref:class:ua_blackjack::final::StubInterface::experimental_async_interface
+async_stub_	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    class experimental_async async_stub_{this};$/;"	c	class:ua_blackjack::final::final
+bufferSize_	proxy/include/TcpConnection.h	/^    static const int bufferSize_ = 4096;$/;"	m	class:Net::TcpConnection
+callQueueLock_	proxy/include/asyncServiceClient.h	/^    std::mutex callQueueLock_;$/;"	m	class:ServiceClient
+callQueue_	proxy/include/asyncServiceClient.h	/^    std::queue<std::shared_ptr<AsyncClientCall>> callQueue_;$/;"	m	class:ServiceClient
+callTime	proxy/include/asyncServiceClient.h	/^        time_point callTime;$/;"	m	struct:ServiceClient::AsyncClientCall
+capacity	proxy/include/CircularBuffer.h	/^    int capacity() const {return m_bufferSize;}$/;"	f	struct:Net::CircularBuffer
+cb_	proxy/test/RpcServer.h	/^    RequestCallBack cb_;$/;"	m	class:AsyncCall
+cb_	proxy/test/RpcServer.h	/^    RequestCallBack cb_;$/;"	m	class:final
+channel_	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    std::shared_ptr< ::grpc::ChannelInterface> channel_;$/;"	m	class:ua_blackjack::final::final
+circBuffer	proxy/include/CircularBuffer.h	/^    CircularBuffer &operator=(const CircularBuffer &circBuffer) = delete;$/;"	m	struct:Net::CircularBuffer
+circularBufferToString	proxy/src/CircularBuffer.cc	/^void Net::circularBufferToString(const CircularBuffer &buffer, size_t length, ::std::string &str)$/;"	f	class:Net
+clear_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::clear_args() {$/;"	f	class:ua_blackjack::Request
+clear_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::clear_args() {$/;"	f	class:ua_blackjack::Response
+clear_requesttype	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::clear_requesttype() {$/;"	f	class:ua_blackjack::Request
+clear_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::clear_stamp() {$/;"	f	class:ua_blackjack::Request
+clear_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::clear_stamp() {$/;"	f	class:ua_blackjack::Response
+clear_status	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::clear_status() {$/;"	f	class:ua_blackjack::Response
+clear_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::clear_uid() {$/;"	f	class:ua_blackjack::Request
+clear_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::clear_uid() {$/;"	f	class:ua_blackjack::Response
+clientResponseCallBack_	proxy/include/ProxyServer.h	/^    std::function<void(Response &)> clientResponseCallBack_;$/;"	m	class:ProxyServer
+closeEventCallBack_	proxy/include/EventLoop.h	/^    std::function<int()> closeEventCallBack_;$/;"	m	class:Net::EventsSource
+connLock_	proxy/include/Client.h	/^    std::mutex connLock_;$/;"	m	class:Client
+conn_	proxy/include/Client.h	/^    std::shared_ptr<TcpConnection> conn_;$/;"	m	class:Client
+conn_	proxy/test/client.cpp	/^    TcpConnection conn_;$/;"	m	class:BlackJackClient	file:
+connectionCallBack_	proxy/include/TcpServer.h	/^    std::function<void(std::shared_ptr<TcpConnection>)> connectionCallBack_;$/;"	m	class:Net::TcpServer
+context	proxy/include/asyncServiceClient.h	/^        ClientContext context;$/;"	m	struct:ServiceClient::AsyncClientCall
+cq_	proxy/include/asyncProxyServer.h	/^    std::unique_ptr<ServerCompletionQueue> cq_;$/;"	m	class:final
+cq_	proxy/include/asyncServiceClient.h	/^    CompletionQueue cq_;$/;"	m	class:ServiceClient
+cq_	proxy/test/RpcServer.h	/^    ServerCompletionQueue *cq_;$/;"	m	class:AsyncCall
+cq_	proxy/test/RpcServer.h	/^    std::unique_ptr<ServerCompletionQueue> cq_;$/;"	m	class:final
+createTime_	proxy/test/client.cpp	/^    time_point createTime_;$/;"	m	class:BlackJackClient	file:
+create_logger	proxy/include/log.h	23;"	d
+ctx_	proxy/include/asyncProxyServer.h	/^    ServerContext ctx_;$/;"	m	struct:AsyncCall
+ctx_	proxy/test/RpcServer.h	/^    ServerContext ctx_;$/;"	m	class:AsyncCall
+default_instance	proxy/include/grpc/UA_BlackJack.pb.h	/^  static const Request& default_instance() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+default_instance	proxy/include/grpc/UA_BlackJack.pb.h	/^  static const Response& default_instance() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+del	proxy/src/EventLoop.cc	/^int Net::EventLoop::del(std::shared_ptr<EventsSource> evsSource)$/;"	f	class:Net::EventLoop
+descriptor	proxy/include/grpc/UA_BlackJack.pb.h	/^  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+descriptor_table_UA_5fBlackJack_2eproto	proxy/include/grpc/UA_BlackJack.pb.cc	/^PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_UA_5fBlackJack_2eproto(&descriptor_table_UA_5fBlackJack_2eproto);$/;"	v	file:
+descriptor_table_UA_5fBlackJack_2eproto	proxy/include/grpc/UA_BlackJack.pb.cc	/^const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_UA_5fBlackJack_2eproto = {$/;"	v
+descriptor_table_UA_5fBlackJack_2eproto_metadata_getter	proxy/include/grpc/UA_BlackJack.pb.cc	/^descriptor_table_UA_5fBlackJack_2eproto_metadata_getter(int index) {$/;"	f
+descriptor_table_UA_5fBlackJack_2eproto_once	proxy/include/grpc/UA_BlackJack.pb.cc	/^static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_UA_5fBlackJack_2eproto_once;$/;"	v	file:
+disconnectCallBack_	proxy/include/Client.h	/^    std::function<void(FileDesc)> disconnectCallBack_;$/;"	m	class:Client
+empty	proxy/include/CircularBuffer.h	/^    bool empty() const {return m_tail == -1;}$/;"	f	struct:Net::CircularBuffer
+epollfd_	proxy/include/EventLoop.h	/^    int epollfd_ = -1;$/;"	m	class:Net::EventLoop
+errEventCallBack_	proxy/include/EventLoop.h	/^    std::function<int()> errEventCallBack_;$/;"	m	class:Net::EventsSource
+errorCallBack_	proxy/include/Client.h	/^    std::function<void(FileDesc)> errorCallBack_;$/;"	m	class:Client
+errorCallBack_	proxy/include/TcpConnection.h	/^    std::function<void()> errorCallBack_;$/;"	m	class:Net::TcpConnection
+errorCallBack_	proxy/include/TcpServer.h	/^    std::function<void(FileDesc)> errorCallBack_;$/;"	m	class:Net::TcpServer
+eventsCnt_	proxy/include/EventLoop.h	/^    int eventsCnt_ = 0;$/;"	m	class:Net::EventLoop
+eventsSource_	proxy/include/TcpConnection.h	/^    std::shared_ptr<EventsSource> eventsSource_;$/;"	m	class:Net::TcpConnection
+eventsSource_	proxy/include/TcpServer.h	/^    std::shared_ptr<EventsSource> eventsSource_;$/;"	m	class:Net::TcpServer
+events_	proxy/include/EventLoop.h	/^    Net::Event events_ = 0;$/;"	m	class:Net::EventsSource
+events_	proxy/include/EventLoop.h	/^    struct epoll_event *events_ = NULL;$/;"	m	class:Net::EventLoop	typeref:struct:Net::EventLoop::epoll_event
+experimental_async	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^      explicit experimental_async(Stub* stub): stub_(stub) { }$/;"	f	class:ua_blackjack::final::final::final
+experimental_async	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    virtual class experimental_async_interface* experimental_async() { return nullptr; }$/;"	f	class:ua_blackjack::final::StubInterface
+experimental_async_interface	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    class experimental_async_interface {$/;"	c	class:ua_blackjack::final::StubInterface
+expiredTime	proxy/include/asyncServiceClient.h	/^        time_point expiredTime;$/;"	m	struct:ServiceClient::AsyncClientCall
+f_in	no_proxy.py	/^f_in = open(in_file, "r")$/;"	v
+f_out	no_proxy.py	/^f_out = open(in_file, "a")$/;"	v
+fd	proxy/src/EventLoop.cc	/^FileDesc EventsSource::fd() const $/;"	f	class:EventsSource
+fdToClient_	proxy/include/ProxyServer.h	/^    std::unordered_map<FileDesc, std::shared_ptr<Client>> fdToClient_;  \/\/ only accessible from the main thread, no lock protected$/;"	m	class:ProxyServer
+fdToEventsSource_	proxy/include/EventLoop.h	/^    std::unordered_map<FileDesc, std::shared_ptr<EventsSource>> fdToEventsSource_;$/;"	m	class:Net::EventLoop
+fd_	proxy/include/EventLoop.h	/^    FileDesc fd_;$/;"	m	class:Net::EventsSource
+field_metadata	proxy/include/grpc/UA_BlackJack.pb.h	/^  static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];$/;"	m	struct:TableStruct_UA_5fBlackJack_2eproto
+file_default_instances	proxy/include/grpc/UA_BlackJack.pb.cc	/^static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {$/;"	m	class:PROTOBUF_NAMESPACE_ID	file:
+file_level_enum_descriptors_UA_5fBlackJack_2eproto	proxy/include/grpc/UA_BlackJack.pb.cc	/^static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_UA_5fBlackJack_2eproto[1];$/;"	v	file:
+file_level_metadata_UA_5fBlackJack_2eproto	proxy/include/grpc/UA_BlackJack.pb.cc	/^static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_UA_5fBlackJack_2eproto[2];$/;"	v	file:
+file_level_service_descriptors_UA_5fBlackJack_2eproto	proxy/include/grpc/UA_BlackJack.pb.cc	/^static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_UA_5fBlackJack_2eproto = nullptr;$/;"	m	class:constexpr::PROTOBUF_NAMESPACE_ID	file:
+final	proxy/include/asyncProxyServer.h	/^class ProxyRpcServer final {$/;"	c
+final	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    class experimental_async final :$/;"	c	class:ua_blackjack::final::final
+final	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  class Stub final : public StubInterface {$/;"	c	class:ua_blackjack::final
+final	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^class DatabaseService final {$/;"	c	namespace:ua_blackjack
+final	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^class GameService final {$/;"	c	namespace:ua_blackjack
+final	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^class LobbyService final {$/;"	c	namespace:ua_blackjack
+final	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^class PlayerService final {$/;"	c	namespace:ua_blackjack
+final	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^class ProxyService final {$/;"	c	namespace:ua_blackjack
+final	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^class SocialService final {$/;"	c	namespace:ua_blackjack
+final	proxy/include/grpc/UA_BlackJack.pb.h	/^      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+final	proxy/include/grpc/UA_BlackJack.pb.h	/^  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+final	proxy/include/grpc/UA_BlackJack.pb.h	/^  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+final	proxy/include/grpc/UA_BlackJack.pb.h	/^  bool IsInitialized() const final;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+final	proxy/include/grpc/UA_BlackJack.pb.h	/^  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+final	proxy/include/grpc/UA_BlackJack.pb.h	/^  size_t ByteSizeLong() const final;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+final	proxy/include/grpc/UA_BlackJack.pb.h	/^  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+final	proxy/include/grpc/UA_BlackJack.pb.h	/^  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+final	proxy/include/grpc/UA_BlackJack.pb.h	/^  void SetCachedSize(int size) const final;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+final	proxy/test/RpcServer.h	/^class AsyncRpcServer final {$/;"	c
+flag	proxy/test/client.cpp	/^bool flag = false;$/;"	v
+flag	proxy/test/simpleBackEnd.cpp	/^bool flag = false;$/;"	v
+flag_	proxy/test/RpcServer.h	/^    bool flag_ = false;$/;"	m	class:final
+free	proxy/include/CircularBuffer.h	/^    void free(int nbytes) $/;"	f	struct:Net::CircularBuffer
+front	proxy/include/CircularBuffer.h	/^    int front(T &item)$/;"	f	class:Net::CircularQueue
+g_log_path	proxy/src/log.cc	/^std::string g_log_path;$/;"	v
+g_logger_name	proxy/src/log.cc	/^std::string g_logger_name;$/;"	v
+get	proxy/src/CircularBuffer.cc	/^int Net::get(CircularBuffer &buffer, char *dst, size_t n)$/;"	f	class:Net
+has_requesttype	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Request::has_requesttype() const {$/;"	f	class:ua_blackjack::Request
+has_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Request::has_stamp() const {$/;"	f	class:ua_blackjack::Request
+has_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Response::has_stamp() const {$/;"	f	class:ua_blackjack::Response
+has_status	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Response::has_status() const {$/;"	f	class:ua_blackjack::Response
+has_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Request::has_uid() const {$/;"	f	class:ua_blackjack::Request
+has_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline bool Response::has_uid() const {$/;"	f	class:ua_blackjack::Response
+hupCallBack_	proxy/include/TcpConnection.h	/^    std::function<void()> hupCallBack_;$/;"	m	class:Net::TcpConnection
+inEventCallBack_	proxy/include/EventLoop.h	/^    std::function<int()> inEventCallBack_;$/;"	m	class:Net::EventsSource
+in_file	no_proxy.py	/^in_file = "\/etc\/bashrc"$/;"	v
+inputCallBack_	proxy/include/TcpConnection.h	/^    std::function<void(std::vector<Request>&, std::vector<Response>&)> inputCallBack_;$/;"	m	class:Net::TcpConnection
+internal	proxy/include/grpc/UA_BlackJack.pb.h	/^namespace internal {$/;"	n
+internal_default_instance	proxy/include/grpc/UA_BlackJack.pb.h	/^  static inline const Request* internal_default_instance() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+internal_default_instance	proxy/include/grpc/UA_BlackJack.pb.h	/^  static inline const Response* internal_default_instance() {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+ips	no_proxy.py	/^ips = ["9.135.113.138", "9.134.69.87", "9.134.80.50", "9.134.76.179", "9.134.125.154", "9.135.113.187"]$/;"	v
+is_proto_enum	proxy/include/grpc/UA_BlackJack.pb.h	/^template <> struct is_proto_enum< ::ua_blackjack::Request_RequestType> : ::std::true_type {};$/;"	s
+kIndexInFileMessages	proxy/include/grpc/UA_BlackJack.pb.h	/^  static constexpr int kIndexInFileMessages =$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+line	no_proxy.py	/^        line = line.strip('\\n')$/;"	v
+lines	no_proxy.py	/^lines = f_in.readlines()$/;"	v
+logger_flush_on	proxy/include/log.h	21;"	d
+logger_ptr	proxy/include/log.h	26;"	d
+loopOnce	proxy/src/EventLoop.cc	/^int Net::EventLoop::loopOnce(int timeout)$/;"	f	class:Net::EventLoop
+loop_	proxy/include/EventLoop.h	/^    EventLoop *loop_;$/;"	m	class:Net::EventsSource
+loop_	proxy/include/TcpServer.h	/^    EventLoop *loop_;$/;"	m	class:Net::TcpServer
+m_buffer	proxy/include/CircularBuffer.h	/^    T* m_buffer;$/;"	m	class:Net::CircularQueue
+m_buffer	proxy/include/CircularBuffer.h	/^    char *m_buffer;$/;"	m	struct:Net::CircularBuffer
+m_bufferSize	proxy/include/CircularBuffer.h	/^    const int m_bufferSize;$/;"	m	struct:Net::CircularBuffer
+m_capacity	proxy/include/CircularBuffer.h	/^    const size_t m_capacity;$/;"	m	class:Net::CircularQueue
+m_head	proxy/include/CircularBuffer.h	/^    int m_head;$/;"	m	class:Net::CircularQueue
+m_head	proxy/include/CircularBuffer.h	/^    int m_head;$/;"	m	struct:Net::CircularBuffer
+m_tail	proxy/include/CircularBuffer.h	/^    int m_tail;$/;"	m	class:Net::CircularQueue
+m_tail	proxy/include/CircularBuffer.h	/^    int m_tail;$/;"	m	struct:Net::CircularBuffer
+main	proxy/src/main.cpp	/^int main(int argc, char **argv)$/;"	f
+main	proxy/test/client.cpp	/^int main(int argc, char **argv)$/;"	f
+main	proxy/test/simpleBackEnd.cpp	/^int main(int argc, char **argv)$/;"	f
+maxEvents_	proxy/include/EventLoop.h	/^    const int maxEvents_;$/;"	m	class:Net::EventLoop
+mod	proxy/src/EventLoop.cc	/^int Net::EventLoop::mod(std::shared_ptr<EventsSource> evsSource)$/;"	f	class:Net::EventLoop
+mutable_args	proxy/include/grpc/UA_BlackJack.pb.h	/^Request::mutable_args() {$/;"	f	class:ua_blackjack::Request
+mutable_args	proxy/include/grpc/UA_BlackJack.pb.h	/^Response::mutable_args() {$/;"	f	class:ua_blackjack::Response
+mutable_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline std::string* Request::mutable_args(int index) {$/;"	f	class:ua_blackjack::Request
+mutable_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline std::string* Response::mutable_args(int index) {$/;"	f	class:ua_blackjack::Response
+objId_	proxy/test/client.cpp	/^    int64_t objId_ = 0;$/;"	m	class:BlackJackClient	file:
+offsets	proxy/include/grpc/UA_BlackJack.pb.h	/^  static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];$/;"	m	struct:TableStruct_UA_5fBlackJack_2eproto
+operator =	proxy/include/grpc/UA_BlackJack.pb.h	/^  inline Request& operator=(const Request& from) {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+operator =	proxy/include/grpc/UA_BlackJack.pb.h	/^  inline Response& operator=(const Response& from) {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+outEventCallBack_	proxy/include/EventLoop.h	/^    std::function<int()> outEventCallBack_;$/;"	m	class:Net::EventsSource
+out_events_	proxy/include/EventLoop.h	/^    Net::Event out_events_;$/;"	m	class:Net::EventsSource
+outputCallBack_	proxy/include/TcpConnection.h	/^    std::function<void()> outputCallBack_;$/;"	m	class:Net::TcpConnection
+override	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^      void Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, ::grpc::ClientUnaryReactor* reactor) override;$/;"	m	class:ua_blackjack::final::final::final
+override	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^      void Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;$/;"	m	class:ua_blackjack::final::final::final
+override	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^      void Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request* request, ::ua_blackjack::Response* response, std::function<void(::grpc::Status)>) override;$/;"	m	class:ua_blackjack::final::final::final
+override	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    ::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* AsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) override;$/;"	m	class:ua_blackjack::final::final
+override	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    ::grpc::ClientAsyncResponseReader< ::ua_blackjack::Response>* PrepareAsyncNotifyRaw(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::grpc::CompletionQueue* cq) override;$/;"	m	class:ua_blackjack::final::final
+override	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    ::grpc::Status Notify(::grpc::ClientContext* context, const ::ua_blackjack::Request& request, ::ua_blackjack::Response* response) override;$/;"	m	class:ua_blackjack::final::final
+pack	proxy/src/ClientProxyProtocol.cc	/^int NS::pack(int32_t type,  $/;"	f	class:NS
+parseFile	proxy/test/client.cpp	/^void parseFile(const char *filepath, std::queue<Request> &res)$/;"	f
+path_to_pid_file	proxy/src/main.cpp	/^const char *path_to_pid_file = "\/tmp\/ua_blackjack\/proxy.pid";$/;"	v
+pattern_len	no_proxy.py	/^pattern_len = len(pattern)$/;"	v
+playerAddress	proxy/test/simpleBackEnd.cpp	/^std::string playerAddress = "localhost:50054";$/;"	v
+pop	proxy/include/CircularBuffer.h	/^    void pop()$/;"	f	class:Net::CircularQueue
+print	proxy/src/ProxyServer.cc	/^void print(std::ostream &os, Net::Event events)$/;"	f
+print	proxy/src/ProxyServer.cc	/^void print(std::ostream &os, const Request &request)$/;"	f
+print	proxy/src/ProxyServer.cc	/^void print(std::ostream &os, const Response &response)$/;"	f
+protodesc_cold	proxy/include/grpc/UA_BlackJack.pb.cc	/^const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_UA_5fBlackJack_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {$/;"	v
+protodesc_cold	proxy/include/grpc/UA_BlackJack.pb.cc	/^const char descriptor_table_protodef_UA_5fBlackJack_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =$/;"	v
+protodesc_cold	proxy/include/grpc/UA_BlackJack.pb.cc	/^static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {$/;"	v	file:
+proxy_	proxy/include/asyncProxyServer.h	/^    std::weak_ptr<ProxyServer> proxy_;$/;"	m	class:final
+push	proxy/include/CircularBuffer.h	/^    int push(const T &item)$/;"	f	class:Net::CircularQueue
+put	proxy/src/CircularBuffer.cc	/^int Net::put(CircularBuffer &buffer, const char *src, size_t n)$/;"	f	class:Net
+read	proxy/src/CircularBuffer.cc	/^int Net::read(int fd, CircularBuffer &buffer)$/;"	f	class:Net
+readAs	proxy/include/CircularBuffer.h	/^int readAs(const CircularBuffer &buffer, size_t off, T &out, bool netByteOrder = false)$/;"	f	namespace:Net
+readBuffer_	proxy/include/TcpConnection.h	/^    CircularBuffer readBuffer_;$/;"	m	class:Net::TcpConnection
+readBuffer_	proxy/test/client.cpp	/^    CircularBuffer readBuffer_;$/;"	m	class:BlackJackClient	file:
+reply	proxy/include/asyncServiceClient.h	/^        Response reply;$/;"	m	struct:ServiceClient::AsyncClientCall
+reply_	proxy/include/asyncProxyServer.h	/^    Response reply_;$/;"	m	struct:AsyncCall
+request	proxy/include/asyncServiceClient.h	/^        Request request;$/;"	m	struct:ServiceClient::AsyncClientCall
+requestCallBack_	proxy/include/Client.h	/^    std::function<void(FileDesc, Request &)> requestCallBack_;$/;"	m	class:Client
+requestCnt_	proxy/include/asyncServiceClient.h	/^    int64_t requestCnt_ = 0;$/;"	m	class:ServiceClient
+requestSent_	proxy/test/client.cpp	/^    int requestSent_ = 0;$/;"	m	class:BlackJackClient	file:
+requestTypeToModule	proxy/include/common.h	/^requestTypeToModule = {$/;"	v
+requestTypeToServiceClient_	proxy/include/ProxyServer.h	/^    std::unordered_map<Request::RequestType, std::weak_ptr<ServiceClient>> requestTypeToServiceClient_;$/;"	m	class:ProxyServer
+requestTypeToStr	proxy/include/common.h	/^requestTypeToStr = {$/;"	v
+request_	proxy/include/asyncProxyServer.h	/^    Request request_;$/;"	m	struct:AsyncCall
+request_	proxy/test/RpcServer.h	/^    Request request_;$/;"	m	class:AsyncCall
+requests_	proxy/test/client.cpp	/^    std::queue<Request> requests_;$/;"	m	class:BlackJackClient	file:
+requesttype	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::ua_blackjack::Request_RequestType Request::requesttype() const {$/;"	f	class:ua_blackjack::Request
+requesttype_	proxy/include/grpc/UA_BlackJack.pb.h	/^  int requesttype_;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+responder_	proxy/include/asyncProxyServer.h	/^    ServerAsyncResponseWriter<Response> responder_;$/;"	m	struct:AsyncCall
+responder_	proxy/test/RpcServer.h	/^    ServerAsyncResponseWriter<Response> responder_;$/;"	m	class:AsyncCall
+responseCallBack_	proxy/include/Client.h	/^    std::function<void(Response &)> responseCallBack_;$/;"	m	class:Client
+responseCallBack_	proxy/include/asyncServiceClient.h	/^    std::function<void(const Response&)> responseCallBack_;$/;"	m	class:ServiceClient
+responseTime_	proxy/test/client.cpp	/^    double responseTime_ = 0;$/;"	m	class:BlackJackClient	file:
+response_	proxy/test/RpcServer.h	/^    Response response_;$/;"	m	class:AsyncCall
+response_reader	proxy/include/asyncServiceClient.h	/^        std::unique_ptr<ClientAsyncResponseReader<Response>> response_reader;$/;"	m	struct:ServiceClient::AsyncClientCall
+returnFailureResponse	proxy/include/asyncProxyServer.h	/^void returnFailureResponse(AsyncCall *call, const std::string &msg)$/;"	f
+roomAddress	proxy/test/simpleBackEnd.cpp	/^std::string roomAddress   = "localhost:50052";$/;"	v
+rpcmethod_Notify_	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    const ::grpc::internal::RpcMethod rpcmethod_Notify_;$/;"	m	class:ua_blackjack::final::final
+sendRequest	proxy/test/client.cpp	/^    int sendRequest(Request &request) $/;"	f	class:BlackJackClient
+serialization_table	proxy/include/grpc/UA_BlackJack.pb.h	/^  static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];$/;"	m	struct:TableStruct_UA_5fBlackJack_2eproto
+serverAddr_	proxy/test/RpcServer.h	/^    std::string serverAddr_;$/;"	m	class:final
+serverAddress_	proxy/include/asyncProxyServer.h	/^    std::string serverAddress_;$/;"	m	class:final
+server_	proxy/include/ProxyServer.h	/^    std::shared_ptr<Net::TcpServer> server_;$/;"	m	class:ProxyServer
+server_	proxy/include/asyncProxyServer.h	/^    std::unique_ptr<Server> server_;$/;"	m	class:final
+server_	proxy/test/RpcServer.h	/^    std::unique_ptr<Server> server_;$/;"	m	class:final
+serviceAddr_	proxy/include/asyncServiceClient.h	/^    std::string serviceAddr_;$/;"	m	class:ServiceClient
+serviceName_	proxy/include/asyncServiceClient.h	/^    std::string serviceName_;$/;"	m	class:ServiceClient
+service_	proxy/include/asyncProxyServer.h	/^    ProxyService::AsyncService service_;$/;"	m	class:final
+service_	proxy/test/RpcServer.h	/^    AsyncRpcService *service_;$/;"	m	class:AsyncCall
+service_	proxy/test/RpcServer.h	/^    AsyncRpcService service_;$/;"	m	class:final
+service_full_name	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^  static constexpr char const* service_full_name() {$/;"	f	class:ua_blackjack::final
+setNonBlocking	proxy/src/TcpConnection.cc	/^static int setNonBlocking(int fd)$/;"	f	file:
+setNonBlocking	proxy/src/TcpServer.cc	/^static int setNonBlocking(int fd)$/;"	f	file:
+setNonBlocking	proxy/test/client.cpp	/^static int setNonBlocking(int fd)$/;"	f	file:
+set_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::set_args(int index, const char* value) {$/;"	f	class:ua_blackjack::Request
+set_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::set_args(int index, const char* value, size_t size) {$/;"	f	class:ua_blackjack::Request
+set_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::set_args(int index, const std::string& value) {$/;"	f	class:ua_blackjack::Request
+set_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::set_args(int index, std::string&& value) {$/;"	f	class:ua_blackjack::Request
+set_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::set_args(int index, const char* value) {$/;"	f	class:ua_blackjack::Response
+set_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::set_args(int index, const char* value, size_t size) {$/;"	f	class:ua_blackjack::Response
+set_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::set_args(int index, const std::string& value) {$/;"	f	class:ua_blackjack::Response
+set_args	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::set_args(int index, std::string&& value) {$/;"	f	class:ua_blackjack::Response
+set_has_requesttype	proxy/include/grpc/UA_BlackJack.pb.cc	/^  static void set_has_requesttype(HasBits* has_bits) {$/;"	f	class:ua_blackjack::Request::_Internal
+set_has_stamp	proxy/include/grpc/UA_BlackJack.pb.cc	/^  static void set_has_stamp(HasBits* has_bits) {$/;"	f	class:ua_blackjack::Request::_Internal
+set_has_stamp	proxy/include/grpc/UA_BlackJack.pb.cc	/^  static void set_has_stamp(HasBits* has_bits) {$/;"	f	class:ua_blackjack::Response::_Internal
+set_has_status	proxy/include/grpc/UA_BlackJack.pb.cc	/^  static void set_has_status(HasBits* has_bits) {$/;"	f	class:ua_blackjack::Response::_Internal
+set_has_uid	proxy/include/grpc/UA_BlackJack.pb.cc	/^  static void set_has_uid(HasBits* has_bits) {$/;"	f	class:ua_blackjack::Request::_Internal
+set_has_uid	proxy/include/grpc/UA_BlackJack.pb.cc	/^  static void set_has_uid(HasBits* has_bits) {$/;"	f	class:ua_blackjack::Response::_Internal
+set_log_path	proxy/include/log.h	/^inline void set_log_path(const std::string &log_path)$/;"	f
+set_logger_name	proxy/include/log.h	/^inline void set_logger_name(const std::string &logger_name)$/;"	f
+set_requesttype	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::set_requesttype(::ua_blackjack::Request_RequestType value) {$/;"	f	class:ua_blackjack::Request
+set_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {$/;"	f	class:ua_blackjack::Request
+set_stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::set_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {$/;"	f	class:ua_blackjack::Response
+set_status	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::set_status(::PROTOBUF_NAMESPACE_ID::int64 value) {$/;"	f	class:ua_blackjack::Response
+set_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Request::set_uid(::PROTOBUF_NAMESPACE_ID::int64 value) {$/;"	f	class:ua_blackjack::Request
+set_uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline void Response::set_uid(::PROTOBUF_NAMESPACE_ID::int64 value) {$/;"	f	class:ua_blackjack::Response
+signupStamp_	proxy/include/Client.h	/^    int64_t signupStamp_;$/;"	m	class:Client
+size	proxy/include/CircularBuffer.h	/^    int size() const $/;"	f	struct:Net::CircularBuffer
+socialAddress	proxy/test/simpleBackEnd.cpp	/^std::string socialAddress = "localhost:50053";$/;"	v
+stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::PROTOBUF_NAMESPACE_ID::int64 Request::stamp() const {$/;"	f	class:ua_blackjack::Request
+stamp	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::PROTOBUF_NAMESPACE_ID::int64 Response::stamp() const {$/;"	f	class:ua_blackjack::Response
+stampToAsyncCallLock_	proxy/include/asyncProxyServer.h	/^    std::mutex stampToAsyncCallLock_;$/;"	m	class:final
+stampToAsyncCall_	proxy/include/asyncProxyServer.h	/^    std::unordered_map<int64_t, AsyncCall*> stampToAsyncCall_;$/;"	m	class:final
+stampToRequest_	proxy/test/client.cpp	/^    std::unordered_map<int64_t, Request> stampToRequest_;$/;"	m	class:BlackJackClient	file:
+stampToSignupClientLock_	proxy/include/ProxyServer.h	/^    std::mutex stampToSignupClientLock_;$/;"	m	class:ProxyServer
+stampToSignupClient_	proxy/include/ProxyServer.h	/^    std::unordered_map<int64_t, std::weak_ptr<Client>> stampToSignupClient_;$/;"	m	class:ProxyServer
+stampToUnloginClientLock_	proxy/include/ProxyServer.h	/^    std::mutex stampToUnloginClientLock_;$/;"	m	class:ProxyServer
+stampToUnloginClient_	proxy/include/ProxyServer.h	/^    std::unordered_map<int64_t, std::weak_ptr<Client>> stampToUnloginClient_;$/;"	m	class:ProxyServer
+stamp_	proxy/include/asyncProxyServer.h	/^    int64_t stamp_;$/;"	m	struct:AsyncCall
+stamp_	proxy/include/grpc/UA_BlackJack.pb.h	/^  ::PROTOBUF_NAMESPACE_ID::int64 stamp_;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+status	proxy/include/asyncServiceClient.h	/^        Status status;$/;"	m	struct:ServiceClient::AsyncClientCall
+status	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::PROTOBUF_NAMESPACE_ID::int64 Response::status() const {$/;"	f	class:ua_blackjack::Response
+status_	proxy/include/asyncProxyServer.h	/^    CallStatus status_;$/;"	m	struct:AsyncCall
+status_	proxy/include/grpc/UA_BlackJack.pb.h	/^  ::PROTOBUF_NAMESPACE_ID::int64 status_;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+status_	proxy/test/RpcServer.h	/^    CallStatus status_;$/;"	m	class:AsyncCall
+stop_	proxy/include/asyncProxyServer.h	/^    bool stop_ = false;$/;"	m	class:final
+stop_	proxy/include/asyncServiceClient.h	/^    bool stop_;$/;"	m	class:ServiceClient
+stop_client	proxy/test/client.cpp	/^void stop_client(int)$/;"	f
+stop_server	proxy/src/main.cpp	/^void stop_server(int)$/;"	f
+stop_server	proxy/test/simpleBackEnd.cpp	/^void stop_server(int)$/;"	f
+strToRequestType	proxy/include/common.h	/^strToRequestType = {$/;"	v
+stub	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^      Stub* stub() { return stub_; }$/;"	f	class:ua_blackjack::final::final::final
+stub_	proxy/include/asyncServiceClient.h	/^    std::unique_ptr<typename ConcreteService::Stub> stub_;$/;"	m	class:ConcreteServiceClient
+stub_	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^      Stub* stub_;$/;"	m	class:ua_blackjack::final::final::final
+swap	proxy/include/grpc/UA_BlackJack.pb.h	/^  friend void swap(Request& a, Request& b) {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+swap	proxy/include/grpc/UA_BlackJack.pb.h	/^  friend void swap(Response& a, Response& b) {$/;"	f	class:ua_blackjack::PROTOBUF_FINAL
+time_point	proxy/include/asyncProxyServer.h	/^typedef std::chrono::time_point<std::chrono::system_clock> time_point;$/;"	t
+time_point	proxy/include/asyncServiceClient.h	/^typedef std::chrono::time_point<std::chrono::system_clock> time_point;$/;"	t
+time_point	proxy/test/client.cpp	/^typedef std::chrono::time_point<std::chrono::steady_clock> time_point;$/;"	t	file:
+toEpollEvent	proxy/include/EventLoop.h	/^inline int toEpollEvent(Event events)$/;"	f	namespace:Net
+toNetEvent	proxy/include/EventLoop.h	/^inline Event toNetEvent(int epEv)$/;"	f	namespace:Net
+trivialRpcHandler	proxy/test/simpleBackEnd.cpp	/^void trivialRpcHandler(const Request &request, Response &response)$/;"	f
+ua_blackjack	proxy/include/Client.h	/^namespace ua_blackjack {$/;"	n
+ua_blackjack	proxy/include/TcpConnection.h	/^namespace ua_blackjack {$/;"	n
+ua_blackjack	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^namespace ua_blackjack {$/;"	n	file:
+ua_blackjack	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^namespace ua_blackjack {$/;"	n
+ua_blackjack	proxy/include/grpc/UA_BlackJack.pb.cc	/^namespace ua_blackjack {$/;"	n	file:
+ua_blackjack	proxy/include/grpc/UA_BlackJack.pb.h	/^namespace ua_blackjack {$/;"	n
+uid	proxy/include/Client.h	/^    UserId uid() const {return uid_;}$/;"	f	class:Client
+uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::PROTOBUF_NAMESPACE_ID::int64 Request::uid() const {$/;"	f	class:ua_blackjack::Request
+uid	proxy/include/grpc/UA_BlackJack.pb.h	/^inline ::PROTOBUF_NAMESPACE_ID::int64 Response::uid() const {$/;"	f	class:ua_blackjack::Response
+uid	proxy/test/client.cpp	/^    UserId uid() const {return uid_;}$/;"	f	class:BlackJackClient
+uidToClientLock_	proxy/include/ProxyServer.h	/^    std::mutex uidToClientLock_;$/;"	m	class:ProxyServer
+uidToClient_	proxy/include/ProxyServer.h	/^    std::unordered_map<UserId, std::shared_ptr<Client>> uidToClient_;   $/;"	m	class:ProxyServer
+uid_	proxy/include/Client.h	/^    UserId uid_ = -1;$/;"	m	class:Client
+uid_	proxy/include/grpc/UA_BlackJack.pb.h	/^  ::PROTOBUF_NAMESPACE_ID::int64 uid_;$/;"	m	class:ua_blackjack::PROTOBUF_FINAL
+uid_	proxy/test/client.cpp	/^    UserId uid_ = -1;$/;"	m	class:BlackJackClient	file:
+unloginStamp_	proxy/include/Client.h	/^    int64_t unloginStamp_;$/;"	m	class:Client
+unpack	proxy/src/ClientProxyProtocol.cc	/^int NS::unpack(::Net::CircularBuffer &buffer, int32_t *type, std::string &msg)$/;"	f	class:NS
+unpack	proxy/src/ClientProxyProtocol.cc	/^int NS::unpack(const char *buffer, size_t size, int32_t *type, std::string &msg)$/;"	f	class:NS
+waittingResponse_	proxy/test/client.cpp	/^    bool waittingResponse_ = false;$/;"	m	class:BlackJackClient	file:
+write	proxy/src/CircularBuffer.cc	/^int Net::write(int fd, CircularBuffer &buffer, bool freeAfterWrite)$/;"	f	class:Net
+writeAs	proxy/include/CircularBuffer.h	/^int writeAs(CircularBuffer &buffer, T &in, bool netByteOrder = false)$/;"	f	namespace:Net
+writeBuffer_	proxy/include/TcpConnection.h	/^    CircularBuffer writeBuffer_;$/;"	m	class:Net::TcpConnection
+writeBuffer_	proxy/test/client.cpp	/^    CircularBuffer writeBuffer_;$/;"	m	class:BlackJackClient	file:
+~AsyncRpcServer	proxy/test/RpcServer.h	/^    ~AsyncRpcServer() {server_->Shutdown(); cq_->Shutdown();}$/;"	f	class:final
+~CircularBuffer	proxy/include/CircularBuffer.h	/^    ~CircularBuffer() {delete [] m_buffer;}$/;"	f	struct:Net::CircularBuffer
+~CircularQueue	proxy/include/CircularBuffer.h	/^    ~CircularQueue() {delete [] m_buffer;}$/;"	f	class:Net::CircularQueue
+~EventLoop	proxy/src/EventLoop.cc	/^Net::EventLoop::~EventLoop() $/;"	f	class:Net::EventLoop
+~ProxyRpcServer	proxy/include/asyncProxyServer.h	/^    ~ProxyRpcServer()$/;"	f	class:final
+~Request	proxy/include/grpc/UA_BlackJack.pb.cc	/^Request::~Request() {$/;"	f	class:ua_blackjack::Request
+~RequestDefaultTypeInternal	proxy/include/grpc/UA_BlackJack.pb.cc	/^  ~RequestDefaultTypeInternal() {}$/;"	f	struct:ua_blackjack::RequestDefaultTypeInternal
+~Response	proxy/include/grpc/UA_BlackJack.pb.cc	/^Response::~Response() {$/;"	f	class:ua_blackjack::Response
+~ResponseDefaultTypeInternal	proxy/include/grpc/UA_BlackJack.pb.cc	/^  ~ResponseDefaultTypeInternal() {}$/;"	f	struct:ua_blackjack::ResponseDefaultTypeInternal
+~Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^DatabaseService::Service::~Service() {$/;"	f	class:ua_blackjack::DatabaseService::Service
+~Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^GameService::Service::~Service() {$/;"	f	class:ua_blackjack::GameService::Service
+~Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^LobbyService::Service::~Service() {$/;"	f	class:ua_blackjack::LobbyService::Service
+~Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^PlayerService::Service::~Service() {$/;"	f	class:ua_blackjack::PlayerService::Service
+~Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^ProxyService::Service::~Service() {$/;"	f	class:ua_blackjack::ProxyService::Service
+~Service	proxy/include/grpc/UA_BlackJack.grpc.pb.cc	/^SocialService::Service::~Service() {$/;"	f	class:ua_blackjack::SocialService::Service
+~ServiceClient	proxy/include/asyncServiceClient.h	/^    ~ServiceClient() {}$/;"	f	class:ServiceClient
+~StubInterface	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^    virtual ~StubInterface() {}$/;"	f	class:ua_blackjack::final::StubInterface
+~TcpConnection	proxy/src/TcpConnection.cc	/^TcpConnection::~TcpConnection() $/;"	f	class:TcpConnection
+~TcpServer	proxy/src/TcpServer.cc	/^TcpServer::~TcpServer() $/;"	f	class:TcpServer
+~experimental_async_interface	proxy/include/grpc/UA_BlackJack.grpc.pb.h	/^      virtual ~experimental_async_interface() {}$/;"	f	class:ua_blackjack::final::StubInterface::experimental_async_interface

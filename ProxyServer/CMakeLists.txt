@@ -1,6 +1,17 @@
-cmake_minimum_required(VERSION 3.5.1)
+cmake_minimum_required(VERSION 3.9)
 
 # add_subdirectory(protos)
+
+# SET(CMAKE_BUILD_TYPE "Debug")
+# SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
+# SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
+
+include(CheckIPOSupported)
+check_ipo_supported(RESULT _IsIPOSupported)
+  if(_IsIPOSupported)
+  message(STATUS "Turn on INTERPROCEDURAL_OPTIMIZATION")
+  set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
+endif()
 
 get_filename_component(bj_proto "${PROJECT_SOURCE_DIR}/protos/UA_BlackJack.proto" ABSOLUTE)
 get_filename_component(bj_proto_path "${bj_proto}" PATH)
@@ -51,3 +62,6 @@ target_link_libraries(proxy
   ${_PROTOBUF_LIBPROTOBUF}
 )
 
+if (ENABLE_TEST)
+  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/test ${PROJECT_BINARY_DIR}/proxy/test)
+endif()
