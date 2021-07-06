@@ -26,6 +26,7 @@ public:
                       std::vector<std::pair<int, int>> *cards_, bool dealer_);
 
     void DisplayHelp();
+    void DisplayGameEnd(std::string &result);
 
 private:
     Display() = default;

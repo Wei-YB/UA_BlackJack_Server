@@ -23,6 +23,8 @@ add_custom_command(
         "${hw_proto}"
       DEPENDS "${hw_proto}")
 
+add_custom_target(social ALL DEPENDS "${hw_proto_srcs}" "${hw_proto_hdrs}" "${hw_grpc_srcs}" "${hw_grpc_hdrs}")
+
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/grpc")
 
 # add_library(hw_grpc_proto

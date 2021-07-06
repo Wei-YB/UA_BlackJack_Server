@@ -1,14 +1,23 @@
 
 #include <signal.h>
 
+#include <fstream>
+
 #include "Client.h"
 #include "global.h"
 
 using namespace ua_blackjack::client;
+using namespace ua_blackjack::robust_io;
+
+std::string server_ip;
+std::string server_port;
+std::string log_file;
+
 std::shared_ptr<Client> client = nullptr;
 
 std::shared_ptr<spdlog::logger> logger = nullptr;
 TimePoint start;
+Rio rio;
 
 void handler(int sig) {
     std::cout << ":( timeout" << std::endl << std::endl;
@@ -34,12 +43,20 @@ void init(const char* log_file) {
 }
 
 int main(int argc, char* argv[]) {
-    assert(argc == 4);
+    assert(argc == 2);
 
-    init(argv[3]);
+    std::ifstream config;
+    config.open(argv[1]);
+
+    std::string option;
+    config >> option >> server_ip;
+    config >> option >> server_port;
+    config >> option >> log_file;
+
+    init(log_file.c_str());
 
     client.reset(new Client);
-    client->Run(argv[1], argv[2]);
+    client->Run(server_ip.c_str(), server_port.c_str());
 
     return 0;
 }

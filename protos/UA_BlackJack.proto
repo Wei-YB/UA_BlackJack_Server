@@ -40,6 +40,8 @@ message Request {
         ADD_WAIT_FRIEND = 31;
         DELETE_WAIT_FRIEND = 32;
         GAME_START = 33;    //
+        IS_FRIEND = 34;
+        IS_WAITING_FRIEND = 35;
     }
     optional RequestType requestType = 1;
     optional int64  uid = 2;

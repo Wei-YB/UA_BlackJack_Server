@@ -1,5 +1,7 @@
 #include "Display.h"
 
+#include "global.h"
+
 using namespace ua_blackjack::display;
 
 void Display::DisplayResponse(ua_blackjack::Response& response, const ua_blackjack::Request::RequestType& type) {
@@ -172,7 +174,7 @@ void Display::DisplayResponseSurrender(ua_blackjack::Response& response) {
         return;
     }
 
-    PrintPrompt("I will be back!");
+    PrintPrompt("Surrender Successful");
 }
 void Display::DisplayResponseRankMe(ua_blackjack::Response& response) {
     if (response.status() == -1) {
@@ -198,9 +200,11 @@ void Display::DisplayResponseRankTop(ua_blackjack::Response& response) {
 }
 void Display::DisplayResponseAddFriend(ua_blackjack::Response& response) {
     if (response.status() == -1) {
-        if (response.args().size() > 0 && response.args()[0] == "none") {
-            std::cout << ":( AddFriend Failed, user doesn't exist" << std::endl;
-
+        if (response.args().size() > 0) {
+            if (response.args()[0] == "none") std::cout << ":( AddFriend Failed, user doesn't exist" << std::endl;
+            if (response.args()[0] == "self")
+                std::cout << ":( AddFriend Failed, can't operate on yourself" << std::endl;
+            if (response.args()[0] == "friend") std::cout << ":( AddFriend Failed, already your friend" << std::endl;
         } else {
             std::cout << ":( Failed, Already in user's WaitingFriendList" << std::endl;
         }
@@ -210,21 +214,44 @@ void Display::DisplayResponseAddFriend(ua_blackjack::Response& response) {
 }
 void Display::DisplayResponseAcceptFriend(ua_blackjack::Response& response) {
     if (response.status() == -1) {
-        std::cout << ":( AcceptFriend Failed" << std::endl;
+        if (response.args().size() > 0) {
+            if (response.args()[0] == "none") std::cout << ":( AcceptFriend Failed, user doesn't exist" << std::endl;
+            if (response.args()[0] == "self")
+                std::cout << ":( AcceptFriend Failed, can't operate on yourself" << std::endl;
+            if (response.args()[0] == "bad")
+                std::cout << ":( AcceptFriend Failed, doesn't exist on the waiting list" << std::endl;
+        } else {
+            std::cout << ":( AcceptFriend Failed, unknow error" << std::endl;
+        }
         return;
     }
     PrintPrompt("AcceptFriend Successful");
 }
 void Display::DisplayResponseDeleteFriend(ua_blackjack::Response& response) {
     if (response.status() == -1) {
-        std::cout << ":( DeleteFriend Failed" << std::endl;
+        if (response.args().size() > 0) {
+            if (response.args()[0] == "none" || response.args()[0] == "not")
+                std::cout << ":( DeleteFriend Failed, user is not your friend" << std::endl;
+            if (response.args()[0] == "self")
+                std::cout << ":( DeleteFriend Failed, can't operate on yourself" << std::endl;
+
+        } else {
+            std::cout << ":( DeleteFriend Failed, unknow error" << std::endl;
+        }
         return;
     }
     PrintPrompt("DeleteFriend Successful");
 }
 void Display::DisplayResponseDeleteWaitingFriend(ua_blackjack::Response& response) {
     if (response.status() == -1) {
-        std::cout << ":( Failed, no such waiting friend" << std::endl;
+        if (response.args().size() > 0) {
+            if (response.args()[0] == "none" || response.args()[0] == "not")
+                std::cout << ":( DeleteWaitingFriend Failed, user not in the waiting list" << std::endl;
+            if (response.args()[0] == "self")
+                std::cout << ":( DeleteWaitingFriend Failed, can't operate on yourself" << std::endl;
+        } else {
+            std::cout << ":( DeleteWaitingFriend Failed, unknow error" << std::endl;
+        }
         return;
     }
     PrintPrompt("DeleteWaitingFriend Successful");
@@ -311,6 +338,7 @@ void Display::DisplayCards(int idx_, std::unordered_map<int, std::string>& idx2n
                            std::vector<std::pair<int, int>>* cards_, bool dealer_) {
     PrintPrompt("Cards Update");
 
+    logger->info("display cards");
     int dealer_idx = -1;
     if (dealer_) {
         dealer_idx = name2idx_[name_];
@@ -361,9 +389,20 @@ void Display::DisplayHelp() {
     std::cout << "  AddFriend [name]" << std::endl;
     std::cout << "  AcceptFriend [name]" << std::endl;
     std::cout << "  DeleteFriend [name]" << std::endl;
+    std::cout << "  DeleteWaitingFriend [name]" << std::endl;
     std::cout << "  FriendList" << std::endl;
     std::cout << "  WaitingFriendList" << std::endl;
     std::cout << "  MatchList" << std::endl;
     std::cout << "  MatchInfo [match id]" << std::endl;
     std::cout << "  Quit" << std::endl;
+}
+
+void Display::DisplayGameEnd(std::string& result) {
+    if (result == "win") result = "WIN";
+    if (result == "lose") result = "LOSE";
+    if (result == "draw") result = "DRAW";
+    if (result == "surrender") result = "SURRENDER";
+    result = "Game over. You " + result;
+
+    PrintPrompt(result);
 }

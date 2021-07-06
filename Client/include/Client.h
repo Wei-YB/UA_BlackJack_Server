@@ -49,18 +49,32 @@ private:
     std::string name_tmp_;
     bool dealer_;
     std::unordered_map<std::string, std::pair<ua_blackjack::Request::RequestType, int>> cmd2req_;
-    enum State { INVALID, OFFLINE, ONLINE, INROOM_UNREADY, INROOM_READY, INGAME_IDLE, INGAME_TURN } state_, next_state_;
-    enum DataType { REQUEST = 1, RESPONSE = 2 };
+
+    enum State {
+        INVALID,
+        OFFLINE,
+        ONLINE,
+        INROOM_UNREADY,
+        INROOM_READY,
+        INGAME_IDLE,
+        INGAME_TURN,
+        INGAME_OBSERVE
+    } state_,
+        next_state_;
+
     std::unordered_map<State, std::string> state2str_;
+
+    enum DataType { REQUEST = 1, RESPONSE = 2 };
 
     int Connect(const char *host, const char *service, int type);
 
     void GameInit();
     static void *ListenProxy(void *arg);
-    void GameEnd(ua_blackjack::Request &request);
+    void GameEnd();
+    void Logout();
 
-    void ProcessCommand(ua_blackjack::robust_io::Rio &rio);
-    void ProcessSocket(ua_blackjack::robust_io::Rio &rio);
+    void ProcessCommand();
+    void ProcessSocket();
 
     std::vector<std::string> GetCommandArgs();
     std::vector<std::string> Parse(const std::string &command);
@@ -68,6 +82,7 @@ private:
     State GetNextState(const std::string &cmd);          // for command line input
     State GetNextState(ua_blackjack::Request &request);  // for server request input
 
+    void SendRequest(const std::vector<std::string> &args);
     ua_blackjack::Request ConstructRequest(const std::vector<std::string> &args);
     int SerializeRequest(ua_blackjack::Request &request);
 
@@ -83,7 +98,11 @@ private:
     void addfd(int epollfd, int fd);
     void removefd(int epollfd, int fd);
 
+    bool ReceiveData(uint32_t &data_type, uint32_t &data_length, std::string &data);
+
+    void ActuallyChangeState(uint32_t data_type);
     bool DealTimeout(ua_blackjack::Response &response);
+    bool CheckBet(std::string &money);
 
     unsigned char buffer_in_[BUFFSIZE];
     unsigned char buffer_out_[BUFFSIZE];
