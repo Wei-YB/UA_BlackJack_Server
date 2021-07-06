@@ -56,6 +56,21 @@ void ua_blackjack::Game::Room::judgeWinOrLose(void) //判断最后的输赢
 
     //庄家坚持到了最后
     auto dealer = playerList.front();
+    //判断是不是所有玩家都已经爆牌、投降
+    bool isAllPlayerLose = true; //默认所有玩家都输
+    for (auto &player : playerList)
+    {
+        if (player->finalResult != FinalResultOfGame::LOSE)
+        {
+            isAllPlayerLose = false;
+            break;
+        }
+    }
+    if (isAllPlayerLose == true) //所有玩家都输，那么庄家赢
+    {
+        dealer->finalResult = FinalResultOfGame::WIN;
+        return;
+    }
     int dealerFinalGameValue = dealer->getAccumulateOfPoker();
     while (dealerFinalGameValue < 17)
     {
