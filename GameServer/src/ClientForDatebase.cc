@@ -24,7 +24,7 @@ void ua_blackjack::Game::ClientForDatebase::matchEnd(const std::list<ua_blackjac
         ss << player->uid;
         request.add_args(ss.str());
 
-        int score = player->finalResult == WIN ? player->bettingMoney : -player->bettingMoney;
+        int score = player->finalResult == FinalResultOfGame::WIN ? player->bettingMoney : -player->bettingMoney;
         ss.clear();
         ss.str(std::string());
         ss << score;

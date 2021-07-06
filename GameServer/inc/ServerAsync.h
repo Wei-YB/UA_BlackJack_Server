@@ -35,6 +35,7 @@
 #endif
 #include "UA_BlackJack.pb.h"
 #include "spdlog/spdlog.h"
+#include "ServiceCallback.h"
 void handelGrpc(ua_blackjack::Request &request);
 int createstEnv_t(BlackJackRoomID roomID, UidList &uids);
 void *createOneGame(void *arg);

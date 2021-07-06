@@ -44,17 +44,7 @@ void ua_blackjack::Game::CallData::Proceed()
         spdlog::info("type = {0:d} uid = {1:d} stamp = {2:d}", type, uid, stamp);
         if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //真正的创建房间code
         {
-            reply_.set_status(0);
-            UidList uids;
-            BlackJackRoomID roomid = atoi(args[0].c_str());
-
-            spdlog::info("Create Room Ask come roomid {0}", roomid);
-            for (int i = 1; i < args.size(); i++)
-            {
-                uids.push_back(atoi(args[i].c_str()));
-            }
-
-            createstEnv_t(roomid, uids);
+            nomalStartGameCallback(request_, reply_);
         }
 
         else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //退出房间

@@ -93,9 +93,9 @@ void *createOneGame(void *arg) //开启一局游戏
                 continue;                                        //庄家无需设置筹码
             if (conRet == 0 && player->isFinishBetting == false) //超时未收到信号，认为玩家已退出游戏
             {
-                player->quit();             //托管
-                player->isStand = true;     //玩家停牌
-                player->finalResult = DRAW; //筹码阶段退出应判输0元
+                player->quit();                                //托管
+                player->isStand = true;                        //玩家停牌
+                player->finalResult = FinalResultOfGame::DRAW; //筹码阶段退出应判输0元
                 spdlog::warn("uid {0:d} timeout and quit game", player->uid);
                 continue;
             }
@@ -148,9 +148,9 @@ void *createOneGame(void *arg) //开启一局游戏
                 continue;
             }
             //接收到玩家的打牌/停牌信号
-            if ((env->operateId == OPERATE_HIT || env->operateId == OPERATE_STAND) && (((BetMoneyArgument *)env->arg)->uid == player->uid))
+            if ((env->operateId == OperateID::OPERATE_HIT || env->operateId == OperateID::OPERATE_STAND) && (((BetMoneyArgument *)env->arg)->uid == player->uid))
             {
-                if (env->operateId == OPERATE_HIT)
+                if (env->operateId == OperateID::OPERATE_HIT)
                 {
                     player->hitPoker();
                     UpdateAll(room->playerList, player->uid); //抽牌，更新下
@@ -159,7 +159,7 @@ void *createOneGame(void *arg) //开启一局游戏
                     spdlog::info("uid {0:d} hit", player->uid);
 #endif
                 }
-                else if (env->operateId == OPERATE_STAND)
+                else if (env->operateId == OperateID::OPERATE_STAND)
                 {
                     player->standPoker();
 //

@@ -66,8 +66,8 @@ void ua_blackjack::Game::Player::hitPoker(void) //用户从牌堆中拿取一张
     int val = this->getAccumulateOfPoker();
     if (val > 21) //爆了
     {
-        this->isStand = true;     //用户需要停牌
-        this->finalResult = LOSE; //用户输了
+        this->isStand = true;                        //用户需要停牌
+        this->finalResult = FinalResultOfGame::LOSE; //用户输了
     }
     else if (val == 21) //black jack
     {
@@ -84,9 +84,9 @@ void ua_blackjack::Game::Player::doubleBettingMoney(void) //用户加倍
 }
 void ua_blackjack::Game::Player::surrender(void) //用户投降
 {
-    this->isStand = true;     //用户需要停牌
-    this->bettingMoney /= 2;  //筹码为原来的一半
-    this->finalResult = LOSE; //用户输了
+    this->isStand = true;                        //用户需要停牌
+    this->bettingMoney /= 2;                     //筹码为原来的一半
+    this->finalResult = FinalResultOfGame::LOSE; //用户输了
 }
 void ua_blackjack::Game::Player::quit(void) //用户强行退游，需要托管
 {
@@ -110,10 +110,10 @@ void ua_blackjack::Game::Player::reset(void)
     pokerList.clear();
     bettingMoney = 0;
     uid = -1;
-    isDealer = false;  //用户是否为庄家
-    isStand = false;   //是否停牌
-    isQuit = false;    //是否退游
-    finalResult = WIN; //默认用户会赢
+    isDealer = false;                     //用户是否为庄家
+    isStand = false;                      //是否停牌
+    isQuit = false;                       //是否退游
+    finalResult = FinalResultOfGame::WIN; //默认用户会赢
     nickName = "";
     room = -1;
 

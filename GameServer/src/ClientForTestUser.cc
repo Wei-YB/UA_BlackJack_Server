@@ -337,16 +337,16 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
                     {
                         if (s == "Hit") // hit
                         {
-                            env->operateId = OPERATE_HIT;
+                            env->operateId = OperateID::OPERATE_HIT;
                         }
                         else if (s == "Stand")
                         {
-                            env->operateId = OPERATE_STAND;
+                            env->operateId = OperateID::OPERATE_STAND;
                         }
 
                         else
                         {
-                            env->operateId = OPERATE_STAND; //强行停牌
+                            env->operateId = OperateID::OPERATE_STAND; //强行停牌
                             spdlog::error("{0} HIT OR STAND ERROR", call->reply.uid());
                         }
                     }
