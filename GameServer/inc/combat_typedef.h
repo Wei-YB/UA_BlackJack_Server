@@ -24,8 +24,9 @@ enum class OperateID
 };
 enum class ServiceStatus
 {
-    HANDEL_GRPC_BY_PARENT = 0, //由父进程管理rpc的发送，子进程只做callback具体内容
-    HANDEL_GRPC_BY_ITSELF,
+    HANDEL_GRPC_BY_PARENT = 0,           //命令行启动的状态，所有命令均由启动的服务管理并通过该服务发送回去
+    HANDEL_GRPC_BY_ITSELF,               //通过fork->exec创建的子进程刚启动时的状态，此时对于父进程的grpc命令将在子进程进行callback但仍通过父进程的grpc进行通信
+    HANDEL_GRPC_BY_PARENT_START_FORWARD, //父进程接收到了restart的命令，对于手头的已经创建了房间的玩意儿都在自己这边处理，对于新来的连接将命令转发给子进程，并通过自己的rpc与其他模块进行通信。这个状态结束之后应该完全退出父进程
 };
 struct HitArgument
 {

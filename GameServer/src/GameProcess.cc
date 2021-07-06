@@ -93,9 +93,7 @@ void *createOneGame(void *arg) //开启一局游戏
                 continue;                                        //庄家无需设置筹码
             if (conRet == 0 && player->isFinishBetting == false) //超时未收到信号，认为玩家已退出游戏
             {
-                player->quit();                                //托管
-                player->isStand = true;                        //玩家停牌
-                player->finalResult = FinalResultOfGame::DRAW; //筹码阶段退出应判输0元
+                player->quit(); //托管
                 spdlog::warn("uid {0:d} timeout and quit game", player->uid);
                 continue;
             }

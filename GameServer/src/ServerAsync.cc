@@ -63,6 +63,10 @@ void ua_blackjack::Game::CallData::Proceed()
                     {
                         auto room = roomHashMap[roomId];
                         env->sizeOfCompleteBetting++;
+                        if (env->sizeOfCompleteBetting >= room.lock()->playerList.size())
+                        {
+                            myConditionSignal(env->cond); //所有玩家都收到筹码了
+                        }
                     }
                     if (playerPtr->isWaitingReply == true)
                     {

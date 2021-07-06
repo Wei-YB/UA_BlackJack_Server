@@ -232,5 +232,9 @@ int main(int argc, char *argv[])
     }
     else if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT) //hot reload
     {
+        //对于子进程而言，客户端可以正常的使用自己的client去接入proxy
+        std::thread thread_ = std::thread(&ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc, &ua_blackjack::Game::ClientForTestUser::getInstance());
+        std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
+        spdlog::info("son::grpc async is not begin...");
     }
 }
