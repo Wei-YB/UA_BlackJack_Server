@@ -61,6 +61,7 @@ namespace ua_blackjack
     class CallData
     {
     public:
+      typedef std::function<void(Request &request, Response &responce)> CallbackFunc;
       CallData(GameService::AsyncService *service, ServerCompletionQueue *cq)
           : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE)
       {

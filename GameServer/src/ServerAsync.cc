@@ -55,7 +55,6 @@ void ua_blackjack::Game::CallData::Proceed()
             }
 
             createstEnv_t(roomid, uids);
-            uids.clear();
         }
 
         else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //退出房间
@@ -65,11 +64,20 @@ void ua_blackjack::Game::CallData::Proceed()
             {
                 spdlog::info("{0:d} quit by itself", uid);
                 playerPtr->quit(); //托管
-                if (playerPtr->isWaitingReply == true)
-                {
-                    int roomId = playerPtr->getRoom();
-                    auto env = roomEnvirHashMap[roomId];
-                    myConditionSignal(env->cond);
+
+                int roomId = playerPtr->getRoom();
+                auto env = roomEnvirHashMap[roomId];
+                { //加锁
+                    std::lock_guard<std::mutex> lock(env->mutex);
+                    if (playerPtr->isFinishBetting == false) //在托管阶段就quit了
+                    {
+                        auto room = roomHashMap[roomId];
+                        env->sizeOfCompleteBetting++;
+                    }
+                    if (playerPtr->isWaitingReply == true)
+                    {
+                        myConditionSignal(env->cond);
+                    }
                 }
             }
             else
@@ -106,7 +114,10 @@ void ua_blackjack::Game::CallData::Proceed()
                 {
                     int roomId = playerPtr->getRoom();
                     auto env = roomEnvirHashMap[roomId];
-                    myConditionSignal(env->cond);
+                    { //加锁
+                        std::lock_guard<std::mutex> lock(env->mutex);
+                        myConditionSignal(env->cond);
+                    }
                 }
             }
             else

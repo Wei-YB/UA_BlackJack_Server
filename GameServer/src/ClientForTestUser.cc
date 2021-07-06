@@ -292,10 +292,13 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
                     int roomId = ptr->getRoom();
                     auto env = roomEnvirHashMap[roomId];
                     auto room = roomHashMap[roomId];
-                    env->sizeOfCompleteBetting++;
-                    if (env->sizeOfCompleteBetting >= room.lock()->playerList.size())
-                    {
-                        myConditionSignal(env->cond); //所有玩家都收到筹码了
+                    { //加锁
+                        std::lock_guard<std::mutex> lock(env->mutex);
+                        env->sizeOfCompleteBetting++;
+                        if (env->sizeOfCompleteBetting >= room.lock()->playerList.size())
+                        {
+                            myConditionSignal(env->cond); //所有玩家都收到筹码了
+                        }
                     }
                     if (ptr->isQuit == true) //已退出玩家的相应不处理,庄家相应不处理
                     {
@@ -347,8 +350,10 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
                             spdlog::error("{0} HIT OR STAND ERROR", call->reply.uid());
                         }
                     }
-
-                    myConditionSignal(env->cond);
+                    { //枷锁
+                        std::lock_guard<std::mutex> lock(env->mutex);
+                        myConditionSignal(env->cond);
+                    }
                 }
                 else if (call->reply.stamp() == STAMP_ASK_UPDATE) //ask update有响应了
                 {

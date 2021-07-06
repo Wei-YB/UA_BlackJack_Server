@@ -211,7 +211,7 @@ int main(int argc, char *argv[])
     std::cout << "controlTcpPort = " << controlTcpPort << std::endl;
     std::cout << "gameRpcAddr = " << gameRpcAddr << std::endl;
     std::cout << "start_daemon..." << std::endl;
-    start_daemon();
+    start_daemon(); //守护
 
     auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", "logs/async_log.log");
     spdlog::set_default_logger(async_file);

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <list>
 #include <memory>
+#include <mutex>
 #include "co_routine_inner.h"
 typedef int64_t BlackJackUID;
 typedef int64_t BlackJackMoney;
@@ -49,6 +50,8 @@ struct stEnv_t
     void *arg;                //操作数
     int sizeOfCompleteBetting = 0;
     stEnv_t(BlackJackRoomID _roomID, UidList &_uids) : roomID(_roomID), uids(_uids){};
+
+    std::mutex mutex;
 };
 #define LOG_ON
 extern std::string ProxyServiceAddr;
