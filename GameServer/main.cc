@@ -133,7 +133,7 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        std::cout << "Usage " << argv[0] << " [RELEASE TEST]" << std::endl;
+        std::cout << "Usage " << argv[0] << " [RELEASE TEST RESTART]" << std::endl;
         return 0;
     }
     if (strcmp(argv[1], "RELEASE") == 0)
@@ -143,6 +143,10 @@ int main(int argc, char *argv[])
     else if (strcmp(argv[1], "TEST") == 0)
     {
         isProgramRelase = false;
+    }
+    else if (strcmp(argv[1], "RESTART") == 0) //重启的程序
+    {
+        spdlog::info("restarting program running....");
     }
     else
     {

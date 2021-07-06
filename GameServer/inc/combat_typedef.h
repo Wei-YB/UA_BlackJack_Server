@@ -38,6 +38,18 @@ struct BetMoneyArgument
     BlackJackUID uid;
     BlackJackMoney money;
 };
+struct stEnv_t
+{
+    typedef std::shared_ptr<stEnv_t> ptr;
+    stCoRoutine_t *coRoutine; //协程句柄
+    BlackJackRoomID roomID;   //创建的房间号
+    UidList &uids;            //所有玩家的uid
+    int cond;                 //信号量
+    OperateID operateId;      //操作码
+    void *arg;                //操作数
+    int sizeOfCompleteBetting = 0;
+    stEnv_t(BlackJackRoomID _roomID, UidList &_uids) : roomID(_roomID), uids(_uids){};
+};
 #define LOG_ON
 extern std::string ProxyServiceAddr;
 extern std::string LobbyServiceAddr;

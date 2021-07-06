@@ -56,7 +56,8 @@ void *createOneGame(void *arg) //开启一局游戏
     else //池中房间不够，重创一个
     {
         room = roomPool[playerSize - 2].front();
-        room->rid = env->roomID;
+        room->rid = env->roomID; //room id
+
         auto iterUids = env->uids.begin();
         auto iterPlayers = room->playerList.begin();
         while (iterUids != env->uids.end())
@@ -181,8 +182,8 @@ void *createOneGame(void *arg) //开启一局游戏
         if (player->isQuit == false)
             ua_blackjack::Game::ClientForTestUser::getInstance().askEnd(player->uid, player->finalResult); //send end request
     }
-    unUsedstEnvRoomID.push((room->getRoomId())); //协程结束，return后栈中资源释放，接着回收协程的协程开始工作
-    myConditionSignal(conditionForClearRoom);    //唤醒清空协程
+    unUsedstEnvRoomID.push(room->getRoomId()); //协程结束，return后栈中资源释放，接着回收协程的协程开始工作
+    myConditionSignal(conditionForClearRoom);  //唤醒清空协程
     return NULL;
 }
 
@@ -193,7 +194,7 @@ void *waitingSignalFromOtherModule(void *arg)
     ua_blackjack::Game::ServerImpl *server = (ua_blackjack::Game::ServerImpl *)arg;
 
     // Spawn a new CallData instance to serve new clients.
-    new ua_blackjack::Game::ServerImpl::CallData(&server->service_, server->cq_.get());
+    new ua_blackjack::Game::CallData(&server->service_, server->cq_.get());
     void *tag; // uniquely identifies a request.
     bool ok;
     gpr_timespec deadline;
@@ -209,7 +210,7 @@ void *waitingSignalFromOtherModule(void *arg)
         }
 
         GPR_ASSERT(ok);
-        static_cast<ua_blackjack::Game::ServerImpl::CallData *>(tag)->Proceed();
+        static_cast<ua_blackjack::Game::CallData *>(tag)->Proceed();
     }
 }
 void *recoveryUnusedCo(void *arg) //回收协程的协程

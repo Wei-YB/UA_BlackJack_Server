@@ -279,7 +279,6 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
         GPR_ASSERT(ok);
         if (call->status.ok())
         {
-            //this->printResponce(call->reply); //收到信号
 
             auto replyuid = call->reply.uid();
             auto replyargs = call->reply.args();
@@ -289,6 +288,7 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
 
                 if (call->reply.stamp() == STAMP_ASK_BETTING) //ask betting有响应了
                 {
+                    this->printResponce(call->reply); //收到信号
                     int roomId = ptr->getRoom();
                     auto env = roomEnvirHashMap[roomId];
                     auto room = roomHashMap[roomId];
@@ -312,7 +312,6 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
                     if (replyargs.size() != 2 || replyargs[0] != "Bet")
                     {
                         spdlog::error("uid {0:d}user unexpected reply betting money", replyuid);
-                        exit(1);
                     }
 
                     ptr->bettingMoney = atoi(replyargs[1].c_str());
@@ -320,7 +319,8 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
                 }
                 else if (call->reply.stamp() == STAMP_ASK_HIT) //ask hit有响应了
                 {
-                    if (ptr->isQuit == true) //已退出玩家的相应不处理
+                    this->printResponce(call->reply); //收到信号
+                    if (ptr->isQuit == true)          //已退出玩家的相应不处理
                     {
                         spdlog::warn("uid {0:d}user quit but reply later", replyuid);
                         delete call;
@@ -340,10 +340,11 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
                         {
                             env->operateId = OPERATE_STAND;
                         }
+
                         else
                         {
+                            env->operateId = OPERATE_STAND; //强行停牌
                             spdlog::error("{0} HIT OR STAND ERROR", call->reply.uid());
-                            exit(1);
                         }
                     }
 
