@@ -59,7 +59,22 @@ struct stEnv_t
 
     std::mutex mutex;
 };
+#define MAX_TEXT 1024
+struct msg_st
+{
+    long int msg_type;
+    char text[MAX_TEXT];
+};
 #define LOG_ON
+enum class MSG_KEY_E
+{
+    MSG_KEY_GAME_START = 123,
+    MSG_KEY_LEAVE_ROOM = 124,
+    MSG_KEY_DOUBLE = 125,
+    MSG_KEY_SURRENDER = 126,
+    MSG_KEY_COMPLETE_ALL_OPE = 127,
+};
+
 extern std::string ProxyServiceAddr;
 extern std::string LobbyServiceAddr;
 extern std::string DatabaseServiceAddr;
@@ -68,3 +83,5 @@ extern std::string gameRpcAddr;
 extern bool isProgramRelase;
 extern uint64_t sumOfRoom;
 extern ServiceStatus serviceStatus;
+extern std::string configFilePath;
+extern std::string logFilePath;

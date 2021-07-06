@@ -130,6 +130,8 @@ bool start_daemon()
 }
 bool isProgramRelase;
 ServiceStatus serviceStatus;
+std::string configFilePath = "../../GameServer/game.config";
+std::string logFilePath = "logs/async_log.log";
 int main(int argc, char *argv[])
 {
     if (argc < 2)
@@ -149,6 +151,7 @@ int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1], "RESTART") == 0) //重启的程序
     {
+        isProgramRelase = true;
         spdlog::info("restarting program running....");
         serviceStatus = ServiceStatus::HANDEL_GRPC_BY_PARENT;
     }
@@ -157,8 +160,7 @@ int main(int argc, char *argv[])
         std::cout << "Usage " << argv[0] << " [RELEASE TEST] [OPTION -cf(config file path) -lf(log file path)]" << std::endl;
         return 0;
     }
-    std::string configFilePath = "../../GameServer/game.config";
-    std::string logFilePath = "logs/async_log.log";
+
     if (argc == 4 || argc == 6)
     {
         for (int i = 2; i < argc; i += 2)
@@ -228,6 +230,7 @@ int main(int argc, char *argv[])
 
         thread_.join();
         thread2_.join();
+        threadReceiveRestartCommand.join();
         return 0;
     }
     else if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT) //hot reload
@@ -235,6 +238,27 @@ int main(int argc, char *argv[])
         //对于子进程而言，客户端可以正常的使用自己的client去接入proxy
         std::thread thread_ = std::thread(&ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc, &ua_blackjack::Game::ClientForTestUser::getInstance());
         std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
+
         spdlog::info("son::grpc async is not begin...");
+
+        ua_blackjack::Game::ServerImpl rpcServer;
+        rpcServer.Run();
+
+        spdlog::info("son::grpc async is  begin...");
+
+        //创建等待RPC的协程
+        co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, &rpcServer);
+        co_resume(receiveSignalFromRPC);
+
+        //回收协程的协程
+        co_create(&recoverystCo, NULL, recoveryUnusedCo, NULL);
+        co_resume(recoverystCo);
+
+        //开启协程
+        co_eventloop(co_get_epoll_ct(), NULL, NULL);
+
+        thread_.join();
+        thread2_.join();
+        return 0;
     }
 }

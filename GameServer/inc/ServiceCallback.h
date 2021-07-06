@@ -4,3 +4,4 @@ void nomalStartGameCallback(ua_blackjack::Request &request, ua_blackjack::Respon
 void nomalLeaveRoomCallback(ua_blackjack::Request &request, ua_blackjack::Response &responce);
 void nomalDoubleCallback(ua_blackjack::Request &request, ua_blackjack::Response &responce);
 void nomalSurrenderCallback(ua_blackjack::Request &request, ua_blackjack::Response &responce);
+void rpcForwardCallback(ua_blackjack::Request &request, ua_blackjack::Response &responce, MSG_KEY_E key);

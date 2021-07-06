@@ -8,6 +8,12 @@
 #include <sstream>
 #include "combat_typedef.h"
 #include "GameProcess.h"
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/msg.h>
+#include <errno.h>
 
 void ua_blackjack::Game::createServiece(void)
 {
@@ -89,6 +95,36 @@ void ua_blackjack::Game::createServiece(void)
                         std::stringstream ss;
                         ss << "restart receive ";
                         int ret = send(fd, ss.str().c_str(), ss.str().size(), 0);
+                        serviceStatus = ServiceStatus::HANDEL_GRPC_BY_PARENT_START_FORWARD;
+                        int pid = fork();
+                        if (pid == 0)
+                        {
+                            std::string songLogPath = logFilePath + ".son.log";
+                            execl("./ GameService", "RESTART", "-lf", songLogPath.c_str(), "-cf", configFilePath.c_str());
+                        }
+                        else
+                        {
+                            while (true)
+                            {
+                                if (playerHashMap.size() == 0) //所有对局都结束
+                                {
+                                    struct msg_st data;
+                                    strcpy(data.text, "Complete");
+                                    //发送request
+                                    auto msgid = msgget((key_t) static_cast<int>(MSG_KEY_E::MSG_KEY_COMPLETE_ALL_OPE), 0666 | IPC_CREAT);
+                                    if (msgid == -1)
+                                    {
+                                        spdlog::error("msgget failed with error");
+                                        exit(EXIT_FAILURE);
+                                    }
+                                    if (msgsnd(msgid, (void *)&data, MAX_TEXT, 0) == -1)
+                                    {
+                                        spdlog::error("msgsnd failed");
+                                        exit(EXIT_FAILURE);
+                                    }
+                                }
+                            }
+                        }
                     }
                     else if (strcmp(buffer, "quit") == 0)
                     {

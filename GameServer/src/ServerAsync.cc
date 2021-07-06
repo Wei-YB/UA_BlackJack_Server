@@ -1,12 +1,14 @@
 #include "ServerAsync.h"
+
 void ua_blackjack::Game::ServerImpl::Run()
 {
     ServerBuilder builder;
+
     builder.AddListeningPort(gameRpcAddr, grpc::InsecureServerCredentials());
     builder.RegisterService(&service_);
-
     cq_ = builder.AddCompletionQueue();
     server_ = builder.BuildAndStart();
+
     spdlog::info("Server listening on {0:d}", gameRpcAddr);
 }
 void ua_blackjack::Game::ServerImpl::HandleRpcs()
@@ -44,80 +46,39 @@ void ua_blackjack::Game::CallData::Proceed()
         spdlog::info("type = {0:d} uid = {1:d} stamp = {2:d}", type, uid, stamp);
         if (type == ua_blackjack::Request_RequestType::Request_RequestType_GAME_START) //真正的创建房间code
         {
-            nomalStartGameCallback(request_, reply_);
+            if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_ITSELF)
+                nomalStartGameCallback(request_, reply_);
+            else if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT_START_FORWARD)
+            {
+                rpcForwardCallback(request_, reply_, MSG_KEY_E::MSG_KEY_GAME_START);
+            }
         }
 
         else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //退出房间
         {
-            reply_.set_status(0);
-            if (auto playerPtr = playerHashMap[uid].lock())
+            if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_ITSELF || playerHashMap.count(uid) != 0)
+                nomalLeaveRoomCallback(request_, reply_);
+            else if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT_START_FORWARD)
             {
-                spdlog::info("{0:d} quit by itself", uid);
-                playerPtr->quit(); //托管
-
-                int roomId = playerPtr->getRoom();
-                auto env = roomEnvirHashMap[roomId];
-                { //加锁
-                    std::lock_guard<std::mutex> lock(env->mutex);
-                    if (playerPtr->isFinishBetting == false) //在托管阶段就quit了
-                    {
-                        auto room = roomHashMap[roomId];
-                        env->sizeOfCompleteBetting++;
-                        if (env->sizeOfCompleteBetting >= room.lock()->playerList.size())
-                        {
-                            myConditionSignal(env->cond); //所有玩家都收到筹码了
-                        }
-                    }
-                    if (playerPtr->isWaitingReply == true)
-                    {
-                        myConditionSignal(env->cond);
-                    }
-                }
-            }
-            else
-            {
-                spdlog::error("Quit error uid {0:d}   not existed in any room", uid);
+                rpcForwardCallback(request_, reply_, MSG_KEY_E::MSG_KEY_LEAVE_ROOM);
             }
         }
         else if (type == ua_blackjack::Request_RequestType::Request_RequestType_DOUBLE) //双倍
         {
-
-            if (auto playerPtr = playerHashMap[uid].lock())
+            if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_ITSELF || playerHashMap.count(uid) != 0)
+                nomalDoubleCallback(request_, reply_);
+            else if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT_START_FORWARD)
             {
-                reply_.set_status(0);
-                spdlog::info("{0:d} double by itself", uid);
-                playerPtr->bettingMoney *= 2;
-            }
-            else
-            {
-                reply_.set_status(-1);
-                spdlog::error("Double error uid {0:d}   not existed in any room", uid);
+                rpcForwardCallback(request_, reply_, MSG_KEY_E::MSG_KEY_DOUBLE);
             }
         }
         else if (type == ua_blackjack::Request_RequestType::Request_RequestType_SURRENDER) //投降
         {
-
-            if (auto playerPtr = playerHashMap[uid].lock())
+            if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_ITSELF || playerHashMap.count(uid) != 0)
+                nomalSurrenderCallback(request_, reply_);
+            else if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT_START_FORWARD)
             {
-                reply_.set_status(0);
-                spdlog::info("{0:d} surrond by itself", uid);
-                playerPtr->bettingMoney /= 2;
-                playerPtr->isStand = true;
-                playerPtr->finalResult = FinalResultOfGame::LOSE;
-                if (playerPtr->isWaitingReply == true)
-                {
-                    int roomId = playerPtr->getRoom();
-                    auto env = roomEnvirHashMap[roomId];
-                    { //加锁
-                        std::lock_guard<std::mutex> lock(env->mutex);
-                        myConditionSignal(env->cond);
-                    }
-                }
-            }
-            else
-            {
-                reply_.set_status(-1);
-                spdlog::error("Surrond error uid {0:d}   not existed in any room", uid);
+                rpcForwardCallback(request_, reply_, MSG_KEY_E::MSG_KEY_SURRENDER);
             }
         }
         else

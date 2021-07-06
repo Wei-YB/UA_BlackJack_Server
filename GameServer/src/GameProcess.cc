@@ -110,6 +110,11 @@ void *createOneGame(void *arg) //开启一局游戏
         }
     }
     room->playerList.front()->pokerList.front()->setHide(); //将第一个玩家的第一张牌设为不可见(庄家的第一张牌为暗牌)
+    for (auto &player : room->playerList)
+    {
+        if (player->nickName.size() == 0) //用户没下注不准抽牌
+            player->nickName = "null";
+    }
     UpdateAll(room->playerList, 0, false);
     //玩家可操作游戏
     while (true)
