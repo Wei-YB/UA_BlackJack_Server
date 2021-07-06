@@ -101,6 +101,10 @@ bool RedisService::RemoveFriendList(UID uid, UID friendId) {
     return conn_.srem(GetKey(FormatType::UID_TO_FRIEND_LIST, uid), ToString(friendId), nullptr);
 }
 
+bool RedisService::IsInFriendList(UID uid, UID friendId){
+    return conn_.sismember(GetKey(FormatType::UID_TO_FRIEND_LIST, uid), ToString(friendId));
+}
+
 RedisService::RepeatedString RedisService::GetWaitingFriendList(UID uid) {
     listBuffer_.clear();
     if (const auto ret = conn_.smembers(GetKey(FormatType::UID_TO_WAIT_FRIEND_LIST, uid), &listBuffer_); ret <= 0) {
@@ -116,6 +120,10 @@ bool RedisService::InsertWaitingFriendList(UID uid, UID friendId) {
 
 bool RedisService::RemoveWaitingFriendList(UID uid, UID friendId) {
     return conn_.srem(GetKey(FormatType::UID_TO_WAIT_FRIEND_LIST, uid), ToString(friendId), nullptr);
+}
+
+bool RedisService::IsInWaitingFriendList(UID uid, UID friendId){
+    return conn_.sismember(GetKey(FormatType::UID_TO_WAIT_FRIEND_LIST, uid), ToString(friendId));
 }
 
 RedisService::RepeatedString RedisService::GetMatchList(UID uid) {

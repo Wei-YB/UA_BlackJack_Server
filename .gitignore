@@ -3,8 +3,11 @@ build/
 *.clang-format
 alpha/
 gtest/
-thirdparty/grpc/cmake/build/
-thirdparty/spdlog/CMakeFiles/
+thirdparty/grpc/cmake/build
+thirdparty/spdlog/CMakeFiles
+thirdparty/spdlog/cmake_install.cmake
+thirdparty/spdlog/libspdlog.a
+thirdparty/spdlog/Makefile
 *.a
 *.so
 test-program/

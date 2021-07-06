@@ -23,10 +23,10 @@ namespace ua_blackjack
             BlackJackMoney bettingMoney = 0; //用户台面上的筹码
             BlackJackUID uid = -1;
 
-            bool isDealer = false;               //用户是否为庄家
-            bool isStand = false;                //是否停牌
-            bool isQuit = false;                 //是否退游
-            FinalResultOfGame finalResult = WIN; //默认用户会赢
+            bool isDealer = false;                                  //用户是否为庄家
+            bool isStand = false;                                   //是否停牌
+            bool isQuit = false;                                    //是否退游
+            FinalResultOfGame finalResult = FinalResultOfGame::WIN; //默认用户会赢
             std::string nickName;
 
             int getAccumulateOfPoker(void) const;     //获取用户当前手头的牌的大小
@@ -43,6 +43,8 @@ namespace ua_blackjack
             inline void setRoom(BlackJackRoomID _room) { this->room = _room; }
             inline BlackJackRoomID getRoom(void) { return room; };
             void reset(void);
+            bool isWaitingReply = false;
+            bool isFinishBetting = false;
 
         private:
             BlackJackRoomID room = -1; //用户当前所在房间，在一局对局当中，用户的room是不能被更改的

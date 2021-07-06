@@ -54,6 +54,10 @@ public:
             return ParseAddWaitFriend(req.uid(), req.args(), response);
         case ua_blackjack::Request_RequestType_DELETE_WAIT_FRIEND:
             return ParseDeleteWaitFriend(req.uid(), req.args(), response);
+        case ua_blackjack::Request_RequestType_IS_FRIEND:
+            return ParseIsFriend(req.uid(), req.args(), response);
+        case ua_blackjack::Request_RequestType_IS_WAITING_FRIEND:
+            return ParseIsWaitingFriend(req.uid(), req.args(), response);
         default:
             SPDLOG_ERROR("bad request type");
             return false;
@@ -77,8 +81,12 @@ private:
 
     bool ParseAddFriend(int64_t uid, const RepeatedString& args, Response& response);
     bool ParseDeleteFriend(int64_t uid, const RepeatedString& args, Response& response);
+    bool ParseIsFriend(int64_t uid, const RepeatedString& args, Response& response);
+    
     bool ParseAddWaitFriend(int64_t uid, const RepeatedString& args, Response& response);
     bool ParseDeleteWaitFriend(int64_t uid, const RepeatedString& args, Response& response);
+    bool ParseIsWaitingFriend(int64_t uid, const RepeatedString& args, Response& response);
+
 
     bool ParseMatchEnd(const RepeatedString& args, Response& response);
 

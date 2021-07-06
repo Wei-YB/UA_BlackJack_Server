@@ -57,7 +57,7 @@ namespace ua_blackjack
             static ClientForLobby &getInstance()
             {
                 static ClientForLobby instance(grpc::CreateChannel(
-                    LobbyServiceAddr, grpc::InsecureChannelCredentials()));
+                    LobbyServiceAddr, grpc::InsecureChannelCredentials())); //thread safe in cpp 11
                 return instance;
             }
 

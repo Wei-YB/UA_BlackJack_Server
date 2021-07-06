@@ -62,6 +62,7 @@ namespace ua_blackjack
             ~Room();
             PlayerList playerList;
             void reset(void);
+            bool isGameBegin = false;
 
         private:
             ua_blackjack::Game::ShuffledPokers::ptr shuffledPokers;

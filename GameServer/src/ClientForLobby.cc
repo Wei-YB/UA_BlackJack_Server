@@ -5,7 +5,7 @@
 void ua_blackjack::Game::ClientForLobby::matchEnd(const BlackJackRoomID roomid)
 {
 #ifdef LOG_ON
-    spdlog::info("Start lobby match end request");
+    spdlog::info("Start lobby match end request roomid {0}", roomid);
 #endif
 
     Request request;

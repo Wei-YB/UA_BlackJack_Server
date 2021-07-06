@@ -2,18 +2,24 @@
 #include <fstream>
 #include <sstream>
 #include <signal.h>
+#include <unistd.h>
+#include <sys/stat.h>
 
 const auto pid_file_path = "/var/run/dbserver.pid";
 std::string config_file_path = "./database.config";
+
+ServerAsynImpl* server = nullptr;
+
 void handler(int signum){
     if(signum != SIGINT){
         std::cerr <<"fatal error: wrong signal" << std::endl;
         return;
     }
-    
+    server->Shutdown();
+    // delete server;
+    SPDLOG_INFO("Server stop.");    
 }
 
-ServerAsynImpl* server = nullptr;
 
 struct Config{
     Config() = default;
@@ -29,14 +35,16 @@ struct Config{
     void GetConfig(const std::string& path = ""){
         std::ifstream config_file{};
         if(path.empty()){
+            std::cout <<"use default config" << std::endl;
             config_file.open(defalut_config);
         }else{
             config_file.open(path);
         }
         if(config_file.bad()){
-            std::cerr<<"bad config file path, using defalut config." << std::endl;
-            return;
+            std::cerr<<"bad config file path" << std::endl;
+            exit(0);
         }
+        std::cout <<"----reading config-----" << std::endl;
         std::string line;
         std::string key, value;
         while(getline(config_file, line)){
@@ -58,6 +66,12 @@ struct Config{
             else if(key == "daemonize"){
                 daemonize = (value == "yes");
             }
+            else if(key == "async_log"){
+                if(value == "yes"){
+                    auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", "logs/async_log.txt");
+                    spdlog::set_default_logger(async_file);
+                }
+            }
             else{
                 std::cerr <<"invalid config key: " <<key << std::endl; 
             }
@@ -66,24 +80,38 @@ struct Config{
 private:
 };
 
+
+bool ServerRunning(){
+    struct stat buffer{};
+    auto ret = ::stat(pid_file_path, &buffer);
+    if(ret < 0)
+        return false;
+    return true;
+}
+
 void StartServer() {
-    auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>
-    ("async_file_logger", "logs/async_log.txt");
-    spdlog::set_default_logger(async_file);
-    spdlog::flush_on(spdlog::level::trace);
-    spdlog::set_level(spdlog::level::trace);
+    // check pid file exists?
+    
+    signal(SIGINT, handler);
 
     Config config;
     config.GetConfig(config_file_path);
 
     if(config.daemonize){
+        if(ServerRunning()){
+            std::cerr<<"server already running....\nabort"<< std::endl;
+            exit(0);
+        }
         std::cout <<"daemonize enable" << std::endl;
         daemon(1,0);
         std::ofstream pid_file(pid_file_path);
         pid_file << getpid();
         pid_file.close();
     }
-   
+    
+    spdlog::flush_on(spdlog::level::info);
+    spdlog::set_level(spdlog::level::trace);
+
     SPDLOG_TRACE("start database server");
 
     server = new ServerAsynImpl(config.grpc_host,config.redis_host,config.init_score);
@@ -103,6 +131,7 @@ void StopServer(){
     int pid = -1;
     file >> pid;
     file.close();
+    remove(pid_file_path);
     if(pid != -1){
         kill(pid, SIGINT);
         std::cout <<"Send SIGINT to program: "<< pid << std::endl;
@@ -134,4 +163,5 @@ int main(int argc, char** argv) {
     }
     StartServer();
     
+    delete server;
 }

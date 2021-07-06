@@ -41,21 +41,36 @@ void ua_blackjack::Game::Room::showMessage(void) const
 void ua_blackjack::Game::Room::judgeWinOrLose(void) //判断最后的输赢
 {
     //庄家在游戏结束前投降了或提前退出游戏了或爆了
-    if (playerList.front()->finalResult != WIN)
+    if (playerList.front()->finalResult != FinalResultOfGame::WIN)
     {
         for (auto &player : playerList)
         {
-            if (player->finalResult != WIN) //玩家在游戏结束前投降了或提前退出游戏了，不能拿钱
+            if (player->finalResult != FinalResultOfGame::WIN) //玩家在游戏结束前投降了或提前退出游戏了，不能拿钱
             {
                 continue;
             }
-            player->finalResult = WIN; //玩家胜利
+            player->finalResult = FinalResultOfGame::WIN; //玩家胜利
         }
         return;
     }
 
     //庄家坚持到了最后
     auto dealer = playerList.front();
+    //判断是不是所有玩家都已经爆牌、投降
+    bool isAllPlayerLose = true; //默认所有玩家都输
+    for (auto &player : playerList)
+    {
+        if (player->finalResult != FinalResultOfGame::LOSE)
+        {
+            isAllPlayerLose = false;
+            break;
+        }
+    }
+    if (isAllPlayerLose == true) //所有玩家都输，那么庄家赢
+    {
+        dealer->finalResult = FinalResultOfGame::WIN;
+        return;
+    }
     int dealerFinalGameValue = dealer->getAccumulateOfPoker();
     while (dealerFinalGameValue < 17)
     {
@@ -88,7 +103,7 @@ void ua_blackjack::Game::Room::judgeWinOrLose(void) //判断最后的输赢
     }
     if (dealerFinalGameValue > 21) //庄家抽爆了
     {
-        playerList.front()->finalResult = LOSE;
+        playerList.front()->finalResult = FinalResultOfGame::LOSE;
         for (auto &player : playerList)
         {
             if (player->isDealer == true)
@@ -103,22 +118,22 @@ void ua_blackjack::Game::Room::judgeWinOrLose(void) //判断最后的输赢
     //庄家没有抽爆
     for (auto &player : playerList)
     {
-        if (player->finalResult != WIN || player->isDealer == true) //玩家在游戏结束前投降了或提前退出游戏或爆了
+        if (player->finalResult != FinalResultOfGame::WIN || player->isDealer == true) //玩家在游戏结束前投降了或提前退出游戏或爆了
         {
             continue;
         }
         int playerFinalValue = player->getAccumulateOfPoker();
         if (playerFinalValue < dealerFinalGameValue)
         {
-            player->finalResult = LOSE;
+            player->finalResult = FinalResultOfGame::LOSE;
         }
         else if (playerFinalValue > dealerFinalGameValue)
         {
-            player->finalResult = WIN;
+            player->finalResult = FinalResultOfGame::WIN;
         }
         else
         {
-            player->finalResult = DRAW;
+            player->finalResult = FinalResultOfGame::DRAW;
         }
     }
 }
@@ -148,11 +163,11 @@ void ua_blackjack::Game::Room::deleteRoom(void)
     {
         if (player->isDealer)
             continue;
-        if (player->finalResult == WIN)
+        if (player->finalResult == FinalResultOfGame::WIN)
         {
             dealerFinalWinMoney -= player->bettingMoney;
         }
-        else if (player->finalResult == LOSE)
+        else if (player->finalResult == FinalResultOfGame::LOSE)
         {
             dealerFinalWinMoney += player->bettingMoney;
         }
@@ -160,16 +175,16 @@ void ua_blackjack::Game::Room::deleteRoom(void)
     if (dealerFinalWinMoney > 0)
     {
         this->playerList.front()->bettingMoney = dealerFinalWinMoney;
-        this->playerList.front()->finalResult = WIN;
+        this->playerList.front()->finalResult = FinalResultOfGame::WIN;
     }
     else if (dealerFinalWinMoney < 0)
     {
         this->playerList.front()->bettingMoney = -dealerFinalWinMoney;
-        this->playerList.front()->finalResult = LOSE;
+        this->playerList.front()->finalResult = FinalResultOfGame::LOSE;
     }
     else
     {
-        this->playerList.front()->finalResult = DRAW;
+        this->playerList.front()->finalResult = FinalResultOfGame::DRAW;
     }
 
     spdlog::info("game over");
@@ -179,11 +194,11 @@ void ua_blackjack::Game::Room::deleteRoom(void)
     }
     for (auto &player : playerList)
     {
-        if (player->finalResult == WIN)
+        if (player->finalResult == FinalResultOfGame::WIN)
             spdlog::info("{0:d} WIN {1:d}", player->uid, player->bettingMoney);
-        else if (player->finalResult == DRAW)
+        else if (player->finalResult == FinalResultOfGame::DRAW)
             spdlog::info("{0:d} Draw ", player->uid);
-        else if (player->finalResult == LOSE)
+        else if (player->finalResult == FinalResultOfGame::LOSE)
             spdlog::info("{0:d} LOSE {1:d}", player->uid, player->bettingMoney);
     }
 
@@ -208,4 +223,5 @@ void ua_blackjack::Game::Room::reset(void)
         shuffledPokers->nowIndex = 0;
         player->reset();
     }
+    isGameBegin = false;
 }

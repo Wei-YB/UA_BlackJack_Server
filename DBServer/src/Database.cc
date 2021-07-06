@@ -15,11 +15,13 @@ int64_t Database::SignUp(const std::string& nickname, const std::string& passwor
 }
 
 std::string Database::GetPassword(int64_t uid) {
-    return service_.GetPassword(uid).c_str();
+    const auto& ret = service_.GetPassword(uid);
+    return std::string(ret.c_str(), ret.size());
 }
 
 std::string Database::GetNickname(int64_t uid) {
-    return service_.GetNickname(uid).c_str();
+    const auto& ret = service_.GetNickname(uid);
+    return std::string(ret.c_str(), ret.size());
 }
 
 int64_t Database::GetUid(const std::string& nickname) {
@@ -72,12 +74,20 @@ bool Database::DeleteFriend(int64_t uid, int64_t friendID) {
     return service_.RemoveFriendList(uid, friendID);
 }
 
+bool Database::IsFriend(int64_t uid, int64_t friendID){
+    return service_.IsInFriendList(uid, friendID);
+}
+
 bool Database::AddWaitFriend(int64_t uid, int64_t friendID) {
     return service_.InsertWaitingFriendList(uid, friendID);
 }
 
 bool Database::DeleteWaitingFriend(int64_t uid, int64_t friendID) {
     return service_.RemoveWaitingFriendList(uid, friendID);
+}
+
+bool Database::IsWaitingFriend(int64_t uid, int64_t friendID){
+    return service_.IsInWaitingFriendList(uid, friendID);
 }
 
 bool Database::MatchFinish(const std::map<std::string, std::string>& match_info) {
