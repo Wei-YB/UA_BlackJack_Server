@@ -11,109 +11,35 @@
 #include <functional>
 
 #include "EventLoop.h"
+#include "EventsSource.h"
+#include "Timer.h"
 #include "log.h"
 
 using namespace Net;
 
-EventsSource::EventsSource(FileDesc fd, EventLoop *loop,
-                const std::function<int()> &inEventCallBack,
-                const std::function<int()> &outEventCallBack,
-                const std::function<int()> &errEventCallBack,
-                const std::function<int()> &closeEventCallBack)
-    : fd_(fd), loop_(loop),
-      inEventCallBack_(inEventCallBack),
-      outEventCallBack_(outEventCallBack),
-      errEventCallBack_(errEventCallBack),
-      closeEventCallBack_(closeEventCallBack)
-{
-    // fcntl(fd_, F_SETFL, fcntl(fd_, F_GETFL) | O_NONBLOCK);
-}
-
-int EventsSource::HandleEvents(Event events)
-{
-    if (events & (EV_ERR | EV_HUP))
-    {
-        logger_ptr->info("In main thread: On error event from fd: {}", fd_);
-        if (errEventCallBack_) errEventCallBack_();
-        return -1;
-    }
-    if ((events & EV_IN) && (events & EV_RDHUP))
-    {
-        logger_ptr->info("In main thread: On input event from fd: {}", fd_);
-        if (inEventCallBack_) inEventCallBack_();
-        return -1;
-    }
-    if (events & EV_IN)
-    {
-        logger_ptr->info("In main thread: On input event from fd: {}", fd_);
-        if (inEventCallBack_) 
-            if (inEventCallBack_() < 0) 
-            {
-                logger_ptr->info("In main thread: just to prove evsSource (fd: {}) is not dead.", fd_);
-                return -1;
-            }
-    }
-    if (events & EV_OUT)
-    {
-        logger_ptr->info("In main thread: On onput event from fd: {}", fd_);
-        if (outEventCallBack_) 
-            if (outEventCallBack_() < 0)
-                return -1;
-    }
-    
-    return 0;
-}
-
-int EventsSource::EnableET()
-{
-    events_ |= EV_ET;
-    return loop_->mod(shared_from_this());
-}
-
-int EventsSource::EnableWrite()
-{
-    events_ |= EV_OUT;
-    return loop_->mod(shared_from_this());
-}
-
-int EventsSource::EnableRead()
-{
-    events_ |= EV_IN;
-    return loop_->mod(shared_from_this());
-}
-
-int EventsSource::DisableWrite()
-{
-    events_ &= ~EV_OUT;
-    return loop_->mod(shared_from_this());
-}
-
-int EventsSource::DisableRead()
-{
-    events_ &= ~EV_IN;
-    return loop_->mod(shared_from_this());
-}
-
-int EventsSource::RemoveFromLoop()
-{
-    return loop_->del(shared_from_this());
-}
-
-EventLoop::EventLoop(int max_events) : maxEvents_(max_events)
+EventLoop::EventLoop(int max_events, int healthReportPeriod) 
+                    : maxEvents_(max_events)
 {
     if ((epollfd_ = epoll_create(5)) < 0)
     {
-        throw "EventLoop: fail to create epoll.\n";
+        logger_ptr->error("In creating eventloop: fail to create epollfd.");
+        throw std::exception();
     }
     if ((events_ = new struct epoll_event[maxEvents_]) == NULL)
     {
+        logger_ptr->error("In creating eventloop: fail to allocate epoll event array.");
         close(epollfd_);
-        throw "EventLoop: fail to assign epoll event array.\n";
+        throw std::exception();
     }
+
+    timer_ = std::make_shared<Timer>(this, std::bind(&EventLoop::OnHealthReport, this));
+
+    timer_->SetPeriod(healthReportPeriod);
 }
 
 EventLoop::~EventLoop()
 {
+    timer_->SetPeriod(0);
     delete[] events_;
     close(epollfd_);
 }
@@ -138,7 +64,7 @@ int EventLoop::add(std::shared_ptr<EventsSource> evsSource)
         return -1;
     }
     eventsCnt_++;
-    logger_ptr->info("In main thread: Successfully add event source (fd: {}).", evsSource->fd_);
+    logger_ptr->trace("In EventLoop::add(): Successfully add event (events: {0}) to source (fd: {1}).", evsSource->events_, evsSource->fd_);
     return 0;
 }
 
@@ -155,7 +81,7 @@ int EventLoop::mod(std::shared_ptr<EventsSource> evsSource)
     {
         return -1;
     }
-    logger_ptr->info("In main thread: Successfully modify eventsSource (fd: {}).", evsSource->fd_);
+    logger_ptr->trace("In EventLoop::mod(): Successfully modify source (fd: {0}) with events ({1}).", evsSource->fd_, evsSource->events_);
     return 0;
 }
 
@@ -172,7 +98,7 @@ int EventLoop::del(std::shared_ptr<EventsSource> evsSource)
     return -1;
 }
 
-int Net::EventLoop::loopOnce(int timeout)
+int EventLoop::loopOnce(int timeout)
 {
     if (fdToEventsSource_.size() == 0)
     {
@@ -207,4 +133,9 @@ int Net::EventLoop::loopOnce(int timeout)
         }
     }
     return nfds;
+}
+
+void EventLoop::OnHealthReport()
+{
+    logger_ptr->info("In EventLoop::OnHealthReport(): current sources in map: {0}, eventsCnt: {1}.", fdToEventsSource_.size(), eventsCnt_);
 }

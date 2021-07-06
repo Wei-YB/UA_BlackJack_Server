@@ -7,7 +7,7 @@
 #include "Timer.h"
 
 #define DEFAULT_WAIT_QUEUE_LEN  64
-#define DEFAULT_HEALTH_REPORT_PERIOD    5
+#define DEFAULT_HEALTH_REPORT_PERIOD    10
 
 namespace Net {
 class EventsSource;

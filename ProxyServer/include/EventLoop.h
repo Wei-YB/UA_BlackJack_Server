@@ -6,10 +6,10 @@
 #include <unistd.h>
 #include <memory>
 #include <unordered_map>
-#include <memory>
 #include "common.h"
 
 #define DEFAULT_MAX_EVENTS  25000
+#define DEFAULT_HEALTH_REPORT_PERIOD    10   // 5s
 
 namespace Net {
 
@@ -47,53 +47,13 @@ inline Event toNetEvent(int epEv)
     return events;
 }
 
-class EventLoop;
-
-class EventsSource : public std::enable_shared_from_this<EventsSource>
-{
-public:
-    EventsSource(FileDesc fd, EventLoop *loop,
-                const std::function<int()> &inEventCallBack,
-                const std::function<int()> &outEventCallBack,
-                const std::function<int()> &errEventCallBack,
-                const std::function<int()> &closeEventCallBack);
-    
-    ~EventsSource() {::close(fd_);}
-
-public:
-    int EnableWrite();
-
-    int EnableRead();
-
-    int EnableET();
-
-    int DisableWrite();
-
-    int DisableRead();
-
-    int RemoveFromLoop();
-
-    FileDesc fd() const {return fd_;};
-
-    friend class EventLoop;
-
-// private:
-    int HandleEvents(Net::Event events);
-
-private:
-    FileDesc fd_;
-    Event events_ = 0;
-    EventLoop *loop_;
-    std::function<int()> inEventCallBack_;
-    std::function<int()> outEventCallBack_;
-    std::function<int()> errEventCallBack_;
-    std::function<int()> closeEventCallBack_;
-};
+class EventsSource;
+class Timer;
 
 class EventLoop
 {
 public:
-    EventLoop(int max_events = DEFAULT_MAX_EVENTS);
+    EventLoop(int max_events = DEFAULT_MAX_EVENTS, int healthReportPeriod = DEFAULT_HEALTH_REPORT_PERIOD);
 
     ~EventLoop();
 
@@ -107,11 +67,15 @@ public:
     int loopOnce(int timeout = 0);
 
 private:
+    void OnHealthReport();
+
+private:
     int epollfd_ = -1;
     int eventsCnt_ = 0;
     const int maxEvents_;
     struct epoll_event *events_ = NULL;
     std::unordered_map<FileDesc, std::shared_ptr<EventsSource>> fdToEventsSource_;
+    std::shared_ptr<Timer> timer_;
 };
 
 };  // end of namespace tcp

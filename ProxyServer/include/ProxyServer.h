@@ -14,7 +14,7 @@ using ua_blackjack::Response;
 
 #define MAX_FORWORD_FAILURE 5
 
-#define BUFFER_SIZE 1024 * 4     // 4 KB
+#define BUFFER_SIZE 1024 * 2     // 4 KB
 #define QUEUE_SIZE  128
 
 // forward declarations
@@ -27,7 +27,7 @@ namespace Net {
     class EventLoop;
 }
 
-#define HEALTH_REPORT_PERIOD    5   // 1s
+#define HEALTH_REPORT_PERIOD    10   // 1s
 
 class ProxyServer {
 public:
@@ -76,10 +76,12 @@ private:
     std::unordered_map<int64_t, std::weak_ptr<Client>> stampToUnloginClient_;
     std::mutex stampToSignupClientLock_;
     std::unordered_map<int64_t, std::weak_ptr<Client>> stampToSignupClient_;
+    std::mutex stampToLogoutClientLock_;
+    std::unordered_map<int64_t, std::weak_ptr<Client>> stampToLogoutClient_;
     std::unordered_map<Request::RequestType, std::weak_ptr<ServiceClient>> requestTypeToServiceClient_;
     std::function<void(Response &)> clientResponseCallBack_;
     std::shared_ptr<Net::TcpServer> server_;
-    Timer timer_;
+    Net::Timer timer_;
 };
 
 enum BackEndModule {Proxy = 0, Lobby, Room, Social, Player, DataBase};

@@ -26,7 +26,7 @@ TcpServer::TcpServer(const char *ip,
         const std::function<void(FileDesc)> &errCb,
         int healthReportPeriod) 
         : loop_(loop), connectionCallBack_(connCb), errorCallBack_(errCb),
-        timer(loop, std::bind(&TcpServer::OnHealthReport, this))
+        timer_(loop, std::bind(&TcpServer::OnHealthReport, this))
 {
     eventsSource_ = std::make_shared<EventsSource>(socket(AF_INET, SOCK_STREAM, 0), loop, 
                                                 std::bind(&TcpServer::OnConnection, this),
@@ -49,8 +49,8 @@ TcpServer::TcpServer(const char *ip,
     // I think we currentlt dont need to reuse port, since I dont need multi-thread/process
     // to boost the IO throughput and the part dragging the whole backend performance
     // is not proxy.
-    // int reuse = 1;
-    // setsockopt(eventsSource_->fd(), SOL_SOCKET, SO_REUSEPORT, (const void *)&reuse , sizeof(int));
+    int reuse = 1;
+    setsockopt(eventsSource_->fd(), SOL_SOCKET, SO_REUSEPORT, (const void *)&reuse , sizeof(int));
     
     if (bind(eventsSource_->fd(), (struct sockaddr *)&addr_, sizeof(addr_)) < 0)
     {
@@ -110,5 +110,5 @@ int TcpServer::OnError()
 
 void TcpServer::OnHealthReport()
 {
-
+    logger_ptr->info("In TcpServer::OnHealthReport(): accepted clients: {}.", connAccepted_);
 }

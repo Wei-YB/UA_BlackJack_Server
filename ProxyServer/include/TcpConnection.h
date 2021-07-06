@@ -3,20 +3,16 @@
 #include <functional>
 #include <netinet/in.h>
 #include <vector>
+#include <memory>
 #include "common.h"
 #include "CircularBuffer.h"
-#include "EventLoop.h"
-
-namespace ua_blackjack {
-    class Response;
-    class Request;
-}
 
 using namespace ua_blackjack;
 
 namespace Net {
 
 class EventLoop;
+class EventsSource;
 
 class TcpConnection
 {
@@ -45,7 +41,7 @@ public:
     void SetEncoder(const std::function<int(int32_t, const std::string &, CircularBuffer &)> &cb) {encoder_ = cb;}
     void SetDecoder(const std::function<StringPiece(CircularBuffer &, int*, int32_t*)> &cb) {decoder_ = cb;}
     CircularBuffer writeBuffer_;    // temporarily expose it
-// private:
+private:
     // callbacks
     int OnInput();
     

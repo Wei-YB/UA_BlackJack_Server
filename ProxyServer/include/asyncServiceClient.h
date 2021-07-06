@@ -65,6 +65,7 @@ public:
         grpc::CompletionQueue::NextStatus sta;
         while (!stop_ && (sta = cq_.AsyncNext(&got_tag, &ok, deadline)))
         {
+            deadline = SystemClock::now() + MilliSeconds(500);
             AsyncClientCall* call = static_cast<AsyncClientCall*>(got_tag);
             if (!ok || sta == grpc::CompletionQueue::NextStatus::TIMEOUT)
             {
@@ -86,7 +87,6 @@ public:
                     responseCallBack_(call->reply);
             }
             delete call;
-            deadline = SystemClock::now() + MilliSeconds(500);
         }
 
         logger_ptr->info("In {} thread: leaving the thread", serviceName_);

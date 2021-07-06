@@ -42,6 +42,8 @@ public:
     void SetUnloginStamp(int64_t stamp) {unloginStamp_ = stamp;}
     int64_t signupStamp() const {return signupStamp_;}
     void SetSignupStamp(int64_t stamp) {signupStamp_ = stamp;}
+    int64_t logoutStamp() const {return logoutStamp_;}
+    void SetLogoutStamp(int64_t stamp) {logoutStamp_ = stamp;}
     
 // private:
     // callbacks
@@ -55,6 +57,7 @@ private:
     UserId uid_ = -1;
     int64_t unloginStamp_;
     int64_t signupStamp_;
+    int64_t logoutStamp_;
     std::mutex connLock_;
     std::shared_ptr<TcpConnection> conn_;
     std::function<void(FileDesc, Request)> requestCallBack_;

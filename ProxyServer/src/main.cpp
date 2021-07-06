@@ -95,6 +95,7 @@ static void Deamonize(const std::unordered_map<std::string, std::string> &config
     set_logger_name(config.find("logger_name")->second);
     set_log_path(config.find("log_path")->second);
     create_logger();
+    set_log_level(config.find("log_level")->second);
 
     /* create a temporal file storing the pid of the current process */
     int pid_fd = open(path_to_pid_file, O_RDWR | O_CREAT, S_IRWXU);

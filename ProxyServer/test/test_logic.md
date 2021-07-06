@@ -7,12 +7,11 @@
 在等待所有玩家都注册完成之后，正式开始对大厅服务的压测。每位虚拟玩家执行如下请求序列：
 1. 执行`LOGIN player_x pass`
 2. 执行`ROOM_LIST`，若返回房间列表非空，则随机选择一个房间x跳到第5步
-3. 执行`QUICK_MATCH`，若成功则直接跳到第7步
+3. 执行`QUICK_MATCH`，若成功则直接跳到第6步
 4. 执行`CREATE_ROOM`，记录房间号为x
-5. 执行`JOIN_ROOM` x，若失败，则直接跳到第8步
-6. 执行`READY`
-7. 执行`LEAVE_ROOM`
-8. 执行`LOGOUT`
+5. 执行`JOIN_ROOM` x，若失败，则直接跳到第7步
+6. 执行`LEAVE_ROOM`
+7. 执行`LOGOUT`
 
 完成对大厅服务的压测后，开始对房间服务的压测。每位虚拟玩家执行如下请求序列：
 1. 执行`LOGIN player_x pass`

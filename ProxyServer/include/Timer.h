@@ -11,10 +11,11 @@
 #include <stdint.h>
 #include <functional>
 
-#include "EventLoop.h"
+#include "EventsSource.h"
 
 namespace Net {
 
+class EventLoop;
 
 class Timer {
 private:

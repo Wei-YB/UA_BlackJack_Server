@@ -130,14 +130,14 @@ private:
         grpc::CompletionQueue::NextStatus sta;
         while (!stop_ && (sta = cq_->AsyncNext(&tag, &ok, deadline)))
         {
+            deadline = std::chrono::system_clock::now() +
+                                std::chrono::milliseconds(500);
             if (!ok || sta == grpc::CompletionQueue::NextStatus::TIMEOUT)
             {
                 continue;
             }
             AsyncCall *call = static_cast<AsyncCall*>(tag);
             ProcessCall(call);
-            deadline = std::chrono::system_clock::now() +
-                                std::chrono::milliseconds(500);
         }
         cq_->Shutdown();
     }
