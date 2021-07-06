@@ -474,7 +474,7 @@ void Client::ProcessResponse(ua_blackjack::Response& response) {
     logger->info("Receive response, status:{0} uid: {1}, stamp: {2}", response.status(), response.uid(),
                  response.stamp());
 
-    display_ins.DisplayResponse(response, request_type_);
+    display_ins.DisplayResponse(this, response, request_type_);
     request_type_ = ua_blackjack::Request::INVAL;
 
     if (response.status() == -1) {
@@ -493,6 +493,7 @@ void Client::ProcessResponse(ua_blackjack::Response& response) {
     }
 
     if (request_type_ == Request::LEAVE_ROOM) {
+        GameEnd();
         rid_ = -1;
     }
 }
@@ -572,7 +573,8 @@ void Client::UpdateCards(ua_blackjack::Request& request) {
         }
     }
 
-    display_ins.DisplayCards(idx_, idx2name_, name2idx_, name_, cards_, dealer_);
+    // display_ins.DisplayCards(idx_, idx2name_, name2idx_, name_, cards_, dealer_);
+    display_ins.DisplayCards(this);
 }
 
 void Client::GameEnd() {

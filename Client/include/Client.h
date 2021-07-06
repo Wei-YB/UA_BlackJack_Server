@@ -33,7 +33,7 @@ namespace ua_blackjack {
 namespace client {
 class Client {
 public:
-    friend class Display;
+    friend class ua_blackjack::display::Display;
 
     Client();
 
@@ -65,6 +65,16 @@ private:
     std::unordered_map<State, std::string> state2str_;
 
     enum DataType { REQUEST = 1, RESPONSE = 2 };
+
+    unsigned char buffer_in_[BUFFSIZE];
+    unsigned char buffer_out_[BUFFSIZE];
+
+    int idx_;
+    std::vector<std::pair<int, int>> cards_[MAX_PLAYER_NUM];
+    std::unordered_map<std::string, int> name2idx_;
+    std::unordered_map<int, std::string> idx2name_;
+
+    ua_blackjack::Request::RequestType request_type_;
 
     int Connect(const char *host, const char *service, int type);
 
@@ -103,16 +113,6 @@ private:
     void ActuallyChangeState(uint32_t data_type);
     bool DealTimeout(ua_blackjack::Response &response);
     bool CheckBet(std::string &money);
-
-    unsigned char buffer_in_[BUFFSIZE];
-    unsigned char buffer_out_[BUFFSIZE];
-
-    int idx_;
-    std::vector<std::pair<int, int>> cards_[MAX_PLAYER_NUM];
-    std::unordered_map<std::string, int> name2idx_;
-    std::unordered_map<int, std::string> idx2name_;
-
-    ua_blackjack::Request::RequestType request_type_;
 };
 }  // namespace client
 

@@ -8,6 +8,12 @@
 #include "UA_BlackJack.pb.h"
 
 namespace ua_blackjack {
+namespace client {
+class Client;
+}
+}  // namespace ua_blackjack
+
+namespace ua_blackjack {
 namespace display {
 class Display {
 public:
@@ -19,11 +25,10 @@ public:
     Display(const Display &) = delete;
     void operator=(const Display &) = delete;
 
-    void DisplayResponse(ua_blackjack::Response &response, const ua_blackjack::Request::RequestType &type);
+    void DisplayResponse(ua_blackjack::client::Client *client, ua_blackjack::Response &response,
+                         const ua_blackjack::Request::RequestType &type);
     void PrintPrompt(const std::string &prompt);
-    void DisplayCards(int idx_, std::unordered_map<int, std::string> &idx2name_,
-                      std::unordered_map<std::string, int> &name2idx_, std::string &name_,
-                      std::vector<std::pair<int, int>> *cards_, bool dealer_);
+    void DisplayCards(ua_blackjack::client::Client *client);
 
     void DisplayHelp();
     void DisplayGameEnd(std::string &result);
@@ -42,7 +47,7 @@ private:
     void DisplayResponseLeaveRoom(ua_blackjack::Response &response);
     void DisplayResponseDouble(ua_blackjack::Response &response);
     void DisplayResponseSurrender(ua_blackjack::Response &response);
-    void DisplayResponseRankMe(ua_blackjack::Response &response);
+    void DisplayResponseRankMe(ua_blackjack::client::Client *client, ua_blackjack::Response &response);
     void DisplayResponseRankTop(ua_blackjack::Response &response);
     void DisplayResponseAddFriend(ua_blackjack::Response &response);
     void DisplayResponseAcceptFriend(ua_blackjack::Response &response);

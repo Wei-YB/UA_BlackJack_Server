@@ -1,10 +1,13 @@
 #include "Display.h"
 
+#include "Client.h"
 #include "global.h"
 
 using namespace ua_blackjack::display;
+using namespace ua_blackjack::client;
 
-void Display::DisplayResponse(ua_blackjack::Response& response, const ua_blackjack::Request::RequestType& type) {
+void Display::DisplayResponse(Client* client, ua_blackjack::Response& response,
+                              const ua_blackjack::Request::RequestType& type) {
     switch (type) {
         case ua_blackjack::Request::SIGNUP:
             DisplayResponseSignUp(response);
@@ -40,7 +43,7 @@ void Display::DisplayResponse(ua_blackjack::Response& response, const ua_blackja
             DisplayResponseSurrender(response);
             break;
         case ua_blackjack::Request::RANK_ME:
-            DisplayResponseRankMe(response);
+            DisplayResponseRankMe(client, response);
             break;
         case ua_blackjack::Request::RANK_TOP:
             DisplayResponseRankTop(response);
@@ -176,13 +179,14 @@ void Display::DisplayResponseSurrender(ua_blackjack::Response& response) {
 
     PrintPrompt("Surrender Successful");
 }
-void Display::DisplayResponseRankMe(ua_blackjack::Response& response) {
+void Display::DisplayResponseRankMe(Client* client, ua_blackjack::Response& response) {
     if (response.status() == -1) {
         std::cout << ":( RankMe Failed" << std::endl;
         return;
     }
 
     PrintPrompt("RankMe Successful");
+    std::cout << "Name: " << client->name_ << std::endl;
     std::cout << "Rank: " << response.args()[0] << std::endl;
     std::cout << "Score: " << response.args()[1] << std::endl;
 }
@@ -333,36 +337,37 @@ void Display::PrintPrompt(const std::string& prompt) {
     std::cout << star << std::endl;
 }
 
-void Display::DisplayCards(int idx_, std::unordered_map<int, std::string>& idx2name_,
-                           std::unordered_map<std::string, int>& name2idx_, std::string& name_,
-                           std::vector<std::pair<int, int>>* cards_, bool dealer_) {
+// void Display::DisplayCards(int idx_, std::unordered_map<int, std::string>& idx2name_,
+//                            std::unordered_map<std::string, int>& name2idx_, std::string& name_,
+//                            std::vector<std::pair<int, int>>* cards_, bool dealer_) {
+void Display::DisplayCards(Client* client) {
     PrintPrompt("Cards Update");
 
     logger->info("display cards");
     int dealer_idx = -1;
-    if (dealer_) {
-        dealer_idx = name2idx_[name_];
+    if (client->dealer_) {
+        dealer_idx = client->name2idx_[client->name_];
     } else {
-        for (int i = 0; i < idx_; ++i) {
-            if (cards_[i][0].second == 0) dealer_idx = i;
+        for (int i = 0; i < client->idx_; ++i) {
+            if (client->cards_[i][0].second == 0) dealer_idx = i;
         }
     }
 
-    if (dealer_idx >= 0 && cards_[dealer_idx].size() == 3) {
-        cards_[dealer_idx][0] = cards_[dealer_idx][2];
-        cards_[dealer_idx][2] = {-1, -1};
+    if (dealer_idx >= 0 && client->cards_[dealer_idx].size() == 3) {
+        client->cards_[dealer_idx][0] = client->cards_[dealer_idx][2];
+        client->cards_[dealer_idx][2] = {-1, -1};
     }
 
-    for (int i = 0; i < idx_; ++i) {
-        std::cout << idx2name_[i] << ": ";
+    for (int i = 0; i < client->idx_; ++i) {
+        std::cout << client->idx2name_[i] << ": ";
 
-        for (int j = 0; j < cards_[i].size(); ++j) {
-            if (cards_[i][j].second < 0) continue;
+        for (int j = 0; j < client->cards_[i].size(); ++j) {
+            if (client->cards_[i][j].second < 0) continue;
 
-            if (cards_[i][j].second == 0)
+            if (client->cards_[i][j].second == 0)
                 std::cout << "* ";
             else
-                std::cout << cards_[i][j].second << " ";
+                std::cout << client->cards_[i][j].second << " ";
         }
 
         std::cout << std::endl;
