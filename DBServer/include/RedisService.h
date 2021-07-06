@@ -46,11 +46,13 @@ public:
     RepeatedString GetFriendList(UID uid);
     bool           InsertFriendList(UID uid, UID friendId);
     bool           RemoveFriendList(UID uid, UID friendId);
+    bool           IsInFriendList(UID uid, UID friendId);
 
     // UID -> waitingFriendList
     RepeatedString GetWaitingFriendList(UID uid);
     bool           InsertWaitingFriendList(UID uid, UID friendId);
     bool           RemoveWaitingFriendList(UID uid, UID friendId);
+    bool           IsInWaitingFriendList(UID uid, UID friendId);
 
     // UID -> matchList
     RepeatedString GetMatchList(UID uid);

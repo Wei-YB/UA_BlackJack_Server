@@ -142,6 +142,20 @@ bool RequestParser::ParseDeleteWaitFriend(int64_t uid, const RepeatedString& arg
     return database_.DeleteWaitingFriend(uid, friendId);
 }
 
+bool RequestParser::ParseIsFriend(int64_t uid, const RepeatedString& args, Response& response){
+    if (args.size() != 1)
+        return false;
+    auto friendId = std::stoi(args[0]);
+    return database_.IsFriend(uid, friendId);
+}
+
+bool RequestParser::ParseIsWaitingFriend(int64_t uid, const RepeatedString& args, Response& response){
+    if (args.size() != 1)
+        return false;
+    auto friendId = std::stoi(args[0]);
+    return database_.IsWaitingFriend(uid, friendId);
+}
+
 bool RequestParser::ParseMatchEnd(const RepeatedString& args, Response& response) {
     if (args.size() % 2 != 0)
         return false;

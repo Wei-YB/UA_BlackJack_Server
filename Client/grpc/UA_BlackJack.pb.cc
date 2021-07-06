@@ -92,11 +92,11 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_UA_5fBlackJack_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\022UA_BlackJack.proto\022\014ua_blackjack\"\251\005\n\007R"
+  "\n\022UA_BlackJack.proto\022\014ua_blackjack\"\317\005\n\007R"
   "equest\022;\n\013requestType\030\001 \001(\0162!.ua_blackja"
   "ck.Request.RequestTypeH\000\210\001\001\022\020\n\003uid\030\002 \001(\003"
   "H\001\210\001\001\022\022\n\005stamp\030\003 \001(\003H\002\210\001\001\022\014\n\004args\030\004 \003(\t\""
-  "\212\004\n\013RequestType\022\t\n\005INVAL\020\000\022\t\n\005LOGIN\020\001\022\n\n"
+  "\260\004\n\013RequestType\022\t\n\005INVAL\020\000\022\t\n\005LOGIN\020\001\022\n\n"
   "\006LOGOUT\020\002\022\r\n\tROOM_LIST\020\003\022\r\n\tJOIN_ROOM\020\004\022"
   "\017\n\013CREATE_ROOM\020\005\022\017\n\013QUICK_MATCH\020\006\022\t\n\005REA"
   "DY\020\007\022\016\n\nLEAVE_ROOM\020\010\022\007\n\003BET\020\t\022\007\n\003HIT\020\n\022\t"
@@ -109,26 +109,27 @@ const char descriptor_table_protodef_UA_5fBlackJack_2eproto[] PROTOBUF_SECTION_V
   "ET_PASSWORD\020\033\022\r\n\tGET_SCORE\020\034\022\022\n\016GET_MATC"
   "H_INFO\020\035\022\r\n\tMATCH_END\020\036\022\023\n\017ADD_WAIT_FRIE"
   "ND\020\037\022\026\n\022DELETE_WAIT_FRIEND\020 \022\016\n\nGAME_STA"
-  "RT\020!B\016\n\014_requestTypeB\006\n\004_uidB\010\n\006_stamp\"p"
-  "\n\010Response\022\023\n\006status\030\001 \001(\003H\000\210\001\001\022\020\n\003uid\030\002"
-  " \001(\003H\001\210\001\001\022\022\n\005stamp\030\003 \001(\003H\002\210\001\001\022\014\n\004args\030\004 "
-  "\003(\tB\t\n\007_statusB\006\n\004_uidB\010\n\006_stamp2I\n\014Lobb"
-  "yService\0229\n\006Notify\022\025.ua_blackjack.Reques"
-  "t\032\026.ua_blackjack.Response\"\0002H\n\013GameServi"
-  "ce\0229\n\006Notify\022\025.ua_blackjack.Request\032\026.ua"
-  "_blackjack.Response\"\0002J\n\rSocialService\0229"
-  "\n\006Notify\022\025.ua_blackjack.Request\032\026.ua_bla"
-  "ckjack.Response\"\0002J\n\rPlayerService\0229\n\006No"
-  "tify\022\025.ua_blackjack.Request\032\026.ua_blackja"
-  "ck.Response\"\0002L\n\017DatabaseService\0229\n\006Noti"
+  "RT\020!\022\r\n\tIS_FRIEND\020\"\022\025\n\021IS_WAITING_FRIEND"
+  "\020#B\016\n\014_requestTypeB\006\n\004_uidB\010\n\006_stamp\"p\n\010"
+  "Response\022\023\n\006status\030\001 \001(\003H\000\210\001\001\022\020\n\003uid\030\002 \001"
+  "(\003H\001\210\001\001\022\022\n\005stamp\030\003 \001(\003H\002\210\001\001\022\014\n\004args\030\004 \003("
+  "\tB\t\n\007_statusB\006\n\004_uidB\010\n\006_stamp2I\n\014LobbyS"
+  "ervice\0229\n\006Notify\022\025.ua_blackjack.Request\032"
+  "\026.ua_blackjack.Response\"\0002H\n\013GameService"
+  "\0229\n\006Notify\022\025.ua_blackjack.Request\032\026.ua_b"
+  "lackjack.Response\"\0002J\n\rSocialService\0229\n\006"
+  "Notify\022\025.ua_blackjack.Request\032\026.ua_black"
+  "jack.Response\"\0002J\n\rPlayerService\0229\n\006Noti"
   "fy\022\025.ua_blackjack.Request\032\026.ua_blackjack"
-  ".Response\"\0002I\n\014ProxyService\0229\n\006Notify\022\025."
-  "ua_blackjack.Request\032\026.ua_blackjack.Resp"
-  "onse\"\000b\006proto3"
+  ".Response\"\0002L\n\017DatabaseService\0229\n\006Notify"
+  "\022\025.ua_blackjack.Request\032\026.ua_blackjack.R"
+  "esponse\"\0002I\n\014ProxyService\0229\n\006Notify\022\025.ua"
+  "_blackjack.Request\032\026.ua_blackjack.Respon"
+  "se\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_UA_5fBlackJack_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_UA_5fBlackJack_2eproto = {
-  false, false, 1294, descriptor_table_protodef_UA_5fBlackJack_2eproto, "UA_BlackJack.proto", 
+  false, false, 1332, descriptor_table_protodef_UA_5fBlackJack_2eproto, "UA_BlackJack.proto", 
   &descriptor_table_UA_5fBlackJack_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_UA_5fBlackJack_2eproto::offsets,
   file_level_metadata_UA_5fBlackJack_2eproto, file_level_enum_descriptors_UA_5fBlackJack_2eproto, file_level_service_descriptors_UA_5fBlackJack_2eproto,
@@ -182,6 +183,8 @@ bool Request_RequestType_IsValid(int value) {
     case 31:
     case 32:
     case 33:
+    case 34:
+    case 35:
       return true;
     default:
       return false;
@@ -223,6 +226,8 @@ constexpr Request_RequestType Request::MATCH_END;
 constexpr Request_RequestType Request::ADD_WAIT_FRIEND;
 constexpr Request_RequestType Request::DELETE_WAIT_FRIEND;
 constexpr Request_RequestType Request::GAME_START;
+constexpr Request_RequestType Request::IS_FRIEND;
+constexpr Request_RequestType Request::IS_WAITING_FRIEND;
 constexpr Request_RequestType Request::RequestType_MIN;
 constexpr Request_RequestType Request::RequestType_MAX;
 constexpr int Request::RequestType_ARRAYSIZE;
