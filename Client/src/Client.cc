@@ -564,6 +564,7 @@ void Client::UpdateCards(ua_blackjack::Request& request) {
             idx_++;
         }
         int idx = name2idx_[name];
+        assert((sz % 2) == 1);
         for (int j = 1; j < sz; j += 2) {
             int color = std::atoi(parse_result[j].c_str());
             int num = std::atoi(parse_result[j + 1].c_str());

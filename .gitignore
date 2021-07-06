@@ -4,7 +4,7 @@ build/
 alpha/
 gtest/
 thirdparty/grpc/cmake/build
-thirdparty/spdlog/CMakeFiles
+thirdparty/spdlog/CMakeFiles/
 *.a
 *.so
 test-program/

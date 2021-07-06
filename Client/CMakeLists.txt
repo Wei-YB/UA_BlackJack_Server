@@ -21,6 +21,9 @@ cmake_minimum_required(VERSION 3.5.1)
 # set (CMAKE_CXX_STANDARD 11)
 # include(common.cmake)
 
+SET(CMAKE_BUILD_TYPE "Debug")
+SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -g")
+
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 get_filename_component(hw_proto "${PROJECT_SOURCE_DIR}/protos/UA_BlackJack.proto" ABSOLUTE)  # demo dependent
@@ -61,3 +64,4 @@ ${_GRPC_GRPCPP}
 ${_PROTOBUF_LIBPROTOBUF}
 spdlog
 )
+
