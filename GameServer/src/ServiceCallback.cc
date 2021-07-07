@@ -77,7 +77,8 @@ void nomalSurrenderCallback(ua_blackjack::Request &request, ua_blackjack::Respon
     {
         responce.set_status(0);
         spdlog::info("{0:d} surrond by itself", uid);
-        playerPtr->bettingMoney /= 2;
+        if (playerPtr->isStand == false) //还未停牌
+            playerPtr->bettingMoney /= 2;
         playerPtr->isStand = true;
         playerPtr->finalResult = FinalResultOfGame::LOSE;
         if (playerPtr->isWaitingReply == true)

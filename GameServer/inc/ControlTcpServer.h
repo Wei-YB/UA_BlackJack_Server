@@ -20,9 +20,12 @@ namespace ua_blackjack::Game
     public:
         void run(void);
 
-        std::condition_variable cond;
-        std::mutex mtx;
+        std::condition_variable cond;  //forwardRequestQueue的条件
+        std::mutex mtx;                //forwardRequestQueue的锁
+        std::condition_variable cond2; //forwardResponceQueue的条件
+        std::mutex mtx2;               //forwardResponceQueue的锁
         std::queue<std::string> forwardRequestQueue;
+        std::queue<std::string> forwardResponceQueue;
         static connectToParent &getInstance()
         {
             static connectToParent instance;

@@ -158,7 +158,7 @@ void *createOneGame(void *arg) //开启一局游戏
                 continue;
             }
             //接收到玩家的打牌/停牌信号
-            if ((env->operateId == OperateID::OPERATE_HIT || env->operateId == OperateID::OPERATE_STAND) && (((BetMoneyArgument *)env->arg)->uid == player->uid))
+            if ((env->operateId == OperateID::OPERATE_HIT || env->operateId == OperateID::OPERATE_STAND || env->operateId == OperateID::OPERATE_SURRAND) && (((BetMoneyArgument *)env->arg)->uid == player->uid))
             {
                 if (env->operateId == OperateID::OPERATE_HIT)
                 {
@@ -174,6 +174,14 @@ void *createOneGame(void *arg) //开启一局游戏
                     //
 
                     spdlog::info("uid {0:d} stand", player->uid);
+                }
+                else if (env->operateId == OperateID::OPERATE_SURRAND)
+                {
+                    spdlog::info("{0:d} surrond by itself", player->uid);
+                    if (player->isStand == false) //还未停牌
+                        player->bettingMoney /= 2;
+                    player->isStand = true;
+                    player->finalResult = FinalResultOfGame::LOSE;
                 }
                 continue;
             }
@@ -242,11 +250,24 @@ void *waitingSignalFromOtherModule(void *arg)
                 myConditionWait(conditionForWaitingRpc, 1); //最长1ms检查一次
                 //poll(NULL, 0, 1); //必须要有挂起函数
             }
-            //反序列化
+            spdlog::info("son receive forward message from father");
+            //接收到信息了
             ua_blackjack::Request request_;
             ua_blackjack::Response responce_;
-
+            //反序列化
+            {
+                std::unique_lock<std::mutex> lock(ua_blackjack::Game::connectToParent::getInstance().mtx);
+                auto &str = ua_blackjack::Game::connectToParent::getInstance().forwardRequestQueue.front(); //no copy
+                request_.ParseFromString(str);
+                ua_blackjack::Game::connectToParent::getInstance().forwardRequestQueue.pop();
+            }
             handelRpcRequest(request_, responce_, false); //处理一下返回
+            {                                             //枷锁
+                std::unique_lock<std::mutex> lock(ua_blackjack::Game::connectToParent::getInstance().mtx2);
+                auto str = responce_.SerializeAsString();
+                ua_blackjack::Game::connectToParent::getInstance().forwardResponceQueue.push(str);
+                ua_blackjack::Game::connectToParent::getInstance().cond2.notify_one();
+            }
         }
 
         ua_blackjack::Game::ServerImpl::getInstance().Run();
@@ -284,6 +305,20 @@ void *recoveryUnusedCo(void *arg) //回收协程的协程
             roomPool[playerSize - 2].push(room);
 
             spdlog::info("complete delete room {0:d}", roomid);
+
+            if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT_START_FORWARD)
+            {
+                if (roomEnvirHashMap.size() == 0)
+                {
+                    spdlog::info("Father go to the hell");
+                    {
+                        //加锁
+                        std::unique_lock<std::mutex> lock(ua_blackjack::Game::connectToson::getInstance().mtx);
+                        ua_blackjack::Game::connectToson::getInstance().forwardRequestQueue.push("Goodbye");
+                        ua_blackjack::Game::connectToson::getInstance().cond.notify_one();
+                    }
+                }
+            }
         }
     }
 }

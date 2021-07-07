@@ -208,6 +208,7 @@ int main(int argc, char *argv[])
 
     if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_ITSELF) //正常的通过命令行启动
     {
+        std::cout << "Run!!!!!!!!!!!!!!!!!!!" << std::endl;
         std::thread thread_ = std::thread(&ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc, &ua_blackjack::Game::ClientForTestUser::getInstance());
         std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
         std::thread threadReceiveRestartCommand = std::thread(&ua_blackjack::Game::createServiece);
@@ -234,10 +235,11 @@ int main(int argc, char *argv[])
     }
     else if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT) //hot reload
     {
+        spdlog::info("Hello I am a new program !!!!!!!");
         //对于子进程而言，客户端可以正常的使用自己的client去接入proxy
         std::thread thread_ = std::thread(&ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc, &ua_blackjack::Game::ClientForTestUser::getInstance());
         std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
-
+        std::thread thread3_ = std::thread(&ua_blackjack::Game::connectToParent::run, &ua_blackjack::Game::connectToParent::getInstance());
         //创建等待RPC的协程
         co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, NULL);
         co_resume(receiveSignalFromRPC);

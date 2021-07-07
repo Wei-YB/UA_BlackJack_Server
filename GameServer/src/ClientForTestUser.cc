@@ -343,7 +343,10 @@ void ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc() //开一个线程
                         {
                             env->operateId = OperateID::OPERATE_STAND;
                         }
-
+                        else if (s == "Surrender")
+                        {
+                            env->operateId = OperateID::OPERATE_SURRAND;
+                        }
                         else
                         {
                             env->operateId = OperateID::OPERATE_STAND; //强行停牌

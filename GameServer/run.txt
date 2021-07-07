@@ -1,0 +1,8 @@
+run
+./GameService RELEASE -cf /home/tong/UA_BlackJack_Server/GameServer/game.config -lf /home/tong/UA_BlackJack_Server/build/game/logs/async_log.log 
+
+
+restart
+
+/home/tong/UA_BlackJack_Server/build/game/GameService
+

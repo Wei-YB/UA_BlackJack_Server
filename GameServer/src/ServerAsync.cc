@@ -1,5 +1,5 @@
 #include "ServerAsync.h"
-
+#include "ControlTcpServer.h"
 void ua_blackjack::Game::ServerImpl::Run()
 {
     ServerBuilder builder;
@@ -44,6 +44,7 @@ void ua_blackjack::Game::CallData::Proceed()
         {
             handelRpcRequest(request_, reply_, true);
         }
+
         status_ = FINISH;
         responder_.Finish(reply_, Status::OK, this); //运行这行，调用方就收到response
     }
@@ -77,7 +78,7 @@ void handelRpcRequest(ua_blackjack::Request &request, ua_blackjack::Response &re
     }
     else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LEAVE_ROOM) //退出房间
     {
-        if (needForward == false)
+        if (playerHashMap.count(uid) != 0)
             nomalLeaveRoomCallback(request, responce);
         else if (needForward == true)
         {
@@ -86,7 +87,7 @@ void handelRpcRequest(ua_blackjack::Request &request, ua_blackjack::Response &re
     }
     else if (type == ua_blackjack::Request_RequestType::Request_RequestType_DOUBLE) //双倍
     {
-        if (needForward == false)
+        if (playerHashMap.count(uid) != 0)
             nomalDoubleCallback(request, responce);
         else if (needForward == true)
         {
@@ -95,7 +96,7 @@ void handelRpcRequest(ua_blackjack::Request &request, ua_blackjack::Response &re
     }
     else if (type == ua_blackjack::Request_RequestType::Request_RequestType_SURRENDER) //投降
     {
-        if (needForward == false)
+        if (playerHashMap.count(uid) != 0)
             nomalSurrenderCallback(request, responce);
         else if (needForward == true)
         {

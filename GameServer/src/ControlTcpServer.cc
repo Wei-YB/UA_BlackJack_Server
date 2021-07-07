@@ -90,22 +90,46 @@ void ua_blackjack::Game::createServiece(void)
                     spdlog::info("get buffer {0}", buffer);
                     if (strcmp(buffer, "restart") == 0)
                     {
-                        spdlog::info("restarting...");
-                        std::stringstream ss;
-                        ss << "restart receive ";
-                        int ret = send(fd, ss.str().c_str(), ss.str().size(), 0);
-
-                        int pid = fork();
-                        if (pid == 0)
+                        spdlog::info("receive restart addr...");
+                        memset(buffer, '\0', 128);
+                        int ret = recv(fd, buffer, 127, 0);
+                        if (ret <= 0) //客户端断开
+                            break;
+                        spdlog::info("restart addr {0}", buffer);
+                        if (roomEnvirHashMap.size() != 0)
                         {
-                            //子进程直接开始新的程序
-                            std::string songLogPath = logFilePath + ".son.log";
-                            execl("./ GameService", "RESTART", "-lf", songLogPath.c_str(), "-cf", configFilePath.c_str(), NULL);
+                            int pid = fork();
+                            if (pid == 0)
+                            {
+                                //子进程直接开始新的程序
+                                std::string songLogPath = logFilePath + ".son.log";
+                                int ret = execl(buffer, "GameService",
+                                                "RESTART", "-lf", songLogPath.c_str(), "-cf", configFilePath.c_str(),
+                                                (char *)NULL);
+                                perror("execl");
+                            }
+                            else
+                            {
+                                serviceStatus = ServiceStatus::HANDEL_GRPC_BY_PARENT_START_FORWARD;
+                                ua_blackjack::Game::connectToson::getInstance().run();
+                            }
                         }
                         else
                         {
-                            serviceStatus = ServiceStatus::HANDEL_GRPC_BY_PARENT_START_FORWARD;
-                            ua_blackjack::Game::connectToson::getInstance().run();
+                            int pid = fork();
+                            if (pid == 0)
+                            {
+                                //子进程直接开始新的程序
+                                std::string songLogPath = logFilePath + ".son.log";
+                                int ret = execl(buffer, "GameService",
+                                                "RELEASE", "-lf", songLogPath.c_str(), "-cf", configFilePath.c_str(),
+                                                (char *)NULL);
+                                perror("execl");
+                            }
+                            else
+                            {
+                                exit(0);
+                            }
                         }
                     }
                     else if (strcmp(buffer, "quit") == 0)
@@ -150,11 +174,45 @@ void ua_blackjack::Game::connectToParent::run(void)
     address.sin_family = AF_INET;
     inet_pton(AF_INET, ip, &address.sin_addr);
     address.sin_port = htons(port);
-
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (connect(sock, (struct sockaddr *)&address, sizeof address) < 0)
+    {
+        spdlog::error("son - connect to parent");
+        exit(1);
+    }
+    spdlog::info("son - connect to parent success");
     while (true)
     {
-        //这里补充读取protobuf的代码
-        this->forwardRequestQueue.push("Request serial");
+        //读取protobuf，这里暂时先不考虑沾包，decode这一大堆东西
+        char buffer[1024];
+        memset(buffer, '\0', 1024);
+        int ret = recv(sock, buffer, 1023, 0);
+        spdlog::info("Son receive proto from dad {0}", buffer);
+        {
+            std::unique_lock<std::mutex> lock(this->mtx);
+            //这里将protobuf压入队列
+            std::string str(buffer);
+            if (str == "Goodbye") //爹死了
+            {
+                std::thread threadReceiveRestartCommand = std::thread(&ua_blackjack::Game::createServiece);
+                serviceStatus = ServiceStatus::HANDEL_GRPC_BY_PARENT;
+                return;
+            }
+
+            this->forwardRequestQueue.push(std::move(str));
+        }
+
+        { //加锁
+            std::unique_lock<std::mutex> lock(this->mtx2);
+            while (this->forwardResponceQueue.empty())
+            {
+                this->cond2.wait(lock);
+            }
+            auto str = this->forwardResponceQueue.front(); //no copy
+            send(sock, str.c_str(), str.size() + 1, 0);    //发送请求
+            spdlog::info("son send proto reply to dad{0}", str);
+            this->forwardResponceQueue.pop();
+        }
     }
 }
 
@@ -204,18 +262,31 @@ void ua_blackjack::Game::connectToson::run(void)
     spdlog::info("Father accept");
     while (true)
     {
+        spdlog::info("wait forward request");
         { //加锁
             std::unique_lock<std::mutex> lock(this->mtx);
             while (this->forwardRequestQueue.empty())
             {
                 this->cond.wait(lock);
             }
-            auto str = this->forwardRequestQueue.front();         //no copy
+
+            spdlog::info("receive forward request");
+            auto str = this->forwardRequestQueue.front();
             send(clientSocketfd, str.c_str(), str.size() + 1, 0); //发送请求
+            spdlog::info("Father send protobuf to son  {0}", str);
+
             this->forwardRequestQueue.pop();
+            if (str == "Goodbye")
+            {
+                exit(0); //go to the hell
+            }
         }
         /***************这里补充protobuf的编码->发送->解码************/
-        std::string rep;
+        char buffer[1024];
+        memset(buffer, '\0', 1024);
+        int ret = recv(clientSocketfd, buffer, 1023, 0);
+        spdlog::info("father receive protobuf from son {0}", buffer);
+        std::string rep(buffer);
         {
             //加锁
             std::unique_lock<std::mutex> lock(this->mtx2);
