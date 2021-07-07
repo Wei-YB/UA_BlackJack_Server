@@ -14,7 +14,6 @@
 #include <string.h>
 #include <sys/msg.h>
 #include <errno.h>
-int forwardRpcRequestEventFd;
 void ua_blackjack::Game::createServiece(void)
 {
     const char *ip = "0.0.0.0";
@@ -105,9 +104,8 @@ void ua_blackjack::Game::createServiece(void)
                         }
                         else
                         {
-                            forwardRpcRequestEventFd = createCondition(0);
                             serviceStatus = ServiceStatus::HANDEL_GRPC_BY_PARENT_START_FORWARD;
-                            ua_blackjack::Game::connectToson();
+                            ua_blackjack::Game::connectToson::getInstance().run();
                         }
                     }
                     else if (strcmp(buffer, "quit") == 0)
@@ -142,11 +140,25 @@ void ua_blackjack::Game::createServiece(void)
     return;
 }
 
-void ua_blackjack::Game::connectToParent(void)
+void ua_blackjack::Game::connectToParent::run(void)
 {
+    const char *ip = "0.0.0.0";
+    int port = atoi(controlTcpPort.c_str()) + 10;
+
+    struct sockaddr_in address;
+    bzero(&address, sizeof address);
+    address.sin_family = AF_INET;
+    inet_pton(AF_INET, ip, &address.sin_addr);
+    address.sin_port = htons(port);
+
+    while (true)
+    {
+        //这里补充读取protobuf的代码
+        this->forwardRequestQueue.push("Request serial");
+    }
 }
 
-void ua_blackjack::Game::connectToson(void)
+void ua_blackjack::Game::connectToson::run(void)
 {
 
     const char *ip = "0.0.0.0";
@@ -181,23 +193,34 @@ void ua_blackjack::Game::connectToson(void)
         exit(1);
     }
     spdlog::info("===========father process listen {0}===========", port);
-    int epollfd = epoll_create(5);
-    epoll_event event;
-    event.events = EPOLLIN; //可读，EDGE TIRGGER
-    event.data.fd = listenfd;
-    epoll_ctl(epollfd, EPOLL_CTL_ADD, listenfd, &event);
-
-    epoll_event events[5];
+    struct sockaddr_in clientAddr;
+    socklen_t clientAddrLen = sizeof(clientAddr);
+    int clientSocketfd = accept(listenfd, (sockaddr *)(&clientAddr), &clientAddrLen);
+    if (clientSocketfd < 0)
+    {
+        spdlog::error("Father accept");
+        exit(1);
+    }
+    spdlog::info("Father accept");
     while (true)
     {
-        int ret = epoll_wait(epollfd, events, 5, -1);
-        if (ret < 0)
-        {
-            spdlog::error("EPOLL ERROR");
-            exit(1);
+        { //加锁
+            std::unique_lock<std::mutex> lock(this->mtx);
+            while (this->forwardRequestQueue.empty())
+            {
+                this->cond.wait(lock);
+            }
+            auto str = this->forwardRequestQueue.front();         //no copy
+            send(clientSocketfd, str.c_str(), str.size() + 1, 0); //发送请求
+            this->forwardRequestQueue.pop();
         }
-        for (int i = 0; i < ret; i++) //处理每一个epoll事件
+        /***************这里补充protobuf的编码->发送->解码************/
+        std::string rep;
         {
+            //加锁
+            std::unique_lock<std::mutex> lock(this->mtx2);
+            this->forwardResponceQueue.push(rep);
+            this->cond2.notify_one();
         }
     }
 }

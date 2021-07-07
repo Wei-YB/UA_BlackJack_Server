@@ -7,6 +7,7 @@
 #include <string.h>
 #include <sys/msg.h>
 #include <errno.h>
+#include "ControlTcpServer.h"
 std::queue<BlackJackRoomID> unUsedstEnvRoomID;                      //结束了的游戏ID
 std::unordered_map<BlackJackRoomID, stEnv_t::ptr> roomEnvirHashMap; //roomid和句柄的hash映射
 stCoRoutine_t *receiveSignalFromRPC;
@@ -47,10 +48,10 @@ void *createOneGame(void *arg) //开启一局游戏
     co_enable_hook_sys();
     stEnv_t *env = (stEnv_t *)arg;
 
-//
-#ifdef LOG_ON
+    //
+
     spdlog::info("GAME BEGIN");
-#endif
+
     int playerSize = env->uids.size();
 
     ua_blackjack::Game::Room::ptr room;
@@ -163,18 +164,16 @@ void *createOneGame(void *arg) //开启一局游戏
                 {
                     player->hitPoker();
                     UpdateAll(room->playerList, player->uid); //抽牌，更新下
-//
-#ifdef LOG_ON
+                                                              //
+
                     spdlog::info("uid {0:d} hit", player->uid);
-#endif
                 }
                 else if (env->operateId == OperateID::OPERATE_STAND)
                 {
                     player->standPoker();
-//
-#ifdef LOG_ON
+                    //
+
                     spdlog::info("uid {0:d} stand", player->uid);
-#endif
                 }
                 continue;
             }
@@ -237,6 +236,12 @@ void *waitingSignalFromOtherModule(void *arg)
         conditionForWaitingRpc = createCondition(0);
         while (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT)
         {
+
+            while (ua_blackjack::Game::connectToParent::getInstance().forwardRequestQueue.empty())
+            {
+                myConditionWait(conditionForWaitingRpc, 1); //最长1ms检查一次
+                //poll(NULL, 0, 1); //必须要有挂起函数
+            }
             //反序列化
             ua_blackjack::Request request_;
             ua_blackjack::Response responce_;

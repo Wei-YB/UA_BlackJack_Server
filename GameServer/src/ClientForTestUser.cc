@@ -10,9 +10,9 @@
 #define STAMP_ASK_END 0X4
 void ua_blackjack::Game::ClientForTestUser::askBettingMoney(const BlackJackUID uid)
 {
-#ifdef LOG_ON
+
     spdlog::info("Start betting rpc request uid {0}", uid);
-#endif
+
     //
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
@@ -42,9 +42,9 @@ void ua_blackjack::Game::ClientForTestUser::askBettingMoney(const BlackJackUID u
 
 void ua_blackjack::Game::ClientForTestUser::askHitOrStand(const BlackJackUID uid)
 {
-#ifdef LOG_ON
+
     spdlog::info("Start ask hit uid {0}", uid);
-#endif
+
     //
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
@@ -90,9 +90,9 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const BlackJackUID uid, co
             ss << " ";
             ss << num;
             request.add_args(ss.str());
-#ifdef LOG_ON
+
             spdlog::info("Start Update request args {0} uid {1}", ss.str(), notifyUser);
-#endif
+
             //
         }
         else
@@ -144,9 +144,9 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const BlackJackUID uid, co
             ss << num;
 
             request.add_args(ss.str());
-#ifdef LOG_ON
+
             spdlog::info("Start Update request args {0} uid {1}", ss.str(), notifyUser);
-#endif
+
             //
         }
         else
@@ -206,9 +206,9 @@ void ua_blackjack::Game::ClientForTestUser::askUpdate(const std::list<ua_blackja
                 }
             }
             request.add_args(ss.str());
-#ifdef LOG_ON
+
             spdlog::info("Start Update request args {0} uid {1} index {2}", ss.str(), notifyUser, index);
-#endif
+
             //
         }
     }
@@ -232,9 +232,9 @@ void ua_blackjack::Game::ClientForTestUser::askEnd(const BlackJackUID uid, Final
 {
 
     //
-#ifdef LOG_ON
+
     spdlog::info("Start End request uid {0} iswin{1}", uid, isWin);
-#endif
+
     Request request;
     request.set_requesttype(ua_blackjack::Request_RequestType::Request_RequestType_NOTIFY_USER); //requestType
     request.set_uid(uid);

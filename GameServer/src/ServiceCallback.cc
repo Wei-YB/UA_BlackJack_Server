@@ -5,6 +5,7 @@
 #include <string.h>
 #include <sys/msg.h>
 #include <errno.h>
+#include "ControlTcpServer.h"
 
 void nomalStartGameCallback(ua_blackjack::Request &request, ua_blackjack::Response &responce)
 {
@@ -98,5 +99,24 @@ void nomalSurrenderCallback(ua_blackjack::Request &request, ua_blackjack::Respon
 
 void rpcForwardCallback(ua_blackjack::Request &request, ua_blackjack::Response &responce, MSG_KEY_E key)
 {
+    spdlog::info("Father serial and send it to son");
     auto req = request.SerializeAsString(); //序列化request
+    {
+        //加锁
+        std::unique_lock<std::mutex> lock(ua_blackjack::Game::connectToson::getInstance().mtx);
+        ua_blackjack::Game::connectToson::getInstance().forwardRequestQueue.push(req);
+        ua_blackjack::Game::connectToson::getInstance().cond.notify_one();
+    }
+    {
+        //等待子进程响应
+        std::unique_lock<std::mutex> lock(ua_blackjack::Game::connectToson::getInstance().mtx2);
+        while (ua_blackjack::Game::connectToson::getInstance().forwardResponceQueue.empty())
+        {
+            ua_blackjack::Game::connectToson::getInstance().cond2.wait(lock);
+        }
+    }
+    auto &str = ua_blackjack::Game::connectToson::getInstance().forwardResponceQueue.front();
+    responce.ParseFromString(str); //反序列化
+    ua_blackjack::Game::connectToson::getInstance().forwardResponceQueue.pop();
+    spdlog::info("Complete one communication");
 }
