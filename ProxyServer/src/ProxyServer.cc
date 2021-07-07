@@ -78,57 +78,30 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request request)
         int64_t stamp = (int64_t)client.get();
         if (request.requesttype() == Request::LOGIN)
         {
+            client->SetUnloginStamp(request.stamp());
             std::lock_guard<std::mutex> guard(stampToUnloginClientLock_);
-            // conflict happens! must check whether the previous client's still alive
             if (stampToUnloginClient_.find(stamp) != stampToUnloginClient_.end())
-            {   logger_ptr->warn("In ProxyServer::OnClientRequest(): Conflict happens when inserting a unlogin client (fd: {}) to unlogin client set.", fd);
-                if (!stampToUnloginClient_[stamp].lock())
-                {   // it is ok to replace it, since it is a expired client
-                    logger_ptr->warn("In ProxyServer::OnClientRequest(): Conflict resolved for client (fd: {})", fd);
-                    stampToUnloginClient_[stamp] = client;
-                }
-                else
-                {
-                    logger_ptr->warn("In ProxyServer::OnClientRequest(): Conflict cannot be resolved for client (fd: {})", fd);
-                    return;
-                }
-            }
+                stampToUnloginClient_[stamp] = client;
             else
-            {
                 stampToUnloginClient_.emplace(stamp, client);
-            }
         }
         else if (request.requesttype() == Request::SIGNUP)
         {
+            client->SetSignupStamp(request.stamp());
             std::lock_guard<std::mutex> guard(stampToSignupClientLock_);
             if (stampToSignupClient_.find(stamp) != stampToSignupClient_.end())
-            {   logger_ptr->warn("In ProxyServer::OnClientRequest(): Conflict happens when inserting a signup client (fd: {}) to signup client set.", fd);
-                if (!stampToSignupClient_[stamp].lock())
-                {   // it is ok to replace it, since it is a expired client
-                    logger_ptr->warn("In ProxyServer::OnClientRequest(): Conflict resolved for client (fd: {})", fd);
-                    stampToSignupClient_[stamp] = client;
-                }
-                else
-                {
-                    logger_ptr->warn("In ProxyServer::OnClientRequest(): Conflict cannot be resolved for client (fd: {})", fd);
-                    return;
-                }
-            }
+                stampToSignupClient_[stamp] = client;
             else
-            {
                 stampToSignupClient_.emplace(stamp, client);
-            }
         }
         else 
         {
             logger_ptr->warn("In ProxyServer::OnClientRequest(): Client (uid: {0}, sockfd: {1}) sends illegal request, drop it.", request.uid(), fd);
             return;
         }
-        client->SetUnloginStamp(request.stamp());
-        // modify the stamp so we can recognize when we get response 
+        
         logger_ptr->trace("In ProxyServer::OnClientRequest(): setting client (fd: {1}) request's stamp to {0}", stamp, fd);
         request.set_stamp(stamp);
-        serviceClient->Call(request);
     }
     else if (request.requesttype() == Request::LOGOUT)
     {   // we have to handle logout request since we should remove it
@@ -138,21 +111,18 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request request)
         {
         std::lock_guard<std::mutex> guard(stampToLogoutClientLock_);
         if (stampToLogoutClient_.find(stamp) != stampToLogoutClient_.end())
-        {   logger_ptr->warn("In ProxyServer::OnClientRequest(): logout conflict happends, resolving...");
             stampToLogoutClient_[stamp] = logoutClient;
-        }
         else
             stampToLogoutClient_.emplace(stamp, logoutClient);
         }
         logoutClient->SetLogoutStamp(request.stamp());
         request.set_stamp(stamp);
-        serviceClient->Call(request);
     }
     else
     {
         logger_ptr->trace("In ProxyServer::OnClientRequest(): client (uid: {0}) directly call {1}", fdToClient_[fd]->uid(), requestTypeToStr[request.requesttype()]);
-        serviceClient->Call(request);
     }
+    serviceClient->Call(request);
 }
 
 // this callback directly forward the response to RpcServer
@@ -172,9 +142,37 @@ void ProxyServer::OnServiceResponse(Response& response)
 {
     UserId uid = response.uid();
     int64_t stamp = response.stamp();
-    logger_ptr->trace("In ProxyServer::OnServiceResponse: Get response for client (uid: {0}, stamp: {1})", uid, stamp);
-    // if the response is for a logined client
     std::shared_ptr<Client> client;
+    logger_ptr->trace("In ProxyServer::OnServiceResponse: Get response for client (uid: {0}, stamp: {1})", uid, stamp);
+    // we should first check whether it is a login
+    {
+    std::lock_guard<std::mutex> guard(stampToUnloginClientLock_);
+    if (stampToUnloginClient_.find(stamp) != stampToUnloginClient_.end()
+        && (client = stampToUnloginClient_[stamp].lock()))
+        stampToUnloginClient_.erase(stamp);
+    }
+    if (client)
+    {
+        logger_ptr->trace("In ProxyServer::OnServiceResponse: This is for an unlogin client");
+        response.set_stamp(client->unloginStamp());
+        client->SetUid(uid);
+        {
+        std::lock_guard<std::mutex> guard(uidToClientLock_);
+        if (uidToClient_.find(uid) != uidToClient_.end())
+        {   // poops, somebody try to login again, we should reject it
+            response.set_status(-1);
+            client->SetUid(-1);
+            logger_ptr->trace("In ProxyServer::OnServiceResponse: Duplicated login, reject it");
+        }
+        else
+        {
+            uidToClient_.emplace(uid, client);
+        }
+        }
+        client->SendResponse(response);
+        return;
+    }
+    // we then check whether it is for a logined client
     {
         std::lock_guard<std::mutex> guard(uidToClientLock_);
         if (uidToClient_.find(uid) != uidToClient_.end())
@@ -203,50 +201,22 @@ void ProxyServer::OnServiceResponse(Response& response)
             uidToClient_.erase(uid);
         }
         client->SendResponse(response);
-        
         return;
     }
-    // if the response is for unlogin/signup client
-    bool flag = false;
-    std::weak_ptr<Client> client_weak;
+    // if the response is for signup client
     {
-        // if the response for logining client
-        std::lock_guard<std::mutex> guard(stampToUnloginClientLock_);
-        if (stampToUnloginClient_.find(stamp) != stampToUnloginClient_.end())
-        {
-            logger_ptr->trace("In ProxyServer::OnServiceResponse: This response is for an unlogin client.");
-            flag = true;
-            client_weak = stampToUnloginClient_[stamp];
-            stampToUnloginClient_.erase(stamp);
-        }
-    }
-    if (!flag)
-    {
-        // if the response for signup client
         std::lock_guard<std::mutex> guard(stampToSignupClientLock_);
         if (stampToSignupClient_.find(stamp) != stampToSignupClient_.end())
         {
             logger_ptr->trace("In ProxyServer::OnServiceResponse: This response is for an signup client.");
-            client_weak = stampToSignupClient_[stamp];
-            stampToSignupClient_.erase(stamp);
+            client = stampToUnloginClient_[stamp].lock();
+            stampToUnloginClient_.erase(stamp);
         }
     }
-    if (client = client_weak.lock())
+    if (client)
     {   
         // restore the original stamp
-        if (flag)
-            response.set_stamp(client->unloginStamp());
-        else
-            response.set_stamp(client->signupStamp());
-        // if this is a login (and successful) response, set its uid and put into login client set
-        if (flag & response.status() == 0)
-        {
-            logger_ptr->trace("In ProxyServer::OnServiceResponse: setting client uid to {}.", uid);
-            client->SetUid(uid);
-            // add client to login set if it is login client
-            std::lock_guard<std::mutex> guard(uidToClientLock_);
-            uidToClient_.emplace(uid, client);
-        }
+        response.set_stamp(client->signupStamp());
         client->SendResponse(response);
     }
     else

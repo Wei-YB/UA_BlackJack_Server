@@ -10,3 +10,4 @@ thirdparty/spdlog/CMakeFiles
 test-program/
 log/
 *.log
+perf/

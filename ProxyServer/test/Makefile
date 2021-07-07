@@ -6,9 +6,9 @@ INC = -I /include -I /usr/local/include/google/protobuf -I /usr/local/include/li
 	  -I ../include/grpc -I ../include
 LIB = -L /lib -L /usr/lib -L /usr/local/lib -L ../lib
 LD = -pthread -lcolib -lprotobuf -ldl  -lgrpc++ -lgrpc++_reflection
-SRC = overAllTest.cpp ../include/grpc/UA_BlackJack.pb.cc ../include/grpc/UA_BlackJack.grpc.pb.cc
+SRC = overAllTest.cpp ../include/grpc/UA_BlackJack.pb.cc ../include/grpc/UA_BlackJack.grpc.pb.cc ../src/log.cc
 
-overAllTest : overAllTest.cpp
+overAllTest : overAllTest.cpp 
 	g++ -o overAllTest ${SRC} ${INC} ${LIB} ${LD} 
 
 testlibco : testlibco.cpp

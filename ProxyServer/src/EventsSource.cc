@@ -32,6 +32,12 @@ int EventsSource::HandleEvents(Event events)
         if (inEventCallBack_) inEventCallBack_();
         return -1;
     }
+    if (events & EV_RDHUP)
+    {
+        logger_ptr->trace("In EventsSource::HandleEvents(): peer (fd: {}) shutdown", fd_);
+        if (closeEventCallBack_) closeEventCallBack_();
+        return -1;
+    }
     if (events & EV_IN)
     {
         logger_ptr->trace("In EventsSource::HandleEvents(): input event from fd: {}", fd_);
