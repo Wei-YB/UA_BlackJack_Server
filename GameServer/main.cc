@@ -198,8 +198,8 @@ int main(int argc, char *argv[])
     std::cout << "configFilePath = " << configFilePath << std::endl;
     std::cout << "logFilePath = " << logFilePath << std::endl;
 
-    std::cout << "start_daemon..." << std::endl;
-    start_daemon(); //守护
+    // std::cout << "start_daemon..." << std::endl;
+    // start_daemon(); //守护
 
     auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", logFilePath);
     spdlog::set_default_logger(async_file);
@@ -212,13 +212,12 @@ int main(int argc, char *argv[])
         std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
         std::thread threadReceiveRestartCommand = std::thread(&ua_blackjack::Game::createServiece);
 
-        ua_blackjack::Game::ServerImpl rpcServer;
-        rpcServer.Run();
+        ua_blackjack::Game::ServerImpl::getInstance().Run();
 
         spdlog::info("grpc async begin...");
 
         //创建等待RPC的协程
-        co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, &rpcServer);
+        co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, &ua_blackjack::Game::ServerImpl::getInstance());
         co_resume(receiveSignalFromRPC);
 
         //回收协程的协程
@@ -239,15 +238,8 @@ int main(int argc, char *argv[])
         std::thread thread_ = std::thread(&ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc, &ua_blackjack::Game::ClientForTestUser::getInstance());
         std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
 
-        spdlog::info("son::grpc async is not begin...");
-
-        ua_blackjack::Game::ServerImpl rpcServer;
-        rpcServer.Run();
-
-        spdlog::info("son::grpc async is  begin...");
-
         //创建等待RPC的协程
-        co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, &rpcServer);
+        co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, NULL);
         co_resume(receiveSignalFromRPC);
 
         //回收协程的协程

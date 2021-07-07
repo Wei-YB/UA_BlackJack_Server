@@ -103,16 +103,25 @@ namespace ua_blackjack
     };
     class ServerImpl final
     {
-    public:
+    private:
       ~ServerImpl()
       {
         server_->Shutdown();
         // Always shutdown the completion queue after the server.
         cq_->Shutdown();
       }
+      ServerImpl(){};
+      ServerImpl(const ServerImpl &);
+      ServerImpl &operator=(const ServerImpl &);
 
+    public:
       // There is no shutdown handling in this code.
       void Run();
+      static ServerImpl &getInstance()
+      {
+        static ServerImpl instance; //thread safe in cpp 11
+        return instance;
+      }
 
     public:
       // Class encompasing the state and logic needed to serve a request.
@@ -128,3 +137,5 @@ namespace ua_blackjack
     };
   }
 }
+
+void handelRpcRequest(ua_blackjack::Request &request, ua_blackjack::Response &responce, bool needForward);

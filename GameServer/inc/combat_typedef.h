@@ -59,12 +59,6 @@ struct stEnv_t
 
     std::mutex mutex;
 };
-#define MAX_TEXT 1024
-struct msg_st
-{
-    long int msg_type;
-    char text[MAX_TEXT];
-};
 #define LOG_ON
 enum class MSG_KEY_E
 {

@@ -1,6 +1,12 @@
 #include "GameProcess.h"
 #include "spdlog/spdlog.h"
 #include <sstream>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/msg.h>
+#include <errno.h>
 std::queue<BlackJackRoomID> unUsedstEnvRoomID;                      //结束了的游戏ID
 std::unordered_map<BlackJackRoomID, stEnv_t::ptr> roomEnvirHashMap; //roomid和句柄的hash映射
 stCoRoutine_t *receiveSignalFromRPC;
@@ -193,28 +199,59 @@ void *createOneGame(void *arg) //开启一局游戏
 void *waitingSignalFromOtherModule(void *arg)
 {
     co_enable_hook_sys();
-    conditionForWaitingRpc = createCondition(0);
-    ua_blackjack::Game::ServerImpl *server = (ua_blackjack::Game::ServerImpl *)arg;
-
-    // Spawn a new CallData instance to serve new clients.
-    new ua_blackjack::Game::CallData(&server->service_, server->cq_.get());
-    void *tag; // uniquely identifies a request.
-    bool ok;
-    gpr_timespec deadline;
-    deadline.clock_type = GPR_TIMESPAN;
-    deadline.tv_sec = 0;
-    deadline.tv_nsec = 100;
-    while (true)
+    if (arg != NULL) //由main函数调用的co_create
     {
-        while (server->cq_->AsyncNext<gpr_timespec>(&tag, &ok, deadline) != grpc::CompletionQueue::NextStatus::GOT_EVENT)
+        if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_ITSELF) //正常创建信号量
         {
-            myConditionWait(conditionForWaitingRpc, 1); //最长1ms检查一次
-            //poll(NULL, 0, 1); //必须要有挂起函数
+            conditionForWaitingRpc = createCondition(0);
+        }
+        else if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT)
+        {
+            spdlog::info("son:: complete reload!!!!");
+            serviceStatus = ServiceStatus::HANDEL_GRPC_BY_ITSELF; //完成重启！！！！
+        }
+        ua_blackjack::Game::ServerImpl *server = (ua_blackjack::Game::ServerImpl *)arg;
+
+        // Spawn a new CallData instance to serve new clients.
+        new ua_blackjack::Game::CallData(&server->service_, server->cq_.get());
+        void *tag; // uniquely identifies a request.
+        bool ok;
+        gpr_timespec deadline;
+        deadline.clock_type = GPR_TIMESPAN;
+        deadline.tv_sec = 0;
+        deadline.tv_nsec = 100;
+        while (true)
+        {
+            while (server->cq_->AsyncNext<gpr_timespec>(&tag, &ok, deadline) != grpc::CompletionQueue::NextStatus::GOT_EVENT)
+            {
+                myConditionWait(conditionForWaitingRpc, 1); //最长1ms检查一次
+                //poll(NULL, 0, 1); //必须要有挂起函数
+            }
+
+            GPR_ASSERT(ok);
+            static_cast<ua_blackjack::Game::CallData *>(tag)->Proceed();
+        }
+    }
+    else if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT)
+    {
+        conditionForWaitingRpc = createCondition(0);
+        while (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT)
+        {
+            //反序列化
+            ua_blackjack::Request request_;
+            ua_blackjack::Response responce_;
+
+            handelRpcRequest(request_, responce_, false); //处理一下返回
         }
 
-        GPR_ASSERT(ok);
-        static_cast<ua_blackjack::Game::CallData *>(tag)->Proceed();
+        ua_blackjack::Game::ServerImpl::getInstance().Run();
+
+        spdlog::info("son::grpc async begin...");
+        //重新等待RPC的协程
+        co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, &ua_blackjack::Game::ServerImpl::getInstance());
+        co_resume(receiveSignalFromRPC);
     }
+    return NULL;
 }
 void *recoveryUnusedCo(void *arg) //回收协程的协程
 {

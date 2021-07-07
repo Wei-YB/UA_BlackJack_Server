@@ -14,7 +14,7 @@
 #include <string.h>
 #include <sys/msg.h>
 #include <errno.h>
-
+int forwardRpcRequestEventFd;
 void ua_blackjack::Game::createServiece(void)
 {
     const char *ip = "0.0.0.0";
@@ -95,35 +95,19 @@ void ua_blackjack::Game::createServiece(void)
                         std::stringstream ss;
                         ss << "restart receive ";
                         int ret = send(fd, ss.str().c_str(), ss.str().size(), 0);
-                        serviceStatus = ServiceStatus::HANDEL_GRPC_BY_PARENT_START_FORWARD;
+
                         int pid = fork();
                         if (pid == 0)
                         {
+                            //子进程直接开始新的程序
                             std::string songLogPath = logFilePath + ".son.log";
-                            execl("./ GameService", "RESTART", "-lf", songLogPath.c_str(), "-cf", configFilePath.c_str());
+                            execl("./ GameService", "RESTART", "-lf", songLogPath.c_str(), "-cf", configFilePath.c_str(), NULL);
                         }
                         else
                         {
-                            while (true)
-                            {
-                                if (playerHashMap.size() == 0) //所有对局都结束
-                                {
-                                    struct msg_st data;
-                                    strcpy(data.text, "Complete");
-                                    //发送request
-                                    auto msgid = msgget((key_t) static_cast<int>(MSG_KEY_E::MSG_KEY_COMPLETE_ALL_OPE), 0666 | IPC_CREAT);
-                                    if (msgid == -1)
-                                    {
-                                        spdlog::error("msgget failed with error");
-                                        exit(EXIT_FAILURE);
-                                    }
-                                    if (msgsnd(msgid, (void *)&data, MAX_TEXT, 0) == -1)
-                                    {
-                                        spdlog::error("msgsnd failed");
-                                        exit(EXIT_FAILURE);
-                                    }
-                                }
-                            }
+                            forwardRpcRequestEventFd = createCondition(0);
+                            serviceStatus = ServiceStatus::HANDEL_GRPC_BY_PARENT_START_FORWARD;
+                            ua_blackjack::Game::connectToson();
                         }
                     }
                     else if (strcmp(buffer, "quit") == 0)
@@ -156,4 +140,64 @@ void ua_blackjack::Game::createServiece(void)
     }
 
     return;
+}
+
+void ua_blackjack::Game::connectToParent(void)
+{
+}
+
+void ua_blackjack::Game::connectToson(void)
+{
+
+    const char *ip = "0.0.0.0";
+    int port = atoi(controlTcpPort.c_str()) + 10;
+
+    struct sockaddr_in address;
+    bzero(&address, sizeof address);
+    address.sin_family = AF_INET;
+    inet_pton(AF_INET, ip, &address.sin_addr);
+    address.sin_port = htons(port);
+
+    int listenfd = socket(AF_INET, SOCK_STREAM, 0);
+    int reuse = 1;
+    setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, (const void *)&reuse, sizeof(int)); //当服务端出现timewait状态的链接时，确保server能够重启成功。
+    if (listenfd < 0)
+    {
+        spdlog::error("create socket error");
+        exit(1);
+    }
+
+    int ret = bind(listenfd, (struct sockaddr *)&address, sizeof address);
+    if (ret < 0)
+    {
+        spdlog::error("bind error");
+        exit(1);
+    }
+
+    ret = listen(listenfd, 5);
+    if (ret < 0)
+    {
+        spdlog::error("bind error");
+        exit(1);
+    }
+    spdlog::info("===========father process listen {0}===========", port);
+    int epollfd = epoll_create(5);
+    epoll_event event;
+    event.events = EPOLLIN; //可读，EDGE TIRGGER
+    event.data.fd = listenfd;
+    epoll_ctl(epollfd, EPOLL_CTL_ADD, listenfd, &event);
+
+    epoll_event events[5];
+    while (true)
+    {
+        int ret = epoll_wait(epollfd, events, 5, -1);
+        if (ret < 0)
+        {
+            spdlog::error("EPOLL ERROR");
+            exit(1);
+        }
+        for (int i = 0; i < ret; i++) //处理每一个epoll事件
+        {
+        }
+    }
 }

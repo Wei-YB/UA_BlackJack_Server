@@ -99,29 +99,4 @@ void nomalSurrenderCallback(ua_blackjack::Request &request, ua_blackjack::Respon
 void rpcForwardCallback(ua_blackjack::Request &request, ua_blackjack::Response &responce, MSG_KEY_E key)
 {
     auto req = request.SerializeAsString(); //序列化request
-    int msgid = -1;
-    struct msg_st data;
-    strcpy(data.text, req.c_str());
-    //发送request
-    msgid = msgget((key_t) static_cast<int>(key), 0666 | IPC_CREAT);
-    if (msgid == -1)
-    {
-        spdlog::error("msgget failed with error");
-        exit(EXIT_FAILURE);
-    }
-    if (msgsnd(msgid, (void *)&data, MAX_TEXT, 0) == -1)
-    {
-        spdlog::error("msgsnd failed");
-        exit(EXIT_FAILURE);
-    }
-
-    //接受responce
-    msgid = msgget((key_t) static_cast<int>(key) + 100, 0666 | IPC_CREAT);
-    if (msgrcv(msgid, (void *)&data, BUFSIZ, 0, 0) == -1)
-    {
-        fprintf(stderr, "msgrcv failed with errno: %d\n", errno);
-        exit(EXIT_FAILURE);
-    }
-    std::string res(data.text);
-    responce.ParseFromString(res);
 }

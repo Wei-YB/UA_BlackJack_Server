@@ -11,4 +11,6 @@
 namespace ua_blackjack::Game
 {
     void createServiece(void);
+    void connectToParent(void); //子进程调用，用于接受父进程发送的rpc请求
+    void connectToson(void);    //父进程调用，向子进程发送rpc请求
 }

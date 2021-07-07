@@ -57,8 +57,8 @@
 
 #include <as400_protos.h>
 
-
-typedef struct {
+typedef struct
+{
   int bytes_available;
   int bytes_returned;
   char current_date_and_time[8];
@@ -97,8 +97,8 @@ typedef struct {
   long main_storage_size_long;
 } SSTS0200;
 
-
-static int get_ibmi_system_status(SSTS0200* rcvr) {
+static int get_ibmi_system_status(SSTS0200 *rcvr)
+{
   /* rcvrlen is input parameter 2 to QWCRSSTS */
   unsigned int rcvrlen = sizeof(*rcvr);
 
@@ -107,11 +107,11 @@ static int get_ibmi_system_status(SSTS0200* rcvr) {
 
   /* reset_status is input parameter 4 to QWCRSSTS ("*NO       " in EBCDIC) */
   unsigned char reset_status[] = {
-    0x5C, 0xD5, 0xD6, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40
-  };
+      0x5C, 0xD5, 0xD6, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40};
 
   /* errcode is input parameter 5 to QWCRSSTS */
-  struct _errcode {
+  struct _errcode
+  {
     int bytes_provided;
     int bytes_available;
     char msgid[7];
@@ -121,7 +121,7 @@ static int get_ibmi_system_status(SSTS0200* rcvr) {
   ILEpointer __attribute__((aligned(16))) qwcrssts_pointer;
 
   /* qwcrssts_argv is the array of argument pointers to QWCRSSTS */
-  void* qwcrssts_argv[6];
+  void *qwcrssts_argv[6];
 
   /* Set the IBM i pointer to the QSYS/QWCRSSTS *PGM object */
   int rc = _RSLOBJ2(&qwcrssts_pointer, RSLOBJ_TS_PGM, "QWCRSSTS", "QSYS");
@@ -145,13 +145,13 @@ static int get_ibmi_system_status(SSTS0200* rcvr) {
   qwcrssts_argv[5] = NULL;
 
   /* Call the IBM i QWCRSSTS API from PASE */
-  rc = _PGMCALL(&qwcrssts_pointer, (void**)&qwcrssts_argv, 0);
+  rc = _PGMCALL(&qwcrssts_pointer, (void **)&qwcrssts_argv, 0);
 
   return rc;
 }
 
-
-uint64_t uv_get_free_memory(void) {
+uint64_t uv_get_free_memory(void)
+{
   SSTS0200 rcvr;
 
   if (get_ibmi_system_status(&rcvr))
@@ -164,16 +164,16 @@ uint64_t uv_get_free_memory(void) {
    * in millions (M) of bytes.
    */
   uint64_t current_unprotected_storage_used =
-    rcvr.current_unprotected_storage_used * 1024ULL;
+      rcvr.current_unprotected_storage_used * 1024ULL;
 
   uint64_t free_storage_size =
-    (main_storage_size - current_unprotected_storage_used) * 1024ULL;
+      (main_storage_size - current_unprotected_storage_used) * 1024ULL;
 
   return free_storage_size < 0 ? 0 : free_storage_size;
 }
 
-
-uint64_t uv_get_total_memory(void) {
+uint64_t uv_get_total_memory(void)
+{
   SSTS0200 rcvr;
 
   if (get_ibmi_system_status(&rcvr))
@@ -182,16 +182,17 @@ uint64_t uv_get_total_memory(void) {
   return (uint64_t)rcvr.main_storage_size * 1024ULL;
 }
 
-
-uint64_t uv_get_constrained_memory(void) {
-  return 0;  /* Memory constraints are unknown. */
+uint64_t uv_get_constrained_memory(void)
+{
+  return 0; /* Memory constraints are unknown. */
 }
 
-
-void uv_loadavg(double avg[3]) {
+void uv_loadavg(double avg[3])
+{
   SSTS0200 rcvr;
 
-  if (get_ibmi_system_status(&rcvr)) {
+  if (get_ibmi_system_status(&rcvr))
+  {
     avg[0] = avg[1] = avg[2] = 0;
     return;
   }
@@ -201,26 +202,26 @@ void uv_loadavg(double avg[3]) {
    * This percentage could be greater than 100% for an uncapped partition.
    */
   double processing_unit_used_percent =
-    rcvr.percent_processing_unit_used / 1000.0;
+      rcvr.percent_processing_unit_used / 1000.0;
 
   avg[0] = avg[1] = avg[2] = processing_unit_used_percent;
 }
 
-
-int uv_resident_set_memory(size_t* rss) {
+int uv_resident_set_memory(size_t *rss)
+{
   *rss = 0;
   return 0;
 }
 
-
-int uv_uptime(double* uptime) {
+int uv_uptime(double *uptime)
+{
   return UV_ENOSYS;
 }
 
-
-int uv_cpu_info(uv_cpu_info_t** cpu_infos, int* count) {
+int uv_cpu_info(uv_cpu_info_t **cpu_infos, int *count)
+{
   unsigned int numcpus, idx = 0;
-  uv_cpu_info_t* cpu_info;
+  uv_cpu_info_t *cpu_info;
 
   *cpu_infos = NULL;
   *count = 0;
@@ -228,12 +229,14 @@ int uv_cpu_info(uv_cpu_info_t** cpu_infos, int* count) {
   numcpus = sysconf(_SC_NPROCESSORS_ONLN);
 
   *cpu_infos = uv__malloc(numcpus * sizeof(uv_cpu_info_t));
-  if (!*cpu_infos) {
+  if (!*cpu_infos)
+  {
     return UV_ENOMEM;
   }
 
   cpu_info = *cpu_infos;
-  for (idx = 0; idx < numcpus; idx++) {
+  for (idx = 0; idx < numcpus; idx++)
+  {
     cpu_info->speed = 0;
     cpu_info->model = uv__strdup("unknown");
     cpu_info->cpu_times.user = 0;
