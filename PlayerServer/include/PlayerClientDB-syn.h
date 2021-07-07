@@ -26,6 +26,7 @@
 #include <iostream>
 #include <memory>
 #include <string>
+#include <unordered_map>
 
 #include "global.h"
 
@@ -63,6 +64,9 @@ public:
 
 private:
     std::unique_ptr<DatabaseService::Stub> stub_;
+
+    std::unordered_map<int, std::string> name_cache_;
+    // std::unordered_map<int, std::string> score_cache_;
 };
 }  // namespace player_client
 }  // namespace ua_blackjack

@@ -68,6 +68,9 @@ public:
 
 private:
     std::unique_ptr<DatabaseService::Stub> stub_;
+
+    std::unordered_map<int, std::string> name_cache_;
+    std::unordered_map<std::string, int> uid_cache_;
 };
 }  // namespace social_client
 }  // namespace ua_blackjack

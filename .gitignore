@@ -11,3 +11,4 @@ thirdparty/spdlog/Makefile
 *.a
 *.so
 test-program/
+stress-test/

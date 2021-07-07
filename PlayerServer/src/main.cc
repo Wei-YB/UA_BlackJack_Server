@@ -18,8 +18,9 @@ void StartServer() {
     ofs << pid << std::endl;
     ofs.close();
 
-    logger = spdlog::basic_logger_mt("basic_logger", "/var/run/PlayerLog.log");
+    logger = spdlog::basic_logger_mt("basic_logger", "/var/log/PlayerLog.log");
     logger->flush_on(spdlog::level::trace);
+    logger->set_level(spdlog::level::trace);
 
     ua_blackjack::player_server::ServerImpl server;
     server.Run();

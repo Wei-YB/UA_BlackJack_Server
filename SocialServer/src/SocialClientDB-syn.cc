@@ -77,6 +77,10 @@ bool SocialClient::IsWaitingFriend(int uid, int fri_uid) {
 }
 
 int SocialClient::Name2Uid(const std::string& name) {
+    if (uid_cache_.find(name) != uid_cache_.end()) {
+        return uid_cache_[name];
+    }
+
     ClientContext context;
     Response reply;
     Request request;
@@ -91,10 +95,14 @@ int SocialClient::Name2Uid(const std::string& name) {
     logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}, args_size: {3}", reply.status(), reply.uid(),
                  reply.stamp(), reply.args().size());
 
-    return reply.uid();
+    return uid_cache_[name] = reply.uid();
 }
 
 std::string SocialClient::Uid2Name(int uid) {
+    if (name_cache_.find(uid) != name_cache_.end()) {
+        return name_cache_[uid];
+    }
+
     ClientContext context;
     Response reply;
     Request request;
@@ -107,7 +115,7 @@ std::string SocialClient::Uid2Name(int uid) {
     CheckStatus(stub_->Notify(&context, request, &reply));
     logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
 
-    return reply.args()[0];
+    return name_cache_[uid] = reply.args()[0];
 }
 
 void SocialClient::AddFriend(Request& request_fri, Response& reply, Request& request, int uid) {
