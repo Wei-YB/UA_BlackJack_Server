@@ -9,3 +9,5 @@ thirdparty/spdlog/cmake_install.cmake
 thirdparty/spdlog/libspdlog.a
 thirdparty/spdlog/Makefile
 test-program/
+/PlayerServer/include-feature
+/PlayerServer/src-feature
