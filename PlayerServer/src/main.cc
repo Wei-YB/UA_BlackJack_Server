@@ -37,6 +37,19 @@ void StopServer() {
 }
 
 int main(int argc, char* argv[]) {
+    if (argc < 2) {
+        std::cerr << "invalid args" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
+    if (strcmp(argv[1], "start") == 0) {
+        if (argc != 3) exit(EXIT_FAILURE);
+    } else if (strcmp(argv[1], "stop") == 0) {
+    } else {
+        std::cerr << "invalid args" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
     if (argc == 1) {
         StartServer();
     } else if (argc == 2 && strcmp(argv[1], "stop") == 0) {

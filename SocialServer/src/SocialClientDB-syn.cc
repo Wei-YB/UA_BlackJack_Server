@@ -245,8 +245,8 @@ void SocialClient::DeleteWaitFriend(Request& request, Response& reply, int frien
 }
 
 Response SocialClient::RequestDB(Request& request) {
-    logger->info("Received request, type: {0}, uid: {1}, stamp: {2}", request.requesttype(), request.uid(),
-                 request.stamp());
+    logger->info("Received request, type: {0}, uid: {1}, stamp: {2}, args size: {3}", request.requesttype(),
+                 request.uid(), request.stamp(), request.args().size());
 
     Response reply;
 
@@ -269,6 +269,7 @@ Response SocialClient::RequestDB(Request& request) {
             else
                 reply.add_args("self");
 
+            logger->info("return response, exception");
             return reply;
         }
 
@@ -300,5 +301,6 @@ Response SocialClient::RequestDB(Request& request) {
             break;
     }
 
+    logger->info("return response, successful");
     return reply;
 }

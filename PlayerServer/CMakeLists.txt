@@ -4,6 +4,10 @@ cmake_minimum_required(VERSION 3.5.1)
 
 # include(../cmake/common.cmake)
 
+SET(CMAKE_BUILD_TYPE "Debug") 
+SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
+SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
+
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 get_filename_component(hw_proto "${PROJECT_SOURCE_DIR}/protos/UA_BlackJack.proto" ABSOLUTE)  # demo dependent
@@ -42,6 +46,16 @@ file(GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc"
 
 add_executable(PlayerServer "${SOURCES}")
 target_link_libraries(PlayerServer
+  ${_REFLECTION}
+  ${_GRPC_GRPCPP}
+  ${_PROTOBUF_LIBPROTOBUF}
+  spdlog)
+
+
+file(GLOB Stress-SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc" 
+                         "${CMAKE_CURRENT_SOURCE_DIR}/stress-test/*.cc")
+add_executable(Stress-Player "${Stress-SOURCES}")
+target_link_libraries(Stress-Player
   ${_REFLECTION}
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF}

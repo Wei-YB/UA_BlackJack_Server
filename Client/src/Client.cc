@@ -417,10 +417,10 @@ ua_blackjack::Response Client::ConstructRoomResponse(bool valid, ua_blackjack::R
                     std::cout << ":( Invaild Command, Hit, Stand or Surrender" << std::endl;
                 } else {
                     if (res_args[0] == "Surrender") {
-                        logger->info("Surrender");
-                        SendRequest({"Surrender"});
+                        // logger->info("Surrender");
+                        // SendRequest({"Surrender"});
                         next_state_ = INGAME_OBSERVE;
-                        res_args = {"Stand"};
+                        // res_args = {"xxx"};
                     }
                     break;
                 }
@@ -652,7 +652,10 @@ void Client::ProcessSocket() {
     std::string data;
 
     bool is_data = ReceiveData(data_type, data_length, data);
-    if (!is_data) return;
+    if (!is_data) {
+        std::cout << std::endl << "Connection interrupted" << std::endl << std::endl;
+        exit(EXIT_FAILURE);
+    }
 
     if (data_type == REQUEST) {
         ua_blackjack::Request request;
@@ -707,9 +710,9 @@ void Client::ActuallyChangeState(uint32_t data_type) {
     if (state_ == OFFLINE && next_state_ == ONLINE) name_ = name_tmp_;
 
     // if send surrender request, doesn't change state now
-    if (data_type == REQUEST && (state_ == INGAME_IDLE || state_ == INGAME_TURN) && next_state_ == INGAME_OBSERVE) {
-        return;
-    }
+    // if (data_type == REQUEST && (state_ == INGAME_IDLE || state_ == INGAME_TURN) && next_state_ == INGAME_OBSERVE) {
+    //     return;
+    // }
 
     if (next_state_ != INVALID) state_ = next_state_;
     if (state_ == OFFLINE) Logout();

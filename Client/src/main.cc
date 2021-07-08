@@ -43,10 +43,20 @@ void init(const char* log_file) {
 }
 
 int main(int argc, char* argv[]) {
-    assert(argc == 2);
+    if (argc != 2) {
+        std::cerr << "invalid args" << std::endl;
+        exit(EXIT_FAILURE);
+    }
 
     std::ifstream config;
     config.open(argv[1]);
+
+    if (config.bad()) {
+        std::cerr << "bad config file path" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
+    std::cout << "---------reading config---------" << std::endl;
 
     std::string option;
     config >> option >> server_ip;
