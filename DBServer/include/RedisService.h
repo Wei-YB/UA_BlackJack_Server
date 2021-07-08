@@ -1,6 +1,7 @@
 #pragma once
 #include "nameFormat.h"
 #include <spdlog/spdlog.h>
+#include <spdlog/sinks/daily_file_sink.h>
 #include "spdlog/async.h"
 #include "spdlog/sinks/basic_file_sink.h"
 #include <lib_acl.hpp>
