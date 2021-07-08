@@ -103,6 +103,23 @@ void handelRpcRequest(ua_blackjack::Request &request, ua_blackjack::Response &re
             rpcForwardCallback(request, responce, MSG_KEY_E::MSG_KEY_SURRENDER);
         }
     }
+    else if (type == ua_blackjack::Request_RequestType::Request_RequestType_LOGOUT) //重启
+    {
+        int pid = fork();
+        if (pid == 0)
+        {
+            execl("/home/tong/UA_BlackJack_Server/build/game/GameService",
+                  "GameService",
+                  "RELEASE", "-lf",
+                  "/home/tong/UA_BlackJack_Server/build/game/logs/async_log.log ", "-cf",
+                  "/home/tong/UA_BlackJack_Server/GameServer/game.config",
+                  (char *)NULL);
+        }
+        else
+        {
+            exit(0);
+        }
+    }
     else
     {
         responce.set_status(-1);

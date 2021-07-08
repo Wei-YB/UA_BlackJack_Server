@@ -290,7 +290,8 @@ void ua_blackjack::Game::connectToson::run(void)
             this->forwardRequestQueue.pop();
             if (str == "Goodbye")
             {
-                exit(0); //go to the hell
+                if (roomEnvirHashMap.size() == 0) //以防又有rpc接入
+                    exit(0);                      //go to the hell
             }
         }
         /***************这里补充protobuf的编码->发送->解码************/

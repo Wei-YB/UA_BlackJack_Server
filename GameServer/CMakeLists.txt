@@ -2,7 +2,9 @@
 # CMake 最低版本号要求
 cmake_minimum_required(VERSION 3.5.1)
 
-
+# SET(CMAKE_BUILD_TYPE "Debug")
+# SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
+# SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/3rd/grpc")
 
