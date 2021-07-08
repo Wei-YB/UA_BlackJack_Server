@@ -4,9 +4,9 @@ cmake_minimum_required(VERSION 3.5.1)
 
 # include(../cmake/common.cmake)
 
-SET(CMAKE_BUILD_TYPE "Debug") 
-SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
-SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
+# SET(CMAKE_BUILD_TYPE "Debug") 
+# SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
+# SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
 
@@ -52,10 +52,19 @@ target_link_libraries(PlayerServer
   spdlog)
 
 
-file(GLOB Stress-SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc" 
-                         "${CMAKE_CURRENT_SOURCE_DIR}/stress-test/*.cc")
-add_executable(Stress-Player "${Stress-SOURCES}")
-target_link_libraries(Stress-Player
+file(GLOB Stress-syn-SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc" 
+                         "${CMAKE_CURRENT_SOURCE_DIR}/stress-test/stress-test-syn.cc")
+add_executable(Stress-Player-syn "${Stress-syn-SOURCES}")
+target_link_libraries(Stress-Player-syn
+  ${_REFLECTION}
+  ${_GRPC_GRPCPP}
+  ${_PROTOBUF_LIBPROTOBUF}
+  spdlog)
+
+file(GLOB Stress-asyn-SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc" 
+                         "${CMAKE_CURRENT_SOURCE_DIR}/stress-test/stress-test-asyn.cc")
+add_executable(Stress-Player-asyn "${Stress-asyn-SOURCES}")
+target_link_libraries(Stress-Player-asyn
   ${_REFLECTION}
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF}
