@@ -29,6 +29,7 @@ struct Config{
     std::string log_path = "./";
     int     init_score = 2000;
     bool daemonize = false;
+    bool asyncLog = false;
 
     const std::string defalut_config = "./database.config";
 
@@ -68,8 +69,8 @@ struct Config{
             }
             else if(key == "async_log"){
                 if(value == "yes"){
-                    auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", "logs/async_log.txt");
-                    spdlog::set_default_logger(async_file);
+                    std::cout <<"async log enabled"<< std::endl;
+                    asyncLog = true;
                 }
             }
             else{
@@ -93,10 +94,12 @@ void StartServer() {
     // check pid file exists?
     
     signal(SIGINT, handler);
-
+    
     Config config;
     config.GetConfig(config_file_path);
-
+    
+    
+    
     if(config.daemonize){
         if(ServerRunning()){
             std::cerr<<"server already running....\nabort"<< std::endl;
@@ -108,10 +111,12 @@ void StartServer() {
         pid_file << getpid();
         pid_file.close();
     }
-    
+    if(config.asyncLog){
+        auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", "./logs/async_log.txt");
+        spdlog::set_default_logger(async_file);
+    }
+    spdlog::set_level(spdlog::level::info);
     spdlog::flush_on(spdlog::level::info);
-    spdlog::set_level(spdlog::level::trace);
-
     SPDLOG_TRACE("start database server");
 
     server = new ServerAsynImpl(config.grpc_host,config.redis_host,config.init_score);
