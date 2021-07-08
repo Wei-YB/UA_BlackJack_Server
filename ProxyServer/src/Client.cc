@@ -5,6 +5,7 @@
 #include "ClientProxyProtocol.h"
 #include "common.h"
 #include "EventLoop.h"
+#include "Timer.h"
 #include "log.h"
 
 #include "UA_BlackJack.pb.h"
@@ -22,6 +23,7 @@ Client::Client(std::shared_ptr<TcpConnection> conn,
            const std::function<void(FileDesc)> &disconnectCallBack,
            const std::function<void(FileDesc)> &errorCallBack)
        : conn_(conn), 
+        timer_(std::make_shared<Timer>(conn_->eventLoop(), std::bind(&Client::OnLeave, this))),
         requestCallBack_(requestCallBack),
         responseCallBack_(responseCallBack),
         errorCallBack_(errorCallBack),
@@ -34,6 +36,8 @@ Client::Client(std::shared_ptr<TcpConnection> conn,
     conn_->SetEncoder(std::bind(pack, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
     //conn_->SetDecoder(std::bind(unpack, std::placeholders::_1, std::placeholders::_2));
     conn_->SetDecoder(std::bind(unpack_sp, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
+
+    
 }
 
 int Client::SendRequest(const Request &request)
@@ -61,6 +65,18 @@ int Client::SendResponse(const Response &response)
     
     return conn_->Send(RESPONSE, "");
 }
+
+int Client::EnableTimeout(int sec)
+{
+    timer_->SetExpired(sec); // if an unlogin client is idle for 2 min, close it
+}
+
+int Client::DisableTimeout()
+{
+    timer_->SetExpired(0);
+}
+
+FileDesc Client::fd() const {return conn_->SockFd();}
 
 //void Client::OnMessages(std::vector<std::pair<int32_t, std::string>> msgs)
 void Client::OnMessages(std::vector<std::pair<int32_t, StringPiece>> msgs)

@@ -78,7 +78,8 @@ public:
             }
             else 
             {
-                logger_ptr->info("In {} thread: response not ok", serviceName_);
+                logger_ptr->warn("In {} thread: response not ok", serviceName_);
+                logger_ptr->error("In {0} thread: {1}", call->status.error_message());
                 Response res;
                 res.set_status(-1);
                 res.set_uid(call->request.uid());

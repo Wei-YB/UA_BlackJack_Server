@@ -41,6 +41,7 @@ public:
     void SetEncoder(const std::function<int(int32_t, const std::string &, CircularBuffer &)> &cb) {encoder_ = cb;}
     void SetDecoder(const std::function<StringPiece(CircularBuffer &, int*, int32_t*)> &cb) {decoder_ = cb;}
     CircularBuffer writeBuffer_;    // temporarily expose it
+    EventLoop *eventLoop() const {return eventLoop_;};
 private:
     // callbacks
     int OnInput();
@@ -64,6 +65,9 @@ private:
     std::function<StringPiece(CircularBuffer &, int*, int32_t*)> decoder_;
 
     CircularBuffer readBuffer_;
+    EventLoop *eventLoop_;
+
+    bool valid_ = false;
 };
 
 }   // namespace Net

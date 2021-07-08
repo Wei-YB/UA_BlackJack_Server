@@ -51,6 +51,7 @@ void ProxyServer::OnNewClient(std::shared_ptr<TcpConnection> conn)
         fdToClient_[conn->SockFd()] = newClient;    // fuck the original client out
     else
         fdToClient_.emplace(conn->SockFd(), newClient);
+    newClient->EnableTimeout(120);  // 
 }
 
 void ProxyServer::OnClientRequest(FileDesc fd, Request request)
@@ -67,11 +68,13 @@ void ProxyServer::OnClientRequest(FileDesc fd, Request request)
     if (!serviceClient)
     {
         logger_ptr->warn("In ProxyServer::OnClientRequest(): Service ({}) unavailable!", requestTypeToStr[request.requesttype()]);
+        // fdToClient_[fd]->EnableTimeout(120);
         return;
     }
     // for unlogin user, we only handle signin and login request
     if (fdToClient_[fd]->uid() == -1)
     {
+        fdToClient_[fd]->EnableTimeout(120);
         std::shared_ptr<Client> client = fdToClient_[fd];
         // we use the memory addr of the client as its identity,
         // since stamps from multiple clients might conflict
@@ -155,21 +158,45 @@ void ProxyServer::OnServiceResponse(Response& response)
     {
         logger_ptr->trace("In ProxyServer::OnServiceResponse: This is for an unlogin client");
         response.set_stamp(client->unloginStamp());
+        if (response.status() < 0 || uid < 0)
+        {
+            logger_ptr->trace("In ProxyServer::OnServiceResponse: client (fd: {0}) fail to login, status: {1}, uid: {2}", client->fd(), response.status(), uid);
+            if (-1 > client->SendResponse(response))
+            {   // peer has closed the pipe
+                logger_ptr->warn("In ProxyServer::OnServiceResponse: client (fd: {}) try to write a closed pipe, close it.", client->fd());
+                OnDisConnection(client->fd());
+                return;
+            }
+            client->EnableTimeout(120);
+            return;
+        }
+        logger_ptr->trace("In ProxyServer::OnServiceResponse: setting client's uid to {}", uid);
         client->SetUid(uid);
+        client->DisableTimeout();
+        std::shared_ptr<Client> originalClient;
         {
         std::lock_guard<std::mutex> guard(uidToClientLock_);
         if (uidToClient_.find(uid) != uidToClient_.end())
-        {   // poops, somebody try to login again, we should reject it
-            response.set_status(-1);
-            client->SetUid(-1);
-            logger_ptr->trace("In ProxyServer::OnServiceResponse: Duplicated login, reject it");
+        {   // poops, somebody try to login again, we kick the original client out
+            originalClient = uidToClient_[uid];
+            uidToClient_[uid] = client;
+            logger_ptr->trace("In ProxyServer::OnServiceResponse: Duplicated login, kick out original one");
         }
         else
         {
             uidToClient_.emplace(uid, client);
         }
         }
-        client->SendResponse(response);
+        if (-1 > client->SendResponse(response))
+        {   // peer has closed the pipe
+            logger_ptr->warn("In ProxyServer::OnServiceResponse: try to write a closed pipe, close it.");
+            OnDisConnection(client->fd());
+        }
+        if (originalClient)
+        {
+            if (fdToClient_.find(originalClient->fd()) != fdToClient_.end())
+                fdToClient_.erase(originalClient->fd());
+        }
         return;
     }
     // we then check whether it is for a logined client
@@ -196,11 +223,16 @@ void ProxyServer::OnServiceResponse(Response& response)
         if (isLogout)
         {
             logger_ptr->trace("In ProxyServer::OnServiceResponse(): logout response, setting client's uid to -1");
-            client->SetUid(-1); // set it to -1, to avoid sending uneccessary logout again
             std::lock_guard<std::mutex> guard(uidToClientLock_);
+            client->SetUid(-1); // set it to -1, to avoid sending uneccessary logout again
             uidToClient_.erase(uid);
+            client->EnableTimeout(120);
         }
-        client->SendResponse(response);
+        if (-1 > client->SendResponse(response))
+        {   // peer has closed the pipe
+            logger_ptr->warn("In ProxyServer::OnServiceResponse: try to write a closed pipe, close it.");
+            OnDisConnection(client->fd());
+        }
         return;
     }
     // if the response is for signup client
@@ -217,7 +249,12 @@ void ProxyServer::OnServiceResponse(Response& response)
     {   
         // restore the original stamp
         response.set_stamp(client->signupStamp());
-        client->SendResponse(response);
+        client->EnableTimeout(120);
+        if (-1 > client->SendResponse(response))
+        {   // peer has closed the pipe
+            logger_ptr->warn("In ProxyServer::OnServiceResponse: try to write a closed pipe, close it.");
+            OnDisConnection(client->fd());
+        }
     }
     else
     {
@@ -255,10 +292,10 @@ void ProxyServer::OnError(FileDesc fd)
     // if it was not client, it must be the tcp server
     if (fd == server_->listenFd())
     {
-        logger_ptr->error("In main thread: Fatal error in tcp server, exiting now...");
+        logger_ptr->error("In ProxyServer::OnError: Fatal error in tcp server, exiting now...");
         abort();
     }
-    logger_ptr->warn("In main thread: Fatal error in client (sockfd: {})", fd);
+    logger_ptr->warn("In ProxyServer::OnError: Fatal error in client (sockfd: {})", fd);
     OnDisConnection(fd);
 }
 
@@ -298,6 +335,7 @@ void ProxyServer::OnHealthReport()
 // this function should be called by the RpcServer
 int ProxyServer::SendRequest(Request &request)
 {
+    logger_ptr->trace("In {0}, {1}: stamp is {2},  request args: {3}", __FILE__ , __LINE__,request.stamp(), request.args(0));
     UserId uid = request.uid();
     std::shared_ptr<Client> client;
     // if the request is to a logined client
@@ -311,8 +349,28 @@ int ProxyServer::SendRequest(Request &request)
     if (client)
     {
         logger_ptr->trace("In ProxyServer::SendRequest: Send request (type: {0}) to client (uid: {1})", requestTypeToStr[request.requesttype()], uid);
-        return client->SendRequest(request);
+        int ret = client->SendRequest(request);
+        if (ret < -1)
+        {   
+            OnDisConnection(client->fd());
+        }
+        return ret;
     }
     logger_ptr->warn("In ProxyServer::SendRequest: Send request (type: {0}) to offline client (uid: {1})", requestTypeToStr[request.requesttype()], uid);
     return -1;
+}
+
+void ProxyServer::Start()
+{
+    if (start_)
+        return;
+    start_ = true;
+    std::shared_ptr<ServiceClient> lobbyClient = requestTypeToServiceClient_[Request::LOGOUT].lock();
+    if (lobbyClient)
+    {
+        Request request;
+        request.set_requesttype(Request::SURRENDER);
+        logger_ptr->info("Send reboot request to lobby");
+        lobbyClient->Call(request);
+    }
 }

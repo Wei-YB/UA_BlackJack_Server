@@ -34,7 +34,7 @@ message Request {
         GET_NAME = 25; //
         GET_UID = 26;//
         GET_PASSWORD = 27;//
-        GET_SCORE = 28;
+        GET_SCORE = 28; //
         GET_MATCH_INFO = 29;
         MATCH_END = 30; //
         ADD_WAIT_FRIEND = 31;

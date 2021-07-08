@@ -52,8 +52,8 @@ void returnFailureResponse(AsyncCall *call, const std::string &msg)
     call->reply_.set_status(-1);
     call->reply_.set_stamp(call->request_.stamp());
     call->reply_.add_args(msg);
-    call->responder_.Finish(call->reply_, Status::OK, call);
     call->status_ = FINISH;
+    call->responder_.Finish(call->reply_, Status::OK, call);
 }
 
 class ProxyRpcServer final {
@@ -109,11 +109,11 @@ public:
             stamp = call->stamp_;
             response.set_stamp(stamp);
             call->reply_ = response;
-            call->responder_.Finish(call->reply_, Status::OK, call);
             call->status_ = FINISH;
+            call->responder_.Finish(call->reply_, Status::OK, call);
             return;
         }
-        logger_ptr->info("In main thread: can not find the caller for response (stamp: {})", response.stamp());
+        logger_ptr->warn("In main thread: can not find the caller for response (stamp: {})", response.stamp());
     }
 
     void Stop() {stop_ = true;}
@@ -139,7 +139,7 @@ private:
             AsyncCall *call = static_cast<AsyncCall*>(tag);
             ProcessCall(call);
         }
-        cq_->Shutdown();
+        //cq_->Shutdown();
     }
 
     void ProcessCall(AsyncCall *call)
@@ -164,18 +164,21 @@ private:
             {
                 // modify request stamp
                 int64_t originStamp = call->request_.stamp();
-                int64_t newStamp = (int64_t)call;
-                call->request_.set_stamp(newStamp);
-                call->stamp_ = originStamp;
-                if (0 > sharedProxy->SendRequest(call->request_))
-                {
-                    returnFailureResponse(call, "User busy or do not exist.");
-                    return;
-                }
+                int64_t newStamp = ++callCnt_;
                 {
                     std::lock_guard<std::mutex> guard(stampToAsyncCallLock_);
                     stampToAsyncCall_.emplace(newStamp, call);
                 }
+                call->request_.set_stamp(newStamp);
+                call->stamp_ = originStamp;
+                if (0 > sharedProxy->SendRequest(call->request_))
+                {
+                    std::lock_guard<std::mutex> guard(stampToAsyncCallLock_);
+                    stampToAsyncCall_.erase(newStamp);
+                    returnFailureResponse(call, "User busy or do not exist.");
+                    return;
+                }
+                
                 return;
             }
             returnFailureResponse(call, "Proxy unavailable.");
@@ -196,6 +199,8 @@ private:
     std::weak_ptr<ProxyServer> proxy_;
     std::unordered_map<int64_t, AsyncCall*> stampToAsyncCall_;
     std::mutex stampToAsyncCallLock_;
+    int64_t callCnt_ = 0;
+    std::mutex cqLock_;
     bool stop_ = false;
 };
 

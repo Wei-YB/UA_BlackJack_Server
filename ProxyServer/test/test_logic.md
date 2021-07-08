@@ -26,14 +26,14 @@
 
 在执行上述逻辑期间，忽略所有从房间服务的update包。
 
-完成对房间服务的压测后，开始对social服务的压测。每位玩家初始处于大厅：
+完成对房间服务的压测后，开始对player服务的压测。每位玩家初始处于大厅：
 1. 执行`INFO`
 2. 执行`RANK_ME`
 3. 执行`RANK_TOP 5`
 4. 执行`LIST_MATCH`, 若有记录，选出第一个mid作为x，执行第5步
 5. 执行`GET_MATCH_INFO x`
 
-在完成对social服务的压测之后，开始对player服务的压测。每位玩家初始处于大厅：
+在完成对player服务的压测之后，开始对social服务的压测。每位玩家初始处于大厅：
 1. 执行`ADD_FRIEND player_y`，其中y = (x + 1) % playerno，也就是当前玩家序号加一后对整体玩家数量取模。
 2. 执行`LIST_WAITTING`，记录列表中所有玩家p[:]
 3. 对p[:]中的玩家执行`ACCEPT_FRIEND`

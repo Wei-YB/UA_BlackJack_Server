@@ -30,8 +30,12 @@ using ua_blackjack::SocialService;
 
 bool flag = false;
 
-void stop_server(int)
+void stop_server(int sig)
 {
+    if (sig == SIGINT)
+        logger_ptr->info("revceive SIGINT.");
+    else if (sig == SIGSEGV)
+        logger_ptr->error("revceive SIGSEGV.");
     flag = true;
 }
 
@@ -176,9 +180,19 @@ int main(int argc, char **argv)
 
     Deamonize(config);
 
+    
+
+    // logger_flush_on();
+    // set_logger_name(config.find("logger_name")->second);
+    // set_log_path(config.find("log_path")->second);
+    // create_logger();
+    // set_log_level(config.find("log_level")->second);
+
     logger_ptr->info("In main thread: Successfully create an async logger.");
 
     signal(SIGINT, stop_server);
+    signal(SIGSEGV, stop_server);
+    signal(SIGPIPE, SIG_IGN);
 
     Net::EventLoop loop;
 
@@ -243,6 +257,7 @@ int main(int argc, char **argv)
     }
 
     logger_ptr->info("In main thread: Four rpc client threads start.");
+    proxyServer->Start();
 
     while (!flag)
     {

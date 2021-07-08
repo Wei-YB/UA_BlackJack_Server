@@ -50,6 +50,7 @@ public:
     // response: response from rpc server
     void OnServiceResponse(Response& response);
 
+    void Start();
 private:
     // conn: shared ptr to new tcp connection
     void OnNewClient(std::shared_ptr<Net::TcpConnection> conn);
@@ -82,6 +83,7 @@ private:
     std::function<void(Response &)> clientResponseCallBack_;
     std::shared_ptr<Net::TcpServer> server_;
     Net::Timer timer_;
+    bool start_ = false;
 };
 
 enum BackEndModule {Proxy = 0, Lobby, Room, Social, Player, DataBase};

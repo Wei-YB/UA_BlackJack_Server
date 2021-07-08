@@ -9,6 +9,7 @@
 namespace Net {
     class TcpConnection;
     class StringPiece;
+    class Timer;
 }
 
 namespace ua_blackjack {
@@ -36,6 +37,11 @@ public:
 
     int SendResponse(const Response &response);
     
+    int EnableTimeout(int sec);
+
+    int DisableTimeout();
+
+    FileDesc fd() const;
     UserId uid() const {return uid_;}
     void SetUid(UserId id) {uid_ = id;}
     int64_t unloginStamp() const {return unloginStamp_;}
@@ -45,7 +51,7 @@ public:
     int64_t logoutStamp() const {return logoutStamp_;}
     void SetLogoutStamp(int64_t stamp) {logoutStamp_ = stamp;}
     
-// private:
+private:
     // callbacks
     //void OnMessages(std::vector<std::pair<int32_t, std::string>> msgs);
     void OnMessages(std::vector<std::pair<int32_t, StringPiece>> msgs);
@@ -60,6 +66,7 @@ private:
     int64_t logoutStamp_;
     std::mutex connLock_;
     std::shared_ptr<TcpConnection> conn_;
+    std::shared_ptr<Timer> timer_;
     std::function<void(FileDesc, Request)> requestCallBack_;
     std::function<void(Response)> responseCallBack_;
     std::function<void(FileDesc)> disconnectCallBack_;

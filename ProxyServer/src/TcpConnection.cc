@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
+#include <string.h>
 
 #include "TcpConnection.h"
 #include "ClientProxyProtocol.h"
@@ -32,6 +33,7 @@ TcpConnection::TcpConnection(const char *ip,
     addr_.sin_family = AF_INET;
     addr_.sin_port = htons(port);
     inet_pton(AF_INET, ip, &addr_.sin_addr);
+    eventLoop_ = loop;
 }
 
 TcpConnection::TcpConnection(FileDesc connfd,
@@ -50,10 +52,13 @@ TcpConnection::TcpConnection(FileDesc connfd,
     eventsSource_->EnableRead();
     // eventsSource_->EnableWrite();
     eventsSource_->EnableET();
+    eventLoop_ = loop;
+    valid_ = true;
 }
 
 TcpConnection::~TcpConnection()
 {
+    valid_ = false;
     ::close(eventsSource_->fd());
     eventsSource_->RemoveFromLoop();
 }
@@ -70,6 +75,7 @@ int TcpConnection::OnInput()
     {
         if ((byteRead = read(clientfd, readBuffer_)) < 0)
         {
+            valid_ = false;
             logger_ptr->trace("In TcpConnection::OnInput(): connection (sockfd: {}) shutdown by peer.", SockFd());
             if (hupCallBack_) 
             {
@@ -125,6 +131,8 @@ int TcpConnection::OnInput()
 
 int TcpConnection::OnOutput()
 {
+    if (!valid_)
+        return -1;
     // check whether we can get some data from upper layer
     if (outputCallBack_ && writeBuffer_.size() < writeBuffer_.capacity())
     {
@@ -143,6 +151,7 @@ int TcpConnection::OnOutput()
 
 int TcpConnection::OnError()
 {
+    valid_ = false;
     logger_ptr->warn("In TcpConnection::OnError(): connection (sockfd: {0}) has error!", SockFd());
     if (errorCallBack_)
         errorCallBack_();
@@ -152,6 +161,7 @@ int TcpConnection::OnError()
 
 int TcpConnection::OnDisconnect()
 {
+    valid_ = false;
     logger_ptr->info("In TcpConnection::OnDisconnect(): connection (sockfd: {0}) shutdown by peer!", SockFd());
     if (hupCallBack_)
         hupCallBack_();
@@ -161,6 +171,11 @@ int TcpConnection::OnDisconnect()
 
 int TcpConnection::Send(int32_t type, const std::string &pkgsData)
 {
+    if (!valid_)
+    {
+        logger_ptr->error("In TcpConnection::Send: try to send data in a invalid socket {}.", SockFd());
+        return -2;
+    }
     if (encoder_)
     {
         // if (encoder_(type, pkgsData, writeBuffer_) < 0)
@@ -176,8 +191,9 @@ int TcpConnection::Send(int32_t type, const std::string &pkgsData)
     int bytesWritten = write(SockFd(), writeBuffer_);
     if (bytesWritten < 0)
     {
+        valid_ = false;
         logger_ptr->warn("In TcpConnection::Send(): connection (sockfd: {0}) send with fatal error!", SockFd());
-        return -1;
+        return -2;
     }
     // if there are data left
     if (!writeBuffer_.empty())
@@ -200,6 +216,7 @@ int TcpConnection::Connect()
         eventsSource_->EnableRead();
         eventsSource_->EnableET();
         setNonBlocking(SockFd());
+        valid_ = true;
         return 0;
     }
     logger_ptr->warn("In TcpConnection::Connect(): (sockfd: {0}) fail to connect to host", SockFd());
@@ -208,6 +225,7 @@ int TcpConnection::Connect()
 
 int TcpConnection::DisConnect()
 {
+    valid_ = false;
     logger_ptr->info("In TcpConnection::DisConnect(): (sockfd: {0}) disconnect from host", SockFd());
     ::close(SockFd());
     eventsSource_->RemoveFromLoop();
