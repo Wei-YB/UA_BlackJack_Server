@@ -1,4 +1,5 @@
 #include "RequestParser.h"
+// #define STRESS_BENCH
 
 namespace ua_blackjack::data_base_server {
 
@@ -25,6 +26,14 @@ bool RequestParser::ParseSignUp(const RepeatedString& args, Response& response) 
 }
 
 bool RequestParser::ParseGetUid(const RepeatedString& args, Response& response) {
+#ifdef STRESS_BENCH
+    if(args.size() != 1)
+        return false;
+    const auto uid = 1000;
+    response.set_uid(uid > 0 ? uid : -1);
+    response.set_status(1);
+    return true;
+#else
     if (args.size() != 1)
         return false;
     SPDLOG_TRACE("Parse GET UID, call database.getuid");
@@ -36,6 +45,7 @@ bool RequestParser::ParseGetUid(const RepeatedString& args, Response& response) 
     response.set_uid(uid > 0 ? uid : -1);
     response.set_status(1);
     return true;
+#endif
 }
 
 bool RequestParser::ParseGetPassword(int64_t uid, Response& response) {
