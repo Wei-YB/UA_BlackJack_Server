@@ -27,7 +27,7 @@ void ua_blackjack::Game::createServiece(void)
 
     int listenfd = socket(AF_INET, SOCK_STREAM, 0);
     int reuse = 1;
-    setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, (const void *)&reuse, sizeof(int)); //当服务端出现timewait状态的链接时，确保server能够重启成功。
+    setsockopt(listenfd, SOL_SOCKET, SO_REUSEPORT, (const void *)&reuse, sizeof(int)); //当服务端出现timewait状态的链接时，确保server能够重启成功。
     if (listenfd < 0)
     {
         spdlog::error("create socket error");
@@ -37,7 +37,7 @@ void ua_blackjack::Game::createServiece(void)
     int ret = bind(listenfd, (struct sockaddr *)&address, sizeof address);
     if (ret < 0)
     {
-        spdlog::error("bind error");
+        spdlog::error("bind error {0}", controlTcpPort);
         exit(1);
     }
 
@@ -116,6 +116,8 @@ void ua_blackjack::Game::createServiece(void)
                         }
                         else
                         {
+                            close(listenfd);
+                            close(fd);
                             int pid = fork();
                             if (pid == 0)
                             {
@@ -194,9 +196,11 @@ void ua_blackjack::Game::connectToParent::run(void)
             std::string str(buffer);
             if (str == "Goodbye") //爹死了
             {
+                spdlog::info("father go to the hell");
+                close(sock);
                 std::thread threadReceiveRestartCommand = std::thread(&ua_blackjack::Game::createServiece);
-                serviceStatus = ServiceStatus::HANDEL_GRPC_BY_PARENT;
-                return;
+                serviceStatus = ServiceStatus::HANDEL_GRPC_BY_ITSELF;
+                threadReceiveRestartCommand.join();
             }
 
             this->forwardRequestQueue.push(std::move(str));
@@ -272,7 +276,15 @@ void ua_blackjack::Game::connectToson::run(void)
 
             spdlog::info("receive forward request");
             auto str = this->forwardRequestQueue.front();
+            if (str == "Goodbye")
+            {
+                close(listenfd);
+            }
             send(clientSocketfd, str.c_str(), str.size() + 1, 0); //发送请求
+            if (str == "Goodbye")
+            {
+                close(clientSocketfd);
+            }
             spdlog::info("Father send protobuf to son  {0}", str);
 
             this->forwardRequestQueue.pop();

@@ -199,7 +199,7 @@ int main(int argc, char *argv[])
     std::cout << "logFilePath = " << logFilePath << std::endl;
 
     // std::cout << "start_daemon..." << std::endl;
-    // start_daemon(); //守护
+    start_daemon(); //守护
 
     auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", logFilePath);
     spdlog::set_default_logger(async_file);

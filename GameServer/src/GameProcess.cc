@@ -244,12 +244,22 @@ void *waitingSignalFromOtherModule(void *arg)
         conditionForWaitingRpc = createCondition(0);
         while (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT)
         {
-
-            while (ua_blackjack::Game::connectToParent::getInstance().forwardRequestQueue.empty())
+            while (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT)
             {
-                myConditionWait(conditionForWaitingRpc, 1); //最长1ms检查一次
-                //poll(NULL, 0, 1); //必须要有挂起函数
+                ua_blackjack::Game::connectToParent::getInstance().mtx.lock();
+                if (ua_blackjack::Game::connectToParent::getInstance().forwardRequestQueue.empty())
+                {
+                    ua_blackjack::Game::connectToParent::getInstance().mtx.unlock();
+                    myConditionWait(conditionForWaitingRpc, 1);
+                }
+                else
+                {
+                    ua_blackjack::Game::connectToParent::getInstance().mtx.unlock();
+                    break;
+                }
             }
+            if (serviceStatus != ServiceStatus::HANDEL_GRPC_BY_PARENT)
+                break;
             spdlog::info("son receive forward message from father");
             //接收到信息了
             ua_blackjack::Request request_;
