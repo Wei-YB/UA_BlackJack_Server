@@ -47,10 +47,20 @@ target_link_libraries(SocialServer
   spdlog
 )
 
-file(GLOB Stress-SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc" 
-                         "${CMAKE_CURRENT_SOURCE_DIR}/stress-test/*.cc")
-add_executable(Stress-Social "${Stress-SOURCES}")
-target_link_libraries(Stress-Social
+
+file(GLOB Stress-syn-SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc" 
+                         "${CMAKE_CURRENT_SOURCE_DIR}/stress-test/stress-test-syn.cc")
+add_executable(Stress-Social-syn "${Stress-syn-SOURCES}")
+target_link_libraries(Stress-Social-syn
+  ${_REFLECTION}
+  ${_GRPC_GRPCPP}
+  ${_PROTOBUF_LIBPROTOBUF}
+  spdlog)
+
+file(GLOB Stress-asyn-SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc" 
+                         "${CMAKE_CURRENT_SOURCE_DIR}/stress-test/stress-test-asyn.cc")
+add_executable(Stress-Social-asyn "${Stress-asyn-SOURCES}")
+target_link_libraries(Stress-Social-asyn
   ${_REFLECTION}
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF}

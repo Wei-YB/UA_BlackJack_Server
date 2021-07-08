@@ -21,9 +21,9 @@ using grpc::Status;
 
 // Service dependent
 /*************************/
-using ua_blackjack::PlayerService;
 using ua_blackjack::Request;
 using ua_blackjack::Response;
+using ua_blackjack::SocialService;
 /*************************/
 
 typedef std::chrono::milliseconds MilliSeconds;
@@ -32,17 +32,17 @@ typedef std::chrono::time_point<SteadyClock> TimePoint;
 
 class StressClient;
 
-std::string addr = "9.135.113.138:50052";
+std::string addr = "9.135.113.138:50051";
 std::shared_ptr<spdlog::logger> logger = nullptr;
 int num_query;
 int fail_cnt = 0;
 
 class StressClient {
 public:
-    explicit StressClient(std::shared_ptr<Channel> channel) : stub_(PlayerService::NewStub(channel)) {}
+    explicit StressClient(std::shared_ptr<Channel> channel) : stub_(SocialService::NewStub(channel)) {}
 
     // Assembles the client's payload and sends it to the server.
-    void RequestPlayer(Request& request) {
+    void RequestSocial(Request& request) {
         // Call object to store rpc data
         AsyncClientCall* call = new AsyncClientCall;
 
@@ -89,7 +89,7 @@ private:
         std::unique_ptr<ClientAsyncResponseReader<Response>> response_reader;
     };
 
-    std::unique_ptr<PlayerService::Stub> stub_;
+    std::unique_ptr<SocialService::Stub> stub_;
     CompletionQueue cq_;
 };
 
@@ -101,7 +101,7 @@ int main(int argc, char* argv[]) {
     assert(argc == 2);
     num_query = atoi(argv[1]);
 
-    StressClient client(grpc::CreateChannel("9.135.113.138:50052", grpc::InsecureChannelCredentials()));
+    StressClient client(grpc::CreateChannel("9.135.113.138:50051", grpc::InsecureChannelCredentials()));
 
     Request request;
     request.set_requesttype(Request::SIGNUP);
@@ -113,7 +113,7 @@ int main(int argc, char* argv[]) {
     std::thread thread_ = std::thread(&StressClient::AsyncCompleteRpc, &client);
 
     for (int i = 0; i < num_query; ++i) {
-        client.RequestPlayer(request);
+        client.RequestSocial(request);
     }
 
     thread_.join();
