@@ -14,10 +14,13 @@
 #include "UA_BlackJack.pb.h"
 #include "co_routine.h"
 #include "common.h"
+#include "ClientProxyProtocol.h"
+#include "CircularBuffer.h"
 #include "log.h"
 
 using ua_blackjack::Request;
 using ua_blackjack::Response;
+using Net::CircularBuffer;
 
 typedef std::chrono::steady_clock SteadyClock;
 typedef std::chrono::time_point<SteadyClock> TimePoint;
@@ -126,6 +129,92 @@ bool sendMsg(FileDesc fd, int type, const T &msg, char *buffer, int size)
     return true;
 }
 
+bool recvMsg(FileDesc fd, 
+             std::vector<Request> &requests, 
+             std::vector<Response> &responses, 
+             char *buffer, int size)
+{
+    int byteToRead = 0;
+    int byteRead = 0;
+    int pkgCnt = 0;
+    int failCnt = 0;
+    bool needToRead = true;
+    while (byteRead < 8 || byteRead < byteToRead)
+    {
+        int ret = read(fd, buffer + byteRead, size - byteRead);
+        if (ret < 0)
+        {
+            if (errno == EAGAIN)
+            {
+                if (failCnt++ > 5)
+                    return false;
+                struct pollfd pf = {0};
+                pf.fd = fd;
+                pf.events = (POLLIN | POLLERR | POLLHUP);
+                co_poll(co_get_epoll_ct(), &pf, 1, 1000);
+                continue;
+            }
+            logger_ptr->error("fatal error on fd {0}, details: {1}", fd, std::string(strerror(errno)));
+            return false;
+        }
+        else if (ret == 0)
+        {
+            logger_ptr->warn("fd: {}, connection shutdown by peer.");
+            return false;
+        }
+        byteRead += ret;
+        // if the buffer is full, break the loop
+        if (byteRead == size)
+        {
+            logger_ptr->warn("fd {} read data with size larger than the buffer, cannot handle it.");
+            return false;
+        }
+        // read the first pkg hdr
+        if (byteRead >= 8 && byteToRead == 0)
+        {
+            byteToRead = ntohl(*(int32_t*)(buffer + 4)) + 8;
+            pkgCnt++;
+        }
+        // it should wait for the next read for the incomplete package
+        else if (byteToRead != 0 && byteRead > byteToRead + 8)
+        {
+            byteToRead += ntohl(*(int32_t*)(buffer + byteToRead + 4)) + 8;
+            pkgCnt++;
+        }
+    }
+    logger_ptr->info("recv {0} bytes, {1} packages in total.", byteRead, pkgCnt);
+    if (pkg == 0)
+        return false;
+    // parse result
+    int offset = 0;
+    while (pkgCnt--)
+    {
+        int32_t msgType = ntohl(*(int32_t *)(buffer + offset));
+        int32_t msgLen = ntohl(*(int32_t *)(buffer + 4 + offset));
+        if (msgType == REQUEST)
+        {
+            Request request;
+            request.ParseFromArray(buffer + offset + PACKAGE_HDR_LEN, msgLen);
+            offset += PACKAGE_HDR_LEN + msgLen;
+            requests.push_back(std::move(request));
+        }
+        else if (msgType == RESPONSE)
+        {
+            Response response;
+            response.ParseFromArray(buffer + offset + PACKAGE_HDR_LEN, msgLen);
+            offset += PACKAGE_HDR_LEN + msgLen;
+            responses.push_back(std::move(response));
+        }
+        else
+        {
+            logger_ptr->warn("fd {} received an unknown type request.", fd);
+            return false;
+        }
+    }
+    return true;
+}
+
+
 template<typename T>
 bool recvMsg(FileDesc fd, int type, T &msg, char *buffer, int size)
 {
@@ -180,20 +269,16 @@ bool sendAndRecvMsg(FileDesc fd, int type1, T1 &msg1, int type2, T2 &msg2, char 
 {
     if (!sendMsg(fd, type1, msg1, buffer, size))
     {
-        logger_ptr->error("fail at send msg.");
-        
-        handle_failure(fd);
+        logger_ptr->error("fd {} fail at send msg.", fd);
         return false;
     }
     if (!recvMsg(fd, type2, msg2, buffer, size))
     {
-        logger_ptr->error("fail at recv msg.");
-        handle_failure(fd);
+        logger_ptr->error("fd {} fail at recv msg.", fd);
         return false;
     }
     return true;
 }
-
 
 static void *LobbyTestRoutine(void *arg)
 {
@@ -269,144 +354,143 @@ static void *LobbyTestRoutine(void *arg)
     return 0;
 }
 
-// static void *PlayerTestRoutine(void *arg)
-// {
-//     co_enable_hook_sys();
+static void *PlayerTestRoutine(void *arg)
+{
+    co_enable_hook_sys();
 
-//     char buffer[2048];
+    char buffer[2048];
 
-//     VPlayer *player = static_cast<VPlayer *>(arg);
-//     Request request;
-//     Response response;
-//     TimePoint begin, end;
-//     double delay = 0.0;
-//     int requestSent = 0;
+    VPlayer *player = static_cast<VPlayer *>(arg);
+    Request request;
+    Response response;
+    TimePoint begin, end;
+    double delay = 0.0;
+    int requestSent = 0;
 
-//     std::vector<Request::RequestType> types = {Request::LOGIN, Request::RANK_ME, Request::RANK_TOP,
-//                                                Request::LIST_MATCH, Request::GET_MATCH_INFO, Request::LOGOUT};
-//     std::vector<std::vector<std::string>> args_vec = {
-//         {"player_" + std::to_string(player->playerId_), "pass"}, {}, {"5"}, {}, {"1"}, {}};
+    std::vector<Request::RequestType> types = {Request::LOGIN, Request::RANK_ME, Request::RANK_TOP,
+                                               Request::LIST_MATCH, Request::GET_MATCH_INFO, Request::LOGOUT};
+    std::vector<std::vector<std::string>> args_vec = {
+        {"player_" + std::to_string(player->playerId_), "pass"}, {}, {"5"}, {}, {"1"}, {}};
 
-//     for (int i = 0; i < types.size(); ++i)
-//     {
-//         prepareRequest(request, types[i], player->uid_, 0, args_vec[i]);
-//         begin = SteadyClock::now();
-//         if (!sendRequestRecvResponse(player->fd_, request, response, buffer, sizeof(buffer)))
-//         { // fail because of IO
-//             std::cout << "player_" << player->playerId_ << " fail at " << requestTypeToStr[types[i]] << std::endl;
-//             return 0;
-//         }
-//         if (response.status() < 0)
-//         {
-//             handle_failure(player->fd_);
-//             return 0;
-//         }
-//         end = SteadyClock::now();
-//         delay =
-//             (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
-//         ++requestSent;
-//         if (types[i] == Request::LOGIN)
-//             player->uid_ = response.uid();
-//     }
-//     player->requestSent_ = requestSent;
-//     player->successful_ = true;
-//     player->avgDelay_ = delay;
-//     close(player->fd_);
-//     g_active_player--;
-//     return 0;
-// }
+    for (int i = 0; i < types.size(); ++i)
+    {
+        prepareRequest(request, types[i], player->uid_, 0, args_vec[i]);
+        begin = SteadyClock::now();
+        if (!sendRequestRecvResponse(player->fd_, request, response, buffer, sizeof(buffer)))
+        { // fail because of IO
+            std::cout << "player_" << player->playerId_ << " fail at " << requestTypeToStr[types[i]] << std::endl;
+            return 0;
+        }
+        if (response.status() < 0)
+        {
+            handle_failure(player->fd_);
+            return 0;
+        }
+        end = SteadyClock::now();
+        delay =
+            (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
+        ++requestSent;
+        if (types[i] == Request::LOGIN)
+            player->uid_ = response.uid();
+    }
+    player->requestSent_ = requestSent;
+    player->successful_ = true;
+    player->avgDelay_ = delay;
+    close(player->fd_);
+    g_active_player--;
+    return 0;
+}
 
-// static void *SocialTestRoutine(void *arg)
-// {
-//     co_enable_hook_sys();
+static void *SocialTestRoutine(void *arg)
+{
+    co_enable_hook_sys();
 
-//     char buffer[2048];
+    char buffer[2048];
 
-//     VPlayer *player = static_cast<VPlayer *>(arg);
-//     Request request;
-//     Response response;
-//     TimePoint begin, end;
-//     double delay = 0.0;
-//     int requestSent = 0;
+    VPlayer *player = static_cast<VPlayer *>(arg);
+    Request request;
+    Response response;
+    TimePoint begin, end;
+    double delay = 0.0;
+    int requestSent = 0;
 
-//     std::vector<Request::RequestType> types = {Request::LOGIN, Request::ADD_FRIEND, Request::LIST_WAITTING,
-//                                                Request::ACCEPT_FRIEND, Request::LIST_FRIEND, Request::DELETE_FRIEND,
-//                                                Request::LOGOUT};
-//     std::vector<std::vector<std::string>> args_vec = {{"player_" + std::to_string(player->playerId_), "pass"},
-//                                                       {"player_" + std::to_string((player->playerId_ + 1) % g_nPlayer)},
-//                                                       {},
-//                                                       {},
-//                                                       {},
-//                                                       {},
-//                                                       {}};
-//     std::vector<std::string> waitingList;
-//     std::vector<std::string> friendList;
-//     for (int i = 0; i < types.size();)
-//     {
-//         if (types[i] == Request::ACCEPT_FRIEND)
-//         {
-//             if (waitingList.empty())
-//             {
-//                 ++i;
-//                 continue;
-//             }
-//             for (int k = 0; k < waitingList.size(); ++k)
-//                 args_vec[i].push_back(std::move(waitingList[k]));
-//         }
-//         else if (types[i] == Request::DELETE_FRIEND)
-//         {
-//             if (friendList.empty())
-//             {
-//                 ++i;
-//                 continue;
-//             }
-//             args_vec[i].clear();
-//             args_vec[i].push_back(friendList.back());
-//             friendList.pop_back();
-//         }
+    std::vector<Request::RequestType> types = {Request::LOGIN, Request::ADD_FRIEND, Request::LIST_WAITTING,
+                                               Request::ACCEPT_FRIEND, Request::LIST_FRIEND, Request::DELETE_FRIEND,
+                                               Request::LOGOUT};
+    std::vector<std::vector<std::string>> args_vec = {{"player_" + std::to_string(player->playerId_), "pass"},
+                                                      {"player_" + std::to_string((player->playerId_ + 1) % g_nPlayer)},
+                                                      {},
+                                                      {},
+                                                      {},
+                                                      {},
+                                                      {}};
+    std::vector<std::string> waitingList;
+    std::vector<std::string> friendList;
+    for (int i = 0; i < types.size();)
+    {
+        if (types[i] == Request::ACCEPT_FRIEND)
+        {
+            if (waitingList.empty())
+            {
+                ++i;
+                continue;
+            }
+            for (int k = 0; k < waitingList.size(); ++k)
+                args_vec[i].push_back(std::move(waitingList[k]));
+        }
+        else if (types[i] == Request::DELETE_FRIEND)
+        {
+            if (friendList.empty())
+            {
+                ++i;
+                continue;
+            }
+            args_vec[i].clear();
+            args_vec[i].push_back(friendList.back());
+            friendList.pop_back();
+        }
 
-//         prepareRequest(request, types[i], player->uid_, 0, args_vec[i]);
-//         begin = SteadyClock::now();
-//         if (!sendRequestRecvResponse(player->fd_, request, response, buffer, sizeof(buffer)))
-//         { // fail because of IO
-//             logger_ptr->error("player_{0} fail at send/recv {1}", player->playerId_, requestTypeToStr[types[i]]);
-//             return 0;
-//         }
-//         if ((types[i] == Request::LOGIN) && response.status() < 0)
-//         {
-//             logger_ptr->error("player_{0} fail at {1}", player->playerId_, requestTypeToStr[types[i]]);
-//             handle_failure(player->fd_);
-//             return 0;
-//         }
-//         end = SteadyClock::now();
-//         delay =
-//             (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
-//         ++requestSent;
-//         if (types[i] == Request::LOGIN)
-//             player->uid_ = response.uid();
-//         else if (types[i] == Request::LIST_WAITTING)
-//         {
-//             for (int k = 0; k < response.args_size(); ++k)
-//                 waitingList.emplace_back(std::move(response.args(k)));
-//         }
-//         else if (types[i] == Request::LIST_FRIEND)
-//         {
-//             for (int k = 0; k < response.args_size(); ++k)
-//                 friendList.emplace_back(std::move(response.args(k)));
-//         }
-//         if (types[i] != Request::DELETE_FRIEND || friendList.empty())
-//         {
-//             ++i;
-//         }
-//     }
-//     player->requestSent_ = requestSent;
-//     player->successful_ = true;
-//     player->avgDelay_ = delay;
-//     close(player->fd_);
-//     g_active_player--;
-//     return 0;
-// }
-
+        prepareRequest(request, types[i], player->uid_, 0, args_vec[i]);
+        begin = SteadyClock::now();
+        if (!sendRequestRecvResponse(player->fd_, request, response, buffer, sizeof(buffer)))
+        { // fail because of IO
+            logger_ptr->error("player_{0} fail at send/recv {1}", player->playerId_, requestTypeToStr[types[i]]);
+            return 0;
+        }
+        if ((types[i] == Request::LOGIN) && response.status() < 0)
+        {
+            logger_ptr->error("player_{0} fail at {1}", player->playerId_, requestTypeToStr[types[i]]);
+            handle_failure(player->fd_);
+            return 0;
+        }
+        end = SteadyClock::now();
+        delay =
+            (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
+        ++requestSent;
+        if (types[i] == Request::LOGIN)
+            player->uid_ = response.uid();
+        else if (types[i] == Request::LIST_WAITTING)
+        {
+            for (int k = 0; k < response.args_size(); ++k)
+                waitingList.emplace_back(std::move(response.args(k)));
+        }
+        else if (types[i] == Request::LIST_FRIEND)
+        {
+            for (int k = 0; k < response.args_size(); ++k)
+                friendList.emplace_back(std::move(response.args(k)));
+        }
+        if (types[i] != Request::DELETE_FRIEND || friendList.empty())
+        {
+            ++i;
+        }
+    }
+    player->requestSent_ = requestSent;
+    player->successful_ = true;
+    player->avgDelay_ = delay;
+    close(player->fd_);
+    g_active_player--;
+    return 0;
+}
 
 static void *RoomCreateRoutine(void *arg)
 {
@@ -464,288 +548,209 @@ static void *GameTestRoutine(void *arg)
     VPlayer *player = static_cast<VPlayer *>(arg);
     Request request;
     Response response;
+    std::vector<Request> requests;
+    std::vector<Response> responses;
     TimePoint begin, end;
     double delay = 0.0;
     int requestSent = 0;
+    int nextStep = 0;
+    int noResponseCnt = 0;
     std::vector<std::string> roomList;
 
-STEP1:
+LOGIN:
     prepareRequest(request, Request::LOGIN, 0, 0, {"player_" + std::to_string(player->playerId_), "pass"});
     begin = SteadyClock::now();
-    if (!sendAndRecvMsg(player->fd_, REQUEST, request, RESPONSE, response, buffer, sizeof(buffer)))
+    if (!sendAndRecvMsg(player->fd_, REQUEST, request, RESPONSE, response, buffer, sizeof(buffer))
+        || response.status() < 0)
     {
         logger_ptr->error("player_{0} fail at Login.", player->playerId_);
-        return 0;
-    }
-    if (response.status() < 0)
-    {
-        logger_ptr->error("player_{0} fail at Login.", player->playerId_);
-        handle_failure(player->fd_);
-        return 0;
+        goto ERROR;
     }
     end = SteadyClock::now();
     delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
     requestSent++;
     player->uid_ = response.uid();
-// STEP2:
-//     prepareRequest(request, Request::QUICK_MATCH, player->uid_, 0, {});
-//     begin = SteadyClock::now();
-//     if (!sendAndRecvMsg(player->fd_, REQUEST, request, RESPONSE, response, buffer, sizeof(buffer)))
-//     {
-//         logger_ptr->error("player_{0} fail at sending QUICK MATCH.", player->playerId_);
-//         return 0;
-//     }
-//     end = SteadyClock::now();
-//     delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
-//     requestSent++;
-//     if (response.status() > -1)
-//         goto STEP6;
-// STEP3:
-//     prepareRequest(request, Request::ROOM_LIST, player->uid_, 0, {});
-//     begin = SteadyClock::now();
-//     if (!sendAndRecvMsg(player->fd_, REQUEST, request, RESPONSE, response, buffer, sizeof(buffer)))
-//     {
-//         logger_ptr->error("player_{0} fail at sending ROOM LIST.");
-//         return 0;
-//     }
-//     end = SteadyClock::now();
-//     delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
-//     requestSent++;
-//     if (response.status() < 0 || response.args_size() == 0)
-//         goto STEP11;
-//     for (int i = 0; i < response.args_size(); ++i)
-//     {
-//         roomList.push_back(std::move(response.args(i)));
-//     }
-STEP4:
+JOINROOM:
     prepareRequest(request, Request::JOIN_ROOM, player->uid_, 0, {std::to_string(player->playerId_ / 4 + 1)});
-    logger_ptr->info("player_{0} try to JOIN ROOM {1}.", player->playerId_, player->playerId_ / 4 + 1);
     begin = SteadyClock::now();
-    if (!sendAndRecvMsg(player->fd_, REQUEST, request, RESPONSE, response, buffer, sizeof(buffer)))
+    if (!sendAndRecvMsg(player->fd_, REQUEST, request, RESPONSE, response, buffer, sizeof(buffer))
+        || response.status() < 0)
     {
-        logger_ptr->error("player_{0} fail at sending JOIN_ROOM.");
-        return 0;
+        logger_ptr->error("player_{0} fail at JOIN_ROOM.");
+        goto ERROR;
     }
     end = SteadyClock::now();
     delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
     requestSent++;
-    if (response.status() > -1)
-        goto STEP5;
-    logger_ptr->error("player_{0} fail at to JOIN_ROOM, logout.", player->playerId_);
-    goto STEP11;
-STEP5:
+READY:
     prepareRequest(request, Request::READY, player->uid_, 0, {});
     begin = SteadyClock::now();
-    if (!sendAndRecvMsg(player->fd_, REQUEST, request, RESPONSE, response, buffer, sizeof(buffer)))
+    if (!sendAndRecvMsg(player->fd_, REQUEST, request, RESPONSE, response, buffer, sizeof(buffer))
+        || response.status() < 0)
     {
-        logger_ptr->error("player_{0} fail at sending ready.");
-        return 0;
+        logger_ptr->error("player_{0} fail at READY.");
+        goto ERROR;
     }
     end = SteadyClock::now();
     delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
     requestSent++;
-    if (response.status() < 0)
-    {
-        logger_ptr->error("player_{0} fail to ready", player->playerId_);
-        goto STEP10;
-    }
-STEP6:  // recv bet request
-    // prepareResponse(response, 1, player->uid_, 0, {"Bet", "100"});
-    logger_ptr->info("player_{0} ready to bet", player->playerId_);
+BET:  
+    requests.clear(); responses.clear();
     begin = SteadyClock::now();
-    if (!recvMsg(player->fd_, REQUEST, request, buffer, sizeof(buffer)) 
-        || request.args_size() == 0 || request.args(0) != "start")
+    if (!recvMsg(player->fd_, requests, responses, buffer, sizeof(buffer))
+        || requests.size() != 1 || requests[0].args_size() == 0 
+        || requests[0].args(0) != "start")
     {
         logger_ptr->error("player_{} fail to recv bet requets from server", player->playerId_);
-        handle_failure(player->fd_);
-        return 0;
+        goto ERROR;
     }
-    logger_ptr->info("player_{0} recv bet request", player->playerId_);
-    prepareResponse(response, 1, player->uid_, request.stamp(), {"Bet", "100"});
+    prepareResponse(response, 1, player->uid_, requests[0].stamp(), {"Bet", "100"});
     if (!sendMsg(player->fd_, RESPONSE, response, buffer, sizeof(buffer)))
     {
         logger_ptr->error("player_{} fail to send bet response to server", player->playerId_);
-        handle_failure(player->fd_);
-        return 0;
+        goto ERROR;
     }
-    logger_ptr->info("player_{0} send bet response", player->playerId_);
     end = SteadyClock::now();
     delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
     requestSent++;
     // check if I am a dealer
-    if (request.args_size() > 1)
+    if (requests[0].args_size() > 1)
     {
         logger_ptr->info("player_{0} is dealer", player->playerId_);
         goto STEP9;
     }
-STEP7:  // recv hit request
-    // prepareResponse(response, 1, player->uid_, 0, {"update"});
+STAND:
     while (true)
     {
+        requests.clear(); responses.clear();
         begin = SteadyClock::now();
-        if (!recvMsg(player->fd_, REQUEST, request, buffer, sizeof(buffer)) 
-            || request.args_size() == 0)
+        if (!recvMsg(player->fd_, requests, responses, buffer, sizeof(buffer))
+            || requests.empty())
         {
-            logger_ptr->error("player_{} fail to recv hit requets from server", player->playerId_);
-            handle_failure(player->fd_);
-            return 0;
+            logger_ptr->error("player_{} fail to recv hit/end requets from server", player->playerId_);
+            goto ERROR;
         }
         
-        if (request.args(0) == "update")
+        for (int i = 0; i < requests.size(); ++i)
         {
-            logger_ptr->info("player_{0} recv update request", player->playerId_);
-            prepareResponse(response, 1, player->uid_, request.stamp(), {"update"});
+            if (requests[i].args(0) == "update")
+            {
+                prepareResponse(response, 1, player->uid_, requests[i].stamp(), {"update"});
+            }
+            else if (requests[i].args(0) == "hit")
+            {
+                prepareResponse(response, 1, player->uid_, requests[i].stamp(), {"Stand"});
+                nextStep = 1;
+            }
+            else if (requests[i].args(0) == "end")
+            {
+                prepareResponse(response, 1, player->uid_, requests[i].stamp(), {"end"});
+                nextStep = 2;
+            }
             if (!sendMsg(player->fd_, RESPONSE, response, buffer, sizeof(buffer)))
             {
-                logger_ptr->error("player_{} fail to send update response to server", player->playerId_);
-                handle_failure(player->fd_);
-                return 0;
+                logger_ptr->error("player_{0} fail to send {1} response to server", player->playerId_, requests[i].args(0));
+                goto ERROR;
             }
             end = SteadyClock::now();
             delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
             requestSent++;
         }
-        else
+        if (nextStep == 1)
         {
-            logger_ptr->info("player_{0} recv hit request", player->playerId_);
             break;
         }
+        else if (nextStep == 2)
+        {
+            goto LEAVEROOM;
+        }  
     }
-    if (request.args(0) == "hit" || request.args(0) == "Hit")
-    {
-        prepareResponse(response, 1, player->uid_, request.stamp(), {"Hit"});
-    }
-    else
-    {
-        prepareResponse(response, 1, player->uid_, request.stamp(), {"end"});
-    }
-    
-    if (!sendMsg(player->fd_, RESPONSE, response, buffer, sizeof(buffer)))
-    {
-        logger_ptr->error("player_{} fail to send hit response to server", player->playerId_);
-        handle_failure(player->fd_);
-        return 0;
-    }
-    end = SteadyClock::now();
-    logger_ptr->info("player_{0} send hit response", player->playerId_);
-    delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
-    requestSent++;
-    if (request.args(0) != "hit" && request.args(0) != "Hit")
-    {
-        goto STEP10;
-    }
-STEP8:  // recv stand stand request
-    
+END:  
     while (true)
     {
+        requests.clear(); responses.clear();
         begin = SteadyClock::now();
-        if (!recvMsg(player->fd_, REQUEST, request, buffer, sizeof(buffer)) 
-            || request.args_size() == 0)
+        if (!recvMsg(player->fd_, requests, responses, buffer, sizeof(buffer))
+            || requests.empty())
         {
-            logger_ptr->error("player_{} fail to recv stand requets from server", player->playerId_);
-            handle_failure(player->fd_);
-            return 0;
+            logger_ptr->error("player_{} fail to recv end requets from server", player->playerId_);
+            goto ERROR;
         }
-        if (request.args(0) == "update")
+        for (int i = 0; i < requests.size(); ++i)
         {
-            logger_ptr->info("player_{0} recv update request", player->playerId_);
-            prepareResponse(response, 1, player->uid_, request.stamp(), {"update"});
+            if (requests[i].args(0) == "update")
+            {
+                prepareResponse(response, 1, player->uid_, requests[i].stamp(), {"update"});
+            }
+            else if (requests[i].args(0) == "hit")
+            {
+                prepareResponse(response, 1, player->uid_, requests[i].stamp(), {"Stand"});
+                logger_ptr->warn("player_{} received an hit package again after he standed.", player->playerId_);
+            }
+            else if (requests[i].args(0) == "end")
+            {
+                prepareResponse(response, 1, player->uid_, requests[i].stamp(), {"end"});
+                nextStep = 1;
+            }
             if (!sendMsg(player->fd_, RESPONSE, response, buffer, sizeof(buffer)))
             {
-                logger_ptr->error("player_{} fail to send update response to server", player->playerId_);
-                handle_failure(player->fd_);
-                return 0;
+                logger_ptr->error("player_{0} fail to send {1} response to server", player->playerId_, requests[i].args(0));
+                goto ERROR;
             }
             end = SteadyClock::now();
             delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
             requestSent++;
         }
-        else
+        if (nextStep == 1)
         {
-            logger_ptr->info("player_{0} recv hit/end request", player->playerId_);
             break;
-        }
+        } 
     }
-    if (request.args(0) == "hit" || request.args(0) == "Hit")
-    {
-        prepareResponse(response, 1, player->uid_, request.stamp(), {"Stand"});
-    }
-    else
-    {
-        prepareResponse(response, 1, player->uid_, request.stamp(), {"end"});
-    }
-    if (!sendMsg(player->fd_, RESPONSE, response, buffer, sizeof(buffer)))
-    {
-        logger_ptr->error("player_{} fail to send stand/end response to server", player->playerId_);
-        handle_failure(player->fd_);
-        return 0;
-    }
-    logger_ptr->info("player_{0} send stand/end response", player->playerId_);
-    end = SteadyClock::now();
-    delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
-    requestSent++;
-    if (request.args(0) == "end")
-    {
-        logger_ptr->info("player_{0} leave room now", player->playerId_);
-        goto STEP10;
-    }
-STEP9:  // recv stand stand request
-    
-    while (true)
-    {
-        begin = SteadyClock::now();
-        if (!recvMsg(player->fd_, REQUEST, request, buffer, sizeof(buffer)) 
-            || request.args_size() == 0)
-        {
-            logger_ptr->error("player_{} fail to recv stand requets from server", player->playerId_);
-            handle_failure(player->fd_);
-            return 0;
-        }
-        if (request.args(0) == "update")
-        {
-            logger_ptr->info("player_{0} recv update request", player->playerId_);
-            prepareResponse(response, 1, player->uid_, request.stamp(), {"update"});
-            if (!sendMsg(player->fd_, RESPONSE, response, buffer, sizeof(buffer)))
-            {
-                logger_ptr->error("player_{} fail to send update response to server", player->playerId_);
-                handle_failure(player->fd_);
-                return 0;
-            }
-            end = SteadyClock::now();
-            delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
-            requestSent++;
-        }
-        else
-        {
-            logger_ptr->info("player_{0} recv end request", player->playerId_);
-            break;
-        }
-    }
-    prepareResponse(response, 1, player->uid_, request.stamp(), {"end"});
-    if (!sendMsg(player->fd_, RESPONSE, response, buffer, sizeof(buffer)))
-    {
-        logger_ptr->error("player_{} fail to send end response to server", player->playerId_);
-        handle_failure(player->fd_);
-        return 0;
-    }
-    end = SteadyClock::now();
-    delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
-    requestSent++;
-STEP10:  // send leave room
+LEAVEROOM:  // recv stand stand request
     prepareRequest(request, Request::LEAVE_ROOM, player->uid_, 0, {});
     begin = SteadyClock::now();
-    logger_ptr->info("player_{0} try to leave room", player->playerId_);
-    if (!sendAndRecvMsg(player->fd_, REQUEST, request, RESPONSE, response, buffer, sizeof(buffer)))
+    if (!sendMsg(player->fd_, REQUEST, request, buffer, sizeof(buffer)))
     {
-        logger_ptr->error("player_{0} fail at sending LEAVE ROOM.", player->playerId_);
-        return 0;
+        logger_ptr->error("player_{} fail to send LEAVE ROOM request to server.", player->playerId_);
+        goto ERROR;
     }
-    end = SteadyClock::now();
-    delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
-    requestSent++;
-STEP11:
-    prepareRequest(request, Request::LOGOUT, player->uid_, 0, {});
-    begin = SteadyClock::now();
+    while (true)
+    {
+        requests.clear(); responses.clear();
+        begin = SteadyClock::now();
+        if (!recvMsg(player->fd_, requests, responses, buffer, sizeof(buffer)))
+        {
+            logger_ptr->error("player_{} fail to recv LEAVE_ROOM from server", player->playerId_);
+            goto ERROR;
+        }
+        if (responses.empty())
+        {
+            if (noResponseCnt++ > 3)
+            {
+                logger_ptr->error("player_{} fail to recv LEAVE_ROOM from server", player->playerId_);
+                goto ERROR;
+            }
+        }
+        for (int i = 0; i < requests.size(); ++i)
+        {
+            prepareResponse(response, 1, player->uid_, requests[i].stamp(), {requests[i].args(0)});
+            if (!sendMsg(player->fd_, RESPONSE, response, buffer, sizeof(buffer)))
+            {
+                logger_ptr->error("player_{0} fail to send {1} response to server", player->playerId_, requests[i].args(0));
+                goto ERROR;
+            }
+            end = SteadyClock::now();
+            delay = (delay * requestSent + std::chrono::duration_cast<MilliSeconds>(end - begin).count()) / (requestSent + 1);
+            requestSent++;
+        }
+        if (nextStep == 1)
+        {
+            break;
+        }
+    }
+ERROR:
+    
+    
     logger_ptr->info("player_{0} try to logout", player->playerId_);
     if (!sendAndRecvMsg(player->fd_, REQUEST, request, RESPONSE, response, buffer, sizeof(buffer)))
     {

@@ -176,7 +176,6 @@ private:
                     std::lock_guard<std::mutex> guard(stampToAsyncCallLock_);
                     stampToAsyncCall_.erase(newStamp);
                     returnFailureResponse(call, "User busy or do not exist.");
-                    return;
                 }
                 
                 return;
