@@ -1,8 +1,10 @@
 #include <assert.h>
 #include <grpcpp/grpcpp.h>
+#include <signal.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/spdlog.h>
 
+#include <atomic>
 #include <iostream>
 #include <memory>
 #include <string>
@@ -34,11 +36,16 @@ class StressClient;
 
 std::string addr = "9.135.113.138:50052";
 std::shared_ptr<spdlog::logger> logger = nullptr;
-int num_query;
+
+std::vector<int> query_cnt;
+std::vector<int> fail_cnt;
+
+int thread_num;
+int total_time;
 
 class StressClient {
 public:
-    explicit StressClient(std::shared_ptr<Channel> channel) : stub_(PlayerService::NewStub(channel)), cnt_(0) {}
+    explicit StressClient(std::shared_ptr<Channel> channel) : stub_(PlayerService::NewStub(channel)) {}
 
     // Assembles the client's payload and sends it to the server.
     void RequestPlayer(Request& request) {
@@ -55,24 +62,23 @@ public:
 
     // Loop while listening for completed responses.
     // Prints out the response from the server.
-    void AsyncCompleteRpc() {
+    void AsyncCompleteRpc(int tid) {
         void* got_tag;
         bool ok = false;
 
         // Block until the next result is available in the completion queue "cq".
         while (cq_.Next(&got_tag, &ok)) {
-            ++cnt_;
+            ++query_cnt[tid];
+
             AsyncClientCall* call = static_cast<AsyncClientCall*>(got_tag);
 
             GPR_ASSERT(ok);
-
-            if (!call->status.ok()) {
-                logger->error("gRpc Request Error {0} : {1}", call->status.error_code(), call->status.error_message());
+            if (call->status.ok()) {
+                ++query_cnt[tid];
+            } else {
+                ++fail_cnt[tid];
             }
-
             delete call;
-
-            if (cnt_ == num_query) break;
         }
     }
 
@@ -90,40 +96,68 @@ private:
 
     std::unique_ptr<PlayerService::Stub> stub_;
     CompletionQueue cq_;
-    int cnt_;
 };
 
-int main(int argc, char* argv[]) {
-    spdlog::set_level(spdlog::level::err);
-    logger = spdlog::basic_logger_mt("basic_logger", "./StressLog-asyn.log");
-    logger->flush_on(spdlog::level::trace);
-    // logger->set_level(spdlog::level::err);
+void handler(int sig) {
+    int total_query_cnt = 0;
+    int total_fail_cnt = 0;
+    for (int i = 0; i < query_cnt.size(); ++i) {
+        total_query_cnt += query_cnt[i];
+        total_fail_cnt += fail_cnt[i];
+    }
 
-    assert(argc == 2);
-    num_query = atoi(argv[1]);
+    std::cout << "total request: " << total_query_cnt << std::endl;
+    std::cout << "faild request: " << total_fail_cnt << std::endl;
+    std::cout << "total cost:    " << total_time * 1000 << " ms" << std::endl;
+    std::cout << "QPS: " << total_query_cnt / total_time << std::endl;
 
+    exit(0);
+}
+
+void Stress(int tid) {
     StressClient client(grpc::CreateChannel("9.135.113.138:50052", grpc::InsecureChannelCredentials()));
+    std::thread thread_ = std::thread(&StressClient::AsyncCompleteRpc, &client, tid);
 
     Request request;
     request.set_requesttype(Request::SIGNUP);
     request.set_uid(-1);
     request.set_stamp(SteadyClock::now().time_since_epoch().count());
-
-    auto start = SteadyClock::now();
-
-    std::thread thread_ = std::thread(&StressClient::AsyncCompleteRpc, &client);
-
-    for (int i = 0; i < num_query; ++i) {
+    while (true) {
         client.RequestPlayer(request);
     }
+}
 
-    thread_.join();
+int main(int argc, char* argv[]) {
+    logger = spdlog::basic_logger_mt("basic_logger", "./StressLog-asyn.log");
+    logger->flush_on(spdlog::level::trace);
+    logger->set_level(spdlog::level::err);
 
-    auto end = SteadyClock::now();
+    struct sigaction sa;
+    sa.sa_flags = 0;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_handler = handler;
+    if (sigaction(SIGALRM, &sa, nullptr) == -1) {
+        logger->error("sigaction error");
+        exit(EXIT_FAILURE);
+    }
 
-    auto time = std::chrono::duration_cast<MilliSeconds>(end - start).count();
+    assert(argc == 3);
 
-    std::cout << "QPS: " << num_query * 1000 / time << std::endl;
+    thread_num = atoi(argv[1]);
+    total_time = atoi(argv[2]);
+
+    query_cnt.resize(thread_num, 0);
+    fail_cnt.resize(thread_num, 0);
+
+    alarm(total_time);
+    std::vector<std::thread> threads;
+    for (int i = 0; i < thread_num; ++i) {
+        threads.emplace_back(Stress, i);
+    }
+
+    for (int i = 0; i < thread_num; ++i) {
+        threads[i].join();
+    }
 
     return 0;
 }
