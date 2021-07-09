@@ -1,8 +1,10 @@
 #include <assert.h>
 #include <grpcpp/grpcpp.h>
+#include <signal.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/spdlog.h>
 
+#include <atomic>
 #include <iostream>
 #include <memory>
 #include <string>
@@ -35,7 +37,9 @@ class StressClient;
 std::string addr = "9.135.113.138:50052";
 std::shared_ptr<spdlog::logger> logger = nullptr;
 int num_query;
+int cnt = 0;
 int fail_cnt = 0;
+std::atomic<bool> timeout;
 
 class StressClient {
 public:
@@ -59,7 +63,7 @@ public:
     void AsyncCompleteRpc() {
         void* got_tag;
         bool ok = false;
-        int cnt = 0;
+
         // Block until the next result is available in the completion queue "cq".
         while (cq_.Next(&got_tag, &ok)) {
             ++cnt;
@@ -73,7 +77,7 @@ public:
 
             delete call;
 
-            if (cnt == num_query) break;
+            if (timeout) break;
         }
     }
 
@@ -93,13 +97,25 @@ private:
     CompletionQueue cq_;
 };
 
+void handler(int sig) { timeout = true; }
+
 int main(int argc, char* argv[]) {
     logger = spdlog::basic_logger_mt("basic_logger", "./StressLog-asyn.log");
     logger->flush_on(spdlog::level::trace);
     logger->set_level(spdlog::level::err);
 
+    struct sigaction sa;
+    sa.sa_flags = 0;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_handler = handler;
+    if (sigaction(SIGALRM, &sa, nullptr) == -1) {
+        logger->error("sigaction error");
+        exit(EXIT_FAILURE);
+    }
+
     assert(argc == 2);
-    num_query = atoi(argv[1]);
+    int time = atoi(argv[1]);
+    // num_query = atoi(argv[1]);
 
     StressClient client(grpc::CreateChannel("9.135.113.138:50052", grpc::InsecureChannelCredentials()));
 
@@ -112,20 +128,28 @@ int main(int argc, char* argv[]) {
 
     std::thread thread_ = std::thread(&StressClient::AsyncCompleteRpc, &client);
 
-    for (int i = 0; i < num_query; ++i) {
+    timeout = false;
+    alarm(time);
+
+    while (!timeout) {
         client.RequestPlayer(request);
     }
+
+    // for (int i = 0; i < num_query; ++i) {
+    //     client.RequestPlayer(request);
+    // }
 
     thread_.join();
 
     auto end = SteadyClock::now();
 
-    auto time = std::chrono::duration_cast<MilliSeconds>(end - start).count();
+    auto time_clock = std::chrono::duration_cast<MilliSeconds>(end - start).count();
 
-    std::cout << "total request: " << num_query << std::endl;
+    std::cout << "total request: " << cnt << std::endl;
     std::cout << "faild request: " << fail_cnt << std::endl;
-    std::cout << "total cost:    " << time << " ms" << std::endl;
-    std::cout << "QPS: " << num_query * 1000 / time << std::endl;
+    std::cout << "total cost:    " << time << " s" << std::endl;
+    // std::cout << "total cost:    " << time_clock << " ms" << std::endl;
+    std::cout << "QPS: " << cnt / time << std::endl;
 
     return 0;
 }
