@@ -56,16 +56,21 @@ public:
 
     void CheckStatus(const Status& status);
     int Name2Uid(const std::string& name);
-    void AddFriend(Request& request_fri, Response& reply, int uid);
+    void AddFriend(Request& request_fri, Response& reply, Request& request, int uid);
     void AcceptFriend(Request& request_fri, Response& reply, Request& request, int uid);
     void ListFriend(Request& request, Response& reply);
     void ListWaitingFriend(Request& request, Response& reply);
     void DeleteFriend(Request& request_fri, Response& reply, Request& request, int uid);
     void DeleteWaitFriend(Request& request, Response& reply, int friend_id);
     std::string Uid2Name(int uid);
+    bool IsFriend(int uid, int fri_uid);
+    bool IsWaitingFriend(int uid, int fri_uid);
 
 private:
     std::unique_ptr<DatabaseService::Stub> stub_;
+
+    std::unordered_map<int, std::string> name_cache_;
+    std::unordered_map<std::string, int> uid_cache_;
 };
 }  // namespace social_client
 }  // namespace ua_blackjack

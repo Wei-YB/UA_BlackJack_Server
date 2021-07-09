@@ -14,7 +14,7 @@ make -j
 As for how to configure and deploy each service, go to their subdirectories and check the README.md for instructions.
 
 ## Server Framework
-![image](https://git.woa.com/ruiqizhang/UA_BlackJack_Server/raw/master/images/ServerFramework.png)
+![image](./image/ServerFrameWork.png)
 
 ## Team members and division of work
 The server is divided into six modules and each of them is assigned to certain members of the team. 
@@ -25,3 +25,4 @@ The server is divided into six modules and each of them is assigned to certain m
 + Room: kristtong@tencent.com
 + Social: aaronlv@kristtong@tencent.com
 + DB (database): owenybwei@tencent.com
+

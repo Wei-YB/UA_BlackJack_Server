@@ -1,9 +1,11 @@
 #include <memory>
+#include <mutex>
 #include "Client.h"
 #include "TcpConnection.h"
 #include "ClientProxyProtocol.h"
 #include "common.h"
 #include "EventLoop.h"
+#include "Timer.h"
 #include "log.h"
 
 #include "UA_BlackJack.pb.h"
@@ -14,79 +16,103 @@ using ua_blackjack::Response;
 using namespace Net;
 
 
+
 Client::Client(std::shared_ptr<TcpConnection> conn,
-           const std::function<void(FileDesc, Request &)> &requestCallBack,
-           const std::function<void(Response &)> &responseCallBack,
+           const std::function<void(FileDesc, Request)> &requestCallBack,
+           const std::function<void(Response)> &responseCallBack,
            const std::function<void(FileDesc)> &disconnectCallBack,
            const std::function<void(FileDesc)> &errorCallBack)
        : conn_(conn), 
+        // timer_(std::make_shared<Timer>(conn_->eventLoop(), std::bind(&Client::OnLeave, this))),
         requestCallBack_(requestCallBack),
         responseCallBack_(responseCallBack),
         errorCallBack_(errorCallBack),
         disconnectCallBack_(disconnectCallBack) 
 {
-    conn_->SetInputCallBack(std::bind(&Client::OnMessages, this, std::placeholders::_1, std::placeholders::_2));
+    conn_->SetInputCallBack(std::bind(&Client::OnMessages, this, std::placeholders::_1));
     conn_->SetOutPutCallBack(std::bind(&Client::OnSendReady, this));
     conn_->SetHupCallBack(std::bind(&Client::OnLeave, this));
     conn_->SetErrorCallBack(std::bind(&Client::OnError, this));
+    conn_->SetEncoder(std::bind(pack, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
+    //conn_->SetDecoder(std::bind(unpack, std::placeholders::_1, std::placeholders::_2));
+    conn_->SetDecoder(std::bind(unpack_sp, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
+
+    
 }
 
 int Client::SendRequest(const Request &request)
 {
-    int ret = 0;
-    std::string rawRequest = request.SerializeAsString();
-    std::string pkgData(8 + rawRequest.size(), '\0');
-    NS::pack(NS::REQUEST, rawRequest, &pkgData[0], pkgData.size());
-    {   // when we try to write data to the lower tcp socket, we need to hold a lock
-        std::lock_guard<std::mutex> guard(connLock_);
-        if (pkgData.size() > conn_->GetWriteBufferRoom())
-        {   // TODO: maybe we can buffer this request
-            logger_ptr->info("In gRPC server thread: Try to send request to client (uid: {}), but tcp buffer has no free room.", request.uid());
-            return -1;
-        }
-        ret = conn_->Send(pkgData);
+    // std::string rawRequest(std::move(request.SerializeAsString()));
+    // when we try to write data to the lower tcp socket, we need to hold a lock
+    std::lock_guard<std::mutex> guard(connLock_);
+    if (0 > pack_sp(request, conn_->writeBuffer_))
+    {
+        logger_ptr->warn("In gRPC service thread: fail to pack request to buffer.");
+        return -1;
     }
-    return ret;
+    return conn_->Send(REQUEST, "");    
+    //return conn_->Send(REQUEST, rawRequest);
 }
 
 int Client::SendResponse(const Response &response)
 {
-    int ret = 0;
-    std::string rawResponse = response.SerializeAsString();
-    std::string pkgData(8 + rawResponse.size(), '\0');
-    NS::pack(NS::RESPONSE, rawResponse, &pkgData[0], pkgData.size());
-    {
-        std::lock_guard<std::mutex> guard(connLock_);
-        if (pkgData.size() > conn_->GetWriteBufferRoom())
-        {   // TODO: maybe we can buffer this request
-            logger_ptr->info("In gRPC server thread: Try to send request to response (uid: {}), but tcp buffer has no free room.", response.uid());
-            return -1;
-        }
-        ret = conn_->Send(pkgData);
-    }
-    return ret;
+    std::lock_guard<std::mutex> guard(connLock_);
+    if (0 > pack_sp(response, conn_->writeBuffer_))
+        return -1;
+    
+    //std::string rawResponse(std::move(response.SerializeAsString()));
+    // when we try to write data to the lower tcp socket, we need to hold a lock
+    
+    return conn_->Send(RESPONSE, "");
 }
 
-void Client::OnMessages(std::vector<Request> &requests, std::vector<Response> &responses)
+int Client::EnableTimeout(int sec)
 {
-    logger_ptr->info("In main thread: tcp (sockfd: {0}) get {1} requests and {2} response from client (uid: {3})", 
-                                            conn_->SockFd(), requests.size(), responses.size(), uid_);
-    if (requestCallBack_)
-    {
-        for (int i = 0; i < requests.size(); ++i)
-        {
-            requestCallBack_(conn_->SockFd(), requests[i]);
-        }
-    }
-    if (responseCallBack_)
-    {
-        for (int i = 0; i < responses.size(); ++i)
-        {
-            responseCallBack_(responses[i]);
-        }
-    }
+    // timer_->SetExpired(sec); // if an unlogin client is idle for 2 min, close it
 }
 
-void Client::OnLeave() {disconnectCallBack_(conn_->SockFd());}
+int Client::DisableTimeout()
+{
+    // timer_->SetExpired(0);
+}
+
+FileDesc Client::fd() const {return conn_->SockFd();}
+
+//void Client::OnMessages(std::vector<std::pair<int32_t, std::string>> msgs)
+void Client::OnMessages(std::vector<std::pair<int32_t, StringPiece>> msgs)
+{
+    int requestCnt = 0, responseCnt = 0;
+    for (int i = 0; i < msgs.size(); ++i)
+    {
+        if (msgs[i].first == REQUEST)
+        {
+            Request request;
+            ParseFromStringPiece(request, msgs[i].second);
+            //request.ParseFromString(std::get<1>(msgs[i]));
+            if (requestCallBack_) requestCallBack_(conn_->SockFd(), std::move(request));
+            requestCnt++;
+        }
+        else if (msgs[i].first == RESPONSE)
+        {
+            Response response;
+            //response.ParseFromString(std::get<1>(msgs[i]));
+            ParseFromStringPiece(response, msgs[i].second);
+            if (responseCallBack_) responseCallBack_(std::move(response));
+            responseCnt++;
+        }
+    }
+    logger_ptr->info("In main thread: tcp (sockfd: {0}) get {1} requests and {2} response from client (uid: {3})", conn_->SockFd(), requestCnt, responseCnt, uid_);
+}
+
+void Client::OnLeave() 
+{
+    logger_ptr->info("In main thread: client (uid: {}) is leaving.", uid_);
+    if (disconnectCallBack_) 
+    {
+        disconnectCallBack_(conn_->SockFd());
+        return;
+    }
+    logger_ptr->info("In main thread: client (uid: {}) has no chance to tell the proxy server.", uid_);
+}
 
 void Client::OnError() {errorCallBack_(conn_->SockFd());}

@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.16)
+cmake_minimum_required (VERSION 3.5.1)
 set(CMAKE_CXX_STANDARD 17)
 
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
@@ -29,12 +29,12 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/acl/lib_acl_cpp/)
 
 # include(${CMAKE_CURRENT_SOURCE_DIR}/../cmake/common.cmake)
 
+file(GLOB GRPC_SOURCE  "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc")
+file(GLOB DATABASE_SCOURE "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc" 
+                 )
 
-file(GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc" 
-                  "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc")
 
-
-add_executable(DatabaseServer "${SOURCES}")
+add_executable(DatabaseServer "${GRPC_SOURCE}" "${DATABASE_SCOURE}")
 
 target_link_libraries(DatabaseServer 
 ${_REFLECTION} 
@@ -45,3 +45,12 @@ protocol_static
 acl_static 
 pthread 
 spdlog)
+
+add_executable(DatabaseBench "./Bench/bench.cc" ${GRPC_SOURCE})
+target_link_libraries(DatabaseBench 
+${_REFLECTION} 
+${_GRPC_GRPCPP} 
+${_PROTOBUF_LIBPROTOBUF} 
+pthread 
+spdlog)
+

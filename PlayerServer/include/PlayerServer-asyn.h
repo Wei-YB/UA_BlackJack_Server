@@ -38,7 +38,7 @@ public:
     }
 
     // There is no shutdown handling in this code.
-    void Run();
+    void Run(std::string& DBServer_ip, std::string& DBServer_port, std::string& listen_port);
 
 private:
     // Class encompasing the state and logic needed to serve a request.

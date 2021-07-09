@@ -47,6 +47,9 @@ int PlayerClient::Name2Uid(const std::string& name) {
 }
 
 std::string PlayerClient::GetScore(int uid) {
+    // if (score_cache_.find(uid) != score_cache_.end()) {
+    //     return score_cache_[uid];
+    // }
     ClientContext context;
     Response reply;
     Request request;
@@ -59,10 +62,15 @@ std::string PlayerClient::GetScore(int uid) {
     CheckStatus(stub_->Notify(&context, request, &reply));
     logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
 
+    // return score_cache_[uid] = reply.args()[0];
     return reply.args()[0];
 }
 
 std::string PlayerClient::Uid2Name(int uid) {
+    if (name_cache_.find(uid) != name_cache_.end()) {
+        return name_cache_[uid];
+    }
+
     ClientContext context;
     Response reply;
     Request request;
@@ -71,8 +79,11 @@ std::string PlayerClient::Uid2Name(int uid) {
     request.set_uid(uid);
     request.set_stamp(std::time(nullptr));
 
+    logger->info("Send GET_NAME to Database Server");
     CheckStatus(stub_->Notify(&context, request, &reply));
-    return reply.args()[0];
+    logger->info("Got reply, status: {0}, uid: {1}, stamp: {2}", reply.status(), reply.uid(), reply.stamp());
+
+    return name_cache_[uid] = reply.args()[0];
 }
 
 Response PlayerClient::RequestDB(Request& request) {

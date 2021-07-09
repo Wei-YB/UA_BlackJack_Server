@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5.1)
+cmake_minimum_required(VERSION 3.5)
 
 project(UA_BLACKJACK_SERVER C CXX)
 
@@ -19,6 +19,7 @@ set(BUILD_ARGS LOBBY DATABASE SOCIAL PLAYER GAME CLIENT PROXY)
 set(BUILD_ALL ON)
 foreach(arg IN LISTS BUILD_ARGS)
     if(${arg})
+        message(STATUS "bulid_all off")
         set(BUILD_ALL OFF)
     endif()
 endforeach()

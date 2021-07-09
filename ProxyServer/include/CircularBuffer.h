@@ -52,6 +52,22 @@ struct CircularBuffer
     int m_tail;
 };
 
+// this struct can greately reduce the number of memcpy or malloc for string
+struct StringPiece
+{
+    CircularBuffer *cirBuf_;
+    int length_;
+    int head_;
+
+    StringPiece(CircularBuffer *cirBuf, int start, int len) 
+            : cirBuf_(cirBuf), head_(start), length_(len) {}
+    
+    char *head() const {return cirBuf_->m_buffer + head_;}
+    int length() const {return length_;}
+    bool continuous() const;
+    void free();
+};
+
 int put(CircularBuffer &buffer, const char *src, size_t n);
 
 int get(CircularBuffer &buffer, char *dst, size_t n);
@@ -157,62 +173,58 @@ int writeAs(CircularBuffer &buffer, T &in, bool netByteOrder = false)
 
 void circularBufferToString(const CircularBuffer &buffer, size_t length, std::string &str);
 
+std::string circularBufferToString(const CircularBuffer &buffer, size_t length);
+
+
+// for performance concern, T should be movable class
+// this class is not thread safe, and I recommend 
+// passing notifications instead of using lock for 
+// synchronization.  
 template<typename T>
 class CircularQueue {
 public:
-    CircularQueue(size_t capacity = QUEUE_CAPACITY) : m_capacity(capacity), m_head(0), m_tail(0)
+    CircularQueue(size_t capacity) : capacity_(capacity), head_(0), tail_(0)
     {
         // to realize lock-free operations, we need to assign one more idel item
-        m_buffer = new T[capacity + 1];
-        if (!m_buffer)
+        buffer_ = new T[capacity + 1];
+        if (!buffer_)
             throw "CircularQueue: fail to create CircularQueue.";
     }
 
-    ~CircularQueue() {delete [] m_buffer;}
+    ~CircularQueue() {delete [] buffer_;}
 
 public:
-    // this method can only be called by producer thread
-    int push(const T &item)
+    size_t Capacity() const {return capacity_;}
+
+    size_t Size() const 
     {
-        int head = m_head;
-        // the queue is full
-        if (((m_tail + 1) % (m_capacity + 1)) == head)
-        {
-            return -1;
-        }
-        m_buffer[m_tail] = item;
-        m_tail = (m_tail + 1) % (m_capacity + 1);
-        return 0;
+        return tail_ < head_ ? \
+                tail_ + capacity_ + 1 - head_ \
+                : tail_ - head_;
     }
 
-    // this method can only be called by consumer thread
-    int front(T &item)
+    bool Push(T &&item)
     {
-        int tail = m_tail;
-        // the queue is empty
-        if (tail == m_head)
-        {
-            return -1;
-        }
-        item = m_buffer[m_head];
-        return 0;
+        if (Size() == capacity_) return false;
+        buffer_[tail_] = item;
+        tail_ = (tail_ + 1) % (capacity_ + 1);
+        return true;
     }
 
-    // this method can only be called by consumer thread
-    void pop()
+    // warning: should check Size() before Pop.
+    T &&Pop()
     {
-        int tail = m_tail;
-        if (tail != m_head)
-        {
-            m_head = (m_head + 1) % (m_capacity + 1);
-        }
-    } 
+        if (Size() == 0) return std::move(T());
+        int head = head_;
+        head_ = (head_ + 1) % (capacity_ + 1);
+        return std::move(buffer_[head]);
+    }
       
 private:
-    const size_t m_capacity;
-    T* m_buffer;
-    int m_head;
-    int m_tail;
+    const size_t capacity_;
+    T* buffer_;
+    int head_;
+    int tail_;
 };
 
 }

@@ -6,6 +6,7 @@
 
 #include "UA_BlackJack.grpc.pb.h"
 #include "RequestParser.h"
+#include "CallData.h"
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
