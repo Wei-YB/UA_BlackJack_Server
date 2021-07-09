@@ -1,5 +1,8 @@
 #include "Display.h"
 
+#include <chrono>
+#include <ctime>
+
 #include "Client.h"
 #include "global.h"
 
@@ -314,7 +317,13 @@ void Display::DisplayResponseMatchInfo(ua_blackjack::Response& response) {
     int sz = response.args().size();
     assert(sz >= 2);
 
-    std::cout << response.args()[0] << ": " << response.args()[1] << std::endl;
+    uint64_t timestamp = atol(response.args()[1].c_str());
+    time_t time = timestamp / 1000;
+    char buffer[128];
+    auto s_tm = localtime(&time);
+    strftime(buffer, sizeof buffer, "%F %T", s_tm);
+
+    std::cout << response.args()[0] << ": " << buffer << std::endl;
     for (int i = 2; i < sz; i += 2) {
         std::cout << response.args()[i] << ": " << response.args()[i + 1] << std::endl;
     }
