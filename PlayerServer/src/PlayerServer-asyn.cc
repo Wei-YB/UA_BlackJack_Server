@@ -31,11 +31,11 @@ using namespace ua_blackjack::player_server;
 static std::shared_ptr<PlayerClient> client = nullptr;
 
 // There is no shutdown handling in this code.
-void ServerImpl::Run() {
-    std::string addr = "9.134.69.87:50051";
-    client.reset(new PlayerClient(grpc::CreateChannel(addr, grpc::InsecureChannelCredentials())));
+void ServerImpl::Run(std::string& DBServer_ip, std::string& DBServer_port, std::string& listen_port) {
+    std::string DB_addr = DBServer_ip + ":" + DBServer_port;
+    client.reset(new PlayerClient(grpc::CreateChannel(DB_addr, grpc::InsecureChannelCredentials())));
 
-    std::string server_address("0.0.0.0:50052");
+    std::string server_address = "0.0.0.0:" + listen_port;
 
     ServerBuilder builder;
     builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
@@ -55,7 +55,7 @@ void ServerImpl::CallData::Proceed() {
     } else if (status_ == PROCESS) {
         new CallData(service_, cq_);
 
-        reply_ = client->RequestDB(request_);
+        // reply_ = client->RequestDB(request_);
 
         // And we are done! Let the gRPC runtime know we've finished
         status_ = FINISH;

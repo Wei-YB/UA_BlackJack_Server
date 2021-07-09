@@ -58,7 +58,8 @@ Client::Client()
                  {INROOM_UNREADY, "INROOM_UNREADY"},
                  {INROOM_READY, "INROOM_READY"},
                  {INGAME_IDLE, "INGAME_IDLE"},
-                 {INGAME_TURN, "INGAME_TURN"}},
+                 {INGAME_TURN, "INGAME_TURN"},
+                 {INGAME_OBSERVE, "INGAME_OBSERVE"}},
       idx_(0),
       request_type_(ua_blackjack::Request::INVAL),
       dealer_(false) {}
@@ -273,7 +274,7 @@ Client::State Client::GetNextState(const std::string& cmd) {
             break;
 
         case ua_blackjack::Request::DOUBLE:
-            if (state_ != INGAME_TURN && state_ != INGAME_IDLE) {
+            if (state_ != INGAME_IDLE) {
                 valid = false;
             }
             break;
@@ -282,7 +283,7 @@ Client::State Client::GetNextState(const std::string& cmd) {
             if (state_ != INGAME_IDLE && state_ != INGAME_TURN) {
                 valid = false;
             } else {
-                new_state = ONLINE;
+                new_state = INGAME_OBSERVE;
             }
             break;
 
@@ -307,7 +308,6 @@ Client::State Client::GetNextState(const std::string& cmd) {
         return new_state;
     } else {
         std::cout << ":( Invalid State for command" << std::endl;
-        std::cout << "Current State: " << state2str_[state_] << std::endl;
         return INVALID;
     }
 }
@@ -332,11 +332,11 @@ Client::State Client::GetNextState(ua_blackjack::Request& request) {
         }
         // don't have to become INGAME_TURN
     } else if (req == "update") {
-        if (state_ != INGAME_IDLE && state_ != INGAME_TURN) {
+        if (state_ != INGAME_IDLE && state_ != INGAME_OBSERVE) {
             valid = false;
         }
     } else if (req == "end") {
-        if (state_ != INGAME_IDLE && state_ != INGAME_TURN) {
+        if (state_ != INGAME_IDLE && state_ != INGAME_TURN && state_ != INGAME_OBSERVE) {
             valid = false;
         } else {
             new_state = INROOM_UNREADY;
@@ -353,8 +353,23 @@ Client::State Client::GetNextState(ua_blackjack::Request& request) {
     }
 }
 
+bool Client::CheckBet(std::string& money) {
+    int val = 0;
+    for (auto ch : money) {
+        if (!isdigit(ch)) {
+            return false;
+        }
+        if (val > (INT_MAX - (ch - '0')) / 10) {
+            return false;
+        }
+        val = val * 10 + (ch - '0');
+    }
+    return true;
+}
+
 ua_blackjack::Response Client::ConstructRoomResponse(bool valid, ua_blackjack::Request& request) {
     ua_blackjack::Response response;
+
     if (!valid) {
         response.set_status(-1);
         return response;
@@ -375,10 +390,11 @@ ua_blackjack::Response Client::ConstructRoomResponse(bool valid, ua_blackjack::R
 
                 if (res_args.empty()) {
                     continue;
-
                 } else {
                     if (res_args[0] != "Bet") {
                         std::cout << ":( Invaild Command, Bet!" << std::endl;
+                    } else if (!CheckBet(res_args[1])) {
+                        std::cout << ":( Invalid Bet money" << std::endl;
                     } else {
                         break;
                     }
@@ -389,18 +405,23 @@ ua_blackjack::Response Client::ConstructRoomResponse(bool valid, ua_blackjack::R
             std::cout << std::endl;
         }
     } else if (request.args()[0] == "hit") {
-        display_ins.PrintPrompt("Select Hit or Stand");
+        display_ins.PrintPrompt("Select Hit, Stand or Surrender");
         while (true) {
             std::cout << std::endl << " > " << std::flush;
             res_args = GetCommandArgs();
 
             if (res_args.empty()) {
                 continue;
-
             } else {
-                if (res_args[0] != "Hit" && res_args[0] != "Stand") {
-                    std::cout << ":( Invaild Command, Hit or Stand!" << std::endl;
+                if (res_args[0] != "Hit" && res_args[0] != "Stand" && res_args[0] != "Surrender") {
+                    std::cout << ":( Invaild Command, Hit, Stand or Surrender" << std::endl;
                 } else {
+                    if (res_args[0] == "Surrender") {
+                        // logger->info("Surrender");
+                        // SendRequest({"Surrender"});
+                        next_state_ = INGAME_OBSERVE;
+                        // res_args = {"xxx"};
+                    }
                     break;
                 }
             }
@@ -452,7 +473,8 @@ int Client::SerializeRoomResponse(ua_blackjack::Response& response) {
 void Client::ProcessResponse(ua_blackjack::Response& response) {
     logger->info("Receive response, status:{0} uid: {1}, stamp: {2}", response.status(), response.uid(),
                  response.stamp());
-    display_ins.DisplayResponse(response, request_type_);
+
+    display_ins.DisplayResponse(this, response, request_type_);
     request_type_ = ua_blackjack::Request::INVAL;
 
     if (response.status() == -1) {
@@ -465,14 +487,20 @@ void Client::ProcessResponse(ua_blackjack::Response& response) {
     } else if (response.uid() != uid_) {
         std::cout << ":( Not my uid, wrong response" << std::endl;
     }
+
+    if (request_type_ == Request::JOIN_ROOM) {
+        rid_ = atoi(response.args()[0].c_str());
+    }
+
+    if (request_type_ == Request::LEAVE_ROOM) {
+        GameEnd();
+        rid_ = -1;
+    }
 }
 
 void Client::ProcessRoomRequest(ua_blackjack::Request& request) {
     logger->info("Received room request, type: {0}, uid: {1}, stamp: {2}, args: {3}, currentState: {4}",
                  request.requesttype(), request.uid(), request.stamp(), request.args()[0], state_);
-
-    Rio rio(sfd_);
-    rio.RioReadInit(sfd_);
 
     if (request.uid() != uid_) {
         std::cout << ":( Not my uid, ignore request" << std::endl;
@@ -483,6 +511,9 @@ void Client::ProcessRoomRequest(ua_blackjack::Request& request) {
     bool valid = (next_state_ != INVALID);
 
     ua_blackjack::Response room_response = ConstructRoomResponse(valid, request);
+    for (int i = 0; i < room_response.args().size(); ++i) {
+        logger->info("args{0}: {1}", i, room_response.args()[i]);
+    }
     int res_len = SerializeRoomResponse(room_response);
 
     logger->info("Constructed Room Response status:{0} uid:{1} stamp:{2}", room_response.status(), room_response.uid(),
@@ -500,7 +531,10 @@ void Client::ProcessRoomRequest(ua_blackjack::Request& request) {
     }
 
     if (next_state_ != INVALID && res_args.size() > 0 && res_args[0] == "end") {
-        GameEnd(request);
+        assert(request.args().size() > 1);
+        std::string result = request.args()[1];
+        GameEnd();
+        display_ins.DisplayGameEnd(result);
         logger->info("Game end");
     }
 }
@@ -517,6 +551,7 @@ std::vector<int> Client::ParseCards(const std::string& str) {
 }
 
 void Client::UpdateCards(ua_blackjack::Request& request) {
+    logger->info("update cards");
     // update
     int num = request.args().size();
     for (int i = 1; i < num; ++i) {
@@ -530,6 +565,7 @@ void Client::UpdateCards(ua_blackjack::Request& request) {
             idx_++;
         }
         int idx = name2idx_[name];
+        assert((sz % 2) == 1);
         for (int j = 1; j < sz; j += 2) {
             int color = std::atoi(parse_result[j].c_str());
             int num = std::atoi(parse_result[j + 1].c_str());
@@ -537,17 +573,11 @@ void Client::UpdateCards(ua_blackjack::Request& request) {
         }
     }
 
-    display_ins.DisplayCards(idx_, idx2name_, name2idx_, name_, cards_, dealer_);
+    // display_ins.DisplayCards(idx_, idx2name_, name2idx_, name_, cards_, dealer_);
+    display_ins.DisplayCards(this);
 }
 
-void Client::GameEnd(ua_blackjack::Request& request) {
-    std::string result = request.args()[1];
-    if (result == "win") result = "WIN";
-    if (result == "lose") result = "LOSE";
-    result = "Game over. You " + result;
-
-    display_ins.PrintPrompt(result);
-
+void Client::GameEnd() {
     // reset idx and uid2idx;
     idx_ = 0;
     name2idx_.clear();
@@ -568,7 +598,21 @@ void Client::GameInit() {
     std::cout << std::endl;
 }
 
-void Client::ProcessCommand(Rio& rio) {
+void Client::SendRequest(const std::vector<std::string>& args) {
+    ua_blackjack::Request request = ConstructRequest(args);
+    request_type_ = request.requesttype();
+    int req_len = SerializeRequest(request);
+
+    // write data to proxy
+    rio.RioWriten((char*)buffer_out_, req_len);
+
+    logger->info("Send request to proxy, type: {0}, uid: {1}, stamp: {2}", request.requesttype(), request.uid(),
+                 request.stamp());
+
+    alarm(TIME_OUT);
+}
+
+void Client::ProcessCommand() {
     std::vector<std::string> args = GetCommandArgs();
     if (args.empty()) {
         std::cout << "21Game "
@@ -577,7 +621,8 @@ void Client::ProcessCommand(Rio& rio) {
         return;
     }
 
-    logger->info("Get command from console");
+    logger->info("Get command from console: {0}", args[0]);
+
     if (args[0] == "Login") name_tmp_ = args[1];
     if (args[0] == "Quit") {
         exit(EXIT_SUCCESS);
@@ -598,46 +643,19 @@ void Client::ProcessCommand(Rio& rio) {
         return;
     }
 
-    ua_blackjack::Request request = ConstructRequest(args);
-    request_type_ = request.requesttype();
-    int req_len = SerializeRequest(request);
-
-    // write data to proxy
-    rio.RioWriten((char*)buffer_out_, req_len);
-
-    logger->info("Send request to proxy, type: {0}, uid: {1}, stamp: {2}", request.requesttype(), request.uid(),
-                 request.stamp());
-
-    alarm(TIME_OUT);
+    SendRequest(args);
 }
 
-void Client::ProcessSocket(Rio& rio) {
-    // read data type
+void Client::ProcessSocket() {
     uint32_t data_type;
-    int len = rio.RioReadn((char*)&data_type, sizeof(data_type));
-    if (len == 0) return;
-    data_type = ntohl(data_type);
-
-    logger->info("Get data type from proxy, type: {0}", data_type);
-
-    // read data length
     uint32_t data_length;
-    len = rio.RioReadn((char*)&data_length, sizeof(data_length));
-    if (len == 0) return;
-    data_length = ntohl(data_length);
-
-    logger->info("Get data length from proxy, length: {0}", data_length);
-
-    assert(data_length > 0);
-
-    // read data
     std::string data;
-    data.resize(data_length);
-    char* p = &data[0];
-    len = rio.RioReadn(p, data_length);
-    if (len == 0) return;
 
-    logger->info("Get complete data from proxy, {0} bytes", data_length);
+    bool is_data = ReceiveData(data_type, data_length, data);
+    if (!is_data) {
+        std::cout << std::endl << "Connection interrupted" << std::endl << std::endl;
+        exit(EXIT_FAILURE);
+    }
 
     if (data_type == REQUEST) {
         ua_blackjack::Request request;
@@ -646,7 +664,6 @@ void Client::ProcessSocket(Rio& rio) {
     } else if (data_type == RESPONSE) {
         ua_blackjack::Response response;
         response.ParseFromString(data);
-        logger->info("stamp: {0}", response.stamp());
 
         if (DealTimeout(response)) return;
         alarm(0);
@@ -657,9 +674,49 @@ void Client::ProcessSocket(Rio& rio) {
         return;
     }
 
+    ActuallyChangeState(data_type);
+}
+
+bool Client::ReceiveData(uint32_t& data_type, uint32_t& data_length, std::string& data) {
+    // read data type
+    int len = rio.RioReadn((char*)&data_type, sizeof(data_type));
+    if (len == 0) return false;
+    data_type = ntohl(data_type);
+
+    logger->info("Get data type from proxy, type: {0}", data_type);
+
+    // read data length
+    len = rio.RioReadn((char*)&data_length, sizeof(data_length));
+    if (len == 0) return false;
+    data_length = ntohl(data_length);
+
+    logger->info("Get data length from proxy, length: {0}", data_length);
+
+    assert(data_length > 0);
+
+    // read data
+    data.resize(data_length);
+    char* p = &data[0];
+    len = rio.RioReadn(p, data_length);
+    if (len == 0) return false;
+
+    logger->info("Get complete data from proxy, {0} bytes", data_length);
+
+    return true;
+}
+
+void Client::ActuallyChangeState(uint32_t data_type) {
     // change state
     if (state_ == OFFLINE && next_state_ == ONLINE) name_ = name_tmp_;
+
+    // if send surrender request, doesn't change state now
+    // if (data_type == REQUEST && (state_ == INGAME_IDLE || state_ == INGAME_TURN) && next_state_ == INGAME_OBSERVE) {
+    //     return;
+    // }
+
     if (next_state_ != INVALID) state_ = next_state_;
+    if (state_ == OFFLINE) Logout();
+
     std::cout << "21Game "
               << "(" << state2str_[state_] << ")"
               << " > " << std::flush;
@@ -669,13 +726,21 @@ bool Client::DealTimeout(ua_blackjack::Response& response) {
     int64_t stamp = response.stamp();
     int64_t now = std::chrono::duration_cast<MilliSeconds>(SteadyClock::now() - start).count();
     int64_t sec = (now - stamp) / 1000.0;
-    logger->info("seconds: {0}", sec);
+    logger->info("response stamp: {0}, seconds passed: {1}", response.stamp(), sec);
     if (sec >= TIME_OUT) {
         logger->info("timeout for uid: {}", response.uid());
         return true;
     } else {
         return false;
     }
+}
+
+void Client::Logout() {
+    GameEnd();
+    uid_ = -1;
+    rid_ = -1;
+    name_.clear();
+    name_tmp_.clear();
 }
 
 void Client::Run(const char* ip, const char* port) {
@@ -694,7 +759,6 @@ void Client::Run(const char* ip, const char* port) {
               << "(" << state2str_[state_] << ")"
               << " > " << std::flush;
 
-    Rio rio(sfd_);
     rio.RioReadInit(sfd_);
 
     epfd_ = epoll_create(5);
@@ -712,9 +776,9 @@ void Client::Run(const char* ip, const char* port) {
         for (int i = 0; i < number; ++i) {
             int fd = evlist[i].data.fd;
             if (fd == STDIN_FILENO) {
-                ProcessCommand(rio);
+                ProcessCommand();
             } else if (fd == sfd_) {
-                ProcessSocket(rio);
+                ProcessSocket();
             }
         }
     }

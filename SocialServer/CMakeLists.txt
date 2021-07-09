@@ -23,6 +23,8 @@ add_custom_command(
         "${hw_proto}"
       DEPENDS "${hw_proto}")
 
+add_custom_target(social ALL DEPENDS "${hw_proto_srcs}" "${hw_proto_hdrs}" "${hw_grpc_srcs}" "${hw_grpc_hdrs}")
+
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/grpc")
 
 # add_library(hw_grpc_proto
@@ -44,3 +46,31 @@ target_link_libraries(SocialServer
   ${_PROTOBUF_LIBPROTOBUF}
   spdlog
 )
+
+
+file(GLOB Stress-syn-SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc" 
+                         "${CMAKE_CURRENT_SOURCE_DIR}/stress-test/stress-test-syn.cc")
+add_executable(Stress-Social-syn "${Stress-syn-SOURCES}")
+target_link_libraries(Stress-Social-syn
+  ${_REFLECTION}
+  ${_GRPC_GRPCPP}
+  ${_PROTOBUF_LIBPROTOBUF}
+  spdlog)
+
+file(GLOB Stress-asyn-SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc" 
+                         "${CMAKE_CURRENT_SOURCE_DIR}/stress-test/stress-test-asyn.cc")
+add_executable(Stress-Social-asyn "${Stress-asyn-SOURCES}")
+target_link_libraries(Stress-Social-asyn
+  ${_REFLECTION}
+  ${_GRPC_GRPCPP}
+  ${_PROTOBUF_LIBPROTOBUF}
+  spdlog)
+
+file(GLOB Stress-syn-time-SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc" 
+                         "${CMAKE_CURRENT_SOURCE_DIR}/stress-test/stress-test-syn-time.cc")
+add_executable(Stress-Social-syn-time "${Stress-syn-time-SOURCES}")
+target_link_libraries(Stress-Social-syn-time
+  ${_REFLECTION}
+  ${_GRPC_GRPCPP}
+  ${_PROTOBUF_LIBPROTOBUF}
+  spdlog)

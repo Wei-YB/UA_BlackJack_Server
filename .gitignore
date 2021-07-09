@@ -5,7 +5,9 @@ alpha/
 gtest/
 thirdparty/grpc/cmake/build
 thirdparty/spdlog/CMakeFiles
+thirdparty/spdlog/cmake_install.cmake
+thirdparty/spdlog/libspdlog.a
+thirdparty/spdlog/Makefile
 test-program/
-log/
-*.log
-perf/
+/PlayerServer/include-feature
+/PlayerServer/src-feature

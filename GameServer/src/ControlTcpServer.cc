@@ -45,7 +45,7 @@ void ua_blackjack::Game::createServiece(void)
     spdlog::info("===========control port{0}===========", port);
     int epollfd = epoll_create(5);
     epoll_event event;
-    event.events = EPOLLIN | EPOLLET; //可读，EDGE TIRGGER
+    event.events = EPOLLIN; //可读，EDGE TIRGGER
     event.data.fd = listenfd;
     epoll_ctl(epollfd, EPOLL_CTL_ADD, listenfd, &event);
 

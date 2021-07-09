@@ -13,7 +13,7 @@ namespace ua_blackjack {
 namespace robust_io {
 class Rio {
 public:
-    Rio(int fd) : fd_(fd), cnt_(0), bufptr_(buff_) {}
+    Rio() : fd_(-1), cnt_(0), bufptr_(buff_) {}
     void RioReadInit(int fd);
     int RioBufferReadn(char* usrbuf, int n);
     int RioBufferReadLine(char* usrbuf, int maxlen);

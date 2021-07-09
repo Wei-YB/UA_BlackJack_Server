@@ -3,7 +3,6 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <fcntl.h>
-#include <fstream>
 #include "GameProcess.h"
 #include "ClientForDatebase.h"
 #include "ClientForLobby.h"
@@ -13,6 +12,7 @@
 #include "spdlog/async.h"
 #include "spdlog/sinks/basic_file_sink.h"
 #include "ControlTcpServer.h"
+#include "ProgramProcess.h"
 
 std::string ProxyServiceAddr;
 std::string LobbyServiceAddr;
@@ -129,112 +129,112 @@ bool start_daemon()
     return true;
 }
 bool isProgramRelase;
+ServiceStatus serviceStatus;
 int main(int argc, char *argv[])
 {
-    if (argc != 2)
+    if (argc < 2)
     {
-        std::cout << "Usage " << argv[0] << " [RELEASE TEST]" << std::endl;
+        std::cout << "Usage " << argv[0] << "  [RELEASE TEST] [OPTION -cf(config file path) -lf(log file path)]" << std::endl; //用户只能以RELEASE和TEST启动，RESTART是由fork---->exec 执行的
         return 0;
     }
     if (strcmp(argv[1], "RELEASE") == 0)
     {
         isProgramRelase = true;
+        serviceStatus = ServiceStatus::HANDEL_GRPC_BY_ITSELF;
     }
     else if (strcmp(argv[1], "TEST") == 0)
     {
         isProgramRelase = false;
+        serviceStatus = ServiceStatus::HANDEL_GRPC_BY_ITSELF;
+    }
+    else if (strcmp(argv[1], "RESTART") == 0) //重启的程序
+    {
+        spdlog::info("restarting program running....");
+        serviceStatus = ServiceStatus::HANDEL_GRPC_BY_PARENT;
     }
     else
     {
-        std::cout << "Usage " << argv[0] << " [RELEASE TEST]" << std::endl;
+        std::cout << "Usage " << argv[0] << " [RELEASE TEST] [OPTION -cf(config file path) -lf(log file path)]" << std::endl;
         return 0;
     }
-
-    {   // 配置文件路径可以作为命令行参数？
-        std::string configFilePath = "../../GameServer/game.config";
-
-        std::ifstream _file;
-        _file.open(configFilePath);
-        if (!_file)
+    std::string configFilePath = "../../GameServer/game.config";
+    std::string logFilePath = "logs/async_log.log";
+    if (argc == 4 || argc == 6)
+    {
+        for (int i = 2; i < argc; i += 2)
         {
-            std::cout << configFilePath << " not exist " << std::endl;
-            return -1;
-        }
-
-        std::cout << "read config file..." << std::endl;
-        while (!_file.eof())
-        {
-            std::string buffer;
-            _file >> buffer;
-            if (buffer[0] == '#') //注释不读
+            if (strcmp(argv[i], "-cf") == 0)
             {
-                continue;
+                configFilePath = argv[i + 1];
+                std::cout << "read congfile path.." << std::endl;
             }
-            if (buffer == "ProxyServiceAddr")
+            else if (strcmp(argv[i], "-lf") == 0)
             {
-                _file >> buffer;
-                ProxyServiceAddr = buffer;
-            }
-            else if (buffer == "LobbyServiceAddr")
-            {
-                _file >> buffer;
-                LobbyServiceAddr = buffer;
-            }
-            else if (buffer == "DatabaseServiceAddr")
-            {
-                _file >> buffer;
-                DatabaseServiceAddr = buffer;
-            }
-            else if (buffer == "controlTcpPort")
-            {
-                _file >> buffer;
-                controlTcpPort = buffer;
-            }
-            else if (buffer == "gameRpcAddr")
-            {
-                _file >> buffer;
-                gameRpcAddr = buffer;
+                logFilePath = argv[i + 1];
+                std::cout << "read logfile path.." << std::endl;
             }
             else
             {
-                continue;
+                std::cout << "Usage " << argv[0] << " [RELEASE TEST] [OPTION -cf(config file path) -lf(log file path)]" << std::endl;
+                return 0;
             }
         }
     }
+    else if (argc > 2)
+    {
+        std::cout << "Usage " << argv[0] << " [RELEASE TEST] [OPTION -cf(config file path) -lf(log file path)]" << std::endl;
+        return 0;
+    }
+
+    readConfigFile(configFilePath); //读取filepath
+
     std::cout << "ProxyServiceAddr = " << ProxyServiceAddr << std::endl;
     std::cout << "LobbyServiceAddr = " << LobbyServiceAddr << std::endl;
     std::cout << "DatabaseServiceAddr = " << DatabaseServiceAddr << std::endl;
     std::cout << "controlTcpPort = " << controlTcpPort << std::endl;
     std::cout << "gameRpcAddr = " << gameRpcAddr << std::endl;
+    std::cout << "configFilePath = " << configFilePath << std::endl;
+    std::cout << "logFilePath = " << logFilePath << std::endl;
+
     std::cout << "start_daemon..." << std::endl;
-    start_daemon();
-    // log路径感觉可以写进config文件或者作为命令行参数
-    auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", "logs/async_log.log");
+    start_daemon(); //守护
+
+    auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", logFilePath);
     spdlog::set_default_logger(async_file);
     spdlog::flush_on(spdlog::level::trace);
     spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^---%L---%$] [thread %t] %v");
 
-    std::thread thread_ = std::thread(&ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc, &ua_blackjack::Game::ClientForTestUser::getInstance());
-    std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
-    std::thread threadReceiveRestartCommand = std::thread(&ua_blackjack::Game::createServiece); // 这个线程不用join吗
+    if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_ITSELF) //正常的通过命令行启动
+    {
+        std::thread thread_ = std::thread(&ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc, &ua_blackjack::Game::ClientForTestUser::getInstance());
+        std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
+        std::thread threadReceiveRestartCommand = std::thread(&ua_blackjack::Game::createServiece);
 
-    ua_blackjack::Game::ServerImpl rpcServer;
-    rpcServer.Run();
+        ua_blackjack::Game::ServerImpl rpcServer;
+        rpcServer.Run();
 
-    spdlog::info("grpc async begin...");
+        spdlog::info("grpc async begin...");
 
-    //创建等待RPC的协程
-    co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, &rpcServer);
-    co_resume(receiveSignalFromRPC);
+        //创建等待RPC的协程
+        co_create(&receiveSignalFromRPC, NULL, waitingSignalFromOtherModule, &rpcServer);
+        co_resume(receiveSignalFromRPC);
 
-    //回收协程的协程
-    co_create(&recoverystCo, NULL, recoveryUnusedCo, NULL);
-    co_resume(recoverystCo);
+        //回收协程的协程
+        co_create(&recoverystCo, NULL, recoveryUnusedCo, NULL);
+        co_resume(recoverystCo);
 
-    //开启协程
-    co_eventloop(co_get_epoll_ct(), NULL, NULL);
+        //开启协程
+        co_eventloop(co_get_epoll_ct(), NULL, NULL);
 
-    thread_.join();
-    thread2_.join();
-    return 0;
+        thread_.join();
+        thread2_.join();
+        return 0;
+    }
+    else if (serviceStatus == ServiceStatus::HANDEL_GRPC_BY_PARENT) //hot reload
+    {
+        //对于子进程而言，客户端可以正常的使用自己的client去接入proxy
+        std::thread thread_ = std::thread(&ua_blackjack::Game::ClientForTestUser::AsyncCompleteRpc, &ua_blackjack::Game::ClientForTestUser::getInstance());
+        std::thread thread2_ = std::thread(&ua_blackjack::Game::ClientForDatebase::AsyncCompleteRpc, &ua_blackjack::Game::ClientForDatebase::getInstance());
+        spdlog::info("son::grpc async is not begin...");
+    }
 }
