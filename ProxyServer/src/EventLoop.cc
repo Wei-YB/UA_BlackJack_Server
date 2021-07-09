@@ -1,6 +1,3 @@
-#include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
 #include <sys/types.h>
 #include <sys/epoll.h>
 #include <unistd.h>
@@ -14,82 +11,44 @@
 #include <functional>
 
 #include "EventLoop.h"
+#include "EventsSource.h"
+#include "Timer.h"
 #include "log.h"
 
 using namespace Net;
 
-Net::EventsSource::EventsSource(FileDesc fd, EventLoop *loop,
-                                const std::function<int()> &inEventCallBack,
-                                const std::function<int()> &outEventCallBack,
-                                const std::function<int()> &errEventCallBack)
-    : fd_(fd), loop_(loop),
-      inEventCallBack_(inEventCallBack),
-      outEventCallBack_(outEventCallBack),
-      errEventCallBack_(errEventCallBack) {}
-
-int Net::EventsSource::HandleEvents(Event events)
-{
-    int ret = 0;
-    if (events & EV_IN)
-    {
-        logger_ptr->info("In main thread: On input event from fd: {}", fd_);
-        ret = inEventCallBack_() == -1 ? -1 : ret;
-    }
-    if (events & EV_OUT)
-    {
-        logger_ptr->info("In main thread: On onput event from fd: {}", fd_);
-        ret = outEventCallBack_() == -1 ? -1 : ret;
-    }
-    if (events & EV_ERR)
-    {
-        logger_ptr->info("In main thread: On error event from fd: {}", fd_);
-        ret = errEventCallBack_() == -1 ? -1 : ret;
-    }
-    return ret;
-}
-
-int Net::EventsSource::Update(Event events)
-{
-    if (events_ == events)
-    {
-        return 0;
-    }
-    events_ = events;
-    return loop_->mod(shared_from_this());
-}
-
-int Net::EventsSource::Close()
-{
-    return loop_->del(shared_from_this());
-}
-
-FileDesc Net::EventsSource::fd() const
-{
-    return fd_;
-}
-
-Net::EventLoop::EventLoop(int max_events) : maxEvents_(max_events)
+EventLoop::EventLoop(int max_events, int healthReportPeriod) 
+                    : maxEvents_(max_events)
 {
     if ((epollfd_ = epoll_create(5)) < 0)
     {
-        throw "EventLoop: fail to create epoll.\n";
+        logger_ptr->error("In creating eventloop: fail to create epollfd.");
+        throw std::exception();
     }
     if ((events_ = new struct epoll_event[maxEvents_]) == NULL)
     {
+        logger_ptr->error("In creating eventloop: fail to allocate epoll event array.");
         close(epollfd_);
-        throw "EventLoop: fail to assign epoll event array.\n";
+        throw std::exception();
     }
+
+    // timer_ = std::make_shared<Timer>(this, std::bind(&EventLoop::OnHealthReport, this));
+
+    // if (healthReportPeriod > 0)    
+    //     timer_->SetPeriod(healthReportPeriod);
 }
 
-Net::EventLoop::~EventLoop()
+EventLoop::~EventLoop()
 {
+    // timer_->SetPeriod(0);
     delete[] events_;
     close(epollfd_);
 }
 
-int Net::EventLoop::add(std::shared_ptr<EventsSource> evsSource)
+int EventLoop::add(std::shared_ptr<EventsSource> evsSource)
 {
-    if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end() || eventsCnt_ >= maxEvents_)
+    if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end() 
+        || eventsCnt_ >= maxEvents_)
     {
         return -1;
     }
@@ -100,13 +59,17 @@ int Net::EventLoop::add(std::shared_ptr<EventsSource> evsSource)
     {
         return -1;
     }
-    fdToEventsSource_.emplace(evsSource->fd_, evsSource);
+    if (!fdToEventsSource_.emplace(evsSource->fd_, evsSource).second)
+    {
+        epoll_ctl(epollfd_, EPOLL_CTL_DEL, evsSource->fd_, NULL);
+        return -1;
+    }
     eventsCnt_++;
-    logger_ptr->info("In main thread: Successfully add event source.");
+    logger_ptr->trace("In EventLoop::add(): Successfully add event (events: {0}) to source (fd: {1}).", evsSource->events_, evsSource->fd_);
     return 0;
 }
 
-int Net::EventLoop::mod(std::shared_ptr<EventsSource> evsSource)
+int EventLoop::mod(std::shared_ptr<EventsSource> evsSource)
 {
     if (fdToEventsSource_.find(evsSource->fd_) == fdToEventsSource_.end())
     {
@@ -119,11 +82,11 @@ int Net::EventLoop::mod(std::shared_ptr<EventsSource> evsSource)
     {
         return -1;
     }
-    logger_ptr->info("In main thread: Successfully modify events.");
+    logger_ptr->trace("In EventLoop::mod(): Successfully modify source (fd: {0}) with events ({1}).", evsSource->fd_, evsSource->events_);
     return 0;
 }
 
-int Net::EventLoop::del(std::shared_ptr<EventsSource> evsSource)
+int EventLoop::del(std::shared_ptr<EventsSource> evsSource)
 {
     if (fdToEventsSource_.find(evsSource->fd_) != fdToEventsSource_.end())
     {
@@ -136,13 +99,13 @@ int Net::EventLoop::del(std::shared_ptr<EventsSource> evsSource)
     return -1;
 }
 
-int Net::EventLoop::loopOnce(int timeout)
+int EventLoop::loopOnce(int timeout)
 {
     if (fdToEventsSource_.size() == 0)
     {
         return -1;
     }
-    // memset(m_events, 0, sizeof(struct epoll_event) * m_max_events);
+    
     int nfds = epoll_wait(epollfd_, events_, maxEvents_, timeout);
     if (nfds < 0)
     {
@@ -160,11 +123,20 @@ int Net::EventLoop::loopOnce(int timeout)
         {
             continue;
         }
+        std::shared_ptr<EventsSource> evsSource;
+        if (fdToEventsSource_.find(sockfd) == fdToEventsSource_.end())
+            continue;
+        evsSource = fdToEventsSource_[sockfd];
         // if the return val is -1, it means we should remove this sockfd from poller
-        if (0 > fdToEventsSource_[sockfd]->HandleEvents(toNetEvent(events)))
+        if (0 > evsSource->HandleEvents(toNetEvent(events)))
         {
-            del(fdToEventsSource_[sockfd]);
+            del(evsSource);
         }
     }
     return nfds;
+}
+
+void EventLoop::OnHealthReport()
+{
+    logger_ptr->info("In EventLoop::OnHealthReport(): current sources in map: {0}, eventsCnt: {1}.", fdToEventsSource_.size(), eventsCnt_);
 }

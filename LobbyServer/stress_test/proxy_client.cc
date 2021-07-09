@@ -41,7 +41,7 @@ static void thread_func(int client_nums, int& query_times_per_thread, std::strin
 	oss << std::this_thread::get_id();
 	std::string stid = oss.str();
 	unsigned long long tid = std::stoull(stid);
-  SPDLOG_WARN("thread:{0:d} start.", tid);
+  SPDLOG_INFO("thread:{0:d} start.", tid);
 
   //同步client或者异步client
   std::vector<ClientSyn> clients;
@@ -57,7 +57,7 @@ static void thread_func(int client_nums, int& query_times_per_thread, std::strin
     }
 }
 
-//TODO. multi clients
+//TODO. multi asyn_clients
 void client_asyn_func(std::string server_address){
 
   auto ptr = grpc::CreateChannel(server_address, grpc::InsecureChannelCredentials());
@@ -103,10 +103,9 @@ int main(int argc, char** argv) {
   signal(SIGALRM, sig_alarm);
 
   spdlog::set_level(spdlog::level::info);
-  //spdlog::flush_on(spdlog::level::err);
-  
-  //client_syn_func(thread_nums, client_nums, server_address);
-  client_asyn_func(server_address);
+
+  client_syn_func(thread_nums, client_nums, server_address);
+  //client_asyn_func(server_address);
 
   pause();
   return 0;

@@ -5,66 +5,134 @@
 #include "common.h"
 #include "CircularBuffer.h"
 #include "ClientProxyProtocol.h"
+#include "UA_BlackJack.pb.h"
 
-using namespace NS;
+using namespace Net;
+using ua_blackjack::Request;
+using ua_blackjack::Response;
 
-int NS::pack(int32_t type,  
-        const std::string &msg, 
-        char *buffer, size_t size)
-{
-    // check that the buffer is large enough
-    if (size < 8 + msg.size())
-    {
-        return -1;
-    }
-    type = ::htonl(type);
-    uint32_t length = ::htonl(msg.size());
-    *((int32_t*)buffer) = type;
-    *((int32_t*)(buffer + 4)) = length;
-    memcpy(buffer + 8, msg.c_str(), msg.size());
-    return 0;
-}
-
-int NS::pack(int32_t type,  
-        const std::string &msg, 
-        ::Net::CircularBuffer &buffer)
+int pack(int32_t type, const std::string &msg, CircularBuffer &buffer)
 {
     int32_t msgLen = msg.length();
-    if (buffer.capacity() - buffer.size() < msg.length() + 8)
+    if (buffer.capacity() - buffer.size() < msgLen + PACKAGE_HDR_LEN)
         return -1;
-    ::Net::writeAs(buffer, type, true);
-    ::Net::writeAs(buffer, msgLen, true);
-    ::Net::put(buffer, msg.c_str(), msg.length());
+    writeAs(buffer, type, true);
+    writeAs(buffer, msgLen, true);
+    put(buffer, msg.c_str(), msgLen);
     return 0;
 }
 
-int NS::unpack(const char *buffer, size_t size, int32_t *type, std::string &msg)
+int pack_sp(const Request &request, CircularBuffer &buffer)
 {
-    // the package must be bigger tha 8 bytes to be complete
-    if (size < 9)
-    {
+    int msgLen = request.ByteSizeLong();
+    if (buffer.capacity() - buffer.size() < msgLen + PACKAGE_HDR_LEN)
         return -1;
+    int32_t type = REQUEST;
+    writeAs(buffer, type, true);
+    writeAs(buffer, msgLen, true);
+    int tailRoom = buffer.m_tail >= buffer.m_head ? \
+                    buffer.capacity() - buffer.m_tail - 1
+                    : buffer.m_head - buffer.m_tail - 1;
+  
+    if (tailRoom >= msgLen)
+    {
+        request.SerializeToArray(buffer.m_buffer + buffer.m_tail + 1, tailRoom);
+        buffer.m_tail = (buffer.m_tail + msgLen) % buffer.capacity();
+        return 0;
     }
-    *type = ntohl(*((int32_t*)buffer));
-    int32_t length = ntohl(*((int32_t*)(buffer + 4)));
-    msg = std::string(buffer + 8, length - 8);
+    std::string tmp(std::move(request.SerializeAsString()));
+    put(buffer, tmp.c_str(), tmp.size());
     return 0;
 }
 
-int NS::unpack(::Net::CircularBuffer &buffer, int32_t *type, std::string &msg)
+int pack_sp(const Response &response, CircularBuffer &buffer)
+{
+    int msgLen = response.ByteSizeLong();
+    if (buffer.capacity() - buffer.size() < msgLen + PACKAGE_HDR_LEN)
+        return -1;
+    int32_t type = RESPONSE;
+    writeAs(buffer, type, true);
+    writeAs(buffer, msgLen, true);
+    int tailRoom = buffer.m_tail >= buffer.m_head ? \
+                    buffer.capacity() - buffer.m_tail - 1
+                    : buffer.m_head - buffer.m_tail - 1;
+  
+    if (tailRoom >= msgLen)
+    {
+        response.SerializeToArray(buffer.m_buffer + buffer.m_tail + 1, tailRoom);
+        buffer.m_tail = (buffer.m_tail + msgLen) % buffer.capacity();
+        return 0;
+    }
+    std::string tmp(std::move(response.SerializeAsString()));
+    put(buffer, tmp.c_str(), tmp.size());
+    return 0;
+}
+
+std::string unpack(CircularBuffer &buffer, int32_t *type)
 {
     // the package must be bigger tha 8 bytes to be complete
-    if (buffer.size() < 9)
+    if (buffer.size() < PACKAGE_HDR_LEN)
     {
-        return -1;
+        return "";
     }
     int32_t msgLen;
-    ::Net::readAs(buffer, 0, *type, true);
-    ::Net::readAs(buffer, 4, msgLen, true);
-    buffer.free(8);
-    if (buffer.size() >= msgLen)
+    readAs(buffer, 0, *type, true);
+    readAs(buffer, 4, msgLen, true);
+    if (buffer.size() >= msgLen + PACKAGE_HDR_LEN)
     {
-        ::Net::circularBufferToString(buffer, msgLen, msg);
+        buffer.free(PACKAGE_HDR_LEN);
+        return std::move(circularBufferToString(buffer, msgLen));
     }
-    return 0;
+    return "";
 }
+
+StringPiece unpack_sp(Net::CircularBuffer &buffer, int *offset, int32_t *type)
+{
+    // the package must be bigger tha 8 bytes to be complete
+    int off = *offset;
+    if (buffer.size() - off < PACKAGE_HDR_LEN)
+    {
+        return StringPiece(NULL, 0, 0);
+    }
+    int32_t msgLen;
+    readAs(buffer, off, *type, true);
+    readAs(buffer, off + 4, msgLen, true);
+    if (buffer.size() - off >= msgLen + PACKAGE_HDR_LEN)
+    {
+        // buffer.free(PACKAGE_HDR_LEN);
+        *offset = (off + msgLen + PACKAGE_HDR_LEN) % buffer.capacity();
+        return StringPiece(&buffer, (buffer.m_head + off + PACKAGE_HDR_LEN) % buffer.capacity(), msgLen);
+    }
+    return StringPiece(NULL, 0, 0);
+}
+
+void ParseFromStringPiece(Request &request, StringPiece stringPiece)
+{
+    if (stringPiece.continuous())
+    {
+        request.ParseFromArray((void*)stringPiece.head(), stringPiece.length());
+    }
+    else
+    {
+        std::string tmp(stringPiece.length(), '\0');
+        get(*stringPiece.cirBuf_, (char*)tmp.c_str(), tmp.size());
+        request.ParseFromString(tmp);
+    }
+    stringPiece.free();
+}
+
+void ParseFromStringPiece(Response &response, StringPiece stringPiece)
+{
+    if (stringPiece.continuous())
+    {
+        response.ParseFromArray((void*)stringPiece.head(), stringPiece.length());
+    }
+    else
+    {
+        std::string tmp(stringPiece.length(), '\0');
+        get(*stringPiece.cirBuf_, (char*)tmp.c_str(), tmp.size());
+        response.ParseFromString(tmp);
+    }
+    stringPiece.free();
+}
+

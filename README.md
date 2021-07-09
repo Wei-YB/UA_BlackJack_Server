@@ -25,3 +25,4 @@ The server is divided into six modules and each of them is assigned to certain m
 + Room: kristtong@tencent.com
 + Social: aaronlv@kristtong@tencent.com
 + DB (database): owenybwei@tencent.com
+

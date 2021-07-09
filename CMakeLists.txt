@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5.1)
+cmake_minimum_required(VERSION 3.5)
 
 project(UA_BLACKJACK_SERVER C CXX)
 
@@ -26,7 +26,7 @@ endforeach()
 
 if (BUILD_ALL)
     add_subdirectory(ProxyServer "${CMAKE_CURRENT_BINARY_DIR}/proxy")
-    # add_subdirectory(LobbyServer "${CMAKE_CURRENT_BINARY_DIR}/lobby")
+    add_subdirectory(LobbyServer "${CMAKE_CURRENT_BINARY_DIR}/lobby")
     add_subdirectory(SocialServer "${CMAKE_CURRENT_BINARY_DIR}/social")
     add_subdirectory(GameServer "${CMAKE_CURRENT_BINARY_DIR}/game")
     add_subdirectory(PlayerServer "${CMAKE_CURRENT_BINARY_DIR}/player")

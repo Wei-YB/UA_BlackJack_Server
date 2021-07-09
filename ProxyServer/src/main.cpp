@@ -4,6 +4,8 @@
 #include <sstream>
 #include <stdlib.h>
 #include <signal.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <memory>
@@ -28,8 +30,12 @@ using ua_blackjack::SocialService;
 
 bool flag = false;
 
-void stop_server(int)
+void stop_server(int sig)
 {
+    if (sig == SIGINT)
+        logger_ptr->info("revceive SIGINT.");
+    else if (sig == SIGSEGV)
+        logger_ptr->error("revceive SIGSEGV.");
     flag = true;
 }
 
@@ -93,6 +99,7 @@ static void Deamonize(const std::unordered_map<std::string, std::string> &config
     set_logger_name(config.find("logger_name")->second);
     set_log_path(config.find("log_path")->second);
     create_logger();
+    set_log_level(config.find("log_level")->second);
 
     /* create a temporal file storing the pid of the current process */
     int pid_fd = open(path_to_pid_file, O_RDWR | O_CREAT, S_IRWXU);
@@ -173,9 +180,19 @@ int main(int argc, char **argv)
 
     Deamonize(config);
 
+    
+
+    // logger_flush_on();
+    // set_logger_name(config.find("logger_name")->second);
+    // set_log_path(config.find("log_path")->second);
+    // create_logger();
+    // set_log_level(config.find("log_level")->second);
+
     logger_ptr->info("In main thread: Successfully create an async logger.");
 
     signal(SIGINT, stop_server);
+    signal(SIGSEGV, stop_server);
+    signal(SIGPIPE, SIG_IGN);
 
     Net::EventLoop loop;
 
@@ -186,9 +203,7 @@ int main(int argc, char **argv)
 
     logger_ptr->info("In main thread: Successfully create four rpc clients.");
 
-    std::shared_ptr<ProxyServer> proxyServer = std::make_shared<ProxyServer>(config.find("host")->second.c_str(),
-                                                                             (unsigned short)(atoi(config.find("port")->second.c_str())),
-                                                                             &loop);
+    std::shared_ptr<ProxyServer> proxyServer = std::make_shared<ProxyServer>(config["host"].c_str(), (unsigned short)atoi(config["port"].c_str()), &loop);
     // resgister the service Clients to the proxy server
     for (auto iter = requestTypeToModule.begin(); iter != requestTypeToModule.end(); ++iter)
     {
@@ -231,14 +246,19 @@ int main(int argc, char **argv)
     std::thread socialClientThread = std::thread(&ConcreteServiceClient<SocialService>::AsyncCompleteRpc, socialClient.get());
     std::thread playerClientThread = std::thread(&ConcreteServiceClient<PlayerService>::AsyncCompleteRpc, playerClient.get());
 
-#if (DEBUG_MODE == 0)
     // start the gRPC service
-    ProxyRpcServer gRpcServer(config.find("proxyAddress")->second, proxyServer);
-    proxyServer->SetClientResponseCallBack(std::bind(&ProxyRpcServer::OnClientResponse, &gRpcServer, std::placeholders::_1));
-    std::thread gRpcServerThread = std::thread(&ProxyRpcServer::Run, &gRpcServer);
+    std::shared_ptr<ProxyRpcServer> gRpcServer;
+    std::thread gRpcServerThread;
+    if (config["proxyAddress"] != "0.0.0.0:0")
+    {
+        gRpcServer = std::make_shared<ProxyRpcServer>(config.find("proxyAddress")->second, proxyServer);
+        proxyServer->SetClientResponseCallBack(std::bind(&ProxyRpcServer::OnClientResponse, gRpcServer.get(), std::placeholders::_1));
+        gRpcServerThread = std::thread(&ProxyRpcServer::Run, gRpcServer.get());
+    }
 
     logger_ptr->info("In main thread: Four rpc client threads start.");
-#endif
+    proxyServer->Start();
+
     while (!flag)
     {
         if (loop.loopOnce(1000) < 0)
@@ -251,17 +271,16 @@ int main(int argc, char **argv)
     roomClient->StopClient();
     socialClient->StopClient();
     playerClient->StopClient();
-#if (DEBUG_MODE == 0)
-    gRpcServer.Stop();
-#endif
+    if (gRpcServer)
+        gRpcServer->Stop();
     lobbyClientThread.join();
     roomClientThread.join();
     socialClientThread.join();
     playerClientThread.join();
-#if (DEBUG_MODE == 0)
-    gRpcServerThread.join();
-#endif
+    if (gRpcServerThread.joinable())
+        gRpcServerThread.join();
 
     logger_ptr->info("Exit the program.");
+    remove(path_to_pid_file);
     return 0;
 }

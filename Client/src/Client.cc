@@ -728,6 +728,7 @@ bool Client::DealTimeout(ua_blackjack::Response& response) {
     int64_t sec = (now - stamp) / 1000.0;
     logger->info("response stamp: {0}, seconds passed: {1}", response.stamp(), sec);
     if (sec >= TIME_OUT) {
+        logger->info("timeout for uid: {}", response.uid());
         return true;
     } else {
         return false;

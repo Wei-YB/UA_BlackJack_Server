@@ -5,22 +5,34 @@
 #include <string>
 #include "CircularBuffer.h"
 
-NAMESPACE_BEGIN
-#define DUMMY   
+using namespace Net;
+ 
 #define PACKAGE_HDR_LEN 8
 
-const int32_t REQUEST = 1;
-const int32_t RESPONSE = 2;
+static const int32_t INVAL = 0;
+static const int32_t REQUEST = 1;
+static const int32_t RESPONSE = 2;
 
+int pack(int32_t type, const std::string &msg, CircularBuffer &buffer);
 
-int pack(int32_t type, const std::string &msg, char *buffer, size_t size);
+std::string unpack(Net::CircularBuffer &buffer, int32_t *type);
 
-int pack(int32_t type, const std::string &msg, ::Net::CircularBuffer &buffer);
+StringPiece unpack_sp(Net::CircularBuffer &buffer, int *offset, int32_t *type);
 
-int unpack(const char *buffer, size_t size, int32_t *type, std::string &msg);
+namespace ua_blackjack
+{
+    class Request;
+    class Response;
+}
+using ua_blackjack::Request;
+using ua_blackjack::Response;
 
-int unpack(::Net::CircularBuffer &buffer, int32_t *type, std::string &msg);
+void ParseFromStringPiece(Request &request, StringPiece stringPiece);
 
-NAMESPACE_END
+void ParseFromStringPiece(Response &response, StringPiece stringPiece);
+
+int pack_sp(const Request &request, CircularBuffer &buffer);
+
+int pack_sp(const Response &response, CircularBuffer &buffer);
 
 #endif
