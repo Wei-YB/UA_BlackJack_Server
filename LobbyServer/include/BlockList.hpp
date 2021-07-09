@@ -6,6 +6,7 @@
 
 #include <sys/eventfd.h>
 #include <sys/epoll.h>
+#include <unistd.h>
 #include <list>
 #include <spdlog/spdlog.h>
 

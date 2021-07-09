@@ -1,8 +1,8 @@
 ﻿cmake_minimum_required(VERSION 3.5.1)
 
-# project(lobby C CXX)
+#project(lobby C CXX)
 
-# include(../cmake/common.cmake)
+#include("${PROJECT_SOURCE_DIR}/cmake/common.cmake")
 
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
 
@@ -45,4 +45,5 @@ target_link_libraries(LobbyServer
   ${_REFLECTION}
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF}
-  spdlog)
+  spdlog
+  pthread)

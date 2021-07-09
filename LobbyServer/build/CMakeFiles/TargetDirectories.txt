@@ -1,3 +1,0 @@
-/home/mycode/github/UA_BlackJack_Server/Lobby/build/CMakeFiles/rebuild_cache.dir
-/home/mycode/github/UA_BlackJack_Server/Lobby/build/CMakeFiles/edit_cache.dir
-/home/mycode/github/UA_BlackJack_Server/Lobby/build/CMakeFiles/LobbyServer.dir

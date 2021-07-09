@@ -63,10 +63,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test
+CMAKE_SOURCE_DIR = /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build
+CMAKE_BINARY_DIR = /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/proxy_client.dir/depend.make
@@ -79,70 +79,70 @@ include CMakeFiles/proxy_client.dir/flags.make
 
 CMakeFiles/proxy_client.dir/proxy_client.cc.o: CMakeFiles/proxy_client.dir/flags.make
 CMakeFiles/proxy_client.dir/proxy_client.cc.o: ../proxy_client.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/proxy_client.dir/proxy_client.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proxy_client.dir/proxy_client.cc.o -c /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/proxy_client.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/proxy_client.dir/proxy_client.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proxy_client.dir/proxy_client.cc.o -c /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/proxy_client.cc
 
 CMakeFiles/proxy_client.dir/proxy_client.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proxy_client.dir/proxy_client.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/proxy_client.cc > CMakeFiles/proxy_client.dir/proxy_client.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/proxy_client.cc > CMakeFiles/proxy_client.dir/proxy_client.cc.i
 
 CMakeFiles/proxy_client.dir/proxy_client.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proxy_client.dir/proxy_client.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/proxy_client.cc -o CMakeFiles/proxy_client.dir/proxy_client.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/proxy_client.cc -o CMakeFiles/proxy_client.dir/proxy_client.cc.s
 
 CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.o: CMakeFiles/proxy_client.dir/flags.make
 CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.o: ../ProxyRPCClient.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.o -c /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/ProxyRPCClient.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.o -c /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/ProxyRPCClient.cc
 
 CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/ProxyRPCClient.cc > CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/ProxyRPCClient.cc > CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.i
 
 CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/ProxyRPCClient.cc -o CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/ProxyRPCClient.cc -o CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.s
 
-CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.o: CMakeFiles/proxy_client.dir/flags.make
-CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.o: /home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.o -c /home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc
+CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.o: CMakeFiles/proxy_client.dir/flags.make
+CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.o: /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.o -c /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc
 
-CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc > CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.i
+CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc > CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.i
 
-CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc -o CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.s
+CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc -o CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.s
 
-CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.o: CMakeFiles/proxy_client.dir/flags.make
-CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.o: /home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.o -c /home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc
+CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.o: CMakeFiles/proxy_client.dir/flags.make
+CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.o: /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.o -c /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc
 
-CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc > CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.i
+CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc > CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.i
 
-CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc -o CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.s
+CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc -o CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.s
 
 # Object files for target proxy_client
 proxy_client_OBJECTS = \
 "CMakeFiles/proxy_client.dir/proxy_client.cc.o" \
 "CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.o" \
-"CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.o" \
-"CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.o"
+"CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.o" \
+"CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.o"
 
 # External object files for target proxy_client
 proxy_client_EXTERNAL_OBJECTS =
 
 proxy_client: CMakeFiles/proxy_client.dir/proxy_client.cc.o
 proxy_client: CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.o
-proxy_client: CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.o
-proxy_client: CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.o
+proxy_client: CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.o
+proxy_client: CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.o
 proxy_client: CMakeFiles/proxy_client.dir/build.make
 proxy_client: /lib/libgrpc++_reflection.a
 proxy_client: /lib/libgrpc++.a
@@ -187,7 +187,7 @@ proxy_client: /lib/libabsl_log_severity.a
 proxy_client: /lib/libssl.a
 proxy_client: /lib/libcrypto.a
 proxy_client: CMakeFiles/proxy_client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable proxy_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable proxy_client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/proxy_client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -200,6 +200,6 @@ CMakeFiles/proxy_client.dir/clean:
 .PHONY : CMakeFiles/proxy_client.dir/clean
 
 CMakeFiles/proxy_client.dir/depend:
-	cd /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles/proxy_client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles/proxy_client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/proxy_client.dir/depend
 

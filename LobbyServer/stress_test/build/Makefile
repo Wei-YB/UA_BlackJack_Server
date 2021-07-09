@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test
+CMAKE_SOURCE_DIR = /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build
+CMAKE_BINARY_DIR = /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -170,59 +170,59 @@ ProxyRPCClient.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/ProxyRPCClient.cc.s
 .PHONY : ProxyRPCClient.cc.s
 
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.o: home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.o
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.o: home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.o
 
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.o
-
-# target to build an object file
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.o
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.o
-
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.i: home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.i
-
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.i
-
-# target to preprocess a source file
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.i
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.i
-
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.s: home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.s
-
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.s
-
-# target to generate assembly for a file
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.s
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.cc.s
-
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.o: home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.o
-
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.o
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.o
 
 # target to build an object file
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.o
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.o
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.o
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.o
 
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.i: home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.i
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.i: home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.i
 
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.i
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.i
 
 # target to preprocess a source file
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.i
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.i
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.i
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.i
 
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.s: home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.s
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.s: home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.s
 
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.s
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.s
 
 # target to generate assembly for a file
-home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.s
-.PHONY : home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.cc.s
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.s
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.cc.s
+
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.o: home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.o
+
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.o
+
+# target to build an object file
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.o
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.o
+
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.i: home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.i
+
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.i
+
+# target to preprocess a source file
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.i
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.i
+
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.s: home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.s
+
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.s
+
+# target to generate assembly for a file
+home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.s
+.PHONY : home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.cc.s
 
 proxy_client.o: proxy_client.cc.o
 
@@ -263,12 +263,12 @@ help:
 	@echo "... ProxyRPCClient.o"
 	@echo "... ProxyRPCClient.i"
 	@echo "... ProxyRPCClient.s"
-	@echo "... home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.o"
-	@echo "... home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.i"
-	@echo "... home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.grpc.pb.s"
-	@echo "... home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.o"
-	@echo "... home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.i"
-	@echo "... home/mycode/github/UA_BlackJack_Server/Lobby/src/UA_BlackJack.pb.s"
+	@echo "... home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.o"
+	@echo "... home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.i"
+	@echo "... home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.grpc.pb.s"
+	@echo "... home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.o"
+	@echo "... home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.i"
+	@echo "... home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/grpc/UA_BlackJack.pb.s"
 	@echo "... proxy_client.o"
 	@echo "... proxy_client.i"
 	@echo "... proxy_client.s"

@@ -10,7 +10,7 @@
 #include "spdlog/sinks/rotating_file_sink.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
 #include <grpcpp/grpcpp.h>
-#include "UA_BlackJack.grpc.pb.h"
+#include "../grpc/UA_BlackJack.grpc.pb.h"
 
 
 using grpc::Channel;

@@ -7,18 +7,17 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/mycode/github/UA_BlackJack_Server/Lobby/common.cmake"
   "../CMakeLists.txt"
   "CMakeFiles/3.17.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.5/CMakeSystem.cmake"
+  "../common.cmake"
   "/usr/lib/cmake/grpc/gRPCConfig.cmake"
   "/usr/lib/cmake/grpc/gRPCConfigVersion.cmake"
   "/usr/lib/cmake/grpc/gRPCTargets-noconfig.cmake"
   "/usr/lib/cmake/grpc/gRPCTargets.cmake"
   "/usr/lib64/cmake/protobuf/protobuf-config-version.cmake"
   "/usr/lib64/cmake/protobuf/protobuf-config.cmake"
-  "/usr/lib64/cmake/protobuf/protobuf-module.cmake"
   "/usr/lib64/cmake/protobuf/protobuf-options.cmake"
   "/usr/lib64/cmake/protobuf/protobuf-targets-noconfig.cmake"
   "/usr/lib64/cmake/protobuf/protobuf-targets.cmake"
@@ -47,7 +46,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake3/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake3/Modules/Platform/Linux.cmake"
   "/usr/share/cmake3/Modules/Platform/UnixPaths.cmake"
-  "/usr/share/cmake3/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:

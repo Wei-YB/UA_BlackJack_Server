@@ -64,10 +64,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test
+CMAKE_SOURCE_DIR = /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build
+CMAKE_BINARY_DIR = /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -94,14 +94,14 @@ clean: CMakeFiles/proxy_client.dir/clean
 CMakeFiles/proxy_client.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy_client.dir/build.make CMakeFiles/proxy_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target proxy_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target proxy_client"
 .PHONY : CMakeFiles/proxy_client.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/proxy_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/proxy_client.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mycode/github/UA_BlackJack_Server/Lobby/stress_test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mycode/github/UA_BlackJack_Server/UA_BlackJack_Server/LobbyServer/stress_test/build/CMakeFiles 0
 .PHONY : CMakeFiles/proxy_client.dir/rule
 
 # Convenience name for target.
