@@ -126,8 +126,8 @@ void StartServer() {
         auto async_file = spdlog::basic_logger_mt<spdlog::async_factory>("async_file_logger", "./logs/async_log.txt");
         spdlog::set_default_logger(async_file);
     }
-    spdlog::set_level(spdlog::level::info);
-    spdlog::flush_on(spdlog::level::info);
+    spdlog::set_level(spdlog::level::err);
+    spdlog::flush_on(spdlog::level::err);
     SPDLOG_TRACE("start database server");
 
     server = new ServerAsynImpl(config.grpc_host,config.redis_host,config.init_score);

@@ -21,54 +21,27 @@ using ua_blackjack::Response;
 atomic<int> fail_count;
 std::vector<int> counter;
 static int continue_time = 0;
-static int thread_count = 0;
+static int client_count = 0;
 
-class AsyncClient {
+class StressClient {
 public:
-    explicit AsyncClient(std::shared_ptr<Channel> channel) : stub_(DatabaseService::NewStub(channel)) {
-        request_.set_requesttype(Request::GET_UID);
+    StressClient(std::shared_ptr<Channel> channel) : stub_(DatabaseService::NewStub(channel)) {
         request_.add_args("Owen");
-    }
-    int64_t GetUid() {
-        AsyncClientCall *call = new AsyncClientCall;
-        call->response_reader = stub_->PrepareAsyncNotify(&call->context, request_, &cq_);
-
-        call->response_reader->StartCall();
-        call->response_reader->Finish(&call->reply, &call->status, (void *)call);
+        request_.set_requesttype(Request::GET_UID);
+        request_.set_stamp(0);
     }
 
-    void AsyncCompleteRpc(int thread_id) {
-        void *got_tag;
-        bool ok = false;
-        // Block until the next result is available in the completion queue "cq".
-        while (cq_.Next(&got_tag, &ok)) {
-            AsyncClientCall *call = static_cast<AsyncClientCall *>(got_tag);
-
-            GPR_ASSERT(ok);
-
-            if (call->status.ok()) {
-                ++counter[thread_id];
-            } else
-                ++fail_count;
-            // std::cout << "RPC failed" << std::endl;
-            delete call;
-        }
+    // Assembles the client's payload, sends it and presents the response back
+    // from the server.
+    bool getUID() {
+        Response reply;
+        ClientContext context;
+        return stub_->Notify(&context, request_, &reply).ok();
     }
 
 private:
-    struct AsyncClientCall {
-        Response reply;
-
-        ClientContext context;
-
-        Status status;
-
-        std::unique_ptr<ClientAsyncResponseReader<Response>> response_reader;
-    };
-
     Request request_;
     std::unique_ptr<DatabaseService::Stub> stub_;
-    CompletionQueue cq_;
 };
 
 void timeout(int signal) {
@@ -77,6 +50,7 @@ void timeout(int signal) {
         queries += val;
     }
     auto microSecond = continue_time * 1000;
+    cout << "total client: " << client_count << endl;
     cout << "total request: " << queries << endl;
     cout << "faild request: " << fail_count << endl;
     cout << "   total cost: " << microSecond << " ms" << endl;
@@ -84,30 +58,35 @@ void timeout(int signal) {
     exit(0);
 }
 
-void BenchFunc(int thread_id) {
-    signal(SIGALRM, timeout);
-    AsyncClient client(grpc::CreateChannel("9.134.69.87:50051", grpc::InsecureChannelCredentials()));
-    std::thread thread_ = std::thread(&AsyncClient::AsyncCompleteRpc, &client, thread_id);
-    while (true) {
-        client.GetUid();
+void BenchFunc(int clients, int thread_id) {
+    vector<StressClient> vec_client;
+    for (int i = 0; i < clients; ++i) {
+        vec_client.emplace_back(grpc::CreateChannel("9.134.69.87:50051", grpc::InsecureChannelCredentials()));
     }
+    while (true)
+        for (auto &c : vec_client) {
+            counter[thread_id] += c.getUID();
+        }
 }
 
 int main(int argc, char *argv[]) {
     if (argc != 3) {
-        std::cout << "usage ./databaseBench <threads> <times>\n";
+        std::cout << "usage ./databaseBench <clients> <times>\n";
         return 0;
     }
     signal(SIGALRM, timeout);
-    ::thread_count = stoi(argv[1]);
+    int thread_count = 16;
+    ::client_count = stoi(argv[1]);
     ::continue_time = stoi(argv[2]);
 
     counter.resize(thread_count, 0);
     alarm(continue_time);
     vector<thread> threads;
 
+    int clientPerThread = client_count / 16;
+
     for (int i = 0; i < thread_count; ++i) {
-        threads.emplace_back(BenchFunc, i);
+        threads.emplace_back(BenchFunc, client_count, i);
     }
     for (auto &t : threads) {
         t.join();
