@@ -145,6 +145,22 @@ int Net::write(int fd, CircularBuffer &buffer, bool freeAfterWrite)
     return cnt;
 }
 
+void StringPiece::free()
+{
+    cirBuf_->m_head = (head_ + length_) % cirBuf_->capacity();
+    if (cirBuf_->m_head - cirBuf_->m_tail == 1 
+        || cirBuf_->m_tail - cirBuf_->m_head  == cirBuf_->capacity() - 1)
+    {
+        cirBuf_->m_tail = -1;
+        cirBuf_->m_head = 0;
+    }
+}
+
+bool StringPiece::continuous() const
+{
+    return head_ + length_ <= cirBuf_->capacity();
+}
+
 void Net::circularBufferToString(const CircularBuffer &buffer, size_t length, ::std::string &str)
 {
     int tailRoom;
@@ -163,6 +179,25 @@ void Net::circularBufferToString(const CircularBuffer &buffer, size_t length, ::
     {
         str.append(buffer.m_buffer + buffer.m_head, tailRoom);
         str.append(buffer.m_buffer, length - tailRoom);
+    }
+}
+
+std::string Net::circularBufferToString(const CircularBuffer &buffer, size_t length)
+{
+    if (buffer.empty()) return "";
+    length = length > buffer.size() ? buffer.size() : length;
+
+    int tailRoom = buffer.m_tail >= buffer.m_head ?\
+                                buffer.m_tail - buffer.m_head + 1 \
+                                : buffer.m_bufferSize - buffer.m_head;
+    if (tailRoom >= length)
+    {
+        return std::move(std::string(buffer.m_buffer + buffer.m_head, length));
+    }
+    else
+    {
+        std::string res(buffer.m_buffer + buffer.m_head, tailRoom);
+        return std::move(res.append(buffer.m_buffer, length - tailRoom));
     }
 }
 

@@ -1,0 +1,73 @@
+[2021-07-09 09:21:56.452] [client_logger] [error] fail to parse samples file.
+[2021-07-09 09:22:55.507] [client_logger] [info] TcpConnection::Connect(): (sockfd: 6) successfully connect to host
+[2021-07-09 09:22:55.507] [client_logger] [info] 1 clients connected to proxy.
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: -1, fd: 6) successfully send LOGIN request to proxy.
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: -1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.507] [client_logger] [info] setting client's uid to 1
+[2021-07-09 09:22:55.507] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) successfully send ROOM_LIST request to proxy.
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.507] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) successfully send JOIN_ROOM request to proxy.
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.507] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) successfully send CREATE_ROOM request to proxy.
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.507] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) successfully send QUICK_MATCH request to proxy.
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.507] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) successfully send LEAVE_ROOM request to proxy.
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.507] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) successfully send READY request to proxy.
+[2021-07-09 09:22:55.507] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.507] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) successfully send BET request to proxy.
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.508] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) successfully send HIT request to proxy.
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.508] [client_logger] [info] response time: 1 ms
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) successfully send STAND request to proxy.
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.508] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) successfully send DOUBLE request to proxy.
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.508] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) successfully send SURRENDER request to proxy.
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.508] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) successfully send INFO request to proxy.
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.508] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) successfully send RANK_ME request to proxy.
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.508] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) successfully send RANK_TOP request to proxy.
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.508] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) successfully send ADD_FRIEND request to proxy.
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.508] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.508] [client_logger] [info] client (uid: 1, fd: 6) successfully send DELETE_FRIEND request to proxy.
+[2021-07-09 09:22:55.509] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.509] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.509] [client_logger] [info] client (uid: 1, fd: 6) successfully send LIST_FRIEND request to proxy.
+[2021-07-09 09:22:55.509] [client_logger] [info] client (uid: 1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.509] [client_logger] [info] response time: 0 ms
+[2021-07-09 09:22:55.509] [client_logger] [info] client (uid: -1, fd: 6) successfully send LOGOUT request to proxy.
+[2021-07-09 09:22:55.509] [client_logger] [info] client (uid: -1, fd: 6) gets response from proxy
+[2021-07-09 09:22:55.509] [client_logger] [info] setting client's uid to 1
+[2021-07-09 09:22:55.509] [client_logger] [info] response time: 1 ms
+[2021-07-09 09:22:55.509] [client_logger] [info] client (uid: 1, fd: 6) has sent all requests to proxy.
+[2021-07-09 09:22:55.509] [client_logger] [info] In TcpConnection::DisConnect(): (sockfd: 6) disconnect from host
+[2021-07-09 09:23:05.507] [client_logger] [info] In EventLoop::OnHealthReport(): current sources in map: 2, eventsCnt: 2.
+[2021-07-09 09:23:15.507] [client_logger] [info] In EventLoop::OnHealthReport(): current sources in map: 2, eventsCnt: 2.
+[2021-07-09 09:23:25.507] [client_logger] [info] In EventLoop::OnHealthReport(): current sources in map: 2, eventsCnt: 2.
+[2021-07-09 09:23:35.507] [client_logger] [info] In EventLoop::OnHealthReport(): current sources in map: 2, eventsCnt: 2.
+[2021-07-09 09:23:45.507] [client_logger] [info] In EventLoop::OnHealthReport(): current sources in map: 2, eventsCnt: 2.
+[2021-07-09 09:23:55.507] [client_logger] [info] In EventLoop::OnHealthReport(): current sources in map: 2, eventsCnt: 2.
+[2021-07-09 09:24:05.507] [client_logger] [info] In EventLoop::OnHealthReport(): current sources in map: 2, eventsCnt: 2.
+[2021-07-09 09:24:15.507] [client_logger] [info] In EventLoop::OnHealthReport(): current sources in map: 2, eventsCnt: 2.
+[2021-07-09 09:24:25.422] [client_logger] [info] program stopped by SIGINT.

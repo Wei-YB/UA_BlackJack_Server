@@ -3,7 +3,7 @@
 set(CMAKE_CXX_STANDARD 17)
 project("ProxyClient")
 
-include(../common.cmake)
+include(common.cmake)
 include_directories(../include)
 
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
@@ -17,6 +17,6 @@ endif()
 #将源文件编译链接生成可执行文件LobbyServer
 #add_executable (proxy_client  ${LobbyFile}   )
 
-set(GRPC_CC ../src/UA_BlackJack.grpc.pb.cc ../src/UA_BlackJack.pb.cc)
+set(GRPC_CC ../grpc/UA_BlackJack.grpc.pb.cc ../grpc/UA_BlackJack.pb.cc)
 add_executable (proxy_client  proxy_client.cc ProxyRPCClient.cc ${GRPC_CC})
 target_link_libraries(proxy_client ${_REFLECTION} ${_GRPC_GRPCPP} ${_PROTOBUF_LIBPROTOBUF} pthread spdlog)
