@@ -27,10 +27,10 @@ ProxyServer::ProxyServer(const char *ip,
                          unsigned short port, 
                          EventLoop *loop, 
                          int healthReportPeriod)
-                         : timer_(loop, std::bind(&ProxyServer::OnHealthReport, this)),
-                         server_(std::make_shared<TcpServer>(ip, port, loop, 
+                         : server_(std::make_shared<TcpServer>(ip, port, loop, 
                                 std::bind(&ProxyServer::OnNewClient, this, std::placeholders::_1),
-                                std::bind(&ProxyServer::OnError, this, std::placeholders::_1)))
+                                std::bind(&ProxyServer::OnError, this, std::placeholders::_1))),
+                        timer_(loop, std::bind(&ProxyServer::OnHealthReport, this))
 {
     if (healthReportPeriod > 0)
     {

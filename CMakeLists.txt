@@ -1,12 +1,10 @@
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.5)
 
 project(UA_BLACKJACK_SERVER C CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 
 include(cmake/common.cmake)
-
-# cmake_policy(CMP0069)
 
 option(LOBBY "build lobby server or not (ON/OFF)" OFF)
 option(DATABASE "build database server or not (ON/OFF)" OFF)

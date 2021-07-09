@@ -26,7 +26,6 @@ The server is divided into six modules and each of them is assigned to certain m
 + Social: aaronlv@kristtong@tencent.com
 + DB (database): owenybwei@tencent.com
 
-## 性能测试报告
-### 整体
-1. QPS、平均响应延时随并发数变化曲线
-2. CPU占用率，内存占用率，网络IO使用率，磁盘IO使用率
+演示流程：
+1. 注册账号（signup），登录账号（login），查询个人信息（rankme, friendlist）
+2. 

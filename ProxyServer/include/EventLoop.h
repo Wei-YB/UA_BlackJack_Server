@@ -8,7 +8,7 @@
 #include <unordered_map>
 #include "common.h"
 
-#define DEFAULT_MAX_EVENTS  25000
+#define DEFAULT_MAX_EVENTS  65535
 #define DEFAULT_HEALTH_REPORT_PERIOD    10   // 5s
 
 namespace Net {

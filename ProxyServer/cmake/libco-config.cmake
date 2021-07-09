@@ -1,7 +1,0 @@
-set(LIBCO_FOUND TRUE)
-set(LIBCO_ROOT_DIR /usr/local)
-find_path(LIBCO_INCLUDE_DIR NAMES libco/co_routine.h PATHS "${LIBCO_ROOT_DIR}/include")
-find_library(LIBCO_STATIC_LIBRARY NAMES libcolib.a PATHS "${LIBCO_ROOT_DIR}/lib")
-find_library(LIBCO_LIBRARY NAMES libcolib.so PATHS "${LIBCO_ROOT_DIR}/lib")
-set(LIBCO_INCLUDE_DIRS ${LIBCO_INCLUDE_DIR})
-set(LIBCO_LIBRARIES ${LIBCO_LIBRARY})

@@ -23,7 +23,7 @@ Client::Client(std::shared_ptr<TcpConnection> conn,
            const std::function<void(FileDesc)> &disconnectCallBack,
            const std::function<void(FileDesc)> &errorCallBack)
        : conn_(conn), 
-        timer_(std::make_shared<Timer>(conn_->eventLoop(), std::bind(&Client::OnLeave, this))),
+        // timer_(std::make_shared<Timer>(conn_->eventLoop(), std::bind(&Client::OnLeave, this))),
         requestCallBack_(requestCallBack),
         responseCallBack_(responseCallBack),
         errorCallBack_(errorCallBack),
@@ -68,12 +68,12 @@ int Client::SendResponse(const Response &response)
 
 int Client::EnableTimeout(int sec)
 {
-    timer_->SetExpired(sec); // if an unlogin client is idle for 2 min, close it
+    // timer_->SetExpired(sec); // if an unlogin client is idle for 2 min, close it
 }
 
 int Client::DisableTimeout()
 {
-    timer_->SetExpired(0);
+    // timer_->SetExpired(0);
 }
 
 FileDesc Client::fd() const {return conn_->SockFd();}

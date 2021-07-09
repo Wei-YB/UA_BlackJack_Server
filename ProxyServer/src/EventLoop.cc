@@ -32,14 +32,15 @@ EventLoop::EventLoop(int max_events, int healthReportPeriod)
         throw std::exception();
     }
 
-    timer_ = std::make_shared<Timer>(this, std::bind(&EventLoop::OnHealthReport, this));
+    // timer_ = std::make_shared<Timer>(this, std::bind(&EventLoop::OnHealthReport, this));
 
-    timer_->SetPeriod(healthReportPeriod);
+    // if (healthReportPeriod > 0)    
+    //     timer_->SetPeriod(healthReportPeriod);
 }
 
 EventLoop::~EventLoop()
 {
-    timer_->SetPeriod(0);
+    // timer_->SetPeriod(0);
     delete[] events_;
     close(epollfd_);
 }

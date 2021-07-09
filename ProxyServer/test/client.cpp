@@ -42,6 +42,7 @@ std::vector<double> g_delays;
 std::vector<int> g_num_of_requests;
 std::vector<bool> g_has_timeout;
 bool g_flag = false;
+int g_active_player;
 
 void stop_client(int)
 {
@@ -97,7 +98,7 @@ public:
                     int64_t objId,
                     size_t bufferSize = DEFAULT_BUFFER_SIZE) 
                     : conn_(server_ip, server_port, loop), 
-                    timer_(loop, std::bind(&BlackJackClient::OnRequestTimeout, this)),
+                    //timer_(loop, std::bind(&BlackJackClient::OnRequestTimeout, this)),
                     objId_(objId),
                     readBuffer_(bufferSize), 
                     writeBuffer_(bufferSize),
@@ -138,13 +139,14 @@ public:
         if (0 > pack_sp(request, conn_.writeBuffer_))
             return -1;
     
-        conn_.Send(RESPONSE, "");
+        conn_.Send(REQUEST, "");
         //std::string rawRequest(std::move(request.SerializeAsString()));
         if (request.requesttype() == Request::LOGOUT)
         {
             uid_ = -1;
         }
         // record
+        //timer_.SetExpired(5);
         //conn_.Send(REQUEST, rawRequest);
         
         return 0;
@@ -197,6 +199,7 @@ private:
         {
             logger_ptr->info("client (uid: {0}, fd: {1}) has sent all requests to proxy.", uid_, conn_.SockFd());
             conn_.DisConnect();
+            g_active_player--;
             g_delays[objId_] = responseTime_;
         }
     }
@@ -216,6 +219,7 @@ private:
         {
             logger_ptr->info("client (uid: {0}, fd: {1}) has sent all requests to proxy.", uid_, conn_.SockFd());
             conn_.DisConnect();
+            g_active_player--;
             g_delays[objId_] = responseTime_;
         }
     }
@@ -223,6 +227,7 @@ private:
     void OnError() 
     {
         conn_.DisConnect();
+        g_active_player--;
     }
 
     void OnRequestTimeout()
@@ -233,9 +238,10 @@ private:
         g_delays[objId_] = responseTime_;
         g_has_timeout[objId_] = true;
         // disable timer
-        timer_.SetExpired(0);
+        //timer_.SetExpired(0);
         // disconnect from host
         conn_.DisConnect();
+        g_active_player--;
     }
 
 private:
@@ -244,7 +250,7 @@ private:
     TcpConnection conn_;
     CircularBuffer readBuffer_;
     CircularBuffer writeBuffer_;
-    Timer timer_;
+    //Timer timer_;
     std::unordered_map<int64_t, Request> stampToRequest_;
     int requestSent_ = 0;
     double responseTime_ = 0;
@@ -291,6 +297,7 @@ int main(int argc, char **argv)
     set_logger_name("client_logger");
     set_log_path(argv[5]);
     create_logger();
+    set_log_level("warn");
     
     // prepare all the request
     std::queue<Request> requests;
@@ -301,7 +308,7 @@ int main(int argc, char **argv)
         exit(0);
     }
 
-    Net::EventLoop loop;
+    Net::EventLoop loop(25000, 0);
     
     std::vector<std::shared_ptr<BlackJackClient>> clients;
     int clientno = atoi(argv[4]);
@@ -326,6 +333,7 @@ int main(int argc, char **argv)
             clients[i]->SetRequests(requests);
         }
     }
+    g_active_player = connCnt;
     if (connCnt == 0)
     {
         logger_ptr->error("no clients connected to proxy.");
@@ -336,7 +344,7 @@ int main(int argc, char **argv)
     signal(SIGINT, stop_client);
     // now start to flood the proxy
     TimePoint begin = SteadyClock::now();
-    while (!g_flag && loop.loopOnce(1000) != -1);
+    while (!g_flag && g_active_player > 0 && loop.loopOnce(1000) != -1);
     TimePoint end = SteadyClock::now();
 
     if (g_flag)
