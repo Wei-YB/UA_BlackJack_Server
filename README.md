@@ -26,6 +26,3 @@ The server is divided into six modules and each of them is assigned to certain m
 + Social: aaronlv@kristtong@tencent.com
 + DB (database): owenybwei@tencent.com
 
-演示流程：
-1. 注册账号（signup），登录账号（login），查询个人信息（rankme, friendlist）
-2. 
