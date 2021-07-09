@@ -8,8 +8,20 @@
 
 std::shared_ptr<spdlog::logger> logger = nullptr;
 
+std::string option;
+std::string DBServer_ip;
+std::string DBServer_port;
+std::string listen_port;
+std::string log_file;
+std::string is_daemon;
+
 void StartServer() {
-    daemon(1, 0);
+    if (is_daemon == "true") {
+        std::cout << "Server start in daemon mode" << std::endl;
+        daemon(1, 0);
+    } else {
+        std::cout << "Server start in frontground mode" << std::endl;
+    }
 
     std::ofstream ofs;
     ofs.open("/var/run/SocialServer.pid", std::ofstream::out | std::ofstream::trunc);
@@ -18,12 +30,12 @@ void StartServer() {
     ofs << pid << std::endl;
     ofs.close();
 
-    logger = spdlog::basic_logger_mt("basic_logger", "/var/log/SocialLog.log");
+    logger = spdlog::basic_logger_mt("basic_logger", log_file.c_str());
     logger->flush_on(spdlog::level::trace);
     logger->set_level(spdlog::level::trace);
 
     ua_blackjack::social_server::ServerImpl server;
-    server.Run();
+    server.Run(DBServer_ip, DBServer_port, listen_port);
 }
 
 void StopServer() {
@@ -36,11 +48,47 @@ void StopServer() {
     kill(pid, SIGINT);
 }
 
+void InvalidArgs() {
+    std::cerr << "invalid args" << std::endl;
+    exit(EXIT_FAILURE);
+}
+
 int main(int argc, char* argv[]) {
-    if (argc == 1) {
+    if (argc < 2) {
+        InvalidArgs();
+    }
+
+    if (strcmp(argv[1], "start") == 0) {
+        if (argc != 3) {
+            InvalidArgs();
+        }
+
+        std::ifstream config;
+        config.open(argv[2]);
+
+        if (config.bad()) {
+            std::cerr << "bad config file path" << std::endl;
+            exit(EXIT_FAILURE);
+        }
+
+        std::cout << "---------reading config---------" << std::endl;
+
+        config >> option >> DBServer_ip;
+        config >> option >> DBServer_port;
+        config >> option >> listen_port;
+        config >> option >> log_file;
+        config >> option >> is_daemon;
+
         StartServer();
-    } else if (argc == 2 && strcmp(argv[1], "stop") == 0) {
+
+    } else if (strcmp(argv[1], "stop") == 0) {
+        if (argc != 2) {
+            InvalidArgs();
+        }
+
         StopServer();
+    } else {
+        InvalidArgs();
     }
 
     return 0;
