@@ -4,6 +4,8 @@
 #include <atomic>
 #include <iostream>
 #include <thread>
+
+#include "UA_BlackJack.grpc.pb.h"
 using namespace std;
 
 using grpc::Channel;
@@ -51,62 +53,63 @@ public:
             // std::cout << "RPC failed" << std::endl;
             delete call;
         }
+    }
 
-    private:
-        struct AsyncClientCall {
-            Response reply;
+private:
+    struct AsyncClientCall {
+        Response reply;
 
-            ClientContext context;
+        ClientContext context;
 
-            Status status;
+        Status status;
 
-            std::unique_ptr<ClientAsyncResponseReader<Response>> response_reader;
-        };
-
-        Request request_;
-        std::unique_ptr<DatabaseService::Stub> stub_;
-        CompletionQueue cq_;
+        std::unique_ptr<ClientAsyncResponseReader<Response>> response_reader;
     };
 
-    void timeout(int signal) {
-        auto queries = 0;
-        for (auto val : counter) {
-            queries += val;
-        }
-        auto microSecond = continue_time * 1000;
-        cout << "total request: " << queries << endl;
-        cout << "faild request: " << fail_count << endl;
-        cout << "   total cost: " << microSecond << " ms" << endl;
-        cout << "          QPS: " << static_cast<int>((queries) / (microSecond / 1000.0)) << " req/s" << endl;
-        exit(0);
+    Request request_;
+    std::unique_ptr<DatabaseService::Stub> stub_;
+    CompletionQueue cq_;
+};
+
+void timeout(int signal) {
+    auto queries = 0;
+    for (auto val : counter) {
+        queries += val;
     }
+    auto microSecond = continue_time * 1000;
+    cout << "total request: " << queries << endl;
+    cout << "faild request: " << fail_count << endl;
+    cout << "   total cost: " << microSecond << " ms" << endl;
+    cout << "          QPS: " << static_cast<int>((queries) / (microSecond / 1000.0)) << " req/s" << endl;
+    exit(0);
+}
 
-    void BenchFunc(int thread_id) {
-        signal(SIGALRM, timeout);
-        AsyncClient client(grpc::CreateChannel("9.134.69.87:50051", grpc::InsecureChannelCredentials()));
-        std::thread thread_ = std::thread(&AsyncClient::AsyncCompleteRpc, &client, thread_id);
-        while (true) {
-            client.GetUid();
-        }
+void BenchFunc(int thread_id) {
+    signal(SIGALRM, timeout);
+    AsyncClient client(grpc::CreateChannel("9.134.69.87:50051", grpc::InsecureChannelCredentials()));
+    std::thread thread_ = std::thread(&AsyncClient::AsyncCompleteRpc, &client, thread_id);
+    while (true) {
+        client.GetUid();
     }
+}
 
-    int main(int argc, char *argv[]) {
-        if (argc != 3) {
-            std::cout << "usage ./databaseBench <threads> <times>\n";
-            return 0;
-        }
-        signal(SIGALRM, timeout);
-        ::thread_count = stoi(argv[1]);
-        ::continue_time = stoi(argv[2]);
-
-        counter.resize(thread_count, 0);
-        alarm(continue_time);
-        vector<thread> threads;
-
-        for (int i = 0; i < thread_count; ++i) {
-            threads.emplace_back(BenchFunc, i);
-        }
-        for (auto &t : threads) {
-            t.join();
-        }
+int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        std::cout << "usage ./databaseBench <threads> <times>\n";
+        return 0;
     }
+    signal(SIGALRM, timeout);
+    ::thread_count = stoi(argv[1]);
+    ::continue_time = stoi(argv[2]);
+
+    counter.resize(thread_count, 0);
+    alarm(continue_time);
+    vector<thread> threads;
+
+    for (int i = 0; i < thread_count; ++i) {
+        threads.emplace_back(BenchFunc, i);
+    }
+    for (auto &t : threads) {
+        t.join();
+    }
+}

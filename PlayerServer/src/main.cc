@@ -32,7 +32,7 @@ void StartServer() {
 
     logger = spdlog::basic_logger_mt("basic_logger", log_file.c_str());
     logger->flush_on(spdlog::level::trace);
-    logger->set_level(spdlog::level::trace);
+    logger->set_level(spdlog::level::err);
 
     ua_blackjack::player_server::ServerImpl server;
     server.Run(DBServer_ip, DBServer_port, listen_port);

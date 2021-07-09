@@ -65,3 +65,12 @@ target_link_libraries(Stress-Social-asyn
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF}
   spdlog)
+
+file(GLOB Stress-syn-time-SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/grpc/*.cc" 
+                         "${CMAKE_CURRENT_SOURCE_DIR}/stress-test/stress-test-syn-time.cc")
+add_executable(Stress-Social-syn-time "${Stress-syn-time-SOURCES}")
+target_link_libraries(Stress-Social-syn-time
+  ${_REFLECTION}
+  ${_GRPC_GRPCPP}
+  ${_PROTOBUF_LIBPROTOBUF}
+  spdlog)

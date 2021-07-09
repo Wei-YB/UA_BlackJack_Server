@@ -36,10 +36,12 @@ class StressClient;
 
 std::string addr = "9.135.113.138:50052";
 std::shared_ptr<spdlog::logger> logger = nullptr;
-int num_query;
-int cnt = 0;
-int fail_cnt = 0;
-std::atomic<bool> timeout;
+
+std::vector<int> query_cnt;
+std::vector<int> fail_cnt;
+
+int thread_num;
+int total_time;
 
 class StressClient {
 public:
@@ -60,24 +62,23 @@ public:
 
     // Loop while listening for completed responses.
     // Prints out the response from the server.
-    void AsyncCompleteRpc() {
+    void AsyncCompleteRpc(int tid) {
         void* got_tag;
         bool ok = false;
 
         // Block until the next result is available in the completion queue "cq".
         while (cq_.Next(&got_tag, &ok)) {
-            ++cnt;
+            ++query_cnt[tid];
+
             AsyncClientCall* call = static_cast<AsyncClientCall*>(got_tag);
 
             GPR_ASSERT(ok);
-
-            if (!call->status.ok()) {
-                ++fail_cnt;
+            if (call->status.ok()) {
+                ++query_cnt[tid];
+            } else {
+                ++fail_cnt[tid];
             }
-
             delete call;
-
-            if (timeout) break;
         }
     }
 
@@ -97,7 +98,34 @@ private:
     CompletionQueue cq_;
 };
 
-void handler(int sig) { timeout = true; }
+void handler(int sig) {
+    int total_query_cnt = 0;
+    int total_fail_cnt = 0;
+    for (int i = 0; i < query_cnt.size(); ++i) {
+        total_query_cnt += query_cnt[i];
+        total_fail_cnt += fail_cnt[i];
+    }
+
+    std::cout << "total request: " << total_query_cnt << std::endl;
+    std::cout << "faild request: " << total_fail_cnt << std::endl;
+    std::cout << "total cost:    " << total_time * 1000 << " ms" << std::endl;
+    std::cout << "QPS: " << total_query_cnt / total_time << std::endl;
+
+    exit(0);
+}
+
+void Stress(int tid) {
+    StressClient client(grpc::CreateChannel("9.135.113.138:50052", grpc::InsecureChannelCredentials()));
+    std::thread thread_ = std::thread(&StressClient::AsyncCompleteRpc, &client, tid);
+
+    Request request;
+    request.set_requesttype(Request::SIGNUP);
+    request.set_uid(-1);
+    request.set_stamp(SteadyClock::now().time_since_epoch().count());
+    while (true) {
+        client.RequestPlayer(request);
+    }
+}
 
 int main(int argc, char* argv[]) {
     logger = spdlog::basic_logger_mt("basic_logger", "./StressLog-asyn.log");
@@ -113,43 +141,23 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    assert(argc == 2);
-    int time = atoi(argv[1]);
-    // num_query = atoi(argv[1]);
+    assert(argc == 3);
 
-    StressClient client(grpc::CreateChannel("9.135.113.138:50052", grpc::InsecureChannelCredentials()));
+    thread_num = atoi(argv[1]);
+    total_time = atoi(argv[2]);
 
-    Request request;
-    request.set_requesttype(Request::SIGNUP);
-    request.set_uid(-1);
-    request.set_stamp(SteadyClock::now().time_since_epoch().count());
+    query_cnt.resize(thread_num, 0);
+    fail_cnt.resize(thread_num, 0);
 
-    auto start = SteadyClock::now();
-
-    std::thread thread_ = std::thread(&StressClient::AsyncCompleteRpc, &client);
-
-    timeout = false;
-    alarm(time);
-
-    while (!timeout) {
-        client.RequestPlayer(request);
+    alarm(total_time);
+    std::vector<std::thread> threads;
+    for (int i = 0; i < thread_num; ++i) {
+        threads.emplace_back(Stress, i);
     }
 
-    // for (int i = 0; i < num_query; ++i) {
-    //     client.RequestPlayer(request);
-    // }
-
-    thread_.join();
-
-    auto end = SteadyClock::now();
-
-    auto time_clock = std::chrono::duration_cast<MilliSeconds>(end - start).count();
-
-    std::cout << "total request: " << cnt << std::endl;
-    std::cout << "faild request: " << fail_cnt << std::endl;
-    std::cout << "total cost:    " << time << " s" << std::endl;
-    // std::cout << "total cost:    " << time_clock << " ms" << std::endl;
-    std::cout << "QPS: " << cnt / time << std::endl;
+    for (int i = 0; i < thread_num; ++i) {
+        threads[i].join();
+    }
 
     return 0;
 }

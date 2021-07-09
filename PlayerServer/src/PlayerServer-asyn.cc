@@ -55,7 +55,7 @@ void ServerImpl::CallData::Proceed() {
     } else if (status_ == PROCESS) {
         new CallData(service_, cq_);
 
-        // reply_ = client->RequestDB(request_);
+        reply_ = client->RequestDB(request_);
 
         // And we are done! Let the gRPC runtime know we've finished
         status_ = FINISH;
